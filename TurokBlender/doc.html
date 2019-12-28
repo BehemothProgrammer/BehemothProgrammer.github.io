@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>TurokEX Tools v1.1.0 for Blender 2.8x</title>
+<link rel="stylesheet" type="text/css" href="../styles.css">
+<link rel="icon" href="../images/favicon.png" sizes="16x16" type="image/png">
+<meta charset="UTF-8">
+<meta name="author" content="BehemothProgrammer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<div class="sidenav">
+  <a href="../index.html"><img src="../images/logo.png" style="width:176px;height:99px;"></center></a>
+  <a href="index.html">Turok Blender Add-on</a>
+  <a class="active" href="JavaScript:void(0);">Documentation</a>
+  <ul>
+  <li><a class="sub" href="#install">Installation</a></li>
+  <li><a class="sub" href="#importing">Importing</a></li>
+  <li><a class="sub" href="#exporting">Exporting</a></li>
+  <li><a class="sub" href="#customModels">Custom Models</a></li>
+  <li><a class="sub" href="#editing">Editing Turok Properties</a>
+	<ul>
+		<li><a class="sub" href="#objectPanel">Object</a></li>
+		<li><a class="sub" href="#bonePanel">Bone</a></li>
+		<li><a class="sub" href="#actionPanel">Anim Action</a></li>
+		<li><a class="sub" href="#viewPanel">3D Viewport</a></li>
+		<li><a class="sub" href="#materialPanel">Material</a></li>
+		<li><a class="sub" href="#shaderPanel">Shader</a></li>
+	</ul>
+  </li>
+  <li><a class="sub" href="#changeLog">Change Log</a></li>
+  </ul>
+</div>
+
+<div id="install" class="main">
+	<div>
+	<p><center><h1>TurokEX Tools v1.1.0 for Blender 2.8x</h1>By BehemothProgrammer</p>
+	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
+	</div>
+	<div>
+		<p>
+			<h2>Installation</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					Open Blender and navigate to <b>Edit > Preferences</b>
+					<ol type="1">
+						<li>Click on the <b>Add-ons</b> tab.</li>
+						<li>If you have another version of the TurokEX Tools already installed then click the <b>Remove</b> button.</li>
+						<li>Click the <b>Install...</b> button and select the TurokEXBlenderTools.zip file you downloaded.</li>
+						<li>If you don't see the Add-on afterwards type in the <b>search</b> field <b>“turok”</b> to quickly find the add-on <b>Import-Export: TurokEX Tools</b>.</li>
+						<li>Enable the add-on by clicking the <b>checkbox</b> and expand the field to see that there are 2 folder paths you must set before using this add-on.</li>
+						<li>The <b>Unzipped Game Folder</b> field must be assigned to the folder where you unzipped the contents of the TurokEX game.kpf file. If you haven't done that yet then do that now.</li>
+						<li>The <b>Turok Folder</b> field must be assigned to the Turok install folder</li>
+						<li>Click the <b>Save Preferences</b> button</li>
+					</ol>
+				</td>
+				<td class="content">
+					<img src="images/blender_prefs.jpg">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="importing">
+		<p>
+			<h2>Importing</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<ol type="1">
+						<li>Navigate to <b>File > Import > Turok Model (.bin)</b></li>
+						<li>Select a TurokEX model .bin file to import.
+							<ul>
+								<li><b>Hide variants</b> - hides all mesh variants on the model except the first variant.</li>
+								<li><b>Import Anim</b> - automatically tries to find the .bin animation file that the selected model belongs to.</li>
+								<li><b>Bake Yaw Offsets</b> - For each animation, rotates the root bone by it's Yaw Offset. (Do not turn on if you intend to export this model back into Turok)</li>
+							</ul>
+						</li>
+						<li>If you disabled the Import Anim option or the animation was not found automatically you will have to import the animation manually. To do that follow the same procedure as importing the model except first <b>select the object</b> you want to apply the animation too and then navigate to <b>File > Import > Turok Anim (.bin)</b></li>
+					</ol>
+				</td>
+				<td class="content">
+					<img src="images/blender_import_model.jpg">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="exporting">
+		<p>
+			<h2>Exporting</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<ol type="1">
+						<li>Navigate to <b>File > Export > Turok Model (.bin)</b></li>
+						<li>Enter the file path you want to export the model to.
+							<ul>
+								<li><b>Export Materials</b> - Exports all used materials to .kmat files relative to the export directory.</li>
+								<li><b>Copy Textures</b> - Copies all used textures to their path relative to the export directory.</li>
+								<li><b>Export Anim</b> - Export all animations the model uses into a .anim filename with _anim added to the end of it.</li>
+								<li><b>Use Models Directory</b> - Exports materials, textures, and anims to parent folder of "models" + the sub folders after the models folder if it exists in the export path. Used for convenience when you save your model to the games models directory and you want everything else saved in the correct folders as Turok has it setup.</li>
+								<li><b>NLA Tracks</b> - Exported animations must be in the Armatures NLA Tracks</li>
+							</ul>
+						</li>
+						<li>If you disabled the Export Anim option you will have to export the animation manually. To do that follow the same procedure as exporting the model except navigate to <b>File > Export > Turok Anim (.bin)</b></li>
+					</ol>
+					<p>When exporting Animations, make sure you give it a fake user by pressing the little shield icon and then an F will be displayed to the left of the animation name in the list. Otherwise the animation will not be exported. Validate the model and check the System Console for any errors/warnings.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_export_model.jpg">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="customModels">
+		<p>
+			<h2>Creating A Custom Model</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		When creating your custom model make sure:
+		<ul>
+			<li>All origins of all objects must be at 0,0,0 and have no rotation and a scale of all 1. you can resize of course just remember to Apply any transform changes you might have made to your object before exporting Ctrl+A -> All Transforms.</li>
+			<li>Parent your meshes to the bone you want it connected to.</li>
+			<li>For any new bones you create remember to go to the Bone Properties panel and click the “Setup Turok Bone” button. This will set it's head/tail position correctly and make sure it won't deform the mesh. Only move/rotate bones in pose mode.</li>
+		</ul>
+	</div>
+	<br>
+	<div id="editing">
+		<p>
+			<h2>Editing Turok Properties</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<h3 id="objectPanel">Object Panel</h3>
+		<img src="images/blurulr6.gif" style="width:150px;height:4px;">
+		<table>
+			<tr>
+				<td class="content">
+					<b>Type</b>: The Type of Turok Object this Blender Object is.
+					<ul>
+						<li><b>None</b> - Not a Turok Object. It's a standard Blender Object.</li>
+						<li><b>Model</b> - A Turok Model Object.</li>
+						<li><b>Map Staticmesh</b> - A Staticmesh that's part of the map (Do not assign manually)</li>
+						<li><b>Map Actor</b> - An Actor that's part of the map (Do not assign manually)</li>
+						<li><b>Map Sectors</b> - The map sectors mesh object(Do not assign manually)</li>
+						<li><b>Map Ceiling Sectors</b> - The map ceiling sectors mesh object(Do not assign manually)</li>
+						<li><b>Map Sun</b> - The map sun object</li>
+						<li><b>Map Root</b> - The main map object</li>
+					</ul>
+					<b>Yaw Offset</b>: Add Yaw Offset key frames to your animation to rotate the root bone in game. Yaw Offset key frames are used in AI Turn Animations. So this way the models root bone can rotate differently from the actual way the AI is turning towards in game.
+					<br>
+					<img width="100%"src="images/blender_yawoffset_keyframes.jpg">
+					<br>
+					<p><b>Validate Turok Model</b>: Press this button to make sure everything is setup correctly and ready to be exported to Turok. Info/Warnings/Errors will be displayed in the System Console.</p>
+					<p><b>Marker</b>: Whether to use Blend and Loop Frame. Just about all models use this.</p>
+					<p><b>Blend</b>: The length of frames to blend into this animation (default 5)</p>
+					<p><b>Loop Frame</b>: The Frame to go after the animation has finished playing. Setting this to the last frame of the animation will make it stop when it finishes playing. So most of the time you want this at either frame 1 or the last frame.</p>
+					<p><b>Action Key Frames</b>: Add/Remove/Select Action Key Frames that will trigger in game. With a Action Key Frame selected you can edit it's properties.
+					<ul>
+						<li><b>Frame</b> - The frame this action will be triggered on. Reminder that this frame number is for 15 fps which would be 1 to 1. If you imported with 60 FPS then every 4 frames in blender is 1 Turok frame.</li>
+						<li><b>Event Func</b> - The type of action that will be triggered. Enter a number or click the menu button on the right to search for one. Common ones are listed at the top of the list.</li>
+						<li>The next 4 properties depend on the Event Func you are using. Assign them accordingly.</li>
+					</ul></p>
+					<p><b>Bounding Box</b>: If this model is being used as a Staticmesh then set the min/max fields to all zero. If you intend to use this model as an actor then set these fields to encompass the model in all it's animations as well. If you intend to use as both, then you will need to make 2 models. 1 staticmesh version and 1 actor version. There are some helper buttons to show the Bounding Box as an object and then you can edit it visually and click the “Set Min/Max” button to set the min/max fields to the Bounding Box object.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_object_panel.jpg">
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<table>
+			<tr>
+				<td class="content">
+					<p>Selecting Meshes that are part of a bones Armature will display it's meshes Properties.</p>
+					<p><b>Mesh Index</b>: Set to a unique value starting from 0 for each mesh variant. If has same values on Export will sort and assign accordingly. This is the value used in the bones Variants list in order to show/hide this mesh according to the in game Variant value.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_object_panel_mesh.jpg">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<h3 id="bonePanel">Bone Panel</h3>
+		<img src="images/blurulr6.gif" style="width:150px;height:4px;">
+		<table>
+			<tr>
+				<td class="content">
+					<p><b>Bone Index</b>: The Bones index value will specify the order the bone is saved. You should give a different value to each bone. But you can also leave it as 0 (or any value) and they will be assigned unique values on export according to the order the bones were created in Blender.</p>
+					<p><b>Variants</b>: A list of what mesh index to use for each variant in game. In this example Variant 0 will show the mesh that has a mesh index of 0 and will hide all the other meshes that are parented to this bone. Only 1 mesh variant is shown. Having multiple meshes with the same index is not possible in game so on Blender Export it will assign the mesh a unique index value if it needs to.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_bone_panel.jpg">
+				</td>
+			</tr>
+		</table>
+		<br>
+		<h3 id="actionPanel">Animation Action Panel</h3>
+		<img src="images/blurulr6.gif" style="width:250px;height:4px;">
+		<p>In Blenders Dope Sheet Viewport, in the action editor, you can select animations and view the Turok Properties panel by pressing N or dragging the right side out. This action panel is the same as the one in the Armatures Object Panel, so see that for the same details.</p>
+		<img src="images/blender_action_panel.jpg">
+		<br><br><br>
+		<h3 id="viewPanel">3D Viewport Tool Panel</h3>
+		<img src="images/blurulr6.gif" style="width:250px;height:4px;">
+		<table>
+			<tr>
+				<td class="content">
+					<p>In any 3D Viewport window, you can view the Turok Tool panel by pressing N or dragging the right side out.</p>
+					<p><b>View Readme</b>: Click this button to open the Readme.pdf file if you ever need help with this add-on.</p>
+					<p><b>Setup Player Model Scale</b>: Creates a box object that is the same scale as Turok</p>
+					<p><b>Setup Weapon Model Scale</b>: Creates a box object that is the same scale as a Weapon</p>
+					<p><b>Setup Weapon Camera</b>: Setup a Weapon Camera which matches the TurokEX camera so you can easily see what your weapon will look like in game (Activate the camera with the default key “0” on keypad).</p>
+					<p><b>Sound Test</b>: Open a folder that contains .ksnd files to show them in a list. Click on them in the list to play them. You can also select sounds by ID value and play them.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_tool_panel.jpg">
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<h3 id="materialPanel">Material Panel</h3>
+		<img src="images/blurulr6.gif" style="width:200px;height:4px;">
+		<table>
+			<tr>
+				<td class="content">
+					<p><b>Convenience Functions</b>: To quickly assign a texture to this material – select an image by clicking on the image icon on the left or opening a new texture, and select the type: One Sided, Two Sided, or Water. And if the image that you selected has any alpha in it. Then click Quick Image Setup and the shader node with the selected image will be added to the material and the Turok material properties will be setup automatically.</p>
+					<p><b>Import Material from .kmat</b>: Import a material from any material in an existing .kmat file.</p>
+					<p><b>Use Custom Material Path</b>: If ON will save this material to the specified .kmat file (do not include the extension .kmat in the Material Path). If is OFF will automatically set the material file path to materials/mat_<ExportFileName></p>
+					<p><b>Shader</b>: The path to the shader that this material will use. Click the menu button on the right to select a shader from a list of default shaders in the game.</p>
+					<p><b>Diffuse Color</b>: In the default shaders this is used as color = texture color * diffuse color.</p>
+					<p><b>Sort</b>: The sort type to render this material on.</p>
+					<ul>
+						<li><b>Default</b> - The standard sort type most opaque materials should use</li>
+						<li><b>Masked</b> - Used for materials with textures that have alpha. The Blend and Alpha Test material property should also be on when using this sort type.</li>
+						<li><b>Translucent</b> - Materials that you can partially see through. Should have the Blend property on when using this sort type.</li>
+						<li><b>Water</b> - For water materials. Should have the Blend property on when using this sort type.</li>
+						<li><b>Custom1, Custom2, Custom3</b> - Custom purposes.</li>
+					</ul>
+					<p><b>Cull</b>: Which side to render Tris.</p>
+					<ul>
+						<li><b>Use Settings</b> - ses whatever Blenders material setting "Backface Culling" is set to.</li>
+						<li><b>Back</b> - Renders only the back side (mostly used)</li>
+						<li><b>Front</b> - Renders only the front side. (Should never use this)</li>
+						<li><b>None</b> - Draws both sides</li>
+					</ul>
+					<p><b>Blend</b>: Material transparency</p>
+					<p><b>Full Bright</b>: Do not use any lighting.</p>
+					<p><b>No Draw</b>: Will not render</p>
+					<p><b>Depth Test</b>: Draws behind objects based on Depth buffer, otherwise will always draw on top of current render.</p>
+					<p><b>No Depth Mask</b>: Turns off depth mask. The depth mask masks out areas on the model depending on how far from the camera it is.</p>
+					<p><b>Alpha Test</b>: Turn ON if you have a texture that uses alpha and use sort type Masked. Discards pixels depending on the outcome of the Alpha Func comparison between the textures alpha value and the Alpha Mask value.</p>
+					<p><b>Alpha Func</b>: The alpha comparison function (default: gequal)</p>
+					<p><b>Alpha Mask</b>: The alpha cut off value to discard the pixel. (default: 0.6525)</p>
+					<p><b>Params</b>: A list of uniform variables the shader will use. Assign the correct names from the shader and specify whether the variable is an Integer or Float. Then assign it's value.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_material_panel.jpg">
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<h3 id="shaderPanel">Shader Panel</h3>
+		<img src="images/blurulr6.gif" style="width:200px;height:4px;">
+		<p>Edit Material Texture Properties In Blenders Shader Editor Viewport and select a Texture Image Node and bring up the side panel by pressing N or dragging the right side out.</p>
+		<table>
+			<tr>
+				<td class="content">
+					<p><b>[Node]File Path</b>: Only the filename will be used and not the full path. If the filename is any of the following: _default, _black, _white, _depthbuffer, _framebuffer, _simpleShadow, _wireframeMesh, _wireframeMeshSelected the games builtin texture will be used for it instead.</p>
+					<p><b>[Node]Texture Interpolation</b>: Linear, Cubic, and Smart will all use “linear” filtering for the Turok texture. Closest will use “nearest”.</p>
+					<p><b>[Node]Texture Extension</b>: Extend and Clip will use the Turok “clamp” wrapping. Repeat will use Turoks “repeat” wrapping.</p>
+					<p><b>Texture Index</b>: Assign this texture a sampler index. If you only have 1 texture which almost all Turok shaders only support then set this to 0.</p>
+					<p><b>Mirrored</b>: Changes texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
+					<p><b>Export To Custom Directory</b>: If you need to export this texture out to a custom directory other than the “textures/” directory you can turn this on and assign the Texture Directory.</p>
+				</td>
+				<td class="content">
+					<img src="images/blender_shader_panel.jpg">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="changeLog">
+		<p>
+			<h2>Change Log</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<font size="4"><b>Version 1.1.0</b></font> <i>(2019-12-18)</i>
+		<ul>
+			<li><b>Import</b>
+				<ul>
+					<li>Fixed issue with parsing names that started with numbers, brace brackets and equals.</li>
+				</ul>
+			</li>
+			<br>
+			<li><b>Export</b>
+				<ul>
+					<li>Model Validation check is now automatically done before exporting</li>
+					<li>Exporting model material indexes are now correct, fixing the problem with unused materials.</li>
+					<li>Now checks if material slots have a value of None</li>
+				</ul>
+			</li>
+			<br>
+			<li><b>UI</b>
+				<ul>
+					<li>More QOL buttons in the Turok Tool Panel: button to create a box of the player scale, button to create a box of the weapon scale, button to create/setup the weapon camera which matches the TurokEX camera so you can easily see what it will look like in game (Activate the camera with the default key “0” on keypad).</li>
+					<li>All integer property values now have correct range limits based on their data type.</li>
+				</ul>
+			</li>
+			<br>
+			<li><b>Misc</b>
+				<ul>
+					<li>Model Validation: Only Animation Actions with a fake user will give warning/errors, checks for invalid characters in material names</li>
+					<li>The list of Turok Shaders is now in it's own def file.</li>
+					<li>File reading and writing is now slightly faster and more correct. There's less reads and writes. Ensures little endian byte order in all cases, and correct int sign.</li>
+					<li>Quaternions are no longer normalized when reading from file.</li>
+					<li>The full version history is now in the file “VersionHistory.txt” located in this add-on folder.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

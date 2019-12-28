@@ -13,75 +13,30 @@
 <body>
 
 <div class="sidenav">
-  <a href="../index.html"><img src="../images/logo.png" style="width:176px;height:112px;"></center></a>
+  <a href="../index.html"><img src="../images/logo.png" style="width:176px;height:99px;"></center></a>
   <a class="active" href="JavaScript:void(0);">Turok Blender Add-on</a>
-  <ul>
-  <li><a class="sub" href="#install">Installation</a></li>
-  <li><a class="sub" href="#importing">Importing</a></li>
-  </ul>
+  <a href="doc.html">Documentation</a>
 </div>
 
-<div id="install" class="main">
+<div class="main">
 	<div>
-	<p><center><h1>TurokEX Tools v1.1.0 for Blender 2.8x</h1>By BehemothProgrammer</p>
+	<center><p><h1>TurokEX Tools v1.1.0 for Blender 2.8x</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
-	<div>
-		<p>
-			<h2>Installation</h2>
-			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
-		</p>
-	</div>
-	<div class="helpSection">
-		<table>
-			<tr>
-				<td class="content">
-					Open Blender and navigate to <b>Edit > Preferences</b>
-					<ol type="1">
-						<li>Click on the <b>Add-ons</b> tab.</li>
-						<li>If you have another version of the TurokEX Tools already installed then click the <b>Remove</b> button.</li>
-						<li>Click the <b>Install...</b> button and select the TurokEXBlenderTools.zip file you downloaded.</li>
-						<li>If you don't see the Add-on afterwards type in the <b>search</b> field <b>“turok”</b> to quickly find the add-on <b>Import-Export: TurokEX Tools</b>.</li>
-						<li>Enable the add-on by clicking the <b>checkbox</b> and expand the field to see that there are 2 folder paths you must set before using this add-on.</li>
-						<li>The <b>Unzipped Game Folder</b> field must be assigned to the folder where you unzipped the contents of the TurokEX game.kpf file. If you haven't done that yet then do that now.</li>
-						<li>The <b>Turok Folder</b> field must be assigned to the Turok install folder</li>
-						<li>Click the <b>Save Preferences</b> button</li>
-					</ol>
-				</td>
-				<td class="content">
-					<img src="images/blender_prefs.jpg">
-				</td>
-			</tr>
-		</table>
-	</div>
 	<br>
-	<div id="importing">
-		<p>
-			<h2>Importing</h2>
-			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
-		</p>
-	</div>
 	<div class="helpSection">
-		<table>
-			<tr>
-				<td class="content">
-					<ol type="1">
-						<li>Navigate to <b>File > Import > Turok Model (.bin)</b></li>
-						<li>Select a TurokEX model .bin file to import.
-							<ul>
-								<li><b>Hide variants</b> - hides all mesh variants on the model except the first variant.</li>
-								<li><b>Import Anim</b> - automatically tries to find the .bin animation file that the selected model belongs to.</li>
-								<li><b>Bake Yaw Offsets</b> - For each animation, rotates the root bone by it's Yaw Offset. (Do not turn on if you intend to export this model back into Turok)</li>
-							</ul>
-						</li>
-						<li>If you disabled the Import Anim option or the animation was not found automatically you will have to import the animation manually. To do that follow the same procedure as importing the model except first <b>select the object</b> you want to apply the animation too and then navigate to <b>File > Import > Turok Anim (.bin)</b></li>
-					</ol>
-				</td>
-				<td class="content">
-					<img src="images/blender_import_model.jpg">
-				</td>
-			</tr>
-		</table>
+		<center>
+			<p>
+				<b>Download</b>
+				<br>
+				<a href="TurokEXBlenderTools_1.1.0.zip">TurokEXBlenderTools_1.1.0.zip</a> (1.7MB)
+			</p>
+		</center>
+		<p>This is an addon for Blender 2.8x that allows you to Import and Export models and animations
+		from and to TurokEX. Please read the online documentation or the Readme.pdf for details on
+		installing, import, exporting, and editing.</p>
+		<center><img src="images/turokex_blender_main.jpg" style="max-width:75%;height:auto;"></center>
+		<br>
 	</div>
 </div>
 
