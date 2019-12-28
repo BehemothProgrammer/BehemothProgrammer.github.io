@@ -27,6 +27,17 @@ div {
 */
 }
 
+div.helpSection {
+  border-radius: 5px 50px 50px;
+  border: 2px solid #404040;
+  padding: 20px;
+/*	text-align: center;*/
+/*
+   word-wrap: break-word;
+   width: 100px;
+*/
+}
+
 /* By default set the color on these tags as #000. */
 h1, h2, h3, h4, h5, h6
 {
@@ -102,7 +113,7 @@ blockquote, blockquote blockquote blockquote
 	font-size: 0.9em;
 	color: #808080;
 	line-height: 1.4em;
-	background: #333333 url("quote.png") no-repeat;
+	background: #333333 url("images/quote.png") no-repeat;
 	border: solid 1px #808080;
 	padding: 1em 1em 1em 2em;
 	margin: 0.3em 0 0 0;
@@ -190,53 +201,48 @@ table.table_list tbody.content td.icon
 	width: 6%;
 }
 
-/* Nav Menu Bar */
-ul.vertbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #202020;
-  /* border: 1px solid #555; */
-}
-
-li.vertbar {
+.sidenav {
+  height: 100%;
+  width: 176px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   text-align: center;
-  /* border-bottom: 1px solid #555; */
+  overflow-x: hidden;
 }
 
-li.vertbar a {
+.sidenav a {
   display: block;
-  /* color: #000; */
-  padding: 8px 16px;
+  padding: 4px 4px;
   text-decoration: none;
 }
 
-li.vertbar:last-child {
+.sidenav a:first-child {
+  display: block;
+  padding: 0px 0px;
+}
+.sidenav a:last-child {
   border-bottom: none;
 }
 
-li.vertbar a.active {
+.sidenav a.sub {
+  text-align: left;
+  color: #00c0c0;
+}
+
+.sidenav a.active {
   background-color: #0000FF;
   color: white;
 }
 
-li.vertbar a:hover:not(.active) {
+.sidenav a:hover:not(.active) {
   background-color: #8080FF;
   color: white;
 }
 
-table.menus {
- /* border-collapse: collapse; */
-	width: 100%;
-	height: 100%;
-}
-
-td.menus {
-	text-align: center;
-	vertical-align: top;
-	padding: 2px;
-	background-color: #101010;
+.main {
+  margin-left: 180px;
 }
 
 td.content {
