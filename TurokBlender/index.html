@@ -15,6 +15,10 @@
 <div class="sidenav">
   <a href="../index.html"><img src="../images/logo.png" style="width:176px;height:99px;"></center></a>
   <a class="active" href="JavaScript:void(0);">Turok Blender Add-on</a>
+  <ul>
+	<li><a class="sub" href="#download">Download</a></li>
+	<li><a class="sub" href="#changeLog">Change Log</a></li>
+  </ul>
   <a href="doc.html">Documentation</a>
 </div>
 
@@ -24,19 +28,61 @@
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
+	<div id="download">
+		<p>
+			<h2>Download</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
 	<div class="helpSection">
-		<center>
-			<p>
-				<b>Download</b>
-				<br>
-				<a href="TurokEXBlenderTools_1.1.0.zip">TurokEXBlenderTools_1.1.0.zip</a> (1.7MB)
-			</p>
-		</center>
+		<p><b>Latest Release</b>: <a href="TurokEXBlenderTools_1.1.0.zip">TurokEXBlenderTools_1.1.0.zip</a> <sup><i>(2019-12-18)</i></sup></p>
 		<p>This is an addon for Blender 2.8x that allows you to Import and Export models and animations
 		from and to TurokEX. Please read the online documentation or the Readme.pdf for details on
-		installing, import, exporting, and editing.</p>
+		installing, importing, exporting, and editing.</p>
 		<center><img src="images/turokex_blender_main.jpg" style="max-width:75%;height:auto;"></center>
 		<br>
+	</div>
+	<br>
+	<div id="changeLog">
+		<p>
+			<h2>Change Log</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<font size="4"><b>Version 1.1.0</b></font> <sup><i>(2019-12-18)</i></sup>
+		<ul>
+			<li><b>Import</b>
+				<ul>
+					<li>Fixed issue with parsing names that started with numbers, brace brackets and equals.</li>
+				</ul>
+			</li>
+			<br>
+			<li><b>Export</b>
+				<ul>
+					<li>Model Validation check is now automatically done before exporting</li>
+					<li>Exporting model material indexes are now correct, fixing the problem with unused materials.</li>
+					<li>Now checks if material slots have a value of None</li>
+				</ul>
+			</li>
+			<br>
+			<li><b>UI</b>
+				<ul>
+					<li>More QOL buttons in the Turok Tool Panel: button to create a box of the player scale, button to create a box of the weapon scale, button to create/setup the weapon camera which matches the TurokEX camera so you can easily see what it will look like in game (Activate the camera with the default key “0” on keypad).</li>
+					<li>All integer property values now have correct range limits based on their data type.</li>
+				</ul>
+			</li>
+			<br>
+			<li><b>Misc</b>
+				<ul>
+					<li>Model Validation: Only Animation Actions with a fake user will give warning/errors, checks for invalid characters in material names</li>
+					<li>The list of Turok Shaders is now in it's own def file.</li>
+					<li>File reading and writing is now slightly faster and more correct. There's less reads and writes. Ensures little endian byte order in all cases, and correct int sign.</li>
+					<li>Quaternions are no longer normalized when reading from file.</li>
+					<li>The full version history is now in the file “VersionHistory.txt” located in this add-on folder.</li>
+				</ul>
+			</li>
+		</ul>
 	</div>
 </div>
 
