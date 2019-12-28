@@ -8,6 +8,23 @@
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript">
+function foo(response) {
+	var data = response.data;
+	console.log(data);
+	if (data.assets.length > 0) {
+		document.getElementById("latestReleaseLink").href = data.assets[0].browser_download_url;
+		document.getElementById("latestReleaseLink").innerHTML = data.assets[0].name;
+		document.getElementById("latestReleaseDownloadCount").innerHTML = "(" + data.assets[0].download_count + " Downloads)";
+		document.getElementById("latestReleaseSize").innerHTML = "(" + (data.assets[0].size / 1048576).toFixed(2) + "MB)";
+		var date = new Date(data.assets[0].updated_at)
+		document.getElementById("latestReleaseDate").innerHTML = date.toDateString();
+	}
+}
+var script = document.createElement('script');
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/latest?callback=foo';
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 </head>
 
 <body>
@@ -35,7 +52,9 @@
 		</p>
 	</div>
 	<div class="helpSection">
-		<p><b>Latest Release</b>: <a href="TurokEXBlenderTools_1.1.0.zip">TurokEXBlenderTools_1.1.0.zip</a> <sup><i>(2019-12-18)</i></sup></p>
+		<p><b>Latest Release</b>: <a id="latestReleaseLink" href="JavaScript:void(0);"></a>
+		<span id="latestReleaseSize"></span> <sup><i id="latestReleaseDate"></i></sup>
+		<span id="latestReleaseDownloadCount"></span></p>
 		<p>This is an addon for Blender 2.8x that allows you to Import and Export models and animations
 		from and to TurokEX. Please read the online documentation or the Readme.pdf for details on
 		installing, importing, exporting, and editing.</p>
