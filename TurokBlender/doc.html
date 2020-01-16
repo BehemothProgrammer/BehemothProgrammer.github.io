@@ -19,12 +19,14 @@
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="TurokEX Tools v1.1.0 Documentation" />
+<meta property="og:image" content="https://behemothprogrammer.github.io/TurokBlender/images/turokex_blender_main.jpg" />
 </head>
 
 <body>
 
 <div class="sidenav">
-  <a href="../index.html"><img src="../images/logo.png" style="width:176px;height:99px;"></center></a>
+  <br>
   <a href="index.html">Turok Blender Add-on</a>
   <a class="active" href="JavaScript:void(0);">Documentation</a>
   <ul>
@@ -255,8 +257,8 @@
 			<tr>
 				<td class="content">
 					<p><b>Convenience Functions</b>: To quickly assign a texture to this material – select an image by clicking on the image icon on the left or opening a new texture, and select the type: One Sided, Two Sided, or Water. And if the image that you selected has any alpha in it. Then click Quick Image Setup and the shader node with the selected image will be added to the material and the Turok material properties will be setup automatically.</p>
-					<p><b>Import Material from .kmat</b>: Import a material from any material in an existing .kmat file.</p>
-					<p><b>Use Custom Material Path</b>: If ON will save this material to the specified .kmat file (do not include the extension .kmat in the Material Path). If is OFF will automatically set the material file path to materials/mat_<ExportFileName></p>
+					<p><b>Import Material from .kmat</b>: Import a material from an existing .kmat file.</p>
+					<p><b>Use Custom Material Path</b>: If ON will save this material to the specified .kmat file (do not include the extension .kmat in the Material Path). If is OFF will automatically set the material file path to materials/mat_&#60;ExportFileName&#62;</p>
 					<p><b>Shader</b>: The path to the shader that this material will use. Click the menu button on the right to select a shader from a list of default shaders in the game.</p>
 					<p><b>Diffuse Color</b>: In the default shaders this is used as color = texture color * diffuse color.</p>
 					<p><b>Sort</b>: The sort type to render this material on.</p>
@@ -265,11 +267,10 @@
 						<li><b>Masked</b> - Used for materials with textures that have alpha. The Blend and Alpha Test material property should also be on when using this sort type.</li>
 						<li><b>Translucent</b> - Materials that you can partially see through. Should have the Blend property on when using this sort type.</li>
 						<li><b>Water</b> - For water materials. Should have the Blend property on when using this sort type.</li>
-						<li><b>Custom1, Custom2, Custom3</b> - Custom purposes.</li>
 					</ul>
 					<p><b>Cull</b>: Which side to render Tris.</p>
 					<ul>
-						<li><b>Use Settings</b> - ses whatever Blenders material setting "Backface Culling" is set to.</li>
+						<li><b>Use Settings</b> - Uses whatever Blenders material setting "Backface Culling" is set to.</li>
 						<li><b>Back</b> - Renders only the back side (mostly used)</li>
 						<li><b>Front</b> - Renders only the front side. (Should never use this)</li>
 						<li><b>None</b> - Draws both sides</li>
@@ -299,8 +300,8 @@
 					<p><b>[Node]File Path</b>: Only the filename will be used and not the full path. If the filename is any of the following: _default, _black, _white, _depthbuffer, _framebuffer, _simpleShadow, _wireframeMesh, _wireframeMeshSelected the games builtin texture will be used for it instead.</p>
 					<p><b>[Node]Texture Interpolation</b>: Linear, Cubic, and Smart will all use “linear” filtering for the Turok texture. Closest will use “nearest”.</p>
 					<p><b>[Node]Texture Extension</b>: Extend and Clip will use the Turok “clamp” wrapping. Repeat will use Turoks “repeat” wrapping.</p>
-					<p><b>Texture Index</b>: Assign this texture a sampler index. If you only have 1 texture which almost all Turok shaders only support then set this to 0.</p>
-					<p><b>Mirrored</b>: Changes texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
+					<p><b>Texture Sampler Index</b>: Assign this texture a sampler index. If you only have 1 texture which almost all Turok shaders only support then set this to 0.</p>
+					<p><b>Mirrored</b>: Overrides texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
 					<p><b>Export To Custom Directory</b>: If you need to export this texture out to a custom directory other than the “textures/” directory you can turn this on and assign the Texture Directory.</p>
 				</td>
 				<td class="content">
