@@ -13,13 +13,13 @@
 </script>
 <!-- End of Global site tag (gtag.js) - Google Analytics -->
 
-<title>TurokEX Tools v1.1.0 for Blender 2.8x</title>
+<title>TurokEX Tools v1.2.0 for Blender 2.8x</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="TurokEX Tools v1.1.0 for Blender 2.8x" />
+<meta property="og:title" content="TurokEX Tools v1.2.0 for Blender 2.8x" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/TurokBlender/images/turokex_blender_main.jpg" />
 <script type="text/javascript">
 function foo(response) {
@@ -54,7 +54,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 <div class="main">
 	<div>
-	<center><p><h1>TurokEX Tools v1.1.0 for Blender 2.8x</h1>By BehemothProgrammer</p>
+	<center><p><h1>TurokEX Tools v1.2.0 for Blender 2.8x</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
@@ -82,36 +82,28 @@ document.getElementsByTagName('head')[0].appendChild(script);
 		</p>
 	</div>
 	<div class="helpSection">
-		<font size="4"><b>Version 1.1.0</b></font> <sup><i>(2019-12-18)</i></sup>
+		<font size="4"><b>Version 1.2.0</b></font> <sup><i>(2019-12-18)</i></sup>
 		<ul>
 			<li><b>Import</b>
 				<ul>
-					<li>Fixed issue with parsing names that started with numbers, brace brackets and equals.</li>
+					<li>You can now import .map files</li>
 				</ul>
 			</li>
 			<br>
 			<li><b>Export</b>
 				<ul>
-					<li>Model Validation check is now automatically done before exporting</li>
-					<li>Exporting model material indexes are now correct, fixing the problem with unused materials.</li>
-					<li>Now checks if material slots have a value of None</li>
+					<li>When exporting textures there is a new option to export all textures in all the textures sets that the model uses</li>
 				</ul>
 			</li>
 			<br>
 			<li><b>UI</b>
 				<ul>
-					<li>More QOL buttons in the Turok Tool Panel: button to create a box of the player scale, button to create a box of the weapon scale, button to create/setup the weapon camera which matches the TurokEX camera so you can easily see what it will look like in game (Activate the camera with the default key “0” on keypad).</li>
-					<li>All integer property values now have correct range limits based on their data type.</li>
-				</ul>
-			</li>
-			<br>
-			<li><b>Misc</b>
-				<ul>
-					<li>Model Validation: Only Animation Actions with a fake user will give warning/errors, checks for invalid characters in material names</li>
-					<li>The list of Turok Shaders is now in it's own def file.</li>
-					<li>File reading and writing is now slightly faster and more correct. There's less reads and writes. Ensures little endian byte order in all cases, and correct int sign.</li>
-					<li>Quaternions are no longer normalized when reading from file.</li>
-					<li>The full version history is now in the file “VersionHistory.txt” located in this add-on folder.</li>
+					<li>The Object Panel now has a Texture Variant option so you can preview how the model will look with different texture set variants</li>
+					<li>The Action Panel now has a button beside Loop Frame that sets it to the last frame</li>
+					<li>Removed shader texture node “Export To Custom Directory” option in the Shader Panel</li>
+					<li>The Weapon Camera now uses a second image for the games HUD so it's in front of the camera as it should be</li>
+					<li>The Blender Radius Point Object for key frame actions for the following events needed to be multiplied by 2 to show the actual range of melee attacks: 31 "MeleeVeryWimpy", 32 "MeleeBluntWimpy", 33 "MeleeBluntWeak", 34 "MeleeBluntMedium", 35 "MeleeBluntStrong", 36 "MeleeBluntVeryStrong", 37 "MeleeBluntHeavy", 38 "MeleeBluntVeryHeavy", 376 "MeleeAttack1", 377 "MeleeAttack2", 388 "MeleeAttack3". All other events that use radius remain the same (radius * 10.24)</li>
+					<li>Online doc added to bl_info. "wiki_url": "https://behemothprogrammer.github.io/TurokBlender/doc.html"</li>
 				</ul>
 			</li>
 		</ul>

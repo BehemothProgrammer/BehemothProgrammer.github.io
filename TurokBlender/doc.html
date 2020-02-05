@@ -13,13 +13,13 @@
 </script>
 <!-- End of Global site tag (gtag.js) - Google Analytics -->
 
-<title>TurokEX Tools v1.1.0 Documentation</title>
+<title>TurokEX Tools v1.2.0 Documentation</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="TurokEX Tools v1.1.0 Documentation" />
+<meta property="og:title" content="TurokEX Tools v1.2.0 Documentation" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/TurokBlender/images/turokex_blender_main.jpg" />
 </head>
 
@@ -49,7 +49,7 @@
 
 <div id="install" class="main">
 	<div>
-	<p><center><h1>TurokEX Tools v1.1.0 Documentation</h1>By BehemothProgrammer</p>
+	<p><center><h1>TurokEX Tools v1.2.0 Documentation</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<div>
@@ -125,7 +125,11 @@
 						<li>Enter the file path you want to export the model to.
 							<ul>
 								<li><b>Export Materials</b> - Exports all used materials to .kmat files relative to the export directory.</li>
-								<li><b>Copy Textures</b> - Copies all used textures to their path relative to the export directory.</li>
+								<li><b>Copy Textures</b> - Copies all used textures to their path relative to the export directory.
+								<ul>
+									<li><b>Copy All Textures in Texture Sets</b> - Copies all textures in every used texture set.</li>
+								</ul>
+								</li>
 								<li><b>Export Anim</b> - Export all animations the model uses into a .anim filename with _anim added to the end of it.</li>
 								<li><b>Use Models Directory</b> - Exports materials, textures, and anims to parent folder of "models" + the sub folders after the models folder if it exists in the export path. Used for convenience when you save your model to the games models directory and you want everything else saved in the correct folders as Turok has it setup.</li>
 								<li><b>NLA Tracks</b> - Exported animations must be in the Armatures NLA Tracks</li>
@@ -169,17 +173,8 @@
 		<table>
 			<tr>
 				<td class="content">
-					<b>Type</b>: The Type of Turok Object this Blender Object is.
-					<ul>
-						<li><b>None</b> - Not a Turok Object. It's a standard Blender Object.</li>
-						<li><b>Model</b> - A Turok Model Object.</li>
-						<li><b>Map Staticmesh</b> - A Staticmesh that's part of the map (Do not assign manually)</li>
-						<li><b>Map Actor</b> - An Actor that's part of the map (Do not assign manually)</li>
-						<li><b>Map Sectors</b> - The map sectors mesh object(Do not assign manually)</li>
-						<li><b>Map Ceiling Sectors</b> - The map ceiling sectors mesh object(Do not assign manually)</li>
-						<li><b>Map Sun</b> - The map sun object (Do not assign manually)</li>
-						<li><b>Map Root</b> - The main map object (Do not assign manually)</li>
-					</ul>
+					<p><b>Type</b>: The Type of Turok Object this Blender Object is: None, Model, Map Staticmesh, Map Actor, Map Sectors, Map Ceiling Sectors, Map Sun, Map Root.</p>
+					<p><b>Texture Set</b>: Preview how the model will look with a texture set variant.</p>
 					<b>Yaw Offset</b>: Add Yaw Offset key frames to your animation to rotate the root bone in game. Yaw Offset key frames are used in AI Turn Animations. So this way the models root bone can rotate differently from the actual way the AI is turning towards in game.
 					<br>
 					<img src="images/blender_yawoffset_keyframes.jpg" style="max-width:100%;">
@@ -302,7 +297,6 @@
 					<p><b>[Node]Texture Extension</b>: Extend and Clip will use the Turok “clamp” wrapping. Repeat will use Turoks “repeat” wrapping.</p>
 					<p><b>Texture Sampler Index</b>: Assign this texture a sampler index. If you only have 1 texture which almost all Turok shaders only support then set this to 0.</p>
 					<p><b>Mirrored</b>: Overrides texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
-					<p><b>Export To Custom Directory</b>: If you need to export this texture out to a custom directory other than the “textures/” directory you can turn this on and assign the Texture Directory.</p>
 				</td>
 				<td class="content">
 					<img src="images/blender_shader_panel.jpg">
