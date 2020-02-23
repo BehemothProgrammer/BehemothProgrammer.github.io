@@ -2,17 +2,6 @@
 <html>
 
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155116302-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-155116302-1');
-</script>
-<!-- End of Global site tag (gtag.js) - Google Analytics -->
-
 <title>TurokEX Tools v1.2.0 for Blender 2.8x</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
@@ -24,14 +13,11 @@
 <script type="text/javascript">
 function foo(response) {
 	var data = response.data;
-	console.log(data);
 	if (data.assets.length > 0) {
 		document.getElementById("latestReleaseLink").href = data.assets[0].browser_download_url;
 		document.getElementById("latestReleaseLink").innerHTML = data.assets[0].name;
 		document.getElementById("latestReleaseDownloadCount").innerHTML = "(" + data.assets[0].download_count + " Downloads)";
-		document.getElementById("latestReleaseSize").innerHTML = "(" + (data.assets[0].size / 1048576).toFixed(2) + "MB)";
-		var date = new Date(data.assets[0].updated_at)
-		document.getElementById("latestReleaseDate").innerHTML = date.toDateString();
+		document.getElementById("latestReleaseSize").innerHTML = (data.assets[0].size / 1048576).toFixed(2) + "MB";
 	}
 }
 var script = document.createElement('script');
@@ -66,14 +52,14 @@ document.getElementsByTagName('head')[0].appendChild(script);
 	</div>
 	<div class="helpSection">
 		<p><b>Latest Release</b>: <a id="latestReleaseLink" href="JavaScript:void(0);"></a>
-		<span id="latestReleaseSize"></span> <sup><i id="latestReleaseDate"></i></sup>
-		<span id="latestReleaseDownloadCount"></span></p>
+		<span id="latestReleaseSize"></span> 
+		<span id="latestReleaseDownloadCount"></span><br>
+		<a href="https://github.com/BehemothProgrammer/BehemothProgrammer.github.io/releases">All Releases</a></p>
 		<p>This is an addon for Blender 2.8x that allows you to Import and Export models and animations
 		from and to TurokEX. Please read the online documentation or the Readme.pdf for details on
 		installing, importing, exporting, and editing.</p>
 		<center><img src="images/turokex_blender_main.jpg" style="max-width:75%;height:auto;"></center>
 		<br>
-		<a href="https://github.com/BehemothProgrammer/BehemothProgrammer.github.io/releases">View All Releases </a>
 	</div>
 	<br>
 	<div id="changeLog">
