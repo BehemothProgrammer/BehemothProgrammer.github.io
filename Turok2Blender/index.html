@@ -2,20 +2,35 @@
 <html>
 
 <head>
-<title>Turok 2 EX Tools v0.0.1 for Blender</title>
+<title>Turok 2 EX Tools v1.0.0 for Blender</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Turok 2 EX Tools v0.0.1 for Blender" />
+<meta property="og:title" content="Turok 2 EX Tools v1.0.0 for Blender" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
+<script type="text/javascript">
+function foo(response) {
+	var data = response.data;
+	if (data.assets.length > 0) {
+		document.getElementById("latestReleaseLink").href = data.assets[0].browser_download_url;
+		document.getElementById("latestReleaseLink").innerHTML = data.assets[0].name;
+		document.getElementById("latestReleaseDownloadCount").innerHTML = "(" + data.assets[0].download_count + " Downloads)";
+		document.getElementById("latestReleaseSize").innerHTML = (data.assets[0].size / 1048576).toFixed(2) + "MB";
+	}
+}
+var script = document.createElement('script');
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.0.0?callback=foo';
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 </head>
 
 <body>
 
 <div class="sidenav">
   <br>
+  <a href="../TurokBlender/index.html">Turok 1 EX Tools</a>
   <a class="active" href="JavaScript:void(0);">Turok 2 EX Tools</a>
   <ul>
 	<li><a class="sub" href="#download">Download</a></li>
@@ -26,7 +41,7 @@
 
 <div class="main">
 	<div>
-	<center><p><h1>Turok 2 EX Tools v0.0.1 for Blender</h1>By BehemothProgrammer</p>
+	<center><p><h1>Turok 2 EX Tools v1.0.0 for Blender</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
@@ -37,9 +52,15 @@
 		</p>
 	</div>
 	<div class="helpSection">
-		<center><p>This is an addon for Blender that allows you to import and export models and animations
+		<p><b>Latest Release</b>: <a id="latestReleaseLink" href="JavaScript:void(0);"></a>
+		<span id="latestReleaseSize"></span> 
+		<span id="latestReleaseDownloadCount"></span><br>
+		<a href="https://github.com/BehemothProgrammer/BehemothProgrammer.github.io/releases">All Releases</a></p>
+		<hr>
+		<center><p>This is an addon for Blender that allows you to import and export Staticmeshes, Skinnedmeshes, and Animations
 		from and to Turok 2 EX.<br>Please read the online <a href="doc.html">documentation</a> for details on
 		installing, importing, exporting, and editing.</p>
+		<img src="images/turok2ex_blender_main.jpg" style="max-width:75%;height:auto;"></center>
 	</div>
 	<br>
 	<div id="changeLog">
@@ -49,6 +70,10 @@
 		</p>
 	</div>
 	<div class="helpSection">
+		<font size="4"><b>Version 1.0.0</b></font> <sup><i>(2020-04-02)</i></sup>
+		<ul>
+			<li>Import and Export: Staticmeshes, Skinnedmeshes, and Animations</li>
+		</ul>
 	</div>
 </div>
 
