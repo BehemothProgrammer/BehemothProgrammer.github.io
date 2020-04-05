@@ -2,13 +2,13 @@
 <html>
 
 <head>
-<title>Turok 2 EX Tools v1.0.0 for Blender</title>
+<title>Turok 2 EX Tools v1.1.0 for Blender</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Turok 2 EX Tools v1.0.0 for Blender" />
+<meta property="og:title" content="Turok 2 EX Tools v1.1.0 for Blender" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
 <script type="text/javascript">
 function foo(response) {
@@ -21,7 +21,7 @@ function foo(response) {
 	}
 }
 var script = document.createElement('script');
-script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.0.0?callback=foo';
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.1.0?callback=foo';
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 </head>
@@ -41,7 +41,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 <div class="main">
 	<div>
-	<center><p><h1>Turok 2 EX Tools v1.0.0 for Blender</h1>By BehemothProgrammer</p>
+	<center><p><h1>Turok 2 EX Tools v1.1.0 for Blender</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
@@ -72,9 +72,12 @@ document.getElementsByTagName('head')[0].appendChild(script);
 		</p>
 	</div>
 	<div class="helpSection">
-		<font size="4"><b>Version 1.0.0</b></font> <sup><i>(2020-04-03)</i></sup>
+		<font size="4"><b>Version 1.1.0</b></font> <sup><i>(2020-04-04)</i></sup>
 		<ul>
-			<li>Import and Export: Staticmeshes, Skinnedmeshes, and Animations</li>
+			<li>Requires a minimum Blender version of 2.82.7</li>
+			<li>Duplicate vertices are removed when importing static and skinned meshes</li>
+			<li>Turok 2's mirror texture wrapping and reflective material now renders in a similar way inside Blender</li>
+			<li>The armature mesh modifier properties show_in_editmode and show_on_cage are now set to True when importing a skinnedmesh</li>
 		</ul>
 	</div>
 </div>
