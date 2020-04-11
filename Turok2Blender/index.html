@@ -2,13 +2,13 @@
 <html>
 
 <head>
-<title>Turok 2 EX Tools v1.1.0 for Blender</title>
+<title>Turok 2 EX Tools v1.2.0 for Blender</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Turok 2 EX Tools v1.1.0 for Blender" />
+<meta property="og:title" content="Turok 2 EX Tools v1.2.0 for Blender" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
 <script type="text/javascript">
 function foo(response) {
@@ -21,7 +21,7 @@ function foo(response) {
 	}
 }
 var script = document.createElement('script');
-script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.1.0?callback=foo';
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.2.0?callback=foo';
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 </head>
@@ -41,7 +41,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 <div class="main">
 	<div>
-	<center><p><h1>Turok 2 EX Tools v1.1.0 for Blender</h1>By BehemothProgrammer</p>
+	<center><p><h1>Turok 2 EX Tools v1.2.0 for Blender</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
@@ -72,12 +72,21 @@ document.getElementsByTagName('head')[0].appendChild(script);
 		</p>
 	</div>
 	<div class="helpSection">
-		<font size="4"><b>Version 1.1.0</b></font> <sup><i>(2020-04-04)</i></sup>
+		<font size="4"><b>Version 1.2.0</b></font> <sup><i>(2020-04-10)</i></sup>
 		<ul>
-			<li>Requires a minimum Blender version of 2.82.7</li>
-			<li>Duplicate vertices are removed when importing static and skinned meshes</li>
-			<li>Turok 2's mirror texture wrapping and reflective material now renders in a similar way inside Blender</li>
-			<li>The armature mesh modifier properties show_in_editmode and show_on_cage are now set to True when importing a skinnedmesh</li>
+			<li>The KFA(Key Frame Action) Offset Point now has a "Show Point On Root Bone" option. Checking this will make the point parented to the Root Bone. Turn this on if the animation will be used with Root Animation on in game. Else turn it off and it wil be parented to the model. Model and Root Bone Z location is not used, only XY.</li>
+			<li>The KFA radius value is correct now (argRadius / 256 * 10.24)</li>
+			<li>Added tooltip for the KFA Offset - reminding users that event 11 (Fire Weapon Projectile) does not use the offset value.</li>
+			<li>Added tooltip for the KFA Bone index values - that it's not used at all. Changed the validation check for this from an error to a warning.</li>
+			<li>Actual Damage value in KFA is now displayed beside it.</li>
+			<li>Auto importing an animation with a skinnedmesh will first check for a filename without the _<number> suffix.</li>
+			<li>Removed the open addon folder button from the tool panel</li>
+			<li>For the tool panels staticmesh list, when selecting a mesh it will automatically center the view on the object</li>
+			<li>When importing a material, culling is always set to "use setting". (Except if it's front)</li>
+			<li>Got a better image for the weapon camera background</li>
+			<li>Bounding Box object types that are parented to a bone will now display their bone index and name in the object panel.</li>
+			<li>A new def file in your Turok 2 mod project can now be used for defining custom user events in the Key Frame Action UI. This is for advanced users only. See the file defs/userEvents_example.txt in this add-on's folder for more details.</li>
+			<li>Added Skinnedmesh quick selection list in the tool panel (Warning: Loading a skinnedmesh here will force all actions, materials, and images to be removed from Blenders data)</li>
 		</ul>
 	</div>
 </div>
