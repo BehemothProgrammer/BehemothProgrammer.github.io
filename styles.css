@@ -32,6 +32,25 @@ div {
 */
 }
 
+.collapsible {
+  background-color: #101010;
+  color: white;
+  cursor: pointer;
+  font:14px "verdana", arial ,sans-serif;
+  border: none;
+  outline: none;
+}
+
+.collapsible:hover {
+  background-color: #555;
+}
+
+.collapsiblecontent {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+}
+
 div.helpSection {
   border-radius: 30px 30px 30px;
   border: 2px solid #404040;

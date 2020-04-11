@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 <div class="sidenav">
   <br>
   <a href="../TurokBlender/index.html">Turok 1 EX Tools</a>
@@ -244,6 +243,193 @@
 					<p><b>Head Tracking</b>: Assign the Start and End Bones that are the Neck and Head of the model so it will look at it's target. Assign None if you don't want any head tracking.</p>
 					<p><b>Bounding Box</b>: This displays the current min and max values of the bounding box parented to this armatures mesh object. Use the "---Show/Hide Bounding Boxes---" Dropdown menu to quickly show or hide certain bounding boxes.</p>
 					<p><b>Add Hot Point</b>: You can Add a new Hot Point to a Bone in this panel as well. Select a bone from the menu and click Add Hot Point. A new Hot Point Object will be created and added to the Armature.</p>
+					<br>
+					<hr>
+					<button type="button" class="collapsible">+ List of Action Key Frame Events</button>
+					<div class="collapsiblecontent">
+					<table border="1">
+						<tr>
+							<td class="content" style="text-align:center;"><b>Event ID</b></td>
+							<td class="content" style="text-align:center;min-width:235px;"><b>Name</b></td>
+							<td class="content" style="text-align:center;"><b>Description</b></td>
+						</tr>
+						<tr>
+							<td class="content">0</td>
+							<td class="content">Play Sound</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">1</td>
+							<td class="content">Spawn Particle</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">2</td>
+							<td class="content">Normal Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">3</td>
+							<td class="content">Normal Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">4</td>
+							<td class="content">Normal Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">5</td>
+							<td class="content">Trigger (Unused)</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">6</td>
+							<td class="content">Unblock Region</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">7</td>
+							<td class="content">Block Region</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">8</td>
+							<td class="content">Spawn Particle</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">9</td>
+							<td class="content">Screen Flash</td>
+							<td class="content">Only shows the flashes if the player is looking in the direction of the key frame action point</td>
+						</tr>
+						<tr>
+							<td class="content">10</td>
+							<td class="content">Spawn Trails (Unused)</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">11</td>
+							<td class="content">Fire Weapon Particle</td>
+							<td class="content">This will fire the particle specified. If the player is using alternate ammo and the particle ID matches projectileParticle in the weaponInfo def then it will fire the altProjectileParticle. This will also reduce the players ammo by ammoConsumption in the weaponInfo def. The point the particle is spawned at is hardcoded. The offset is not used.</td>
+						</tr>
+						<tr>
+							<td class="content">12</td>
+							<td class="content">Shake Screen Sinwave</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">13</td>
+							<td class="content">Shake Screen Random</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">14</td>
+							<td class="content">Display Text (Unused)</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">15</td>
+							<td class="content">Violent Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">16</td>
+							<td class="content">Violent Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">17</td>
+							<td class="content">Explosive Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">18</td>
+							<td class="content">Explosive Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">19</td>
+							<td class="content">Extreme Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">20</td>
+							<td class="content">Extreme Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">21</td>
+							<td class="content">Gamepad Rumble (Unused)</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">22</td>
+							<td class="content">User/Script Event</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">23</td>
+							<td class="content">Play Sound On Model</td>
+							<td class="content">If the model index is visible then it will play the sound</td>
+						</tr>
+						<tr>
+							<td class="content">24</td>
+							<td class="content">Spawn Particle On Model</td>
+							<td class="content">If the model index is visible then it will spawn the particle</td>
+						</tr>
+						<tr>
+							<td class="content">25</td>
+							<td class="content">Explosive Ground Radial Damage</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">26</td>
+							<td class="content">Turn On Hot Point</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">27</td>
+							<td class="content">Turn Off Hot Point</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">28</td>
+							<td class="content">Spawn Actor</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">29</td>
+							<td class="content">Play Material Sound</td>
+							<td class="content">If the actor is over a staticmesh surface that has the same specified surface type then the sound will play</td>
+						</tr>
+						<tr>
+							<td class="content">30</td>
+							<td class="content">Play Voice</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">31</td>
+							<td class="content">Play Looping Sound</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">32</td>
+							<td class="content">Stop Looping Sound</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">33</td>
+							<td class="content">Nuke Explosion</td>
+							<td class="content"></td>
+						</tr>
+						<tr>
+							<td class="content">34</td>
+							<td class="content">Delete This Actor</td>
+							<td class="content"></td>
+						</tr>
+					</table>
+					</div>
 				</td>
 			</tr>
 		</table>
@@ -273,7 +459,7 @@
 				</td>
 				<td class="content">
 					<p>Use the "---Show/Hide Hot Points---" Dropdown menu to quickly show or hide certain Hot Points.</p>
-					<p><b>Bit</b>: The Hot Point bit value to use for this Hot Point. 3 out of the 32 bits are used in game for general purposes, the other 29 can be used for custom purposes.</p>
+					<p><b>Bit</b>: The Hot Point bit value to use for this Hot Point. 3 out of the 32 bits are used in game for specific purposes, the other 29 can be used for custom purposes.</p>
 					<ul>
 						<li><b>1</b> - On Fire</li>
 						<li><b>3</b> - Death Blood</li>
@@ -341,10 +527,10 @@
 					<p><b>Import Material from .kmat</b>: Import a material from an existing .kmat file.</p>
 					<p><b>Use Custom Material Path</b>: If ON will save this material to the specified .kmat file (do not include the extension .kmat in the Material Path). If is OFF will automatically set the material file path to materials/mat_&#60;ExportFileName&#62;</p>
 					<p><b>Environment Color</b>: Generally, the texture color is interpolated to this color by the pixels alpha value. Then that's multiplied by the Diffuse Color.</p>
-					<p><b>Diffuse Color</b>: Multiplies pixel color by this color.</p>
+					<p><b>Diffuse Color</b>: Generally, multiplies pixel color by this color.</p>
 					<p><b>Sort</b>: The sort type to render this material on.</p>
 					<ul>
-						<li><b>Default</b> - The standard sort type most opaque materials should use</li>
+						<li><b>Default</b> - The standard sort type most opaque materials should use.</li>
 						<li><b>Masked</b> - Used for materials with textures that have alpha. The Blend and Alpha Test material property should also be on when using this sort type.</li>
 						<li><b>Translucent</b> - Materials that you can partially see through. Should have the Blend property on when using this sort type.</li>
 						<li><b>Water</b> - For water materials. Should have the Blend property on when using this sort type.</li>
@@ -372,6 +558,104 @@
 						<li><b>uReflective</b> - Integer Type. 0 for OFF, 1 for ON. This gives the shiny look based on camera projection</li>
 						<li><b>uPseduoColor</b> - Integer Type. 0 for OFF, 1 for ON. Saturates the Color by Environment/Diffuse Color</li>
 					</ul>
+					<br>
+					<hr>
+					<p>*The use of the Environment and Diffuse colors will be slightly different for whatever shader the game uses to draw this material, which depends on the type of mesh the material is used on, the material sort type, and whether the materials Full Bright setting is On/Off.</p>
+					<p>Staticmesh Shaders:</p>
+					<table border="1">
+						<tr>
+							<td class="content" style="text-align:center;">
+							<b>Settings</b>
+							</td>
+							<td class="content" style="text-align:center;">
+							<b>Shader Used</b>
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Default
+							</td>
+							<td class="content">
+							world_deferred.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Default, Full Bright
+							</td>
+							<td class="content">
+							world_deferredNoColor.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Masked
+							</td>
+							<td class="content">
+							world_deferredMask.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Masked, Full Bright
+							</td>
+							<td class="content">
+							world_deferredNoColorMasked.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Translucent/Water
+							</td>
+							<td class="content">
+							world.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Translucent/Water, Full Bright
+							</td>
+							<td class="content">
+							world_noColor.shader
+							</td>
+						</tr>
+					</table>
+					<p>Skinnedmesh Shaders:</p>
+					<table border="1">
+						<tr>
+							<td class="content" style="text-align:center;">
+							<b>Settings</b>
+							</td>
+							<td class="content" style="text-align:center;">
+							<b>Shader Used</b>
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Sort Translucent/Water or is used on a weapon
+							</td>
+							<td class="content">
+							world_skinned.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Anything
+							</td>
+							<td class="content">
+							world_skinnedDeferred.shader
+							</td>
+						</tr>
+						<tr>
+							<td class="content">
+							Anything, Full Bright
+							</td>
+							<td class="content">
+							world_skinnedDeferredColor.shader
+							</td>
+						</tr>
+					</table>
+					<p>* world_skinnedColor.shader doesn't appear to be used anywhere.</p>
 				</td>
 			</tr>
 		</table>
@@ -396,6 +680,23 @@
 		</table>
 	</div>
 </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
