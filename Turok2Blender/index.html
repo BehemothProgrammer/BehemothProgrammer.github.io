@@ -74,12 +74,12 @@ document.getElementsByTagName('head')[0].appendChild(script);
 	<div class="helpSection">
 		<font size="4"><b>Version 1.2.0</b></font> <sup><i>(2020-04-10)</i></sup>
 		<ul>
-			<li>The KFA(Key Frame Action) Offset Point now has a "Show Point On Root Bone" option. Checking this will make the point parented to the Root Bone. Turn this on if the animation will be used with Root Animation on in game. Else turn it off and it wil be parented to the model. Model and Root Bone Z location is not used, only XY.</li>
+			<li>The KFA(Key Frame Action) Offset Point now has a "Show Point On Root Bone" option. Checking this will make the point parented to the Root Bone. Turn this on if the animation will be used with Root Animation on in game. Else turn it off and it will be parented to the model. Model and Root Bone Z location is not used, only XY.</li>
 			<li>The KFA radius value is correct now (argRadius / 256 * 10.24)</li>
 			<li>Added tooltip for the KFA Offset - reminding users that event 11 (Fire Weapon Projectile) does not use the offset value.</li>
 			<li>Added tooltip for the KFA Bone index values - that it's not used at all. Changed the validation check for this from an error to a warning.</li>
 			<li>Actual Damage value in KFA is now displayed beside it.</li>
-			<li>Auto importing an animation with a skinnedmesh will first check for a filename without the _<number> suffix.</li>
+			<li>Auto importing an animation with a skinnedmesh will first check for a filename without the _&#60;number&#62; suffix.</li>
 			<li>Removed the open addon folder button from the tool panel</li>
 			<li>For the tool panels staticmesh list, when selecting a mesh it will automatically center the view on the object</li>
 			<li>When importing a material, culling is always set to "use setting". (Except if it's front)</li>
