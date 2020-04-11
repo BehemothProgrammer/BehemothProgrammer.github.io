@@ -237,11 +237,11 @@
 					<ul>
 						<li><b>Event</b> - The type of action that will be triggered. Enter a number or click the menu button on the right to search for one.</li>
 						<li><b>Frame</b> - The frame this action will be triggered on.</li>
-						<li><b>Bone</b> - The Bone this action will be parented to. Most of the time is None (65535).</li>
-						<li><b>Offset</b> - The location of this key frame action relative to the Bone or Armature.</li>
+						<li><b>Bone</b> - An unused Bone index. Most of the time is None (65535).</li>
+						<li><b>Offset</b> - The location of this key frame action relative to the Root Bone or Armature. This is not used in event 11 (Fire Weapon Projectile)</li>
 						<li>The next 8 properties depend on the Event you are using. Assign them accordingly.</li>
 					</ul></p>
-					<p><b>Head Tracking</b>: Assign the Start and End Bones that are the Head of the model so it will look at it's target. Assign None if you don't want any head tracking.</p>
+					<p><b>Head Tracking</b>: Assign the Start and End Bones that are the Neck and Head of the model so it will look at it's target. Assign None if you don't want any head tracking.</p>
 					<p><b>Bounding Box</b>: This displays the current min and max values of the bounding box parented to this armatures mesh object. Use the "---Show/Hide Bounding Boxes---" Dropdown menu to quickly show or hide certain bounding boxes.</p>
 					<p><b>Add Hot Point</b>: You can Add a new Hot Point to a Bone in this panel as well. Select a bone from the menu and click Add Hot Point. A new Hot Point Object will be created and added to the Armature.</p>
 				</td>
@@ -323,6 +323,7 @@
 					<p><b>Setup Weapon Camera</b>: Setup a Weapon Camera which matches the Turok 2 EX camera so you can easily see what your weapon will look like in game (Activate the camera with the default key “0” on keypad).</p>
 					<p><b>Sound Test</b>: Open a folder that contains .ksnd files to show them in a list. Click on them in the list to play them. You can also select sounds by ID value and play them.</p>
 					<p><b>Staticmeshes</b>: Open a folder that contains .staticmesh files to show them in a list. Click on them in the list to quickly load them. Click the Disconnect Button if you want to keep that mesh in Blender.</p>
+					<p><b>Skinnedmeshes</b>: Open a folder that contains .skinnedmesh files to show them in a list. Click on them in the list to quickly load them.</p>
 				</td>
 			</tr>
 		</table>
