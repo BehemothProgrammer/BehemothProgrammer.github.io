@@ -2,13 +2,13 @@
 <html>
 
 <head>
-<title>Turok 2 EX Tools v1.2.0 Documentation</title>
+<title>Turok 2 EX Tools v1.3.0 Documentation</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Turok 2 EX Tools v1.2.0 Documentation" />
+<meta property="og:title" content="Turok 2 EX Tools v1.3.0 Documentation" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
 </head>
 
@@ -50,7 +50,7 @@
 
 <div id="install" class="main">
 	<div>
-	<p><center><h1>Turok 2 EX Tools v1.2.0 Documentation</h1>By BehemothProgrammer</p>
+	<p><center><h1>Turok 2 EX Tools v1.3.0 Documentation</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<div>
@@ -671,11 +671,11 @@
 				</td>
 				<td class="content">
 					<p><b>[Node]File Path</b>: Only the filename will be used and not the full path. If the filename is any of the following: _default, _black, _white, _simpleShadow, _wireframeMesh, _wireframeMeshSelected the games builtin texture will be used for it instead.</p>
-					<p><b>[Node]Texture Interpolation</b>: Linear, Cubic, and Smart will all use “linear_anisotropic” except if Force Linear Filter is on then it will use “linear” filtering for the Turok 2 texture. Closest will always use “nearest”.</p>
+					<p><b>[Node]Texture Interpolation</b>: Linear, Cubic, and Smart will all use “linear” except if Anisotropic Filter is on then it will use “linear_anisotropic” filtering for the Turok 2 texture. Closest will always use “nearest”.</p>
 					<p><b>[Node]Texture Extension</b>: Extend and Clip will use the Turok “clamp” wrapping. Repeat will use Turoks “repeat” wrapping.</p>
 					<p><b>Texture Sampler Index</b>: If you only have 1 texture node then keep this at 0.</p>
 					<p><b>Mirrored</b>: Overrides texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
-					<p><b>Force Linear Filter</b>: Overrides texture filtering (except if closest) when exporting to "linear" instead of "linear_anisotropic" (You rarely want this on).</p>
+					<p><b>Anisotropic Filter</b>: Overrides texture filtering to "linear_anisotropic" when Linear, Cubic, or Smart is selected.</p>
 				</td>
 			</tr>
 		</table>
