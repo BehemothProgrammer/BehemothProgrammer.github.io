@@ -72,19 +72,14 @@ document.getElementsByTagName('head')[0].appendChild(script);
 		</p>
 	</div>
 	<div class="helpSection">
-		<font size="4"><b>Version 1.4.0</b></font> <sup><i>(2020-04-14)</i></sup>
+		<font size="4"><b>Version 1.4.0</b></font> <sup><i>(2020-04-15)</i></sup>
 		<ul>
-			<li>Double click a key frame action item in the list to quickly play audio and voice clips</li>
-			<li>Validation now checks to make sure the root bone has a bone index of 0</li>
-			<li>User/Script Event Arg 1 will now show the menu button for the list of custom events if there are any.</li>
-			<li>The Skinnedmesh animation action UI no longer has a collapsable drop down arrow and it's always shown.</li>
-			<li>Removed checking for updates on start up.</li>
-			<li>Material cull type "use settings" now exports correctly as back or none depending on the blender material setting.</li>
-			<li>The Player Scale Box mesh needed to be scaled by 2.855002 (Turok 2's actor scale) to match the world scale. The option to not scale it is in Blenders register option window in the bottom left by default after you click the button.</li>
-			<li>The material panel has a tab menu at the top with 2 items: Settings and Misc.</li>
-			<li>The first texture shader node properties are now shown in the material panel.</li>
-			<li>The Add Param button in the material panel is now a drop down selection where you can select the 3 common params quickly.</li>
-			<li>Changed Shading Panel property "Force Linear Filter" to "Anisotropic Filter"</li>
+			<li>Fixed overlapping triangles not being imported. Blender wouldn't allow me to create any face that overlapped another even if the winding order was different. I found a way around it, so now triangles that overlap and have a different winding order and/or different material will be imported.</li>
+			<li>Mesh validation now checks if any material param name is empty and the material param UI is now red when theres no name.</li>
+			<li>There's a new setting in preferences to hide Key Frame Action Args that are unused.</li>
+			<li>Rearranged Action Key Frame UI</li>
+			<li>Moved the example def file that was in this addons "defs/userEvent_example.txt" to "examples/userEvents.txt"</li>
+			<li>A new def file in your Turok 2 mod project can now be used for defining custom Hot Points in any hot point property UI. This is for advanced users only. See the file "examples/hotPoints.txt" in this add-on's folder for more details.</li>
 		</ul>
 	</div>
 </div>
