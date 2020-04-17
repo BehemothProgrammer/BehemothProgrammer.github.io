@@ -201,7 +201,7 @@
 			<li>Maximum number of Vertices a Skinnedmesh can have is 65535</li>
 			<li>Vertices can only be in 1 Bone Vertex Group and must have a weight of 1.0</li>
 			<li>Turok 2 does not support scaling for anything. Bones, Armature, the Mesh, and Animation Key Frames.</li>
-			<li>Note: In game, actors are usually scaled by 1.427501 (0.5 in game scale) and 2.855002 (1.0 in game scale).</li>
+			<li>Note: In game, actors are scaled by 2.855002 and then their actor scale is applied.</li>
 		</ul>
 	</div>
 	<br>
@@ -217,35 +217,32 @@
 		<table>
 			<tr>
 				<td class="content">
-					<img src="images/blender_object_panel.jpg">
+					<img src="images/blender_obj_anim_data.jpg">
 				</td>
 				<td class="content">
 					<p><b>Type</b>: The Type of Turok Object this Blender Object is: None, Staticmesh, Skinnedmesh, Bounding Box, Hot Point.</p>
-					<p><b>Preview TextureSet</b>: Preview how the Skinnedmesh will look with a texture set variant.</p>
-					<b>Yaw Offset</b>: Add Yaw Offset key frames to your animation to rotate the root bone in game. Yaw Offset key frames are used in AI Turn Animations. So this way the models root bone can rotate differently from the actual way the AI is turning towards in game.
-					<br>
-					<img src="images/blender_yawoffset_keyframes.jpg" style="max-width:100%;">
-					<br>
-					<p><b>Validate Skinnedmesh</b>: Press this button to make sure everything is setup correctly and ready to be exported to Turok 2. Info/Warnings/Errors will be displayed in the System Console.</p>
-					<p><b>FPS</b>: The Frames Per Second the animation will play at.</p>
-					<p><b>Frame Scale</b>: This value is unused and serves no purpose.</p>
+					<p><b>AnimID</b>: The Animations ID</p>
+					<p><b>FPS</b>: The Frames Per Second the animation will play at</p>
+					<p><b>Frame Scale</b>: This value is unused and serves no purpose</p>
 					<p><b>Blend Length</b>: The length of frames to blend into this animation (default 5)</p>
 					<p><b>Blend Start</b>: The frame to start blending</p>
 					<p><b>Blend End</b>: The frame to end blending</p>
 					<p><b>Loop Frame</b>: The Frame to go after the animation has finished playing. Setting this to the last frame of the animation will make it stop when it finishes playing. So most of the time you want this at either frame 0 or the last frame.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_obj_anim_kfa.jpg">
+				</td>
+				<td class="content">
 					<p><b>Action Key Frames</b>: Add/Remove/Select Action Key Frames that will trigger in game. With a Action Key Frame selected you can edit it's properties.
 					<ul>
-						<li><b>Event</b> - The type of action that will be triggered. Enter a number or click the menu button on the right to search for one.</li>
 						<li><b>Frame</b> - The frame this action will be triggered on.</li>
 						<li><b>Bone</b> - An unused Bone index. Most of the time is None (65535).</li>
-						<li><b>Offset</b> - The location of this key frame action relative to the Root Bone or Armature. This is not used in event 11 (Fire Weapon Projectile)</li>
-						<li>The next 8 properties depend on the Event you are using. Assign them accordingly.</li>
+						<li><b>Event</b> - The type of action that will be triggered. Enter a number or click the menu button on the right to search for one. The next 8 properties that appear below the event property depend on the Event you are using. Assign them accordingly.</li>
+						<li><b>Point Offset</b> - The location of this key frame action relative to the Root Bone or Armature. Press the Show Point button to see the point on the model. Pin the object view and select the point in the 3D view and move it around then click Set Offset to set the Key Frame Action Offset. (This is not used in event 11 - Fire Weapon Projectile)</li>
 					</ul></p>
-					<p><b>Head Tracking</b>: Assign the Start and End Bones that are the Neck and Head of the model so it will look at it's target. Assign None if you don't want any head tracking.</p>
-					<p><b>Bounding Box</b>: This displays the current min and max values of the bounding box parented to this armatures mesh object. Use the "---Show/Hide Bounding Boxes---" Dropdown menu to quickly show or hide certain bounding boxes.</p>
-					<p><b>Add Hot Point</b>: You can Add a new Hot Point to a Bone in this panel as well. Select a bone from the menu and click Add Hot Point. A new Hot Point Object will be created and added to the Armature.</p>
 					<br>
-					<hr>
 					<button type="button" class="collapsible">+ List of Action Key Frame Events</button>
 					<div class="collapsiblecontent">
 					<table border="1">
@@ -433,6 +430,36 @@
 					</div>
 				</td>
 			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_obj_bb.jpg">
+				</td>
+				<td class="content">
+					<p><b>Bounding Box</b>: This displays the current min and max values of the bounding box parented to this armatures mesh object. Use the "Show/Hide Bounding Boxes" Dropdown menu to quickly show or hide certain bounding boxes.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_obj_headtrack.jpg">
+				</td>
+				<td class="content">
+					<p><b>Head Tracking</b>: Assign the Start and End Bones that are the Neck and Head of the model so it will look at it's target. Assign None if you don't want any head tracking.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_obj_misc.jpg">
+				</td>
+				<td class="content">
+					<p><b>Validate Skinnedmesh</b>: Press this button to make sure everything is setup correctly and ready to be exported to Turok 2. Info/Warnings/Errors will be displayed in the System Console.</p>
+					<p><b>Preview TextureSet</b>: Preview how the Skinnedmesh will look with a texture set variant.</p>
+					<b>Yaw Offset</b>: Add Yaw Offset key frames to your animation to rotate the root bone in game. Yaw Offset key frames are used in AI Turn Animations. So this way the models root bone can rotate differently from the actual way the AI is turning towards in game. (As far as I know this was never used in Turok 2)
+					<br>
+					<img src="images/blender_yawoffset_keyframes.jpg" style="max-width:100%;">
+					<br>
+					<p><b>Add Hot Point</b>: You can Add a new Hot Point to a Bone in this panel as well. Select a bone from the menu and click Add Hot Point. A new Hot Point Object will be created and added to the Armature.</p>
+				</td>
+			</tr>
 		</table>
 		<hr>
 		<br>
@@ -441,10 +468,10 @@
 		<table>
 			<tr>
 				<td class="content">
-					<img src="images/blender_object_bb_panel.jpg">
+					<img src="images/blender_bb.jpg">
 				</td>
 				<td class="content">
-					<p>This displays the min and max values of this Bounding Box. Use the "---Show/Hide Bounding Boxes---" Dropdown menu to quickly show or hide certain bounding boxes.</p>
+					<p>This displays the min and max values of this Bounding Box. Use the "Show/Hide Bounding Boxes" Dropdown menu to quickly show or hide certain bounding boxes.</p>
 					<p>Switch to Edit Mode and modify the mesh to edit the min and max values.</p>
 				</td>
 			</tr>
@@ -456,10 +483,10 @@
 		<table>
 			<tr>
 				<td class="content">
-					<img src="images/blender_object_hp_panel.jpg">
+					<img src="images/blender_hotpoint.jpg">
 				</td>
 				<td class="content">
-					<p>Use the "---Show/Hide Hot Points---" Dropdown menu to quickly show or hide certain Hot Points.</p>
+					<p>Use the "Show/Hide Hot Points" Dropdown menu to quickly show or hide certain Hot Points.</p>
 					<p><b>Bit</b>: The Hot Point bit value to use for this Hot Point. 3 out of the 32 bits are used in game for specific purposes, the other 29 can be used for custom purposes.</p>
 					<ul>
 						<li><b>1</b> - On Fire</li>
@@ -478,7 +505,7 @@
 		<table>
 			<tr>
 				<td class="content">
-					<img src="images/blender_bone_panel.jpg">
+					<img src="images/blender_bone_data.jpg">
 				</td>
 				<td class="content">
 					<p><b>Bone Index</b>: The Bones index value will specify the order the bone is saved. You must give it a unique value starting from 0 to the number of bones in your armature.</p>
@@ -486,8 +513,25 @@
 					<p><b>Damage Scalar</b>: Damage multiplier for hitting this bone.</p>
 					<p><b>Symbols</b>: These describe the location of the bone.</p>
 					<p><b>Collision</b>: Specifies whether or not this bone will have collision depending on attached models, such as don't do collision if head has been blown off, etc. Each number represents the attached model index. If that number is ON then that bone will have collision with that attached model.</p>
-					<p><b>Bounding Box</b>: This displays the current min and max values of the bounding box parented to this bone. Use the "---Show/Hide Bounding Boxes---" Dropdown menu to quickly show or hide certain bounding boxes.</p>
 					<p><b>Add Hot Point</b>: You can Add a new Hot Point to this Bone in this panel as well. Click Add Hot Point to create a new Hot Point that will be parented to this bone.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_bone_bb.jpg">
+				</td>
+				<td class="content">
+					<p><b>Bounding Box</b>: This displays the current min and max values of the bounding box parented to this bone. Use the "Show/Hide Bounding Boxes" Dropdown menu to quickly show or hide certain bounding boxes.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_bone_setup.jpg">
+				</td>
+				<td class="content">
+					<p><b>Setup Bone</b>: Sets the bones head/tail position to be correct.</p>
+					<p><b>Auto Name Bone</b>: Sets the bones name using the Bone Index and Symbols.</p>
+					<p><b>Include Index In Name</b>: If you want to mirror your pose bones as your animating you will need to name your bones without the index. Turn this off and auto name your bones to be easily able to do that.</p>
 				</td>
 			</tr>
 		</table>
@@ -499,18 +543,64 @@
 		<br><br><br>
 		<h3 id="viewPanel">3D Viewport Tool Panel</h3>
 		<img src="images/blurulr6.gif" style="width:250px;height:4px;">
+		<p>In any 3D Viewport window, you can view the Turok 2 Tool panel by pressing N or dragging the right side out.</p>
 		<table>
 			<tr>
 				<td class="content">
-					<img src="images/blender_tool_panel.jpg">
+					<img src="images/blender_tools_misc.jpg">
 				</td>
 				<td class="content">
-					<p>In any 3D Viewport window, you can view the Turok 2 Tool panel by pressing N or dragging the right side out.</p>
+					<p><b>Clear Unused Blender Data</b>: Removes all Blender Data blocks that are unused. Better then Blenders "Purge All" operator.</p>
+					<p><b>Open Add-on folder</b>: Tries to open the folder this add-on is located in with windows explorer.</p>
+					<p><b>Online Documentation</b>: Opens a web page in your browser to the Turok 2 EX Blender Tools website.</p>
 					<p><b>Setup Player Model Scale</b>: Creates a box object that is the same scale as the Player</p>
-					<p><b>Setup Weapon Camera</b>: Setup a Weapon Camera which matches the Turok 2 EX camera so you can easily see what your weapon will look like in game (Activate the camera with the default key “0” on keypad).</p>
-					<p><b>Sound Test</b>: Open a folder that contains .ksnd files to show them in a list. Click on them in the list to play them. You can also select sounds by ID value and play them.</p>
-					<p><b>Staticmeshes</b>: Open a folder that contains .staticmesh files to show them in a list. Click on them in the list to quickly load them. Click the Disconnect Button if you want to keep that mesh in Blender.</p>
-					<p><b>Skinnedmeshes</b>: Open a folder that contains .skinnedmesh files to show them in a list. Click on them in the list to quickly load them.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_tools_defs.jpg">
+				</td>
+				<td class="content">
+					<p><b>All</b>: Loads all the games files. This will take a while since there are so many files and you only need to do this once. Once the files are loaded there will be a checkmark beside each one indicating that they were loaded. If you change any def files you can click these buttons to reload them.</p>
+					<p><b>Base</b>: Loads builtin tools files and the defs and your custom blender folder if you have it in your project</p>
+					<p><b>Actors</b>: Loads all actor defs in defs/actors/</p>
+					<p><b>Particles</b>: Loads all particles in particles/</p>
+					<p><b>Sounds</b>: Loads all sound shaders files in sounds/shaders/</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_tools_weaponcam.jpg">
+				</td>
+				<td class="content">
+					<p><b>Camera Offset</b>: The camera offset value as defined in your defs/weaponInfo.txt file.</p>
+					<p><b>Setup Camera</b>: Setup a Weapon Camera which matches the Turok 2 EX camera so you can easily see what your weapon will look like in game (Activate the camera with the default key “0” on keypad).</p>
+				</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/blender_tools_sounds.jpg">
+				</td>
+				<td class="content">
+					<p><b>Preview Sounds</b>: Open a folder that contains .ksnd files to show them in a list. Click on them in the list to play them. You can also select sounds by ID value and play them.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_tools_staticmeshes.jpg">
+				</td>
+				<td class="content">
+					<p><b>Preview Staticmeshes</b>: Open a folder that contains .staticmesh files to show them in a list. Click on them in the list to quickly load them. Click the Disconnect Button if you want to keep that mesh in Blender.</p>
+				</td>
+			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_tools_skinnedmeshes.jpg">
+				</td>
+				<td class="content">
+					<p><b>Preview Skinnedmeshes</b>: Open a folder that contains .skinnedmesh files to show them in a list. Click on them in the list to quickly load them.</p>
 				</td>
 			</tr>
 		</table>
@@ -521,27 +611,25 @@
 		<table>
 			<tr>
 				<td class="content">
-					<img src="images/blender_material_panel.jpg">
+					<img src="images/blender_mat_settings.jpg">
 				</td>
 				<td class="content">
-					<p><b>Convenience Functions</b>: To quickly assign a texture to this material – select an image by clicking on the image icon on the left or opening a new texture, and select the type: One Sided, Two Sided, or Water. And if the image that you selected has any alpha in it. Then click Quick Image Setup and the shader node with the selected image will be added to the material and the Turok 2 material properties will be setup automatically.</p>
-					<p><b>Import Material from .kmat</b>: Import a material from an existing .kmat file.</p>
-					<p><b>Use Custom Material Path</b>: If ON will save this material to the specified .kmat file (do not include the extension .kmat in the Material Path). If is OFF will automatically set the material file path to materials/mat_&#60;ExportFileName&#62;</p>
-					<p><b>Environment Color</b>: Generally, the texture color is interpolated to this color by the pixels alpha value. Then that's multiplied by the Diffuse Color.</p>
-					<p><b>Diffuse Color</b>: Generally, multiplies pixel color by this color.</p>
-					<p><b>Sort</b>: The sort type to render this material on.</p>
-					<ul>
-						<li><b>Default</b> - The standard sort type most opaque materials should use.</li>
-						<li><b>Masked</b> - Used for materials with textures that have alpha. The Blend and Alpha Test material property should also be on when using this sort type.</li>
-						<li><b>Translucent</b> - Materials that you can partially see through. Should have the Blend property on when using this sort type.</li>
-						<li><b>Water</b> - For water materials. Should have the Blend property on when using this sort type.</li>
-					</ul>
+					<p><b>Texture</b>: Shows the first texture being used in this material. Here you can quickly change all the texture properties you need to. This is similar to the shader node panel so see that for the same details.</p>
+					<p><b>Environment Color</b>: Saturates texture by the this color. (Default: Black)</p>
+					<p><b>Diffuse Color</b>: Multiplies pixel color by this color. (Default: White)</p>
 					<p><b>Cull</b>: Which side to render Tris.</p>
 					<ul>
 						<li><b>Use Settings</b> - Uses whatever Blenders material setting "Backface Culling" is set to.</li>
 						<li><b>Back</b> - Renders only the back side (mostly used)</li>
 						<li><b>Front</b> - Renders only the front side. (Should never use this)</li>
 						<li><b>None</b> - Draws both sides</li>
+					</ul>
+					<p><b>Sort</b>: The sort type to render this material on.</p>
+					<ul>
+						<li><b>Default</b> - The standard sort type most opaque materials should use.</li>
+						<li><b>Masked</b> - Used for materials with textures that have alpha. The Blend and Alpha Test material property should also be on when using this sort type.</li>
+						<li><b>Translucent</b> - Materials that you can partially see through. Should have the Blend property on when using this sort type.</li>
+						<li><b>Water</b> - For water materials. Should have the Blend property on when using this sort type.</li>
 					</ul>
 					<p><b>Surface</b>: Surface type of this material</p>
 					<p><b>Reflective Power</b>: Screen Space reflection power</p>
@@ -659,6 +747,16 @@
 					<p>* world_skinnedColor.shader doesn't appear to be used anywhere.</p>
 				</td>
 			</tr>
+			<tr>
+				<td class="content">
+					<img src="images/blender_mat_misc.jpg">
+				</td>
+				<td class="content">
+					<p><b>Setup Image Quickly</b>: To quickly assign a texture to this material – select an image by clicking on the image icon or opening a new texture, and select the type: One Sided, Two Sided, or Water. And if the image that you selected has any alpha in it. Then click Quick Image Setup and the shader node with the selected image will be added to the material and the Turok 2 material properties will be setup automatically.</p>
+					<p><b>Import Material from .kmat</b>: Import a material from an existing .kmat file.</p>
+					<p><b>Use Custom Material Path</b>: If ON will save this material to the specified .kmat file (do not include the extension .kmat in the Material Path). If is OFF will automatically set the material file path to materials/mat_&#60;ExportFileName&#62;</p>
+				</td>
+			</tr>
 		</table>
 		<br><br>
 		<h3 id="shaderPanel">Shader Panel</h3>
@@ -673,8 +771,8 @@
 					<p><b>[Node]File Path</b>: Only the filename will be used and not the full path. If the filename is any of the following: _default, _black, _white, _simpleShadow, _wireframeMesh, _wireframeMeshSelected the games builtin texture will be used for it instead.</p>
 					<p><b>[Node]Texture Interpolation</b>: Linear, Cubic, and Smart will all use “linear” except if Anisotropic Filter is on then it will use “linear_anisotropic” filtering for the Turok 2 texture. Closest will always use “nearest”.</p>
 					<p><b>[Node]Texture Extension</b>: Extend and Clip will use the Turok “clamp” wrapping. Repeat will use Turoks “repeat” wrapping.</p>
-					<p><b>Texture Sampler Index</b>: If you only have 1 texture node then keep this at 0.</p>
-					<p><b>Mirrored</b>: Overrides texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
+					<p><b>Sampler Index</b>: If you only have 1 texture node then keep this at 0.</p>
+					<p><b>Mirror Wrap</b>: Overrides texture wrapping to "mirrored" which flips the texture on the x and y when it repeats.</p>
 					<p><b>Anisotropic Filter</b>: Overrides texture filtering to "linear_anisotropic" when Linear, Cubic, or Smart is selected.</p>
 				</td>
 			</tr>
