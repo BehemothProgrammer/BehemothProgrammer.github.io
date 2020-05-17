@@ -2,13 +2,13 @@
 <html>
 
 <head>
-<title>Turok 2 EX Tools v1.5.0 for Blender</title>
+<title>Turok 2 EX Tools v1.5.1 for Blender</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Turok 2 EX Tools v1.5.0 for Blender" />
+<meta property="og:title" content="Turok 2 EX Tools v1.5.1 for Blender" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
 <script type="text/javascript">
 function foo(response) {
@@ -21,7 +21,7 @@ function foo(response) {
 	}
 }
 var script = document.createElement('script');
-script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.5.0?callback=foo';
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.5.1?callback=foo';
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
 </head>
@@ -41,7 +41,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 <div class="main">
 	<div>
-	<center><p><h1>Turok 2 EX Tools v1.5.0 for Blender</h1>By BehemothProgrammer</p>
+	<center><p><h1>Turok 2 EX Tools v1.5.1 for Blender</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
@@ -72,14 +72,11 @@ document.getElementsByTagName('head')[0].appendChild(script);
 		</p>
 	</div>
 	<div class="helpSection">
-		<font size="4"><b>Version 1.5.0</b></font> <sup><i>(2020-04-16)</i></sup>
+		<font size="4"><b>Version 1.5.1</b></font> <sup><i>(2020-05-17)</i></sup>
 		<ul>
-			<li>Reorganized UI with tabs to make it look better and more compact.</li>
-			<li>Fixed preferences property "Hide Unused Key Frame Action Args" from also turning on/off the "Auto name Animations" property.</li>
-			<li>Material cull property now effects the blender setting use_backface_culling property if you set it to Back or None.</li>
-			<li>Setting the Blend or AlphaTest property now effects blenders settings blend_method property.</li>
-			<li>Setting Full Bright now links the texture color to the emission color.</li>
-			<li>The Reflection and Mirror UV Shading Nodes get removed when they are unused.</li>
+			<li>Unknown Key Frame Action Events will display all arg properties instead of none</li>
+			<li>Exceptions are now caught with image.save_render (exporting textures)</li>
+			<li>The weapon cameras position is now exactly the same as the Turok 2 EX camera</li>
 		</ul>
 	</div>
 </div>
