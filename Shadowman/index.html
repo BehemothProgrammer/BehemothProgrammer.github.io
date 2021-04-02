@@ -2,14 +2,14 @@
 <html>
 
 <head>
-<title>Turok 2 EX Tools v1.5.1 for Blender</title>
+<title>Shadow Man EX Tools v2.0.0 for Blender</title>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
 <meta charset="UTF-8">
 <meta name="author" content="BehemothProgrammer">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:title" content="Turok 2 EX Tools v1.5.1 for Blender" />
-<meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
+<meta property="og:title" content="Shadow Man EX Tools v2.0.0 for Blender" />
+<meta property="og:image" content="https://behemothprogrammer.github.io/Shadowman/images/smexblender_main.jpg" />
 <script type="text/javascript">
 function foo(response) {
 	var data = response.data;
@@ -21,18 +21,26 @@ function foo(response) {
 	}
 }
 var script = document.createElement('script');
-script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok2Tools1.5.1?callback=foo';
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/ShadowManEXBlenderTools_2.0.0?callback=foo';
 document.getElementsByTagName('head')[0].appendChild(script);
 </script>
+<style>
+    body
+    {
+        background-image: url("images/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
 </head>
 
-<body>
+<body class="bodysm">
 
 <div class="sidenav">
   <br>
   <a href="../TurokBlender/index.html">Turok 1 EX Tools</a>
-  <a class="active" href="JavaScript:void(0);">Turok 2 EX Tools</a>
-  <a href="../Shadowman/index.html">Shadow Man EX Tools</a>
+  <a href="../Turok2Blender/index.html">Turok 2 EX Tools</a>
+  <a class="active" href="JavaScript:void(0);">Shadow Man EX Tools</a>
   <ul>
 	<li><a class="sub" href="#download">Download</a></li>
 	<li><a class="sub" href="#changeLog">Change Log</a></li>
@@ -42,7 +50,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 <div class="main">
 	<div>
-	<center><p><h1>Turok 2 EX Tools v1.5.1 for Blender</h1>By BehemothProgrammer</p>
+	<center><p><h1>Shadow Man EX Tools v2.0.0 for Blender</h1>By BehemothProgrammer</p>
 	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
 	</div>
 	<br>
@@ -55,15 +63,16 @@ document.getElementsByTagName('head')[0].appendChild(script);
 	<div class="helpSection">
 		<p><b>Latest Release</b>: <a id="latestReleaseLink" href="JavaScript:void(0);"></a>
 		<span id="latestReleaseSize"></span> 
-		<span id="latestReleaseDownloadCount"></span><br>
-		<a href="https://github.com/BehemothProgrammer/BehemothProgrammer.github.io/releases">All Releases</a></p>
+		<span id="latestReleaseDownloadCount"></span>
 		<hr>
-		<center><p>This is an addon for Blender that allows you to import and export Staticmeshes, Skinnedmeshes, and Animations
-		from and to Turok 2 EX.<br>Please read the online <a href="doc.html">documentation</a> for details on
+		<center><p>Shadow Man model, animation, and level editor tools for Blender 2.82 or later.<br>
+		Please read the online <a href="doc.html">documentation</a> for details on
 		installing, importing, exporting, and editing.</p>
+        <!--
 		<iframe width="768" height="432" src="https://www.youtube.com/embed/nZczOCZ1AjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<hr>
-		<img src="images/turok2ex_blender_main.jpg" style="max-width:75%;height:auto;"></center>
+        -->
+		<img src="images/smexblender_main.jpg" style="max-width:75%;height:auto;"></center>
 	</div>
 	<br>
 	<div id="changeLog">
@@ -73,11 +82,9 @@ document.getElementsByTagName('head')[0].appendChild(script);
 		</p>
 	</div>
 	<div class="helpSection">
-		<font size="4"><b>Version 1.5.1</b></font> <sup><i>(2020-05-17)</i></sup>
+		<font size="4"><b>Version 2.0.0</b></font> <sup><i>(2021-04-02)</i></sup>
 		<ul>
-			<li>Unknown Key Frame Action Events will display all arg properties instead of none</li>
-			<li>Exceptions are now caught with image.save_render (exporting textures)</li>
-			<li>The weapon cameras position is now exactly the same as the Turok 2 EX camera</li>
+			<li>First Release</li>
 		</ul>
 	</div>
 </div>
