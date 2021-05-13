@@ -14,8 +14,7 @@
     body
     {
         background-image: url("images/bg.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-repeat: round;
     }
 </style>
 </head>
@@ -30,9 +29,9 @@
   <a class="active" href="JavaScript:void(0);">Documentation</a>
   <ul>
   <li><a class="sub" href="#install">Installation</a></li>
-  <li><a class="sub" href="#additionalinfo">Additional Info</a></li>
-  <li><a class="sub" href="#modelanim">Models and Animation</a></li>
-  <li><a class="sub" href="#levels">Levels</a></li>
+  <li><a class="sub" href="#importexport">Importing and Exporting</a></li>
+  <li><a class="sub" href="#testrelease">Testing and Releasing</a></li>
+  <li><a class="sub" href="#levels">Level Doc</a></li>
   </ul>
 </div>
 
@@ -48,20 +47,23 @@
 		</p>
 	</div>
 	<div class="helpSection">
+        <center>
+        <iframe width="768" height="432" src="https://www.youtube.com/embed/HP8DdIZTDeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
 		<table>
 			<tr>
 				<td class="content">
-                    <b>Important</b>: These tools were only tested on version 2.82 of Blender. If you are having problems in later versions download 2.82<br><br>
-                    Make sure to unzip the contents of ShadowManEX01.kpf, ShadowManEX02.kpf, ShadowManEX03.kpf, ShadowManEX04.kpf in your steam/gog/epic store/other "Shadow Man Remastered" Folder before continuing.<br><br>
+                    <b>Important</b>: These tools were only tested on version 2.82.7 of Blender. If you are having problems in later versions download <a href="https://download.blender.org/release/Blender2.82/blender-2.82-windows64.zip">Blender 2.82</a><br><br>
+                    Make sure to unzip the contents of ShadowManEX01.kpf, ShadowManEX02.kpf, ShadowManEX03.kpf, ShadowManEX04.kpf, ShadowManEX05.kpf from your Steam, GOG, or Epic Store "Shadow Man Remastered" folder before continuing.<br><br>
 					Open Blender and navigate to <b>Edit > Preferences</b>
 					<ol type="1">
 						<li>Click on the <b>Add-ons</b> tab.</li>
 						<li>Click the <b>Install...</b> button and select the ShadowManEXBlenderTools_2.0.0.zip file you downloaded.</li>
-						<li>If you don't see the Add-on afterwards type in the <b>search</b> field <b>shadow”</b> to quickly find the add-on <b>Import-Export: Shadow Man EX Tools</b>.</li>
+						<li>If you don't see the Add-on afterwards type in the <b>search</b> field <b>"shadow"</b> to quickly find the add-on <b>Import-Export: Shadow Man EX Tools</b>.</li>
 						<li>Enable the add-on by clicking the <b>checkbox</b> and expand the field to see that there are 2 folder paths you must set before using this add-on.</li>
-                        <li>Assign the <b>Shadow Man Folder</b> field to where the thoth_x64.exe is located. The <b>Res 1 Folder</b> field should be assigned to the folder where you unzipped the contents of ShadowManEX01.kpf. Do the same for the other res folder paths.</li>
+                        <li>Assign the <b>Shadow Man Folder</b> field to where the thoth_x64.exe is located. The <b>Resource Folder</b> field should be assigned to the folder where you unzipped the contents of all 5 of the ShadowManEX.kpf files.</li>
+						<li>Click the <b>Reload All Defs</b> button to load the def files that come with this addon. Once the files are loaded there will be a checkmark beside the button indicating that they were loaded successfully. If you edit any def files you can click this button to reload them. This button is also available in the 3DView Tool Panels Misc Tab.</li>
 						<li>Click the <b>Save Preferences</b> button</li>
-						<li>Click the <b>Reload All Defs</b> to load the def files that come with this addon. Once the files are loaded there will be a checkmark beside the button indicating that they were loaded successfully. If you edit any def files you can click this button to reload them. This button is also available in the 3DView Tool Panels Misc Tab.</li>
 					</ol>
 				</td>
 				<td class="content">
@@ -70,39 +72,31 @@
 			</tr>
 		</table>
 	</div>
-	<br>
-	<div id="additionalinfo">
+	<br>    
+	<div id="importexport">
 		<p>
-			<h2>Additional Info</h2>
+			<h2>Importing and Exporting</h2>
 			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
 		</p>
 	</div>
 	<div class="helpSection">
-		<table>
-			<tr>
-				<td class="content" style="width:32px">
-					<img src="images/blender_auto_multi_set_icon.png">
-				</td>
-				<td class="content">
-                    If you see this icon next to a property it means that when you set the property all selected objects will automatically have there property set to the same value as well. And right clicking and selecting 'Copy to Selected' will do nothing. In order to set other properties for all selected objects you must do it the normal Blender way of right clicking on the property and selecting ''Copy to Selected'
-				</td>
-			</tr>
-		</table>
+        <center>
+        <iframe width="768" height="432" src="https://www.youtube.com/embed/5rDK9OCVQwg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
 	</div>
 	<br>
-	<div id="modelanim">
+	<div id="testrelease">
 		<p>
-			<h2>Models and Animation</h2>
+			<h2>Testing and Releasing your Mods</h2>
 			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
 		</p>
 	</div>
 	<div class="helpSection">
-        <!--
-        <h3 id="expStatic">Getting Starting - Models</h3>
-        <iframe width="768" height="432" src="https://www.youtube.com/embed/nZczOCZ1AjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <hr><br>
-        -->
+        <center>
+        <iframe width="768" height="432" src="https://www.youtube.com/embed/NxR1zQj4XRA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
 	</div>
+	<br>
 	<div id="levels">
 		<p>
 			<h2>Levels</h2>
@@ -111,6 +105,7 @@
 	</div>
 	<br>
 	<div class="helpSection">
+        <p><a href="doc_level.html">Level Documentation</a></p>
         <!--
         <h3 id="expStatic">Getting Starting - Levels</h3>
         <iframe width="768" height="432" src="https://www.youtube.com/embed/nZczOCZ1AjE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

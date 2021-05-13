@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Shadow Man EX Tools v2.0.0 Documentation</title>
+<link rel="stylesheet" type="text/css" href="../styles.css">
+<link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
+<meta charset="UTF-8">
+<meta name="author" content="BehemothProgrammer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Shadow Man EX Tools v2.0.0 Documentation" />
+<meta property="og:image" content="https://behemothprogrammer.github.io/Shadowman/images/smexblender_main.jpg" />
+<style>
+    body
+    {
+        background-image: url("images/bg.jpg");
+        background-repeat: round;
+    }
+</style>
+</head>
+
+<body>
+<div class="sidenav">
+  <br>
+  <a href="../TurokBlender/index.html">Turok 1 EX Tools</a>
+  <a href="../Turok2Blender/index.html">Turok 2 EX Tools</a>
+  <a href="index.html">Shadow Man EX Tools</a>
+
+  <a class="active" href="doc.html">Documentation</a>
+  <ul>
+  <li><a class="sub" href="#toolbarheader">Toolbar Header</a></li>
+  <li><a class="sub" href="#addinfo">Additional Info</a></li>
+  <li><a class="sub" href="#eventlinks">Event Links</a></li>
+  <li><a class="sub" href="#items">items.txt (Custom Level Actors)</a></li>
+  <li><a class="sub" href="#texprops">Texture Properties</a></li>
+  <li><a class="sub" href="#animtex">Animated Textures</a></li>
+  <li><a class="sub" href="#actors">Actors</a></li>
+  <li><a class="sub" href="#lights">Lights</a></li>
+  <li><a class="sub" href="#detectboxes">Detect Boxes</a></li>
+  <li><a class="sub" href="#pathnodes">Path Nodes</a></li>
+  <li><a class="sub" href="#sounds">Sounds</a></li>
+  <li><a class="sub" href="#events">Events</a></li>
+  </ul>
+</div>
+
+<div id="toolbarheader" class="main">
+	<div>
+	<p><center><h1>Shadow Man EX Tools v2.0.0 Documentation</h1>By BehemothProgrammer</p>
+	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
+	</div>
+	<div>
+		<p>
+			<h2>Toolbar Header</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+        Once you've imported a level in Blender you'll see at the top of the 3D Viewport Header a bunch of icons for setting object visibility and other options.<br><br>
+        From Left to Right:<br>
+		<table>
+			<tr>
+				<td class="content">
+					<br><img src="images/smexblender_lvl_header.jpg">
+				</td>
+				<td class="content">
+                    <ul>
+                        <li>(Stick Man Icon) Toggles Actor Visibility</li>
+                        <li>(Light Icon) Toggles Light Visibility</li>
+                        <li>(Box Icon) Toggles Detect Box Visibility</b>.</li>
+                        <li>(Path Arrow Icon) Toggles Path Node Visibility</li>
+                        <li>(Cloud Icon) Toggles boxes for the PVS for the Sky</li>
+                        <li>(Sound Icon) Toggles the sound objects Visibility</li>
+                        <li>(E Icon) Toggles Event Visibility</li>
+                        <li>(Eye Cursor Icon) Shows options for sector visibility to show only a certain sector instead of all of them at once.</li>
+                        <li>(Light Bulb Icon) Shows options for baking lights into the sectors vertex colors.</li>
+                        <li>(Camera Icon) Will create a Blender Camera object at the position of the active object.</li>
+                    </ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="addinfo">
+		<p>
+			<h2>Additional info about editing multiple objects at once</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content" style="width:32px">
+					<img src="images/blender_auto_multi_set_icon.png">
+				</td>
+				<td class="content">
+                    If you see this icon next to a property it means that when you set the property all selected objects will automatically have there property set to the same value as well. And right clicking and selecting 'Copy to Selected' will do nothing. In order to set other properties for all selected objects you must do it the normal Blender way of right clicking on the property and selecting ''Copy to Selected'
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    
+	<div id="eventlinks">
+		<p>
+			<h2>Event Links</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_lvl_eventlinks.jpg">
+				</td>
+				<td class="content">
+                    <p>To edit Event Links open the Shadow Man Tool Panel by pressing N in any 3DView. Then Select an event link or add one using the + icon button on the right.</p>
+					<ul>
+						<li><b>(Arrow Icon in top left) Find Next Event Link:</b> Selects the next event link in the list that has the selected object linked to it. Use this often to find/cycle through event links in the list.</li>
+						<li><b>Event:</b> You must target a certain event that this event link is connected to.</li>
+						<li><b>Actor:</b> The target actor that this event link will effect.</li>
+						<li><b>Action:</b> What action to Perform. Labels are mostly self explanatory.</li>
+						<li><b>Data Fields:</b> Are specific to the Action. click the ? Book Icon for help about the fields.</li>
+						<li>
+                            <b>Flags:</b>
+                            <ul>
+                            <li><b>Reset After Use:</b> Event Link can be retriggered.</li>
+                            <li><b>Restart Control:</b> Resumes control back to the player.</li>
+                            <li><b>Reorient:</b> Not used</li>
+                            <li><b>Reposition:</b> Not used</li>
+                            <li><b>Register:</b> Saves the state of the link so it won't be triggered again</li>
+                            </ul>
+                        </li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    
+	<div id="items">
+		<p>
+			<h2>items.txt (Custom Level Actors)</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_lvl_resources.jpg">
+				</td>
+				<td class="content">
+                    <p>To view currently loaded Resources open the Shadow Man Tool Panel by pressing N in any 3DView. Then select the Resources Tab. Here you can view all the custom actors for this level which was imported from the items.txt file. Edit the levels items.txt to edit these and you can reimport them into the level after you make changes to the items.txt by clicking the "Reimport items.txt" button.</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+	<div id="texprops">
+		<p>
+			<h2>Texture Properties</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_lvl_texprops.jpg">
+				</td>
+				<td class="content">
+                    <p>To view currently loaded Resources open the Shadow Man Tool Panel by pressing N in any 3DView. Then select the Textures > Properties Tab. Here you can edit a textures material type and check if it's a procedural texture like water. Procedural textures must be 128x128.</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    
+	<div id="animtex">
+		<p>
+			<h2>Animated Textures</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_lvl_animtex.jpg">
+				</td>
+				<td class="content">
+                    <p>To view currently loaded Resources open the Shadow Man Tool Panel by pressing N in any 3DView. Then select the Textures > Animated Tab. Here you can only have up to 8 textures that animate. Select a slot and edit it.</p>
+					<ul>
+						<li><b>Enabled:</b> Make this slot active.</li>
+						<li><b>Start Tex Index:</b> The texture index the animation will start at.</li>
+						<li><b>Last Tex Index:</b> The last texture before it loops back to start texture index.</li>
+						<li><b>Delay:</b> The number of ticks each texture frame is shown. Values that are <= 0 is the same as setting this to 2</li>
+						<li><b>Mode:</b> Unused</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    
+	<div id="actors">
+		<p>
+			<h2>Actors</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_actor.jpg">
+				</td>
+				<td class="content">
+                    <p>When you select an actor you may see green colored lines connecting to an Event object indicating it is linked to one another. As well you may see cyan colored lines connecting to Path Nodes that the actor Baddy is using if any.</p>
+					<ul>
+						<li><b>Label:</b> The resource name ID of the actor. Click the menu icon on the right to search.</li>
+						<li><b>Resource File:</b> The .rsc file this actor will be saved too.</li>
+						<li><b>Angle:</b> The rotation of this actor. Important that you change these angle values instead of using Blenders Rotation.</li>
+						<li><b>Var1 and Var2:</b> All actor have 2 int32 variables that will be used differently depending on the Actor. Hover over fields for tooltips and click the ? Book Icon for help about the fields.</li>
+						<li><b>Nodes:</b> A list of Path Nodes that the Actor will use (For Baddys only).</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+	<div id="lights">
+		<p>
+			<h2>Lights</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_lights.jpg">
+				</td>
+				<td class="content">
+                    <p>When you select lights you will see a colored wire frame sphere around the light indicated it's range of influence. Hover over properties to see tooltips.</p>
+					<ul>
+						<li><b>Type:</b>
+                        <ul>
+                            <li>0. <b>Omni:</b> Standard Light</li>
+                            <li>1. <b>Spot:</b> Unused. Don't use</li>
+                            <li>2. <b>Pulse:</b> Slowly fades in and out. Use the Negative and Positive Speed fields.</li>
+                            <li>3. <b>Toggle:</b> Toggles light on and off.</li>
+                            <li>4. <b>Flicker:</b> Changes the light intensity randomly.</li>
+                            <li>5. <b>String:</b> Changes the light intensity based on number values from the Intensity State String field.</li>
+                            <li>6. <b>Spot Per Pixel</b></li>
+                            <li>7. <b>Omni Per Pixel</b></li>
+                        </ul>
+                        </li>
+						<li><b>Color:</b> The color of the light. The alpha color is unused.</li>
+						<li><b>Range:</b> The distance from this light that vertices will be influenced.</li>
+						<li><b>Intensity:</b> Power of the light</li>
+						<li><b>Flags:</b> Pretty much unused. Keep this set to 0.</li>
+						<li><b>State:</b> Starting state</li>
+						<li><b>Time:</b> Starting time</li>
+						<li><b>Max Intensity:</b> Max Power of the light</li>
+						<li><b>Min Intensity:</b> Min Power of the light</li>
+						<li><b>Max Intensity Delay:</b> Time (In Ticks) after reaching max intensity that the intensity can change.</li>
+						<li><b>Min Intensity Delay:</b> Time (In Ticks) after reaching min intensity that the intensity can change.</li>
+						<li><b>Negative Speed:</b> The fade out speed of the Pulse light.</li>
+						<li><b>Positive Speed:</b> The fade in speed of the Pulse light.</li>
+						<li><b>Angle:</b> For Spot Per Pixel light. Rotation of light object. Important that you change these angle values instead of using Blenders Rotation.</li>
+						<li><b>Velocity:</b> Movement velocity. Unused.</li>
+						<li><b>Intensity State String:</b> Use with the String light type. This field should only contain number characters from 0 to 9. Each number represents the intensity scalar for the lights state. Ex. '95' - The first number is for state 0. 9 is an intensity scalar of 1.0. the next number 5 is for the state 1 and has an intensity scalar of about 0.5. It will constantly loop through the number values.</li>
+						<li><b>Light Verts (Unused):</b> Only here for viewing. Do not change.</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+	<div id="detectboxes">
+		<p>
+			<h2>Detect Boxes</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_dboxes.jpg">
+				</td>
+				<td class="content">
+                    <p>These are volumes that when the Player or Camera enters them will effect the game or player in some way. Edit the box volumes in blender in edit mode or positioning/scaling in object mode.</p>
+					<ul>
+						<li><b>Type:</b>
+                        <ul>
+                            <li>0. <b>Change Sector:</b> Use this to transition from one sector to another. Use the Sector field to indicate what sector to go to. Never have any overlapping Change Sector detect boxes.</li>
+                            <li>1. <b>Load Sector:</b> Unused. Don't use.</li>
+                            <li>2. <b>Water:</b> When the players position enters the box they will enter water. About knee height the player will begin to wade, above body height the player will begin to swim.</li>
+                            <li>3. <b>Level:</b> Unused. Don't use.</li>
+                            <li>4. <b>Undefined:</b> Unused. Don't use.</li>
+                            <li>5. <b>Join Geometry:</b> All actors that are inside this box will be updated even though they are not in the current sector. The player must also be in this box for those actors to show. This detect box is extended by 512 units in game. Use the Sector field to indicate for what sector actors will be updated from.</li>
+                            <li>6. <b>Lava:</b> Same as Water except will kill the player without the lava swim gad.</li>
+                        </ul>
+                        </li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    
+	<div id="pathnodes">
+		<p>
+			<h2>Path Nodes</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_pathnodes.jpg">
+				</td>
+				<td class="content">
+                    <p>Select a Path Node to see colored lines that this path node is linked to. Select 1 of the 4 links in the list to edit the node and time properties for that link.</p>
+					<ul>
+                        <li><b>Link:</b> The NodeID that this link connects to. Set to -1 to disable the link.</li>
+                        <li><b>Time:</b> Unused</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+
+	<div id="sounds">
+		<p>
+			<h2>Sounds</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+        <p>When you select a Sound object you will see a wire frame sphere around it indicating it's range of influence. Note: There are other ways to add sounds to the environment such as adding the actor RSC_LOOPING_SAMPLE</p>
+        <p><h3>Looping Sample Pos</h3></p>
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_sounds.jpg">
+				</td>
+				<td class="content">
+					<ul>
+                        <li><b>File:</b> The local path to the audio file to play.</li>
+                        <li><b>Range:</b> The distance to the camera that the sound volume will play at.</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+        <p><h3>Sound Source</h3></p>
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_sounds2.jpg">
+				</td>
+				<td class="content">
+					<ul>
+                        <li><b>Audio Files:</b> The list of paths to audio files that the sound will play at random.</li>
+                        <li><b>Period:</b> The time (in ticks) that the sound source will be updated</li>
+                        <li><b>Drop Off:</b> The distance to the camera that the sound volume will play at.</li>
+                        <li><b>Frequency:</b> if a random float from 0..1 is <= to this value then will update the sound source</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+    
+	<div id="events">
+		<p>
+			<h2>Events</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<img src="images/panel_events.jpg">
+				</td>
+				<td class="content">
+                    <p>These are volumes that when the Player enters them will trigger event links from this event to it's target actors. Edit the box volumes in blender in edit mode or positioning/scaling in object mode.</p>
+					<ul>
+						<li><b>Type:</b>
+                        <ul>
+                            <li><b>Event:</b> When triggered will trigger the Event links connected to this event. Event links must be of type Event or the event link will not trigger.</li>
+                            <li><b>Enemy:</b> The same as Event except the event links connected to this event must be of type Enemy or the event links will not trigger.</li>
+                            <li><b>Sound:</b> When triggered will play Music.</li>
+                            <li><b>Cutscene:</b> When triggered will play a cutscene.</li>
+                        </ul>
+                        </li>
+                        <li><b>Angle:</b> Rotation of event object. Important that you change these angle values instead of using Blenders Rotation. Recommended to always leave 0.0, 0.0 and just edit the box visually.</li>
+						<li><b>Flags:</b>
+                        <ul>
+                            <li><b>Test Sphere:</b> Checks if the players position is inside the events sphere bounds, else checks the events bounding box</li>
+                            <li><b>Check X Angle:</b> Event will trigger if event is facing toward the player at a 40 degree angle on X Axis. (Up/Down)</li>
+                            <li><b>Check Y Angle:</b> Event will trigger if event is facing toward the player at a 40 degree angle on Y Axis. (Left/Right)</li>
+                            <li><b>Reset After Use:</b> Event can be retriggered.</li>
+                            <li><b>Suspend Control:</b> Prevents player control. Is only triggered if the Event Link has an action of 13: Camera Cut Away.</li>
+                            <li><b>Immediate Reset:</b> Resets the events state to waiting(if Reset After Use) or dead(if not Reset After Use), on level load.</li>
+                            <li><b>Test Save Flag:</b> Checks if a save flag is set or not.</li>
+                        </ul>
+						<li><b>Trigger:</b> The condition in which to trigger this event.
+                        <ul>
+                            <li><b>Automatic:</b> Event will trigger with no special conditions.</li>
+                            <li><b>Item In Hand:</b> Event will trigger if player is holding in left or right hand the item (specified by Data 1)</li>
+                            <li><b>Item Used:</b> Event will trigger if player is holding in left or right hand the item (specified by Data 1) and is in the process of using that item.</li>
+                            <li><b>Action Pressed:</b> Event will trigger if player presses the action button.</li>
+                            <li><b>Dangling:</b> Event will trigger if player is dangling from a rope</li>
+                        </ul>
+					</ul>
+                    <p>The following 6 Data fields will be specific to the event type. Click the ? Book Icon for help about the fields.</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>    
+    
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
