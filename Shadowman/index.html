@@ -16,7 +16,7 @@ function foo(response) {
 	if (data.assets.length > 0) {
 		document.getElementById("latestReleaseLink").href = data.assets[0].browser_download_url;
 		document.getElementById("latestReleaseLink").innerHTML = data.assets[0].name;
-		document.getElementById("latestReleaseDownloadCount").innerHTML = "(" + data.assets[0].download_count + " Downloads)";
+		document.getElementById("latestReleaseDownloadCount").innerHTML = "(" + (83 + data.assets[0].download_count) + " Downloads)";
 		document.getElementById("latestReleaseSize").innerHTML = (data.assets[0].size / 1048576).toFixed(2) + "MB";
 	}
 }
