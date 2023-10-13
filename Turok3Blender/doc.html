@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Turok 3 EX Tools v1.0.0 Documentation</title>
+<link rel="stylesheet" type="text/css" href="../styles.css">
+<link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
+<meta charset="UTF-8">
+<meta name="author" content="BehemothProgrammer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Turok 3 EX Tools v1.0.0 Documentation" />
+<meta property="og:image" content="https://behemothprogrammer.github.io/Turok2Blender/images/turok2ex_blender_main.jpg" />
+</head>
+
+<body>
+<div class="sidenav">
+  <br>
+  <a href="../Shadowman/index.html">Shadow Man EX Tools</a>
+  <a href="../TurokBlender/index.html">Turok 1 EX Tools</a>
+  <a href="../Turok2Blender/index.html">Turok 2 EX Tools</a>
+  <a href="index.html">Turok 3 EX Tools</a>
+  <a class="active" href="JavaScript:void(0);">Documentation</a>
+  <ul>
+  <li><a class="sub" href="#install">Installation</a></li>
+  <li><a class="sub" href="#importing">Importing</a></li>
+  <li><a class="sub" href="#exporting">Exporting</a></li>
+  </ul>
+</div>
+
+<div id="install" class="main">
+	<div>
+	<p><center><h1>Turok 3 EX Tools v1.0.0 Documentation</h1>By BehemothProgrammer</p>
+	<img src="images/blurulr2.gif" style="width:450px;height:12px;"></center>
+	</div>
+	<div>
+		<p>
+			<h2>Installation</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					Open Blender and navigate to <b>Edit > Preferences</b>
+					<ol type="1">
+						<li>Click on the <b>Add-ons</b> tab.</li>
+						<li>Click the <b>Install...</b> button and select the Turok3EXBlenderTools.zip file you downloaded.</li>
+						<li>If you don't see the Add-on afterwards type in the <b>search</b> field <b>“Turok 3”</b> to quickly find the add-on <b>Import-Export: Turok 3 EX Tools</b>.</li>
+						<li>Enable the add-on by clicking the <b>checkbox</b> and expand the field to see that there are 2 folder paths you must set before using this add-on.</li>
+						<li>The <b>Turok 3 Folder</b> field must be assigned to the Turok 3 install folder</li>
+						<li>The <b>Resource Folder</b> field must be assigned to the folder where you extracted the contents of the Turok3EX Common.kpf, Shadow Of Oblivion.tpkg, Shadow Of Oblivion.tex, and Shadow Of Oblivion HD.tex files. If you haven't done that yet then do that now.</li>
+						<li>Click the <b>Save Preferences</b> button</li>
+					</ol>
+				</td>
+				<td class="content">
+					<img src="images/blender_prefs.jpg">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<div id="importing">
+		<p>
+			<h2>Importing</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+            <tr>
+                <td class="content">
+                    <ul>
+                        <li>To import models open the tools window by clicking on the arrow in the top right of the 3DView or by pressing N by default to open the tools window.</li>
+                        <li>In the View tab it's best to set the Clip Start Distance to 1.0 and Clip End Distance to 100000.0</li>
+                        <li>Click on the Turok 3 tab and select the models tab at the top. Set the Models Dir to the Models folder inside your res folder to see a list of all the models.</li>
+                        <li>Click on any model name in the list to import it.</li>
+                        <li>Don't forget blender has a search bar at the bottom of UI lists, use it to search for models by name.</li>
+                    </ul>
+                    </td>
+                <td class="content">
+                    <img src="images/blender_importing.jpg" style="width:100%;">
+                </td>
+            </tr>
+		</table>
+	</div>
+	<br>
+	<div id="exporting">
+		<p>
+			<h2>Exporting</h2>
+			<img src="images/grnrulr1.gif" style="width:100%;height:12px;">
+		</p>
+	</div>
+	<div class="helpSection">
+		<table>
+			<tr>
+				<td class="content">
+					<h3>Staticmeshes and Skinnedmeshes</h3>
+					<ul>
+						<li>Navigate to <b>File > Export > Turok 3 Staticmesh (.staticmesh, .skinnedmesh)</b></li>
+						<li>If an error message pops up then check the console to see all the error messages and correct them before you can export.</b></li>
+                        <li>If there was no errors then the Blender export file dialog window will appear. Export the model to your desired path.
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+</div>
+
+</body>
+</html>
