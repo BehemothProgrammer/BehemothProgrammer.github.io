@@ -10,6 +10,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="Turok 3 EX Tools v1.0.0 for Blender 3.5.0+" />
 <meta property="og:image" content="https://behemothprogrammer.github.io/Turok3Blender/images/turok3ex_blender_main.jpg" />
+<script type="text/javascript">
+function foo(response) {
+	var data = response.data;
+	if (data.assets.length > 0) {
+		document.getElementById("latestReleaseLink").href = data.assets[0].browser_download_url;
+		document.getElementById("latestReleaseLink").innerHTML = data.assets[0].name;
+		document.getElementById("latestReleaseDownloadCount").innerHTML = "(" + (0 + data.assets[0].download_count) + " Downloads)";
+		document.getElementById("latestReleaseSize").innerHTML = (data.assets[0].size / 1048576).toFixed(2) + "MB";
+	}
+}
+var script = document.createElement('script');
+script.src = 'https://api.github.com/repos/BehemothProgrammer/BehemothProgrammer.github.io/releases/tags/Turok3Tools1.0.0?callback=foo';
+document.getElementsByTagName('head')[0].appendChild(script);
+</script>
 </head>
 
 <body>
@@ -39,7 +53,10 @@
 		</p>
 	</div>
 	<div class="helpSection">
-		<p><b>Download Link</b>: Coming Soon (November 14th... I hope)</p>
+        <p><b>Latest Release</b>: <a id="latestReleaseLink" href="JavaScript:void(0);"></a>
+                <span id="latestReleaseSize"></span> 
+                <span id="latestReleaseDownloadCount"></span><br>
+                <a href="https://github.com/BehemothProgrammer/BehemothProgrammer.github.io/releases">All Releases</a></p>
 		<hr>
 		<center><p>This is an addon for Blender that allows you to import and export Staticmeshes, Skinnedmeshes, and Animations
 		from and to Turok 3 EX.<br>Please read the online <a href="doc.html">documentation</a> for details on
