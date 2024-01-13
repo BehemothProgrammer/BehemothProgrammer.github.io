@@ -1,0 +1,3193 @@
+uint kexTurokGetRandomValue();
+uint kexTurokGetRandomMaxValue(const uint);
+float kexTurokGetRandomFloat(const float);
+float kexTurokGetRandomFloatRange(const float, const float);
+float kexTurokGetRandomCFloat();
+kSys Sys;
+const float GAME_FRAME_TIME = 0.25f;
+const float GAME_DELTA_TIME = 0.016666668f;
+const float GAME_FRAME_UNIT = 4f;
+const float GAME_SECONDS = 0.06666667f;
+const float GAME_SCALE = 10.24f;
+const float GAME_FPS_TUROK = 15f;
+const float GAME_FPS_KEX = 60f;
+kexTurokNavData g_pTurokNavData;
+kexTurokHud g_pTurokHud;
+kexTurokWorld g_pTurokWorld;
+kexTurokObjectFactory g_pTurokObjectFactory;
+kexTurokGameInstance g_pTurokGame;
+kexTurokSoundFxManager g_pTurokSoundFxManager;
+kexTurokPhysicsWorld g_pTurokPhysicsWorld;
+kexTurokParticleManager g_pTurokParticleManager;
+
+namespace Math
+{
+	float Sin(float);
+	float Cos(float);
+	float Tan(float);
+	float ATan2(float, float);
+	float Fabs(float);
+	float ACos(float);
+	float Sqrt(float);
+	int Abs(int);
+	float Ceil(float);
+	float Floor(float);
+	float Log(float);
+	float Pow(float, float);
+	float Deg2Rad(float);
+	float Rad2Deg(float);
+	float InvSqrt(float);
+	float IncMax(const float, const float, const float);
+	int SysRand();
+	int Rand();
+	uint8 RandByte();
+	int RandMax(const int);
+	float NLerp(const float, const float, const float);
+	float Accelerate(const float, const float, const float);
+	float RandFloat();
+	float RandCFloat();
+	float RandRange(const float, const float);
+	void Clamp(float&out, const float, const float);
+	float Lerp(float, const float, const float);
+	float CosTween(const float);
+	float CosArc(const float);
+	float SmoothStep(const float, const float, const float);
+	float HermiteBlend(const float, const float, const float);
+	float Min(const float, const float);
+	float Max(const float, const float);
+	float pi = 3.1415927f;
+	kVec3 vecZero(0f, 0f, 0f);
+}
+
+class kDictMem
+{
+public:
+	bool GetFloat(const kStr&in, float&out, const float defaultValue = 0);
+	bool GetInt(const kStr&in, int&out, const int defaultValue = 0);
+	bool GetBool(const kStr&in, bool&out, const bool defaultValue = false);
+	bool GetString(const kStr&in, kStr&out);
+	bool GetVector(const kStr&in, kVec3&out);
+}
+
+class turokResourceLink_s
+{
+public:
+	turokResourceLinkCauses_e m_eCauseFlags;
+	uint m_dwEffectInstance;
+	uint m_dwEffectData;
+	uint m_dwCinemaID;
+	uint m_dwEffectLevel;
+	float m_fUserValue;
+	float m_fUserTagID;
+	turokResourceEventLinkFlags_e m_eLinkFlags;
+	uint8 m_groupID;
+	int8 m_unknown3;
+	int8 m_unknown4;
+	uint8 m_textID;
+	uint8 m_effectIntelType;
+	uint8 m_effectType;
+	uint8 m_index;
+}
+
+class kexTurokWeapon
+{
+public:
+	void Remove();
+	void Disable();
+	void Enable();
+	float GetCollisionRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeightOffset() const;
+	float GetEyePosition() const;
+	bool HasCollision() const;
+	bool HasJointCollision() const;
+	void PlaySound(const uint dwSfxID, const kVec3&in vOffset);
+	void PlaySoundWithTactile(const uint dwSfxID, const kVec3&in vOffset, int channel, int pos, int node);
+	void StopSound();
+	void StopSound(const uint dwSfxID);
+	void AttachLoopingSound(const uint dwSfxID, const bool bLocal = false);
+	void AttachPositionedLoopingSound(const uint dwSfxID, const kVec3&in vPos, const bool bLocal = false);
+	void StopLoopingSound();
+	bool HasLoopingSound();
+	float GetDeltaFromPoint(const kVec3&in vLookAtPoint) const;
+	kVec3 GetRotatedDirection(const kVec3&in vDirection) const;
+	kQuat GetRotation() const;
+	kVec3 GetWorldSpacePositionFromLocalVector(const kVec3&in vLocalVector) const;
+	void SetTarget(kexTurokObject@ pTarget);
+	kexTurokObject@ GetTarget();
+	kVec3& GetOrigin();
+	const kVec3& GetOrigin() const;
+	kVec3& GetDesiredOrigin();
+	const kVec3& GetDesiredOrigin() const;
+	kVec3& GetPrevOrigin();
+	const kVec3& GetPrevOrigin() const;
+	turokAngles_s& GetAngles();
+	const turokAngles_s& GetAngles() const;
+	turokAngles_s& GetPrevAngles();
+	const turokAngles_s& GetPrevAngles() const;
+	bool IsStale() const;
+	turokRegion_s@ GetRegion();
+	const turokRegion_s@ GetRegion() const;
+	bool IsRemoving() const;
+	float GetWaterElevation() const;
+	turokWaterLevelType_e GetWaterLevel() const;
+	float GetWaterDepth() const;
+	turokObjectFlag_e& GetFlags();
+	const turokObjectFlag_e& GetFlags() const;
+	kVec3& GetVelocity();
+	const kVec3& GetVelocity() const;
+	kVec3& GetScale();
+	const kVec3& GetScale() const;
+	kVec3& GetClimbNormal();
+	const kVec3& GetClimbNormal() const;
+	uint GetUniqueObjectID() const;
+	turokImpactType_e& GetGroundMaterial();
+	const turokImpactType_e& GetGroundMaterial() const;
+	void UpdateWaterStatus();
+	void UpdateCrouchStatus();
+	void UpdateAntiGravityStatus();
+	void UpdateDeathRegionStatus();
+	bool IsBeingCountTracked() const;
+	void RunEvent(const turokEventType_e eEventType, const kVec3&in vOffset, const int bone, const float fParams1, const float fParams2, const float fParams3, const float fParams4, const float fParams5, const float fParams6, const float fParams7, const float fParams8);
+	void FlagPersistentData(const bool bFlag) const;
+	void FlagTriggeredPersistentData(const bool bFlag) const;
+	void InflictDamage(kexTurokObject@ pInflictor, const kVec3&in vPos, const float fRadius, const float fAmount, const turokDamageFlags_e eDamageFlags);
+	void TurnYaw(const float fSpeed, const float fDeltaAngle);
+	void SetTurnDeltaSpeed(const float fSpeed);
+	float GetTurnDeltaSpeed() const;
+	bool IsObstructed(const kVec3&in vTestPos);
+	bool IsPersistentFlagged() const;
+	bool IsPersistentTriggered() const;
+	turokObjectCrossResult_e ObjectCrosses(kexTurokObject@ pObject, const float fTouchRadius) const;
+	bool IsAllowedForCharacterMode() const;
+	void EnableIntelligence();
+	void DisableIntelligence();
+	bool IsIntelligenceEnabled() const;
+	bool IsIntelligenceEnabledForDifficulty() const;
+	void SetFaction(const uint dwValue);
+	uint GetFaction() const;
+	kexTurokRenderMeshComponent& GetRenderMeshComponent();
+	const kexTurokRenderMeshComponent& GetRenderMeshComponent() const;
+	int& GetResourceObjectID();
+	int GetResourceObjectID() const;
+	kexTurokModeComponent& GetModeComponent();
+	const kexTurokModeComponent& GetModeComponent() const;
+	float& GetHealth();
+	const float& GetHealth() const;
+	float& GetInitialHealth();
+	const float& GetInitialHealth() const;
+	kexTurokScriptComponent& GetScriptComponent();
+	const kexTurokScriptComponent& GetScriptComponent() const;
+	kexTurokAIComponent& GetAIComponent();
+	const kexTurokAIComponent& GetAIComponent() const;
+	const kexTurokObject@ GetObstructedObject() const;
+	const turokIntelligence_s@ GetIntelligence() const;
+	turokActorFlags_e& GetActorFlags();
+	const turokActorFlags_e& GetActorFlags() const;
+	bool CanDrawAlternateBlood() const;
+	int PlayTactile(const kStr&in strTactile, int channel, int position) const;
+	bool IsTactilePlaying(int channel) const;
+	bool IsNamedTactilePlaying(int channel, const kStr&in strFn) const;
+	void StopTactile(int channel) const;
+	bool IsTactileTarget() const;
+	int GetTactileNode() const;
+	void PutAway();
+	bool OwnerRequestingWeaponChange() const;
+	uint GetPriority() const;
+	int GetSlot() const;
+	kexTurokPuppet@ GetActorOwner();
+	const kexTurokPuppet@ GetActorOwner() const;
+	void Raise();
+	void Lower();
+	void Holdster();
+	void LockControls(const bool bToggle);
+	turokWeaponFlags_e& GetWeaponFlags();
+	const turokWeaponFlags_e& GetWeaponFlags() const;
+	const bool AllowUnderwater() const;
+	const bool AllowLand() const;
+	const bool AllowMultiplayer() const;
+	void ActivateScope(const bool bToggle);
+	const bool ScopeReady() const;
+	const bool HasScope() const;
+	const bool ScopeActive() const;
+	const float GetScopeZoomLevel() const;
+	const kVec3 GetScopeOffset() const;
+	const kVec3 GetScopeScale() const;
+	const uint8 GetScopeAxis() const;
+	const bool UserFiringWeapon();
+	kexTurokParticle@ FireProjectile(const uint dwID, const kVec3&in vOrigin, const bool bConsumeAmmo = true);
+	kexTurokCrosshair& GetCrosshair();
+	const kexTurokCrosshair& GetCrosshair() const;
+	void CenterSelf();
+	int GetChosenCharacterModeTextureIndex() const;
+	bool HasTrackingParticle() const;
+	turokButtonCmd_e GetPlayerButtons() const;
+	const uint GetPlayerButtonHeldTime(const turokInputActions_e dwButtonIndex) const;
+	kexTurokObject@ CastToObject();
+	kexTurokActor@ CastToActor();
+}
+
+class turokIntelligenceDoor_s
+{
+public:
+	uint m_dwFlags;
+	float m_OpenDuration;
+	int8 m_OpenDoorEvent;
+	int8 m_CloseDoorEvent;
+	int16 m_ModelType;
+	float m_AutoOpenRadius;
+	float m_AutoCloseRadius;
+	uint m_dwUnknown3;
+}
+
+class kexTurokAnimTrackComponent
+{
+public:
+	void Reset();
+	void Set(const int id, float animTime = 0, turokAnimTrackFlags_e animFlags = turokAnimTrackFlags_e :: NONE);
+	void Blend(const int id, float animTime = 0, float animBlendTime = 0, turokAnimTrackFlags_e animFlags = turokAnimTrackFlags_e :: NONE);
+	bool IsPlaying(const int animID) const;
+	const int PlayingID() const;
+	int PickRandomAnimID(const int baseAnimID, const int count) const;
+	bool CheckAnimID(const int id) const;
+	void SetLastFrame(const bool bExecActions = false);
+	const uint CurrentFrame() const;
+	const uint NumFrames() const;
+	const float PlayTime() const;
+	const float TrackTime() const;
+	const int GetCycleCount() const;
+	const bool OnLastFrame() const;
+	void Stop();
+	void Pause();
+	void Resume();
+	void ChangeSpeed(const float animTime);
+	void ChangeAccumulationScale(const float fScale);
+	const bool Stopped() const;
+	const bool Blending() const;
+	const bool Looping() const;
+	const bool CycleCompleted() const;
+	turokAnimTrackFlags_e& GetFlags();
+	turokAnimTrackFlags_e& GetPrevFlags();
+	const uint64 GetAnimCount() const;
+	const kVec3& GetAccumulation() const;
+}
+
+class kexTurokPuppet
+{
+public:
+	void Remove();
+	void Disable();
+	void Enable();
+	float GetCollisionRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeightOffset() const;
+	float GetEyePosition() const;
+	bool HasCollision() const;
+	bool HasJointCollision() const;
+	void PlaySound(const uint dwSfxID, const kVec3&in vOffset);
+	void PlaySoundWithTactile(const uint dwSfxID, const kVec3&in vOffset, int channel, int pos, int node);
+	void StopSound();
+	void StopSound(const uint dwSfxID);
+	void AttachLoopingSound(const uint dwSfxID, const bool bLocal = false);
+	void AttachPositionedLoopingSound(const uint dwSfxID, const kVec3&in vPos, const bool bLocal = false);
+	void StopLoopingSound();
+	bool HasLoopingSound();
+	float GetDeltaFromPoint(const kVec3&in vLookAtPoint) const;
+	kVec3 GetRotatedDirection(const kVec3&in vDirection) const;
+	kQuat GetRotation() const;
+	kVec3 GetWorldSpacePositionFromLocalVector(const kVec3&in vLocalVector) const;
+	void SetTarget(kexTurokObject@ pTarget);
+	kexTurokObject@ GetTarget();
+	kVec3& GetOrigin();
+	const kVec3& GetOrigin() const;
+	kVec3& GetDesiredOrigin();
+	const kVec3& GetDesiredOrigin() const;
+	kVec3& GetPrevOrigin();
+	const kVec3& GetPrevOrigin() const;
+	turokAngles_s& GetAngles();
+	const turokAngles_s& GetAngles() const;
+	turokAngles_s& GetPrevAngles();
+	const turokAngles_s& GetPrevAngles() const;
+	bool IsStale() const;
+	turokRegion_s@ GetRegion();
+	const turokRegion_s@ GetRegion() const;
+	bool IsRemoving() const;
+	float GetWaterElevation() const;
+	turokWaterLevelType_e GetWaterLevel() const;
+	float GetWaterDepth() const;
+	turokObjectFlag_e& GetFlags();
+	const turokObjectFlag_e& GetFlags() const;
+	kVec3& GetVelocity();
+	const kVec3& GetVelocity() const;
+	kVec3& GetScale();
+	const kVec3& GetScale() const;
+	kVec3& GetClimbNormal();
+	const kVec3& GetClimbNormal() const;
+	uint GetUniqueObjectID() const;
+	turokImpactType_e& GetGroundMaterial();
+	const turokImpactType_e& GetGroundMaterial() const;
+	void UpdateWaterStatus();
+	void UpdateCrouchStatus();
+	void UpdateAntiGravityStatus();
+	void UpdateDeathRegionStatus();
+	bool IsBeingCountTracked() const;
+	void RunEvent(const turokEventType_e eEventType, const kVec3&in vOffset, const int bone, const float fParams1, const float fParams2, const float fParams3, const float fParams4, const float fParams5, const float fParams6, const float fParams7, const float fParams8);
+	void FlagPersistentData(const bool bFlag) const;
+	void FlagTriggeredPersistentData(const bool bFlag) const;
+	void InflictDamage(kexTurokObject@ pInflictor, const kVec3&in vPos, const float fRadius, const float fAmount, const turokDamageFlags_e eDamageFlags);
+	void TurnYaw(const float fSpeed, const float fDeltaAngle);
+	void SetTurnDeltaSpeed(const float fSpeed);
+	float GetTurnDeltaSpeed() const;
+	bool IsObstructed(const kVec3&in vTestPos);
+	bool IsPersistentFlagged() const;
+	bool IsPersistentTriggered() const;
+	turokObjectCrossResult_e ObjectCrosses(kexTurokObject@ pObject, const float fTouchRadius) const;
+	bool IsAllowedForCharacterMode() const;
+	void EnableIntelligence();
+	void DisableIntelligence();
+	bool IsIntelligenceEnabled() const;
+	bool IsIntelligenceEnabledForDifficulty() const;
+	void SetFaction(const uint dwValue);
+	uint GetFaction() const;
+	kexTurokRenderMeshComponent& GetRenderMeshComponent();
+	const kexTurokRenderMeshComponent& GetRenderMeshComponent() const;
+	int& GetResourceObjectID();
+	int GetResourceObjectID() const;
+	kexTurokModeComponent& GetModeComponent();
+	const kexTurokModeComponent& GetModeComponent() const;
+	float& GetHealth();
+	const float& GetHealth() const;
+	float& GetInitialHealth();
+	const float& GetInitialHealth() const;
+	kexTurokScriptComponent& GetScriptComponent();
+	const kexTurokScriptComponent& GetScriptComponent() const;
+	kexTurokAIComponent& GetAIComponent();
+	const kexTurokAIComponent& GetAIComponent() const;
+	const kexTurokObject@ GetObstructedObject() const;
+	const turokIntelligence_s@ GetIntelligence() const;
+	turokActorFlags_e& GetActorFlags();
+	const turokActorFlags_e& GetActorFlags() const;
+	bool CanDrawAlternateBlood() const;
+	int PlayTactile(const kStr&in strTactile, int channel, int position) const;
+	bool IsTactilePlaying(int channel) const;
+	bool IsNamedTactilePlaying(int channel, const kStr&in strFn) const;
+	void StopTactile(int channel) const;
+	bool IsTactileTarget() const;
+	int GetTactileNode() const;
+	void ChangeState(turokPlayerState_e eNewState);
+	float GetEyeHeight() const;
+	float GetMaxBobHeight() const;
+	void ToggleNightVisionGoggles(const bool bEnable);
+	kexTurokPlayer@ GetPlayerOwner();
+	const kexTurokPlayer@ GetPlayerOwner() const;
+	turokPlayerState_e GetState() const;
+	kVec3& GetHeadWobbleRotOffset();
+	const kVec3& GetHeadWobbleRotOffset() const;
+	kVec3& GetHeadRotOffset();
+	const kVec3& GetHeadRotOffset() const;
+	kVec3& GetEyeOffset();
+	const kVec3& GetEyeOffset() const;
+	turokPlayerFlags_e& GetPlayerFlags();
+	const turokPlayerFlags_e& GetPlayerFlags() const;
+	float GetMoveSpeed() const;
+	float GetStrafeSpeed() const;
+	float GetTimeOffGround() const;
+	float GetViewBobFactor() const;
+	float GetWeaponBobFactor() const;
+	float GetMoveSpeedScaler() const;
+	float GetStrafeSpeedScaler() const;
+	float GetJumpScaler() const;
+	float GetSpeedScaler() const;
+	void OverrideJumpScaler(const bool bOverride, const float fValue);
+	void OverrideSpeedScaler(const bool bOverride, const float fValue);
+	bool IsCrouching() const;
+	kVec3& GetShakeAxis();
+	float GetCrouchOffset() const;
+	kexTurokObject@ CastToObject();
+	kexTurokActor@ CastToActor();
+}
+
+class kAngle
+{
+public:
+	kAngle();
+	kAngle(float);
+	kAngle(const kAngle&in);
+	float Diff(const float) const;
+	float Diff(const kAngle&in) const;
+	float Interpolate(const float, const float) const;
+	kAngle opAdd(const float) const;
+	kAngle& opAddAssign(const float);
+	kAngle opSub(const float) const;
+	kAngle& opSubAssign(const float);
+	kAngle opAdd(const kAngle&in) const;
+	kAngle& opAddAssign(const kAngle&in);
+	kAngle opSub(const kAngle&in) const;
+	kAngle& opSubAssign(kAngle&in);
+	kAngle& opAssign(const float);
+	kAngle& opAssign(const kAngle&in);
+	kAngle opNeg() const;
+	float opImplConv();
+}
+
+class kexTurokScriptComponent
+{
+public:
+	ref m_cObjHandle;
+}
+
+class turokAITargetData_s
+{
+public:
+	~turokAITargetData_s();
+	turokAITargetData_s();
+	turokAITargetData_s& opAssign(const turokAITargetData_s&in);
+	void Clear(const kVec3&in vTargetPos);
+	bool ValidTarget() const;
+	void SetTarget(kexTurokObject@ pObject);
+	void SetXYPositions();
+	turokTargetType_e m_eType;
+	float m_fDeltaAngle;
+	kVec3 m_vTargetPos;
+	kVec3 m_vDeltaTargetPos;
+	float m_fDistFrom;
+	float m_fXYDistFrom;
+}
+
+class turokResourceRegionSet_s
+{
+public:
+	uint m_dwFogStart;
+	uint m_dwWaterStart;
+	float m_fFarClip;
+	float m_fFieldOfView;
+	float m_fWaterFarClip;
+	float m_fWaterFieldOfView;
+	float m_fWaterElevation;
+	float m_fTargetCeiling;
+	float m_fBlendLength;
+	float m_fDeathTimeDelay;
+	float m_fCameraVertEyeOffset;
+	float m_fCameraMovementScaler;
+	float m_fJumpPadEndX;
+	float m_fJumpPadEndY;
+	float m_fJumpPadEndZ;
+	float m_fJumpPadHeight;
+	turokResourceRegionAttributes1_e m_eFlags;
+	uint16 m_wWarpID;
+	uint16 m_wPressurePlateSoundNumber;
+	uint16 m_wSaveCheckpointID;
+	uint16 m_wPressureID;
+	uint16 m_wDeathHitPoints;
+	turokResourceRegionAttributes2_e m_eFlags2;
+	turokResourceRegionAttributes3_e m_eFlags3;
+	uint16 m_wSkyLayers;
+	uint8 m_groundMat;
+	uint8 m_objectiveID;
+	uint8 m_unknown1;
+	uint8 m_completeObjectiveID;
+	uint8 m_mapColor;
+	uint8 m_jumpPadTime;
+	uint8 m_musicID;
+	uint8 m_ambience;
+	uint8 m_unknown2;
+	uint8 m_currentStrength;
+	int8 m_unknown3;
+	int8 m_unknown4;
+	int8 m_unknown5;
+	int8 m_unknown6;
+	int8 m_unknown7;
+	int8 m_unknown8;
+	int8 m_unknown9;
+	int8 m_countdownType;
+	int8 m_padding2;
+	int8 m_unknown12;
+	int8 m_unknown13;
+}
+
+class kexTurokPhysicsWorld
+{
+public:
+	turokCollisionSweepResult_s GetSlideMoveResult() const;
+	float GetCollisionMargin() const;
+	bool FindNamedCollisionInfoResource(const kStr&in strName, turokCollisionInfo_s&out outInfo);
+	bool SlideMove(kexTurokObject@ pObject, const turokCollisionInfo_s&in collisionInfo);
+	bool SweepTest(const turokCollisionSweepResult_s&in inResult, turokCollisionSweepResult_s&out outResult);
+}
+
+class turokIntelligencePlatform_s
+{
+public:
+	turokIntelligencePlatformCommon_s m_Common;
+	uint m_dwFlags;
+	uint8 m_Type;
+	uint8 m_MotionStyle;
+	uint8 m_RotationType;
+	uint8 pad0;
+	float m_VertDist;
+	float m_HorizDist;
+	float m_HorizDir;
+	float m_MoveTime;
+	float m_Rotation;
+	float m_StartOffset;
+	float m_HoverAmplitude;
+	float m_HoverPeriod;
+	float m_GoDelayTime;
+	float m_ReturnDelayTime;
+	float m_SpecialDelay;
+	float m_SpecialSinkDist;
+	float m_SpecialSinkTime;
+}
+
+class turokBoneInfo_s
+{
+public:
+	int m_parentBone;
+	int m_symbol;
+	int m_index;
+	kVec3 m_vBoundMin;
+	kVec3 m_vBoundMax;
+	float m_fMaxBoundSize;
+	float m_fDamageScalar;
+	uint m_dwFlags;
+	uint m_dwImpactType;
+}
+
+class turokIntelligenceWeatherGenerator_s
+{
+public:
+	uint16 m_wFlags;
+	uint16 m_NumParticles;
+	float m_Radius;
+	float m_StartHeight;
+	uint16 m_MinFallVelocity;
+	uint16 m_MaxFallVelocity;
+	uint16 m_SlopeX;
+	uint16 m_SlopeZ;
+	uint16 m_MinLength;
+	uint16 m_MaxLength;
+	int16 m_nTexture;
+	int16 m_nImpactParticle;
+	uint16 m_MinWidth;
+	uint16 m_MaxWidth;
+	float m_Timeout;
+	uint m_dwUnknown2;
+}
+
+class turokIntelligenceInteractiveAnim_s
+{
+public:
+	uint m_dwFlags;
+	int m_StartAnim;
+}
+
+class kexTurokObjectFactory
+{
+public:
+	void SpawnPickupWithTypeID(const int typeID, const kVec3&in vPos, const turokIntelligence_s@ pIntelligence, const int regionIndex = - 1);
+	kexTurokActor@ SpawnActorWithPath(const kStr&in strModelFile, const kVec3&in vPos, const kVec3&in vAngles, const kVec3&in vScale, const turokIntelligence_s&in intelligence, const int regionIndex = - 1);
+	kexTurokActor@ SpawnActorWithTypeID(const int typeID, const kVec3&in vPos, const kVec3&in vAngles, const kVec3&in vScale, const turokIntelligence_s@ pIntelligence, const int regionIndex = - 1);
+}
+
+class turokIntelligenceTurret_s
+{
+public:
+	turokIntelligenceEnemyCommon_s m_Common;
+	uint m_dwFlags;
+	int m_GunNode;
+	int m_RotNode;
+	float m_RotSpeed;
+	float m_RotLimit;
+	float m_SightRadius;
+	float m_SightAngle;
+	float m_FireRadius;
+	float m_FireAngle;
+	float m_VertDist;
+	float m_HorizDist;
+	float m_HorizDir;
+	float m_MoveSpeed;
+	float m_StartOffset;
+	uint8 m_TargetVisibleMotionType;
+	uint8 m_TargetNotVisibleMotionType;
+}
+
+class turokRegion_s
+{
+public:
+	turokResourceRegionCorner_s@ GetCorner(const int idx);
+	turokRegion_s@ GetNeighbor(const int idx);
+	bool PointInside(const kVec3&in vOrigin) const;
+	float FloorHeight(const kVec3&in vPos) const;
+	float CeilingHeight(const kVec3&in vPos) const;
+	void FloodFillSetFlag(const turokResourceRegionAttributes1_e eSetFlag);
+	void FloodFillClearFlag(const turokResourceRegionAttributes1_e eSetFlag);
+	turokResourceRegionAttributes1_e m_eFlags;
+	turokResourceRegionSet_s@ m_pRegionSet;
+	uint m_dwResourceIndex;
+}
+
+class turokIntelligenceMorpher_s
+{
+public:
+	uint m_dwFlags;
+	float m_CollisionRadius;
+	float m_CollisionHeight;
+	float m_AnimSpeed;
+}
+
+class turokIntelligence_s
+{
+public:
+	const turokIntelligenceStatic_s@ GetStaticType() const;
+	const turokIntelligenceEnemy_s@ GetEnemyType() const;
+	const turokIntelligencePlatform_s@ GetPlatformType() const;
+	const turokIntelligenceGenerator_s@ GetGeneratorType() const;
+	const turokIntelligenceTurret_s@ GetTurretType() const;
+	const turokIntelligenceThrowable_s@ GetThrowableType() const;
+	const turokIntelligenceDoor_s@ GetDoorType() const;
+	const turokIntelligenceDestructible_s@ GetDestrucibleType() const;
+	const turokIntelligencePickup_s@ GetPickupType() const;
+	const turokIntelligenceInteractiveAnim_s@ GetInteractiveAnimType() const;
+	const turokIntelligenceAction_s@ GetActionType() const;
+	const turokIntelligencePlayer_s@ GetPlayerType() const;
+	const turokIntelligenceMorpher_s@ GetMorpherType() const;
+	const turokIntelligenceWarpEntrance_s@ GetWarpEntranceType() const;
+	const turokIntelligenceWeatherGenerator_s@ GetWeatherGeneratorType() const;
+	const turokIntelligenceCameraPlacement_s@ GetCameraPlacementType() const;
+	const turokIntelligenceEmpty_s@ GetEmptyType() const;
+	float GetCollisionRadius() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionHeightOffset() const;
+	float GetHealth() const;
+	int m_nType;
+	turokCommonIntelligenceFlags_e m_eFlags;
+	int8 m_nModel;
+	int16 m_nTag;
+}
+
+class kexTurokObject
+{
+public:
+	void Remove();
+	void Disable();
+	void Enable();
+	float GetCollisionRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeightOffset() const;
+	float GetEyePosition() const;
+	bool HasCollision() const;
+	bool HasJointCollision() const;
+	void PlaySound(const uint dwSfxID, const kVec3&in vOffset);
+	void PlaySoundWithTactile(const uint dwSfxID, const kVec3&in vOffset, int channel, int pos, int node);
+	void StopSound();
+	void StopSound(const uint dwSfxID);
+	void AttachLoopingSound(const uint dwSfxID, const bool bLocal = false);
+	void AttachPositionedLoopingSound(const uint dwSfxID, const kVec3&in vPos, const bool bLocal = false);
+	void StopLoopingSound();
+	bool HasLoopingSound();
+	float GetDeltaFromPoint(const kVec3&in vLookAtPoint) const;
+	kVec3 GetRotatedDirection(const kVec3&in vDirection) const;
+	kQuat GetRotation() const;
+	kVec3 GetWorldSpacePositionFromLocalVector(const kVec3&in vLocalVector) const;
+	void SetTarget(kexTurokObject@ pTarget);
+	kexTurokObject@ GetTarget();
+	kVec3& GetOrigin();
+	const kVec3& GetOrigin() const;
+	kVec3& GetDesiredOrigin();
+	const kVec3& GetDesiredOrigin() const;
+	kVec3& GetPrevOrigin();
+	const kVec3& GetPrevOrigin() const;
+	turokAngles_s& GetAngles();
+	const turokAngles_s& GetAngles() const;
+	turokAngles_s& GetPrevAngles();
+	const turokAngles_s& GetPrevAngles() const;
+	bool IsStale() const;
+	turokRegion_s@ GetRegion();
+	const turokRegion_s@ GetRegion() const;
+	bool IsRemoving() const;
+	float GetWaterElevation() const;
+	turokWaterLevelType_e GetWaterLevel() const;
+	float GetWaterDepth() const;
+	turokObjectFlag_e& GetFlags();
+	const turokObjectFlag_e& GetFlags() const;
+	kVec3& GetVelocity();
+	const kVec3& GetVelocity() const;
+	kVec3& GetScale();
+	const kVec3& GetScale() const;
+	kVec3& GetClimbNormal();
+	const kVec3& GetClimbNormal() const;
+	uint GetUniqueObjectID() const;
+	turokImpactType_e& GetGroundMaterial();
+	const turokImpactType_e& GetGroundMaterial() const;
+	void UpdateWaterStatus();
+	void UpdateCrouchStatus();
+	void UpdateAntiGravityStatus();
+	void UpdateDeathRegionStatus();
+	bool IsBeingCountTracked() const;
+	void RunEvent(const turokEventType_e eEventType, const kVec3&in vOffset, const int bone, const float fParams1, const float fParams2, const float fParams3, const float fParams4, const float fParams5, const float fParams6, const float fParams7, const float fParams8);
+	kexTurokObject@ CastToObject();
+}
+
+class kexTurokEnemy
+{
+public:
+	void Remove();
+	void Disable();
+	void Enable();
+	float GetCollisionRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeightOffset() const;
+	float GetEyePosition() const;
+	bool HasCollision() const;
+	bool HasJointCollision() const;
+	void PlaySound(const uint dwSfxID, const kVec3&in vOffset);
+	void PlaySoundWithTactile(const uint dwSfxID, const kVec3&in vOffset, int channel, int pos, int node);
+	void StopSound();
+	void StopSound(const uint dwSfxID);
+	void AttachLoopingSound(const uint dwSfxID, const bool bLocal = false);
+	void AttachPositionedLoopingSound(const uint dwSfxID, const kVec3&in vPos, const bool bLocal = false);
+	void StopLoopingSound();
+	bool HasLoopingSound();
+	float GetDeltaFromPoint(const kVec3&in vLookAtPoint) const;
+	kVec3 GetRotatedDirection(const kVec3&in vDirection) const;
+	kQuat GetRotation() const;
+	kVec3 GetWorldSpacePositionFromLocalVector(const kVec3&in vLocalVector) const;
+	void SetTarget(kexTurokObject@ pTarget);
+	kexTurokObject@ GetTarget();
+	kVec3& GetOrigin();
+	const kVec3& GetOrigin() const;
+	kVec3& GetDesiredOrigin();
+	const kVec3& GetDesiredOrigin() const;
+	kVec3& GetPrevOrigin();
+	const kVec3& GetPrevOrigin() const;
+	turokAngles_s& GetAngles();
+	const turokAngles_s& GetAngles() const;
+	turokAngles_s& GetPrevAngles();
+	const turokAngles_s& GetPrevAngles() const;
+	bool IsStale() const;
+	turokRegion_s@ GetRegion();
+	const turokRegion_s@ GetRegion() const;
+	bool IsRemoving() const;
+	float GetWaterElevation() const;
+	turokWaterLevelType_e GetWaterLevel() const;
+	float GetWaterDepth() const;
+	turokObjectFlag_e& GetFlags();
+	const turokObjectFlag_e& GetFlags() const;
+	kVec3& GetVelocity();
+	const kVec3& GetVelocity() const;
+	kVec3& GetScale();
+	const kVec3& GetScale() const;
+	kVec3& GetClimbNormal();
+	const kVec3& GetClimbNormal() const;
+	uint GetUniqueObjectID() const;
+	turokImpactType_e& GetGroundMaterial();
+	const turokImpactType_e& GetGroundMaterial() const;
+	void UpdateWaterStatus();
+	void UpdateCrouchStatus();
+	void UpdateAntiGravityStatus();
+	void UpdateDeathRegionStatus();
+	bool IsBeingCountTracked() const;
+	void RunEvent(const turokEventType_e eEventType, const kVec3&in vOffset, const int bone, const float fParams1, const float fParams2, const float fParams3, const float fParams4, const float fParams5, const float fParams6, const float fParams7, const float fParams8);
+	void FlagPersistentData(const bool bFlag) const;
+	void FlagTriggeredPersistentData(const bool bFlag) const;
+	void InflictDamage(kexTurokObject@ pInflictor, const kVec3&in vPos, const float fRadius, const float fAmount, const turokDamageFlags_e eDamageFlags);
+	void TurnYaw(const float fSpeed, const float fDeltaAngle);
+	void SetTurnDeltaSpeed(const float fSpeed);
+	float GetTurnDeltaSpeed() const;
+	bool IsObstructed(const kVec3&in vTestPos);
+	bool IsPersistentFlagged() const;
+	bool IsPersistentTriggered() const;
+	turokObjectCrossResult_e ObjectCrosses(kexTurokObject@ pObject, const float fTouchRadius) const;
+	bool IsAllowedForCharacterMode() const;
+	void EnableIntelligence();
+	void DisableIntelligence();
+	bool IsIntelligenceEnabled() const;
+	bool IsIntelligenceEnabledForDifficulty() const;
+	void SetFaction(const uint dwValue);
+	uint GetFaction() const;
+	kexTurokRenderMeshComponent& GetRenderMeshComponent();
+	const kexTurokRenderMeshComponent& GetRenderMeshComponent() const;
+	int& GetResourceObjectID();
+	int GetResourceObjectID() const;
+	kexTurokModeComponent& GetModeComponent();
+	const kexTurokModeComponent& GetModeComponent() const;
+	float& GetHealth();
+	const float& GetHealth() const;
+	float& GetInitialHealth();
+	const float& GetInitialHealth() const;
+	kexTurokScriptComponent& GetScriptComponent();
+	const kexTurokScriptComponent& GetScriptComponent() const;
+	kexTurokAIComponent& GetAIComponent();
+	const kexTurokAIComponent& GetAIComponent() const;
+	const kexTurokObject@ GetObstructedObject() const;
+	const turokIntelligence_s@ GetIntelligence() const;
+	turokActorFlags_e& GetActorFlags();
+	const turokActorFlags_e& GetActorFlags() const;
+	bool CanDrawAlternateBlood() const;
+	int PlayTactile(const kStr&in strTactile, int channel, int position) const;
+	bool IsTactilePlaying(int channel) const;
+	bool IsNamedTactilePlaying(int channel, const kStr&in strFn) const;
+	void StopTactile(int channel) const;
+	bool IsTactileTarget() const;
+	int GetTactileNode() const;
+	turokEnemyBehaviorState_e GetCurrentBehaviorState() const;
+	void SetCurrentBehaviorState(const turokEnemyBehaviorState_e eState);
+	turokEnemyBehaviorType_e GetBehaviorType(const turokEnemyBehaviorState_e eState) const;
+	turokEnemyBehaviorType_e GetCurrentBehaviorType() const;
+	void SetBehaviorType(const turokEnemyBehaviorState_e eState, const turokEnemyBehaviorType_e eType);
+	bool HasBehaviorType(const turokEnemyBehaviorState_e eState) const;
+	int GetIdleAnimation();
+	int GetCombatAnimation();
+	int GetDartAnimation();
+	int GetLeapAnimation();
+	int GetProjectileAnimation();
+	int GetWeaponAnimation();
+	int GetAlertAnimation();
+	int GetMoveAnimation();
+	int GetPatrolAnimation();
+	int GetFleeAnimation();
+	int GetTakeCoverAnimation();
+	int GetComboEndAnimation();
+	int GetLeftEvadeAnimation();
+	int GetRightEvadeAnimation();
+	int GetLeftWoundArmAnimation();
+	int GetRightWoundArmAnimation();
+	void Alert(const kVec3&in vPos, const turokEnemyAlertType_e eAlert);
+	float GetAgressionFactor(const float fMin, const float fMax) const;
+	turokEnemyFlags_e& GetEnemyFlags();
+	const turokEnemyFlags_e& GetEnemyFlags() const;
+	float& GetAggroTime();
+	const float& GetAggroTime() const;
+	turokEnemyActionType_e& GetActionType();
+	const turokEnemyActionType_e& GetActionType() const;
+	float& GetNoFireProjectileTime();
+	const float& GetNoFireProjectileTime() const;
+	float& GetMoveTime();
+	const float& GetMoveTime() const;
+	bool CheckForEvade();
+	bool CanBeAlerted() const;
+	float GetTurnSpeed() const;
+	void TurnToLookAtSightTarget();
+	int ChooseAttackMode(const turokAITargetInfo_s&in targetInfo);
+	void UpdateAction();
+	void CommonUpdateBehaviorState();
+	void UpdateAmbushState(turokAITargetInfo_s&out targetInfo);
+	kVec3& GetAlertPosition();
+	const kVec3& GetAlertPosition() const;
+	kVec3& GetPrevAlertPosition();
+	const kVec3& GetPrevAlertPosition() const;
+	const turokIntelligenceEnemy_s@ GetEnemyIntelligence() const;
+	turokEnemyEvadeType_e GetEvadeDirection(kexTurokActor@ pTarget, float fEvadeAngle);
+	float& GetOnFireTimer();
+	const float GetOnFireTimer() const;
+	float& GetAggression();
+	const float& GetAggression() const;
+	kexTurokObject@ CastToObject();
+	kexTurokActor@ CastToActor();
+}
+
+class turokAITargetInfo_s
+{
+public:
+	~turokAITargetInfo_s();
+	turokAITargetInfo_s();
+	turokAITargetInfo_s& opAssign(const turokAITargetInfo_s&in);
+	turokAITargetData_s m_cSight;
+	turokAITargetData_s m_cPath;
+}
+
+class turokResourceNavLink_s
+{
+public:
+	int m_startNode;
+	int m_endNode;
+	turokResourceNavLinkType_e m_eType;
+}
+
+class array
+{
+public:
+	T[]@ $list(int&in type, int&in list) { repeat T };
+	T& opIndex(uint index);
+	const T& opIndex(uint index) const;
+	T[]& opAssign(const T[]&in);
+	void insertAt(uint index, const T&in value);
+	void insertAt(uint index, const T[]&inout arr);
+	void insertLast(const T&in value);
+	void removeAt(uint index);
+	void removeLast();
+	void removeRange(uint start, uint count);
+	uint length() const;
+	void reserve(uint length);
+	void resize(uint length);
+	void sortAsc();
+	void sortAsc(uint startAt, uint count);
+	void sortDesc();
+	void sortDesc(uint startAt, uint count);
+	void reverse();
+	int find(const T&in value) const;
+	int find(uint startAt, const T&in value) const;
+	int findByRef(const T&in value) const;
+	int findByRef(uint startAt, const T&in value) const;
+	bool opEquals(const T[]&in) const;
+	bool isEmpty() const;
+	void sort(array::less&in, uint startAt = 0, uint count = uint ( - 1 ));
+}
+
+class turokIntelligenceDestructible_s
+{
+public:
+	uint m_dwFlags;
+	int16 m_Health;
+	int16 pad;
+	float m_CollisionRadius;
+	float m_CollisionHeight;
+	int m_IdleAnim;
+	float m_AutoGoRadius;
+	int m_GoAnim;
+	int m_GoParticleEffect;
+	int m_GoSoundEffect;
+	uint m_dwGoPickupsFlag1;
+	uint m_dwGoPickupsFlag2;
+	int m_GoDeathAnim;
+	int m_GoDeathParticleEffect;
+	int m_GoDeathSoundEffect;
+	uint m_dwGoDeathPickupsFlag1;
+	uint m_dwGoDeathPickupsFlag2;
+	int m_TotemMissionDuration;
+	int16 m_EnemiesAttackingTurok;
+	int16 m_EnemiesToKillToSaveTotem;
+}
+
+class kexTurokParticle
+{
+public:
+	void Remove();
+	void Disable();
+	void Enable();
+	float GetCollisionRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeightOffset() const;
+	float GetEyePosition() const;
+	bool HasCollision() const;
+	bool HasJointCollision() const;
+	void PlaySound(const uint dwSfxID, const kVec3&in vOffset);
+	void PlaySoundWithTactile(const uint dwSfxID, const kVec3&in vOffset, int channel, int pos, int node);
+	void StopSound();
+	void StopSound(const uint dwSfxID);
+	void AttachLoopingSound(const uint dwSfxID, const bool bLocal = false);
+	void AttachPositionedLoopingSound(const uint dwSfxID, const kVec3&in vPos, const bool bLocal = false);
+	void StopLoopingSound();
+	bool HasLoopingSound();
+	float GetDeltaFromPoint(const kVec3&in vLookAtPoint) const;
+	kVec3 GetRotatedDirection(const kVec3&in vDirection) const;
+	kQuat GetRotation() const;
+	kVec3 GetWorldSpacePositionFromLocalVector(const kVec3&in vLocalVector) const;
+	void SetTarget(kexTurokObject@ pTarget);
+	kexTurokObject@ GetTarget();
+	kVec3& GetOrigin();
+	const kVec3& GetOrigin() const;
+	kVec3& GetDesiredOrigin();
+	const kVec3& GetDesiredOrigin() const;
+	kVec3& GetPrevOrigin();
+	const kVec3& GetPrevOrigin() const;
+	turokAngles_s& GetAngles();
+	const turokAngles_s& GetAngles() const;
+	turokAngles_s& GetPrevAngles();
+	const turokAngles_s& GetPrevAngles() const;
+	bool IsStale() const;
+	turokRegion_s@ GetRegion();
+	const turokRegion_s@ GetRegion() const;
+	bool IsRemoving() const;
+	float GetWaterElevation() const;
+	turokWaterLevelType_e GetWaterLevel() const;
+	float GetWaterDepth() const;
+	turokObjectFlag_e& GetFlags();
+	const turokObjectFlag_e& GetFlags() const;
+	kVec3& GetVelocity();
+	const kVec3& GetVelocity() const;
+	kVec3& GetScale();
+	const kVec3& GetScale() const;
+	kVec3& GetClimbNormal();
+	const kVec3& GetClimbNormal() const;
+	uint GetUniqueObjectID() const;
+	turokImpactType_e& GetGroundMaterial();
+	const turokImpactType_e& GetGroundMaterial() const;
+	void UpdateWaterStatus();
+	void UpdateCrouchStatus();
+	void UpdateAntiGravityStatus();
+	void UpdateDeathRegionStatus();
+	bool IsBeingCountTracked() const;
+	void RunEvent(const turokEventType_e eEventType, const kVec3&in vOffset, const int bone, const float fParams1, const float fParams2, const float fParams3, const float fParams4, const float fParams5, const float fParams6, const float fParams7, const float fParams8);
+	float GetLifeFrames() const;
+	void Kill();
+	float GetLifeTimeFrac() const;
+	void Revive();
+	int GetFrame() const;
+	turokParticleSpawnFlags_e GetSpawnFlags() const;
+	turokParticleSpawnFlags_e& GetSpawnFlags();
+	kVec3& GetDirection();
+	const kVec3& GetDirection() const;
+	uint GetResourceTypeID() const;
+	kexTurokObject@ GetOwner();
+	kexTurokParticle@ GetChildParticle();
+	int& GetCollideBone();
+	bool HasBounced() const;
+	kexTurokObject@ CastToObject();
+}
+
+class turokPathList_t
+{
+public:
+	~turokPathList_t();
+	turokPathList_t();
+	const int& opIndex(uint64 index) const;
+	int& opIndex(uint64 index);
+	turokPathList_t& opAssign(const turokPathList_t&in);
+}
+
+class kexTurokPlayer
+{
+public:
+	const turokButtonCmd_e GetButtons() const;
+	const uint GetButtonHeldTime(turokInputActions_e dwButtonIndex) const;
+	const kVec3 GetButtonAngles() const;
+	const kVec3 GetButtonMovement() const;
+	uint GetSplitNum() const;
+	kexTurokPuppet@ GetActor();
+	bool CanAllowWeaponInput() const;
+	const int GetCurrentWeaponID() const;
+	const int GetPendingWeaponID() const;
+	float& GetZoomFOV();
+	const float& GetZoomFOV() const;
+	bool GiveHealth(const int amount, const bool bMortalWound);
+	bool GiveHealthMin(const int amount);
+	void ConsumeAmmo(const int amount);
+	int GetAmmo(const int weaponSlot) const;
+	bool GiveAmmoMin(const int amount);
+	bool GiveAmmoMin(const float scalar);
+	bool HasAmmo(const int weaponSlot);
+	bool GiveAmmo(const int weaponSlot, const int amount);
+	bool SetMaxAmmo(const int weaponSlot, const int amount);
+	int GetMaxAmmo(const int weaponSlot);
+	bool GiveWeapon(const int slot, const int giveAmmo, const bool bChangeWeapon = true);
+	bool GiveWeaponDirect(const int weaponDefId, const int giveAmmo = 0);
+	bool TakeWeapon(const int slot);
+	void ChangeWeapon(const int setWeapon);
+	void SetWeapon(const int setWeapon);
+	bool CheckValidWeapon(const int weaponSlot, const bool bIgnoreWater = false) const;
+	bool HasWeapon(const int weaponSlot) const;
+	bool IsCurrentWeaponIdling() const;
+	void UnlockAllWeaponControls();
+	void CycleNextWeapon(const bool bCheckAmmo);
+	void CyclePrevWeapon(const bool bCheckAmmo);
+	void CycleBestWeapon(const bool bCheckAmmo);
+	void SwitchToWaterWeapon();
+	void SwitchToLandWeapon();
+	kexTurokWeapon@ GetCurrentWeaponActor();
+	void GiveNightVisionGoggles();
+	bool HasNightVisionGoggles() const;
+	void GiveLifeForce(const int amount, const bool bCheckMax = true);
+	int GetLifeForces() const;
+	bool InFullPossession() const;
+	bool ActorInRenderView(kexTurokActor@ pActor) const;
+	bool WarpPlayer(const uint dwDestID, const kVec3&in vWarpEntrancePos, const uint dwWarpEntranceFlags);
+	float GetPlayTime() const;
+	const uint8 GetPartFlags() const;
+	void SetPartFlags(const uint8 parts);
+	const float GetMaxHealth() const;
+	void SetMaxHealth(const float amount);
+	float GetMaxAllowedHealth() const;
+	bool GiveInventoryKey(const uint dwKey);
+	bool RemoveInventoryKey(const uint dwKey);
+	void ClearInventoryKeys();
+	bool HasInventoryKey(const uint dwKey) const;
+	void TakePossessionOfEnemy(kexTurokActor@ pActor, const bool bFullPossession);
+	void LosePossessionOfEnemy(const bool bRemoveEnemy);
+	bool IsInPossessionOfEnemy() const;
+	kexTurokActor@ GetPossessedActor() const;
+}
+
+class kDict
+{
+public:
+	void Add(const kStr&in, const kStr&in);
+	void Empty();
+	void SetValue(const kStr&in, const kStr&in);
+	const bool HasKey(const kStr&in);
+	bool GetFloat(const kStr&in, float&out, const float defaultValue = 0);
+	bool GetInt(const kStr&in, int&out, const int defaultValue = 0);
+	bool GetBool(const kStr&in, bool&out, const bool defaultValue = false);
+	bool GetString(const kStr&in, kStr&out);
+	bool GetVector(const kStr&in, kVec3&out);
+}
+
+class turokCollisionInfo_s
+{
+public:
+	float m_fGravityAcceleration;
+	float m_fBounceReturnEnergy;
+	float m_fGroundFriction;
+	float m_fAirFriction;
+	float m_fWaterFriction;
+	float m_fProjectionStrength;
+	turokSlideMoveBehavior_e m_eSlideBehavior;
+	turokCollisionFaceFlags_e m_eFilterFlags;
+	turokCollisionFaceFlags_e m_eFilterOutFlags;
+	turokCollideBehaviorType_e m_eCollideObjectBehavior;
+	turokCollideBehaviorType_e m_eCollideWallBehavior;
+	turokCollideBehaviorType_e m_eCollideFloorBehavior;
+}
+
+class turokNavNode_s
+{
+public:
+	const turokResourceNavNode_s@ m_pResource;
+	bool m_bDisabled;
+}
+
+class turokIntelligenceEnemy_s
+{
+public:
+	turokIntelligenceEnemyCommon_s m_Common;
+	uint m_dwFlags;
+	float m_AttackCombatRadius;
+	float m_AttackLeapRadius;
+	float m_AttackDartRadius;
+	float m_AttackProjectileRadius;
+	float m_AttackWeaponRadius;
+	float m_AggroRadius;
+	float m_ConeTurnAngle;
+	float m_ConeTiltAngle;
+	uint8 m_GroundBehavior;
+	uint8 m_AirBehavior;
+	uint8 m_UnderwaterBehavior;
+	int8 m_ExtremeDeathModel;
+	int8 m_PfmDeathModel;
+	int8 m_HeadBlownOffDeathModel;
+	int8 m_LeftArmBlownOffDeathModel;
+	int8 m_RightArmBlownOffDeathModel;
+	int8 m_BodyHoleDeathModel;
+	int16 m_ExtremeDeathAnim;
+	int16 m_PfmDeathAnim;
+	int16 m_HeadBlownOffDeathAnim;
+	int16 m_LeftArmBlownOffDeathAnim;
+	int16 m_RightArmBlownOffDeathAnim;
+	int16 m_BodyHoleDeathAnim;
+	uint16 m_wIdleAnimFlags;
+	uint16 m_wMoveAnimFlags;
+	uint16 m_wPatroleAnimFlags;
+	uint16 m_wEvadeAnimFlags;
+	uint16 m_wCombatAnimFlags;
+	uint16 m_wLeapAnimFlags;
+	uint16 m_wDartAnimFlags;
+	uint16 m_wProjectileAnimFlags;
+	uint16 m_wWeaponAnimFlags;
+	uint16 m_wComboEndAnimFlags;
+	uint16 m_wNormalDeathAnimFlags;
+	uint16 m_wMovingDeathAnimFlags;
+	uint16 m_wViolentDeathAnimFlags;
+	uint16 m_wExplosiveDeathAnimFlags;
+	uint16 m_wAlertAnimFlags;
+	uint16 m_wTakeCoverAnimFlags;
+	uint16 m_wLeftArmWoundAnimFlags;
+	uint16 m_wRightArmWoundAnimFlags;
+	uint16 m_wFleeAnimFlags;
+}
+
+class kVec3
+{
+public:
+	kVec3();
+	kVec3(float, float, float);
+	kVec3(const kVec3&in);
+	kVec3& Normalize();
+	kVec3 Cross(const kVec3&in) const;
+	float Dot(const kVec3&in) const;
+	float Length() const;
+	float LengthSq() const;
+	float DistanceSq(const kVec3&in) const;
+	float ToYaw();
+	float ToPitch();
+	void Clear();
+	void Set(const float, const float, const float);
+	kVec3 Lerp(const kVec3&in, const float) const;
+	kVec3& Lerp(const kVec3&in, const float);
+	kVec3& Project(const kVec3&in, const float);
+	kVec3& Reflect(const kVec3&in, const float);
+	kVec3& Randomize(const float);
+	kVec3& CubicCurve(const kVec3&in, const float, const kVec3&in);
+	kVec3& QuadraticCurve(const kVec3&in, const float, const kVec3&in, const kVec3&in);
+	kVec3 opAdd(const kVec3&in);
+	kVec3& opAddAssign(const kVec3&in);
+	kVec3 opNeg();
+	kVec3 opSub(const kVec3&in);
+	kVec3& opSubAssign(const kVec3&in);
+	kVec3 opMul(const kVec3&in);
+	kVec3 opMul(const float val);
+	kVec3& opMulAssign(const kVec3&in);
+	kVec3& opMulAssign(const float);
+	kVec3 opDiv(const kVec3&in);
+	kVec3 opDiv(const float val);
+	kVec3& opDivAssign(const kVec3&in);
+	kVec3& opAssign(const kVec3&in);
+	float opIndex(uint) const;
+	float opIndex(uint);
+	float Distance(const kVec3&in) const;
+	kStr ToString();
+	kVec3 opMul(const kQuat&in);
+	kVec3& opMulAssign(const kQuat&in);
+	kQuat ToQuaternion() const;
+	kQuat ToQuat() const;
+	float x;
+	float y;
+	float z;
+}
+
+class kexTurokRenderMeshComponent
+{
+public:
+	turokRenderMeshFlags_e& GetFlags();
+	const turokRenderMeshFlags_e& GetFlags() const;
+	kStr GetModelFileName() const;
+	void SetRotationOffset(const int node, const float angle, const float x, const float y, const float z);
+	void SetRotationOffset(const int node, const kQuat&in qRotation);
+	void SetTranslationOffset(const int node, const kVec3&in vOffset);
+	void SetScale(const int node, const kVec3&in vScale);
+	void SetSectionAltTexture(const kStr&in strFindTextureName, const int altTexture);
+	int& GetAltTexture();
+	const int GetAltTexture() const;
+	const int GetModelGroup() const;
+	void SetModelGroup(const int modelGroup);
+	const kQuat& GetGroundRotation() const;
+	void ToggleHotPoint(const int nHotPoint, const bool bEnable);
+	bool IsHotPointEnabled(const int nHotPoint) const;
+	int GetHeadTrackNode() const;
+	void SetHeadTrackNode(int node);
+	float GetFlashValue() const;
+	void SetFlashValue(float fValue);
+	kexTurokAnimTrackComponent& GetAnimTrackComponent();
+	const kexTurokAnimTrackComponent& GetAnimTrackComponent() const;
+	const uint GetModelBits() const;
+	void SetHeadTrackPosition(const kVec3&in vPos);
+	kVec3 GetTransformedBonePosition(const int boneID) const;
+	int GetAltTextureForSectionIndex(const int sectionIdx) const;
+	bool IsBoneBlownOff(const int boneIndex) const;
+	bool HasAttachedParticles() const;
+	void KillAttachedParticles(const int boneIndex, const bool bNoArrows = false);
+}
+
+class kStr
+{
+public:
+	~kStr();
+	kStr();
+	kStr(const kStr&in);
+	uint Hash() const;
+	kStr& ToUpper();
+	kStr& ToLower();
+	kStr& opAssign(const kStr&in);
+	kStr opAdd(const kStr&in) const;
+	kStr opAdd(bool) const;
+	kStr opAdd(int) const;
+	kStr opAdd(uint) const;
+	kStr opAdd(int64) const;
+	kStr opAdd(uint64) const;
+	kStr opAdd(float) const;
+	kStr& opAddAssign(const kStr&in);
+	kStr& opAddAssign(bool);
+	int Atoi() const;
+	float Atof() const;
+	bool Contains(const kStr&in) const;
+	bool ContainsNoCase(const kStr&in) const;
+	int64 IndexOf(const kStr&in) const;
+	int8 opIndex(const int64);
+	uint64 Length();
+	bool opEquals(const kStr&in);
+}
+
+class kexTurokActor
+{
+public:
+	void Remove();
+	void Disable();
+	void Enable();
+	float GetCollisionRadius() const;
+	float GetCollisionHeight() const;
+	float GetCollisionWallRadius() const;
+	float GetCollisionHeightOffset() const;
+	float GetEyePosition() const;
+	bool HasCollision() const;
+	bool HasJointCollision() const;
+	void PlaySound(const uint dwSfxID, const kVec3&in vOffset);
+	void PlaySoundWithTactile(const uint dwSfxID, const kVec3&in vOffset, int channel, int pos, int node);
+	void StopSound();
+	void StopSound(const uint dwSfxID);
+	void AttachLoopingSound(const uint dwSfxID, const bool bLocal = false);
+	void AttachPositionedLoopingSound(const uint dwSfxID, const kVec3&in vPos, const bool bLocal = false);
+	void StopLoopingSound();
+	bool HasLoopingSound();
+	float GetDeltaFromPoint(const kVec3&in vLookAtPoint) const;
+	kVec3 GetRotatedDirection(const kVec3&in vDirection) const;
+	kQuat GetRotation() const;
+	kVec3 GetWorldSpacePositionFromLocalVector(const kVec3&in vLocalVector) const;
+	void SetTarget(kexTurokObject@ pTarget);
+	kexTurokObject@ GetTarget();
+	kVec3& GetOrigin();
+	const kVec3& GetOrigin() const;
+	kVec3& GetDesiredOrigin();
+	const kVec3& GetDesiredOrigin() const;
+	kVec3& GetPrevOrigin();
+	const kVec3& GetPrevOrigin() const;
+	turokAngles_s& GetAngles();
+	const turokAngles_s& GetAngles() const;
+	turokAngles_s& GetPrevAngles();
+	const turokAngles_s& GetPrevAngles() const;
+	bool IsStale() const;
+	turokRegion_s@ GetRegion();
+	const turokRegion_s@ GetRegion() const;
+	bool IsRemoving() const;
+	float GetWaterElevation() const;
+	turokWaterLevelType_e GetWaterLevel() const;
+	float GetWaterDepth() const;
+	turokObjectFlag_e& GetFlags();
+	const turokObjectFlag_e& GetFlags() const;
+	kVec3& GetVelocity();
+	const kVec3& GetVelocity() const;
+	kVec3& GetScale();
+	const kVec3& GetScale() const;
+	kVec3& GetClimbNormal();
+	const kVec3& GetClimbNormal() const;
+	uint GetUniqueObjectID() const;
+	turokImpactType_e& GetGroundMaterial();
+	const turokImpactType_e& GetGroundMaterial() const;
+	void UpdateWaterStatus();
+	void UpdateCrouchStatus();
+	void UpdateAntiGravityStatus();
+	void UpdateDeathRegionStatus();
+	bool IsBeingCountTracked() const;
+	void RunEvent(const turokEventType_e eEventType, const kVec3&in vOffset, const int bone, const float fParams1, const float fParams2, const float fParams3, const float fParams4, const float fParams5, const float fParams6, const float fParams7, const float fParams8);
+	void FlagPersistentData(const bool bFlag) const;
+	void FlagTriggeredPersistentData(const bool bFlag) const;
+	void InflictDamage(kexTurokObject@ pInflictor, const kVec3&in vPos, const float fRadius, const float fAmount, const turokDamageFlags_e eDamageFlags);
+	void TurnYaw(const float fSpeed, const float fDeltaAngle);
+	void SetTurnDeltaSpeed(const float fSpeed);
+	float GetTurnDeltaSpeed() const;
+	bool IsObstructed(const kVec3&in vTestPos);
+	bool IsPersistentFlagged() const;
+	bool IsPersistentTriggered() const;
+	turokObjectCrossResult_e ObjectCrosses(kexTurokObject@ pObject, const float fTouchRadius) const;
+	bool IsAllowedForCharacterMode() const;
+	void EnableIntelligence();
+	void DisableIntelligence();
+	bool IsIntelligenceEnabled() const;
+	bool IsIntelligenceEnabledForDifficulty() const;
+	void SetFaction(const uint dwValue);
+	uint GetFaction() const;
+	kexTurokRenderMeshComponent& GetRenderMeshComponent();
+	const kexTurokRenderMeshComponent& GetRenderMeshComponent() const;
+	int& GetResourceObjectID();
+	int GetResourceObjectID() const;
+	kexTurokModeComponent& GetModeComponent();
+	const kexTurokModeComponent& GetModeComponent() const;
+	float& GetHealth();
+	const float& GetHealth() const;
+	float& GetInitialHealth();
+	const float& GetInitialHealth() const;
+	kexTurokScriptComponent& GetScriptComponent();
+	const kexTurokScriptComponent& GetScriptComponent() const;
+	kexTurokAIComponent& GetAIComponent();
+	const kexTurokAIComponent& GetAIComponent() const;
+	const kexTurokObject@ GetObstructedObject() const;
+	const turokIntelligence_s@ GetIntelligence() const;
+	turokActorFlags_e& GetActorFlags();
+	const turokActorFlags_e& GetActorFlags() const;
+	bool CanDrawAlternateBlood() const;
+	int PlayTactile(const kStr&in strTactile, int channel, int position) const;
+	bool IsTactilePlaying(int channel) const;
+	bool IsNamedTactilePlaying(int channel, const kStr&in strFn) const;
+	void StopTactile(int channel) const;
+	bool IsTactileTarget() const;
+	int GetTactileNode() const;
+	kexTurokObject@ CastToObject();
+}
+
+class turokResourceNavNode_s
+{
+public:
+	kVec3 m_vPos;
+	turokResourceNavNodeFlags_e m_eFlags;
+	uint m_dwType;
+}
+
+class turokIntelligenceEmpty_s
+{
+public:
+	float m_fHealth;
+	float m_CollisionRadius;
+	float m_CollisionWallRadius;
+	float m_CollisionHeight;
+	float m_CollisionHeightOffset;
+	int m_iArg0;
+	int m_iArg1;
+	int m_iArg2;
+	int m_iArg3;
+	int m_iArg4;
+	int m_iArg5;
+	int m_iArg6;
+	int m_iArg7;
+	float m_fArg0;
+	float m_fArg1;
+	float m_fArg2;
+	float m_fArg3;
+	float m_fArg4;
+	float m_fArg5;
+	float m_fArg6;
+	float m_fArg7;
+}
+
+class kexTurokModeComponent
+{
+public:
+	void ClearModeTable();
+	bool SetMode(const int nNewMode, const bool bForceSet = false);
+	bool ResetMode();
+	void AddModeInfoToTable(const turokModeInfo_s&in modeInfo);
+	const bool CheckModeIsValid(const int mode);
+	const uint NumModeEntries() const;
+	void ForgetAnimState();
+	void SkipAnimUpdate();
+	turokModeFlags_e& Flags();
+	turokModeFlags_e GetFlags() const;
+	float& ModeTime();
+	float GetModeTime() const;
+	const int Mode() const;
+	int& PrevMode();
+	int GetPrevMode() const;
+	const int GetOverridedMode() const;
+	turokModeTerrainType_e GetTerrainType() const;
+	void SetTerrainType(turokModeTerrainType_e eNewType);
+}
+
+class turokIntelligenceAction_s
+{
+public:
+	uint m_dwFlags;
+	float m_CollisionRadius;
+	float m_CollisionHeight;
+	int16 m_IdleAnim;
+	int8 m_IdleModel;
+	int8 m_IdleTexture;
+	float m_AutoGoRadius;
+	int16 m_GoAnim;
+	int16 m_GoPickupNeeded;
+	int16 m_GoPickupNeededText;
+	int8 m_GoModel;
+	int8 m_GoTexture;
+	uint16 m_CantGoSound;
+	uint16 m_GoSound;
+}
+
+class turokResourceWarpPoint_s
+{
+public:
+	int m_levelID;
+	int m_region;
+	float m_fRotZ;
+	kVec3 m_vPos;
+}
+
+class turokIntelligenceWarpEntrance_s
+{
+public:
+	uint m_dwFlags;
+	float m_CollisionRadius;
+	float m_CollisionHeight;
+	uint m_DestinationID;
+}
+
+class kPlane
+{
+public:
+	kPlane();
+	kPlane(const float, const float, const float, const float);
+	kPlane(const kVec3&in, const kVec3&in, const kVec3&in);
+	kPlane(const kVec3&in, const kVec3&in);
+	kPlane(const kAngle&in);
+	const kVec3& Normal() const;
+	kVec3& Normal();
+	float Dot(const kVec3&in) const;
+	float Dot(const kPlane&in) const;
+	float Distance(const kVec3&in) const;
+	float ToYaw() const;
+	bool IsFacing(const float) const;
+	const int PointOnSide(const kVec3&in) const;
+}
+
+class kexTurokPathTrack
+{
+public:
+	const turokResourcePathPoint_s@ GetCurrentPathPoint() const;
+	const turokResourcePathPoint_s@ GetPreviousPathPoint() const;
+	const turokResourcePathPoint_s@ GetNextPathPoint() const;
+	void GotoNextPoint();
+	void SetClosestPathPoint(const kVec3&in vPos);
+	bool IsValid() const;
+	void ResetPreviousPathPoint();
+	turokPathMode_e GetMode() const;
+	void ChangeMode(const turokPathMode_e eNewMode);
+}
+
+class turokModeInfo_s
+{
+public:
+	void SetNullCollisionInfoPtr();
+	void SetCollisionInfoPtr(const turokCollisionInfo_s&in collisionInfo);
+	uint m_dwMode;
+	uint m_dwAnimID;
+	float m_fAnimSpeed;
+	float m_fAnimBlend;
+	uint m_dwAnimEndOffset;
+	turokModeFlags_e m_eModeFlags;
+	uint m_dwOverrideMode;
+}
+
+class turokResourceRegionCorner_s
+{
+public:
+	kVec3 m_vPos;
+	float m_fCeiling;
+}
+
+class turokCollisionSweepResult_s
+{
+public:
+	kexTurokObject@ m_pInstigator;
+	float m_fRadius;
+	float m_fHeight;
+	kVec3 m_vFrom;
+	kVec3 m_vDesired;
+	turokCollisionSweepFlag_e m_eSweepFlags;
+	turokCollisionFaceFlags_e m_eFilterFlags;
+	turokCollisionFaceFlags_e m_eFilterOutFlags;
+	float m_fClosestHitFraction;
+	kVec3 m_vHitNormal;
+	kVec3 m_vHitClimbNormal;
+	kVec3 m_vHitPoint;
+	int m_hitJointIndex;
+}
+
+class kexTurokParticleManager
+{
+public:
+	kexTurokParticle@ SpawnParticle(const uint dwID, kexTurokObject@ pSource, const kVec3&in vVelocity, const kVec3&in vOrigin, const kQuat&in qRotation, turokRegion_s@ pRegion, const kexTurokParticle@ pParentParticle, const turokParticleAlignmentType_e eAlignment, const turokParticleSpawnFlags_e eSpawnFlags = turokParticleSpawnFlags_e :: NONE);
+}
+
+class turokAngles_s
+{
+public:
+	const kAngle& opIndex(int index) const;
+	kAngle& opIndex(int index);
+	kAngle x;
+	kAngle y;
+	kAngle z;
+}
+
+class turokIntelligenceStatic_s
+{
+public:
+	uint m_dwFlags;
+	float m_CollisionRadius;
+	float m_CollisionHeight;
+	float m_CollisionHeightOffset;
+	uint m_LODDistSquared;
+	int m_unknown2;
+}
+
+class turokIntelligencePlatformCommon_s
+{
+public:
+	uint m_dwFlags;
+	uint16 m_CollisionType;
+	float m_CollisionRadius;
+	float m_CollisionWidth;
+	float m_CollisionHeight;
+	float m_CollisionLength;
+	float m_CollisionXOffset;
+	float m_CollisionYOffset;
+	float m_CollisionZOffset;
+}
+
+class turokIntelligencePickup_s
+{
+public:
+	uint m_dwFlags;
+	float m_CollisionRadius;
+	float m_CollisionHeight;
+	float m_Time;
+}
+
+class kexTurokSoundFxManager
+{
+public:
+	int PlayRax(const uint dwID, kexTurokObject@ pAudioSource);
+	int PlayRaxDirect(const uint dwID);
+	int PlaySound(const uint dwID);
+	int PlaySound(const uint dwID, const kVec3&in vPos, kexTurokObject@ pSource);
+	int PlaySoundWithTactile(const uint dwID, const kVec3&in vPos, kexTurokObject@ pSource, int channel, int pos, int node);
+	void StopSound(kexTurokObject@ pSource);
+	void StopSound(const int handle);
+	void StopSoundID(const uint dwID);
+	bool StopSound(const uint dwID, kexTurokObject@ pSource);
+	void HaltAllSounds();
+	void HaltAllSfxAndRax();
+	void KillAllSfxAndRax();
+	void HaltSoundByUniqueID(const int uniqueID);
+	void ChangeSoundPosition(const int handle, const kVec3&in vPos);
+	void PauseAllSounds(turokSoundFxPauseMode_e ePauseFlags);
+	void ResumeAllSounds(turokSoundFxPauseMode_e ePauseFlags);
+}
+
+class turokIntelligenceEnemyCommon_s
+{
+public:
+	uint m_dwFlags;
+	uint m_Health;
+	uint m_StartAnim;
+	uint m_dwDeathFlag1Pickups;
+	uint m_dwDeathFlag2Pickups;
+	float m_CollisionRadius;
+	float m_CollisionWallRadius;
+	float m_CollisionHeight;
+	float m_CollisionDeadHeight;
+	float m_CollisionHeightOffset;
+	float m_LeashRadius;
+	uint8 m_Aggression;
+	uint8 m_TranqHealth;
+	uint16 m_StartSound;
+	uint16 m_PainSound;
+	uint8 m_HeadTextureIndex;
+	uint8 m_BodyTextureIndex;
+	uint8 m_ArmTextureIndex;
+	uint8 m_BackOfHeadTextureIndex;
+	uint8 m_LegTextureIndex;
+	uint8 m_RightLegTextureIndex;
+}
+
+class ref
+{
+public:
+	~ref();
+	ref();
+	ref(const ref&in);
+	ref(const ?&in);
+	void opCast(?&out);
+	ref& opHndlAssign(const ref&in);
+	ref& opHndlAssign(const ?&in);
+	bool opEquals(const ref&in) const;
+	bool opEquals(const ?&in) const;
+}
+
+class kexTurokHud
+{
+public:
+	void AddBossHealthBar(kexTurokActor@ pTargetActor, const kStr&in strDisplayTitle);
+	void AddBossHealthStorageBar(const uint dwbarIndex, const float fBarPercent);
+	void AddObjectiveText(const int objectiveMsgID, bool bCompleted);
+	void AddMessage(const int localizedIndex, const int time = 120);
+	void AddMessagePlayer(const uint dwSplitNum, const int localizedIndex, const int time = 120);
+	void RefreshLifeForceDisplay();
+	void AddMessage(const kStr&in szMsg, const int time = 120);
+	void AddMessagePlayer(const uint dwSplitNum, const kStr&in szMsg, const int time = 120);
+	void FlashPart(const uint8 partFlag, const uint8 activePartFlags);
+	void SetBoreCountdown(const uint8 countdown);
+	void HideCrosshairOverride(const bool bValue);
+	void HideHealthOverride(const bool bValue);
+	void HideAmmoOverride(const bool bValue);
+	bool IsHideCrosshairOverrided() const;
+	bool IsHideHealthOverrided() const;
+	bool IsHideAmmoOverrided() const;
+	bool AddImage(const uint id, const kStr&in path, const float x, const float y, const float w, const float h, const float s1, const float t1, const float s2, const float t2, const int order, const float r, const float g, const float b, const float a);
+	bool ChangeImage(const uint id, const float x, const float y, const float w, const float h, const float s1, const float t1, const float s2, const float t2, const int order, const float r, const float g, const float b, const float a);
+	bool RemoveImage(const uint id);
+	void ClearImages();
+	bool AddText(const uint id, const kStr&in strText, const float x, const float y, const float scale, const bool center, const int order, const float r, const float g, const float b, const float a, const float r2, const float g2, const float b2, const float a2);
+	bool ChangeText(const uint id, const float x, const float y, const float scale, const int order, const float r, const float g, const float b, const float a, const float r2, const float g2, const float b2, const float a2);
+	bool ChangeTextMessage(const uint id, const kStr&in strText);
+	bool RemoveText(const uint id);
+	void ClearTexts();
+	void GetTextSize(const kStr&in text, const float scale, float&out outWidth, float&out outHeight) const;
+	void AddColorFlashPlayer(const uint dwSplitNum, const float r, const float g, const float b, const float a, const uint8 attackTime, const uint8 sustainTime, const uint8 decayTime);
+}
+
+class turokDamageInfo_s
+{
+public:
+	kexTurokObject@ m_pInflictor;
+	kexTurokActor@ m_pSource;
+	float m_fHits;
+	float m_fRadius;
+	turokDamageFlags_e m_eFlags;
+	turokBoneInfo_s m_boneInfo;
+	bool m_bHitBone;
+	kVec3 m_vPos;
+}
+
+class turokIntelligenceCameraPlacement_s
+{
+public:
+	uint m_dwFlags;
+	float m_RotX;
+	float m_RotZ;
+	uint m_dwUnknown1;
+	int m_nextTag;
+	float m_fDelay;
+}
+
+class turokIntelligenceGenerator_s
+{
+public:
+	uint m_dwFlags;
+	int m_Type;
+	int16 m_FiniteTotal;
+	int16 m_MaxActive;
+	float m_IntervalTime1;
+	float m_IntervalTime2;
+	int16 m_ObjectIndex;
+	int16 m_VariationIndex;
+	float m_ScaleX;
+	float m_ScaleY;
+	float m_ScaleZ;
+	int16 m_ParticleType;
+	int16 m_ObjectTypeID;
+}
+
+class kexTurokAIComponent
+{
+public:
+	void UpdateCurrentNavNode();
+	void SetClosestNavNodeToPosition();
+	bool UpdatePath(kexTurokActor@ pTarget);
+	turokTargetType_e GetTargetType(kexTurokActor@ pTarget);
+	kexTurokActor@ GetNewTarget(const bool bCheckSight, const bool bCheckPath);
+	void GetTargetInfo(turokAITargetInfo_s&out outInfo, bool bPathInfo, bool bSightInfo);
+	bool TargetInFOV(kexTurokActor@ pTarget, const float fSightRadius, const float fSightTurnAngle, const float fSightTiltAngle) const;
+	void SetTargetOverride(kexTurokActor@ pOverrideTarget, const float fTime);
+	float GetAvoidanceAngle(const kVec3&in vDesiredPos, kexTurokActor@ pTarget, const float fRadiusFactor) const;
+	bool PathFind(const kVec3&in vPos, kVec3&out vOutPathPos);
+	int GetNavNodePathFlee(kexTurokActor@ pTarget);
+	void RotateToFaceTarget(kexTurokActor@ pTarget, const float fTurnSpeed);
+	void SetPathTarget(kexTurokActor@ pPathTarget);
+	void SetSightTarget(kexTurokActor@ pSightTarget);
+	void SetClosestNavNode(const int node);
+	void SetPathNavNode(const int node);
+	void SetTargetNavNode(const int node);
+	void SetLeashNavNode(const int node);
+	void SetLeashRadius(const float fRadius);
+	const int GetClosestNavNode() const;
+	const int GetNavPathNode() const;
+	const int GetPreviousNavNode() const;
+	const int GetTargetNavNode() const;
+	const int GetLeashNavNode() const;
+	turokPathList_t& GetPathNavNodes();
+	const turokPathList_t& GetPathNavNodes() const;
+	turokAIFlags_e& GetFlags();
+	const turokAIFlags_e& GetFlags() const;
+	kexTurokPathTrack& GetPathTrack();
+	const kexTurokPathTrack& GetPathTrack() const;
+	kVec3& GetLeashPos();
+	const kVec3& GetLeashPos() const;
+	kVec3& GetTargetOffset();
+	const kVec3& GetTargetOffset() const;
+	float& GetPathRotZ();
+	const float& GetPathHeight() const;
+	void SetPathHeight(float fValue);
+	kexTurokActor@ GetSightTarget();
+	kexTurokActor@ GetPathTarget();
+	kexTurokActor@ GetOverrideTarget();
+	const kexTurokActor@ GetSightTarget() const;
+	const kexTurokActor@ GetPathTarget() const;
+	const kexTurokActor@ GetOverrideTarget() const;
+	kexTurokPuppet@ FindClosestPlayer(const kVec3&in vPos) const;
+	bool IsPathBlocked(kexTurokActor@ pTarget) const;
+	int GetTargetNavNode(kexTurokActor@ pTarget) const;
+	void SetupPathTargetInfo(turokAITargetInfo_s&out outInfo);
+	void SetupSightTargetInfo(turokAITargetInfo_s&out outInfo);
+	kVec3 GetTakeCoverPosition(kexTurokActor@ pCoverObject, kexTurokActor@ pSightTarget) const;
+	void SetOverrideTarget(kexTurokActor@ pTarget, const float fOverrideTime);
+}
+
+class kexTurokWorld
+{
+public:
+	bool IsActorPersistentMarkedOnLevel(const uint dwLevelID, const uint dwResourceObjectID) const;
+	turokRegion_s@ LookupRegion(const uint dwIndex);
+	const turokRegion_s@ LookupRegion(const uint dwIndex) const;
+	const int GetNumRegions() const;
+	turokRegion_s@ GetNearestRegionToPos(const kVec3&in vPos, const int currentRegionID = - 1);
+	kexTurokActor@ GetActorFromResourceID(const int resourceID) const;
+	kexTurokActor@ GetActorFromTagID(const int tagID) const;
+	void ProcessRegionLinks(const turokRegion_s@ pRegion, const turokResourceLinkCauses_e eCause, kexTurokActor@ pInstigator);
+	void ProcessInstanceLinks(kexTurokActor@ pActor, const turokResourceLinkCauses_e eCause, kexTurokActor@ pInstigator);
+	int GetCurrentLevelID() const;
+	void TriggerTaggedObjects(const int userTagValue) const;
+	void ToggleBlockerMeshesByModelType(const uint dwModelTypeID, const bool bDisableCollision);
+	void ToggleBlockerMeshesByTagID(const int tagID, const bool bDisableCollision);
+	void ChangeStaticMeshTextureFromTagID(const int tagID, const int8 newAltTexture);
+	void ChangeStaticMeshIntelligenceFlagsFromTagID(const int tagID, const turokCommonIntelligenceFlags_e eFlags, const bool bEnable);
+	void SetAmbience(const int soundID);
+	void ChangeRegionCeilingsToTargetHeight();
+	void ChangeRegionCeilingsToTargetHeightInstant();
+	bool IsStaticMeshPersistentMarkedOnLevel(const uint dwLevelID, const uint dwResourceObjectID) const;
+	bool IsStaticMeshPersistentMarkedByTagID(const int tagID) const;
+	void FlagStaticMeshPersistentDataOnLevel(const uint dwLevelID, const uint dwResourceObjectID, const bool bFlag, const bool bRemove = true) const;
+	void FlagStaticMeshPersistentDataByTagID(const int tagID, const bool bFlag, const bool bRemove = true) const;
+}
+
+class kexTurokNavData
+{
+public:
+	const uint GetNavNodeCount() const;
+	const turokResourceNavNode_s@ GetResourceNavNode(const int node) const;
+	const turokResourceNavLink_s@ GetResourceNavLink(const int link) const;
+	bool HasNodes() const;
+	turokNavNode_s@ GetNavNode(const int node);
+	const turokNavNode_s@ GetNavNode(const int node) const;
+	const bool IsLinkTwoWay(const turokResourceNavLink_s@ pLink) const;
+	int GetClosestNodeToPosition(const kVec3&in vPos) const;
+	int GetFarthestNodeToPosition(const kVec3&in vPos) const;
+	int GetClosestReachableNodeToPosition(kexTurokActor@ pActor, const kVec3&in vPos) const;
+	int GetClosestNodeToPositionAndFlags(const kVec3&in vPos, const turokResourceNavNodeFlags_e eFlags) const;
+	int GetLinkBetweenNodes(const int startNode, const int endNode) const;
+	int GetConnectedNodes(const int originNode, turokPathList_t&out nNodes, turokPathList_t&out nLinks) const;
+	void GetPathFindResult(turokPathList_t&out nNodes, const int numNodes) const;
+	bool CanActorTravelToNode(kexTurokActor@ pActor, const int destNode) const;
+	void UpdatePlayerCurrentNode(kexTurokPuppet@ pPlayer) const;
+	void UpdateActorClosestNode(kexTurokActor@ pActor) const;
+	bool PathFindBetweenNodes(kexTurokActor@ pActor, const int startNode, const int endNode);
+	bool PathFindToGoal(kexTurokActor@ pActor, const int node);
+	void ClearPathFindData();
+	void ClearPathGoals();
+	bool CheckNodeVisibility(const int startNode, const int endNode) const;
+	int NumNavNodes() const;
+}
+
+class kQuat
+{
+public:
+	kQuat();
+	kQuat(float, float, float, float);
+	kQuat(float, kVec3&in);
+	kQuat(float, float, float);
+	kQuat(const kQuat&in);
+	kQuat& Normalize();
+	kQuat opAdd(const kQuat&in);
+	kQuat opSub(const kQuat&in);
+	kQuat opMul(const kQuat&in);
+	kQuat& opAssign(const kQuat&in);
+	float x;
+	float y;
+	float z;
+	float w;
+}
+
+class kexTurokCrosshair
+{
+public:
+	const kVec3& GetSightPosition() const;
+	const kVec3& GetCrosshairPosition() const;
+	const kQuat& GetAutoAimRotation() const;
+	kexTurokActor@ GetCrosshairTargetObject();
+	kexTurokActor@ GetSightTargetObject();
+}
+
+class kexTurokGameInstance
+{
+public:
+	uint GetActivePlayers() const;
+	bool GameStateChanging() const;
+	bool IsFading() const;
+	void ChangeMap(const int id);
+	turokResourceWarpPoint_s@ GetWarpPointFromID(const int warpID) const;
+	float GetGameSpeed() const;
+	void SetObjective(const uint8 objectiveID, bool bSilent);
+	void CompleteObjective(const uint8 objectiveID);
+	turokCheatFlags_e GetActiveCheats() const;
+	void SetCheat(turokCheatFlags_e eCheatFlags);
+	void AddCheat(turokCheatFlags_e eCheatFlags);
+	void RemoveCheat(turokCheatFlags_e eCheatFlags);
+	void EnableCheat(turokCheatFlags_e eCheatFlags);
+	turokCheatFlags_e GetEnabledCheats() const;
+	bool GameIsFrozen() const;
+	turokCharacterMode_e GetCharacterMode() const;
+	void SetCharacterMode(const turokCharacterMode_e eCharacterMode);
+	bool IsIntelligenceAllowedForCharacterMode(const turokIntelligence_s&in intel) const;
+	bool IsIntelligenceEnabledForDifficulty(const turokIntelligence_s&in intel) const;
+	void SetMusic(const uint dwID);
+	void FadeOutMusic(const int ms);
+	const turokIntelligence_s@ GetLooseIntelligence(const uint dwVariationID) const;
+	turokDifficultyMode_e GetDifficulty() const;
+	void SetDifficulty(const turokDifficultyMode_e eDifficulty);
+	turokGameMode_e GetGameMode() const;
+	turokQuitMode_e GetActiveQuitMode() const;
+	float GetInterpolatedFraction() const;
+	void StopAllTactile() const;
+	bool ChapterWarped() const;
+	kexTurokPlayer@ GetPlayerPtr(const uint dwSplitNum);
+	const kStr& GetUserPersistData(const kStr&in strKey);
+	void SetUserPersistData(const kStr&in strKey, const kStr&in strValue);
+	void RemoveUserPersistData(const kStr&in strKey);
+	bool HasUserPersistData(const kStr&in strKey);
+	void EmptyUserPersistData();
+	uint64 CountUserPersistData();
+	kStr TranslateString(const kStr&in s);
+	void SetGameSpeed(const float speed);
+}
+
+class kBitDelta
+{
+public:
+	bool WriteByte(const uint8 i);
+	uint8 ReadByte();
+}
+
+class turokResourcePathPoint_s
+{
+public:
+	kVec3 m_vPos;
+	int region;
+	float m_fRotZ;
+	turokPathPointFlags_e m_eFlags;
+	uint16 m_wIdleAnimFlags;
+	uint16 m_wInteracativeIdleAnimFlags;
+	uint16 m_wAdvanceAnimType;
+	float m_fDistance;
+	float m_fTurnDeltaTime;
+	float m_fMoveSpeed;
+	float m_fRotX;
+	float m_fRotY;
+	float m_fDeaccelerate;
+	float m_fResumeTime;
+}
+
+class kSys
+{
+public:
+	void Print(const kStr&in);
+	void Warning(const kStr&in);
+	int VideoWidth();
+	int VideoHeight();
+	int Mouse_X();
+	int Mouse_Y();
+	const bool GetCvarValue(const kStr&in, kStr&out);
+}
+
+
+enum EnumPlaneSide
+{
+	PSIDE_FRONT = 0,
+	PSIDE_BACK = 1,
+	PSIDE_ON = 2
+}
+
+enum turokDamageFlags_e
+{
+	NONE = 0,
+	NORMAL = 1,
+	VIOLENT = 2,
+	EXPLOSIVE = 4,
+	EXTREME = 8,
+	LAVA = 16,
+	DROWN = 32,
+	ARROW = 64,
+	LOOK = 128,
+	SPLAT = 256
+}
+
+enum turokObjectCrossResult_e
+{
+	NONE = 0,
+	ENTER = 1,
+	EXIT = 2,
+	INSIDE = 4
+}
+
+enum turokActorFlags_e
+{
+	NONE = 0,
+	ALLOW_AUTOAIM = 1,
+	WAS_HIDDEN = 2,
+	WAS_OBSTRUCTED = 4,
+	FADE_OUT = 8
+}
+
+enum tactileChannel_e
+{
+	WEAPON = 0,
+	BODY = 1,
+	DAMAGE = 2,
+	WORLD = 3,
+	MAX = 4
+}
+
+enum tactilePosition_e
+{
+	LEFT = 0,
+	RIGHT = 1,
+	NEUTRAL = 2
+}
+
+enum turokTargetType_e
+{
+	TARGET_TYPE_ATTACKER = 0,
+	TARGET_TYPE_ATTACKER_FLEE = 1,
+	TARGET_TYPE_LEADER = 2,
+	TARGET_TYPE_LEASH = 3,
+	TARGET_TYPE_PATH = 4,
+	TARGET_TYPE_OBJECT = 5,
+	TARGET_TYPE_DEATH = 6,
+	TARGET_TYPE_TAKE_COVER = 7,
+	TARGET_TYPE_UNKNOWN = 8
+}
+
+enum turokAIFlags_e
+{
+	NONE = 0,
+	TARGET_THROWABLE = 1,
+	TARGET_COVER = 2,
+	TARGET_PLAYER = 4,
+	SNIPER = 8,
+	USE_LEASH_RADIUS = 16,
+	RESTRICT_VISION = 32,
+	PATROL = 64,
+	NO_UPDATE_PATH_TARGET = 128,
+	NO_UPDATE_SIGHT_TARGET = 256,
+	LOOK_AT_PATH_TARGET = 512,
+	TARGET_ENEMIES = 1024,
+	ALWAYS_FLEEING = 2048,
+	TARGET_LEASH_POS = 4096
+}
+
+enum turokAnimTrackFlags_e
+{
+	NONE = 0,
+	BLEND = 1,
+	LOOP = 2,
+	STOPPED = 4,
+	NOINTERRUPT = 8,
+	ROOTMOTION = 16,
+	PAUSED = 32,
+	CYCLECOMPLETED = 64,
+	LINEARBLEND = 128,
+	NOACCUMULATION = 256
+}
+
+enum turokEnemyBehaviorState_e
+{
+	ENEMY_BEHAVIOR_STATE_GROUND = 0,
+	ENEMY_BEHAVIOR_STATE_AIR = 1,
+	ENEMY_BEHAVIOR_STATE_UNDERWATER = 2,
+	NUM_ENEMY_BEHAVIOR_STATES = 3
+}
+
+enum turokEnemyBehaviorType_e
+{
+	ENEMY_BEHAVIOR_TYPE_NONE = 0,
+	ENEMY_BEHAVIOR_TYPE_NORMAL = 1,
+	ENEMY_BEHAVIOR_TYPE_SNIPER = 2,
+	NUM_ENEMY_BEHAVIOR_TYPES = 3
+}
+
+enum turokEnemyActionType_e
+{
+	ENEMY_ACTION_TYPE_PATROL = 0,
+	ENEMY_ACTION_TYPE_ATTACK = 1,
+	ENEMY_ACTION_TYPE_NOP = 2
+}
+
+enum turokEnemyAlertType_e
+{
+	ENEMY_ALERT_TYPE_NONE = 0,
+	ENEMY_ALERT_TYPE_LOW = 1,
+	ENEMY_ALERT_TYPE_MEDIUM = 2,
+	ENEMY_ALERT_TYPE_HIGH = 3
+}
+
+enum turokEnemyEvadeType_e
+{
+	ENEMY_EVADE_TYPE_NONE = 0,
+	ENEMY_EVADE_TYPE_LEFT = 1,
+	ENEMY_EVADE_TYPE_RIGHT = 2
+}
+
+enum turokEnemyMode_e
+{
+	MODE_ENEMY_WAIT_FOR_TRIGGER = 0,
+	MODE_ENEMY_START_DELAY = 1,
+	MODE_ENEMY_START = 2,
+	MODE_ENEMY_MOVE_SLOW = 3,
+	MODE_ENEMY_MOVE = 4,
+	MODE_ENEMY_MOVE_TURN180 = 5,
+	MODE_ENEMY_FLEE = 6,
+	MODE_ENEMY_FLEE_TURN180 = 7,
+	MODE_ENEMY_EVADE_LEFT = 8,
+	MODE_ENEMY_EVADE_RIGHT = 9,
+	MODE_ENEMY_IDLE = 10,
+	MODE_ENEMY_INTERACTIVE_IDLE = 11,
+	MODE_ENEMY_ALERT = 12,
+	MODE_ENEMY_TAKE_COVER = 13,
+	MODE_ENEMY_ATTACK_COMBAT = 14,
+	MODE_ENEMY_ATTACK_LEAP = 15,
+	MODE_ENEMY_ATTACK_DART = 16,
+	MODE_ENEMY_ATTACK_WEAPON = 17,
+	MODE_ENEMY_ATTACK_PROJECTILE = 18,
+	MODE_ENEMY_COMBO = 19,
+	MODE_ENEMY_COMBO_END = 20,
+	MODE_ENEMY_PICKUP_THROW_OBJECT = 21,
+	MODE_ENEMY_DROP_OBJECT = 22,
+	MODE_ENEMY_TELEPORT_OUT = 23,
+	MODE_ENEMY_TELEPORT_IN = 24,
+	MODE_ENEMY_TELEPORT_CHASE = 25,
+	MODE_ENEMY_CLOAK_ACTIVATE = 26,
+	MODE_ENEMY_REGENERATE = 27,
+	MODE_ENEMY_PUFFUP = 28,
+	MODE_ENEMY_REACTION_EXPLOSION = 29,
+	MODE_ENEMY_REACTION_FALL_DOWN = 30,
+	MODE_ENEMY_REACTION_GETUP = 31,
+	MODE_ENEMY_REACTION_BLINDED = 32,
+	MODE_ENEMY_REACTION_SHOCKED = 33,
+	MODE_ENEMY_REACTION_BORE = 34,
+	MODE_ENEMY_REACTION_BORE_CLUNK = 35,
+	MODE_ENEMY_REACTION_BORE_POSSESSED = 36,
+	MODE_ENEMY_REACTION_BORE_BURST = 37,
+	MODE_ENEMY_WOUNDED_GENERIC = 38,
+	MODE_ENEMY_WOUNDED_LEFT_ARM = 39,
+	MODE_ENEMY_WOUNDED_RIGHT_ARM = 40,
+	MODE_ENEMY_GROUND_TO_AIR = 41,
+	MODE_ENEMY_GROUND_TO_UNDERWATER = 42,
+	MODE_ENEMY_AIR_TO_GROUND = 43,
+	MODE_ENEMY_AIR_TO_UNDERWATER = 44,
+	MODE_ENEMY_UNDERWATER_TO_GROUND = 45,
+	MODE_ENEMY_UNDERWATER_TO_AIR = 46,
+	MODE_ENEMY_FEIGN_DEATH = 47,
+	MODE_ENEMY_DEATH = 48,
+	MODE_ENEMY_EXTREME_DEATH_PART1 = 49,
+	MODE_ENEMY_EXTREME_DEATH = 50,
+	MODE_ENEMY_PFM_DEATH = 51,
+	MODE_ENEMY_HEAD_BLOWN_OFF_DEATH = 52,
+	MODE_ENEMY_LEFT_ARM_BLOWN_OFF_DEATH = 53,
+	MODE_ENEMY_RIGHT_ARM_BLOWN_OFF_DEATH = 54,
+	MODE_ENEMY_BODY_HOLE_DEATH = 55,
+	MODE_ENEMY_DEATH_MELT = 56,
+	MODE_ENEMY_VAMPIRE_REACTION = 57,
+	MODE_ENEMY_POSSESSED = 58,
+	NUM_ENEMY_MODES = 59
+}
+
+enum turokEnemyMessages_e
+{
+	MSG_ENEMY_TRIGGER_ACTION = 1,
+	MSG_ENEMY_MAKE_VISIBLE = 2,
+	MSG_ENEMY_TURN_INTO_NORMAL_BEHAVIOR = 3,
+	MSG_ENEMY_TURN_INTO_SNIPER_BEHAVIOR = 4,
+	MSG_ENEMY_PLAY_CINEMA = 5,
+	MSG_ENEMY_PLAY_SOUND = 6,
+	MSG_ENEMY_PLAY_MUSIC = 7,
+	MSG_ENEMY_AMBIENT_SOUND = 8,
+	MSG_ENEMY_DESTROY_SELF = 9,
+	MSG_ENEMY_ACTIVATE_PLAYER_TARGETING = 10,
+	MSG_ENEMY_SCRIPT_FUNCTION = 11,
+	MSG_ENEMY_MAKE_STATIC = 12,
+	MSG_ENEMY_SET_OBJECTIVE = 13,
+	MSG_ENEMY_COMPLETE_OBJECTIVE = 14,
+	MSG_ENEMY_TRIGGER_IDLE = 15,
+	MSG_ENEMY_CLEAR_AMBUSH = 16,
+	MSG_ENEMY_CLEAR_NO_TARGETING = 17,
+	MSG_ENEMY_SET_NO_TARGETING = 18,
+	MSG_ENEMY_ENABLE_COLLISION = 19,
+	MSG_ENEMY_DISABLE_COLLISION = 20
+}
+
+enum turokEnemyFlags_e
+{
+	NONE = 0,
+	LEADER = 1,
+	FOLLOWER = 2,
+	PASS_ON_LEADERSHIP = 4,
+	FREE_FOLLOWERS = 8,
+	USE_LEASH_RADIUS = 16,
+	REGENERATE = 32,
+	CAN_TELEPORT = 64,
+	CAN_BE_BLINDED = 128,
+	CAN_BE_SHOCKED = 256,
+	CAN_BE_TRANQUALIZED = 512,
+	CAN_BE_BORED = 1024,
+	LINK_TRIGGERED = 2048,
+	INITIALLY_INVISIBLE = 4096,
+	CAN_BE_BORE_TRACKED = 8192,
+	FACE_START_ROT_Z_LEASH = 16384,
+	RESTRICT_VISION = 32768,
+	VANISH_ON_DEATH = 65536,
+	FEIGN_DEATH = 131072,
+	AMBUSH = 262144,
+	NO_FLINCHING = 524288,
+	CAN_CLOAK = 1048576,
+	USE_SKINS = 2097152,
+	RANDOMIZE_FACE_TEXTURE = 4194304,
+	RANDOMIZE_BODY_TEXTURE = 8388608,
+	RANDOMIZE_LARM_TEXTURE = 16777216,
+	RANDOMIZE_RARM_TEXTURE = 33554432,
+	RANDOMIZE_LLEG_TEXTURE = 67108864,
+	RANDOMIZE_RLEG_TEXTURE = 134217728,
+	STOP_PATH_NODE_TRIGGERED = 268435456,
+	NO_BLACK_HOLE_DRAGGING = 536870912,
+	NO_LEACHING = 1073741824,
+	NO_PERSIST_TRIGGER_ONVISIBLE = -2147483648
+}
+
+enum turokEventType_e
+{
+	EVENT_TYPE_PLAYSFX = 0,
+	EVENT_TYPE_PARTICLE = 1,
+	EVENT_TYPE_SDAMAGE = 2,
+	EVENT_TYPE_MDAMAGE = 3,
+	EVENT_TYPE_MDAMAGELOOK = 4,
+	EVENT_TYPE_TRIGGER = 5,
+	EVENT_TYPE_UNBLOCK = 6,
+	EVENT_TYPE_BLOCK = 7,
+	EVENT_TYPE_PARTICLE2 = 8,
+	EVENT_TYPE_SCREEN_FLASH = 9,
+	EVENT_TYPE_SPAWN_TRAILS = 10,
+	EVENT_TYPE_WEAPON_FIRE_PROJECTILE = 11,
+	EVENT_TYPE_SCREEN_SHAKE_SINEWAVE = 12,
+	EVENT_TYPE_SCREEN_SHAKE_RANDOM = 13,
+	EVENT_TYPE_DISPLAYTEXT = 14,
+	EVENT_TYPE_MDAMAGE_VIOLENT = 15,
+	EVENT_TYPE_MDAMAGE_VIOLENT_LOOK = 16,
+	EVENT_TYPE_MDAMAGE_EXPLOSIVE = 17,
+	EVENT_TYPE_MDAMAGE_EXPLOSIVE_LOOK = 18,
+	EVENT_TYPE_MDAMAGE_EXTREME = 19,
+	EVENT_TYPE_MDAMAGE_EXTREME_LOOK = 20,
+	EVENT_TYPE_RUMBLE = 21,
+	EVENT_TYPE_USER = 22,
+	EVENT_TYPE_PLAYSFX_ON_MODEL = 23,
+	EVENT_TYPE_PARTICLE_ON_MODEL = 24,
+	EVENT_TYPE_MDAMAGE_GROUND_EXPLOSIVE = 25,
+	EVENT_TYPE_HOTPOINT_ON = 26,
+	EVENT_TYPE_HOTPOINT_OFF = 27,
+	EVENT_TYPE_SPAWN = 28,
+	EVENT_TYPE_PLAYSFX_ON_MATERIAL = 29,
+	EVENT_TYPE_PLAYVOICE = 30,
+	EVENT_TYPE_PLAY_LOOP_SOUND = 31,
+	EVENT_TYPE_STOP_LOOP_SOUND = 32,
+	EVENT_TYPE_UNKNOWN_1 = 33,
+	EVENT_TYPE_UNKNOWN_2 = 34,
+	EVENT_TYPE_CHANGE_MODEL = 35,
+	EVENT_TYPE_DESTROY = 36,
+	EVENT_TYPE_UNKNOWN_5 = 37,
+	EVENT_TYPE_UNKNOWN_6 = 38,
+	EVENT_TYPE_UNKNOWN_7 = 39,
+	EVENT_TYPE_CREATE_SINE_SHOCKWAVE = 40,
+	EVENT_TYPE_UNKNOWN_9 = 41,
+	EVENT_TYPE_UNKNOWN_10 = 42,
+	EVENT_TYPE_DIRECT_DAMAGE = 43,
+	EVENT_TYPE_MDAMAGE2 = 44,
+	EVENT_TYPE_CREATE_BLACKHOLE = 45,
+	EVENT_TYPE_EVAPORATE_ACTORS = 46,
+	EVENT_TYPE_FLAG_PERSISTENT = 47,
+	EVENT_TYPE_PLAYVOICE_CHANCE = 48,
+	EVENT_TYPE_PLAYSFX_LOCAL = 49,
+	EVENT_TYPE_CREATE_SINE_BLACKHOLE_SHOCKWAVE = 50,
+	NUM_EVENT_TYPES = 51
+}
+
+enum turokIntelligenceTypes_e
+{
+	STATIC_INTEL_TYPE = 0,
+	ENEMY_INTEL_TYPE = 1,
+	PLATFORM_INTEL_TYPE = 2,
+	GENERATOR_INTEL_TYPE = 3,
+	TURRET_INTEL_TYPE = 4,
+	THROWABLE_INTEL_TYPE = 5,
+	DOOR_INTEL_TYPE = 6,
+	DESTRUCTIBLE_INTEL_TYPE = 7,
+	PICKUP_INTEL_TYPE = 8,
+	INTERACTIVE_ANIM_INTEL_TYPE = 9,
+	ACTION_INTEL_TYPE = 10,
+	PLAYER_INTEL_TYPE = 11,
+	MORPHER_INTEL_TYPE = 12,
+	WARP_ENTRANCE_INTEL_TYPE = 13,
+	WEATHER_GENERATOR_INTEL_TYPE = 14,
+	CAMERA_PLACEMENT_INTEL_TYPE = 15,
+	EMPTY_INTEL_TYPE = 16,
+	TOTAL_INTEL_TYPES = 17
+}
+
+enum turokIntelPickupFlags_e
+{
+	NONE = 0,
+	ACTOR_ON_SAME_REGION = 1
+}
+
+enum turokCommonIntelligenceFlags_e
+{
+	NONE = 0,
+	ALIASING_REDUCED = 1,
+	ALIASING_FULL = 2,
+	TRACK_GROUND = 4,
+	EASY_DIFFICULTY = 8,
+	MEDIUM_DIFFICULTY = 16,
+	HARD_DIFFICULTY = 32,
+	USE_STATIC_LIGHTING = 64,
+	CAN_BE_LANDED_ON = 128,
+	ENABLED = 256,
+	ENABLED_CINEMA = 512,
+	NO_TARGETING = 1024,
+	UNKNOWN800 = 2048,
+	BLOCKER = 4096,
+	UNKNOWN2000 = 8192,
+	UNKNOWN4000 = 16384,
+	UNKNOWN8000 = 32768,
+	UNKNOWN10000 = 65536,
+	UNKNOWN20000 = 131072,
+	UNKNOWN40000 = 262144,
+	UNKNOWN80000 = 524288,
+	UNKNOWN100000 = 1048576,
+	NO_DAMAGE = 2097152,
+	FLAG_NODES_ON_PATHS = 4194304,
+	DRAW_IF_DANI = 8388608,
+	DRAW_IF_JOSEPH = 16777216,
+	BLOCK_AI = 33554432,
+	UNKNOWN4000000 = 67108864,
+	UNKNOWN8000000 = 134217728,
+	DRAW_IF_JOSHUA = 268435456,
+	DRAW_IF_RAPTOR = 536870912,
+	OBLIVION_DIFFICULTY = 1073741824
+}
+
+enum turokGameState_e
+{
+	GS_NONE = 0,
+	GS_TITLE = 1,
+	GS_LEVEL = 2,
+	GS_CHANGELEVEL = 3,
+	GS_NEW_SINGLEPLAYER_GAME = 4,
+	GS_CHOOSE_CHARACTER = 5,
+	GS_OPENING_CINEMATIC = 6,
+	GS_LOAD_GAME = 7,
+	GS_EDITOR = 8,
+	GS_CREDITS = 9,
+	GS_WARNING = 10,
+	GS_INTRO = 11,
+	GS_NEW_CHEATWARP_GAME = 12,
+	NUMGAMESTATES = 13
+}
+
+enum turokImpactType_e
+{
+	IMPACT_TYPE_DEFAULT = 0,
+	IMPACT_TYPE_WATER = 1,
+	IMPACT_TYPE_METAL = 2,
+	IMPACT_TYPE_STONE = 3,
+	IMPACT_TYPE_FLESH_HUMAN = 4,
+	IMPACT_TYPE_FLESH_CREATURE = 5,
+	IMPACT_TYPE_FLESH_WATER = 6,
+	IMPACT_TYPE_LAVA = 7,
+	IMPACT_TYPE_SLIME = 8,
+	IMPACT_TYPE_FORCEFIELD = 9,
+	IMPACT_TYPE_UNKNOWN1 = 10,
+	IMPACT_TYPE_UNKNOWN2 = 11,
+	IMPACT_TYPE_UNKNOWN3 = 12,
+	IMPACT_TYPE_UNKNOWN4 = 13,
+	IMPACT_TYPE_DESTROY = 14,
+	IMPACT_TYPE_ACTIVE = 15,
+	IMPACT_TYPE_DESTROYWATER = 16,
+	IMPACT_TYPE_ACTIVEWATER = 17,
+	IMPACT_TYPE_NUMIMPACTTYPES = 18
+}
+
+enum turokCheatFlags_e
+{
+	NONE = 0,
+	BIG_HEADS = 1,
+	TINY_ENEMY = 2,
+	INFINITE_AMMO = 4,
+	INVINCIBILITY = 8,
+	BIG_LIMBS = 16,
+	STICK_MODE = 32,
+	ALL_WEAPONS = 64,
+	DEMIGOD = 128,
+	ALL_CHAR_WEAPONS = 256,
+	PLAY_AS_JOSHUA = 512,
+	PLAY_AS_RAPTOR = 1024,
+	ALL_KEYS = 2048,
+	GOURAUD = 4096,
+	HEADLESS = 8192,
+	CHAPTER1 = 16384,
+	CHAPTER2 = 32768,
+	CHAPTER3 = 65536,
+	CHAPTER4 = 131072,
+	CHAPTER5 = 262144,
+	ANY_CHEAT = 67108864,
+	BEATEN_AS_JOSHUA = 134217728,
+	BEATEN_AS_RAPTOR = 268435456,
+	BEATEN_AS_DANNI = 536870912,
+	BEATEN_AS_JOSEPH = 1073741824
+}
+
+enum turokCharacterMode_e
+{
+	CHARACTER_MODE_DANNI = 0,
+	CHARACTER_MODE_JOSEPH = 1,
+	CHARACTER_MODE_JOSHUA = 2,
+	CHARACTER_MODE_RAPTOR = 3,
+	NUM_CHARACTER_MODES = 4,
+	CHARACTER_MODE_ALL = -1
+}
+
+enum turokDifficultyMode_e
+{
+	DIFFICULTY_EASY = 0,
+	DIFFICULTY_NORMAL = 1,
+	DIFFICULTY_HARD = 2,
+	DIFFICULTY_OBLIVION = 3,
+	NUM_DIFFICULTIES = 4
+}
+
+enum turokGameMode_e
+{
+	GAME_MODE_SINGLE_PLAYER = 0,
+	GAME_MODE_BLOODLUST = 1,
+	GAME_MODE_CTF = 2,
+	GAME_MODE_LAST_STAND = 3,
+	GAME_MODE_GOLDEN_ARROW = 4,
+	GAME_MODE_MONKEY_TAG = 5,
+	GAME_MODE_ARSENAL_OF_WAR = 6,
+	GAME_MODE_COLOR_TAG = 7,
+	GAME_MODE_WEAPON_MASTER = 8
+}
+
+enum turokQuitMode_e
+{
+	QUIT_MODE_NONE = 0,
+	QUIT_MODE_RETURN_TO_TITLE = 1,
+	QUIT_MODE_RESTART_LEVEL = 2,
+	QUIT_MODE_RESTART_CHAPTER = 3,
+	QUIT_MODE_RESTART_COUNTDOWN = 4,
+	NUM_QUIT_MODES = 5
+}
+
+enum turokModeFlags_e
+{
+	NONE = 0,
+	INVINCIBLE = 1,
+	HEADTRACK = 2,
+	CLEARMOVEMENT = 4,
+	NO_BLEND = 8,
+	IDLE = 16,
+	CLEARLOOPSOUNDS = 32,
+	NOACCUMULATION = 64,
+	NOROOTMOTION = 128,
+	NO_LOOP = 256,
+	TERRAIN_GROUND = 512,
+	TERRAIN_AIR = 1024,
+	TERRAIN_UNDERWATER = 2048,
+	HAS_SCRIPT_SETUP = 4096,
+	HAS_SCRIPT_UPDATE = 8192,
+	HAS_SCRIPT_GETANIM = 16384
+}
+
+enum turokModeTerrainType_e
+{
+	MODE_TERRAIN_TYPE_GROUND = 0,
+	MODE_TERRAIN_TYPE_AIR = 1,
+	MODE_TERRAIN_TYPE_UNDERWATER = 2,
+	NUM_MODE_TERRAIN_TYPES = 3
+}
+
+enum turokSectionFlags_e
+{
+	NONE = 0,
+	FLAT_SHADED = 1,
+	SELF_ILLUMINATED = 2,
+	TWO_SIDED = 4,
+	TEXTURE_MAP = 8,
+	REFLECT_MAP = 16,
+	DECAL_TEXTURE = 32,
+	PRELIT = 64,
+	MASK = 128,
+	TRANSPARENCY = 256,
+	INTERSECT = 512,
+	PSEUDOCOLOR = 1024,
+	MIRROR_TEXTURE = 2048,
+	SHADE_ALPHA = 4096,
+	MIPMAP = 8192,
+	REFLECT_OVERLAY = 16384,
+	SKINNED = 32768,
+	LOCK_ANIM = 65536,
+	UNKNOWN_0x20000 = 131072,
+	UNKNOWN_0x40000 = 262144,
+	UNKNOWN_0x80000 = 524288,
+	UNKNOWN_0x100000 = 1048576,
+	UNKNOWN_0x200000 = 2097152,
+	UNKNOWN_0x400000 = 4194304,
+	UNKNOWN_0x800000 = 8388608,
+	GLOW = 16777216,
+	UNKNOWN_0x2000000 = 33554432,
+	UNKNOWN_0x4000000 = 67108864,
+	UNKNOWN_0x8000000 = 134217728,
+	UNKNOWN_0x10000000 = 268435456,
+	UNKNOWN_0x20000000 = 536870912,
+	UNKNOWN_0x40000000 = 1073741824
+}
+
+enum turokSectionFlags2_e
+{
+	NONE = 0,
+	PART_BITS1 = 1,
+	PART_BITS2 = 2,
+	PART_MASK = 3,
+	PART_FLAG = 4,
+	FORMAT_CI4_IA = 8,
+	DYNAMIC_LAYER = 16,
+	PART_0 = 0,
+	PART_1 = 1,
+	PART_2 = 2,
+	PART_3 = 3,
+	NUM_PARTS = 4,
+	PART_BODY = 0,
+	PART_HEAD = 1,
+	PART_ARMS = 2,
+	PART_LEGS = 3
+}
+
+enum turokCollisionFaceFlags_e
+{
+	NONE = 0,
+	FLAT_SHADED = 1,
+	SELF_ILLUMINATED = 2,
+	DOUBLE_SIDED = 4,
+	STATIC = 8,
+	REFLECTIVE = 16,
+	DECAL = 32,
+	PRELIT = 64,
+	SHOOT_THROUGH = 128,
+	SEE_THROUGH = 256,
+	UNKNOWN200 = 512,
+	WATER = 1024,
+	IGNORE_SIGHT = 2048,
+	SHADE_ALPHA = 4096,
+	MIPMAP = 8192,
+	REFLECT_OVERLAY = 16384,
+	SKINNED = 32768,
+	UNKNOWN10000 = 65536,
+	UNKNOWN20000 = 131072,
+	UNKNOWN40000 = 262144,
+	NO_COLLISION = 524288,
+	UNKNOWN100000 = 1048576,
+	UNKNOWN200000 = 2097152,
+	UNKNOWN400000 = 4194304,
+	UNKNOWN800000 = 8388608,
+	UNKNOWN1000000 = 16777216,
+	UNKNOWN2000000 = 33554432,
+	UNKNOWN4000000 = 67108864,
+	UNKNOWN8000000 = 134217728,
+	CLIMB = 268435456,
+	UNKNOWN20000000 = 536870912,
+	ALL_MASK = -1
+}
+
+enum turokHotPointFlags_e
+{
+	NONE = 1,
+	PARTICLE1 = 2,
+	UNUSED1 = 4,
+	BLOOD_FOUNTAIN = 8,
+	UNUSED2 = 16,
+	UNUSED3 = 32,
+	CBORE = 64,
+	PARTICLE3 = 128,
+	PARTICLE4 = 256,
+	PARTICLE5 = 512,
+	PARTICLE6 = 1024,
+	PARTICLE7 = 2048,
+	PARTICLE8 = 4096,
+	PARTICLE9 = 8192,
+	PARTICLE10 = 16384,
+	PARTICLE11 = 32768,
+	PARTICLE12 = 65536,
+	PARTICLE13 = 131072,
+	PARTICLE14 = 262144,
+	PARTICLE15 = 524288,
+	PARTICLE16 = 1048576,
+	PARTICLE17 = 2097152,
+	PARTICLE18 = 4194304,
+	DAMAGE5 = 8388608,
+	DAMAGE10 = 16777216,
+	DAMAGE15 = 33554432,
+	DAMAGE20 = 67108864,
+	PARTICLE19 = 134217728,
+	PARTICLE20 = 268435456,
+	PARTICLE21 = 536870912,
+	PARTICLE22 = 1073741824,
+	PARTICLE23 = -2147483648,
+	PARTICLE_ALL = -125829238
+}
+
+enum turokResourceNavLinkType_e
+{
+	NAVLINK_TYPE_UNKNOWN0 = 0,
+	NAVLINK_TYPE_TWO_WAY = 1,
+	NAVLINK_TYPE_ONE_WAY = 2,
+	NAVLINK_TYPE_ONE_WAY_FALL = 3,
+	NAVLINK_TYPE_LADDER = 4,
+	NAVLINK_TYPE_PLATFORM = 5,
+	NAVLINK_TYPE_COVER = 6,
+	NAVLINK_TYPE_SWIM = 7,
+	NAVLINK_TYPE_JUMP = 8,
+	NAVLINK_TYPE_TRACKING = 9,
+	NAVLINK_TYPE_TRACKING_FALL = 10
+}
+
+enum turokResourceNavNodeFlags_e
+{
+	NONE = 0,
+	PICKUP = 1,
+	COVER = 2,
+	WARPPOINT = 4,
+	SPAWNPOINT = 8,
+	WATER_SURFACE = 16,
+	UNDERWATER = 32,
+	DEATHZONE = 64,
+	KILLZONE = 128,
+	UNKNOWN0x100 = 256,
+	PLATFORM = 512,
+	HAZARD = 1024
+}
+
+enum turokWaterLevelType_e
+{
+	WLT_INVALID = 0,
+	WLT_OVER = 1,
+	WLT_BETWEEN = 2,
+	WLT_UNDER = 3
+}
+
+enum turokObjectFlag_e
+{
+	NONE = 0,
+	ON_GROUND = 1,
+	ON_WATER_SURFACE = 2,
+	UNDERWATER = 4,
+	ON_SHALLOW_WATER = 8,
+	ON_CLIMB_SURFACE = 16,
+	HIDDEN = 32,
+	INACTIVE = 64,
+	USE_COLLISION = 128,
+	INFLICTED_DAMAGE = 256,
+	ON_CRAWL_REGION = 512,
+	ON_CRAWL_EXIT_REGION = 1024,
+	ON_ANTI_GRAVITY_REGION = 2048,
+	ALLOW_PICKUP = 4096,
+	CAN_ENTER_WATER = 8192,
+	CAN_EXIT_WATER = 16384,
+	ON_DEATH_REGION = 32768
+}
+
+enum turokResourcePrtFlags1_e
+{
+	NONE = 0,
+	FADEOUT = 1,
+	RANDOMSTARTFRAME = 2,
+	USERSCALE = 4,
+	ALIGNONBOTTOM = 8,
+	RETAINVELOCITY = 16,
+	ADDSOURCEVELOCITY = 32,
+	CANNOTHITSOURCE = 64,
+	CREATEONCE = 128,
+	MIRRORWIDTH = 256,
+	MIRRORHEIGHT = 512,
+	INTERSECTION = 1024,
+	BOUNCEONLYONCE = 2048,
+	SCALELINEAR = 4096,
+	DRAWONBOTTOM = 8192,
+	ZBUFFER = 16384,
+	USESOURCEORIENTATION = 32768,
+	FORWARDPROPSWOOSH = 65536,
+	DIEONWATERSURFACE = 131072,
+	AIMATPLAYER = 262144,
+	HASLENSFLARE = 524288,
+	SHADOW = 1048576,
+	PLAYONLYWHENFAR = 2097152,
+	PLAYONLYWHENNEAR = 4194304,
+	BULLETHOLE = 8388608,
+	GLOBALCOORD = 16777216,
+	BLOODEFFECT = 33554432,
+	IMPACTEFFECT = 67108864,
+	RESTRICTAIMATPLAYER = 134217728,
+	NOWALLSPAWN = 268435456,
+	NOGRDSPAWN = 536870912,
+	POLYGONCOLLISION = 1073741824,
+	SCREENALIGNSWOOSH = -2147483648
+}
+
+enum turokResourcePrtFlags2_e
+{
+	NONE = 0,
+	SINGLE_PLAYER = 1,
+	MULTIPLAYER = 2,
+	CAUSE_FLINCH = 4,
+	UNKNOWN1 = 8,
+	UNKNOWN2 = 16,
+	UNKNOWN3 = 32,
+	UNKNOWN4 = 64,
+	UNKNOWN5 = 128,
+	UNKNOWN6 = 256,
+	UNKNOWN7 = 512,
+	UNKNOWN8 = 1024,
+	UNKNOWN9 = 2048,
+	ATTACH_LOOP_SOUND = 4096,
+	CAST_LIGHT_SHADOW = 8192,
+	STICK_STATIC = 16384,
+	CAUSE_FIRE = 32768,
+	FIXED_FOV = 65536,
+	CAUSE_SHOCK = 131072,
+	STICK_CHAR = 262144,
+	RIP_FLESH = 524288,
+	STICK_PERSISTENT = 1048576,
+	SAMPLE_LIGHTING = 2097152,
+	STICK_NAPALM = 4194304,
+	COLLISION_HEADONLY = 8388608,
+	COLLISION_ALIVE_ENEMIES = 16777216,
+	COLLISION_CHECK_IN_BOX = 33554432,
+	AIMATPLAYER_LEAD = 67108864
+}
+
+enum turokParticleAlignmentType_e
+{
+	FXAT_INVALID = -10,
+	FXAT_SURF_ROTATE = -9,
+	FXAT_PLANE = -8,
+	FXAT_DIR = -7,
+	FXAT_BILLBOARD = -6,
+	FXAT_UP = -5,
+	FXAT_SCREEN = -4,
+	FXAT_GROUND = -3,
+	FXAT_CEILING = -2,
+	FXAT_NOEDGE = -1,
+	FXAT_EDGE0 = 0,
+	FXAT_EDGE1 = 1,
+	FXAT_EDGE2 = 2
+}
+
+enum turokParticleSpawnFlags_e
+{
+	NONE = 0,
+	PERMANENT = 1,
+	NOCOLLISION = 2,
+	ONE_FRAME_ONLY = 4,
+	NO_INBETWEENS = 8,
+	STICK_CHAR = 16,
+	STICK_STATIC = 32,
+	NO_SOUND = 64,
+	ATTACH_TO_PLAYER = 128,
+	UNDERWATER = 256,
+	DREW_BLOOD = 512,
+	DREW_GREEN_BLOOD = 1024,
+	BLOOD = 2048,
+	ALTERNATE_BLOOD = 4096,
+	PASSON = 64,
+	NO_IMPACT_DESTROY_ONE_FRAME = 8192,
+	CHILD_PARTICLE = 16384,
+	NO_OBJECT_EVENTS = 32768
+}
+
+enum turokPathMode_e
+{
+	PATH_MODE_NONE = 0,
+	PATH_MODE_FORWARD = 1,
+	PATH_MODE_FORWARD_USE_PATHFIND = 2,
+	PATH_MODE_REVERSE = 3,
+	PATH_MODE_REVERSE_USE_PATHFIND = 4
+}
+
+enum turokCollideBehaviorType_e
+{
+	COLLIDE_BEHAVIOR_IGNORE = 0,
+	COLLIDE_BEHAVIOR_SLIDE = 1,
+	COLLIDE_BEHAVIOR_REDIRECT = 2,
+	COLLIDE_BEHAVIOR_GREASE = 3,
+	COLLIDE_BEHAVIOR_BOUNCE = 4,
+	COLLIDE_BEHAVIOR_STICK = 5
+}
+
+enum turokCollisionSweepFlag_e
+{
+	NONE = 0,
+	NO_OBJECT_COLLISION = 1,
+	COLLIDE_JOINTS = 2,
+	STEP_UP = 4,
+	BACK_CULL_EJECTION = 8,
+	IGNORE_BLOCKERS = 16,
+	IGNORE_AI_BLOCKERS = 32,
+	IGNORE_PLATFORMS = 64,
+	IGNORE_FLOORS = 128,
+	IGNORE_WALLS = 256,
+	NO_COLLIDE_EDGES = 512,
+	FILTER_INTELLIGENCE = 1024,
+	EXPAND_JOINT_COLLISION = 2048,
+	FAST_BOUND_INTERSECTIONS = 4096,
+	NO_QUERY_FACE_SORTING = 8192,
+	HEADONLY_COLLISION = 16384,
+	COLLISION_ALIVE_ENEMIES = 32768,
+	COLLISION_CHECK_IN_BOX = 65536,
+	IGNORE_PICKUPS = 131072
+}
+
+enum turokSlideMoveBehavior_e
+{
+	NONE = 0,
+	STEP_UP = 1,
+	TRACK_GROUND = 2,
+	CAN_CLIMB = 4,
+	NO_COLLISION = 8,
+	ITERATE_ONCE = 16,
+	NO_OBJECT_COLLISION = 32,
+	COLLIDE_JOINTS = 64,
+	IGNORE_BLOCKERS = 128,
+	IGNORE_AI_BLOCKERS = 256,
+	ADD_CURRENTS = 512,
+	IGNORE_PLATFORMS = 1024,
+	BACK_CULL_EJECTION = 2048,
+	NO_COLLIDE_EDGES = 4096,
+	EXPAND_JOINT_COLLISION = 8192,
+	HEADONLY_COLLISION = 16384,
+	COLLISION_ALIVE_ENEMIES = 32768,
+	COLLISION_CHECK_IN_BOX = 65536
+}
+
+enum turokPlayerFlags_e
+{
+	PF_NONE = 0,
+	PF_GOD = 1,
+	PF_FLOATCAM = 2,
+	PF_JUST_WARPED = 4,
+	PF_CROUCH_TOGGLED = 8,
+	PF_CROUCHED = 16,
+	PF_RESET_SPRING = 32,
+	PF_ISSCARY = 64,
+	PF_NO_TARGET = 128,
+	PF_NV_GOGGLES = 256,
+	PF_VAMPIRING = 512,
+	PF_INDEATHFALL = 1024
+}
+
+enum turokPlayerState_e
+{
+	PS_IDLE = 0,
+	PS_RUN = 1,
+	PS_JUMP_UP = 2,
+	PS_JUMPING = 3,
+	PS_SIDE_SETUP_UP = 4,
+	PS_SIDE_STEPPING = 5,
+	PS_IDLE_ON_WATER = 6,
+	PS_SWIM_ON_WATER = 7,
+	PS_IDLE_UNDERWATER = 8,
+	PS_SWIM_UNDERWATER = 9,
+	PS_CLIMB = 10,
+	PS_DEATH = 11,
+	PS_NOCLIP = 12,
+	PS_FLY = 13,
+	PS_CBORED = 14,
+	PS_CAMERAVIEW = 15,
+	PS_ANTIGRAVITY_IDLE = 16,
+	PS_ANTIGRAVITY_MOVE = 17,
+	PS_USER_STATE_1 = 18,
+	PS_USER_STATE_2 = 19,
+	PS_USER_STATE_3 = 20,
+	PS_USER_STATE_4 = 21,
+	PS_USER_STATE_5 = 22,
+	PS_USER_STATE_6 = 23,
+	PS_USER_STATE_7 = 24,
+	PS_USER_STATE_8 = 25,
+	PS_USER_STATE_9 = 26,
+	PS_USER_STATE_10 = 27,
+	PS_USER_STATE_11 = 28,
+	PS_USER_STATE_12 = 29,
+	PS_USER_STATE_13 = 30,
+	PS_USER_STATE_14 = 31,
+	PS_USER_STATE_15 = 32,
+	PS_USER_STATE_16 = 33,
+	NUMPLAYERSTATES = 34
+}
+
+enum turokInputActions_e
+{
+	IA_INVALID = -1,
+	IA_ATTACK = 0,
+	IA_JUMP = 1,
+	IA_FORWARD = 2,
+	IA_BACKWARD = 3,
+	IA_STRAFELEFT = 4,
+	IA_STRAFERIGHT = 5,
+	IA_WEAPNEXT = 6,
+	IA_WEAPPREV = 7,
+	IA_CROUCH = 8,
+	IA_TOGGLE_SCOPE = 9,
+	IA_TOGGLE_NV_GOGGLES = 10,
+	NUMINPUTACTIONS = 11
+}
+
+enum turokButtonCmd_e
+{
+	BC_NONE = 0,
+	BC_ATTACK = 1,
+	BC_JUMP = 2,
+	BC_FORWARD = 4,
+	BC_BACKWARD = 8,
+	BC_STRAFELEFT = 16,
+	BC_STRAFERIGHT = 32,
+	BC_WEAPONRIGHT = 64,
+	BC_WEAPONLEFT = 128,
+	BC_CROUCH = 256,
+	BC_TOGGLE_SCOPE = 512,
+	BC_TOGGLE_NV_GOGGLES = 1024
+}
+
+enum turokResourceRegionAttributes1_e
+{
+	NONE = 0,
+	WATER = 1,
+	BLOCK = 2,
+	OPENED = 4,
+	CLIFF = 8,
+	CLIMB = 16,
+	ONESIDED = 32,
+	CEILING = 64,
+	CRAWL = 128,
+	EXITCRAWL = 256,
+	COUNTDOWN = 512,
+	ENTERED = 1024,
+	LEAPOFFAITH = 2048,
+	RESTRICTED = 4096,
+	SLOPETEST = 8192,
+	DEATHPIT = 16384,
+	MAPPED = 32768,
+	TREMOR = 65536,
+	WHISPERS = 131072,
+	TELEPORT = 262144,
+	DAMAGE = 524288,
+	DRAWSKY = 1048576,
+	COUNTDOWN_MESSAGE = 2097152,
+	LAVA = 4194304,
+	MOVE_CEILING = 8388608,
+	ANTIGRAVITY = 16777216,
+	LADDER = 33554432,
+	CHECKPOINT = 67108864,
+	SECRET = 134217728,
+	COMPLETE_COUNTDOWN = 268435456,
+	SHALLOWWATER = 536870912,
+	DRAWSUN = 1073741824
+}
+
+enum turokResourceRegionAttributes2_e
+{
+	NONE = 0,
+	NO_TRIGGER_ON_SPAWN = 1,
+	UPDATEOBJECTIVES = 2,
+	CAVE = 4,
+	CAVERN = 8,
+	FALLING = 16,
+	COMPLETEOBJECTIVES = 32,
+	QUICKSAND = 64,
+	SWAMP = 128,
+	CURRENT = 256,
+	CURRENT_SWIRL_CW = 512,
+	CURRENT_SWIRL_CCW = 1024,
+	CAMERAAPPLYINAIR = 2048,
+	JUMPPAD = 4096,
+	ORIENTCAMERA = 8192,
+	ALLOW_PLAYER_CTRL = 16384,
+	STAYINCURRENT = 32768
+}
+
+enum turokResourceRegionAttributes3_e
+{
+	NONE = 0,
+	PLAY_COUNTDOWN_CINEMA = 1,
+	PLAYER_BLOCK = 2,
+	NO_DAMAGE_AI = 4,
+	DISMOUNT_AREA = 8,
+	PLAY_SUCCESS_CINEMA = 16,
+	LEASH_WEATHER = 32,
+	UNLEASH_WEATHER = 64,
+	PLAY_TIMED_OUT_CINEMA = 128,
+	TRIGGER_CHARACTER_ONLY = 256
+}
+
+enum turokRenderMeshFlags_e
+{
+	NONE = 0,
+	RENDER_AS_WEAPON = 1,
+	CLOAKED = 2,
+	HEADTRACK = 4,
+	TINYMODE = 8,
+	WAGGLE = 16,
+	SHOCKED = 32,
+	STICKMODE = 64,
+	NOEXPANDJOINTS = 128,
+	CAN_FLINCH = 256,
+	RUNTIME_LIT = 512,
+	HIDE_HEAD = 1024,
+	HIDE_BODY = 2048,
+	HIDE_LARM = 4096,
+	HIDE_RARM = 8192,
+	HIDE_LLEG = 16384,
+	HIDE_RLEG = 32768,
+	ALLOW_BLOWN_OFF_PARTS = 65536,
+	LEACHED = 131072,
+	HAS_ALT_TEXTURES_PER_SECTION = 262144,
+	NO_PRECISE_BOUNDS = 524288,
+	HAS_ATTACHED_PARTICLES = 1048576,
+	NO_OCCLUSION = 2097152
+}
+
+enum turokSoundFxPauseMode_e
+{
+	NONE = 0,
+	WINDOW_UNFOCUSED = 1,
+	MENU = 2
+}
+
+enum turokWeaponFlags_e
+{
+	NONE = 0,
+	ALLOWUNDERWATER = 1,
+	ALLOWLAND = 2,
+	ALLOWMULTIPLAYER = 4,
+	CHARGETYPE = 8,
+	LOCKCONTROLS = 16,
+	HASSCOPE = 32,
+	SCOPEACTIVE = 64,
+	CANSEVER = 128,
+	NOGIVECHEAT = 256,
+	JUSTFIREDPROJECTILE = 512,
+	SKIP_MODE_UPDATE = 1024,
+	PROJECTILE_ACTIVE = 2048,
+	NOWEAPONCHANGE_ONCOSUMEALLAMMO = 4096
+}
+
+enum turokWeaponMode_e
+{
+	MODE_WEAPON_IDLE = 0,
+	MODE_WEAPON_BOB_IDLE = 1,
+	MODE_WEAPON_RAISE = 2,
+	MODE_WEAPON_LOWER = 3,
+	MODE_WEAPON_FIRE = 4,
+	MODE_WEAPON_CHARGE = 5,
+	MODE_WEAPON_HOLSTER = 6,
+	MODE_WEAPON_DISCHARGE = 7,
+	NUM_WEAPON_MODES = 8
+}
+
+enum turokResourceLinkCauses_e
+{
+	NONE = 0,
+	REGION_PLAYER_ENTERING = 1,
+	REGION_PLAYER_EXIT = 2,
+	REGION_PLAYER_WALL = 4,
+	REGION_PLAYER_WALL_BULLET = 8,
+	REGION_PLAYER_WALL_ARROW = 16,
+	REGION_PLAYER_WALL_EXP = 32,
+	REGION_ACTOR_ENTER = 64,
+	REGION_ACTOR_EXIT = 128,
+	REGION_ACTOR_WALL_NORMAL = 256,
+	REGION_ACTOR_WALL_EXP = 512,
+	REGION_PLAYER_TOUCH = 1024,
+	REGION_NEEDS_EYE_OF_TRUTH = 2048,
+	REGION_NEEDS_WHISPERS = 4096,
+	REGION_PLAYER_NEEDS_TO_BE_IT_FRAG_TAG = 8192,
+	ACTOR_ON_DEATH = 1,
+	ACTOR_PLAYER_ON_COLLIDE = 2,
+	ACTOR_PLAYER_ON_SHOT_BULLET = 4,
+	ACTOR_PLAYER_ON_SHOT_ARROW = 8,
+	ACTOR_PLAYER_ON_SHOT_EXP = 16,
+	ACTOR_ACTOR_ON_COLLIDE = 32,
+	ACTOR_ACTOR_ON_SHOT_BULLET = 64,
+	ACTOR_ACTOR_ON_SHOT_ARROW = 128,
+	ACTOR_ACTOR_ON_SHOT_EXP = 256,
+	ACTOR_DOOR_OPEN = 16384,
+	ACTOR_DOOR_CLOSE = 32768,
+	ACTOR_PLATFORM_TRIGGER = 65536,
+	ACTOR_PLATFORM_RETURN = 131072,
+	ACTOR_DESTRUCTIBLE_TRIGGER = 262144,
+	ACTOR_ACTION_TRIGGER = 524288,
+	ACTOR_DESTRUCTIBLE_IDLE = 1048576,
+	ACTOR_ACTION_IDLE = 2097152,
+	ACTOR_PLAYER_NEEDS_TO_BE_IT_FRAG_TAG = 4194304,
+	ACTOR_DAMAGED = 8388608,
+	ACTOR_UNKNOWN1 = 16777216,
+	ACTOR_SEES_TARGET = 33554432,
+	REGION_MASK = -2147483648,
+	REGION_PLAYER_MASK = 1087,
+	REGION_ACTOR_MASK = 960,
+	SHOT_PLAYER_MASK = 28,
+	SHOT_ACTOR_MASK = 448,
+	ON_MASK = 868352,
+	OFF_MASK = 3309568,
+	INSTANCE_BITS = 62898687
+}
+
+enum turokResourceEventLinkFlags_e
+{
+	NONE = 0,
+	REPEAT = 1,
+	DELAY = 2,
+	TRIGGER_BY_TAG = 4,
+	TRIGGERED = 16,
+	PRE_TRIGGERED = 32,
+	ABOUT_TO_TRIGGER = 64,
+	GROUP_PART_CAN_BE_TRIGGERED = 128
+}
+
+enum turokResourceObjectFlags_e
+{
+	NONE = 0,
+	DEVICE = 1,
+	AUTO_DEVICE = 2,
+	TRANSPARENCY = 4,
+	USE_STATIC_LIGHTING = 8,
+	RUNTIME_LIT = 16,
+	NO_FRUSTUM_CULL = 32,
+	VERTICAL_ROOT_MOTION = 64,
+	NO_DRAW = 128
+}
+
+enum turokPathPointFlags_e
+{
+	NONE = 0,
+	STOP = 1,
+	INCREMENTAL = 2,
+	ROTATE_X = 4,
+	ROTATE_Z = 8,
+	ROTATE_Y = 16,
+	LINEAR_X = 32,
+	LINEAR_Z = 64,
+	LINEAR_Y = 128,
+	INTERPOLATE_TO_POS = 256,
+	ENEMY_USE_DISTANCE = 512
+}
+
+enum turokPathType_e
+{
+	PATH_TYPE_PING_PONG = 0,
+	PATH_TYPE_LOOPING = 1
+}
+
+

@@ -1,0 +1,174 @@
+-----------------------
+|Model Texture Details|
+-----------------------
+Must be in .dds format and place in the "HiResTextures" folder and
+you must also have a matching named low res .tga texture in the "textures" folder in order for it to work in game.
+
+-----------------------------
+|New Game Sequence of Events|
+-----------------------------
+After starting a new game and selecting your difficulty Cinema 140 will play ("Cinemas/Dream Cinema.json").
+Then the Character select screen is displayed.
+Which characters are shown can be changed through defs/SPCharacters.txt unlock_state property. (0=Normal, 1=Always Show, 2=Never Show)
+After the character is selected that characters select_cinema will play then the player is warped to map 0.
+
+--------------------
+|defs/actorInfo.txt|
+--------------------
+scriptClass: The name of the script class this actor should use
+intelligenceID: The loose intelligence ID value defined in intelligence/generators as "Id". This is only used when SpawnActorWithTypeID is called and the intelligence passed in is null.
+model: The model file to use when SpawnActorWithTypeID is called
+override_scale: Overrides actors scale
+faction: Sets this actors faction. Can be overridden by the intelligence "OverrideFaction" value.
+override_collide_radius: Overrides the collision radius
+override_collide_height: Overrides the collision height
+override_collide_offset: Overrides the collision height offset
+override_turn_delta: Overrides Turn Delta Speed
+bAllowTargetEnemies: If this actor is an Enemy AI then it will be able to target other enemies that use a different model and are in a different faction.
+bTargetIgnored: If this actor is an Enemy AI no other enemies will be able to target this actor.
+bCanEnterWater: Can enter water
+bCanExitWater: Can exit water
+bAllowAutoAim: Does nothing except enables the turokCommonIntelligenceFlags_e::UNKNOWN2000 flag.
+
+-------------------------------
+|intelligence/generators files|
+-------------------------------
+"Id": Intelligence lookup Id value
+"Type": The type of intelligence.
+    0  = Static
+    1  = Enemy
+    2  = Platform
+    3  = Generator
+    4  = Turret
+    5  = Throwable
+    6  = Door
+    7  = Destructible
+    8  = Pickup
+    9  = Interactive Anim
+    10 = Action
+    11 = Player
+    12 = Morpher
+    13 = Warp Entrance
+    14 = Weather Generator
+    15 = Camera Placement
+    16 = Empty
+"ModelGroup1": Model Group index to use
+"Texture": The alt texture index to use
+"Tag": Tag value
+"OverrideFaction": Overrides faction
+"Flags": turokCommonIntelligenceFlags_e
+    ALIASING_REDUCED    = BIT(0),   // Not used
+    ALIASING_FULL       = BIT(1),   // Not used
+    TRACK_GROUND        = BIT(2),   // If actors are walking on a slope they will rotate according to the slope
+    EASY_DIFFICULTY     = BIT(3),
+    MEDIUM_DIFFICULTY   = BIT(4),
+    HARD_DIFFICULTY     = BIT(5),
+    USE_STATIC_LIGHTING = BIT(6),   // The mesh will use vertex lighting
+    CAN_BE_LANDED_ON    = BIT(7),   // Not used
+    ENABLED             = BIT(8),   // Draws, and enables collision. Flag is toggle-able via triggers
+    ENABLED_CINEMA      = BIT(9),   // Same as Enabled except while a Cinema is playing
+    NO_TARGETING        = BIT(10),  // Enemies won't target the player and won't be alerted. Also the player won't be able to target the enemy.
+    UNKNOWN800          = BIT(11),  // Not used
+    BLOCKER             = BIT(12),  // Never draws. Collision still considered
+    UNKNOWN2000         = BIT(13),  // Not used
+    UNKNOWN4000         = BIT(14),  // Not used
+    UNKNOWN8000         = BIT(15),  // Not used
+    UNKNOWN10000        = BIT(16),  // Not used
+    UNKNOWN20000        = BIT(17),  // Not used
+    UNKNOWN40000        = BIT(18),  // Not used
+    UNKNOWN80000        = BIT(19),  // Not used
+    UNKNOWN100000       = BIT(20),  // Not used
+    NO_DAMAGE           = BIT(21),
+    FLAG_NODES_ON_PATHS = BIT(22),  // For Enemy AI only. If the enemy has a path set in it's properties and it's not walking then If the path was going forward, or there wasn't a direction installed, go forward, otherwise continue in reverse mode.
+    DRAW_IF_DANI        = BIT(23),
+    DRAW_IF_JOSEPH      = BIT(24),
+    BLOCK_AI            = BIT(25),  // Only AI collides with this
+    UNKNOWN4000000      = BIT(26),  // Not used
+    UNKNOWN8000000      = BIT(27),  // Not used
+    DRAW_IF_JOSHUA      = BIT(28),
+    DRAW_IF_RAPTOR      = BIT(29),
+    OBLIVION_DIFFICULTY = BIT(30)
+"LODDist2": Not used
+"Model": Not used
+"Model2": Not used
+"ModelGroup2": Not used
+"ModelGroup3": Not used
+"ModelGroup4": Not used
+
+
+---------------------
+SoundFX (.ksnd)
+---------------------
+"Volume" values range from 0 to -91. (0 = Full Volume)
+0   = 1.0
+-1  = 0.9456653709630987,
+-2  = 0.8937186350319225,
+-3  = 0.8440802057613169,
+-4  = 0.7966722850513982,
+-5  = 0.7514188428254499,
+-6  = 0.708245596707819,
+-7  = 0.6670799917018072,
+-8  = 0.6278511798675676,
+-9  = 0.5904900000000001,
+-10 = 0.5549289573066435,
+-11 = 0.521102203085573,
+-12 = 0.48894551440329226,
+-13 = 0.4583962737726294,
+-14 = 0.4293934488306322,
+-15 = 0.401877572016461,
+-16 = 0.3757907202492844,
+-17 = 0.3510764946061745,
+-18 = 0.3276800000000001,
+-19 = 0.30554782485732185,
+-20 = 0.28462802079628785,
+-21 = 0.26487008230452685,
+-22 = 0.24622492641704344,
+-23 = 0.2286448723941134,
+-24 = 0.21208362139917689,
+-25 = 0.19649623617673456,
+-26 = 0.18183912073024103,
+-27 = 0.16806999999999994,
+-28 = 0.15514789954105912,
+-29 = 0.1430331252011042,
+-30 = 0.13168724279835387,
+-31 = 0.1210730577994547,
+-32 = 0.1111545949973751,
+-33 = 0.10189707818930038,
+...
+-91 = 0.0
+
+"RadioVolume"
+0 = Scales volume by 0.5, and sets max sound distance to GAME_SCALE(150.0f)
+1 = Scales volume by 0.75, and sets max sound distance to GAME_SCALE(150.0f)
+2 = Scales volume by 1.0, and sets max sound distance to GAME_SCALE(300.0f)
+Other Values = Scales volume by 1.0, and sets max sound distance to GAME_SCALE(150.0f)
+
+"DistanceType" Overrides max sound distance.
+1 = GAME_SCALE(400.0f)
+2 = GAME_SCALE(1200.0f)
+3 = GAME_SCALE(800.0f)
+4 = GAME_SCALE(20000.0f)
+
+"Pitch" Values range from -6000 to 1200. (-1200 = Normal Pitch)
+1200  = 4.0
+1000  = 3.5599997
+700   = 3.0
+400   = 2.5266664
+0     = 2.0
+-500  = 1.4986665
+-1200 = 1.0
+-2400 = 0.5
+-3600 = 0.25
+-4800 = 0.125
+-6000 = 0.0
+
+"PitchRandMin" and "PitchRandMax" 
+Amount (in cents, same as pitch values detailed above) by which to randomize pitch when sound starts.
+PitchRandMin is the lower bounds for the pitch randomization,  and
+PitchRandMax is the upper bounds within which the pitch will be randomized.
+Both of these values are RELATIVE to the original pitch of the sound.
+
+"VolumeRandMin" and "VolumeRandMax"
+The percentage amount by which to randomize the volume when the sound starts. values range from 0 to 100.
+
+"FXMix": Not used.
