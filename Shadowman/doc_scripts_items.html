@@ -634,7 +634,7 @@ GENERIC_EXPLODE_OBJECT        - When shot will explode into polygons.
 GENERIC_GIB_OBJECT            - When shot will remove the object and spawn gibs
 GENERIC_DOOR                  - A door that can move up and down
 GENERIC_SWING_DOOR            - A door that swings forward or backward depending on the side that Shadow Man touches
-GENERIC_PUSH_BLOCK            - A block that Shadow Man can push
+GENERIC_PUSH_BLOCK            - A block that Shadow Man can push (moves by 254 units)
 GENERIC_LAVA_BLOCK            - A block that Shadow Man can push if he has the touch gad
 GAD3_PUSH_BLOCK               - A block that Shadow Man can push which will fall to the ground afterwards
 GENERIC_SPIN_OBJECT           - Constantly rotates this object using the x y z values you defined with $offsets
@@ -645,7 +645,8 @@ GENERIC_BOB_OBJECT            - An object that bobs up and down constantly. Use 
 GENERIC_MOVE_OBJECT           - Moves the object in a certain direction when triggered. Use the actors vars in editor.
 ANOMALY_OBJECT                - Same as GENERIC_SPIN_OBJECT except will only appear if has a shadow level of 7 or higher.
 GENERIC_PADLOCK               - A padlock you should place near a GENERIC_PADLOCK_DOOR object that will get opened when it&#x27;s shot.
-GENERIC_PADLOCK_DOOR          - Will open when a nearby GENERIC_PADLOCK is shot.</code></pre><pre id="c9258a9d-d9fe-41a5-95b9-0249ea1d607c" class="code"><code>$meshpath
+GENERIC_PADLOCK_DOOR          - Will open when a nearby GENERIC_PADLOCK is shot.
+GENERIC_WATER_PLANE           - Water Plane. Moves vertices up and down. (Better to use the flag IF_WATER instead)</code></pre><pre id="c9258a9d-d9fe-41a5-95b9-0249ea1d607c" class="code"><code>$meshpath
     The local path to the .msh file. Case sensitive and always use back slashs.
     If the path begins with data\ then it is ignored.
     Example: $meshpath = levels\florida\objects\swamptree\swamp_bushes.msh</code></pre><pre id="e88ced53-4dd2-42c7-8a7e-10b1ef4b422b" class="code"><code>$tgapath
@@ -658,7 +659,7 @@ GENERIC_PADLOCK_DOOR          - Will open when a nearby GENERIC_PADLOCK is shot.
 
 IF_COL_SHAD_OBJ        - Enables collision
 IF_LIGHT_ALL           - Lights will affect the object
-IF_LIGHT_SUN           - Sunlight will affect the object
+IF_LIGHT_SUN           - Does nothing (Suppose to - Sunlight will affect the object)
 IF_NO_CAMERA_COL       - Disable camera collision
 IF_HANG_OBJ            - Enables Shadow Man to hang from the faces of the mesh that have the Finger Grip flag set
 IF_STATIC_OBJ          - Does nothing
@@ -669,7 +670,8 @@ IF_SAVE_ROT            - Does nothing
 IF_SAVE_EXT            - Does nothing
 IF_NOPVS               - Will not check PVS tables when checking to draw this object
 IF_NO_SHADOW           - Will not draw shadows for this object
-IF_NO_TARGET           - Shadow Man won&#x27;t auto target this object. Use this for objects you define a $type for that can&#x27;t be shot.</code></pre><pre id="a1a7d907-36a6-436f-8be3-c3efe38beabf" class="code"><code>$sndtype
+IF_NO_TARGET           - Shadow Man won&#x27;t auto target this object. Use this for objects you define a $type for that can&#x27;t be shot.
+IF_WATER               - Water Plane. Moves vertices up and down.</code></pre><pre id="a1a7d907-36a6-436f-8be3-c3efe38beabf" class="code"><code>$sndtype
     The type of sound that will be heard when Shadow Man walks on top of this object.
     Note: Lava will cause the object to be fire killing the player without the walk gad.
     Example: $sndtype = STONE
