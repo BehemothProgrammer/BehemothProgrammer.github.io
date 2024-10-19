@@ -1,12 +1,12 @@
 # (C) 2024 Eric Serio
 #
-# Version     : 1.0.0 (10/15/2024)
+# Version     : 1.0.1 (10/19/2024)
 # Description : Converts/Copies all textures from the "textures_src" folder to the "textures" and "HiResTextures" folders.
 # Requirements: ImageMagick - https://imagemagick.org/archive/binaries/ImageMagick-7.1.1-38-Q16-HDRI-x64-dll.exe
 # License     : GNU General Public License v3.0. See <https://www.gnu.org/licenses/gpl-3.0.html> for details.
 #               This program is provided without warranty.
 
-import sys, os, time, json, hashlib, traceback, shutil, subprocess, asyncio, multiprocessing, argparse
+import sys, os, time, ctypes, json, hashlib, traceback, shutil, subprocess, asyncio, multiprocessing, argparse
 from pathlib import Path
 from typing import Any, Union, List, Tuple
 
@@ -19,16 +19,20 @@ TEXLOW_PATH: Path   = PATH_ROOT / "textures"
 TEXHI_PATH: Path    = PATH_ROOT / "HiResTextures"
 MANIFEST_FILE: Path = PATH_CURRENT / "convert_textures_manifest.json"
 MAGICK_EXE: str = "magick"
+
+#"-compress", "None"  # for no compression (for tga and dds)
+#"-compress", "RLE"   # for tga compression
+#"dds:mipmaps=0"      # for no mipmaps (only textures with sizes that are power of 2 have mipmaps)
 EXT_INFOS: dict = {
     ".tga":
     {
         "dir": TEXLOW_PATH,
-        "args": ["-define", "tga:compression=none"]
+        "args": ["+compress", "-background", "none", "-layers", "merge", "-alpha", "off-if-opaque"]
     },
     ".dds":
     {
         "dir": TEXHI_PATH,
-        "args": ["-define", "dds:mipmaps=5"]
+        "args": ["-define", "dds:mipmaps=5", "-background", "none", "-alpha", "background"]
     }
 }
 
@@ -111,7 +115,6 @@ def remove_dir(path: Path) -> bool:
         shutil.rmtree(path)
     except FileNotFoundError:
         print_exception_verbose(VERBOSITY_VERBOSE)
-        return False
     except:
         g_msg_wait = True
         print_exception_verbose(VERBOSITY_NORMAL)
@@ -194,12 +197,23 @@ async def process_textures(textures: List) -> bool:
     return all(results)
 
 
+def file_is_hidden(filepath: Path):
+    if filepath.name.startswith('.'): return True
+    if os.name == "nt":
+        attrs = ctypes.windll.kernel32.GetFileAttributesW(str(filepath))
+        return attrs != -1 and attrs & 0x2  # 0x2 is FILE_ATTRIBUTE_HIDDEN
+    return False
+
+    
+def file_is_valid(filepath: Path) -> bool:
+    return filepath.is_file() and not file_is_hidden(filepath)
+
+
 def finish_exit(code: int = 0):
     # Give the user time to see messages
     if g_verbosity > VERBOSITY_QUIET:
         if g_msg_wait or code > 0:
-            print("...")
-            time.sleep(3)
+            input(f"Press Enter to Continue")
     sys.exit(code)
 
 
@@ -221,9 +235,11 @@ if __name__ == "__main__":
     
     # If cleaning then delete the "textures" and "HiResTextures" folders
     if clean_textures:
+        if not remove_dir(TEXLOW_PATH):
+            finish_exit(1)
+        if not remove_dir(TEXHI_PATH):
+            finish_exit(1)
         save_manifest = True
-        remove_dir(TEXLOW_PATH)
-        remove_dir(TEXHI_PATH)
 
     # Source textures folder must exist
     if not TEXSRC_PATH.is_dir():
@@ -239,7 +255,7 @@ if __name__ == "__main__":
             "ext": file.suffix.lower(),
             "process": False
         }
-        for file in TEXSRC_PATH.rglob('*') if file.is_file()
+        for file in TEXSRC_PATH.rglob('*') if file_is_valid(file)
     ]
 
     # Do not continue if there are no textures to convert/copy
@@ -265,8 +281,12 @@ if __name__ == "__main__":
     TEXLOW_PATH.mkdir(parents=True, exist_ok=True)
     TEXHI_PATH.mkdir(parents=True, exist_ok=True)
     for tex_info in textures:
-        for ext_info in EXT_INFOS.values():
-            (ext_info["dir"] / tex_info["rel_path"]).parent.mkdir(parents=True, exist_ok=True)
+        for target_ext, ext_info in EXT_INFOS.items():
+            ext_out_path: Path = ext_info["dir"] / tex_info["rel_path"]
+            ext_out_path.parent.mkdir(parents=True, exist_ok=True)
+            if not tex_info["process"]:
+                if not ext_out_path.with_suffix(target_ext).is_file():
+                    tex_info["process"] = True
 
     # Hash the source textures
     last_manifest: dict = json_load(MANIFEST_FILE) if not force_convert else {}
