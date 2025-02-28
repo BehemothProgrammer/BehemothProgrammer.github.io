@@ -1,0 +1,95 @@
+/** \page "Actor Def Properties"
+ 
+<H3>Actors Defs Properties:</H3>
+\verbatim
+ai.maxRegenerations		- only available in sobek.exe (not in editor.exe and will not set when placing actor in editor :( )
+deadHeight				- only available in editor.exe - sets actor StepHeight (not in sobek.exe So this will only take effect when placing actors on the map in the editor)
+ai.sightRange			- only available in editor.exe (not in sobek.exe So this will only take effect when placing actors on the map)
+defaultEditorModel		- editor.exe only
+defaultEditorAnim		- editor.exe only
+ 
+classname					"kexActor"
+scriptClass                 "TurokGrunt"
+headTrackDefinition         "HeadTrack_Human"
+footStepSound               "FootStep_Common"
+ai.meleeRange
+ai.attackRange
+ai.leashRadius
+ai.sightFOV
+ai.spanWidth
+ai.loudRange			 - is used for when the player runs
+ai.quietRange			 - is only used for when the player walks
+ai.desiredYawSpeed
+ai.drawDistanceFactor
+ai.attackChance
+ai.altstance
+ai.noKnockBack
+ai.teleport
+ai.teleportMove
+ai.noSharpTurning
+ai.chaseInWater
+ai.discoDances
+clipFlag.edges
+clipFlag.ignoreBlockers
+clipFlag.dropOff
+clipFlag.noEnterWater
+clipFlag.noExitWater
+clipFlag.noClipStatics
+clipFlag.noClipActors
+clipFlag.walkWalls
+clipFlag.collideFloors
+clipFlag.hitScan
+clipFlag.allowClimb
+clipFlag.allowCrawl
+clipFlag.noStepDown
+clipFlag.noSlopeStep
+clipFlag.collideHeight
+clipFlag.collideCorpses
+clipFlag.noExitWalls
+clipFlag.noCollideFunction
+clipFlag.noFloorAdjust
+clipFlag.noCeilingAdjust
+clipFlag.collideWater
+clipFlag.useWallRadius
+clipFlag.collideTriggers
+clipFlag.standOnObjects
+clipFlag.greaseSlideObjects
+clipFlag.allowRestrictedAreas
+flags.castShadow
+flags.avoidWater
+flags.stayInWater
+flags.removeOnCompletion
+flags.noBlood
+flags.seeTargetInWater
+flags.alignToFloor
+flags.hidden
+flags.noDraw
+flags.fullVolume
+flags.canBeTouched
+flags.alwaysActive
+flags.allowTinyEnemyCheat
+flags.noMovement
+radius
+height
+stepHeight
+wallRadius
+mass
+friction
+airFriction
+waterFriction
+gravity
+bounceDamp
+animSpeed
+sleepRange 				- The range when the actor will go to sleep/awake
+health
+impactType
+modelVariation
+initialModel
+initialAnim
+initialScale
+knife.damage     "15 15 15"     // Vector
+knife.backdamage 30             // int
+knife.blood      1              // int. 0=none, 1=red, 2=green, 3=spark
+\endverbatim
+
+*/

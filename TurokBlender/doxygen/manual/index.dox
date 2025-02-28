@@ -1,0 +1,309 @@
+/** \mainpage Turok Manual
+\ref t1_scriptAPI.cpp "View ScriptAPI Page"<BR>
+<a href="../t1_scriptAPI.cpp">Download t1_scriptAPI.cpp</a><BR>
+<a href="../Angelscript_IDE_Setup.pdf">How to setup Angelscript IDE Codelite</a><BR>
+
+\section exeorder <H3>Scripts Execution Order</H3>
+\verbatim
+.ctor				<-- (actor properties from def are assigned here and Origin, Yaw and SectorIndex are set here)
+---
+OnSpawn
+OnBeginLevel		<--- (ALL actor properties from map are not setup until this point)
+OnRestore
+*Map Script 0		<--- (Called on PlayLoop tick 0)
+OnPostBeginLevel
+	(*Note: Any spawned actor created after each of these events will not be called for that spawned actor.
+			If spawned before/during then it will/might be called.)
+---
+OnSleep
+OnWake
+OnTouch             <--- called even if alseep
+OnCollide           <--- called even if alseep
+OnTick				<--- called only when awake
+---
+OnActivate			<--- called immediately after World.TriggerActorsByTID and when player enters event sector area only if AF_ACTIVATED is Off
+---
+OnPreDamage         <--- always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.
+OnDeath				<--- called only when actor dies (health > 0 and health - dmg <= 0). The actors Target TID is automatically used to trigger actors at this point.
+OnDamage			<--- always called when damaged even after death. Health is reduced after this by dmg only if health was greater than 0
+---
+OnEndLevel			<--- Do not call any map scripts at this point
+\endverbatim
+
+\section sofuncs <H3>ScriptObject Functions</H3>
+\code{.cpp}
+ScriptObject
+void OnSpawn() - Required for all ScriptObject
+void OnBeginLevel()
+void OnRestore()
+void OnPostBeginLevel()
+void OnSleep()
+void OnWake()
+void OnTouch(kActor @theActorThatTouchedMe) //called even if alseep
+void OnCollide(kCModel@) //called even if alseep
+void OnTick() - Required for all ScriptObject
+void OnActivate()
+void OnDeactivate() //Never used
+void OnDeath(kActor @killer, kDictMem @damageDef) //called only when actor dies
+void OnDamage(kActor @instigator, kDictMem @damageDef, const int damage) //always called even after death
+void OnEndLevel()
+
+ScriptObjectWeapon
+void OnBeginFire()
+void OnFire()
+void OnEndFire()
+void OnLower()
+void OnRaise()
+void OnHoldster()
+
+ScriptObjectPlayer
+void OnPickup(kActor @pickup)
+void OnArmorDamage(kActor @instigator, kDictMem @damageDef, const int damage)
+void OnEnterWater()
+\endcode
+
+\section grunttypes <H3>GruntVariants</H3>
+\code{.cpp}
+GV_GENERIC = 0,
+GV_GENERIC_AXE = 1,
+GV_GENERIC_CLUB = 2,
+GV_COMMANDER_SPEAR = 3,
+GV_COMMANDER_RIFLE1 = 4,
+GV_COMMANDER_RIFLE2 = 5,
+GV_COMMANDER_RIFLE3 = 6,
+GV_GENERIC_RIFLE = 7,
+GV_COMMANDER_RIFLE4 = 8,
+GV_POACHER_KNIFE = 9,
+GV_POACHER_PISTOL1 = 10,
+GV_POACHER_PISTOL2 = 11,
+GV_POACHER_RIFLE = 12,
+GV_POACHER_SHOTGUN = 13,
+GV_WARRIOR_BONE = 14,
+GV_WARRIOR_DART = 15,
+GV_WARRIOR_SPEAR = 16,
+GV_SHAMAN = 17,
+GV_CYBORG_PULSE_RIFLE = 18,
+GV_CYBORG_KNIFE = 19,
+GV_CYBORG_SPEAR = 20,
+GV_DEMON_AXE = 21,
+GV_DEMON_SPEAR = 22,
+GV_DEMON_HANDS = 23,
+GV_DEMON_LORD = 24,
+GV_GENERIC_HANGING = 25,
+\endcode
+
+\section music <H3>Music Details</H3>
+\code{.cpp}
+$0 = "music/track01.ogg" //jungle
+$1 = "music/track07.ogg" //Catacombs
+$2 = "music/track08.ogg" //Caves
+$3 = "music/track04.ogg" //Boss Battle
+$4 = "music/track13.ogg" //final confrontation
+$5 = "music/track14.ogg" //Campaigner
+$6 = "music/track02.ogg" //the Hub
+$7 = "music/track09.ogg" //tree top village
+$8 = "music/track11.ogg" //the lost land
+$9 = "music/track12.ogg" //cyborg T-Rex
+$11 = "music/track10.ogg" //Lost Land Caves
+$13 = "music/track03.ogg" //ancient city
+$14 = "music/track05.ogg" //The Ruins
+$100 = "music/track06.ogg"  // underwater theme
+\endcode
+
+\section areaargs <H3>Area Args</H3>
+\verbatim
+Hardcoded:
+0: AAF_TELEPORT: WarpID
+1: AAF_TELEPORT: WarpLevelID,  AAF_EVENT and AAF_EVENTSOUND: soundID to play when player enters sector
+2: AAF_CHECKPOINT or AAF_SAVEGAME: CheckpointID
+3: AAF_EVENT: tag ID
+4: Not used
+5: AAF_SECRET: the secret index value (set automatically when level loads starting at 0. Conflicts with Default Scripts AAF_DAMAGE (so I guess no secrets should be placed on damaga sectors))
+
+Default Scripts:
+0: Not used
+1: Not used
+2: Not used
+3: Not used
+4: AAF_DAMAGE: amount of damage to do to the player when they're on the ground
+5: Always used as floor damage delay no matter the AAF flags. Should be used with AAF_DAMAGE only. 1 second = 1024            
+\endverbatim
+
+\section enemyattackflags <H3>Enemy Attack Flags</H3>
+\verbatim
+--Grunts--
+Alt Stance is for holding two handed weapons
+Has Strong(anim_aiMelee1) and Weak(anim_aiAltMelee1) Melee Attacks
+Projectile Attack 1 = Shaman Wand Throw Fast Fireball   (anim_aiRangeAttack1)
+Projectile Attack 2 = Pistol Fire                       (anim_aiRangeAttack2)
+Projectile Attack 3 = crouch rifle Fire                 (anim_aiRangeAttack7)
+Projectile Attack 4 = Nothing                           (anim_aiRangeAttack8)
+Projectile Attack 5 = Stand Rifle Fire                  (anim_aiRangeAttack5)
+Projectile Attack 6 = Pipe Blow                         (anim_aiRangeAttack6)
+Projectile Attack 7 = Grenade Throw                     (anim_aiRangeAttack3)
+Projectile Attack 8 = High Priest Homing Blue Flame     (anim_aiRangeAttack4)
+Projectile Attack 9 = chest hadoken                     (anim_aiRangeAttack9)
+Projectile Attack 10 = Shaman Lightning Hands in Air    (anim_aiRangeAttack10)
+
+--Raptor--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Plasma Shot (anim_aiRangeAttack1)
+
+--Purlin--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Fire Wrist Gun    (anim_aiRangeAttack1)
+Projectile Attack 2 = Jump Smash        (anim_aiRangeAttack2)
+Projectile Attack 7 = Ground Wave Smash (anim_aiRangeAttack3)
+
+--Stalker/Leaper--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Leap forward  (anim_aiRangeAttack1)
+
+--Alien--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Fire Right Hand  (anim_aiRangeAttack1)
+Projectile Attack 2 = Fire Left Hand   (anim_aiRangeAttack2)
+
+--Beetle--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Leap forward  (anim_aiRangeAttack1)
+
+--Crab--
+No Alt Stance
+Has Strong and Weak Melee Attacks
+
+--Dinosaur--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Shoot Guns    (anim_aiRangeAttack1)
+
+--Dragon Fly / Insect Flying--
+No Alt Stance
+Has No Melee Attacks
+The Standing and Running Animations do damage attacks
+
+--Killer Plant--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Shoot (anim_aiRangeAttack1)
+
+--Mech--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Missle        (anim_aiRangeAttack1)
+Projectile Attack 2 = Machine Gun   (anim_aiRangeAttack2)
+
+--Rider--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Missle Fire   (anim_aiRangeAttack1)
+Projectile Attack 7 = Rifle Fire    (anim_aiRangeAttack3)
+
+--Sandworm--
+No Alt Stance
+Has Only Strong Melee Attacks
+Projectile Attack 1 = Acid Spit (anim_aiRangeAttack1)
+
+--Turret--
+No Alt Stance
+Has No Melee Attacks
+Projectile Attack 1 = Fire (anim_aiRangeAttack1)
+\endverbatim
+
+\section actorfx <H3>ActorFx Commands</H3>
+\verbatim
+Note: Time increases by GAME_FRAME_TIME (0.25f) every tick and is effected by the current GameSpeed.
+
+$idle                                           // Does nothing and processes the next command
+$wait (time)                                    // float time
+$random_wait (minTime, maxTime)                 // float minTime, maxTime.
+$trans (alpha)                                  // float alpha 0..255. Sets object alpha (if material supports alpha)
+$fade_trans (alpha, time)                       // float alpha 0..255. float time. Lerps from current trans to new trans value.
+$color ({r g b}, brightness)                    // int rgb 0..255, float brightness 0..255 (rgb * brightness)
+$fade_color ({r g b}, brightness, time)         // int rgb 0..255, float brightness 0..255 (rgb * brightness), float time. Lerps from current rgb/brightness to new rgb/brightness values.
+$scale ({x, y, z}, scaleTime)                   // float x, y, z. float scaleTime is unused, just always set to 255.0. Sets actors to scale.
+$fade_scale ({x, y, z}, scaleTime, time)        // float x, y, z. float scaleTime is unused, just always set to 255.0. float time. Lerps from current scale to new scale.
+$play_sound (ID)                                // Play a sound by ID
+$repeat                                         // Starts back at processing the first command again.
+$action (ID, {x y z w})                         // Calls a script animation function by ID with x,y,z,w values passed into the function.
+\endverbatim
+
+\section species <H3>Species Mask (Unused)</H3>
+\code{.cpp}
+#define AI_SPECIES_RAPTOR			(1<<0)		// raptor dinosaur
+#define AI_SPECIES_HUMAN1			(1<<1)		// human being type 1
+#define AI_SPECIES_SABERTIGER		(1<<2)		// saber tooth tiger
+#define AI_SPECIES_DIMETRODON		(1<<3)		// dimetrodon
+#define AI_SPECIES_TRICERATOPS		(1<<4)		// triceratops
+#define AI_SPECIES_MOSCHOPS			(1<<5)		// moschops
+#define AI_SPECIES_PTERANODON		(1<<6)		// pteranodon
+#define AI_SPECIES_SUBTERRANEAN		(1<<7)		// subterranean
+#define AI_SPECIES_LEAPER			(1<<8)		// leaper
+#define AI_SPECIES_ALIEN			(1<<9)		// alien
+#define AI_SPECIES_HULK				(1<<10)		// hulk
+#define AI_SPECIES_ROBOT			(1<<11)		// robot
+#define AI_SPECIES_MANTIS_BOSS		(1<<12)		// mantis boss
+\endcode
+
+\section shootactor <H3>Spawn A Shoot Only Sctor</H3>
+\code{.cpp}
+kVec3 pos = Player.Actor().Origin();
+kActor @m_pDummyActor = ActorFactory.Spawn("DummyActor", pos.x, pos.y, pos.z, Player.Actor().Yaw(), Player.Actor().SectorIndex());
+m_pDummyActor.Flags() |= (AF_DEAD|AF_NOMOVEMENT|AF_NODRAW|AF_DISABLED|AF_ALWAYSACTIVE);
+m_pDummyActor.Flags() &= ~(AF_SOLID|AF_CANBETOUCHED|AF_AVOIDWATER|AF_ALIGNTOFLOOR|AF_CASTSHADOW);
+m_pDummyActor.ImpactType() = IT_FLESH_HUMAN;
+m_pDummyActor.Radius() = 16;
+m_pDummyActor.Height() = 32;
+\endcode
+
+\section difficulty <H3>Difficulty</H3>
+\verbatim
+Easy:
+- Damage enemies receive is scaled by 1.4
+- Damage bosses receive is scaled by 1.1
+- Enemies animation speed is normal.
+  - AnimScalar() = 1.0
+  - BlendScalar() = 10.0
+- Normal enemy reaction times
+- Normal chance to do range attacks
+- Enemies drop items
+
+Normal:
+- Damage enemies receive is scaled by 1.0
+- Damage bosses receive is scaled by 1.0
+- Enemies animation speed is normal.
+  - AnimScalar() = 1.0
+  - BlendScalar() = 10.0
+- Normal enemy reaction times
+- Normal chance to do range attacks
+- Enemies drop items
+
+Hard:
+- Damage enemies receive is scaled by 0.7
+- Damage bosses receive is scaled by 0.9
+- Enemies animation speed is fast.
+  - AnimScalar() = 0.85
+  - BlendScalar() = 6.0
+- Fast enemy reaction times
+- High chance to do range attacks
+- Enemies do NOT drop items
+
+Hardcore:
+- Damage enemies receive is scaled by 0.7
+- Damage bosses receive is scaled by 0.9
+- Enemies animation speed is very fast.
+  - AnimScalar() = 0.6
+  - BlendScalar() = 4.0
+- Very fast enemy reaction times
+- Very High chance to do range attacks
+- Enemies do NOT drop items
+- Enemies turn twice as fast
+
+\endverbatim
+
+*/
