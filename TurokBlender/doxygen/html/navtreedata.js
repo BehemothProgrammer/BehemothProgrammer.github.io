@@ -26,9 +26,9 @@ var NAVTREE =
 [
   [ "Turok", "index.html", [
     [ "Turok Manual", "index.html", "index" ],
-    [ "Actor Def Properties", "_actor_01_def_01_properties.html", null ],
-    [ "v3 Changes", "v3_01_changes.html", null ],
-    [ "Map Format", "_map_01_format.html", null ],
+    [ "Actor Def Properties", "a00148.html", null ],
+    [ "v3 Changes", "a00149.html", null ],
+    [ "Map Format", "a00150.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -64,12 +64,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_actor_01_def_01_properties.html",
-"classk_camera.html#ad0e2fff7906e71b7353317715ecea45e",
-"classk_player.html#a5bcb1243ee40ced3c40f5f04e0906251",
-"classk_world.html#a46796d92aa0b83b41d875719b9a2447f",
-"t1__script_a_p_i_8cpp.html#a04027a70cb906a4569af4fac41b3136eaeb08a2baf6eff3eb38d8e9d333d001aa",
-"t1__script_a_p_i_8cpp.html#a9662bed8b3938d6cc49499ba300a41eba8de52697b3ecb2b3a1a01880abb760fd"
+"a00002.html",
+"a00002.html#a92de7593743d6093b7d047ba407f5c81acc1d6eaa9ff5b74653799c15c5a76241",
+"a00027.html#a0693f106615d30cb1ef3c3b1d9f44f2d",
+"a00091.html#a5713ec0e338e73247af9203e873de02a",
+"a00123.html#ad0e2fff7906e71b7353317715ecea45e",
+"a00147.html#acd9fcec891eddc985bf36853aac69843"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
