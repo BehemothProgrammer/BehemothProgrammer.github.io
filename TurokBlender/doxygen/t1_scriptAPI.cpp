@@ -1717,6 +1717,10 @@ public:
 	void OverridePerPolyCollision(const int value); ///< 0=none, 1=force disable, 2=force enable
 	void DisableLegalText(); ///< Removes the text at the bottom of the title screen
 	void OverrideFogType(const int value); ///< 0=none, 1=force Radial, 2=force Plane
+    void ClearInterpolationOnGameObjects(); ///< Clears Interpolation on all gameobjects and the camera if it's active
+    void ShowDummyMenu(void); ///< Actors OnMenuTick fucntion will now be processed. Call ClearDummyMenu to close the dummy menu.
+    void ClearDummyMenu(bool bClearAll = false);
+    void ToggleCursor(bool b = false);
 };
 
 class kPlayer

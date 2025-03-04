@@ -21,6 +21,8 @@ OnTouch             <--- called even if alseep
 OnCollide           <--- called even if alseep
 OnTick				<--- called only when awake
 ---
+OnMenuTick          <--- called only when dummymenu active
+---
 OnActivate			<--- called immediately after World.TriggerActorsByTID and when player enters event sector area only if AF_ACTIVATED is Off
 ---
 OnPreDamage         <--- always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.
@@ -42,8 +44,10 @@ void OnWake()
 void OnTouch(kActor @theActorThatTouchedMe) //called even if alseep
 void OnCollide(kCModel@) //called even if alseep
 void OnTick() - Required for all ScriptObject
+void OnMenuTick() - called only when dummymenu active
 void OnActivate()
 void OnDeactivate() //Never used
+void OnPreDamage(kActor @instigator, kDictMem @damageDef, const int damage) //always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.
 void OnDeath(kActor @killer, kDictMem @damageDef) //called only when actor dies
 void OnDamage(kActor @instigator, kDictMem @damageDef, const int damage) //always called even after death
 void OnEndLevel()
