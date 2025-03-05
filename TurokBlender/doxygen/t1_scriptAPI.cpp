@@ -581,7 +581,7 @@ public:
 	bool Contains(const kStr&in) const; ///< contains the string
 	bool ContainsNoCase(const kStr&in) const; ///< contains the string ignoring case
 	bool IsEmpty() const; ///< length of string is 0
-	uint64 IndexOf(const kStr&in) const; ///< Reports the zero-based index of the first occurrence of a specified string within this instance. The method returns -1 if the string is not found in this instance.
+	uint64 IndexOf(const kStr&in) const; ///< Reports the zero-based index of the first occurrence of a specified string within this instance. The method returns uint64(-1) if the string is not found in this instance.
 	uint64 Length() const; ///< Returns the length of the string
 	int8 opIndex(const int64 i); ///< Returns The ASCII code of the character at the strings index
 	bool opEquals(const kStr&in s) const;
@@ -1726,7 +1726,7 @@ public:
 class kPlayer
 {
 public:
-	const uint16 Buttons() const;
+	const uint16 Buttons() const; ///< returns EnumPlayerButtons
 	uint ButtonHeldTime(const int btn); ///< btn type is EnumInputActions
 	kPuppet@ Actor();
 	void ConsumeAmmo(const int ammo, const bool preferredAmmo = true);
