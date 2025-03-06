@@ -1299,6 +1299,7 @@ public:
 	const int SectorIndex();
 	const int AreaID() const;
 	void ClearInterpolation();
+    const uint Flags() const; ///< EnumCameraFlags
 	kVec3 origin; ///< current position of camera. if a finalview is set then the origin will be set to the finalview's eye position.
 	kAngle yaw; ///< if a finalview is set then the yaw will be set to the finalview's look direction.
 	kAngle pitch; ///< if a finalview is set then the pitch will be set to the finalview's look direction.
@@ -1599,7 +1600,8 @@ public:
 	void StopSounds();
     
     /**
-     * @brief add custom text to the HUD
+     * @brief add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
+     * if the id already exists then simply sets all it's variables.
      * @param font EnumGameFontType
      * @param edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
      */
@@ -1621,10 +1623,11 @@ public:
     bool RemoveText(const int id);
 	void ClearText();
     void GetTextSize(const kStr &in text, const int font, const float scale, float &out width, float &out height); ///< EnumGameFontType
-    float GetHUDOffset(const bool user = false); ///< if user is false will return the width to the edge of the screen. if true will return the width from the menu option "HUD Position".
+    float GetHUDOffset(const bool user = false); ///< if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".
     
     /**
-     * @brief add custom image to the HUD
+     * @brief add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
+     * if the id already exists then simply sets all it's variables.
      * @param edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
      */
     bool AddPic(const int id, const kStr &in path, const float x, const float y, const float w, const float h, const int edge = 0,

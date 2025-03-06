@@ -11,6 +11,7 @@ var a00123 =
     [ "ClearLookAtActor", "a00123.html#ac5d7bfd0f7770d14e0c1e61668e23861", null ],
     [ "ClearViewTracks", "a00123.html#a4cd4b6a0c1c2a3d0131d75c329bc9127", null ],
     [ "Enabled", "a00123.html#a1dc1506b7992e65195ba6ead411aa4ff", null ],
+    [ "Flags", "a00123.html#ad5f214b3562576647b7c01258bb2a875", null ],
     [ "GetEyeView", "a00123.html#ad0e2fff7906e71b7353317715ecea45e", null ],
     [ "GetFocusView", "a00123.html#adc4c783f7b45c8393d93f3ae4a065559", null ],
     [ "SectorIndex", "a00123.html#ab502a94caa8a3001bf185cf30ccfd2b0", null ],

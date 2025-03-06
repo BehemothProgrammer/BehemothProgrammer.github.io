@@ -6,7 +6,7 @@ var searchData=
   ['findbyref_3',['findByRef',['../a00023.html#a65441e61a3c6289ecc6c09537dc15564',1,'array&lt; T &gt;::findByRef(const T &amp;in value) const'],['../a00023.html#aed6f7902a8bd701841e0a3dd91a5b629',1,'array&lt; T &gt;::findByRef(uint startAt, const T &amp;in value) const']]],
   ['findnextclosestsector_4',['FindNextClosestSector',['../a00139.html#aaa1e79a345b4e7419c29d5faf15d422b',1,'kWorld']]],
   ['fireprojectile_5',['FireProjectile',['../a00107.html#a270e1266e1a4df546d16d333267b3877',1,'kWeapon']]],
-  ['flags_6',['Flags',['../a00099.html#ab626c3aaeb7a6a359d21980bfbd735dc',1,'kActor']]],
+  ['flags_6',['Flags',['../a00099.html#ab626c3aaeb7a6a359d21980bfbd735dc',1,'kActor::Flags()'],['../a00123.html#ad5f214b3562576647b7c01258bb2a875',1,'kCamera::Flags()']]],
   ['floodfillareaflags_7',['FloodFillAreaFlags',['../a00139.html#a928b224d762e50c93bbe11635cca3b3d',1,'kWorld::FloodFillAreaFlags(const int sectorIndex, const uint flags, const bool active)'],['../a00139.html#a1fdeb44917499ac0d19a9474f467abb0',1,'kWorld::FloodFillAreaFlags(const kVec3 &amp;in origin, const uint flags, const bool active)']]],
   ['floodmatchingareaflags_8',['FloodMatchingAreaFlags',['../a00139.html#a001d1232a78a97f760f060f9cbc6e0fc',1,'kWorld']]],
   ['floor_9',['Floor',['../a00018.html#a378700ae3ba15e6676f27de60e84f357',1,'Math']]],

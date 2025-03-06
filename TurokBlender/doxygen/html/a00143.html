@@ -271,7 +271,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7016fd9cc56a5473f86c22379ef5006" id="r_af7016fd9cc56a5473f86c22379ef5006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7016fd9cc56a5473f86c22379ef5006">StopSounds</a> ()</td></tr>
 <tr class="separator:af7016fd9cc56a5473f86c22379ef5006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0b6a9e83203efc527f045866641aa3" id="r_a2f0b6a9e83203efc527f045866641aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f0b6a9e83203efc527f045866641aa3">AddText</a> (const int id, const int font, const <a class="el" href="a00027.html">kStr</a> &amp;in text, const float x, const float y, const int edge=0, const float scale=1.0f, const bool center=false, const bool shadow=false, const int r=255, const int g=255, const int b=255, const int a=255, const int r2=255, const int g2=255, const int b2=255, const int a2=255)</td></tr>
-<tr class="memdesc:a2f0b6a9e83203efc527f045866641aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom text to the HUD  <br /></td></tr>
+<tr class="memdesc:a2f0b6a9e83203efc527f045866641aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables.  <br /></td></tr>
 <tr class="separator:a2f0b6a9e83203efc527f045866641aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d849e8fed84e0d6f6c538017fe7c28b" id="r_a8d849e8fed84e0d6f6c538017fe7c28b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d849e8fed84e0d6f6c538017fe7c28b">SetTextMsg</a> (const int id, const <a class="el" href="a00027.html">kStr</a> &amp;in text)</td></tr>
 <tr class="separator:a8d849e8fed84e0d6f6c538017fe7c28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -292,17 +292,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab84ef65a9a48369e60bf3d91dbd09c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a114c570d0e038714966b85c131c56a2d">EnumGameFontType</a>.  <br /></td></tr>
 <tr class="separator:ab84ef65a9a48369e60bf3d91dbd09c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23ec9a3d3b01a2b2e7632245f778e951" id="r_a23ec9a3d3b01a2b2e7632245f778e951"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951">GetHUDOffset</a> (const bool user=false)</td></tr>
-<tr class="memdesc:a23ec9a3d3b01a2b2e7632245f778e951"><td class="mdescLeft">&#160;</td><td class="mdescRight">if user is false will return the width to the edge of the screen. if true will return the width from the menu option "HUD Position".  <br /></td></tr>
+<tr class="memdesc:a23ec9a3d3b01a2b2e7632245f778e951"><td class="mdescLeft">&#160;</td><td class="mdescRight">if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".  <br /></td></tr>
 <tr class="separator:a23ec9a3d3b01a2b2e7632245f778e951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4dcfc882fb1c54478146d5981583b99" id="r_aa4dcfc882fb1c54478146d5981583b99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4dcfc882fb1c54478146d5981583b99">AddPic</a> (const int id, const <a class="el" href="a00027.html">kStr</a> &amp;in path, const float x, const float y, const float w, const float h, const int edge=0, const float s1=0.0f, const float t1=0.0f, const float s2=1.0f, const float t2=1.0f, const int r=255, const int g=255, const int b=255, const int a=255)</td></tr>
-<tr class="memdesc:aa4dcfc882fb1c54478146d5981583b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom image to the HUD  <br /></td></tr>
+<tr class="memdesc:aa4dcfc882fb1c54478146d5981583b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables.  <br /></td></tr>
 <tr class="separator:aa4dcfc882fb1c54478146d5981583b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed386912fe634d94e784b4bccb6a018" id="r_abed386912fe634d94e784b4bccb6a018"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abed386912fe634d94e784b4bccb6a018">SetPicTex</a> (const int id, const <a class="el" href="a00027.html">kStr</a> &amp;in path)</td></tr>
 <tr class="separator:abed386912fe634d94e784b4bccb6a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72184017089360fcd467d90859c67a4e" id="r_a72184017089360fcd467d90859c67a4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72184017089360fcd467d90859c67a4e">SetPicOrigin</a> (const int id, const float x, const float y)</td></tr>
 <tr class="separator:a72184017089360fcd467d90859c67a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340ccdef5b5adb666681f0efaac111b7" id="r_a340ccdef5b5adb666681f0efaac111b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a340ccdef5b5adb666681f0efaac111b7">SetPicEdge</a> (const int id, const int edge)</td></tr>
-<tr class="memdesc:a340ccdef5b5adb666681f0efaac111b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">edge 1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen. if true will return the width from ...">GetHUDOffset()</a> as well)  <br /></td></tr>
+<tr class="memdesc:a340ccdef5b5adb666681f0efaac111b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">edge 1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen (negative value)....">GetHUDOffset()</a> as well)  <br /></td></tr>
 <tr class="separator:a340ccdef5b5adb666681f0efaac111b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a574efe19bb7104a45ab8499c3e748012" id="r_a574efe19bb7104a45ab8499c3e748012"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a574efe19bb7104a45ab8499c3e748012">SetPicAngle</a> (const int id, const float angle)</td></tr>
 <tr class="memdesc:a574efe19bb7104a45ab8499c3e748012"><td class="mdescLeft">&#160;</td><td class="mdescRight">in rads  <br /></td></tr>
@@ -462,7 +462,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01480">1480</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01481">1481</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -548,10 +548,10 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>add custom image to the HUD </p>
+<p>add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen. if true will return the width from ...">GetHUDOffset()</a> as well) </td></tr>
+    <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen (negative value)....">GetHUDOffset()</a> as well) </td></tr>
   </table>
   </dd>
 </dl>
@@ -652,11 +652,11 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>add custom text to the HUD </p>
+<p>add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">font</td><td><a class="el" href="a00002.html#a114c570d0e038714966b85c131c56a2d">EnumGameFontType</a> </td></tr>
-    <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen. if true will return the width from ...">GetHUDOffset()</a> as well) </td></tr>
+    <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen (negative value)....">GetHUDOffset()</a> as well) </td></tr>
   </table>
   </dd>
 </dl>
@@ -1067,9 +1067,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01877">t1_scriptAPI.cpp:1877</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01880">t1_scriptAPI.cpp:1880</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01878">t1_scriptAPI.cpp:1878</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01880">t1_scriptAPI.cpp:1880</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01883">t1_scriptAPI.cpp:1883</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01881">t1_scriptAPI.cpp:1881</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -1342,7 +1342,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>if user is false will return the width to the edge of the screen. if true will return the width from the menu option "HUD Position". </p>
+<p>if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position". </p>
 
 </div>
 </div>
@@ -2826,7 +2826,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>edge 1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen. if true will return the width from ...">GetHUDOffset()</a> as well) </p>
+<p>edge 1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen (negative value)....">GetHUDOffset()</a> as well) </p>
 
 </div>
 </div>
@@ -3157,7 +3157,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">font</td><td><a class="el" href="a00002.html#a114c570d0e038714966b85c131c56a2d">EnumGameFontType</a> </td></tr>
-    <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen. if true will return the width from ...">GetHUDOffset()</a> as well) </td></tr>
+    <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen (negative value)....">GetHUDOffset()</a> as well) </td></tr>
   </table>
   </dd>
 </dl>
