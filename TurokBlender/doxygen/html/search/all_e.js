@@ -9,7 +9,7 @@ var searchData=
   ['onground_6',['OnGround',['../a00099.html#a08865866fc5a4e89f6db4d6f9b6d8b51',1,'kActor']]],
   ['onholdster_7',['OnHoldster',['../a00071.html#ace41c3dec26d9842ab04ce82a9194e11',1,'ScriptObjectWeapon']]],
   ['onlower_8',['OnLower',['../a00071.html#a6ac89ddae5f92fe953c7ee2d974489b0',1,'ScriptObjectWeapon']]],
-  ['only_20sctor_20h3_9',['&lt;H3&gt;Spawn A Shoot Only Sctor&lt;/H3&gt;',['../index.html#shootactor',1,'']]],
+  ['only_20actor_20h3_9',['&lt;H3&gt;Spawn A Shoot Only Actor&lt;/H3&gt;',['../index.html#shootactor',1,'']]],
   ['onraise_10',['OnRaise',['../a00071.html#a8f910a748b4a2f5d4184c259b6eb64ec',1,'ScriptObjectWeapon']]],
   ['onspawn_11',['OnSpawn',['../a00067.html#a8220be42bfef1a62c78a2504c43ab320',1,'ScriptObject']]],
   ['ontick_12',['OnTick',['../a00067.html#afb2a8de3f44f70e2d45f58d65d42cfe1',1,'ScriptObject']]],

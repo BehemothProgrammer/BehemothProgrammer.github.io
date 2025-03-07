@@ -254,7 +254,7 @@ $action (ID, {x y z w})                         // Calls a script animation func
 #define AI_SPECIES_MANTIS_BOSS		(1<<12)		// mantis boss
 \endcode
 
-\section shootactor <H3>Spawn A Shoot Only Sctor</H3>
+\section shootactor <H3>Spawn A Shoot Only Actor</H3>
 \code{.cpp}
 kVec3 pos = Player.Actor().Origin();
 kActor @m_pDummyActor = ActorFactory.Spawn("DummyActor", pos.x, pos.y, pos.z, Player.Actor().Yaw(), Player.Actor().SectorIndex());
@@ -264,6 +264,48 @@ m_pDummyActor.ImpactType() = IT_FLESH_HUMAN;
 m_pDummyActor.Radius() = 16;
 m_pDummyActor.Height() = 32;
 \endcode
+
+\section soundshader <H3>Sound Shader</H3>
+\verbatim
+sounds[1] = //number of sounds in this shader
+{
+    {
+        wavefile = "sounds/waves/talset/ashamed.wav" // the sound file path
+        bOneInstancePerSource = 0   // if sound has a source then this can only be played if this sound is not being played.
+        bLoop = 0                   // loops the sound when it plays
+        bEnableVolumeEnvelope = 0   // enable the volume_envelope lerp
+        bEnablePitchEnvelope = 0    // enable the pitch_envelope lerp
+        bFadeIfObstructed = 0       // on every other tick, if the sound has a source and CanSee player then keeps volume at normal, if can't see the player then fades out the volume.
+        bUpdateNoEnvelope = 0       // NOT USED
+        bLinkToEnvelope = 0         // NOT USED
+        bFullVolume = 0             // always play sound at maximum volume with no positioning
+        delay = 0                   // delay time (in ticks) before will start playing the sound
+        priority = 80               // when 64 sounds are being played, higher priority sounds will stop lower priority sounds in order to play. If there are no sounds it can override then will not play the sound.
+        random = 1.000000           // if not 1: if playloop ticks bit 1 is set then won't play, OR if random value from 0.0 to 1.0 >= random then won't play.
+        radioVolume = 2             // 0: dist = (GAME_SCALE * 200) * 0.75f,  volume * 0.8f
+                                    // 1 or any other value: dist = (GAME_SCALE * 200),  volume * 1.0f
+                                    // 2: dist = (GAME_SCALE * 200) * 1.2f,  volume * 1.5f
+                                    // 3: dist = (GAME_SCALE * 200) * 2.0f,  volume * 1.5f
+        volume_envelope =
+        {
+            max = 1.000000          // how much to scale the volume by (even if bEnableVolumeEnvelope is 0). Default is 1.0 if you don't include this.
+            start = 1.000000        // lerp from
+            end = 1.000000          // lerp to
+            duration = 60           // lerp time
+            envStartTime = 0        // Delay time (in ticks) before the volume will lerp from the start to the end value.
+        }
+
+        pitch_envelope =
+        {
+            max = 1.000000          // is always starting pitch value (even if bEnablePitchEnvelope is 0). Default is 1.0 if you don't include this.
+            start = 1.000000        // lerp from
+            end = 1.000000          // lerp to
+            duration = 60           // lerp time
+            envStartTime = 0        // Delay time (in ticks) before the pitch will lerp from the start to the end value.
+        }
+    }
+}
+\endverbatim
 
 \section difficulty <H3>Difficulty</H3>
 \verbatim

@@ -359,7 +359,7 @@ $action (ID, {x y z w})                         // Calls a script animation func
 <div class="line"><span class="preprocessor">#define AI_SPECIES_ROBOT            (1&lt;&lt;11)     </span><span class="comment">// robot</span></div>
 <div class="line"><span class="preprocessor">#define AI_SPECIES_MANTIS_BOSS      (1&lt;&lt;12)     </span><span class="comment">// mantis boss</span></div>
 </div><!-- fragment --><h1><a class="anchor" id="shootactor"></a>
-<h3>Spawn A Shoot Only Sctor</h3>
+<h3>Spawn A Shoot Only Actor</h3>
 </h1>
 <div class="fragment"><div class="line"><a class="code hl_class" href="a00035.html">kVec3</a> pos = <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().Origin();</div>
 <div class="line"><a class="code hl_class" href="a00099.html">kActor</a> @m_pDummyActor = <a class="code hl_variable" href="a00002.html#aef62f575aec9d59790e455f57bfce9d6">ActorFactory</a>.Spawn(<span class="stringliteral">&quot;DummyActor&quot;</span>, pos.<a class="code hl_variable" href="a00035.html#a14ded16405d5a8f259296d1788e7b48f">x</a>, pos.<a class="code hl_variable" href="a00035.html#aeb1547a0c82ca9754e4f4ec74ab5b605">y</a>, pos.<a class="code hl_variable" href="a00035.html#ae3fe49671cc9d398d9cc9f9e3acd9199">z</a>, <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().Yaw(), <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().SectorIndex());</div>
@@ -389,7 +389,48 @@ $action (ID, {x y z w})                         // Calls a script animation func
 <div class="ttc" id="aa00099_html_a4e4df775dd17639b5c2cf68c4893b5c2"><div class="ttname"><a href="a00099.html#a4e4df775dd17639b5c2cf68c4893b5c2">kActor::Height</a></div><div class="ttdeci">float &amp; Height()</div></div>
 <div class="ttc" id="aa00099_html_ab626c3aaeb7a6a359d21980bfbd735dc"><div class="ttname"><a href="a00099.html#ab626c3aaeb7a6a359d21980bfbd735dc">kActor::Flags</a></div><div class="ttdeci">uint &amp; Flags()</div><div class="ttdoc">EnumActorFlags.</div></div>
 <div class="ttc" id="aa00099_html_ad2740ee179fccb915440f581f793746c"><div class="ttname"><a href="a00099.html#ad2740ee179fccb915440f581f793746c">kActor::Radius</a></div><div class="ttdeci">float &amp; Radius()</div></div>
-</div><!-- fragment --><h1><a class="anchor" id="difficulty"></a>
+</div><!-- fragment --><h1><a class="anchor" id="soundshader"></a>
+<h3>Sound Shader</h3>
+</h1>
+<pre class="fragment">sounds[1] = //number of sounds in this shader
+{
+    {
+        wavefile = "sounds/waves/talset/ashamed.wav" // the sound file path
+        bOneInstancePerSource = 0   // if sound has a source then this can only be played if this sound is not being played.
+        bLoop = 0                   // loops the sound when it plays
+        bEnableVolumeEnvelope = 0   // enable the volume_envelope lerp
+        bEnablePitchEnvelope = 0    // enable the pitch_envelope lerp
+        bFadeIfObstructed = 0       // on every other tick, if the sound has a source and CanSee player then keeps volume at normal, if can't see the player then fades out the volume.
+        bUpdateNoEnvelope = 0       // NOT USED
+        bLinkToEnvelope = 0         // NOT USED
+        bFullVolume = 0             // always play sound at maximum volume with no positioning
+        delay = 0                   // delay time (in ticks) before will start playing the sound
+        priority = 80               // when 64 sounds are being played, higher priority sounds will stop lower priority sounds in order to play. If there are no sounds it can override then will not play the sound.
+        random = 1.000000           // if not 1: if playloop ticks bit 1 is set then won't play, OR if random value from 0.0 to 1.0 &gt;= random then won't play.
+        radioVolume = 2             // 0: dist = (GAME_SCALE * 200) * 0.75f,  volume * 0.8f
+                                    // 1 or any other value: dist = (GAME_SCALE * 200),  volume * 1.0f
+                                    // 2: dist = (GAME_SCALE * 200) * 1.2f,  volume * 1.5f
+                                    // 3: dist = (GAME_SCALE * 200) * 2.0f,  volume * 1.5f
+        volume_envelope =
+        {
+            max = 1.000000          // how much to scale the volume by (even if bEnableVolumeEnvelope is 0). Default is 1.0 if you don't include this.
+            start = 1.000000        // lerp from
+            end = 1.000000          // lerp to
+            duration = 60           // lerp time
+            envStartTime = 0        // Delay time (in ticks) before the volume will lerp from the start to the end value.
+        }
+
+        pitch_envelope =
+        {
+            max = 1.000000          // is always starting pitch value (even if bEnablePitchEnvelope is 0). Default is 1.0 if you don't include this.
+            start = 1.000000        // lerp from
+            end = 1.000000          // lerp to
+            duration = 60           // lerp time
+            envStartTime = 0        // Delay time (in ticks) before the pitch will lerp from the start to the end value.
+        }
+    }
+}
+</pre><h1><a class="anchor" id="difficulty"></a>
 <h3>Difficulty</h3>
 </h1>
 <pre class="fragment">Easy:

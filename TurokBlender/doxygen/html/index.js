@@ -8,6 +8,7 @@ var index =
     [ "Enemy Attack Flags", "index.html#enemyattackflags", null ],
     [ "ActorFx Commands", "index.html#actorfx", null ],
     [ "Species Mask (Unused)", "index.html#species", null ],
-    [ "Spawn A Shoot Only Sctor", "index.html#shootactor", null ],
+    [ "Spawn A Shoot Only Actor", "index.html#shootactor", null ],
+    [ "Sound Shader", "index.html#soundshader", null ],
     [ "Difficulty", "index.html#difficulty", null ]
 ];
