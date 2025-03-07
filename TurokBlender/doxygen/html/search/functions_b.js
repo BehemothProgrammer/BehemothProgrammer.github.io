@@ -13,11 +13,12 @@ var searchData=
   ['lives_10',['Lives',['../a00147.html#ad5f1d5e0a876e23d8785664e4838df5b',1,'kPlayer']]],
   ['livespulse_11',['LivesPulse',['../a00143.html#a48cfece55607e0cdd9fcb5359556b9cd',1,'kGame']]],
   ['loadmenu_12',['LoadMenu',['../a00143.html#ac080b31dea72f93dc4a3e76bf482232b',1,'kGame']]],
-  ['loadmodfile_13',['LoadModFile',['../a00143.html#a4ffeec26d3ea3057b7e46c7a7394d2a1',1,'kGame']]],
-  ['lock_14',['Lock',['../a00147.html#aadeddfea49654de0ef80a704050b1227',1,'kPlayer']]],
-  ['locked_15',['Locked',['../a00147.html#a8d130e18d026002f6b896b73177a1e14',1,'kPlayer']]],
-  ['log_16',['Log',['../a00018.html#a7e33b8127ff0f1dbe1e9f2cd2758a839',1,'Math']]],
-  ['looping_17',['Looping',['../a00095.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
-  ['loudnoisealert_18',['LoudNoiseAlert',['../a00115.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
-  ['loudrange_19',['LoudRange',['../a00111.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
+  ['loadmoddatafile_13',['LoadModDataFile',['../a00143.html#ae2d2e8e266503ed27c5f13600ff604a8',1,'kGame']]],
+  ['loadmodfile_14',['LoadModFile',['../a00143.html#a4ffeec26d3ea3057b7e46c7a7394d2a1',1,'kGame']]],
+  ['lock_15',['Lock',['../a00147.html#aadeddfea49654de0ef80a704050b1227',1,'kPlayer']]],
+  ['locked_16',['Locked',['../a00147.html#a8d130e18d026002f6b896b73177a1e14',1,'kPlayer']]],
+  ['log_17',['Log',['../a00018.html#a7e33b8127ff0f1dbe1e9f2cd2758a839',1,'Math']]],
+  ['looping_18',['Looping',['../a00095.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
+  ['loudnoisealert_19',['LoudNoiseAlert',['../a00115.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
+  ['loudrange_20',['LoudRange',['../a00111.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
 ];

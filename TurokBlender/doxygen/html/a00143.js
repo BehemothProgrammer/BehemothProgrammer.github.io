@@ -64,6 +64,7 @@ var a00143 =
     [ "LifeForcePulse", "a00143.html#a07562ebcc02455ee784ebeb22620cce8", null ],
     [ "LivesPulse", "a00143.html#a48cfece55607e0cdd9fcb5359556b9cd", null ],
     [ "LoadMenu", "a00143.html#ac080b31dea72f93dc4a3e76bf482232b", null ],
+    [ "LoadModDataFile", "a00143.html#ae2d2e8e266503ed27c5f13600ff604a8", null ],
     [ "LoadModFile", "a00143.html#a4ffeec26d3ea3057b7e46c7a7394d2a1", null ],
     [ "MarkActorPersistentBit", "a00143.html#a637abe7c124f7206d0ba8db0519066be", null ],
     [ "MessageBox", "a00143.html#ada044d9972f21d965647e9efb3f87871", null ],

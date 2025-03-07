@@ -19,6 +19,8 @@ var a00095 =
     [ "SetTrackTime", "a00095.html#ac514f49864de8487ac8ea9b953e6a831", null ],
     [ "Stop", "a00095.html#a5257f033f89b5744df1b68e0ce2c5ce4", null ],
     [ "Stopped", "a00095.html#abae80dfb059df20ca5d4f9784db4d365", null ],
+    [ "TrackFrame", "a00095.html#af8d9608e324b21dd45913a92dcb5771f", null ],
+    [ "TrackNextFrame", "a00095.html#a7a84c360130c209bb0fb4b311027af04", null ],
     [ "TrackTime", "a00095.html#a13208a6a5d2a1f4c99de07f5830bcf37", null ],
     [ "flags", "a00095.html#ab9dc3f7cab0a9d631fe99f64e1e8f680", null ]
 ];

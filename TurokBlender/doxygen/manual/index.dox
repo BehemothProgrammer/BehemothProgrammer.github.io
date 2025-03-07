@@ -2,6 +2,8 @@
 \ref t1_scriptAPI.cpp "View ScriptAPI Page"<BR>
 <a href="../t1_scriptAPI.cpp">Download t1_scriptAPI.cpp</a><BR>
 <a href="../Angelscript_IDE_Setup.pdf">How to setup Angelscript IDE Codelite</a><BR>
+<BR>
+<a href="../T1_json2modbin.py">T1_json2modbin.py</a>: Python script to convert a json dictionary to a Turok 1 mod data file that can be used in scripting with Game.LoadModDataFile<BR>
 
 \section exeorder <H3>Scripts Execution Order</H3>
 \verbatim

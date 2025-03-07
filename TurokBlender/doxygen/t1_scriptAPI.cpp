@@ -974,7 +974,7 @@ class kAnimState
 public:
 	void Blend(const int animID, float speed, float blend, int flags); ///< EnumAnimStateFlags
 	void Set(const int animID, float speed, int flags); ///< EnumAnimStateFlags
-	const int CurrentFrame(); ///< current frame playing for the current animation
+	const int CurrentFrame(); ///< current frame playing for the current animation. Must have an animation action keyframe for this to work, otherwise use TrackFrame() instead. This should be named more like last frame an action was checked to execute.
 	const int NumFrames(); ///< number of frames in this animation
 	const float PlayTime(); ///< increases by GAME_DELTA_TIME if not stopped or paused.
 	const float TrackTime(); ///< time from 0(on first frame) to 1(on last frame). 
@@ -988,10 +988,12 @@ public:
 	const bool Blending() const; ///< (flags & ANF_BLEND) != 0
 	const bool Looping() const; ///< (flags & ANF_LOOP) != 0
 	const bool CycleCompleted() const; ///< (flags & ANF_CYCLECOMPLETED) != 0
-	void ChangeSpeed(const float speed);
-	void SetLastFrame(const bool execActions = false); ///< if execActions is true, runs all key frame actions in the animation
-	void SetPlayTime(const float time);
-	void SetTrackTime(const float time);
+	void ChangeSpeed(const float speed); ///< Scales speed of the current animation where 1.0 = 15fps and 4.0 = 60fps
+	void SetLastFrame(const bool execActions = false); ///< if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248).
+	void SetPlayTime(const float time); ///< The total time in seconds this animation has been playing
+	void SetTrackTime(const float time); ///< 0.0(first frame) to 1.0(last frame)
+    const int TrackFrame(void) const; // current frame playing for the current animation.
+    const int TrackNextFrame(void) const; // next frame to play for the current animation.
 	int flags; ///< EnumAnimStateFlags
 };
 
@@ -1663,6 +1665,7 @@ public:
 	const float ViewZFar();
 	void SaveModFile(const kStr&in filename); ///< make sure to call GameModFileData.Empty() before adding key/values to save
 	bool LoadModFile(const kStr&in filename); ///< make sure to call GameModFileData.Empty() after you're done loading
+    bool LoadModDataFile(const kStr&in filename); ///< Returns false if couldn't load file. Clears and Sets GameModFileData with the contents of the loaded file.
 	void SetNoModSelect(const bool bToggle = true); ///< Disable the mod select menu when selecting new game for workshop mods only. (seta g_nomodselect "1")
 	void PlayMovie(const kStr&in filename, const bool skippable = true); ///< Only .ogv files (replaces/adds .ogv extension to filename). Can not read from kpfs.
     
