@@ -267,6 +267,31 @@ m_pDummyActor.Radius() = 16;
 m_pDummyActor.Height() = 32;
 \endcode
 
+\section kfont <H3>kfont file</H3>
+\verbatim
+filter linear   // Sets texture filter to linear (default = nearest)
+filter nearest  // Sets texture filter to nearest (default = nearest)
+texture "fonts/bigfont.png" // path to font texture atlas. (default = kex default checker texture)
+padwidth 1.0    // Adds this amount to each characters width (default = 0.0)
+scale 1.0       // (default = 1.0)
+unicode         // (default = ascii)
+noaccentoffset  // Disables the y offset for accent characters. (default = draw accent characters with a y offset)
+                // Hardcoded character accent y offsets:
+                // 224-228  (offset 11)
+                // 232-235  (offset 13)
+                // 236-239  (offset 12)
+                // 242-246  (offset 11)
+                // 246      (offset 13)
+                // 249-252  (offset 13)
+                // 253      (offset 11)
+
+mapchar
+{
+    // char  x y width height  O (draw top offset)  // Leave a comment if you want but don't end any comment line with a backslash ( \ ) or the text preprocessor will think it's a line continuation and you'll have problems
+        48   0 0  24     32    0                    // zero character
+}
+\endverbatim
+
 \section soundshader <H3>Sound Shader</H3>
 \verbatim
 sounds[1] = //number of sounds in this shader

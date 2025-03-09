@@ -165,7 +165,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae1f518b29d30e6bc593ce85d56943ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales speed of the current animation where 1.0 = 15fps and 4.0 = 60fps.  <br /></td></tr>
 <tr class="separator:ae1f518b29d30e6bc593ce85d56943ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87c5bbf5028982c4e960ace40051b2eb" id="r_a87c5bbf5028982c4e960ace40051b2eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87c5bbf5028982c4e960ace40051b2eb">SetLastFrame</a> (const bool execActions=false)</td></tr>
-<tr class="memdesc:a87c5bbf5028982c4e960ace40051b2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248).  <br /></td></tr>
+<tr class="memdesc:a87c5bbf5028982c4e960ace40051b2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). applies the stop flag (flags |= ANF_STOPPED).  <br /></td></tr>
 <tr class="separator:a87c5bbf5028982c4e960ace40051b2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a824ea272b235baffb2f1a70b364a3909" id="r_a824ea272b235baffb2f1a70b364a3909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a824ea272b235baffb2f1a70b364a3909">SetPlayTime</a> (const float time)</td></tr>
 <tr class="memdesc:a824ea272b235baffb2f1a70b364a3909"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total time in seconds this animation has been playing.  <br /></td></tr>
@@ -492,7 +492,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). </p>
+<p>if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). applies the stop flag (flags |= ANF_STOPPED). </p>
 
 </div>
 </div>

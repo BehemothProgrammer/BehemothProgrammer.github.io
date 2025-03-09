@@ -9,6 +9,7 @@ var index =
     [ "ActorFx Commands", "index.html#actorfx", null ],
     [ "Species Mask (Unused)", "index.html#species", null ],
     [ "Spawn A Shoot Only Actor", "index.html#shootactor", null ],
+    [ "kfont file", "index.html#kfont", null ],
     [ "Sound Shader", "index.html#soundshader", null ],
     [ "Difficulty", "index.html#difficulty", null ]
 ];

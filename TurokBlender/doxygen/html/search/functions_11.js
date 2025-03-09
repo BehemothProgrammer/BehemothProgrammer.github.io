@@ -13,7 +13,7 @@ var searchData=
   ['readbyte_10',['ReadByte',['../a00051.html#a7c3bc494d9df9678f22005fad085441c',1,'kBitDelta']]],
   ['recoilpitch_11',['RecoilPitch',['../a00115.html#a6215f2b7cebff619c68b6cad90bd96ff',1,'kPuppet']]],
   ['ref_12',['ref',['../a00059.html#ab9202e327299bf2708153fa7987ac46b',1,'ref::ref()'],['../a00059.html#a9948672182f755555f866f15de7491b0',1,'ref::ref(const ref &amp;in)'],['../a00059.html#a146325a3a0cccb55587007f36ba2f737',1,'ref::ref(const ?&amp;in)']]],
-  ['reflect_13',['Reflect',['../a00035.html#a4b935a4bfaedd88c8d06bd9f46842ed8',1,'kVec3']]],
+  ['reflect_13',['Reflect',['../a00035.html#aded5529edac4cd9bb093e6bd817b4eba',1,'kVec3']]],
   ['remove_14',['Remove',['../a00099.html#a384f12414519f85924065fda818393e0',1,'kActor']]],
   ['removeat_15',['removeAt',['../a00023.html#a88a4117ff4d5a32a84016ae77bc8d28a',1,'array&lt; T &gt;']]],
   ['removebossactor_16',['RemoveBossActor',['../a00131.html#ad569a6b531680d14e5b146aaf3f3fdaa',1,'kPlayLoop']]],

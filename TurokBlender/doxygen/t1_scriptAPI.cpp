@@ -649,7 +649,7 @@ public:
 	kVec3 Lerp(const kVec3&in other, const float t) const; ///< Linearly interpolates between two vectors
 	kVec3& Lerp(const kVec3&in other, const float t); ///< Linearly interpolates between two vectors
 	kVec3& Project(const kVec3&in normal, const float value); ///< Projects a vector onto another vector
-	kVec3& Reflect(const kVec3&in normal, const float value); ///< Reflects a vector off the plane defined by a normal
+	kVec3& Reflect(const kVec3&in normal, const float energyFactor); ///< Reflects a vector off the plane defined by a normal
 	kVec3& Randomize(const float value); ///< Randomizes x, y, z, components by value 
 	kVec3& CubicCurve(const kVec3&in pt1, const float value, const kVec3&in pt2);
 	kVec3& QuadraticCurve(const kVec3&in pt1, const float value, const kVec3&in pt2, const kVec3&in pt3);
@@ -989,7 +989,7 @@ public:
 	const bool Looping() const; ///< (flags & ANF_LOOP) != 0
 	const bool CycleCompleted() const; ///< (flags & ANF_CYCLECOMPLETED) != 0
 	void ChangeSpeed(const float speed); ///< Scales speed of the current animation where 1.0 = 15fps and 4.0 = 60fps
-	void SetLastFrame(const bool execActions = false); ///< if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248).
+	void SetLastFrame(const bool execActions = false); ///< if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). applies the stop flag (flags |= ANF_STOPPED).
 	void SetPlayTime(const float time); ///< The total time in seconds this animation has been playing
 	void SetTrackTime(const float time); ///< 0.0(first frame) to 1.0(last frame)
     const int TrackFrame(void) const; // current frame playing for the current animation.
