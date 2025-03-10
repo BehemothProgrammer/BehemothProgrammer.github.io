@@ -45,6 +45,7 @@ var a00147 =
     [ "SetSpiritualTime", "a00147.html#a71c14aedfb8280790cb78075d6abbdbd", null ],
     [ "SetWeaponGroup", "a00147.html#ac859f503f55a1bf9477cb412f9ba36de", null ],
     [ "SetWeaponUseAltAmmo", "a00147.html#a71bd381e47c3c9bdc54756556a33514e", null ],
+    [ "SilentCheckPoints", "a00147.html#aaa7b2abe7fd81f67d32410b3d5d81506", null ],
     [ "Unlock", "a00147.html#abdfd0f51bac3e19927cad316465e0a3d", null ],
     [ "UseAltAmmo", "a00147.html#aa20f009a0d4b047853e41db1bfbb16ca", null ],
     [ "Victory", "a00147.html#a29d220020a1f54f85118a8e63b89cdd9", null ],

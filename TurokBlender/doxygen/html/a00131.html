@@ -143,6 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a759ae726f310c2513e65f6ba2893db37" id="r_a759ae726f310c2513e65f6ba2893db37"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a759ae726f310c2513e65f6ba2893db37">CanOpenSaveMenu</a> ()</td></tr>
 <tr class="memdesc:a759ae726f310c2513e65f6ba2893db37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if it's okay to be able to open the save menu.  <br /></td></tr>
 <tr class="separator:a759ae726f310c2513e65f6ba2893db37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac49bb959dc52318414492fb6b705248c" id="r_ac49bb959dc52318414492fb6b705248c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac49bb959dc52318414492fb6b705248c">NewMapWarpTID</a> ()</td></tr>
+<tr class="memdesc:ac49bb959dc52318414492fb6b705248c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the warp TID the player warped to from another map. Returns -1 of didn't warp from another map. Check before OnPostBeginLevel.  <br /></td></tr>
+<tr class="separator:ac49bb959dc52318414492fb6b705248c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -257,6 +260,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>if loseLife is true and infinite lives cheat is off then player loses a life. if player lives is &lt; 0 then GameOver is called. If has &gt;= 0 lives left then will ChangeMap to the current set check point, or use the current map if no check point is set. </p>
+
+</div>
+</div>
+<a id="ac49bb959dc52318414492fb6b705248c" name="ac49bb959dc52318414492fb6b705248c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac49bb959dc52318414492fb6b705248c">&#9670;&#160;</a></span>NewMapWarpTID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayLoop::NewMapWarpTID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the warp TID the player warped to from another map. Returns -1 of didn't warp from another map. Check before OnPostBeginLevel. </p>
 
 </div>
 </div>

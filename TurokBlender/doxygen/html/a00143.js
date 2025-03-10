@@ -11,6 +11,7 @@ var a00143 =
     [ "BoxInView", "a00143.html#a3025436d725aadb0065522bac0e22d8f", null ],
     [ "CallDelayedMapScript", "a00143.html#a8dcd761ffc230b1a2e676435f0ba8ea6", null ],
     [ "CallDelayedMapScript", "a00143.html#a5760cf9e8daadcc19606e45c88b3cc4c", null ],
+    [ "CallMapScript", "a00143.html#acfbe4d471487d207165398aa60549be0", null ],
     [ "CenterMouse", "a00143.html#a01cd93718419664ab8ce6d6cba070be1", null ],
     [ "ChangeMap", "a00143.html#ac6f6548a550ec91a86a7b764bfc6f64d", null ],
     [ "ClearDummyMenu", "a00143.html#ab66c07984860268eea02304cdb8a8b0a", null ],

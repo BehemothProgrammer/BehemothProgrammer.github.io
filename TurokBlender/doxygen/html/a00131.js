@@ -6,6 +6,7 @@ var a00131 =
     [ "CheckKeys", "a00131.html#a82ced3771b581ec19d74110b19d697d5", null ],
     [ "CheckWarping", "a00131.html#a59adbfb3724be62ed444d1d5948c67bb", null ],
     [ "HandlePlayerDeath", "a00131.html#a66cadf911ddf2c272d8634dcc3c8521a", null ],
+    [ "NewMapWarpTID", "a00131.html#ac49bb959dc52318414492fb6b705248c", null ],
     [ "RemoveBossActor", "a00131.html#ad569a6b531680d14e5b146aaf3f3fdaa", null ],
     [ "StartFreeWarp", "a00131.html#ae0b38d2310e6a6e3d35eb673dda96151", null ],
     [ "StartWarp", "a00131.html#a091ccb30f3c2f7e4c6073aa5d8835677", null ],

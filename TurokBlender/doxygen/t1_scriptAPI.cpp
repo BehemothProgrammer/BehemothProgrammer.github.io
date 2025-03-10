@@ -1344,6 +1344,7 @@ public:
 	const bool CheckWarping(); ///< Checks if Warping or FreeWarping is in progress.
 	const bool CanOpenPauseMenu(); ///< Checks if it's okay to be able to open a menu
 	const bool CanOpenSaveMenu(); ///< Checks if it's okay to be able to open the save menu
+    const int NewMapWarpTID(); ///< Returns the warp TID the player warped to from another map. Returns -1 of didn't warp from another map. Check before OnPostBeginLevel.
 };
 
 class kSys
@@ -1483,8 +1484,9 @@ public:
 class kGame
 {
 public:
-	void CallDelayedMapScript(const kStr&in funcName, kActor@ instigator, const float delay); ///< DO NOT USE! Will cause memory leaks.
-	void CallDelayedMapScript(const int scriptID, kActor@ instigator, const float delay);
+	void CallDelayedMapScript(const kStr&in funcName, kActor@ instigator, const float delay); ///< even with delay 0 it will be called when map scripts update
+	void CallDelayedMapScript(const int scriptID, kActor@ instigator, const float delay); ///< even with delay 0 it will be called when map scripts update
+    void CallMapScript(const int scriptID, kActor@ instigator); ///< Use to call map script right away
 	void HaltMapScript(const int scriptID);
 	void PlaySound(const kStr&in path);
 	void PlaySoundID(const int soundID);
@@ -1787,6 +1789,7 @@ public:
      * then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs.
      */
 	void SetWeaponGroup(const int weapon, const int group);
+    bool &SilentCheckPoints(void); ///< if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.
 };
 
 namespace Math
