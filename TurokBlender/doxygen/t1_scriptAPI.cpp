@@ -1032,6 +1032,7 @@ public:
 	int16& Health();
 	int& Type(); ///< The actors Type ID
 	int& ImpactType(); ///< EnumImpactType
+    bool &IgnoreSectorHeightChange(void); ///< if true will not change position(or velocity and movement) when sector height changes.
 	int& ModelVariation();
 	int& SpeciesMask();
 	uint& Flags(); ///< EnumActorFlags
@@ -1531,6 +1532,12 @@ public:
      * @param ticks number of ticks message will be visible. 60 ticks = 1 second.
      */
 	void PrintLine(const kStr&in text, const int lineNumber, const int ticks = 120);
+    /**
+     * @brief Print a message to the HUD on the next line.
+     * @param text
+     * @param ticks number of ticks message will be visible. 60 ticks = 1 second.
+     */
+    void Print(const kStr &in text, const int ticks = 120);
 	void PrintHelp(const kStr&in text, const bool endGame = false);
 	void StartTimer();
 	void StopTimer();

@@ -43,7 +43,7 @@ var searchData=
   ['premultiply_40',['PreMultiply',['../a00047.html#ac505eca3a9fbdbdc38b2082d3da5c11d',1,'kColor']]],
   ['preventfire_41',['PreventFire',['../a00107.html#aca4e062accb736800bd4038f55856944',1,'kWeapon']]],
   ['prevorigin_42',['PrevOrigin',['../a00099.html#a5ba0aa2b10764483e49e04b0398b545c',1,'kActor']]],
-  ['print_43',['Print',['../a00135.html#abe30c302f659304c08931619d1d5d3b5',1,'kSys']]],
+  ['print_43',['Print',['../a00135.html#abe30c302f659304c08931619d1d5d3b5',1,'kSys::Print()'],['../a00143.html#a02d6a59f97ee869f197e4e61a7464e44',1,'kGame::Print(const kStr &amp;in text, const int ticks=120)']]],
   ['printhelp_44',['PrintHelp',['../a00143.html#a4961fe1c32e8d5367d2354e504217893',1,'kGame']]],
   ['printline_45',['PrintLine',['../a00143.html#a476dc5d1f558aad4f9eae3c85cf7ba8b',1,'kGame']]],
   ['project_46',['Project',['../a00035.html#abeb7823fd3d1c544a52030aaf5fd57f0',1,'kVec3']]],

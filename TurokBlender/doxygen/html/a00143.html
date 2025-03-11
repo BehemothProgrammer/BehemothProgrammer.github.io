@@ -159,6 +159,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a476dc5d1f558aad4f9eae3c85cf7ba8b" id="r_a476dc5d1f558aad4f9eae3c85cf7ba8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a476dc5d1f558aad4f9eae3c85cf7ba8b">PrintLine</a> (const <a class="el" href="a00027.html">kStr</a> &amp;in text, const int lineNumber, const int ticks=120)</td></tr>
 <tr class="memdesc:a476dc5d1f558aad4f9eae3c85cf7ba8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the HUD.  <br /></td></tr>
 <tr class="separator:a476dc5d1f558aad4f9eae3c85cf7ba8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d6a59f97ee869f197e4e61a7464e44" id="r_a02d6a59f97ee869f197e4e61a7464e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02d6a59f97ee869f197e4e61a7464e44">Print</a> (const <a class="el" href="a00027.html">kStr</a> &amp;in text, const int ticks=120)</td></tr>
+<tr class="memdesc:a02d6a59f97ee869f197e4e61a7464e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print a message to the HUD on the next line.  <br /></td></tr>
+<tr class="separator:a02d6a59f97ee869f197e4e61a7464e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4961fe1c32e8d5367d2354e504217893" id="r_a4961fe1c32e8d5367d2354e504217893"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4961fe1c32e8d5367d2354e504217893">PrintHelp</a> (const <a class="el" href="a00027.html">kStr</a> &amp;in text, const bool endGame=false)</td></tr>
 <tr class="separator:a4961fe1c32e8d5367d2354e504217893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8be96dbef91f876810e05eb7be58b3a9" id="r_a8be96dbef91f876810e05eb7be58b3a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8be96dbef91f876810e05eb7be58b3a9">StartTimer</a> ()</td></tr>
@@ -469,7 +472,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01496">1496</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01497">1497</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1099,9 +1102,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01898">t1_scriptAPI.cpp:1898</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01901">t1_scriptAPI.cpp:1901</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01899">t1_scriptAPI.cpp:1899</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01905">t1_scriptAPI.cpp:1905</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01908">t1_scriptAPI.cpp:1908</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01906">t1_scriptAPI.cpp:1906</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -2353,6 +2356,36 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramname">path</td><td>the path to the .bnvib file </td></tr>
     <tr><td class="paramname">channel</td><td><a class="el" href="a00017.html#ab4429a2ff145440621e9724313830922">kexVibrationPlayer::channel_e</a> </td></tr>
     <tr><td class="paramname">pos</td><td><a class="el" href="a00017.html#adac92ba0b7dc6ce8d643e65abc7b245b">kexVibrationPlayer::position_e</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a02d6a59f97ee869f197e4e61a7464e44" name="a02d6a59f97ee869f197e4e61a7464e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d6a59f97ee869f197e4e61a7464e44">&#9670;&#160;</a></span>Print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::Print </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00027.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ticks</em></span><span class="paramdefsep"> = </span><span class="paramdefval">120</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print a message to the HUD on the next line. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td></td></tr>
+    <tr><td class="paramname">ticks</td><td>number of ticks message will be visible. 60 ticks = 1 second. </td></tr>
   </table>
   </dd>
 </dl>

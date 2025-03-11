@@ -41,6 +41,7 @@ var a00099 =
     [ "Gravity", "a00099.html#a4f87edb106af45f1b872107ca6d469ee", null ],
     [ "Health", "a00099.html#ad281de9af8128a67c25529c14830a1b9", null ],
     [ "Height", "a00099.html#a4e4df775dd17639b5c2cf68c4893b5c2", null ],
+    [ "IgnoreSectorHeightChange", "a00099.html#a5a487286abbfd5b0e01612c76be47364", null ],
     [ "ImpactType", "a00099.html#a20a0f31f8959182c0e1e26629ff231cf", null ],
     [ "InflictDamage", "a00099.html#a9873de4b22e903b980184debf05dbffa", null ],
     [ "InflictGenericDamage", "a00099.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a", null ],
