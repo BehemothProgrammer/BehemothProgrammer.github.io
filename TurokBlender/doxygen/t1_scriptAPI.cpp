@@ -177,6 +177,17 @@ enum EnumPlayerFlags
 	PF_NOTOUCH = 32768 ///< disables invoking onTouch callbacks
 };
 
+enum EnumPlayerFlags
+{
+    PS_WALKING = 0,
+    PS_JUMPING = 1,
+    PS_CLIMBING = 2,
+    PS_SWIMMING = 3,
+    PS_UNDERWATER = 4,
+    PS_FALLDEATH = 5,
+    PS_ANTIGRAVITY = 6
+}
+        
 enum EnumAIFlags
 {
 	AIF_ATTACKING = 1, ///< playing an attacking animation
@@ -1072,8 +1083,8 @@ public:
 	void InflictDamage(kActor@ inflictor, const kStr&in damageDef);
 	void InteractActorsAtPosition(const kVec3&in pos, const kStr&in callbackFunc, const float arg1 = 0, const float arg2 = 0, const float arg3 = 0, const float arg4 = 0);
 	kScriptObject@ ScriptObject();
-	void MoveToPosition(const float x, const float y);
-	bool RandomDecision(const int randomBit) const;
+	void MoveToPosition(const float x, const float y); ///< Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
+	bool RandomDecision(const int randomBit) const; ///< randomBit should be >= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.
 	void SetPosition(const kVec3&in pos); ///< best way to set an actors position, will also set the sector and clearinterpolation
     
     /**
@@ -1254,6 +1265,7 @@ public:
     const float ClimbJumpAmount() const;        ///< default = GAME_SCALE * 0.2875f
     const int OverrideShadow() const;           ///< default = 0
     const int OverrideWalkRun() const;          ///< default = 0
+    const int GetState(void) const;             ///< EnumPlayerStates
 };
 
 /**
@@ -1704,7 +1716,7 @@ public:
 	kStr GetInputImagePath(const kStr&in bindName);
 	bool InputImageExists(const kStr&in path);
 	void SetCursorHotPos(int x, int y); ///< change the mouses cursors click point (default is 0, 0)
-	void SetModBindings(const bool show = true); ///< Must call in void main(void). Shows custom mod bindings in menu Bindings > Actions
+	void SetModBindings(const bool show = true); ///< Shows custom mod bindings in menu Bindings > Actions
 	kStr PlayerName(); ///< Returns "Player" if could not get name
 	void MarkActorPersistentBit(const int actorIndex, const bool clear = false, const int hubID = -1, const int mapNum = 0); ///< an invalid hub or map uses current maps persistent data.
 	const bool IsActorPersistentMarked(const int actorIndex, const int hubID = -1, const int mapNum = 0); ///< an invalid hub or map uses current maps persistent data.

@@ -284,8 +284,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75cc2d13c7280d85b5b5e69097aee84a" id="r_a75cc2d13c7280d85b5b5e69097aee84a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00063.html">kScriptObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75cc2d13c7280d85b5b5e69097aee84a">ScriptObject</a> ()</td></tr>
 <tr class="separator:a75cc2d13c7280d85b5b5e69097aee84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f149d13b4aca5508f7b1752e2bf1f3" id="r_a73f149d13b4aca5508f7b1752e2bf1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f149d13b4aca5508f7b1752e2bf1f3">MoveToPosition</a> (const float x, const float y)</td></tr>
+<tr class="memdesc:a73f149d13b4aca5508f7b1752e2bf1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.  <br /></td></tr>
 <tr class="separator:a73f149d13b4aca5508f7b1752e2bf1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ec8c67a5ea963ad087c485467e8eb4" id="r_ad7ec8c67a5ea963ad087c485467e8eb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ec8c67a5ea963ad087c485467e8eb4">RandomDecision</a> (const int randomBit) const</td></tr>
+<tr class="memdesc:ad7ec8c67a5ea963ad087c485467e8eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">randomBit should be &gt;= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.  <br /></td></tr>
 <tr class="separator:ad7ec8c67a5ea963ad087c485467e8eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ec420a56fc677d7bd90838901564ac" id="r_a64ec420a56fc677d7bd90838901564ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64ec420a56fc677d7bd90838901564ac">SetPosition</a> (const <a class="el" href="a00035.html">kVec3</a> &amp;in pos)</td></tr>
 <tr class="memdesc:a64ec420a56fc677d7bd90838901564ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">best way to set an actors position, will also set the sector and clearinterpolation  <br /></td></tr>
@@ -397,7 +399,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base type used by all actors. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01004">1004</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01015">1015</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afbe4d54218a18928160884001f668930" name="afbe4d54218a18928160884001f668930"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbe4d54218a18928160884001f668930">&#9670;&#160;</a></span>AirFriction()</h2>
@@ -1479,6 +1481,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests. </p>
+
 </div>
 </div>
 <a id="a197fc4c6ad04c90ea06f94a4deb4fc11" name="a197fc4c6ad04c90ea06f94a4deb4fc11"></a>
@@ -1700,6 +1704,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>randomBit should be &gt;= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true. </p>
 
 </div>
 </div>

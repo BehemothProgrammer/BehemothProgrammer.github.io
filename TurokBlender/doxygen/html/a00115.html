@@ -263,6 +263,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ef69aedc2c802473bf3f81068ff8eda" id="r_a9ef69aedc2c802473bf3f81068ff8eda"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ef69aedc2c802473bf3f81068ff8eda">OverrideWalkRun</a> () const</td></tr>
 <tr class="memdesc:a9ef69aedc2c802473bf3f81068ff8eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">default = 0  <br /></td></tr>
 <tr class="separator:a9ef69aedc2c802473bf3f81068ff8eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf340d3887b342d8ad3bf59db5f982ba" id="r_adf340d3887b342d8ad3bf59db5f982ba"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf340d3887b342d8ad3bf59db5f982ba">GetState</a> (void) const</td></tr>
+<tr class="memdesc:adf340d3887b342d8ad3bf59db5f982ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">EnumPlayerStates.  <br /></td></tr>
+<tr class="separator:adf340d3887b342d8ad3bf59db5f982ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00099"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_a00099')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00099.html">kActor</a></td></tr>
 <tr class="memitem:aa9ef5fcde203b757e578f6b26992ffa1 inherit pub_methods_a00099" id="r_aa9ef5fcde203b757e578f6b26992ffa1"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00099.html#aa9ef5fcde203b757e578f6b26992ffa1">IsStale</a> () const</td></tr>
 <tr class="memdesc:aa9ef5fcde203b757e578f6b26992ffa1 inherit pub_methods_a00099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actor is marked as removed and is waiting to be freed from memory when it next checks if there are no more references to this actor.  <br /></td></tr>
@@ -422,8 +425,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a75cc2d13c7280d85b5b5e69097aee84a inherit pub_methods_a00099" id="r_a75cc2d13c7280d85b5b5e69097aee84a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00063.html">kScriptObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00099.html#a75cc2d13c7280d85b5b5e69097aee84a">ScriptObject</a> ()</td></tr>
 <tr class="separator:a75cc2d13c7280d85b5b5e69097aee84a inherit pub_methods_a00099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73f149d13b4aca5508f7b1752e2bf1f3 inherit pub_methods_a00099" id="r_a73f149d13b4aca5508f7b1752e2bf1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00099.html#a73f149d13b4aca5508f7b1752e2bf1f3">MoveToPosition</a> (const float x, const float y)</td></tr>
+<tr class="memdesc:a73f149d13b4aca5508f7b1752e2bf1f3 inherit pub_methods_a00099"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.  <br /></td></tr>
 <tr class="separator:a73f149d13b4aca5508f7b1752e2bf1f3 inherit pub_methods_a00099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ec8c67a5ea963ad087c485467e8eb4 inherit pub_methods_a00099" id="r_ad7ec8c67a5ea963ad087c485467e8eb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00099.html#ad7ec8c67a5ea963ad087c485467e8eb4">RandomDecision</a> (const int randomBit) const</td></tr>
+<tr class="memdesc:ad7ec8c67a5ea963ad087c485467e8eb4 inherit pub_methods_a00099"><td class="mdescLeft">&#160;</td><td class="mdescRight">randomBit should be &gt;= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.  <br /></td></tr>
 <tr class="separator:ad7ec8c67a5ea963ad087c485467e8eb4 inherit pub_methods_a00099"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64ec420a56fc677d7bd90838901564ac inherit pub_methods_a00099" id="r_a64ec420a56fc677d7bd90838901564ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00099.html#a64ec420a56fc677d7bd90838901564ac">SetPosition</a> (const <a class="el" href="a00035.html">kVec3</a> &amp;in pos)</td></tr>
 <tr class="memdesc:a64ec420a56fc677d7bd90838901564ac inherit pub_methods_a00099"><td class="mdescLeft">&#160;</td><td class="mdescRight">best way to set an actors position, will also set the sector and clearinterpolation  <br /></td></tr>
@@ -534,7 +539,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01206">1206</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01217">1217</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aae604caf5d18c68f857136a46928612a" name="aae604caf5d18c68f857136a46928612a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae604caf5d18c68f857136a46928612a">&#9670;&#160;</a></span>ClimbJumpAmount()</h2>
@@ -552,6 +557,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>default = GAME_SCALE * 0.2875f </p>
+
+</div>
+</div>
+<a id="adf340d3887b342d8ad3bf59db5f982ba" name="adf340d3887b342d8ad3bf59db5f982ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf340d3887b342d8ad3bf59db5f982ba">&#9670;&#160;</a></span>GetState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPuppet::GetState </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EnumPlayerStates. </p>
 
 </div>
 </div>

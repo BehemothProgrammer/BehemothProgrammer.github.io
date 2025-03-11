@@ -25,13 +25,15 @@ OnTick				<--- called only when awake
 ---
 OnMenuTick          <--- called only when dummymenu active
 ---
+OnRemoved           <--- called when actor is removed (Internally or through scripting). IsStale will return true immediately after this.
+---
 OnActivate			<--- called immediately after World.TriggerActorsByTID and when player enters event sector area only if AF_ACTIVATED is Off
 ---
 OnPreDamage         <--- always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.
 OnDeath				<--- called only when actor dies (health > 0 and health - dmg <= 0). The actors Target TID is automatically used to trigger actors at this point.
 OnDamage			<--- always called when damaged even after death. Health is reduced after this by dmg only if health was greater than 0
 ---
-OnEndLevel			<--- Do not call any map scripts at this point
+OnEndLevel			<--- called when map unloads
 \endverbatim
 
 \section sofuncs <H3>ScriptObject Functions</H3>
@@ -47,6 +49,7 @@ void OnTouch(kActor @theActorThatTouchedMe) //called even if alseep
 void OnCollide(kCModel@) //called even if alseep
 void OnTick() - Required for all ScriptObject
 void OnMenuTick() - called only when dummymenu active
+void OnRemoved() - called when actor is removed (Internally or through scripting). IsStale will return true immediately after this.
 void OnActivate()
 void OnDeactivate() //Never used
 void OnPreDamage(kActor @instigator, kDictMem @damageDef, const int damage) //always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.

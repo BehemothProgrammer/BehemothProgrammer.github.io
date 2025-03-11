@@ -1,6 +1,7 @@
 var a00115 =
 [
     [ "ClimbJumpAmount", "a00115.html#aae604caf5d18c68f857136a46928612a", null ],
+    [ "GetState", "a00115.html#adf340d3887b342d8ad3bf59db5f982ba", null ],
     [ "GroundBackwardAccel", "a00115.html#a224f4bf36bd035f692579b1fc348d7ce", null ],
     [ "GroundBackwardSpeed", "a00115.html#ada1b31d6fd764f16941ea66182d7d3ce", null ],
     [ "GroundDeaccel", "a00115.html#a3dffe6edcb47ef997eb69fd05d0eaf9b", null ],
