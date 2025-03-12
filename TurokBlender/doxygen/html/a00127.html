@@ -130,11 +130,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6094f8f152436fc9fd501cc25d17b6b6" id="r_a6094f8f152436fc9fd501cc25d17b6b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00099.html">kActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6094f8f152436fc9fd501cc25d17b6b6">ContactActor</a> ()</td></tr>
 <tr class="memdesc:a6094f8f152436fc9fd501cc25d17b6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle pointer to actor that was collided (null if none was collided)  <br /></td></tr>
 <tr class="separator:a6094f8f152436fc9fd501cc25d17b6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86ed548f1903ec061bd17541803e2cd" id="r_aa86ed548f1903ec061bd17541803e2cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00035.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa86ed548f1903ec061bd17541803e2cd">MoveDirection</a> ()</td></tr>
+<tr class="memdesc:aa86ed548f1903ec061bd17541803e2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement vector of the object.  <br /></td></tr>
+<tr class="separator:aa86ed548f1903ec061bd17541803e2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="a00127.html" title="The kCModel(CModel) global stores collision results when certain actor methods are called....">kCModel(CModel)</a> global stores collision results when certain actor methods are called. Those methods are as follows: GetSectorIndexAtLocation const bool CanSee(<a class="el" href="a00099.html" title="Base type used by all actors.">kActor</a>@, const uint = 0) MoveToPosition SpawnProjectile bool CheckPosition(const kVec3 &amp;in) </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01335">1335</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01338">1338</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8f2ce33c8b847339a444beac8378b6b4" name="a8f2ce33c8b847339a444beac8378b6b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8f2ce33c8b847339a444beac8378b6b4">&#9670;&#160;</a></span>ClipResult()</h2>
@@ -228,6 +231,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns the vector that intersected the collided geometry. </p>
+
+</div>
+</div>
+<a id="aa86ed548f1903ec061bd17541803e2cd" name="aa86ed548f1903ec061bd17541803e2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86ed548f1903ec061bd17541803e2cd">&#9670;&#160;</a></span>MoveDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00035.html">kVec3</a> &amp; kCModel::MoveDirection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Movement vector of the object. </p>
 
 </div>
 </div>

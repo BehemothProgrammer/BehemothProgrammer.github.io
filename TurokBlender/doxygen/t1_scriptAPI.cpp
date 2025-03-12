@@ -1150,6 +1150,9 @@ public:
 	float& WaterFriction(); ///< default = 0.5f (same as Friction)
 	float& Mass(); ///< default = GAME_SCALE * 1.0f
 	const float GetSkyHeight() const;
+    bool &ChildOfTarget(void); ///< if this actors Target is an actor that belongs to the owner of the Fx, explosion or melee attack then won't collide/get damaged.
+    kVec3 DamageOrigin(void) const; ///< The Origin point of the attacker (Fx, Actor, or null (returns this actors origin in that case)) who damaged this actor last. Gets set before OnPreDamage.
+    kVec3 DamageVelocity(void) const; ///< The Velocity of the attacker (Fx, Actor, or null (returns this actors velocity in that case)) who damaged this actor last. Gets set before OnPreDamage.
 	const bool CanSee(kPuppet@ puppet, const uint excludeClipFlags = 0); ///< excludeClipFlags to ignore/disable (EnumClipFlags). Note: This function that takes in the kPuppet arg is only available for kActor, not for kPuppet or kAI or kWeapon.
 };
 
@@ -1340,6 +1343,7 @@ public:
 	const float& Fraction(); ///< returns the 0.0 - 1.0 range of the point of intersection from start to end trace. (If fraction is == 1.0 then no intersection occured.)
 	const uint ClipResult(); ///< specifies the type of intersection (flags)
 	kActor@ ContactActor(); ///< handle pointer to actor that was collided (null if none was collided)
+    kVec3& MoveDirection(); ///< Movement vector of the object
 };
 
 class kPlayLoop
