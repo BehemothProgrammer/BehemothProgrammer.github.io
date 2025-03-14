@@ -5,6 +5,7 @@ var a00131 =
     [ "ChangeMap", "a00131.html#a900f6e8c1713c775455ea1ca8c87eea5", null ],
     [ "CheckKeys", "a00131.html#a82ced3771b581ec19d74110b19d697d5", null ],
     [ "CheckWarping", "a00131.html#a59adbfb3724be62ed444d1d5948c67bb", null ],
+    [ "ClearWarpInterpolation", "a00131.html#a188c80bcd78e275ab443750f51f0b8c9", null ],
     [ "HandlePlayerDeath", "a00131.html#a66cadf911ddf2c272d8634dcc3c8521a", null ],
     [ "NewMapWarpTID", "a00131.html#ac49bb959dc52318414492fb6b705248c", null ],
     [ "RemoveBossActor", "a00131.html#ad569a6b531680d14e5b146aaf3f3fdaa", null ],

@@ -11,7 +11,7 @@ var searchData=
   ['enumcamerastates_8',['EnumCameraStates',['../a00002.html#ab498177c17802a7bd8b867d4757971e8',1,'t1_scriptAPI.cpp']]],
   ['enumclipflags_9',['EnumClipFlags',['../a00002.html#a3f77cb5ac956672e1e1471570357030c',1,'t1_scriptAPI.cpp']]],
   ['enumclipresultflags_10',['EnumClipResultFlags',['../a00002.html#a3871eb3e81ea144e97909e770fc809e0',1,'t1_scriptAPI.cpp']]],
-  ['enumdifficulty_11',['EnumDifficulty',['../a00002.html#ad2d71bfb758a2e17bf72d27b0113095e',1,'t1_scriptAPI.cpp']]],
+  ['enumgamebuttonevents_11',['EnumGameButtonEvents',['../a00002.html#a8f760ce871a7848f450b0e85835feb6d',1,'t1_scriptAPI.cpp']]],
   ['enumgamefonttype_12',['EnumGameFontType',['../a00002.html#a114c570d0e038714966b85c131c56a2d',1,'t1_scriptAPI.cpp']]],
   ['enumimpacttype_13',['EnumImpactType',['../a00002.html#a6499f7b8f6430ac669788ed4c13cecd7',1,'t1_scriptAPI.cpp']]],
   ['enuminputactions_14',['EnumInputActions',['../a00002.html#a535fd14ac2206cff551e68d507e620c0',1,'t1_scriptAPI.cpp']]],

@@ -146,10 +146,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac49bb959dc52318414492fb6b705248c" id="r_ac49bb959dc52318414492fb6b705248c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac49bb959dc52318414492fb6b705248c">NewMapWarpTID</a> ()</td></tr>
 <tr class="memdesc:ac49bb959dc52318414492fb6b705248c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the warp TID the player warped to from another map. Returns -1 of didn't warp from another map. Check before OnPostBeginLevel.  <br /></td></tr>
 <tr class="separator:ac49bb959dc52318414492fb6b705248c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a188c80bcd78e275ab443750f51f0b8c9" id="r_a188c80bcd78e275ab443750f51f0b8c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a188c80bcd78e275ab443750f51f0b8c9">ClearWarpInterpolation</a> (void)</td></tr>
+<tr class="memdesc:a188c80bcd78e275ab443750f51f0b8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clearing the interpolation for <a class="el" href="a00115.html">kPuppet</a> will also clear the warp interpolation.  <br /></td></tr>
+<tr class="separator:a188c80bcd78e275ab443750f51f0b8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01349">1349</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01363">1363</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aece30c12d3ffe2f79d41a93af87a9826" name="aece30c12d3ffe2f79d41a93af87a9826"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aece30c12d3ffe2f79d41a93af87a9826">&#9670;&#160;</a></span>CanOpenPauseMenu()</h2>
@@ -241,6 +244,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks if Warping or FreeWarping is in progress. </p>
+
+</div>
+</div>
+<a id="a188c80bcd78e275ab443750f51f0b8c9" name="a188c80bcd78e275ab443750f51f0b8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188c80bcd78e275ab443750f51f0b8c9">&#9670;&#160;</a></span>ClearWarpInterpolation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayLoop::ClearWarpInterpolation </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clearing the interpolation for <a class="el" href="a00115.html">kPuppet</a> will also clear the warp interpolation. </p>
 
 </div>
 </div>

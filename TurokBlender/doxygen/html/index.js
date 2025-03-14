@@ -11,5 +11,6 @@ var index =
     [ "Spawn A Shoot Only Actor", "index.html#shootactor", null ],
     [ "kfont file", "index.html#kfont", null ],
     [ "Sound Shader", "index.html#soundshader", null ],
+    [ "GameVariables Special Keys", "index.html#gamevars", null ],
     [ "Difficulty", "index.html#difficulty", null ]
 ];

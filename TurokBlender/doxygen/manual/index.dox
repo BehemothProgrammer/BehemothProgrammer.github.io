@@ -337,6 +337,50 @@ sounds[1] = //number of sounds in this shader
 }
 \endverbatim
 
+\section gamevars <H3>GameVariables Special Keys</H3>
+\verbatim
+Float:
+    player.groundForwardSpeed   // Get and Set all these player variables using the kPuppet functions instead.
+    player.groundBackwardSpeed
+    player.groundStrafeSpeed
+    player.groundForwardAccel
+    player.groundBackwardAccel
+    player.groundStrafeAccel
+    player.groundDeaccel
+    player.swimForwardSpeed
+    player.swimBackwardSpeed
+    player.swimStrafeSpeed
+    player.swimForwardAccel
+    player.swimBackwardAccel
+    player.swimStrafeAccel
+    player.swimDeaccel
+    player.jumpMinSpeed
+    player.jumpMaxSpeed
+    player.jumpClimbSpeed
+Int:
+    g_difficulty                // Use Game.GetDifficulty or Game.SetDifficulty instead.
+    g_startmap                  // The map to start on when starting a new game
+    g_restartmap                // The map to go to when restart game is called
+    g_trainingmap               // The map to go to when starting training or time trial
+    g_creditsmap                // The map to go to when starting the credits
+    g_gallerymap                // The map to go to when entering the gallery
+    g_hubmapid                  // The map to go to when using the all keys cheat
+    g_hubwarptid                // The warp TID to warp to when using the all keys cheat
+    chronoPieceFlags            // Each bit indicates if that chrono piece has been picked up. Important: This key must be added through the scripts!
+    player.overrideShadow       // Get: Player.Actor().OverrideShadow()  Set: Player.Actor().SetOverrideShadow();  0=none, 1=Force Disable shadow, 2=Force Enable shadow
+    player.overrideWalkRun      // Get: Player.Actor().OverrideWalkRun()  Set: Player.Actor().SetOverrideWalkRun();  0=none, 1=Force Disable Walk
+    OverrideFogType             // Set: Game.OverrideFogType();  Get: GameVariables.GetInt("OverrideFogType", result);  0=none, 1=force Radial, 2=force Plane
+    OverridePerPolyCollision    // Set: Game.OverridePerPolyCollision();  Get: GameVariables.GetInt("OverridePerPolyCollision", result);  0=none, 1=force disable, 2=force enable
+    ConfirmMenuResult           // Get: GameVariables.GetInt("ConfirmMenuResult", result);  Set: GameVariables.SetValue("ConfirmMenuResult", "0");
+    g_loadedgame                // Check OnBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after Map Script 0 is called.
+Bool:
+    g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel.
+    g_resetboss                 // is set to 1 when warping to the boss using the warp boss cheats. This sets them to their initial state. Is set back to 0 after OnPostBeginLevel is called.
+    g_timetrial                 // is set to 1 when selecting time trial from the menu. Is set back to 0 after OnPostBeginLevel is called.
+    DisableUnderwaterMusic      // Use GameVariables.SetValue("DisableUnderwaterMusic", "1");
+    DisableWaterReflection      // Use GameVariables.SetValue("DisableWaterReflection", "1");
+\endverbatim
+
 \section difficulty <H3>Difficulty</H3>
 \verbatim
 Easy:

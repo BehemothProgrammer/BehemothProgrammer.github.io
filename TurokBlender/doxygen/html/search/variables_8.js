@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['pi_0',['pi',['../a00018.html#ae181f30e737d54b2590f715d5f6674ba',1,'Math']]],
-  ['pitch_1',['pitch',['../a00123.html#a3d28871f0c311e58ef322798c5316964',1,'kCamera']]],
-  ['player_2',['Player',['../a00002.html#a584923e56dc2b4c98227a52b433f8bef',1,'t1_scriptAPI.cpp']]],
-  ['playloop_3',['PlayLoop',['../a00002.html#aa929f26463d21778287c9e79cb992d41',1,'t1_scriptAPI.cpp']]]
+  ['obj_0',['obj',['../a00063.html#a93ceffe87470f76b7bbd0c81fe63ff79',1,'kScriptObject']]],
+  ['orange_1',['orange',['../a00019.html#ad71232d3c7d1b1826e4c6134391c239c',1,'kexColors']]],
+  ['origin_2',['origin',['../a00123.html#a3b0a88e622e164f3e7a29e84362ba6f2',1,'kCamera']]]
 ];

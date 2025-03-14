@@ -325,6 +325,20 @@ enum EnumPlayerConButtons
 	CBC_MENUACTIVATE = 33554432
 };
 
+enum EnumGameButtonEvents
+{
+	GBE_MENU_UP = 1,
+	GBE_MENU_RIGHT = 2,
+	GBE_MENU_DOWN = 4,
+	GBE_MENU_LEFT = 8,
+	GBE_MENU_SELECT = 16,
+	GBE_MENU_CANCEL = 32,
+	GBE_MENU_BACK = 64,
+	GBE_MENU_ACTIVATE = 128,
+	GBE_MENU_DESELECT = 256,
+	GBE_MENU_MOUSESELECT = 512
+}
+
 enum EnumDifficulty
 {
 	DIFFICULTY_EASY = 0,
@@ -1362,6 +1376,7 @@ public:
 	const bool CanOpenPauseMenu(); ///< Checks if it's okay to be able to open a menu
 	const bool CanOpenSaveMenu(); ///< Checks if it's okay to be able to open the save menu
     const int NewMapWarpTID(); ///< Returns the warp TID the player warped to from another map. Returns -1 of didn't warp from another map. Check before OnPostBeginLevel.
+    void ClearWarpInterpolation(void); ///< Clearing the interpolation for kPuppet will also clear the warp interpolation.
 };
 
 class kSys
@@ -1548,7 +1563,8 @@ public:
 	void RemoveTimer();
 	void ChangeMap(const kStr&in path);
 	void ShowMainMenu(const bool mouseCenter = true);
-	const int GetMapNumberFromName(const kStr&in mapName);
+	const int GetMapNumberFromName(const kStr&in mapName); ///< This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle".
+    const int GetMapIDFromName(const kStr &in mapName); ///< This returns the mapID from the mapName
 	const int GetCurrentMapID();
 	const int GetDifficulty(); ///< EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty")
 	void SetDifficulty(const int value); ///< EnumDifficulty
@@ -1621,6 +1637,7 @@ public:
 	void SetPickupFlash(); ///< Shows the pickup screen flash
 	void SetArmorFlash(); ///< Shows the armor damage screen flash
 	const uint ConButtons(); ///< EnumPlayerConButtons
+    uint MenuButtons(void) ///< EnumGameButtonEvents
 	const int64 GetTimestamp();
 	void GetDateAndTime(int&out seconds, int&out minutes, int&out hours, int&out day, int&out month, int&out year, kStr&out text);
 	void KillAllFx();

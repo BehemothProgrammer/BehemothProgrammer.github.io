@@ -175,14 +175,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ffdb4dbe8f7244d4a71326237b2f18d" id="r_a7ffdb4dbe8f7244d4a71326237b2f18d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ffdb4dbe8f7244d4a71326237b2f18d">ShowMainMenu</a> (const bool mouseCenter=true)</td></tr>
 <tr class="separator:a7ffdb4dbe8f7244d4a71326237b2f18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad95b8fb17f55ee8219470f52a653c4" id="r_a5ad95b8fb17f55ee8219470f52a653c4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ad95b8fb17f55ee8219470f52a653c4">GetMapNumberFromName</a> (const <a class="el" href="a00027.html">kStr</a> &amp;in mapName)</td></tr>
+<tr class="memdesc:a5ad95b8fb17f55ee8219470f52a653c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle".  <br /></td></tr>
 <tr class="separator:a5ad95b8fb17f55ee8219470f52a653c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66a9b5d2b254b9e9199b31810921f404" id="r_a66a9b5d2b254b9e9199b31810921f404"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a9b5d2b254b9e9199b31810921f404">GetMapIDFromName</a> (const <a class="el" href="a00027.html">kStr</a> &amp;in mapName)</td></tr>
+<tr class="memdesc:a66a9b5d2b254b9e9199b31810921f404"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the mapID from the mapName.  <br /></td></tr>
+<tr class="separator:a66a9b5d2b254b9e9199b31810921f404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d6a9d7cb22096ad22c4f6c1e801ba0" id="r_a00d6a9d7cb22096ad22c4f6c1e801ba0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d6a9d7cb22096ad22c4f6c1e801ba0">GetCurrentMapID</a> ()</td></tr>
 <tr class="separator:a00d6a9d7cb22096ad22c4f6c1e801ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa439bc57a730007590ef99cb8836e270" id="r_aa439bc57a730007590ef99cb8836e270"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa439bc57a730007590ef99cb8836e270">GetDifficulty</a> ()</td></tr>
-<tr class="memdesc:aa439bc57a730007590ef99cb8836e270"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>. Internally calls GameVariables.GetInt("g_difficulty")  <br /></td></tr>
+<tr class="memdesc:aa439bc57a730007590ef99cb8836e270"><td class="mdescLeft">&#160;</td><td class="mdescRight">EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty")  <br /></td></tr>
 <tr class="separator:aa439bc57a730007590ef99cb8836e270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dcb38383e426b49af11e5caebb16160" id="r_a6dcb38383e426b49af11e5caebb16160"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dcb38383e426b49af11e5caebb16160">SetDifficulty</a> (const int value)</td></tr>
-<tr class="memdesc:a6dcb38383e426b49af11e5caebb16160"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>.  <br /></td></tr>
+<tr class="memdesc:a6dcb38383e426b49af11e5caebb16160"><td class="mdescLeft">&#160;</td><td class="mdescRight">EnumDifficulty.  <br /></td></tr>
 <tr class="separator:a6dcb38383e426b49af11e5caebb16160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8aa16bf7f9f4a4f450711dbd6dbb45c" id="r_ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8aa16bf7f9f4a4f450711dbd6dbb45c">GetGameSpeed</a> ()</td></tr>
 <tr class="separator:ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,8 +273,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94b0394ad037964c9368575f03f2c879" id="r_a94b0394ad037964c9368575f03f2c879"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94b0394ad037964c9368575f03f2c879">ConButtons</a> ()</td></tr>
 <tr class="memdesc:a94b0394ad037964c9368575f03f2c879"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a04027a70cb906a4569af4fac41b3136e">EnumPlayerConButtons</a>.  <br /></td></tr>
 <tr class="separator:a94b0394ad037964c9368575f03f2c879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de4ea723466b010f1ec6a8df7287a30" id="r_a1de4ea723466b010f1ec6a8df7287a30"><td class="memItemLeft" align="right" valign="top">const int64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1de4ea723466b010f1ec6a8df7287a30">GetTimestamp</a> ()</td></tr>
-<tr class="separator:a1de4ea723466b010f1ec6a8df7287a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd6e5c2eeec834b144dc7490a145db3" id="r_abdd6e5c2eeec834b144dc7490a145db3"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdd6e5c2eeec834b144dc7490a145db3">MenuButtons</a> (void) const int64 GetTimestamp()</td></tr>
+<tr class="separator:abdd6e5c2eeec834b144dc7490a145db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae19aa231c72bb53d361ab2de46cbd8b2" id="r_ae19aa231c72bb53d361ab2de46cbd8b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae19aa231c72bb53d361ab2de46cbd8b2">GetDateAndTime</a> (int &amp;out seconds, int &amp;out minutes, int &amp;out hours, int &amp;out day, int &amp;out month, int &amp;out year, <a class="el" href="a00027.html">kStr</a> &amp;out text)</td></tr>
 <tr class="separator:ae19aa231c72bb53d361ab2de46cbd8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a094f7d8cf4a85b58108d4c25f52cbd75" id="r_a094f7d8cf4a85b58108d4c25f52cbd75"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a094f7d8cf4a85b58108d4c25f52cbd75">KillAllFx</a> ()</td></tr>
@@ -472,7 +476,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01501">1501</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01516">1516</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1102,9 +1106,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01909">t1_scriptAPI.cpp:1909</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01912">t1_scriptAPI.cpp:1912</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01910">t1_scriptAPI.cpp:1910</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01926">t1_scriptAPI.cpp:1926</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01929">t1_scriptAPI.cpp:1929</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01927">t1_scriptAPI.cpp:1927</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -1293,7 +1297,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>. Internally calls GameVariables.GetInt("g_difficulty") </p>
+<p>EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty") </p>
 
 </div>
 </div>
@@ -1415,6 +1419,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a66a9b5d2b254b9e9199b31810921f404" name="a66a9b5d2b254b9e9199b31810921f404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66a9b5d2b254b9e9199b31810921f404">&#9670;&#160;</a></span>GetMapIDFromName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kGame::GetMapIDFromName </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00027.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>mapName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This returns the mapID from the mapName. </p>
+
+</div>
+</div>
 <a id="a5ad95b8fb17f55ee8219470f52a653c4" name="a5ad95b8fb17f55ee8219470f52a653c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5ad95b8fb17f55ee8219470f52a653c4">&#9670;&#160;</a></span>GetMapNumberFromName()</h2>
 
@@ -1429,6 +1452,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle". </p>
 
 </div>
 </div>
@@ -1484,23 +1509,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="a00002.html#a114c570d0e038714966b85c131c56a2d">EnumGameFontType</a>. </p>
-
-</div>
-</div>
-<a id="a1de4ea723466b010f1ec6a8df7287a30" name="a1de4ea723466b010f1ec6a8df7287a30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1de4ea723466b010f1ec6a8df7287a30">&#9670;&#160;</a></span>GetTimestamp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int64 kGame::GetTimestamp </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -2063,6 +2071,23 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>an invalid hub or map uses current maps persistent data. </p>
+
+</div>
+</div>
+<a id="abdd6e5c2eeec834b144dc7490a145db3" name="abdd6e5c2eeec834b144dc7490a145db3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdd6e5c2eeec834b144dc7490a145db3">&#9670;&#160;</a></span>MenuButtons()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint kGame::MenuButtons </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2686,7 +2711,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>. </p>
+<p>EnumDifficulty. </p>
 
 </div>
 </div>

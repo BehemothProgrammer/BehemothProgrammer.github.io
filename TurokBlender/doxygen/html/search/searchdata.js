@@ -5,9 +5,9 @@ var indexSectionsWithContent =
   2: "km",
   3: "acimt",
   4: "abcdefghijklmnopqrstuvwyz~",
-  5: "abcfglmoprstvwxyz",
+  5: "abcdfglmoprstvwxyz",
   6: "cekp",
-  7: "abcdgilpw",
+  7: "abcgilpw",
   8: "acdfmptv"
 };
 

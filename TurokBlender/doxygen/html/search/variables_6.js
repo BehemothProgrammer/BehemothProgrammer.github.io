@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['magenta_0',['magenta',['../a00019.html#a00ee39d3ecf5a491379c3df7577ebde9',1,'kexColors']]]
+  ['lookzoffset_0',['lookZOffset',['../a00123.html#a660cca8552dee6e563bfb3847e1ed5f7',1,'kCamera']]]
 ];
