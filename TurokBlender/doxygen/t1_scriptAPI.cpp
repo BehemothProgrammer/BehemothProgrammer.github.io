@@ -177,7 +177,7 @@ enum EnumPlayerFlags
 	PF_NOTOUCH = 32768 ///< disables invoking onTouch callbacks
 };
 
-enum EnumPlayerFlags
+enum EnumPlayerStates
 {
     PS_WALKING = 0,
     PS_JUMPING = 1,
