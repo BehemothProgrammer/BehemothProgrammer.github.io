@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Map Format</title>
+<title>Turok: kPlayer Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,388 +102,1091 @@ $(function(){initNavTree('a00150.html',''); initResizable(true); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Map Format</div></div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00147.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">kPlayer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><pre class="fragment">//
-// Turok EX Map Format Specifications
-// 
-// By BehemothProgrammer
-// Revised: 07/03/19
-//
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a51530aa7c9b564d62c48f118ac59202f" id="r_a51530aa7c9b564d62c48f118ac59202f"><td class="memItemLeft" align="right" valign="top">const uint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51530aa7c9b564d62c48f118ac59202f">Buttons</a> () const</td></tr>
+<tr class="memdesc:a51530aa7c9b564d62c48f118ac59202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns <a class="el" href="a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78">EnumPlayerButtons</a>  <br /></td></tr>
+<tr class="separator:a51530aa7c9b564d62c48f118ac59202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90b7cc6d01c83b755c3f01d8c303c7f0" id="r_a90b7cc6d01c83b755c3f01d8c303c7f0"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90b7cc6d01c83b755c3f01d8c303c7f0">ButtonHeldTime</a> (const int btn)</td></tr>
+<tr class="memdesc:a90b7cc6d01c83b755c3f01d8c303c7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">btn type is <a class="el" href="a00002.html#a535fd14ac2206cff551e68d507e620c0">EnumInputActions</a>  <br /></td></tr>
+<tr class="separator:a90b7cc6d01c83b755c3f01d8c303c7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09bdf282de9c50d8bf21462590571f19" id="r_a09bdf282de9c50d8bf21462590571f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00118.html">kPuppet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09bdf282de9c50d8bf21462590571f19">Actor</a> ()</td></tr>
+<tr class="separator:a09bdf282de9c50d8bf21462590571f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735bca530c88d5c8bc495fe7d48fc1aa" id="r_a735bca530c88d5c8bc495fe7d48fc1aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735bca530c88d5c8bc495fe7d48fc1aa">ConsumeAmmo</a> (const int ammo, const bool preferredAmmo=true)</td></tr>
+<tr class="separator:a735bca530c88d5c8bc495fe7d48fc1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8601e769b44c3ce6f521a173ae7054e" id="r_af8601e769b44c3ce6f521a173ae7054e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8601e769b44c3ce6f521a173ae7054e">ConsumeAltAmmo</a> (const int ammo)</td></tr>
+<tr class="separator:af8601e769b44c3ce6f521a173ae7054e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed3467092239895a6307866bbae3dfac" id="r_aed3467092239895a6307866bbae3dfac"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed3467092239895a6307866bbae3dfac">GetAmmo</a> (const int weaponID) const</td></tr>
+<tr class="separator:aed3467092239895a6307866bbae3dfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f73209251df37713c7505c322f6d2a" id="r_a15f73209251df37713c7505c322f6d2a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f73209251df37713c7505c322f6d2a">GetAltAmmo</a> (const int weaponID) const</td></tr>
+<tr class="separator:a15f73209251df37713c7505c322f6d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad04697b2730dc03205fbc032b11136c7" id="r_ad04697b2730dc03205fbc032b11136c7"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad04697b2730dc03205fbc032b11136c7">HasAmmo</a> (const int weaponID, const bool checkAlt=true) const</td></tr>
+<tr class="memdesc:ad04697b2730dc03205fbc032b11136c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">if checkAlt is false only checks primary ammo  <br /></td></tr>
+<tr class="separator:ad04697b2730dc03205fbc032b11136c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0031e84971f5928addca949868858c2b" id="r_a0031e84971f5928addca949868858c2b"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0031e84971f5928addca949868858c2b">HasAltAmmo</a> (const int weaponID) const</td></tr>
+<tr class="separator:a0031e84971f5928addca949868858c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04bdbf3e87f45f54b1abb2737e8f0675" id="r_a04bdbf3e87f45f54b1abb2737e8f0675"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04bdbf3e87f45f54b1abb2737e8f0675">HasAltAmmo</a> () const</td></tr>
+<tr class="separator:a04bdbf3e87f45f54b1abb2737e8f0675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e077292ee5923b081b6484a0958195" id="r_ad3e077292ee5923b081b6484a0958195"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e077292ee5923b081b6484a0958195">HasWeapon</a> (const int weaponID) const</td></tr>
+<tr class="separator:ad3e077292ee5923b081b6484a0958195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20f009a0d4b047853e41db1bfbb16ca" id="r_aa20f009a0d4b047853e41db1bfbb16ca"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa20f009a0d4b047853e41db1bfbb16ca">UseAltAmmo</a> ()</td></tr>
+<tr class="separator:aa20f009a0d4b047853e41db1bfbb16ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a842f5956bad09cc5366b521a776c7c7c" id="r_a842f5956bad09cc5366b521a776c7c7c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842f5956bad09cc5366b521a776c7c7c">CurrentWeapon</a> () const</td></tr>
+<tr class="separator:a842f5956bad09cc5366b521a776c7c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48f202c2e1e7489d44508c8f66c4b89" id="r_ae48f202c2e1e7489d44508c8f66c4b89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48f202c2e1e7489d44508c8f66c4b89">GiveWeapon</a> (const int weaponID, const int ammo, const bool switchNewWeapon=true)</td></tr>
+<tr class="memdesc:ae48f202c2e1e7489d44508c8f66c4b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if gave ammo else returns false because already has full primary ammo. if switchNewWeapon is false it will not auto switch to the weapon.  <br /></td></tr>
+<tr class="separator:ae48f202c2e1e7489d44508c8f66c4b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab382a70aa56834574e3b1728b0e38baa" id="r_ab382a70aa56834574e3b1728b0e38baa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab382a70aa56834574e3b1728b0e38baa">RemoveWeapon</a> (const int weapon)</td></tr>
+<tr class="separator:ab382a70aa56834574e3b1728b0e38baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadeddfea49654de0ef80a704050b1227" id="r_aadeddfea49654de0ef80a704050b1227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadeddfea49654de0ef80a704050b1227">Lock</a> ()</td></tr>
+<tr class="separator:aadeddfea49654de0ef80a704050b1227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdfd0f51bac3e19927cad316465e0a3d" id="r_abdfd0f51bac3e19927cad316465e0a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdfd0f51bac3e19927cad316465e0a3d">Unlock</a> ()</td></tr>
+<tr class="separator:abdfd0f51bac3e19927cad316465e0a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d56113eb7f8fefd71791d6f36c61577" id="r_a2d56113eb7f8fefd71791d6f36c61577"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d56113eb7f8fefd71791d6f36c61577">Armor</a> ()</td></tr>
+<tr class="separator:a2d56113eb7f8fefd71791d6f36c61577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29d220020a1f54f85118a8e63b89cdd9" id="r_a29d220020a1f54f85118a8e63b89cdd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d220020a1f54f85118a8e63b89cdd9">Victory</a> (const int warpActorID=- 1, const int mapID=- 1)</td></tr>
+<tr class="separator:a29d220020a1f54f85118a8e63b89cdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d130e18d026002f6b896b73177a1e14" id="r_a8d130e18d026002f6b896b73177a1e14"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d130e18d026002f6b896b73177a1e14">Locked</a> () const</td></tr>
+<tr class="separator:a8d130e18d026002f6b896b73177a1e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f1d5e0a876e23d8785664e4838df5b" id="r_ad5f1d5e0a876e23d8785664e4838df5b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f1d5e0a876e23d8785664e4838df5b">Lives</a> () const</td></tr>
+<tr class="separator:ad5f1d5e0a876e23d8785664e4838df5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54a2c6e6e5162e733961bedc6ed5fa94" id="r_a54a2c6e6e5162e733961bedc6ed5fa94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a2c6e6e5162e733961bedc6ed5fa94">SetLives</a> (const int amount)</td></tr>
+<tr class="separator:a54a2c6e6e5162e733961bedc6ed5fa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0641da86e4711c5d119e0561bbf69e6c" id="r_a0641da86e4711c5d119e0561bbf69e6c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0641da86e4711c5d119e0561bbf69e6c">LifeForces</a> ()</td></tr>
+<tr class="separator:a0641da86e4711c5d119e0561bbf69e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fc2f56c6558d278924252b3f79eb81a" id="r_a6fc2f56c6558d278924252b3f79eb81a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc2f56c6558d278924252b3f79eb81a">SetLifeForces</a> (const int amount)</td></tr>
+<tr class="separator:a6fc2f56c6558d278924252b3f79eb81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62936b02bfb4a77f85b2a90e523cd702" id="r_a62936b02bfb4a77f85b2a90e523cd702"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62936b02bfb4a77f85b2a90e523cd702">Backpack</a> ()</td></tr>
+<tr class="separator:a62936b02bfb4a77f85b2a90e523cd702"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcad7691f35ceb7c8ecf3e80ce774a6" id="r_a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dcad7691f35ceb7c8ecf3e80ce774a6">RunWalkToggle</a> ()</td></tr>
+<tr class="separator:a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab31aa67b958296a91eca1fc32da3d67e" id="r_ab31aa67b958296a91eca1fc32da3d67e"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31aa67b958296a91eca1fc32da3d67e">NoLandClearVel</a> ()</td></tr>
+<tr class="memdesc:ab31aa67b958296a91eca1fc32da3d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true, when doing a hard landing you will not lose your velocity  <br /></td></tr>
+<tr class="separator:ab31aa67b958296a91eca1fc32da3d67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29512d41bb7e93a4f3f1dbf2e83c890a" id="r_a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29512d41bb7e93a4f3f1dbf2e83c890a">GiveAmmo</a> (const int weapon, const int amount, const bool altAmmo)</td></tr>
+<tr class="memdesc:a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set amount to negative values to take ammo  <br /></td></tr>
+<tr class="separator:a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41161389d55a084f9311f7fcc95aa4b3" id="r_a41161389d55a084f9311f7fcc95aa4b3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41161389d55a084f9311f7fcc95aa4b3">CurrentCheckPoint</a> ()</td></tr>
+<tr class="memdesc:a41161389d55a084f9311f7fcc95aa4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns warpTID  <br /></td></tr>
+<tr class="separator:a41161389d55a084f9311f7fcc95aa4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6543ccc8bbca31eb60659e62bf1a7a8a" id="r_a6543ccc8bbca31eb60659e62bf1a7a8a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6543ccc8bbca31eb60659e62bf1a7a8a">CurrentCheckPointMap</a> ()</td></tr>
+<tr class="separator:a6543ccc8bbca31eb60659e62bf1a7a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f3f23277ff6cf1d7a1a504d110ea262" id="r_a1f3f23277ff6cf1d7a1a504d110ea262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f3f23277ff6cf1d7a1a504d110ea262">SetCheckPoint</a> (const int warpTID, const int map)</td></tr>
+<tr class="separator:a1f3f23277ff6cf1d7a1a504d110ea262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac10388411b171ee372707e623b32a72a" id="r_ac10388411b171ee372707e623b32a72a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00038.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac10388411b171ee372707e623b32a72a">GetButtonAngles</a> () const</td></tr>
+<tr class="separator:ac10388411b171ee372707e623b32a72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafc55fd2da128959db67d58f88cc13be" id="r_aafc55fd2da128959db67d58f88cc13be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00038.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc55fd2da128959db67d58f88cc13be">GetButtonMovement</a> () const</td></tr>
+<tr class="separator:aafc55fd2da128959db67d58f88cc13be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c69b7eb7281d1ebb21b704219f8571" id="r_a72c69b7eb7281d1ebb21b704219f8571"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72c69b7eb7281d1ebb21b704219f8571">WeaponUsingAltAmmo</a> (const int weapon) const</td></tr>
+<tr class="separator:a72c69b7eb7281d1ebb21b704219f8571"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71bd381e47c3c9bdc54756556a33514e" id="r_a71bd381e47c3c9bdc54756556a33514e"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71bd381e47c3c9bdc54756556a33514e">SetWeaponUseAltAmmo</a> (const int weapon, const bool bToggle)</td></tr>
+<tr class="separator:a71bd381e47c3c9bdc54756556a33514e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae84777f87a954e684cb06f1f03a78e97" id="r_ae84777f87a954e684cb06f1f03a78e97"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84777f87a954e684cb06f1f03a78e97">WeaponAllowUnderwater</a> (const int weapon) const</td></tr>
+<tr class="separator:ae84777f87a954e684cb06f1f03a78e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9fcec891eddc985bf36853aac69843" id="r_acd9fcec891eddc985bf36853aac69843"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd9fcec891eddc985bf36853aac69843">ChangeWeapon</a> (const int weapon)</td></tr>
+<tr class="separator:acd9fcec891eddc985bf36853aac69843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d31b1f7906cea2c6e728df57ce8c3f4" id="r_a6d31b1f7906cea2c6e728df57ce8c3f4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d31b1f7906cea2c6e728df57ce8c3f4">PendingWeapon</a> () const</td></tr>
+<tr class="separator:a6d31b1f7906cea2c6e728df57ce8c3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68ecc9027548b29a5bc6b96412f13987" id="r_a68ecc9027548b29a5bc6b96412f13987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ecc9027548b29a5bc6b96412f13987">CycleNextWeapon</a> (const bool bCheckAmmo=false)</td></tr>
+<tr class="separator:a68ecc9027548b29a5bc6b96412f13987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000e427c74530a661603829ab1b03563" id="r_a000e427c74530a661603829ab1b03563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a000e427c74530a661603829ab1b03563">CyclePrevWeapon</a> (const bool bCheckAmmo=false)</td></tr>
+<tr class="separator:a000e427c74530a661603829ab1b03563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a8abe826af3d6175c330820ffdc111" id="r_a20a8abe826af3d6175c330820ffdc111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00110.html">kWeapon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20a8abe826af3d6175c330820ffdc111">GetWeaponActor</a> (const int weapon)</td></tr>
+<tr class="separator:a20a8abe826af3d6175c330820ffdc111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7345ef2668796ad80f93a060bf3634a" id="r_ac7345ef2668796ad80f93a060bf3634a"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7345ef2668796ad80f93a060bf3634a">MaxHealth</a> ()</td></tr>
+<tr class="memdesc:ac7345ef2668796ad80f93a060bf3634a"><td class="mdescLeft">&#160;</td><td class="mdescRight">should be &gt;= MaxExtraHealth and ExtraHealth  <br /></td></tr>
+<tr class="separator:ac7345ef2668796ad80f93a060bf3634a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7508f45e2fce32efab56c6512196649a" id="r_a7508f45e2fce32efab56c6512196649a"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7508f45e2fce32efab56c6512196649a">MaxExtraHealth</a> ()</td></tr>
+<tr class="memdesc:a7508f45e2fce32efab56c6512196649a"><td class="mdescLeft">&#160;</td><td class="mdescRight">should be &lt;= MaxHealth  <br /></td></tr>
+<tr class="separator:a7508f45e2fce32efab56c6512196649a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252b81e73d107f319390a0835de9065a" id="r_a252b81e73d107f319390a0835de9065a"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a252b81e73d107f319390a0835de9065a">ExtraHealth</a> ()</td></tr>
+<tr class="memdesc:a252b81e73d107f319390a0835de9065a"><td class="mdescLeft">&#160;</td><td class="mdescRight">should be &lt;= MaxExtraHealth  <br /></td></tr>
+<tr class="separator:a252b81e73d107f319390a0835de9065a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e60b0eda64d2ba2be8a7242f9ca979f" id="r_a5e60b0eda64d2ba2be8a7242f9ca979f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e60b0eda64d2ba2be8a7242f9ca979f">GiveHealth</a> (const int amount, const bool bMortalWound)</td></tr>
+<tr class="memdesc:a5e60b0eda64d2ba2be8a7242f9ca979f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes into account extra health, and max health values. 0 is full health, negative amounts gives extra health. if bMortalWound is true which is for 2 and ultra health then health goes up to maxExtraHealth.  <br /></td></tr>
+<tr class="separator:a5e60b0eda64d2ba2be8a7242f9ca979f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bcb1243ee40ced3c40f5f04e0906251" id="r_a5bcb1243ee40ced3c40f5f04e0906251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bcb1243ee40ced3c40f5f04e0906251">CancelSpiritualTime</a> (float blendTime=1.0f)</td></tr>
+<tr class="memdesc:a5bcb1243ee40ced3c40f5f04e0906251"><td class="mdescLeft">&#160;</td><td class="mdescRight">if in spirit mode then will set gamespeed back to 1.0f using the passed in blendTime  <br /></td></tr>
+<tr class="separator:a5bcb1243ee40ced3c40f5f04e0906251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71c14aedfb8280790cb78075d6abbdbd" id="r_a71c14aedfb8280790cb78075d6abbdbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c14aedfb8280790cb78075d6abbdbd">SetSpiritualTime</a> (const float time, const float blend)</td></tr>
+<tr class="memdesc:a71c14aedfb8280790cb78075d6abbdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">time = time until cancels the effect. Should SetGameSpeed after calling this.  <br /></td></tr>
+<tr class="separator:a71c14aedfb8280790cb78075d6abbdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58cecd2784fced6900e8b2e37d0778f6" id="r_a58cecd2784fced6900e8b2e37d0778f6"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58cecd2784fced6900e8b2e37d0778f6">GetSpiritualTime</a> () const</td></tr>
+<tr class="separator:a58cecd2784fced6900e8b2e37d0778f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee74fd0a9d56f095ec52d5fe5e58508" id="r_a4ee74fd0a9d56f095ec52d5fe5e58508"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee74fd0a9d56f095ec52d5fe5e58508">GetWeaponGroup</a> (const int weapon)</td></tr>
+<tr class="separator:a4ee74fd0a9d56f095ec52d5fe5e58508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac859f503f55a1bf9477cb412f9ba36de" id="r_ac859f503f55a1bf9477cb412f9ba36de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac859f503f55a1bf9477cb412f9ba36de">SetWeaponGroup</a> (const int weapon, const int group)</td></tr>
+<tr class="memdesc:ac859f503f55a1bf9477cb412f9ba36de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs.  <br /></td></tr>
+<tr class="separator:ac859f503f55a1bf9477cb412f9ba36de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa7b2abe7fd81f67d32410b3d5d81506" id="r_aaa7b2abe7fd81f67d32410b3d5d81506"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa7b2abe7fd81f67d32410b3d5d81506">SilentCheckPoints</a> (void)</td></tr>
+<tr class="memdesc:aaa7b2abe7fd81f67d32410b3d5d81506"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.  <br /></td></tr>
+<tr class="separator:aaa7b2abe7fd81f67d32410b3d5d81506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01774">1774</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a09bdf282de9c50d8bf21462590571f19" name="a09bdf282de9c50d8bf21462590571f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09bdf282de9c50d8bf21462590571f19">&#9670;&#160;</a></span>Actor()</h2>
 
-//-----------------------------------------------------------------------------
-//
-// What is this document for?
-//
-//-----------------------------------------------------------------------------
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00118.html">kPuppet</a> kPlayer::Actor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-This technical document explains the Turok Dinosaur Hunter Remastered .map file
-format and is targeted towards users with programming experience.
+</div>
+</div>
+<a id="a2d56113eb7f8fefd71791d6f36c61577" name="a2d56113eb7f8fefd71791d6f36c61577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d56113eb7f8fefd71791d6f36c61577">&#9670;&#160;</a></span>Armor()</h2>
 
-//-----------------------------------------------------------------------------
-//
-// Map Format
-//
-//-----------------------------------------------------------------------------
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16 &amp; kPlayer::Armor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-Map files (.MAP) are binary files that are read with offset addresses to data structures.
-It uses a kexArchive format which is also based directly on Iguana's archive format for their file structure in Turok 1 and 2.
-Having a good idea of how the archive format works will allow you to be able to parse the file,
-including data from the Turok 1 and 2 roms which applies to CARTDATA.DAT in Turok 1. And for N64 roms,
-same format except that the dwords are in big endian format.
+</div>
+</div>
+<a id="a62936b02bfb4a77f85b2a90e523cd702" name="a62936b02bfb4a77f85b2a90e523cd702"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62936b02bfb4a77f85b2a90e523cd702">&#9670;&#160;</a></span>Backpack()</h2>
 
-There are two types of archive formats: indexed and data sets. I'll start off with indexed:
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kPlayer::Backpack </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-In an indexed archive the header always begins with 4 bytes(int) which is the number of offsets. Then for N offsets you got 4 bytes(int).
-And there is 1 offset added to the end of the offsets that points to the end of the archive.
-Each offset is relative to the beginning of the archives header.
-These offsets can lead to 1 of 3 things; another indexed archive, a data set archive, or arbitrary data.
-If you want to determine the size of the data it's offsetting to, you can subtract the next offset with the current one.
-The archives have padded the data in rounds of 8/16 bytes.
+</div>
+</div>
+<a id="a90b7cc6d01c83b755c3f01d8c303c7f0" name="a90b7cc6d01c83b755c3f01d8c303c7f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90b7cc6d01c83b755c3f01d8c303c7f0">&#9670;&#160;</a></span>ButtonHeldTime()</h2>
 
-Data sets are similar, except that they begin with 8 bytes. first 4 bytes(int) being the stride size, and the second 4 bytes(int) is the count.
-Following that is a glob of bytes which is stride size * count (the data structure)
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint kPlayer::ButtonHeldTime </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>btn</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-//-----------------------------------------------------------------------------
-//
-// Step by step walkthrough of reading a map
-//
-//-----------------------------------------------------------------------------
+<p>btn type is <a class="el" href="a00002.html#a535fd14ac2206cff551e68d507e620c0">EnumInputActions</a> </p>
 
-So let's start by opening a .map file in a hex editor of your choice.
-The first thing you'll see is a indexed archive so that means the very first 4 bytes(int) in the file is the root archive headers number of offsets.
+</div>
+</div>
+<a id="a51530aa7c9b564d62c48f118ac59202f" name="a51530aa7c9b564d62c48f118ac59202f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51530aa7c9b564d62c48f118ac59202f">&#9670;&#160;</a></span>Buttons()</h2>
 
-You'll see that the value should be 7, for 7 offsets. (It'll say 8 if there's visibility tables for the map)
-Now let's read the first offset(the maps version number) for this root indexed archive(the next 4 bytes(int)).
-Go to that byte in your hex editor at 0 (start of header) + the first offset value.
-Which will take you to arbitrary data, 4 bytes(int), which we know is the maps version number and it's value should be 1.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint16 kPlayer::Buttons </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-Now let's go back to our root indexed archive and follow the second offset which will take us to another indexed archive which we already know has
-offsets related to the maps World Properties. This world indexed archive has 3 offsets.
+<p>returns <a class="el" href="a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78">EnumPlayerButtons</a> </p>
 
-The first offset in the world archive leads to arbitrary data:      Sunlight Direction  - 12 bytes (3 floats, xyz)
-The second offset in the world archive leads to arbitrary data:     Sunlight Color      - 16 bytes (4 floats, rgba)
-The third offset in the world archive leads to arbitrary data:      Ambient Color       - 16 bytes (4 floats, rgba)
+</div>
+</div>
+<a id="a5bcb1243ee40ced3c40f5f04e0906251" name="a5bcb1243ee40ced3c40f5f04e0906251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bcb1243ee40ced3c40f5f04e0906251">&#9670;&#160;</a></span>CancelSpiritualTime()</h2>
 
-Now let's go back to our root indexed archive and follow the third offset which will take us to a dataset archive which we know
-is just a string for the World Sky Material. Remember this is a dataset archive. We read the archive header;
-the first 4 bytes(int) being the size of each object in bytes, in this example is 29 (for: skies/skyMaterials/sky_brown and a 0 null byte at the end).
-the second 4 bytes(int) being the number of objects which is 1 (for 1 string).
-We then read the next 29 bytes as chars for our string of the World Sky Material (and you probably want to remove or not read the last 0 null character from the string).
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::CancelSpiritualTime </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>blendTime</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-Now let's go back to our root indexed archive and follow the fourth offset which will take us to a indexed archive (Collision) which has 3 offsets.
-The first offset leads to a dataset archive that is all the vertices in the map used for our sectors.
-Again, read it's header like you did with the World Sky Material string.
-the first 4 bytes(int) is the size in bytes that each vertice uses (which is 16 bytes)
-the second 4 bytes(int) being the number of vertices in the map.
+<p>if in spirit mode then will set gamespeed back to 1.0f using the passed in blendTime </p>
 
-name                bytes              notes    
----------------------------------------------------------
-Position            12 (3 floats)      xyz
-Height              4 (float)          The ceiling height
+</div>
+</div>
+<a id="acd9fcec891eddc985bf36853aac69843" name="acd9fcec891eddc985bf36853aac69843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9fcec891eddc985bf36853aac69843">&#9670;&#160;</a></span>ChangeWeapon()</h2>
 
-Let's follow the second offset in the Collision indexed archive which takes us to a dataset archive (SectorSets).
-Read the header to get the size(which is 64) and count.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::ChangeWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-name                bytes              notes    
----------------------------------------------------------
-flags               4 (uint)
-fog color           4 (4 bytes)        rgba
-water color         4 (4 bytes)        rgba
-fog zfar            4 (float)
-water zfar          4 (float)
-water height        4 (float)
-sky height          4 (float)
-sky speed           4 (float)
-blend length        4 (float)
-args                12 (6 int16)
-floor impact id     1 (byte)
-wall impact id      1 (byte)
-ambience            1 (byte)
-automap color ID    1 (byte)
-music               1 (byte)
-cull bits           1 (byte)           Kex editor assigns a default value of 255
-unused              2 (2 bytes)        unused bytes. both are always 0
+</div>
+</div>
+<a id="af8601e769b44c3ce6f521a173ae7054e" name="af8601e769b44c3ce6f521a173ae7054e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8601e769b44c3ce6f521a173ae7054e">&#9670;&#160;</a></span>ConsumeAltAmmo()</h2>
 
-Let's follow the third offset in the Collision indexed archive which takes us to a dataset archive (Sectors).
-Read the header to get the size(which is 18) and count. IMPORTANT NOTE: The kex editor saves sectors of size 18 bytes, however the original maps only stored 16 bytes of data that did not include draw order, which was added in TurokEX. So the size might be 16 or 18 depending on if it's from the original turok map editor or the kex editor.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::ConsumeAltAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ammo</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-name                bytes              notes    
----------------------------------------------------------
-SectorSet Index     2 (uint16)
-flags               2 (uint16)          This is exactly the same as the first 16 bits in the SectorSet flags
-indices             6 (3 uint16)        The 3 vertice indexes this sector uses
-edge links          6 (3 uint16)        The 3 edges of this sector. The index to the other sector that shares an edge with the current sector. If it's 0xffff then nothing is linked and the edge is a solid wall.
-draw order          2 (int16)          Prioritizes automap colors (in kex editor saved maps only)
+</div>
+</div>
+<a id="a735bca530c88d5c8bc495fe7d48fc1aa" name="a735bca530c88d5c8bc495fe7d48fc1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735bca530c88d5c8bc495fe7d48fc1aa">&#9670;&#160;</a></span>ConsumeAmmo()</h2>
 
-Now let's go back to our root indexed archive and follow the fifth offset which will take us to a indexed archive (Grid Bounds) which has 3 offsets.
-The first offset leads to a dataset archive that is the grid bounds size width and height. Read the header. Size and count should both be 2.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::ConsumeAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ammo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>preferredAmmo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-name                bytes              notes    
----------------------------------------------------------
-width               2 (int16)          number of grid bounds on the x axis
-height              2 (int16)          number of grid bounds on the y axis
+</div>
+</div>
+<a id="a41161389d55a084f9311f7fcc95aa4b3" name="a41161389d55a084f9311f7fcc95aa4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41161389d55a084f9311f7fcc95aa4b3">&#9670;&#160;</a></span>CurrentCheckPoint()</h2>
 
-The second offset in the Grid Bounds indexed archive leads to a dataset archive that is all the grid bounds min x and y position.
-Read the header. Size(which is 8) and count (which should be width*height).
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::CurrentCheckPoint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-name                bytes              notes    
----------------------------------------------------------
-min x               4 (float)
-min y               4 (float)
+<p>returns warpTID </p>
 
-The third offset in the Grid Bounds indexed archive leads to a dataset archive that is all the grid bounds max x and y position.
-Read the header. Size(which is 8) and count (which should be width*height).
+</div>
+</div>
+<a id="a6543ccc8bbca31eb60659e62bf1a7a8a" name="a6543ccc8bbca31eb60659e62bf1a7a8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6543ccc8bbca31eb60659e62bf1a7a8a">&#9670;&#160;</a></span>CurrentCheckPointMap()</h2>
 
-name                bytes              notes    
----------------------------------------------------------
-max x               4 (float)
-max y               4 (float)
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::CurrentCheckPointMap </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-Now let's go back to our root indexed archive and follow the sixth offset which will take us to a indexed archive (Grid Sections).
-The number of offsets is the number of grid sections.
-Each offset leads to a indexed archive which is the static meshes that the grid section contains and it has 2 offsets.
-The static meshes archives first offset leads to a dataset archive that is all the static meshes properties in this grid section.
-Read the header. Size(which is 88) and count.
+</div>
+</div>
+<a id="a842f5956bad09cc5366b521a776c7c7c" name="a842f5956bad09cc5366b521a776c7c7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a842f5956bad09cc5366b521a776c7c7c">&#9670;&#160;</a></span>CurrentWeapon()</h2>
 
-name                bytes              notes    
----------------------------------------------------------
-origin              12 (3 floats)      xyz
-scale               12 (3 floats)      xyz
-rotation            16 (4 floats)      quaternion xyzw
-bounding box min    12 (3 floats)      xyz
-bounding box max    12 (3 floats)      xyz
-texture index       4 (int)
-flags               4 (uint)
-sector index        4 (int)
-collision radius    4 (float)
-collision height    4 (float)
-cull bits           4 (int)            cull bits was used for vis culling and its only used in Hub 5. It's just a arbitrary flag. If the flag matches the bits set for the sector you're viewing in, then they're culled out. cull bits were manually set by hand by the developers. Kex Editor always sets this to a value of -1
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::CurrentWeapon </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-The second offset in the static meshes archive leads to a indexed archive (static meshes model files)
-The number of offsets is the number of static meshes in the grid section.
-Each offset leads to a dataset archive that is the string used for the static meshes model path.
+</div>
+</div>
+<a id="a68ecc9027548b29a5bc6b96412f13987" name="a68ecc9027548b29a5bc6b96412f13987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68ecc9027548b29a5bc6b96412f13987">&#9670;&#160;</a></span>CycleNextWeapon()</h2>
 
-Now let's go back to our root indexed archive and follow the seventh offset which will take us to a indexed archive (Actors) which has 3 offsets.
-The first offset leads to a dataset archive that is all the actors in the map properties. Read the header. Size(which is 140) and count.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::CycleNextWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bCheckAmmo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-name                   bytes              notes    
----------------------------------------------------------
-type                   4 (int)
-origin                 12 (3 floats)      xyz
-scale                  12 (3 floats)      xyz
-yaw                    4 (float)          in rads
-sector index           4 (int)
-bounding box min       12 (3 floats)      xyz
-bounding box max       12 (3 floats)      xyz
-sight range            4 (float)          squared
-sight fov              4 (float)          in rads
-loud range             4 (float)          squared
-quiet range            4 (float)          squared
-attack range           4 (float)          squared
-fly height             4 (float)          squared
-collision width        4 (float)          
-collision wall width   4 (float)         
-collision height       4 (float)
-collision dead height  4 (float)          also known as Step Height
-melee range            4 (float)          squared
-leash radius           4 (float)          squared
-trigger delay          4 (float)          
-species mask           4 (int)            unused in Turok EX. Kex editor sets this value to 255.
-Spawn Flags 1          4 (uint)
-Spawn Flags 2          4 (uint)
-Spawn Flags 3          2 (uint16)
-Health                 2 (int16)
-TID                    2 (int16)
-Target TID             2 (int16)
-Max Regenerations      2 (int16)
-Attack Chance          1 (byte)
-Trigger Anim           1 (byte)
-Variant                1 (sbyte)
-Texture                1 (sbyte)
-Params 1               1 (sbyte)
-Params 2               1 (sbyte)
+</div>
+</div>
+<a id="a000e427c74530a661603829ab1b03563" name="a000e427c74530a661603829ab1b03563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000e427c74530a661603829ab1b03563">&#9670;&#160;</a></span>CyclePrevWeapon()</h2>
 
-The second offset in the actors archive leads to a indexed archive (actors model files)
-The number of offsets is the number of actors in the map.
-Each offset leads to a dataset archive that is the string used for the actors model path.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::CyclePrevWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bCheckAmmo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-The third offset in the actors archive leads to a indexed archive (actors anim files)
-The number of offsets is the number of actors in the map.
-Each offset leads to a dataset archive that is the string used for the actors anim path.
+</div>
+</div>
+<a id="a252b81e73d107f319390a0835de9065a" name="a252b81e73d107f319390a0835de9065a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a252b81e73d107f319390a0835de9065a">&#9670;&#160;</a></span>ExtraHealth()</h2>
 
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16 &amp; kPlayer::ExtraHealth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-If there was only 7 offsets in the root indexed archive then you've read through the entire file! If you have an eighth offset then that will lead
-to the maps Visibility tables dataset archive which answers the question: which staticmeshes are visible from this sector. 
-Size 328 (example. number of static meshes / 8 (for each bit) then ceil it plus padding)
-Count 4207 (example. This is number of sectors in the map)
+<p>should be &lt;= MaxExtraHealth </p>
 
+</div>
+</div>
+<a id="a15f73209251df37713c7505c322f6d2a" name="a15f73209251df37713c7505c322f6d2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f73209251df37713c7505c322f6d2a">&#9670;&#160;</a></span>GetAltAmmo()</h2>
 
-Before you start writing your code to read/write the map you pretty much have to have
-a class/system for handling indexed/data set archives in place before hand.
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::GetAltAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
+</div>
+</div>
+<a id="aed3467092239895a6307866bbae3dfac" name="aed3467092239895a6307866bbae3dfac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed3467092239895a6307866bbae3dfac">&#9670;&#160;</a></span>GetAmmo()</h2>
 
-//-----------------------------------------------------------------------------
-//
-// Enums
-//
-//-----------------------------------------------------------------------------
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::GetAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-enum ActorSpawnFlags1
-{
-    Solid                 = (1 &lt;&lt; 0),
-    ProjectileAttack1     = (1 &lt;&lt; 1),
-    Leader                = (1 &lt;&lt; 2),
-    SnapToFloor           = (1 &lt;&lt; 3),
-    ExplosionDeath        = (1 &lt;&lt; 4),
-    ClimbWalls            = (1 &lt;&lt; 5),
-    ProjectileAttack2     = (1 &lt;&lt; 6),
-    NoRepeatExplosion     = (1 &lt;&lt; 7),
-    DieOnExplosion        = (1 &lt;&lt; 8),
-    Flocker               = (1 &lt;&lt; 9),
-    SlowEnemy             = (1 &lt;&lt; 10),
-    RandomResurrection    = (1 &lt;&lt; 11),
-    RandomFeignDeath      = (1 &lt;&lt; 12),
-    Kamikaze              = (1 &lt;&lt; 13),
-    AvoidPlayers          = (1 &lt;&lt; 14),
-    FloatInWaterOnDeath   = (1 &lt;&lt; 15),
-    Teleport              = (1 &lt;&lt; 16),
-    CastShadow            = (1 &lt;&lt; 17),
-    TeleportWait          = (1 &lt;&lt; 18),
-    UseStrongAttacks      = (1 &lt;&lt; 19),
-    UseWeakAttacks        = (1 &lt;&lt; 20),
-    Sniper                = (1 &lt;&lt; 21),
-    MeltOnDeath           = (1 &lt;&lt; 22),
-    AvoidWater            = (1 &lt;&lt; 23),
-    Flying                = (1 &lt;&lt; 24),
-    TeleportAvoidWater    = (1 &lt;&lt; 25),
-    TeleportAvoidCliffs   = (1 &lt;&lt; 26),
-    TriggerStuff          = (1 &lt;&lt; 27),
-    CannotCauseAFight     = (1 &lt;&lt; 28),
-    NoWallCollision       = (1 &lt;&lt; 29),
-    ScreenShake           = (1 &lt;&lt; 30),
-    RespawnAnimation      = (1 &lt;&lt; 31)
-}
+</div>
+</div>
+<a id="ac10388411b171ee372707e623b32a72a" name="ac10388411b171ee372707e623b32a72a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac10388411b171ee372707e623b32a72a">&#9670;&#160;</a></span>GetButtonAngles()</h2>
 
-enum ActorSpawnFlags2
-{
-    DropItemMask1           = (1 &lt;&lt; 0), //Explosive Shells
-    DropItemMask2           = (1 &lt;&lt; 1), //Grenade
-    DropItemMask3           = (1 &lt;&lt; 2), //Medium Health
-    DropItemMask4           = (1 &lt;&lt; 3), //Full Health
-    DropItemMask5           = (1 &lt;&lt; 4), //Ultra Health
-    DropItemMask6           = (1 &lt;&lt; 5), //Small Health
-    DropItemMask7           = (1 &lt;&lt; 6), //Large Health
-    DropItemMask8           = (1 &lt;&lt; 7), //Minigun ammo
-    DropItemMask9           = (1 &lt;&lt; 8), //Mortal Wound
-    DropItemMask10          = (1 &lt;&lt; 9), //Rockets
-    DropItemMask11          = (1 &lt;&lt; 10), //Shotgun Shells
-    DropItemMask12          = (1 &lt;&lt; 11), //Energy Cell
-    DropItemMask13          = (1 &lt;&lt; 12), //Large Energy Cell
-    DropItemMask14          = (1 &lt;&lt; 13), //Clip
-    RemoveOnCompletion      = (1 &lt;&lt; 14),
-    NoBlood                 = (1 &lt;&lt; 15),
-    HoldTriggerAnimation    = (1 &lt;&lt; 16),
-    ProjectileAttack3       = (1 &lt;&lt; 17),
-    ProjectileAttack4       = (1 &lt;&lt; 18),
-    DropItemOnDamage        = (1 &lt;&lt; 19),
-    NoAutomapDraw           = (1 &lt;&lt; 20),
-    AlternateMoves          = (1 &lt;&lt; 21),
-    AntiAliasingReduced     = (1 &lt;&lt; 22),
-    AntiAliasingFull        = (1 &lt;&lt; 23),
-    ProjectileAttack5       = (1 &lt;&lt; 24),
-    ProjectileAttack6       = (1 &lt;&lt; 25),
-    MortalWoundImpact       = (1 &lt;&lt; 26),
-    StayInWater             = (1 &lt;&lt; 27),
-    DeviceWarpDeath         = (1 &lt;&lt; 28),
-    StoreWarpReturn         = (1 &lt;&lt; 29),
-    ProjectileAttack7       = (1 &lt;&lt; 30),
-    ProjectileAttack8       = (1 &lt;&lt; 31)
-}
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00038.html">kVec3</a> kPlayer::GetButtonAngles </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-enum ActorSpawnFlags3
-{
-    ReturnWarp              = (1 &lt;&lt; 0),
-    PlayTriggerAnimOnce     = (1 &lt;&lt; 1),
-    RegenerateFromStart     = (1 &lt;&lt; 2),
-    WalkInStraightLine      = (1 &lt;&lt; 3),
-    KillOutsideOfView       = (1 &lt;&lt; 4),
-    NoThinker               = (1 &lt;&lt; 5),
-    AvoidPlayers2           = (1 &lt;&lt; 6),
-    NoViolentDeath          = (1 &lt;&lt; 7),
-    ProjectileAttack9       = (1 &lt;&lt; 8),
-    ProjectileAttack10      = (1 &lt;&lt; 9),
-    MakeSpawnAnimVisible    = (1 &lt;&lt; 10),
-    NoDrawOnCamera          = (1 &lt;&lt; 11)
-}
+</div>
+</div>
+<a id="aafc55fd2da128959db67d58f88cc13be" name="aafc55fd2da128959db67d58f88cc13be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafc55fd2da128959db67d58f88cc13be">&#9670;&#160;</a></span>GetButtonMovement()</h2>
 
-enum SpeciesMask //Unused. Here for completion.
-{
-    Raptor          = (1 &lt;&lt; 0),
-    Human1          = (1 &lt;&lt; 1),
-    SaberTiger      = (1 &lt;&lt; 2),
-    Dimetrodon      = (1 &lt;&lt; 3),
-    Triceratops     = (1 &lt;&lt; 4),
-    Moschops        = (1 &lt;&lt; 5),
-    Pteranodon      = (1 &lt;&lt; 6),
-    Subterranean    = (1 &lt;&lt; 7),
-    Leaper          = (1 &lt;&lt; 8),
-    Alien           = (1 &lt;&lt; 9),
-    Hulk            = (1 &lt;&lt; 10),
-    Robot           = (1 &lt;&lt; 11),
-    MantisBoss      = (1 &lt;&lt; 12)
-}
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00038.html">kVec3</a> kPlayer::GetButtonMovement </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
-enum SectorSetFlags
-{
-    Water                   = (1 &lt;&lt; 0),
-    Block                   = (1 &lt;&lt; 1),
-    Toggle                  = (1 &lt;&lt; 2),
-    Cliff                   = (1 &lt;&lt; 3),
-    Climb                   = (1 &lt;&lt; 4),
-    OneSided                = (1 &lt;&lt; 5),
-    Ceiling                 = (1 &lt;&lt; 6),
-    Crawl                   = (1 &lt;&lt; 7),
-    EnterCrawl              = (1 &lt;&lt; 8),
-    Hidden                  = (1 &lt;&lt; 9),
-    Entered                 = (1 &lt;&lt; 10),
-    Secret                  = (1 &lt;&lt; 11),
-    Restricted              = (1 &lt;&lt; 12),
-    SlopeTest               = (1 &lt;&lt; 13),
-    DeathPit                = (1 &lt;&lt; 14),
-    Mapped                  = (1 &lt;&lt; 15),
-    Event                   = (1 &lt;&lt; 16),
-    Reapeatable             = (1 &lt;&lt; 17),
-    Teleport                = (1 &lt;&lt; 18),
-    Damage                  = (1 &lt;&lt; 19),
-    DrawSky                 = (1 &lt;&lt; 20),
-    TeleportAir             = (1 &lt;&lt; 21),
-    Lava                    = (1 &lt;&lt; 22),
-    EventSound              = (1 &lt;&lt; 23),
-    AntiGravity             = (1 &lt;&lt; 24),
-    Ladder                  = (1 &lt;&lt; 25),
-    Checkpoint              = (1 &lt;&lt; 26),
-    SaveGame                = (1 &lt;&lt; 27),
-    WarpReturn              = (1 &lt;&lt; 28),
-    ShallowWater            = (1 &lt;&lt; 29),
-    DrawSun                 = (1 &lt;&lt; 30),
-    StoreWarpReturn         = (1 &lt;&lt; 31)
-}
+</div>
+</div>
+<a id="a58cecd2784fced6900e8b2e37d0778f6" name="a58cecd2784fced6900e8b2e37d0778f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58cecd2784fced6900e8b2e37d0778f6">&#9670;&#160;</a></span>GetSpiritualTime()</h2>
 
-enum StaticMeshFlags
-{
-    Collide             = (1 &lt;&lt; 0),
-    NoPolyCollision     = (1 &lt;&lt; 1),
-    NoDrawCamera        = (1 &lt;&lt; 2)
-}
-</pre> </div></div><!-- contents -->
-</div><!-- PageDoc -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kPlayer::GetSpiritualTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20a8abe826af3d6175c330820ffdc111" name="a20a8abe826af3d6175c330820ffdc111"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a8abe826af3d6175c330820ffdc111">&#9670;&#160;</a></span>GetWeaponActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00110.html">kWeapon</a> kPlayer::GetWeaponActor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ee74fd0a9d56f095ec52d5fe5e58508" name="a4ee74fd0a9d56f095ec52d5fe5e58508"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee74fd0a9d56f095ec52d5fe5e58508">&#9670;&#160;</a></span>GetWeaponGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::GetWeaponGroup </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29512d41bb7e93a4f3f1dbf2e83c890a" name="a29512d41bb7e93a4f3f1dbf2e83c890a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29512d41bb7e93a4f3f1dbf2e83c890a">&#9670;&#160;</a></span>GiveAmmo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kPlayer::GiveAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>altAmmo</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set amount to negative values to take ammo </p>
+
+</div>
+</div>
+<a id="a5e60b0eda64d2ba2be8a7242f9ca979f" name="a5e60b0eda64d2ba2be8a7242f9ca979f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e60b0eda64d2ba2be8a7242f9ca979f">&#9670;&#160;</a></span>GiveHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kPlayer::GiveHealth </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bMortalWound</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Takes into account extra health, and max health values. 0 is full health, negative amounts gives extra health. if bMortalWound is true which is for 2 and ultra health then health goes up to maxExtraHealth. </p>
+
+</div>
+</div>
+<a id="ae48f202c2e1e7489d44508c8f66c4b89" name="ae48f202c2e1e7489d44508c8f66c4b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48f202c2e1e7489d44508c8f66c4b89">&#9670;&#160;</a></span>GiveWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kPlayer::GiveWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ammo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>switchNewWeapon</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns true if gave ammo else returns false because already has full primary ammo. if switchNewWeapon is false it will not auto switch to the weapon. </p>
+
+</div>
+</div>
+<a id="a04bdbf3e87f45f54b1abb2737e8f0675" name="a04bdbf3e87f45f54b1abb2737e8f0675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04bdbf3e87f45f54b1abb2737e8f0675">&#9670;&#160;</a></span>HasAltAmmo() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::HasAltAmmo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0031e84971f5928addca949868858c2b" name="a0031e84971f5928addca949868858c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0031e84971f5928addca949868858c2b">&#9670;&#160;</a></span>HasAltAmmo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::HasAltAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad04697b2730dc03205fbc032b11136c7" name="ad04697b2730dc03205fbc032b11136c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad04697b2730dc03205fbc032b11136c7">&#9670;&#160;</a></span>HasAmmo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::HasAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>checkAlt</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if checkAlt is false only checks primary ammo </p>
+
+</div>
+</div>
+<a id="ad3e077292ee5923b081b6484a0958195" name="ad3e077292ee5923b081b6484a0958195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e077292ee5923b081b6484a0958195">&#9670;&#160;</a></span>HasWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::HasWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0641da86e4711c5d119e0561bbf69e6c" name="a0641da86e4711c5d119e0561bbf69e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0641da86e4711c5d119e0561bbf69e6c">&#9670;&#160;</a></span>LifeForces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::LifeForces </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5f1d5e0a876e23d8785664e4838df5b" name="ad5f1d5e0a876e23d8785664e4838df5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f1d5e0a876e23d8785664e4838df5b">&#9670;&#160;</a></span>Lives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::Lives </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aadeddfea49654de0ef80a704050b1227" name="aadeddfea49654de0ef80a704050b1227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadeddfea49654de0ef80a704050b1227">&#9670;&#160;</a></span>Lock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::Lock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d130e18d026002f6b896b73177a1e14" name="a8d130e18d026002f6b896b73177a1e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d130e18d026002f6b896b73177a1e14">&#9670;&#160;</a></span>Locked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::Locked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7508f45e2fce32efab56c6512196649a" name="a7508f45e2fce32efab56c6512196649a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7508f45e2fce32efab56c6512196649a">&#9670;&#160;</a></span>MaxExtraHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16 &amp; kPlayer::MaxExtraHealth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>should be &lt;= MaxHealth </p>
+
+</div>
+</div>
+<a id="ac7345ef2668796ad80f93a060bf3634a" name="ac7345ef2668796ad80f93a060bf3634a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7345ef2668796ad80f93a060bf3634a">&#9670;&#160;</a></span>MaxHealth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16 &amp; kPlayer::MaxHealth </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>should be &gt;= MaxExtraHealth and ExtraHealth </p>
+
+</div>
+</div>
+<a id="ab31aa67b958296a91eca1fc32da3d67e" name="ab31aa67b958296a91eca1fc32da3d67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab31aa67b958296a91eca1fc32da3d67e">&#9670;&#160;</a></span>NoLandClearVel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kPlayer::NoLandClearVel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if true, when doing a hard landing you will not lose your velocity </p>
+
+</div>
+</div>
+<a id="a6d31b1f7906cea2c6e728df57ce8c3f4" name="a6d31b1f7906cea2c6e728df57ce8c3f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d31b1f7906cea2c6e728df57ce8c3f4">&#9670;&#160;</a></span>PendingWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kPlayer::PendingWeapon </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab382a70aa56834574e3b1728b0e38baa" name="ab382a70aa56834574e3b1728b0e38baa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab382a70aa56834574e3b1728b0e38baa">&#9670;&#160;</a></span>RemoveWeapon()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kPlayer::RemoveWeapon </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dcad7691f35ceb7c8ecf3e80ce774a6" name="a3dcad7691f35ceb7c8ecf3e80ce774a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcad7691f35ceb7c8ecf3e80ce774a6">&#9670;&#160;</a></span>RunWalkToggle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kPlayer::RunWalkToggle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f3f23277ff6cf1d7a1a504d110ea262" name="a1f3f23277ff6cf1d7a1a504d110ea262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f3f23277ff6cf1d7a1a504d110ea262">&#9670;&#160;</a></span>SetCheckPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::SetCheckPoint </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>warpTID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>map</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fc2f56c6558d278924252b3f79eb81a" name="a6fc2f56c6558d278924252b3f79eb81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc2f56c6558d278924252b3f79eb81a">&#9670;&#160;</a></span>SetLifeForces()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::SetLifeForces </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54a2c6e6e5162e733961bedc6ed5fa94" name="a54a2c6e6e5162e733961bedc6ed5fa94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a2c6e6e5162e733961bedc6ed5fa94">&#9670;&#160;</a></span>SetLives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::SetLives </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71c14aedfb8280790cb78075d6abbdbd" name="a71c14aedfb8280790cb78075d6abbdbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71c14aedfb8280790cb78075d6abbdbd">&#9670;&#160;</a></span>SetSpiritualTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::SetSpiritualTime </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>blend</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time = time until cancels the effect. Should SetGameSpeed after calling this. </p>
+
+</div>
+</div>
+<a id="ac859f503f55a1bf9477cb412f9ba36de" name="ac859f503f55a1bf9477cb412f9ba36de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac859f503f55a1bf9477cb412f9ba36de">&#9670;&#160;</a></span>SetWeaponGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::SetWeaponGroup </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>group</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. </p>
+
+</div>
+</div>
+<a id="a71bd381e47c3c9bdc54756556a33514e" name="a71bd381e47c3c9bdc54756556a33514e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71bd381e47c3c9bdc54756556a33514e">&#9670;&#160;</a></span>SetWeaponUseAltAmmo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::SetWeaponUseAltAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bToggle</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa7b2abe7fd81f67d32410b3d5d81506" name="aaa7b2abe7fd81f67d32410b3d5d81506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa7b2abe7fd81f67d32410b3d5d81506">&#9670;&#160;</a></span>SilentCheckPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kPlayer::SilentCheckPoints </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts. </p>
+
+</div>
+</div>
+<a id="abdfd0f51bac3e19927cad316465e0a3d" name="abdfd0f51bac3e19927cad316465e0a3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdfd0f51bac3e19927cad316465e0a3d">&#9670;&#160;</a></span>Unlock()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::Unlock </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa20f009a0d4b047853e41db1bfbb16ca" name="aa20f009a0d4b047853e41db1bfbb16ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa20f009a0d4b047853e41db1bfbb16ca">&#9670;&#160;</a></span>UseAltAmmo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kPlayer::UseAltAmmo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29d220020a1f54f85118a8e63b89cdd9" name="a29d220020a1f54f85118a8e63b89cdd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29d220020a1f54f85118a8e63b89cdd9">&#9670;&#160;</a></span>Victory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kPlayer::Victory </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>warpActorID</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-&#160;1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-&#160;1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae84777f87a954e684cb06f1f03a78e97" name="ae84777f87a954e684cb06f1f03a78e97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae84777f87a954e684cb06f1f03a78e97">&#9670;&#160;</a></span>WeaponAllowUnderwater()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::WeaponAllowUnderwater </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72c69b7eb7281d1ebb21b704219f8571" name="a72c69b7eb7281d1ebb21b704219f8571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c69b7eb7281d1ebb21b704219f8571">&#9670;&#160;</a></span>WeaponUsingAltAmmo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kPlayer::WeaponUsingAltAmmo </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00150.html">kPlayer</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

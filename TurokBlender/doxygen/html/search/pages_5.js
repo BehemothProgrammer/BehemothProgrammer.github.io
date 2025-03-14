@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['properties_0',['Actor Def Properties',['../a00148.html',1,'']]]
+  ['manual_0',['Turok Manual',['../index.html',1,'']]],
+  ['map_20format_1',['Map Format',['../a00154.html',1,'']]]
 ];

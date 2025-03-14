@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['turok_20manual_0',['Turok Manual',['../index.html',1,'']]]
+  ['properties_0',['Actor Def Properties',['../a00151.html',1,'']]],
+  ['public_20beta_20changes_1',['v3 Public Beta Changes',['../a00153.html',1,'']]]
 ];

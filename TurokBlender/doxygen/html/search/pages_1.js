@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['changes_0',['v3 Changes',['../a00149.html',1,'']]]
+  ['beta_20changes_0',['v3 Public Beta Changes',['../a00153.html',1,'']]]
 ];
