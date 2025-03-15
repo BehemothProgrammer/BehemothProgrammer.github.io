@@ -27,8 +27,8 @@ var NAVTREE =
   [ "Turok", "index.html", [
     [ "Turok Manual", "index.html", "index" ],
     [ "Actor Def Properties", "a00151.html", null ],
-    [ "v3 Changes", "a00152.html", null ],
-    [ "v3 Public Beta Changes", "a00153.html", null ],
+    [ "v3 Public Beta Changes", "a00152.html", null ],
+    [ "v3 Changes", "a00153.html", null ],
     [ "Map Format", "a00154.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],

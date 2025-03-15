@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['v3_20changes_0',['v3 Changes',['../a00152.html',1,'']]],
-  ['v3_20public_20beta_20changes_1',['v3 Public Beta Changes',['../a00153.html',1,'']]],
+  ['v3_20changes_0',['v3 Changes',['../a00153.html',1,'']]],
+  ['v3_20public_20beta_20changes_1',['v3 Public Beta Changes',['../a00152.html',1,'']]],
   ['veczero_2',['vecZero',['../a00021.html#a339a71b4b51565ae957d6620263a0e53',1,'Math']]],
   ['velocity_3',['Velocity',['../a00102.html#a2d95617bd6383e5f595c6953f58b44a7',1,'kActor']]],
   ['victory_4',['Victory',['../a00150.html#a29d220020a1f54f85118a8e63b89cdd9',1,'kPlayer']]],
