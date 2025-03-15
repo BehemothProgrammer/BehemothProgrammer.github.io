@@ -15,5 +15,6 @@ var searchData=
   ['fraction_12',['Fraction',['../a00130.html#aca609c9dc31264e5054d9f6862f8634c',1,'kCModel']]],
   ['friction_13',['Friction',['../a00102.html#a0b87048bf97f48e6395def19265855f6',1,'kActor']]],
   ['fromvec3_14',['FromVec3',['../a00050.html#a16713e37f187d5a36127d09604f971e0',1,'kColor']]],
-  ['fromvec3linear_15',['FromVec3Linear',['../a00050.html#ac713028d40eabd3f1309f7604b0a2558',1,'kColor']]]
+  ['fromvec3linear_15',['FromVec3Linear',['../a00050.html#ac713028d40eabd3f1309f7604b0a2558',1,'kColor']]],
+  ['fxeventactive_16',['FxEventActive',['../a00102.html#a29655aad9d9b283a4bab0620c9ef91e6',1,'kActor']]]
 ];

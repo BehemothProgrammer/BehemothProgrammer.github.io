@@ -26,6 +26,7 @@ var a00102 =
     [ "Flags", "a00102.html#ab626c3aaeb7a6a359d21980bfbd735dc", null ],
     [ "FloorHeight", "a00102.html#a527c26a06041e5899c035140f44aa375", null ],
     [ "Friction", "a00102.html#a0b87048bf97f48e6395def19265855f6", null ],
+    [ "FxEventActive", "a00102.html#a29655aad9d9b283a4bab0620c9ef91e6", null ],
     [ "GameTicks", "a00102.html#af4860ca802614d404868a9fca5314402", null ],
     [ "GetAvoidanceAngle", "a00102.html#af6d33716e819293c492f18bdbef7cefe", null ],
     [ "GetBoundsMinMax", "a00102.html#a3887ab2fe37620046c2aaf9f1d38469a", null ],

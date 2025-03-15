@@ -307,6 +307,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aad5ec4ba6c8d3787b3d38025e090adee" id="r_aad5ec4ba6c8d3787b3d38025e090adee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5ec4ba6c8d3787b3d38025e090adee">RunFxEvent</a> (const <a class="el" href="a00030.html">kStr</a> &amp;in fxEventName)</td></tr>
 <tr class="memdesc:aad5ec4ba6c8d3787b3d38025e090adee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs an ActorFX event. Example: RunFxEvent("Enemy_Freeze");.  <br /></td></tr>
 <tr class="separator:aad5ec4ba6c8d3787b3d38025e090adee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29655aad9d9b283a4bab0620c9ef91e6" id="r_a29655aad9d9b283a4bab0620c9ef91e6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29655aad9d9b283a4bab0620c9ef91e6">FxEventActive</a> ()</td></tr>
+<tr class="memdesc:a29655aad9d9b283a4bab0620c9ef91e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if FxEvent is running.  <br /></td></tr>
+<tr class="separator:a29655aad9d9b283a4bab0620c9ef91e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ab47e773468bd4ccf15f5a03c2e837f" id="r_a9ab47e773468bd4ccf15f5a03c2e837f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ab47e773468bd4ccf15f5a03c2e837f">GetSectorIndexAtLocation</a> (const <a class="el" href="a00038.html">kVec3</a> &amp;in pos, uint excludeClipFlags=0)</td></tr>
 <tr class="memdesc:a9ab47e773468bd4ccf15f5a03c2e837f"><td class="mdescLeft">&#160;</td><td class="mdescRight">excludeClipFlags to ignore/disable (<a class="el" href="a00002.html#a3f77cb5ac956672e1e1471570357030c">EnumClipFlags</a>)  <br /></td></tr>
 <tr class="separator:a9ab47e773468bd4ccf15f5a03c2e837f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -411,7 +414,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base type used by all actors. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01029">1029</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01031">1031</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="afbe4d54218a18928160884001f668930" name="afbe4d54218a18928160884001f668930"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afbe4d54218a18928160884001f668930">&#9670;&#160;</a></span>AirFriction()</h2>
@@ -909,6 +912,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29655aad9d9b283a4bab0620c9ef91e6" name="a29655aad9d9b283a4bab0620c9ef91e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29655aad9d9b283a4bab0620c9ef91e6">&#9670;&#160;</a></span>FxEventActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kActor::FxEventActive </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if FxEvent is running. </p>
 
 </div>
 </div>

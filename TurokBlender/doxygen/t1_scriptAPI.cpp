@@ -992,6 +992,8 @@ public:
      */
 	void GetMorphFrame(int&out frame, int&out nextFrame, int&out maxFrames, float&out time) const;
 	void SetMorphFrame(const int frame, const int nextFrame, const float time);
+    void ColorOverride(const int node, const int r = 255, const int g = 255, const int b = 255, const int a = 255); // color values range from 0 to 255
+    void ColorOverrideStop(const int node);
 };
 
 class kAnimState
@@ -1118,6 +1120,7 @@ public:
 	const float GetCeilingHeight() const; ///< calculates the ceiling height from the actors sector and origin. Returns 0 if not in a sector.
 	const float GetFloorHeight() const; ///< calculates the floor height from the actors sector and origin. Returns 0 if not in a sector.
 	void RunFxEvent(const kStr&in fxEventName); ///< Runs an ActorFX event. Example: RunFxEvent("Enemy_Freeze");
+    bool FxEventActive(); ///< Returns true if FxEvent is running
 	const int GetSectorIndexAtLocation(const kVec3&in pos, uint excludeClipFlags = 0); ///< excludeClipFlags to ignore/disable (EnumClipFlags)
 	void MarkPersistentBit(const bool clear);
 	const bool IsPersistentMarked();
@@ -1917,6 +1920,8 @@ kColor kexColor_Tab20Dark(uint i); ///< Not used. (garbage from kexengine)
 kColor kexColor_Tab20Light(uint i); ///< Not used. (garbage from kexengine)
 kColor kexColor_ViridisScale(float v); ///< Not used. (garbage from kexengine)
 kColor kexColor_LerpRGB(const kColor&in from, const kColor&in to, float time); ///< Not used. (garbage from kexengine)
+int kexRandInt(); ///< Range -2147483648..2147483647
+uint kexRandUInt() ///< Range 0..4294967295
 void delay(const float time); ///< used in map scripts to delay execution of script
 const float GAME_FRAME_TIME = 0.25f;
 const float GAME_DELTA_TIME = 0.016666668f;

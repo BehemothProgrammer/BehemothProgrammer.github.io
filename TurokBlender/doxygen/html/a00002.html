@@ -837,9 +837,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a870d90e04b79a4313fe8760ed05349f6" id="r_a870d90e04b79a4313fe8760ed05349f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00050.html">kColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a870d90e04b79a4313fe8760ed05349f6">kexColor_LerpRGB</a> (const <a class="el" href="a00050.html">kColor</a> &amp;in from, const <a class="el" href="a00050.html">kColor</a> &amp;in to, float time)</td></tr>
 <tr class="memdesc:a870d90e04b79a4313fe8760ed05349f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not used. (garbage from kexengine)  <br /></td></tr>
 <tr class="separator:a870d90e04b79a4313fe8760ed05349f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae47f5b24fd60719ff3298e99d1295b5e" id="r_ae47f5b24fd60719ff3298e99d1295b5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae47f5b24fd60719ff3298e99d1295b5e">delay</a> (const float time)</td></tr>
-<tr class="memdesc:ae47f5b24fd60719ff3298e99d1295b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">used in map scripts to delay execution of script  <br /></td></tr>
-<tr class="separator:ae47f5b24fd60719ff3298e99d1295b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8c3ca7fe48d50b8385db234dcab3670" id="r_aa8c3ca7fe48d50b8385db234dcab3670"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8c3ca7fe48d50b8385db234dcab3670">kexRandInt</a> ()</td></tr>
+<tr class="memdesc:aa8c3ca7fe48d50b8385db234dcab3670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Range -2147483648..2147483647.  <br /></td></tr>
+<tr class="separator:aa8c3ca7fe48d50b8385db234dcab3670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6908fe1ea8269116fe98838791cd056" id="r_af6908fe1ea8269116fe98838791cd056"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6908fe1ea8269116fe98838791cd056">kexRandUInt</a> () void delay(const float time)</td></tr>
+<tr class="memdesc:af6908fe1ea8269116fe98838791cd056"><td class="mdescLeft">&#160;</td><td class="mdescRight">used in map scripts to delay execution of script  <br /></td></tr>
+<tr class="separator:af6908fe1ea8269116fe98838791cd056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -2657,25 +2660,6 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ae47f5b24fd60719ff3298e99d1295b5e" name="ae47f5b24fd60719ff3298e99d1295b5e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae47f5b24fd60719ff3298e99d1295b5e">&#9670;&#160;</a></span>delay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void delay </td>
-          <td>(</td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>used in map scripts to delay execution of script </p>
-
-</div>
-</div>
 <a id="a8a0831ce14a21e51a8d38d353184bf6e" name="a8a0831ce14a21e51a8d38d353184bf6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a0831ce14a21e51a8d38d353184bf6e">&#9670;&#160;</a></span>kexColor_FromHSL()</h2>
 
@@ -2827,6 +2811,44 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa8c3ca7fe48d50b8385db234dcab3670" name="aa8c3ca7fe48d50b8385db234dcab3670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8c3ca7fe48d50b8385db234dcab3670">&#9670;&#160;</a></span>kexRandInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kexRandInt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Range -2147483648..2147483647. </p>
+
+</div>
+</div>
+<a id="af6908fe1ea8269116fe98838791cd056" name="af6908fe1ea8269116fe98838791cd056"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6908fe1ea8269116fe98838791cd056">&#9670;&#160;</a></span>kexRandUInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint kexRandUInt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>used in map scripts to delay execution of script </p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
 <a id="aef62f575aec9d59790e455f57bfce9d6" name="aef62f575aec9d59790e455f57bfce9d6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef62f575aec9d59790e455f57bfce9d6">&#9670;&#160;</a></span>ActorFactory</h2>
@@ -2840,7 +2862,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01930">1930</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01935">1935</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3216,7 +3238,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01933">1933</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01938">1938</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3232,7 +3254,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01935">1935</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01940">1940</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3306,7 +3328,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01929">1929</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01934">1934</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3322,7 +3344,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01922">1922</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01927">1927</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3338,7 +3360,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01921">1921</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01926">1926</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3354,7 +3376,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01923">1923</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01928">1928</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3370,7 +3392,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01925">1925</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01930">1930</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3386,7 +3408,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01924">1924</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01929">1929</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3404,7 +3426,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile and Game.LoadModFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01928">1928</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01933">1933</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3420,7 +3442,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01927">1927</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01932">1932</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3436,7 +3458,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01932">1932</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01937">1937</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3452,7 +3474,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01931">1931</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01936">1936</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3468,7 +3490,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01926">1926</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01931">1931</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3484,7 +3506,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01934">1934</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01939">1939</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

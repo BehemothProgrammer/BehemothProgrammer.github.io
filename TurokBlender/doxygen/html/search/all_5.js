@@ -21,5 +21,6 @@ var searchData=
   ['friction_18',['Friction',['../a00102.html#a0b87048bf97f48e6395def19265855f6',1,'kActor']]],
   ['fromvec3_19',['FromVec3',['../a00050.html#a16713e37f187d5a36127d09604f971e0',1,'kColor']]],
   ['fromvec3linear_20',['FromVec3Linear',['../a00050.html#ac713028d40eabd3f1309f7604b0a2558',1,'kColor']]],
-  ['functions_20h3_21',['&lt;H3&gt;ScriptObject Functions&lt;/H3&gt;',['../index.html#sofuncs',1,'']]]
+  ['functions_20h3_21',['&lt;H3&gt;ScriptObject Functions&lt;/H3&gt;',['../index.html#sofuncs',1,'']]],
+  ['fxeventactive_22',['FxEventActive',['../a00102.html#a29655aad9d9b283a4bab0620c9ef91e6',1,'kActor']]]
 ];
