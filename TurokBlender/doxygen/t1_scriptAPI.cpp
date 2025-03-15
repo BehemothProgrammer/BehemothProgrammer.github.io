@@ -1017,8 +1017,8 @@ public:
 	void SetLastFrame(const bool execActions = false); ///< if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). applies the stop flag (flags |= ANF_STOPPED).
 	void SetPlayTime(const float time); ///< The total time in seconds this animation has been playing
 	void SetTrackTime(const float time); ///< 0.0(first frame) to 1.0(last frame)
-    const int TrackFrame(void) const; // current frame playing for the current animation.
-    const int TrackNextFrame(void) const; // next frame to play for the current animation.
+    const int TrackFrame(void) const; ///< current frame playing for the current animation.
+    const int TrackNextFrame(void) const; ///< next frame to play for the current animation.
 	int flags; ///< EnumAnimStateFlags
 };
 
