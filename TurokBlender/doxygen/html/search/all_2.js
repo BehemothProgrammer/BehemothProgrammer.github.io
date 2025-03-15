@@ -81,7 +81,7 @@ var searchData=
   ['changeareawallimpact_78',['ChangeAreaWallImpact',['../a00142.html#a006d8defcbca3792761f27f61f486519',1,'kWorld']]],
   ['changeareawaterheight_79',['ChangeAreaWaterHeight',['../a00142.html#adf2307521af91a0c957932f9d2c9e7ce',1,'kWorld']]],
   ['changemap_80',['ChangeMap',['../a00134.html#a900f6e8c1713c775455ea1ca8c87eea5',1,'kPlayLoop::ChangeMap()'],['../a00146.html#ac6f6548a550ec91a86a7b764bfc6f64d',1,'kGame::ChangeMap()']]],
-  ['changes_81',['Changes',['../a00153.html',1,'v3 Changes'],['../a00152.html',1,'v3 Public Beta Changes']]],
+  ['changes_81',['Changes',['../a00152.html',1,'Public Beta Changes'],['../a00153.html',1,'v3 Changes']]],
   ['changes_2edox_82',['changes.dox',['../a00011.html',1,'']]],
   ['changesectorceilingheight_83',['ChangeSectorCeilingHeight',['../a00142.html#a5f37358a81fcbdcbdbd0ce2d1bcdf227',1,'kWorld']]],
   ['changesectorceilingheightvertices_84',['ChangeSectorCeilingHeightVertices',['../a00142.html#acacab52f468b0e8077c5aac4aaaa901a',1,'kWorld']]],

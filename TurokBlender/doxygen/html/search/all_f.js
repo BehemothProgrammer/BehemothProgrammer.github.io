@@ -58,6 +58,6 @@ var searchData=
   ['pside_5fback_55',['PSIDE_BACK',['../a00002.html#a5031bbdbfc099af810c7118a3f2a9ac9a4bc07914ccd5b76359f3200d9d966e31',1,'t1_scriptAPI.cpp']]],
   ['pside_5ffront_56',['PSIDE_FRONT',['../a00002.html#a5031bbdbfc099af810c7118a3f2a9ac9a8b779d48830e3a31e75e683b36684b1b',1,'t1_scriptAPI.cpp']]],
   ['pside_5fon_57',['PSIDE_ON',['../a00002.html#a5031bbdbfc099af810c7118a3f2a9ac9a5bc47473a54ae2e332bfd82f5ce787d4',1,'t1_scriptAPI.cpp']]],
-  ['public_20beta_20changes_58',['v3 Public Beta Changes',['../a00152.html',1,'']]],
+  ['public_20beta_20changes_58',['Public Beta Changes',['../a00152.html',1,'']]],
   ['purgeunusedmodels_59',['PurgeUnusedModels',['../a00146.html#a73226b5962ad5573962d0d2087abd490',1,'kGame']]]
 ];

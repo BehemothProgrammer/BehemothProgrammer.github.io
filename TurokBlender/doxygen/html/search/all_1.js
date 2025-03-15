@@ -15,7 +15,7 @@ var searchData=
   ['bc_5fstraferight_12',['BC_STRAFERIGHT',['../a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78a81d4921bdc8de76093d1cf5ea9ba646f',1,'t1_scriptAPI.cpp']]],
   ['bc_5fweaponleft_13',['BC_WEAPONLEFT',['../a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78aebe86c25a938cdcd8a3d0317b8ed9450',1,'t1_scriptAPI.cpp']]],
   ['bc_5fweaponright_14',['BC_WEAPONRIGHT',['../a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78a34eac0a2c64b8b94539fd410e26e4527',1,'t1_scriptAPI.cpp']]],
-  ['beta_20changes_15',['v3 Public Beta Changes',['../a00152.html',1,'']]],
+  ['beta_20changes_15',['Public Beta Changes',['../a00152.html',1,'']]],
   ['betachanges_2edox_16',['betachanges.dox',['../a00008.html',1,'']]],
   ['black_17',['black',['../a00022.html#aeb8fecc5a85fe3486c4c458be68cf7c1',1,'kexColors']]],
   ['blend_18',['Blend',['../a00098.html#a1a73bd51e11bd000b1a92af66476828c',1,'kAnimState']]],
