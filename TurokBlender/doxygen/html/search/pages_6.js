@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['properties_0',['Actor Def Properties',['../a00151.html',1,'']]],
-  ['public_20beta_20changes_1',['Public Beta Changes',['../a00152.html',1,'']]]
+  ['properties_0',['Properties',['../a00154.html',1,'Actor Def Properties'],['../a00157.html',1,'Fx Properties']]],
+  ['public_20beta_20changes_1',['Public Beta Changes',['../a00155.html',1,'']]]
 ];
