@@ -50,13 +50,20 @@ friction                    // if on the ground then velocity xy is multiplied b
 airFriction                 // if is not 0.0 then increases the forward velocity of this Fx every tick by this value * GameSpeed.
 waterFriction               // if in water then velocity xy is multiplied by this value. (real waterFriction value is (1.0f - this value)). Afterwards if the Fx z velocity is < 0 then the z velocity is multiplied by 0.905f
 animFriction                // if is not 0.0 and animtype != 6(DrawSingleFrame) then:
-        animFriction = 1.0f
-        float d = 30.0f * (m_vVelocity.Length() / m_pInfo->animFriction);
+    float af = 1.0f; // final animFriction result used
+    if(animFriction != 0.0f)
+    {
+        float d = 30.0f * (velocity.Length() / animFriction);
         if(d <= 1.0f)
         {
-            animFriction = d;
+            af = d;
         }
-        m_frameTime -= ((15.0f * animFriction) * GameSpeed); // if m_frameTime <= 0 then sprite advances to the next frame.
+    }
+    if(animtype != 6)
+    {
+        frameTime -= ((15.0f * af) * GameSpeed); // if frameTime <= 0 then sprite advances to the next frame.
+        ...
+    }
         
 scale                       // the draw scale of this Fx
 scaleRandom                 // random amount applied to the draw scale
@@ -86,7 +93,7 @@ recurseLifetimeRandom       // random amount applied to recurseLifetime
 lifeTime                    // how long the particle will exist, in 1⁄15 seconds
 lifeTimeRandom              // random amount applied to lifeTime
 restart                     // The delay from a random value from 0 to this value (in 1⁄15 seconds). the fx will not tick during this delay.
-animSpeed                   // sets m_frameTime to this value if animType is 2, 3, or 4. (See animFriction for the code to how the frameTime decreases)
+animSpeed                   // sets frameTime to this value if animType is 2, 3, or 4. (See animFriction for the code to how the frameTime decreases)
 whiteColor                  // alters light colors of the sprite
 blackColor                  // alters dark colors of the sprite
 hueRandom                   // color randomization
