@@ -459,6 +459,37 @@ mapchar
         }
     }
 }
+</pre><h1><a class="anchor" id="damageinfo"></a>
+<h3>DamageInfo def</h3>
+</h1>
+<pre class="fragment">damage          // (int, 1) Base damage
+randomFactor    // (float, 1.0) Scales damage randomly from this float value to 1.0. 1 = no random which is the default.
+bExplode        // (bool 0) Creates an explosion that hits all actors in a radius. Set the radius using the radius property. Can blow enemies away. In scripts TurokDestructible will be destroyed.
+radius          // (float, default is Fx owners radius) Radius of damage effect for explosions and InflictDamage(if bQuake is defined). If not defined then InflictDamage will not do a radius check.
+noFallOff       // (bool, 0) for explosions always deal full damage no matter the distance to the actors position + half height.
+bExplodeReact   // (bool, 0) Can blows enemies away.
+bNoDamageSource // (bool, 0) Explosions will not damage the owner of the Fx.
+bNoAIBlast      // (bool, 0) if is set to 1 then will not allow the actor to be blown away.
+blastFalloff    // (float, 1.0) Scales the velocity of the actor that gets blown away.
+bKnockback      // (bool, 0) OnDamage will apply force to the actor. Use knockBackForce to set the amount of force.
+knockBackForce  // (float, 10.0f) The amount of force to apply to the actors velocity OnDamage (applied after OnPreDamage).
+bImpact         // (bool, 0) Enables damage based on Fx Velocity and impactDamp and impactFalloff values. (called before OnPreDamage)
+impactDamp      // (float, 1.0) 
+impactFalloff   // (float, 1.0)
+    if(impactDamp &lt; 1) impactDamp = 1;
+    magnitude = (instigator.Velocity().Length() / GAME_DELTA_TIME) / impactDamp; // instigator is the Fx
+    dmg = (int)((float)dmg * magnitude / impactFalloff); // modify damage caused by impact
+    if(dmg == 0) dmg = 1;
+
+tactile                 // (kStr) the path to the tactile file that will play for explosions.
+sound                   // (kStr) the path to the ksnd file. Will play a sound when InflictDamage is called on the actor.
+soundInterval           // (int, 0) How often the sound will play when InflictDamage is called on an actor. 0 = every time, other values: if(Playloop-&gt;Ticks() &amp; soundInterval) == 0
+range                   // (float, 1.0) When an Fx calls OnTick or OnWaterTick and they have a damageClass set it will call InflictDamage to only the actors in the same sector as the Fx, but only if the actors radius is within range. This range value * GAME_SCALE is used to check that distance to the actors radius.
+bTargetPlayer           // (bool, 0) inflict damage directly to player if the player is the owner of the Fx. Called when impacting a floor, wall, or actor.
+bQuake                  // (bool, 0) When InflictDamage is called and if the radius property is also defined and is &gt; 0 then will check if the inflictors position + half height is within radius to the actor taking the damage, and if not in range then will do no damage. In scripts/player.txt when the player is damaged will shake the screen.
+bShove                  // (bool, 0) Used in scripts only. OnDamage, modifies the players velocity to shove them aside.
+bAccelerator            // (bool, 0) Used in scripts only. Freezes enemies and they explode.
+bCauseSpecialAnimation  // (bool, 0) Used in scripts only. When Mantis or Trex is damaged can cause special hurt animations.
 </pre><h1><a class="anchor" id="gamevars"></a>
 <h3>GameVariables Special Keys</h3>
 </h1>
