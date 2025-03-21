@@ -23,13 +23,13 @@ var a00105 =
     [ "DifficultyMode", "a00105.html#a0ccbd740b1abd14dfa2f278037866e58", null ],
     [ "DistanceToPoint", "a00105.html#a2f1fee5a490ea44c667342d164a66fbe", null ],
     [ "DistanceToPoint", "a00105.html#ac255eb2b03bcd4f7c863da7799b395ab", null ],
+    [ "DrawDelay", "a00105.html#af344c5e2cb2356bacbb0c2d4d9dd3629", null ],
     [ "Flags", "a00105.html#ab626c3aaeb7a6a359d21980bfbd735dc", null ],
     [ "FloorHeight", "a00105.html#a527c26a06041e5899c035140f44aa375", null ],
     [ "Friction", "a00105.html#a0b87048bf97f48e6395def19265855f6", null ],
     [ "FxEventActive", "a00105.html#a29655aad9d9b283a4bab0620c9ef91e6", null ],
     [ "GameTicks", "a00105.html#af4860ca802614d404868a9fca5314402", null ],
     [ "GetAvoidanceAngle", "a00105.html#af6d33716e819293c492f18bdbef7cefe", null ],
-    [ "GetBoundsMinMax", "a00105.html#a3887ab2fe37620046c2aaf9f1d38469a", null ],
     [ "GetCeilingHeight", "a00105.html#acb1311bd23178e90bc335f3b67ff61c3", null ],
     [ "GetCustomDeadHeight", "a00105.html#a3389bb13722808df1a8d0afe20c91ae2", null ],
     [ "GetFloorHeight", "a00105.html#aa9dc57331ae0bb9dde9265845483a534", null ],
@@ -47,6 +47,7 @@ var a00105 =
     [ "Height", "a00105.html#a4e4df775dd17639b5c2cf68c4893b5c2", null ],
     [ "IgnoreSectorHeightChange", "a00105.html#a5a487286abbfd5b0e01612c76be47364", null ],
     [ "ImpactType", "a00105.html#a20a0f31f8959182c0e1e26629ff231cf", null ],
+    [ "ImpactTypeDmg", "a00105.html#a63df3c56dfbe0ae7bda1c51dd1883e3a", null ],
     [ "InflictDamage", "a00105.html#a9873de4b22e903b980184debf05dbffa", null ],
     [ "InflictGenericDamage", "a00105.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a", null ],
     [ "InstanceOf", "a00105.html#a8409e24c8fe9c17d262d09f5ac88c4f6", null ],
@@ -112,5 +113,6 @@ var a00105 =
     [ "Velocity", "a00105.html#a2d95617bd6383e5f595c6953f58b44a7", null ],
     [ "WallRadius", "a00105.html#a7841d2964f08e6964554a464511b9e02", null ],
     [ "WaterFriction", "a00105.html#a37f7a8eb5c6e31c9e013c969add2da24", null ],
-    [ "Yaw", "a00105.html#a683d49cc31b0239b0c709c8351e0fea7", null ]
+    [ "Yaw", "a00105.html#a683d49cc31b0239b0c709c8351e0fea7", null ],
+    [ "const", "a00105.html#addcc3f340273ec00495d913c6dd0258f", null ]
 ];

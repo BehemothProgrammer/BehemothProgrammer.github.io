@@ -180,6 +180,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ade82550066ac575b5b82dc279136514c" id="r_ade82550066ac575b5b82dc279136514c"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade82550066ac575b5b82dc279136514c">UserInterrupted</a> () const</td></tr>
 <tr class="memdesc:ade82550066ac575b5b82dc279136514c"><td class="mdescLeft">&#160;</td><td class="mdescRight">User pressed left click or escape key or any controller button. While <a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> == CAMS_ACTIVE and used <a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a> CMF_LOCK_PLAYER.  <br /></td></tr>
 <tr class="separator:ade82550066ac575b5b82dc279136514c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b8a297cc614004092b8b20eee59ec5" id="r_ad2b8a297cc614004092b8b20eee59ec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2b8a297cc614004092b8b20eee59ec5">SetUserInterrupted</a> (const bool toggle)</td></tr>
+<tr class="memdesc:ad2b8a297cc614004092b8b20eee59ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to false to set the user interrupted to false.  <br /></td></tr>
+<tr class="separator:ad2b8a297cc614004092b8b20eee59ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5731e3995d298618d8e2422595830d3d" id="r_a5731e3995d298618d8e2422595830d3d"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5731e3995d298618d8e2422595830d3d">Active</a> () const</td></tr>
 <tr class="separator:a5731e3995d298618d8e2422595830d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dc1506b7992e65195ba6ead411aa4ff" id="r_a1dc1506b7992e65195ba6ead411aa4ff"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dc1506b7992e65195ba6ead411aa4ff">Enabled</a> () const</td></tr>
@@ -226,7 +229,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01303">1303</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01307">1307</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5731e3995d298618d8e2422595830d3d" name="a5731e3995d298618d8e2422595830d3d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5731e3995d298618d8e2422595830d3d">&#9670;&#160;</a></span>Active()</h2>
@@ -746,6 +749,25 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ad2b8a297cc614004092b8b20eee59ec5" name="ad2b8a297cc614004092b8b20eee59ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b8a297cc614004092b8b20eee59ec5">&#9670;&#160;</a></span>SetUserInterrupted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetUserInterrupted </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>toggle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set to false to set the user interrupted to false. </p>
+
+</div>
+</div>
 <a id="a1fef994bbe4758e717df353ba64ba74d" name="a1fef994bbe4758e717df353ba64ba74d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fef994bbe4758e717df353ba64ba74d">&#9670;&#160;</a></span>StartCinematic()</h2>
 
@@ -953,7 +975,7 @@ Public Attributes</h2></td></tr>
 
 <p>Camera FOV (default is 74.0) </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01342">1342</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01347">1347</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -971,7 +993,7 @@ Public Attributes</h2></td></tr>
 
 <p>Used only if LookAtActor has been set. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01343">1343</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01348">1348</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -989,7 +1011,7 @@ Public Attributes</h2></td></tr>
 
 <p>current position of camera. if a finalview is set then the origin will be set to the finalview's eye position. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01338">1338</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01343">1343</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1029,7 @@ Public Attributes</h2></td></tr>
 
 <p>if a finalview is set then the pitch will be set to the finalview's look direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01340">1340</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01345">1345</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1025,7 +1047,7 @@ Public Attributes</h2></td></tr>
 
 <p>if a finalview is set then the roll will be set to 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01341">1341</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01346">1346</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1043,7 +1065,7 @@ Public Attributes</h2></td></tr>
 
 <p>if a finalview is set then the yaw will be set to the finalview's look direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01339">1339</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01344">1344</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

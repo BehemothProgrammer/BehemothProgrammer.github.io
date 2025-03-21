@@ -17,8 +17,8 @@ ai.attackRange
 ai.leashRadius
 ai.sightFOV
 ai.spanWidth
-ai.loudRange			 - is used for when the player runs
-ai.quietRange			 - is only used for when the player walks
+ai.loudRange			    - is used for when the player runs
+ai.quietRange			    - is only used for when the player walks
 ai.desiredYawSpeed
 ai.drawDistanceFactor
 ai.attackChance
@@ -69,6 +69,8 @@ flags.canBeTouched
 flags.alwaysActive
 flags.allowTinyEnemyCheat
 flags.noMovement
+ignoreSectorHeightChange
+drawDelay                   - Don't draw the Actor until it has ticked once
 radius
 height
 stepHeight
@@ -80,7 +82,7 @@ waterFriction
 gravity
 bounceDamp
 animSpeed
-sleepRange 				- The range when the actor will go to sleep/awake
+sleepRange 				    - The range when the actor will go to sleep/awake
 health
 impactType
 modelVariation

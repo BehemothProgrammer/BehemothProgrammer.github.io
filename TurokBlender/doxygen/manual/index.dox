@@ -436,7 +436,7 @@ Normal:
 - Enemies drop items
 
 Hard:
-- Damage enemies receive is scaled by 0.7
+- Damage enemies receive is scaled by 0.7 (ceiled)
 - Damage bosses receive is scaled by 0.9
 - Enemies animation speed is fast.
   - AnimScalar() = 0.85
@@ -446,7 +446,7 @@ Hard:
 - Enemies do NOT drop items
 
 Hardcore:
-- Damage enemies receive is scaled by 0.7
+- Damage enemies receive is scaled by 0.7 (ceiled)
 - Damage bosses receive is scaled by 0.9
 - Enemies animation speed is very fast.
   - AnimScalar() = 0.6

@@ -23,6 +23,7 @@ var a00129 =
     [ "SetRotateEyeVector", "a00129.html#aed25c9fa850c02105c9fe48bf56932c9", null ],
     [ "SetRotationTrack", "a00129.html#a9815694a90ae58c4268880e26ade11cb", null ],
     [ "SetSector", "a00129.html#ab4603b0609ab95534e78094ddd83f13f", null ],
+    [ "SetUserInterrupted", "a00129.html#ad2b8a297cc614004092b8b20eee59ec5", null ],
     [ "StartCinematic", "a00129.html#a1fef994bbe4758e717df353ba64ba74d", null ],
     [ "StopCinematic", "a00129.html#aa279741b2465f66d886f6c6af7c3d023", null ],
     [ "Tremor", "a00129.html#aaad71cf2101fe4bafb9c02e3c5dfdeba", null ],

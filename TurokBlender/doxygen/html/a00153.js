@@ -36,6 +36,7 @@ var a00153 =
     [ "MaxExtraHealth", "a00153.html#a7508f45e2fce32efab56c6512196649a", null ],
     [ "MaxHealth", "a00153.html#ac7345ef2668796ad80f93a060bf3634a", null ],
     [ "NoLandClearVel", "a00153.html#ab31aa67b958296a91eca1fc32da3d67e", null ],
+    [ "NoWeaponSwitchOnWaterLand", "a00153.html#aea2e5133484bf525c83f374bf0f2d397", null ],
     [ "PendingWeapon", "a00153.html#a6d31b1f7906cea2c6e728df57ce8c3f4", null ],
     [ "RemoveWeapon", "a00153.html#ab382a70aa56834574e3b1728b0e38baa", null ],
     [ "RunWalkToggle", "a00153.html#a3dcad7691f35ceb7c8ecf3e80ce774a6", null ],

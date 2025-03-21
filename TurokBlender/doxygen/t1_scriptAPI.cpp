@@ -992,8 +992,8 @@ public:
      */
 	void GetMorphFrame(int&out frame, int&out nextFrame, int&out maxFrames, float&out time) const;
 	void SetMorphFrame(const int frame, const int nextFrame, const float time);
-    void ColorOverride(const int node, const int r = 255, const int g = 255, const int b = 255, const int a = 255); // color values range from 0 to 255
-    void ColorOverrideStop(const int node);
+    void ColorOverride(const int node, const float r = 1.0f, const float g = 1.0f, const float b = 1.0f, const float a = 1.0f); // color values range from -1.0f to 1.0f. Call ColorOverrideSections to enable the override for sections on the node.
+    void ColorOverrideSections(const int node, const int sectionMask = -1); ///< enable the color override for specific sections(materials) on the node by setting each bit. -1 = All, 0 = Stop override
 };
 
 class kAnimState
@@ -1048,6 +1048,7 @@ public:
 	int16& Health();
 	int& Type(); ///< The actors Type ID
 	int& ImpactType(); ///< EnumImpactType
+	int& ImpactTypeDmg(); ///< EnumImpactType. Overrides the damage def used. if is -1 (default) then does not override ImpactType()
     bool &IgnoreSectorHeightChange(void); ///< if true will not change position(or velocity and movement) when sector height changes.
 	int& ModelVariation();
 	int& SpeciesMask();
@@ -1156,6 +1157,7 @@ public:
 	bool& SkipKeyTouchCinema(); ///< used only for key pickups
 	void SetModel(kStr&in modelFile, kStr&in animFile); ///< a way to set the model/anim for actors that had no model set previously
 	bool& TriggerInvincibility(); ///< Can't damage if true. Gets set to true if enemy has trigger anim and false when activated.
+    bool &DrawDelay() ///< Don't draw until has ticked once.
 	void GetBoundsMinMax(kVec3&out min, kVec3&out max) const; ///< actor must not be sleeping and have a model set and not be a pickup. otherwise will return default min/max values of (-128, -128, -128) (128, 128, 128)
 	const int MapActorIndex() const; ///< Returns -1 if not a map actor
 	int& DifficultyMode(); ///< The difficulty this actor is currently set to
@@ -1211,8 +1213,10 @@ public:
      */
 	void FireProjectile(const kStr&in fxPath, const float x, const float y, const float z, const bool adjustToPerspective = false);
 	bool& PreventFire(); ///< Use in OnBeginFire to internally prevent from entering its Fire state.
+    bool &NoGenericBobbing(); ///< Disables the generic weapon bobbing menu option from affecting this weapon
 	kVec3& OffsetPosition(); ///< Offset position of weapon
 	int& State(); ///< EnumWeaponStates
+    bool &AllowUnderwater(); ///< Set to true to allow the weapon underwater. Gets reset back to the weapons def value after OnBeginLevel.
 	kPlayer& Owner();
 };
 
@@ -1326,6 +1330,7 @@ public:
 	void ClearFinalView(); ///< finalview is set to null
 	void ClearViewTracks(); ///< views 0-2 all variables are set to 0
 	const bool UserInterrupted() const; ///< User pressed left click or escape key or any controller button. While CinematicState() == CAMS_ACTIVE and used EnumCameraFlags CMF_LOCK_PLAYER
+    void SetUserInterrupted(const bool toggle); ///< set to false to set the user interrupted to false.
 	const bool Active() const;
 	const bool Enabled() const; ///< CinematicState() >= CAMS_FADEOUT (Not Idle)
 	const bool ViewingFromCamera() const; ///< CinematicState() >= CAMS_FADEIN && CinematicState() <= CAMS_ACTIVE_TO_FADEOUT
@@ -1802,8 +1807,9 @@ public:
 	const int LifeForces();
 	void SetLifeForces(const int amount);
 	bool& Backpack();
-	bool& RunWalkToggle();
-	bool& NoLandClearVel(); ///< if true, when doing a hard landing you will not lose your velocity
+	bool& RunWalkToggle(); ///< if true walking is enabled. (saves)
+	bool& NoLandClearVel(); ///< if true, when doing a hard landing you will not lose your velocity (saves)
+    bool &NoWeaponSwitchOnWaterLand(); ///< will not auto switch weapon when entering/exiting water. (saves)
 	bool GiveAmmo(const int weapon, const int amount, const bool altAmmo); ///< set amount to negative values to take ammo
 	const int CurrentCheckPoint(); ///< returns warpTID
 	const int CurrentCheckPointMap();

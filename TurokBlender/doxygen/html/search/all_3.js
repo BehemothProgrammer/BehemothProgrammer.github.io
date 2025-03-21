@@ -20,5 +20,6 @@ var searchData=
   ['distancesq_17',['DistanceSq',['../a00041.html#ae286814e4e435693671a39c2d1f8df74',1,'kVec3']]],
   ['distancetopoint_18',['DistanceToPoint',['../a00105.html#ac255eb2b03bcd4f7c863da7799b395ab',1,'kActor::DistanceToPoint(const kVec3 &amp;in point) const'],['../a00105.html#a2f1fee5a490ea44c667342d164a66fbe',1,'kActor::DistanceToPoint(const float x, const float y, const float z) const']]],
   ['dot_19',['Dot',['../a00041.html#afce95ebbd0c256d6228ff0de43105882',1,'kVec3::Dot()'],['../a00049.html#a75a70b9b8859b5f29b24f2688fb0403f',1,'kPlane::Dot(const kVec3 &amp;in point) const'],['../a00049.html#a8f128e7f9fe817d9b4526f5aca86bdda',1,'kPlane::Dot(const kPlane &amp;in plane) const']]],
-  ['dwcolor_20',['DwColor',['../a00053.html#a25f2f0cc28e89a07f6876c347769f261',1,'kColor']]]
+  ['drawdelay_20',['DrawDelay',['../a00105.html#af344c5e2cb2356bacbb0c2d4d9dd3629',1,'kActor']]],
+  ['dwcolor_21',['DwColor',['../a00053.html#a25f2f0cc28e89a07f6876c347769f261',1,'kColor']]]
 ];

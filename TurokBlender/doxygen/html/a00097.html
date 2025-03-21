@@ -156,10 +156,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:add54bf6344245456bcc8d436a9b1dbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a96c5a378ec5172f77994b31a517d23" id="r_a6a96c5a378ec5172f77994b31a517d23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a96c5a378ec5172f77994b31a517d23">SetMorphFrame</a> (const int frame, const int nextFrame, const float time)</td></tr>
 <tr class="separator:a6a96c5a378ec5172f77994b31a517d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09e96ef9989763545a08c129223b031b" id="r_a09e96ef9989763545a08c129223b031b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e96ef9989763545a08c129223b031b">ColorOverride</a> (const int node, const int r=255, const int g=255, const int b=255, const int a=255)</td></tr>
-<tr class="separator:a09e96ef9989763545a08c129223b031b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b730541f7b65f493b97dfd62398c814" id="r_a0b730541f7b65f493b97dfd62398c814"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b730541f7b65f493b97dfd62398c814">ColorOverrideStop</a> (const int node)</td></tr>
-<tr class="separator:a0b730541f7b65f493b97dfd62398c814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fd3a41dadb9c0d59d3b094591aabe7" id="r_ab9fd3a41dadb9c0d59d3b094591aabe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9fd3a41dadb9c0d59d3b094591aabe7">ColorOverride</a> (const int node, const float r=1.0f, const float g=1.0f, const float b=1.0f, const float a=1.0f)</td></tr>
+<tr class="separator:ab9fd3a41dadb9c0d59d3b094591aabe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524eb897c36370ecc3eaa71af331ac01" id="r_a524eb897c36370ecc3eaa71af331ac01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a524eb897c36370ecc3eaa71af331ac01">ColorOverrideSections</a> (const int node, const int sectionMask=-1)</td></tr>
+<tr class="memdesc:a524eb897c36370ecc3eaa71af331ac01"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable the color override for specific sections(materials) on the node by setting each bit. -1 = All, 0 = Stop override  <br /></td></tr>
+<tr class="separator:a524eb897c36370ecc3eaa71af331ac01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -186,8 +187,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a09e96ef9989763545a08c129223b031b" name="a09e96ef9989763545a08c129223b031b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09e96ef9989763545a08c129223b031b">&#9670;&#160;</a></span>ColorOverride()</h2>
+<a id="ab9fd3a41dadb9c0d59d3b094591aabe7" name="ab9fd3a41dadb9c0d59d3b094591aabe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fd3a41dadb9c0d59d3b094591aabe7">&#9670;&#160;</a></span>ColorOverride()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,42 +201,48 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>r</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>r</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>b</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>, </td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>b</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">255</span>&#160;)</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a0b730541f7b65f493b97dfd62398c814" name="a0b730541f7b65f493b97dfd62398c814"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b730541f7b65f493b97dfd62398c814">&#9670;&#160;</a></span>ColorOverrideStop()</h2>
+<a id="a524eb897c36370ecc3eaa71af331ac01" name="a524eb897c36370ecc3eaa71af331ac01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524eb897c36370ecc3eaa71af331ac01">&#9670;&#160;</a></span>ColorOverrideSections()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void kRenderModel::ColorOverrideStop </td>
+          <td class="memname">void kRenderModel::ColorOverrideSections </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectionMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>enable the color override for specific sections(materials) on the node by setting each bit. -1 = All, 0 = Stop override </p>
 
 </div>
 </div>
@@ -566,7 +573,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">    nextFrame = frame + 1;</div>
 <div class="line">}</div>
 <div class="line">time += <a class="code hl_variable" href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a> * 7.5f;</div>
-<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01927">t1_scriptAPI.cpp:1927</a></div></div>
+<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01933">t1_scriptAPI.cpp:1933</a></div></div>
 </div><!-- fragment --> 
 </div>
 </div>

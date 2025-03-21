@@ -167,10 +167,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62936b02bfb4a77f85b2a90e523cd702" id="r_a62936b02bfb4a77f85b2a90e523cd702"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62936b02bfb4a77f85b2a90e523cd702">Backpack</a> ()</td></tr>
 <tr class="separator:a62936b02bfb4a77f85b2a90e523cd702"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dcad7691f35ceb7c8ecf3e80ce774a6" id="r_a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dcad7691f35ceb7c8ecf3e80ce774a6">RunWalkToggle</a> ()</td></tr>
+<tr class="memdesc:a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true walking is enabled. (saves)  <br /></td></tr>
 <tr class="separator:a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab31aa67b958296a91eca1fc32da3d67e" id="r_ab31aa67b958296a91eca1fc32da3d67e"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31aa67b958296a91eca1fc32da3d67e">NoLandClearVel</a> ()</td></tr>
-<tr class="memdesc:ab31aa67b958296a91eca1fc32da3d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true, when doing a hard landing you will not lose your velocity  <br /></td></tr>
+<tr class="memdesc:ab31aa67b958296a91eca1fc32da3d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true, when doing a hard landing you will not lose your velocity (saves)  <br /></td></tr>
 <tr class="separator:ab31aa67b958296a91eca1fc32da3d67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea2e5133484bf525c83f374bf0f2d397" id="r_aea2e5133484bf525c83f374bf0f2d397"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea2e5133484bf525c83f374bf0f2d397">NoWeaponSwitchOnWaterLand</a> ()</td></tr>
+<tr class="memdesc:aea2e5133484bf525c83f374bf0f2d397"><td class="mdescLeft">&#160;</td><td class="mdescRight">will not auto switch weapon when entering/exiting water. (saves)  <br /></td></tr>
+<tr class="separator:aea2e5133484bf525c83f374bf0f2d397"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29512d41bb7e93a4f3f1dbf2e83c890a" id="r_a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29512d41bb7e93a4f3f1dbf2e83c890a">GiveAmmo</a> (const int weapon, const int amount, const bool altAmmo)</td></tr>
 <tr class="memdesc:a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set amount to negative values to take ammo  <br /></td></tr>
 <tr class="separator:a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,7 +236,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01777">1777</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01782">1782</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a09bdf282de9c50d8bf21462590571f19" name="a09bdf282de9c50d8bf21462590571f19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a09bdf282de9c50d8bf21462590571f19">&#9670;&#160;</a></span>Actor()</h2>
@@ -896,7 +900,26 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>if true, when doing a hard landing you will not lose your velocity </p>
+<p>if true, when doing a hard landing you will not lose your velocity (saves) </p>
+
+</div>
+</div>
+<a id="aea2e5133484bf525c83f374bf0f2d397" name="aea2e5133484bf525c83f374bf0f2d397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea2e5133484bf525c83f374bf0f2d397">&#9670;&#160;</a></span>NoWeaponSwitchOnWaterLand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kPlayer::NoWeaponSwitchOnWaterLand </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>will not auto switch weapon when entering/exiting water. (saves) </p>
 
 </div>
 </div>
@@ -948,6 +971,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>if true walking is enabled. (saves) </p>
 
 </div>
 </div>
