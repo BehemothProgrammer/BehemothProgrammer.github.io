@@ -337,7 +337,7 @@ enum EnumGameButtonEvents
 	GBE_MENU_ACTIVATE = 128,
 	GBE_MENU_DESELECT = 256,
 	GBE_MENU_MOUSESELECT = 512
-}
+};
 
 enum EnumDifficulty
 {
@@ -486,54 +486,54 @@ It is possible to declare array variables with the array identifier followed by 
  
 Example:
  
-    @code{.cpp}
-      array<int> a, b, c;
-      array<Foo@> d;
-    @endcode  
+@code{.cpp}
+  array<int> a, b, c;
+  array<Foo@> d;
+@endcode  
  
 a, b, and c are now arrays of integers, and d is an array of handles to objects of the Foo type.
  
 When declaring arrays it is possible to define the initial size of the array by passing the length as a parameter to the constructor. The elements can also be individually initialized by specifying an initialization list. Example:
  
-    @code{.cpp}
-      array<int> a;           // A zero-length array of integers
-      array<int> b(3);        // An array of integers with 3 elements
-      array<int> c(3, 1);     // An array of integers with 3 elements, all set to 1 by default
-      array<int> d = {5,6,7}; // An array of integers with 3 elements with specific values
-    @endcode  
+@code{.cpp}
+  array<int> a;           // A zero-length array of integers
+  array<int> b(3);        // An array of integers with 3 elements
+  array<int> c(3, 1);     // An array of integers with 3 elements, all set to 1 by default
+  array<int> d = {5,6,7}; // An array of integers with 3 elements with specific values
+@endcode  
  
 Multidimensional arrays are supported as arrays of arrays, for example:
  
-    @code{.cpp}
-      array<array<int>> a;                     // An empty array of arrays of integers
-      array<array<int>> b = {{1,2},{3,4}}      // A 2 by 2 array with initialized values
-      array<array<int>> c(10, array<int>(10)); // A 10 by 10 array of integers with uninitialized values
-    @endcode  
+@code{.cpp}
+  array<array<int>> a;                     // An empty array of arrays of integers
+  array<array<int>> b = {{1,2},{3,4}}      // A 2 by 2 array with initialized values
+  array<array<int>> c(10, array<int>(10)); // A 10 by 10 array of integers with uninitialized values
+@endcode  
  
 Each element in the array is accessed with the indexing operator. The indices are zero based, i.e. the range of valid indices are from 0 to length - 1.
  
-    @code{.cpp}
-        a[0] = some_value;
-    @endcode  
+@code{.cpp}
+    a[0] = some_value;
+@endcode
  
 When the array stores handles the elements are assigned using the handle assignment.
  
-    @code{.cpp}
-      // Declare an array with initial length 1
-      array<Foo@> arr(1);
-    @endcode  
- 
-    @code{.cpp}
-        // Set the first element to point to a new instance of Foo
-        @arr[0] = Foo();
-    @endcode  
+@code{.cpp}
+  // Declare an array with initial length 1
+  array<Foo@> arr(1);
+@endcode
+
+@code{.cpp}
+    // Set the first element to point to a new instance of Foo
+    @arr[0] = Foo();
+@endcode
  
 Arrays can also be created and initialized within expressions as anonymous objects.
  
-    @code{.cpp}
-      // Call a function that expects an array of integers as input
-      foo(array<int> = {1,2,3,4});
-    @endcode  
+@code{.cpp}
+  // Call a function that expects an array of integers as input
+  foo(array<int> = {1,2,3,4});
+@endcode
  
  */
 template <class T>
@@ -1157,7 +1157,7 @@ public:
 	bool& SkipKeyTouchCinema(); ///< used only for key pickups
 	void SetModel(kStr&in modelFile, kStr&in animFile); ///< a way to set the model/anim for actors that had no model set previously
 	bool& TriggerInvincibility(); ///< Can't damage if true. Gets set to true if enemy has trigger anim and false when activated.
-    bool &DrawDelay() ///< Don't draw until has ticked once.
+    bool &DrawDelay(); ///< Don't draw until has ticked once.
 	void GetBoundsMinMax(kVec3&out min, kVec3&out max) const; ///< actor must not be sleeping and have a model set and not be a pickup. otherwise will return default min/max values of (-128, -128, -128) (128, 128, 128)
 	const int MapActorIndex() const; ///< Returns -1 if not a map actor
 	int& DifficultyMode(); ///< The difficulty this actor is currently set to
@@ -1573,8 +1573,8 @@ public:
 	void RemoveTimer();
 	void ChangeMap(const kStr&in path);
 	void ShowMainMenu(const bool mouseCenter = true);
-	const int GetMapNumberFromName(const kStr&in mapName); ///< This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle".
-    const int GetMapIDFromName(const kStr &in mapName); ///< This returns the mapID from the mapName
+	const int GetMapNumberFromName(const kStr&in mapName); ///< This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle". Returns -1 if not found.
+    const int GetMapIDFromName(const kStr &in mapName); ///< This returns the mapID from the mapName. Returns -1 if not found.
 	const int GetCurrentMapID();
 	const int GetDifficulty(); ///< EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty")
 	void SetDifficulty(const int value); ///< EnumDifficulty
@@ -1725,7 +1725,7 @@ public:
      * @brief Returns the key bind name of action. Returns empty string if nothing is bound.
      * @param action EnumInputActions
      * @param first if is false returns a string of all the bound keys separated by the ; character.
-     * @param sortsorts binds by keyboard, mouse, and controller binds. depending on if controller or keyboard is active.
+     * @param sort sorts binds by keyboard, mouse, and controller binds. depending on if controller or keyboard is active.
      */
 	kStr GetActionBind(const int action, const bool first = true, const bool sort = true);
     
@@ -1837,7 +1837,7 @@ public:
     
     /**
      * @brief Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2.
-     * then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs.
+     * then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. The group can also be set in weaponInfo.txt def file with the key "group"
      */
 	void SetWeaponGroup(const int weapon, const int group);
     bool &SilentCheckPoints(void); ///< if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.

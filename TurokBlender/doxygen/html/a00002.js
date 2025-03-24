@@ -267,6 +267,12 @@ var a00002 =
       [ "CRF_ADJUST", "a00002.html#a3871eb3e81ea144e97909e770fc809e0a31793ace7007b0bab102a20609b1edb7", null ],
       [ "CRF_WALLRADIUS", "a00002.html#a3871eb3e81ea144e97909e770fc809e0ad296fd6b686ed493dc645572753bb527", null ]
     ] ],
+    [ "EnumDifficulty", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095e", [
+      [ "DIFFICULTY_EASY", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095ea95f48065472a7866854a3c9b9ea8347e", null ],
+      [ "DIFFICULTY_NORMAL", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095ea599e2a9348d6630a59c4224deee53991", null ],
+      [ "DIFFICULTY_HARD", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095ea0d7385205eaa38cd67abe052bc39e431", null ],
+      [ "DIFFICULTY_HARDCORE", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095ea1215f16bb818e3d01ab6e94ef40c1710", null ]
+    ] ],
     [ "EnumGameButtonEvents", "a00002.html#a8f760ce871a7848f450b0e85835feb6d", [
       [ "GBE_MENU_UP", "a00002.html#a8f760ce871a7848f450b0e85835feb6da1cefd1659cb698ceeb5b9960d43bf2f1", null ],
       [ "GBE_MENU_RIGHT", "a00002.html#a8f760ce871a7848f450b0e85835feb6da6869f3bae6d0958991846d17044d6310", null ],
@@ -496,10 +502,6 @@ var a00002 =
     [ "Camera", "a00002.html#a40778fe2752bd38f40a93b149a31440b", null ],
     [ "CModel", "a00002.html#a7435b514f449324e8091ff85b817f2b1", null ],
     [ "kexColors::cyan", "a00025.html#a53179d7428e572357ff579986a0bf182", null ],
-    [ "DIFFICULTY_EASY", "a00002.html#a2e84545a096f6e0608997836ef6cfa45", null ],
-    [ "DIFFICULTY_HARD", "a00002.html#a46e1763c3e035132a69f8d0ed4e88d89", null ],
-    [ "DIFFICULTY_HARDCORE", "a00002.html#aa5a5611d2ffd6d56323f95bd1d00617f", null ],
-    [ "DIFFICULTY_NORMAL", "a00002.html#aa32d0b2b9ffcfcd4bc11f1adf0ff5b05", null ],
     [ "Game", "a00002.html#a1bd690e6f09331782b5f0d6f441d8d95", null ],
     [ "GAME_DELTA_TIME", "a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e", null ],
     [ "GAME_FRAME_TIME", "a00002.html#a8e883cca5a7b9ba893a507e4cff34195", null ],

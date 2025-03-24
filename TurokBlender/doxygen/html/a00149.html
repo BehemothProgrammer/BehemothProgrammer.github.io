@@ -175,18 +175,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ffdb4dbe8f7244d4a71326237b2f18d" id="r_a7ffdb4dbe8f7244d4a71326237b2f18d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ffdb4dbe8f7244d4a71326237b2f18d">ShowMainMenu</a> (const bool mouseCenter=true)</td></tr>
 <tr class="separator:a7ffdb4dbe8f7244d4a71326237b2f18d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ad95b8fb17f55ee8219470f52a653c4" id="r_a5ad95b8fb17f55ee8219470f52a653c4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ad95b8fb17f55ee8219470f52a653c4">GetMapNumberFromName</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in mapName)</td></tr>
-<tr class="memdesc:a5ad95b8fb17f55ee8219470f52a653c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle".  <br /></td></tr>
+<tr class="memdesc:a5ad95b8fb17f55ee8219470f52a653c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle". Returns -1 if not found.  <br /></td></tr>
 <tr class="separator:a5ad95b8fb17f55ee8219470f52a653c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66a9b5d2b254b9e9199b31810921f404" id="r_a66a9b5d2b254b9e9199b31810921f404"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66a9b5d2b254b9e9199b31810921f404">GetMapIDFromName</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in mapName)</td></tr>
-<tr class="memdesc:a66a9b5d2b254b9e9199b31810921f404"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the mapID from the mapName.  <br /></td></tr>
+<tr class="memdesc:a66a9b5d2b254b9e9199b31810921f404"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns the mapID from the mapName. Returns -1 if not found.  <br /></td></tr>
 <tr class="separator:a66a9b5d2b254b9e9199b31810921f404"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00d6a9d7cb22096ad22c4f6c1e801ba0" id="r_a00d6a9d7cb22096ad22c4f6c1e801ba0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00d6a9d7cb22096ad22c4f6c1e801ba0">GetCurrentMapID</a> ()</td></tr>
 <tr class="separator:a00d6a9d7cb22096ad22c4f6c1e801ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa439bc57a730007590ef99cb8836e270" id="r_aa439bc57a730007590ef99cb8836e270"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa439bc57a730007590ef99cb8836e270">GetDifficulty</a> ()</td></tr>
-<tr class="memdesc:aa439bc57a730007590ef99cb8836e270"><td class="mdescLeft">&#160;</td><td class="mdescRight">EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty")  <br /></td></tr>
+<tr class="memdesc:aa439bc57a730007590ef99cb8836e270"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>. Internally calls GameVariables.GetInt("g_difficulty")  <br /></td></tr>
 <tr class="separator:aa439bc57a730007590ef99cb8836e270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dcb38383e426b49af11e5caebb16160" id="r_a6dcb38383e426b49af11e5caebb16160"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dcb38383e426b49af11e5caebb16160">SetDifficulty</a> (const int value)</td></tr>
-<tr class="memdesc:a6dcb38383e426b49af11e5caebb16160"><td class="mdescLeft">&#160;</td><td class="mdescRight">EnumDifficulty.  <br /></td></tr>
+<tr class="memdesc:a6dcb38383e426b49af11e5caebb16160"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>.  <br /></td></tr>
 <tr class="separator:a6dcb38383e426b49af11e5caebb16160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8aa16bf7f9f4a4f450711dbd6dbb45c" id="r_ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8aa16bf7f9f4a4f450711dbd6dbb45c">GetGameSpeed</a> ()</td></tr>
 <tr class="separator:ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1164,7 +1164,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">action</td><td><a class="el" href="a00002.html#a535fd14ac2206cff551e68d507e620c0">EnumInputActions</a> </td></tr>
     <tr><td class="paramname">first</td><td>if is false returns a string of all the bound keys separated by the ; character. </td></tr>
-    <tr><td class="paramname">sortsorts</td><td>binds by keyboard, mouse, and controller binds. depending on if controller or keyboard is active. </td></tr>
+    <tr><td class="paramname">sort</td><td>sorts binds by keyboard, mouse, and controller binds. depending on if controller or keyboard is active. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1297,7 +1297,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty") </p>
+<p><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>. Internally calls GameVariables.GetInt("g_difficulty") </p>
 
 </div>
 </div>
@@ -1434,7 +1434,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This returns the mapID from the mapName. </p>
+<p>This returns the mapID from the mapName. Returns -1 if not found. </p>
 
 </div>
 </div>
@@ -1453,7 +1453,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle". </p>
+<p>This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle". Returns -1 if not found. </p>
 
 </div>
 </div>
@@ -2711,7 +2711,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>EnumDifficulty. </p>
+<p><a class="el" href="a00002.html#ad2d71bfb758a2e17bf72d27b0113095e">EnumDifficulty</a>. </p>
 
 </div>
 </div>

@@ -228,7 +228,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4ee74fd0a9d56f095ec52d5fe5e58508" id="r_a4ee74fd0a9d56f095ec52d5fe5e58508"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee74fd0a9d56f095ec52d5fe5e58508">GetWeaponGroup</a> (const int weapon)</td></tr>
 <tr class="separator:a4ee74fd0a9d56f095ec52d5fe5e58508"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac859f503f55a1bf9477cb412f9ba36de" id="r_ac859f503f55a1bf9477cb412f9ba36de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac859f503f55a1bf9477cb412f9ba36de">SetWeaponGroup</a> (const int weapon, const int group)</td></tr>
-<tr class="memdesc:ac859f503f55a1bf9477cb412f9ba36de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs.  <br /></td></tr>
+<tr class="memdesc:ac859f503f55a1bf9477cb412f9ba36de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. The group can also be set in weaponInfo.txt def file with the key "group".  <br /></td></tr>
 <tr class="separator:ac859f503f55a1bf9477cb412f9ba36de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa7b2abe7fd81f67d32410b3d5d81506" id="r_aaa7b2abe7fd81f67d32410b3d5d81506"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa7b2abe7fd81f67d32410b3d5d81506">SilentCheckPoints</a> (void)</td></tr>
 <tr class="memdesc:aaa7b2abe7fd81f67d32410b3d5d81506"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.  <br /></td></tr>
@@ -1095,7 +1095,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. </p>
+<p>Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. The group can also be set in weaponInfo.txt def file with the key "group". </p>
 
 </div>
 </div>
