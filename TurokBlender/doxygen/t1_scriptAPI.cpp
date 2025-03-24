@@ -1291,6 +1291,8 @@ public:
     const int OverrideShadow() const;           ///< default = 0
     const int OverrideWalkRun() const;          ///< default = 0
     const int GetState(void) const;             ///< EnumPlayerStates
+    float &MaxFallVelocity(void);               ///< default = -200.0f
+    bool &NoWallJump(void);                     ///< default = false
 };
 
 /**
@@ -1839,6 +1841,7 @@ public:
      */
 	void SetWeaponGroup(const int weapon, const int group);
     bool &SilentCheckPoints(void); ///< if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.
+    float &LookSensScale(); ///< Scales mouse/controller/gyro sensitivity (default = 1.0f)
 };
 
 namespace Math

@@ -30,8 +30,9 @@ var searchData=
   ['locplatform_5fxboxone_27',['LocPlatform_XboxOne',['../a00002.html#a5dd7bdadc955da291425704eb7151230a584173b019de82d005337848536dc7e0',1,'t1_scriptAPI.cpp']]],
   ['locplatform_5fxboxseries_28',['LocPlatform_XboxSeries',['../a00002.html#a5dd7bdadc955da291425704eb7151230a1da5a63e09c05401f37ce68d5bdc86e8',1,'t1_scriptAPI.cpp']]],
   ['log_29',['Log',['../a00024.html#a7e33b8127ff0f1dbe1e9f2cd2758a839',1,'Math']]],
-  ['lookzoffset_30',['lookZOffset',['../a00129.html#a660cca8552dee6e563bfb3847e1ed5f7',1,'kCamera']]],
-  ['looping_31',['Looping',['../a00101.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
-  ['loudnoisealert_32',['LoudNoiseAlert',['../a00121.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
-  ['loudrange_33',['LoudRange',['../a00117.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
+  ['looksensscale_30',['LookSensScale',['../a00153.html#ae7b7e6fa98fa18b55adef26c83904725',1,'kPlayer']]],
+  ['lookzoffset_31',['lookZOffset',['../a00129.html#a660cca8552dee6e563bfb3847e1ed5f7',1,'kCamera']]],
+  ['looping_32',['Looping',['../a00101.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
+  ['loudnoisealert_33',['LoudNoiseAlert',['../a00121.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
+  ['loudrange_34',['LoudRange',['../a00117.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
 ];

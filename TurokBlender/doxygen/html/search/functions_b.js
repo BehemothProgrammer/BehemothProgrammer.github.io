@@ -18,7 +18,8 @@ var searchData=
   ['lock_15',['Lock',['../a00153.html#aadeddfea49654de0ef80a704050b1227',1,'kPlayer']]],
   ['locked_16',['Locked',['../a00153.html#a8d130e18d026002f6b896b73177a1e14',1,'kPlayer']]],
   ['log_17',['Log',['../a00024.html#a7e33b8127ff0f1dbe1e9f2cd2758a839',1,'Math']]],
-  ['looping_18',['Looping',['../a00101.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
-  ['loudnoisealert_19',['LoudNoiseAlert',['../a00121.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
-  ['loudrange_20',['LoudRange',['../a00117.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
+  ['looksensscale_18',['LookSensScale',['../a00153.html#ae7b7e6fa98fa18b55adef26c83904725',1,'kPlayer']]],
+  ['looping_19',['Looping',['../a00101.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
+  ['loudnoisealert_20',['LoudNoiseAlert',['../a00121.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
+  ['loudrange_21',['LoudRange',['../a00117.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
 ];

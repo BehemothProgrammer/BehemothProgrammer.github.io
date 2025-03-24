@@ -33,6 +33,7 @@ var a00153 =
     [ "Lives", "a00153.html#ad5f1d5e0a876e23d8785664e4838df5b", null ],
     [ "Lock", "a00153.html#aadeddfea49654de0ef80a704050b1227", null ],
     [ "Locked", "a00153.html#a8d130e18d026002f6b896b73177a1e14", null ],
+    [ "LookSensScale", "a00153.html#ae7b7e6fa98fa18b55adef26c83904725", null ],
     [ "MaxExtraHealth", "a00153.html#a7508f45e2fce32efab56c6512196649a", null ],
     [ "MaxHealth", "a00153.html#ac7345ef2668796ad80f93a060bf3634a", null ],
     [ "NoLandClearVel", "a00153.html#ab31aa67b958296a91eca1fc32da3d67e", null ],

@@ -13,6 +13,8 @@ var a00121 =
     [ "JumpMinSpeed", "a00121.html#a0c6a40fbb4f2832a24683c4b76a04820", null ],
     [ "LandingViewOffset", "a00121.html#a2011f22ed1b5a678064bace4256325bd", null ],
     [ "LoudNoiseAlert", "a00121.html#ad03c5802ae38cebc7f63754332a2fc00", null ],
+    [ "MaxFallVelocity", "a00121.html#ad93d02c6418e3955dee08429698f371c", null ],
+    [ "NoWallJump", "a00121.html#abc8f1d48e6eb69cd351a88017f944fd2", null ],
     [ "OverrideFOV", "a00121.html#a86ed488d37977ce08f9303092c3214f9", null ],
     [ "OverrideShadow", "a00121.html#a46257fc77bbe94f22db1ad628b6c4512", null ],
     [ "OverrideWalkRun", "a00121.html#a9ef69aedc2c802473bf3f81068ff8eda", null ],
