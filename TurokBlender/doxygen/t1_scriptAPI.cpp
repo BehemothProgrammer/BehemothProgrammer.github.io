@@ -1173,6 +1173,14 @@ public:
     kVec3 DamageOrigin(void) const; ///< The Origin point of the attacker (Fx, Actor, or null (returns this actors origin in that case)) who damaged this actor last. Gets set before OnPreDamage.
     kVec3 DamageVelocity(void) const; ///< The Velocity of the attacker (Fx, Actor, or null (returns this actors velocity in that case)) who damaged this actor last. Gets set before OnPreDamage.
 	const bool CanSee(kPuppet@ puppet, const uint excludeClipFlags = 0); ///< excludeClipFlags to ignore/disable (EnumClipFlags). Note: This function that takes in the kPuppet arg is only available for kActor, not for kPuppet or kAI or kWeapon.
+    const kVec3 &PrevLerpOrigin(void) const;
+    const kQuat &PrevLerpRotation(void) const;
+    const kAngle &PrevLerpPitch(void) const;
+    const kAngle &PrevLerpRoll(void) const;
+    const kAngle &PrevLerpYaw(void) const;
+    bool HasCustomRef(void) const;
+    void AddCustomRef(void); ///< Keeps the actor from getting freed from memory.
+    void ClearCustomRef(void); ///< Allows the actor to get freed from memory if it has no references.
 };
 
 /**
@@ -1348,6 +1356,8 @@ public:
 	kAngle roll; ///< if a finalview is set then the roll will be set to 0.
 	float fov; ///< Camera FOV (default is 74.0)
 	float lookZOffset; ///< Used only if LookAtActor has been set.
+    bool &ClearInterpolationOnTick(void); ///< set to false to handle interpolation yourself
+    bool &AllowMenusWhenActive(void); ///< set to true to allow the pause menu to be opened during a cinematic
 };
 
 /**

@@ -1,6 +1,7 @@
 var a00129 =
 [
     [ "Active", "a00129.html#a5731e3995d298618d8e2422595830d3d", null ],
+    [ "AllowMenusWhenActive", "a00129.html#ae78f9d6eb7e963929a97813fa45eddd2", null ],
     [ "AreaID", "a00129.html#a7df322884048b41eaa4fedfe07b45c78", null ],
     [ "AutoPlayBlendTrack", "a00129.html#ae3b9eeb3f13a4e40abad7f7a4fd50f7a", null ],
     [ "AutoPlayPositionTrack", "a00129.html#ad8a695c08c6c265f1ed4ccaa394755fa", null ],
@@ -8,6 +9,7 @@ var a00129 =
     [ "CinematicState", "a00129.html#a07120c1256ccff90a21ebde3f8c89476", null ],
     [ "ClearFinalView", "a00129.html#af0dd480662bdcb104d678b8f062d0321", null ],
     [ "ClearInterpolation", "a00129.html#ae860c734d4e762d9a4ef0fbd49bff9c9", null ],
+    [ "ClearInterpolationOnTick", "a00129.html#a60aab86681d204dadcd624aab3ea24b4", null ],
     [ "ClearLookAtActor", "a00129.html#ac5d7bfd0f7770d14e0c1e61668e23861", null ],
     [ "ClearViewTracks", "a00129.html#a4cd4b6a0c1c2a3d0131d75c329bc9127", null ],
     [ "Enabled", "a00129.html#a1dc1506b7992e65195ba6ead411aa4ff", null ],

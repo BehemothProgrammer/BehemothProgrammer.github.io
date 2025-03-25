@@ -18,10 +18,15 @@ var searchData=
   ['pow_15',['Pow',['../a00024.html#a50e1d8d9b3e4bb8b62f512dfbc1366ba',1,'Math']]],
   ['premultiply_16',['PreMultiply',['../a00053.html#ac505eca3a9fbdbdc38b2082d3da5c11d',1,'kColor']]],
   ['preventfire_17',['PreventFire',['../a00113.html#aca4e062accb736800bd4038f55856944',1,'kWeapon']]],
-  ['prevorigin_18',['PrevOrigin',['../a00105.html#a5ba0aa2b10764483e49e04b0398b545c',1,'kActor']]],
-  ['print_19',['Print',['../a00141.html#abe30c302f659304c08931619d1d5d3b5',1,'kSys::Print()'],['../a00149.html#a02d6a59f97ee869f197e4e61a7464e44',1,'kGame::Print(const kStr &amp;in text, const int ticks=120)']]],
-  ['printhelp_20',['PrintHelp',['../a00149.html#a4961fe1c32e8d5367d2354e504217893',1,'kGame']]],
-  ['printline_21',['PrintLine',['../a00149.html#a476dc5d1f558aad4f9eae3c85cf7ba8b',1,'kGame']]],
-  ['project_22',['Project',['../a00041.html#abeb7823fd3d1c544a52030aaf5fd57f0',1,'kVec3']]],
-  ['purgeunusedmodels_23',['PurgeUnusedModels',['../a00149.html#a73226b5962ad5573962d0d2087abd490',1,'kGame']]]
+  ['prevlerporigin_18',['PrevLerpOrigin',['../a00105.html#aaf316a774355739bdf8c6ccedd7fcf33',1,'kActor']]],
+  ['prevlerppitch_19',['PrevLerpPitch',['../a00105.html#a3255c66f638e28186c2f30cca9ee7a97',1,'kActor']]],
+  ['prevlerproll_20',['PrevLerpRoll',['../a00105.html#a85b9c38792443efbf30791c54c37db4a',1,'kActor']]],
+  ['prevlerprotation_21',['PrevLerpRotation',['../a00105.html#aacf6a387a2c685ae45eda3c1929bbda8',1,'kActor']]],
+  ['prevlerpyaw_22',['PrevLerpYaw',['../a00105.html#aa4095e4e52bb216745a488a9cd5d8d45',1,'kActor']]],
+  ['prevorigin_23',['PrevOrigin',['../a00105.html#a5ba0aa2b10764483e49e04b0398b545c',1,'kActor']]],
+  ['print_24',['Print',['../a00141.html#abe30c302f659304c08931619d1d5d3b5',1,'kSys::Print()'],['../a00149.html#a02d6a59f97ee869f197e4e61a7464e44',1,'kGame::Print(const kStr &amp;in text, const int ticks=120)']]],
+  ['printhelp_25',['PrintHelp',['../a00149.html#a4961fe1c32e8d5367d2354e504217893',1,'kGame']]],
+  ['printline_26',['PrintLine',['../a00149.html#a476dc5d1f558aad4f9eae3c85cf7ba8b',1,'kGame']]],
+  ['project_27',['Project',['../a00041.html#abeb7823fd3d1c544a52030aaf5fd57f0',1,'kVec3']]],
+  ['purgeunusedmodels_28',['PurgeUnusedModels',['../a00149.html#a73226b5962ad5573962d0d2087abd490',1,'kGame']]]
 ];
