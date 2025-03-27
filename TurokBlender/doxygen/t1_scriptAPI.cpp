@@ -1098,6 +1098,7 @@ public:
 	float DistanceToPoint(const kVec3&in point) const; ///< calls DistanceToPoint(x,y,z)
 	float DistanceToPoint(const float x, const float y, const float z) const; ///< actors point is in the center
 	void InflictGenericDamage(kActor@ inflictor, const int damage);
+	void InflictGenericDamage(kActor@ inflictor, const kexStr &damageDef, const int damage); ///< Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this funciton: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce
 	void InflictDamage(kActor@ inflictor, const kStr&in damageDef);
 	void InteractActorsAtPosition(const kVec3&in pos, const kStr&in callbackFunc, const float arg1 = 0, const float arg2 = 0, const float arg3 = 0, const float arg4 = 0);
 	kScriptObject@ ScriptObject();

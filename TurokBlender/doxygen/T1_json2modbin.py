@@ -6,7 +6,7 @@
 from pathlib import Path
 import sys, argparse, struct, json
 
-STRING_ENCODING: str = "ascii" #"utf-8"
+STRING_ENCODING: str = "utf-8" #"ascii"
 
 def read_uint32(buf) -> int:
     return struct.unpack('<I', buf.read(4))[0]
@@ -17,7 +17,8 @@ def read_string(buf, length: int) -> str:
 def write_uint32(buf, val: int) -> None:
     buf.write(struct.pack('<I', val))
 
-def write_string(buf, s: str) -> None:
+def write_dict_string(buf, s: str) -> None:
+    write_uint32(buf, len(s) + 1)
     buf.write(bytes(s, STRING_ENCODING)+b'\0')
     
 def exit_error(s: str) -> None:
@@ -44,15 +45,11 @@ if __name__ == "__main__":
         if not isinstance(value, str):
             exit_error(f"ERROR: The key '{key}' does not have a string value. It has a value of type '{type(value).__name__}'")
         
-    entryCount = len(d)
     with open(output_path, 'wb') as file:
-        print("Entries: %s" % (len(d)))
         write_uint32(file, len(d))
         for key, value in d.items():
-            write_uint32(file, len(key) + 1)
-            write_string(file, key)
-            write_uint32(file, len(value) + 1)
-            write_string(file, value)
+            write_dict_string(file, key)
+            write_dict_string(file, value)
     
     print(f"File written to {output_path}")
     

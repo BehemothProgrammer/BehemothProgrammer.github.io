@@ -7,7 +7,7 @@ var searchData=
   ['incmax_4',['IncMax',['../a00024.html#ab6773b9020103b245a72c0b39f9b8f42',1,'Math']]],
   ['indexof_5',['IndexOf',['../a00033.html#ac297105b34716bb597f60a23f5bd99e6',1,'kStr']]],
   ['inflictdamage_6',['InflictDamage',['../a00105.html#a9873de4b22e903b980184debf05dbffa',1,'kActor']]],
-  ['inflictgenericdamage_7',['InflictGenericDamage',['../a00105.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a',1,'kActor']]],
+  ['inflictgenericdamage_7',['InflictGenericDamage',['../a00105.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a',1,'kActor::InflictGenericDamage(kActor@ inflictor, const int damage)'],['../a00105.html#a6fd66f08d236854a4b596f652db8d9b2',1,'kActor::InflictGenericDamage(kActor@ inflictor, const kexStr &amp;damageDef, const int damage)']]],
   ['inputimageexists_8',['InputImageExists',['../a00149.html#a5c94b44f722b71b311e73945be6ca038',1,'kGame']]],
   ['insertat_9',['insertAt',['../a00029.html#a42efa870e03001f965f2d049d81fb141',1,'array&lt; T &gt;::insertAt(uint index, const T &amp;in value)'],['../a00029.html#aa8f8df2c7639aaf7b608388dbd715f6e',1,'array&lt; T &gt;::insertAt(uint index, const T[]&amp;inout arr)']]],
   ['insertlast_10',['insertLast',['../a00029.html#ab0c3b4cb8283dd07b02e5da3e6ed0fa6',1,'array&lt; T &gt;']]],

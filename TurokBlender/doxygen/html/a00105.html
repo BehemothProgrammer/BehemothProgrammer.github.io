@@ -283,6 +283,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f1fee5a490ea44c667342d164a66fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d7a47c3e7fcfdbfda1a2a61bba8560a" id="r_a7d7a47c3e7fcfdbfda1a2a61bba8560a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d7a47c3e7fcfdbfda1a2a61bba8560a">InflictGenericDamage</a> (<a class="el" href="a00105.html">kActor</a>@ inflictor, const int damage)</td></tr>
 <tr class="separator:a7d7a47c3e7fcfdbfda1a2a61bba8560a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fd66f08d236854a4b596f652db8d9b2" id="r_a6fd66f08d236854a4b596f652db8d9b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fd66f08d236854a4b596f652db8d9b2">InflictGenericDamage</a> (<a class="el" href="a00105.html">kActor</a>@ inflictor, const kexStr &amp;damageDef, const int damage)</td></tr>
+<tr class="memdesc:a6fd66f08d236854a4b596f652db8d9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this funciton: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce.  <br /></td></tr>
+<tr class="separator:a6fd66f08d236854a4b596f652db8d9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9873de4b22e903b980184debf05dbffa" id="r_a9873de4b22e903b980184debf05dbffa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9873de4b22e903b980184debf05dbffa">InflictDamage</a> (<a class="el" href="a00105.html">kActor</a>@ inflictor, const <a class="el" href="a00033.html">kStr</a> &amp;in damageDef)</td></tr>
 <tr class="separator:a9873de4b22e903b980184debf05dbffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a896d0a1e1b88d6ee892fdb6997ec7105" id="r_a896d0a1e1b88d6ee892fdb6997ec7105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a896d0a1e1b88d6ee892fdb6997ec7105">InteractActorsAtPosition</a> (const <a class="el" href="a00041.html">kVec3</a> &amp;in pos, const <a class="el" href="a00033.html">kStr</a> &amp;in callbackFunc, const float arg1=0, const float arg2=0, const float arg3=0, const float arg4=0)</td></tr>
@@ -1441,7 +1444,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a7d7a47c3e7fcfdbfda1a2a61bba8560a" name="a7d7a47c3e7fcfdbfda1a2a61bba8560a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d7a47c3e7fcfdbfda1a2a61bba8560a">&#9670;&#160;</a></span>InflictGenericDamage()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d7a47c3e7fcfdbfda1a2a61bba8560a">&#9670;&#160;</a></span>InflictGenericDamage() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1458,6 +1461,34 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fd66f08d236854a4b596f652db8d9b2" name="a6fd66f08d236854a4b596f652db8d9b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fd66f08d236854a4b596f652db8d9b2">&#9670;&#160;</a></span>InflictGenericDamage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kActor::InflictGenericDamage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00105.html">kActor</a>@</td>          <td class="paramname"><span class="paramname"><em>inflictor</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const kexStr &amp;</td>          <td class="paramname"><span class="paramname"><em>damageDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>damage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this funciton: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce. </p>
 
 </div>
 </div>

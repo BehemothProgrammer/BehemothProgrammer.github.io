@@ -361,12 +361,13 @@ impactFalloff   // (float, 1.0)
 tactile                 // (kStr) the path to the tactile file that will play for explosions.
 sound                   // (kStr) the path to the ksnd file. Will play a sound when InflictDamage is called on the actor.
 soundInterval           // (int, 0) How often the sound will play when InflictDamage is called on an actor. 0 = every time, other values: if(Playloop->Ticks() & soundInterval) == 0
-range                   // (float, 1.0) When an Fx calls OnTick or OnWaterTick and they have a damageClass set it will call InflictDamage to only the actors in the same sector as the Fx, but only if the actors radius is within range. This range value * GAME_SCALE is used to check that distance to the actors radius.
+range                   // (float, 1.0) When an Fx calls OnTick or OnWaterTick and they have a damageClass set, it will call InflictDamage to only the actors in the same sector as the Fx, but only if the actors radius is within range. This range value * GAME_SCALE is used to check that distance to the actors radius.
 bTargetPlayer           // (bool, 0) inflict damage directly to player if the player is the owner of the Fx. Called when impacting a floor, wall, or actor.
 bQuake                  // (bool, 0) When InflictDamage is called and if the radius property is also defined and is > 0 then will check if the inflictors position + half height is within radius to the actor taking the damage, and if not in range then will do no damage. In scripts/player.txt when the player is damaged will shake the screen.
 bShove                  // (bool, 0) Used in scripts only. OnDamage, modifies the players velocity to shove them aside.
 bAccelerator            // (bool, 0) Used in scripts only. Freezes enemies and they explode.
 bCauseSpecialAnimation  // (bool, 0) Used in scripts only. When Mantis or Trex is damaged can cause special hurt animations.
+bKnife                  // (bool, 0) Used in scripts only.
 \endverbatim
 
 \section gamevars <H3>GameVariables Special Keys</H3>
