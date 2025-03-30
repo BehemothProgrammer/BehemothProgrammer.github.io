@@ -68,7 +68,12 @@ var searchData=
   ['currentcheckpointmap_65',['CurrentCheckPointMap',['../a00153.html#a6543ccc8bbca31eb60659e62bf1a7a8a',1,'kPlayer']]],
   ['currentframe_66',['CurrentFrame',['../a00101.html#a54034216c47bf9aab8f9157bf17eae8c',1,'kAnimState']]],
   ['currentweapon_67',['CurrentWeapon',['../a00153.html#a842f5956bad09cc5366b521a776c7c7c',1,'kPlayer']]],
-  ['cyclecompleted_68',['CycleCompleted',['../a00101.html#a17101362da04cead84716fe0158b876f',1,'kAnimState']]],
-  ['cyclenextweapon_69',['CycleNextWeapon',['../a00153.html#a68ecc9027548b29a5bc6b96412f13987',1,'kPlayer']]],
-  ['cycleprevweapon_70',['CyclePrevWeapon',['../a00153.html#a000e427c74530a661603829ab1b03563',1,'kPlayer']]]
+  ['customviewenable_68',['CustomViewEnable',['../a00121.html#ae907ea04b81b18117a4b7213ac0898be',1,'kPuppet']]],
+  ['customviewpitch_69',['CustomViewPitch',['../a00121.html#a2cb72b62bc3712b42fe69f92faf24d4e',1,'kPuppet']]],
+  ['customviewroll_70',['CustomViewRoll',['../a00121.html#ae82dfef6b0bae498bbdfc0b7fc996502',1,'kPuppet']]],
+  ['customviewunderwater_71',['CustomViewUnderwater',['../a00121.html#ab0a8d9a5a73052158520c1b43f3e029c',1,'kPuppet']]],
+  ['customviewyaw_72',['CustomViewYaw',['../a00121.html#a74ac1e13c2eafcc672799cd7b266d36b',1,'kPuppet']]],
+  ['cyclecompleted_73',['CycleCompleted',['../a00101.html#a17101362da04cead84716fe0158b876f',1,'kAnimState']]],
+  ['cyclenextweapon_74',['CycleNextWeapon',['../a00153.html#a68ecc9027548b29a5bc6b96412f13987',1,'kPlayer']]],
+  ['cycleprevweapon_75',['CyclePrevWeapon',['../a00153.html#a000e427c74530a661603829ab1b03563',1,'kPlayer']]]
 ];

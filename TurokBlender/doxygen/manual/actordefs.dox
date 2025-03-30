@@ -55,6 +55,7 @@ clipFlag.collideTriggers
 clipFlag.standOnObjects
 clipFlag.greaseSlideObjects
 clipFlag.allowRestrictedAreas
+flags.solid
 flags.castShadow
 flags.avoidWater
 flags.stayInWater

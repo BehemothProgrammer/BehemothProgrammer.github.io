@@ -1,6 +1,11 @@
 var a00121 =
 [
     [ "ClimbJumpAmount", "a00121.html#aae604caf5d18c68f857136a46928612a", null ],
+    [ "CustomViewEnable", "a00121.html#ae907ea04b81b18117a4b7213ac0898be", null ],
+    [ "CustomViewPitch", "a00121.html#a2cb72b62bc3712b42fe69f92faf24d4e", null ],
+    [ "CustomViewRoll", "a00121.html#ae82dfef6b0bae498bbdfc0b7fc996502", null ],
+    [ "CustomViewUnderwater", "a00121.html#ab0a8d9a5a73052158520c1b43f3e029c", null ],
+    [ "CustomViewYaw", "a00121.html#a74ac1e13c2eafcc672799cd7b266d36b", null ],
     [ "GetState", "a00121.html#adf340d3887b342d8ad3bf59db5f982ba", null ],
     [ "GroundBackwardAccel", "a00121.html#a224f4bf36bd035f692579b1fc348d7ce", null ],
     [ "GroundBackwardSpeed", "a00121.html#ada1b31d6fd764f16941ea66182d7d3ce", null ],

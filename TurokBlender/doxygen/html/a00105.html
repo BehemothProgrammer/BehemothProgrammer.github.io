@@ -437,6 +437,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3400ff6f42bdb48fc76aa5030df4aeb6" id="r_a3400ff6f42bdb48fc76aa5030df4aeb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3400ff6f42bdb48fc76aa5030df4aeb6">ClearCustomRef</a> (void)</td></tr>
 <tr class="memdesc:a3400ff6f42bdb48fc76aa5030df4aeb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the actor to get freed from memory if it has no references.  <br /></td></tr>
 <tr class="separator:a3400ff6f42bdb48fc76aa5030df4aeb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa877f949b96583ba103529ba87ef2559" id="r_aa877f949b96583ba103529ba87ef2559"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa877f949b96583ba103529ba87ef2559">SetupHeadTrack</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in headTrackDef)</td></tr>
+<tr class="memdesc:aa877f949b96583ba103529ba87ef2559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a headtrack.  <br /></td></tr>
+<tr class="separator:aa877f949b96583ba103529ba87ef2559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb4ed2caceb297e8fe682f43e2655969" id="r_aeb4ed2caceb297e8fe682f43e2655969"><td class="memItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb4ed2caceb297e8fe682f43e2655969">SoundPitchModify</a> ()</td></tr>
+<tr class="memdesc:aeb4ed2caceb297e8fe682f43e2655969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the final pitch of sounds owned by this actor. A value of 1000 raises the pitch by the amount tiny cheat does. A value of -1000 lowers the pitch by the amount the big head cheat does. Set to 0 to stop overriding. if less than 1 will override with no pitch change so tiny and big head mode don't affect it.  <br /></td></tr>
+<tr class="separator:aeb4ed2caceb297e8fe682f43e2655969"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base type used by all actors. </p>
@@ -2459,6 +2465,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa877f949b96583ba103529ba87ef2559" name="aa877f949b96583ba103529ba87ef2559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa877f949b96583ba103529ba87ef2559">&#9670;&#160;</a></span>SetupHeadTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kActor::SetupHeadTrack </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>headTrackDef</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a headtrack. </p>
+
+</div>
+</div>
 <a id="a83b20f85051573201ce0089390624748" name="a83b20f85051573201ce0089390624748"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a83b20f85051573201ce0089390624748">&#9670;&#160;</a></span>SetupSpawnParams()</h2>
 
@@ -2494,6 +2519,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>used only for key pickups </p>
+
+</div>
+</div>
+<a id="aeb4ed2caceb297e8fe682f43e2655969" name="aeb4ed2caceb297e8fe682f43e2655969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb4ed2caceb297e8fe682f43e2655969">&#9670;&#160;</a></span>SoundPitchModify()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float &amp; kActor::SoundPitchModify </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Override the final pitch of sounds owned by this actor. A value of 1000 raises the pitch by the amount tiny cheat does. A value of -1000 lowers the pitch by the amount the big head cheat does. Set to 0 to stop overriding. if less than 1 will override with no pitch change so tiny and big head mode don't affect it. </p>
 
 </div>
 </div>

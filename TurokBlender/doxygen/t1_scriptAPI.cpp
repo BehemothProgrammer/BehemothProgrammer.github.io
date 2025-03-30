@@ -1182,6 +1182,8 @@ public:
     bool HasCustomRef(void) const;
     void AddCustomRef(void); ///< Keeps the actor from getting freed from memory.
     void ClearCustomRef(void); ///< Allows the actor to get freed from memory if it has no references.
+    void SetupHeadTrack(const kStr &in headTrackDef);   ///< Sets a headtrack
+    float &SoundPitchModify();  ///< Override the final pitch of sounds owned by this actor. A value of 1000 raises the pitch by the amount tiny cheat does. A value of -1000 lowers the pitch by the amount the big head cheat does. Set to 0 to stop overriding. if less than 1 will override with no pitch change so tiny and big head mode don't affect it.
 };
 
 /**
@@ -1302,6 +1304,12 @@ public:
     const int GetState(void) const;             ///< EnumPlayerStates
     float &MaxFallVelocity(void);               ///< default = -200.0f
     bool &NoWallJump(void);                     ///< default = false
+    bool &CustomViewEnable();                   ///< Set to true to enable the custom view
+    bool &CustomViewUnderwater();               ///< wheather the custom view is underwater or not
+    kAngle &CustomViewYaw();
+    kAngle &CustomViewPitch();
+    kAngle &CustomViewRoll()
+    kexVec3 &CustomViewOrigin();
 };
 
 /**
