@@ -56,7 +56,7 @@ var searchData=
   ['setpicuv_53',['SetPicUV',['../a00149.html#a20807816d2aea0d41698999cc6c5b51f',1,'kGame']]],
   ['setpicwh_54',['SetPicWH',['../a00149.html#a36ac3538c9f0afff00a42a38daa71895',1,'kGame']]],
   ['setplaytime_55',['SetPlayTime',['../a00101.html#a824ea272b235baffb2f1a70b364a3909',1,'kAnimState']]],
-  ['setposition_56',['SetPosition',['../a00105.html#a64ec420a56fc677d7bd90838901564ac',1,'kActor']]],
+  ['setposition_56',['SetPosition',['../a00105.html#a3c183eda117ffae394c176e58a2a3d6a',1,'kActor']]],
   ['setpositiontrack_57',['SetPositionTrack',['../a00129.html#a86d17ca88ff8c26619524ed22c982c5a',1,'kCamera']]],
   ['setpreventopenpausemenu_58',['SetPreventOpenPauseMenu',['../a00149.html#a13011da7cb29d213e1f5163d1efad08a',1,'kGame']]],
   ['setrotateeyevector_59',['SetRotateEyeVector',['../a00129.html#aed25c9fa850c02105c9fe48bf56932c9',1,'kCamera']]],

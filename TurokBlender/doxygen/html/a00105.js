@@ -97,7 +97,7 @@ var a00105 =
     [ "SetCustomDeadHeight", "a00105.html#a227905430052780ba3fd312725f1dfeb", null ],
     [ "SetHeadTrackTarget", "a00105.html#a809750e22af602958e356bec5ace6d5a", null ],
     [ "SetModel", "a00105.html#a127f644925097831f5c60693d65f7380", null ],
-    [ "SetPosition", "a00105.html#a64ec420a56fc677d7bd90838901564ac", null ],
+    [ "SetPosition", "a00105.html#a3c183eda117ffae394c176e58a2a3d6a", null ],
     [ "SetSector", "a00105.html#a528e0362db3aefac02ca1438342af1cc", null ],
     [ "SetSpawnFlags1", "a00105.html#aeb90c16b6979d229bb721489ff5f5d5a", null ],
     [ "SetSpawnFlags2", "a00105.html#a9277450ef8d9c0a3bd0121cd32b79391", null ],

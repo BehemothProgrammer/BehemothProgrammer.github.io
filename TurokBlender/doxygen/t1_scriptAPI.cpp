@@ -1104,7 +1104,7 @@ public:
 	kScriptObject@ ScriptObject();
 	void MoveToPosition(const float x, const float y); ///< Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
 	bool RandomDecision(const int randomBit) const; ///< randomBit should be >= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.
-	void SetPosition(const kVec3&in pos); ///< best way to set an actors position, will also set the sector and clearinterpolation
+	void SetPosition(const kVec3&in pos, const bool clearInterpolation = true); ///< best way to set an actors position, will also set the sector and optionally clear interpolation
     
     /**
      * @brief Get a map actors param value
@@ -1184,6 +1184,7 @@ public:
     void ClearCustomRef(void); ///< Allows the actor to get freed from memory if it has no references.
     void SetupHeadTrack(const kStr &in headTrackDef);   ///< Sets a headtrack
     float &SoundPitchModify();  ///< Override the final pitch of sounds owned by this actor. A value of 1000 raises the pitch by the amount tiny cheat does. A value of -1000 lowers the pitch by the amount the big head cheat does. Set to 0 to stop overriding. if less than 1 will override with no pitch change so tiny and big head mode don't affect it.
+    void RotateAroundOrigin(const kAngle &in angle, const kVec3 &in platformOrigin, const bool setPos = true) ///< The angle amount to rotate this actors position. if setPos is true will use SetPosition to position the actor else will use MoveToPosition.
 };
 
 /**
