@@ -1309,7 +1309,7 @@ public:
     bool &CustomViewUnderwater();               ///< wheather the custom view is underwater or not
     kAngle &CustomViewYaw();
     kAngle &CustomViewPitch();
-    kAngle &CustomViewRoll()
+    kAngle &CustomViewRoll();
     kexVec3 &CustomViewOrigin();
 };
 
