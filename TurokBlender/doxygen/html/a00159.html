@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Class Members</title>
+<title>Turok: Public Beta Changes</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('functions_f.html',''); initResizable(true); });
+$(function(){initNavTree('a00159.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,29 +102,80 @@ $(function(){initNavTree('functions_f.html',''); initResizable(true); });
 </div>
 </div>
 
+<div><div class="header">
+  <div class="headertitle"><div class="title">Public Beta Changes</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
-
-<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
-<li>find()&#160;:&#160;<a class="el" href="a00029.html#a89ce2c8af7d41a724c7df9bf07545c22">array&lt; T &gt;</a></li>
-<li>findByRef()&#160;:&#160;<a class="el" href="a00029.html#a65441e61a3c6289ecc6c09537dc15564">array&lt; T &gt;</a></li>
-<li>FindNextClosestSector()&#160;:&#160;<a class="el" href="a00145.html#aaa1e79a345b4e7419c29d5faf15d422b">kWorld</a></li>
-<li>FireProjectile()&#160;:&#160;<a class="el" href="a00113.html#a270e1266e1a4df546d16d333267b3877">kWeapon</a></li>
-<li>Flags()&#160;:&#160;<a class="el" href="a00105.html#ab626c3aaeb7a6a359d21980bfbd735dc">kActor</a>, <a class="el" href="a00129.html#ad5f214b3562576647b7c01258bb2a875">kCamera</a></li>
-<li>flags&#160;:&#160;<a class="el" href="a00101.html#ab9dc3f7cab0a9d631fe99f64e1e8f680">kAnimState</a></li>
-<li>FloodFillAreaFlags()&#160;:&#160;<a class="el" href="a00145.html#a928b224d762e50c93bbe11635cca3b3d">kWorld</a></li>
-<li>FloodMatchingAreaFlags()&#160;:&#160;<a class="el" href="a00145.html#a001d1232a78a97f760f060f9cbc6e0fc">kWorld</a></li>
-<li>FloorHeight()&#160;:&#160;<a class="el" href="a00105.html#a527c26a06041e5899c035140f44aa375">kActor</a></li>
-<li>FlyHeight()&#160;:&#160;<a class="el" href="a00117.html#ad4d331c9e7d4ca7963c60ba5e1a2332a">kAI</a></li>
-<li>ForceUpdateJoints()&#160;:&#160;<a class="el" href="a00097.html#adbdce5a92a5a04c758818d0ef1cd72a9">kRenderModel</a></li>
-<li>fov&#160;:&#160;<a class="el" href="a00129.html#ac9096dfcd502f0f92b8f55933ac064e6">kCamera</a></li>
-<li>Fraction()&#160;:&#160;<a class="el" href="a00133.html#aca609c9dc31264e5054d9f6862f8634c">kCModel</a></li>
-<li>Friction()&#160;:&#160;<a class="el" href="a00105.html#a0b87048bf97f48e6395def19265855f6">kActor</a></li>
-<li>FromVec3()&#160;:&#160;<a class="el" href="a00053.html#a16713e37f187d5a36127d09604f971e0">kColor</a></li>
-<li>FromVec3Linear()&#160;:&#160;<a class="el" href="a00053.html#ac713028d40eabd3f1309f7604b0a2558">kColor</a></li>
-<li>FxEventActive()&#160;:&#160;<a class="el" href="a00105.html#a29655aad9d9b283a4bab0620c9ef91e6">kActor</a></li>
-</ul>
-</div><!-- contents -->
+<div class="textblock"><h3>Changes since last beta update</h3>
+<pre class="fragment">----------------------------------------------------------------------------------------
+levels/level15.map - fix position of a brancho that was going through a platform while turning 
+----------------------------------------------------------------------------------------
+defs/mapInfo.txt: added new "warpcp_" properties for HUBs
+----------------------------------------------------------------------------------------
+scripts/player.txt:
+line 423:
+```
+    if(self.GetWaterLevel() == WLT_UNDER &amp;&amp;
+        (World.GetAreaFlags(self.AreaID()) &amp; AAF_ANTIGRAVITY) == 0)
+```
+In OnDeath function changed CallDelayedMapScript to CallMapScript. (Prevents a softlock in mantis fight)
+----------------------------------------------------------------------------------------
+scripts/movers/floor.txt:
+line 58: Added: self.IgnoreSectorHeightChange() = true;
+----------------------------------------------------------------------------------------
+scripts/bosses/trex.txt:
+    line 831 Added:
+```
+        if(Player.Actor().Health() &lt;= 0 || Player.Locked())
+        {
+            return;
+        }
+```
+----------------------------------------------------------------------------------------
+scripts/bosses/mantis.txt:
+    line 1705: if(state != MS_DEAD)
+    
+    Added function:
+    ``` 
+        void OnEndLevel(void)
+        {
+            SetGlobalState();
+        }
+    ```
+----------------------------------------------------------------------------------------
+scripts/map/level03_script.txt: in $script 4 fixed positioning of actors.
+----------------------------------------------------------------------------------------
+scripts/map/level48_script.txt: line 106: Added: Player.SilentCheckPoints() = true;
+----------------------------------------------------------------------------------------
+scripts/map/level49_script.txt:
+line 22: Added: kActor @g_pKeyPlaque = null;
+line 69: Added:
+```
+    @g_pKeyPlaque = World.GetActorByTID(200);
+    
+    if(g_pKeyPlaque.IsPersistentMarked())
+    {
+        World.TriggerActorsByTID(g_pKeyPlaque, 440);
+    }
+```
+----------------------------------------------------------------------------------------
+scripts/map/level50_script.txt:
+line 239: Removed: Camera.ClearInterpolation();
+line 383: Added: int lastPortrait = g_portrait;
+line 407,408: Changed to use Math::Clampf
+line 426: Added:
+```
+        if(g_portrait != lastPortrait)
+        {
+            Camera.ClearInterpolation();
+        }
+```
+----------------------------------------------------------------------------------------
+localization files added 2 new keys for weapon binding menu
+m_weapon_knife = "Knife"
+m_weapon_tekbow = "Tek Bow"
+</pre> </div></div><!-- contents -->
+</div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

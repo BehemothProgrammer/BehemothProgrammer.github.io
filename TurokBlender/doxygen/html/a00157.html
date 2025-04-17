@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Fx Properties</title>
+<title>Turok: array&lt; T &gt; Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,137 +102,42 @@ $(function(){initNavTree('a00157.html',''); initResizable(true); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Fx Properties</div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">array&lt; T &gt; Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><pre class="fragment">Credit to Smoke39 (https://smoke39.github.io/turok/fx.html) for the comments on some of these after rotationOffset. There's too many properties to explain!
-
-bFadeout                    // Not used
-bStopAnimOnImpact           // if impacts a floor and onCollideFloor is Bounce or Reflect then stops animating the sprite
-bOffsetFromFloor            // sprite z position += (textureAtlasHeight - (GAME_SCALE * 0.4f)) * drawScale
-bTextureWrapMirrorWidth     // Mirrors sprite horizontally and vertically
-bTextureWrapMirrorHeight    // Not used
-bDepthBuffer                // if set will draw behind objects otherwise will draw in front
-bActorInstance              // Not used
-bScaleLerp                  // if is 0 will multiply scale by scaleDest otherwise will add scaleDest
-bLensFlares                 // Enable Lens Flare effect.
-lensFlares                  // Path to the lens flare. lensFlares = "lensflares/sunflare.klf"
-bBlood                      // Blood effects won't spawn if the menu option is set to no blood or actor has the no blood flag set.
-bAddOffset                  // The velocity passed into SpawnFx will be added to the initial velocity of this Fx. kActor::SpawnProjectile, kActor::FireProjectile, all Game.SpawnFx except the one that has a velocity param, and kexEmitter's use no velocity. kActor::SpawnFx will use the actors Movement() as the velocity.
-bNoDirection                // Uses no rotation (World forward direction) for translation and offset (including random variants)
-bFlash                      // Changes the sunDirection based on the Fx Origin. Adds white color to the sunLightColor and black color to the sunAmbientColor. (only the last Fx that was created with this property will take effect)
-bProjectile                 // If this Fx has an owner actor then rotation is set towards the owners target. Also allows more than 200 instances.
-bDestroyOnWaterSurface      // Removes this Fx when it enters or exits the areas water height. If this Fx is a bBullet then will only remove it when velocity.z is less than 0.
-bStickOnTarget              // if collides with an actor then it's position is set to the actors position + half the height of the actor.
-bBullet                     // bounces off collided walls/floors if onCollideWall/onCollideFloor is Bounce or Reflect. Also allows more than 200 instances.
-bWeaponView                 // Draws in the camera view
-bFullScreen                 // Draws to the center of the camera view and forward by GAME_SCALE * 20.
-bDecalOffset                // if drawType is a decal(2) and onCollideWall is not default(0) then the z position will never be lower than floorheight + (GAME_SCALE * 0.1f) otherwise the z position will never be lower than floorheight + 3.413333333333334f. bOffsetFromFloor can still further affect the z position offset after this.
-bNoSpawnNear                // Will not spawn the effect if the squared distance to the camera view is &lt;= (GAME_SCALE * 20) * (GAME_SCALE * 20). You can use noSpawnNearFarDist to set the distance.
-bNoSpawnFar                 // Will not spawn the effect if the squared distance to the camera view is &gt;= (GAME_SCALE * 20) * (GAME_SCALE * 20). You can use noSpawnNearFarDist to set the distance.
-noSpawnNearFarDist          // Set a custom squared distance to be used for bNoSpawnNear or bNoSpawnFar
-bAttachSource               // Sets to this Fx's owner position
-bDrawOnBottom               // Will draw the Fx last
-bSparkle                    // Not used
-bCrossFade                  // Not used
-bImpactEffect               // Not used
-bRestrictAim                // if Fx is a bProjectile then will RestrictAim towards the target by 90 degrees yaw. and will move forward if not in that fov.
-bNoWallSpawn                // if onCollideWall is Destroy(1) then won't spawn impact fx. Bullets won't spawn impact fx and could bounce forever.
-bNoGroundSpawn              // if onCollideFloor is Destroy(1) then won't spawn impact fx. if onCollideFloor is Bounce(3) or Reflect(2) and Fx is a bullet then won't spawn impact fx and could bounce forever.
-bRetainVelocity             // Not used
-bNoHitSource                // Not used
-bPerPolyCollision           // Enables poly collision checks on static meshes if the menu option precise is on.
-bDrawDelay                  // Don't draw the Fx until it has ticked once
-bMuzzleEffect               // enables muzzle effect using the cameras view and muzzleOffset property. Lifetime of a muzzle effect is 0.03125 seconds.
-muzzleOffset                // position offset of muzzle effect.
-mass                        // used as bounce damping.
-translationRandomGlobal     // scale value of 0 to 1
-translationRandom           // scales from 0 to 1 how much to apply randomness to the translation.
-translation                 // scales from 0 to 1 how much to apply (forwardSpeed + forwardSpeedRandom) to the initial velocity.
-gravity                     // Amount to increase the velocities z value every tick. (real value is this value divided by 3072)
-gravityRandomScale          // Random amount applied to gravity. (real value is this value divided by 3072)
-friction                    // if on the ground then velocity xy is multiplied by this value. (real friction value is (1.0f - this value))
-airFriction                 // if is not 0.0 then increases the forward velocity of this Fx every tick by this value * GameSpeed.
-waterFriction               // if in water then velocity xy is multiplied by this value. (real waterFriction value is (1.0f - this value)). Afterwards if the Fx z velocity is &lt; 0 then the z velocity is multiplied by 0.905f
-animFriction                // if is not 0.0 and animtype != 6(DrawSingleFrame) then:
-    float af = 1.0f; // final animFriction result used
-    if(animFriction != 0.0f)
-    {
-        float d = 30.0f * (velocity.Length() / animFriction);
-        if(d &lt;= 1.0f)
-        {
-            af = d;
-        }
-    }
-    if(animtype != 6)
-    {
-        frameTime -= ((15.0f * af) * GameSpeed); // if frameTime &lt;= 0 then sprite advances to the next frame.
-        ...
-    }
-        
-scale                       // the draw scale of this Fx
-scaleRandom                 // random amount applied to the draw scale
-scaleDest                   // Used with bScaleLerp
-scaleDestRandom             // random amount applied to scaleDest
-forwardSpeed                // forwardSpeed * finalTranslationValue is the initial velocity
-forwardSpeedRandom          // random amount applied to forwardSpeed
-offset                      // starting position offset
-offsetRandom                // random amount applied to offset
-rotationOffset              // radians, clockwise
-rotationOffsetRandom        // random amount applied to rotationOffset
-rotationSpeed               // radians per 1⁄15 seconds, clockwise
-rotationSpeedRandom         // random amount applied to rotationSpeedRandom
-rotationPivotX              // offset from the particles's physical location to render the sprite
-rotationPivotY              // offset from the particles's physical location to render the sprite
-shader                      // shader to render the sprite with
-sprite                      // sprite to represent the particle with
-trailFile                   // Not used
-trailDefinition_1           // "Trail_TekBow_Crossline_1" (max of 4 trails)
-trailDefinition_2           // "Trail_TekBow_Crossline_2"
-trailDefinition_3           // "Trail_TekBow_Crossline_3"
-trailDefinition_4           // "Trail_TekBow_Crossline_4"
-instances                   // number of this fx to spawn
-instancesRandom             // random amount applied to instances
-recurseLifetime             // amount of time until this Fx will no longer spawn any more child Fx.
-recurseLifetimeRandom       // random amount applied to recurseLifetime
-lifeTime                    // how long the particle will exist, in 1⁄15 seconds
-lifeTimeRandom              // random amount applied to lifeTime
-restart                     // The delay from a random value from 0 to this value (in 1⁄15 seconds). the fx will not tick during this delay.
-animSpeed                   // sets frameTime to this value if animType is 2, 3, or 4. (See animFriction for the code to how the frameTime decreases)
-whiteColor                  // alters light colors of the sprite
-blackColor                  // alters dark colors of the sprite
-hueRandom                   // color randomization
-saturationRandom            // color randomization
-brightnessRandom            // color randomization
-fadeInTime                  // fade in during first fadeInTime 1⁄15 seconds of lifeTime
-fadeOutTime                 // fade out during last fadeOutTime 1⁄15 seconds of lifeTime
-onCollideActor              // 0 = Default, 1 = Destroy, 2 = Reflect (Same as Bounce), 3 = Bounce (Same as Reflect). Other values are undefined.
-onCollideWall               // sector with link or cliff sector with plane y direction &gt;= 0.5
-onCollideFloor              // same as other 2 but with the floor
-drawType                    // 0 = Default, 1 = Flat, 2 = Decal, 3 = Wall, 4 = Surface, 5 = Billboard, 6 = hidden
-visibilityType              // 0 = Close, 1 = Far, 2 = Always, 3 = Invisible
-animType                    // 0 = Default, 1 = OneTime, 2 = Loop, 3 = SinWave, 4 = Random, 5 = RandomAndHold, 6 = DrawSingleFrame. Values other than 1-5 will run the onExpire or onWaterExpire events to occur when it reaches the last frame.
-priority                    // Not used
-
------Event Blocks:
-onImpact                    // The 10 OnImpact events with each surface type you can have.
-onExpire                    // happens when lifeTime runs out, unless underwater
-onTick                      // happens continuously, unless underwater
-onWaterImpact               // happens when entering or exiting water. If this Fx is a bBullet then will only be called if velocity.z is less than 0.
-onWaterExpire               // happens instead of onExpire when lifeTime runs out, if underwater
-onWaterTick                 // happens continuously instead of onTick while underwater
-
------Inside event blocks you can define:
-fx                          // spawn another effect. fx = "fx/blood.kfx"
-sound                       // play a sound. sound = "sounds/shaders/bullet_impact_13.ksnd"
-damageClass                 // deal damage, from defs/damageInfo.txt. damageClass = "S_Damage_Target_damage_10". ignored by onWaterImpact.
-</pre> </div></div><!-- contents -->
-</div><!-- PageDoc -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>It is possible to declare array variables with the array identifier followed by the type of the elements within angle brackets.</p>
+<p>Example:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="a00029.html">array&lt;int&gt;</a> a, b, c;</div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;Foo@&gt;</a> d;</div>
+<div class="ttc" id="aa00029_html"><div class="ttname"><a href="a00029.html">array</a></div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00540">t1_scriptAPI.cpp:541</a></div></div>
+</div><!-- fragment --><p>a, b, and c are now arrays of integers, and d is an array of handles to objects of the Foo type.</p>
+<p>When declaring arrays it is possible to define the initial size of the array by passing the length as a parameter to the constructor. The elements can also be individually initialized by specifying an initialization list. Example:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="a00029.html">array&lt;int&gt;</a> a;           <span class="comment">// A zero-length array of integers</span></div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;int&gt;</a> b(3);        <span class="comment">// An array of integers with 3 elements</span></div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;int&gt;</a> c(3, 1);     <span class="comment">// An array of integers with 3 elements, all set to 1 by default</span></div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;int&gt;</a> d = {5,6,7}; <span class="comment">// An array of integers with 3 elements with specific values</span></div>
+</div><!-- fragment --><p>Multidimensional arrays are supported as arrays of arrays, for example:</p>
+<div class="fragment"><div class="line"><a class="code hl_class" href="a00029.html">array&lt;array&lt;int&gt;</a>&gt; a;                     <span class="comment">// An empty array of arrays of integers</span></div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;array&lt;int&gt;</a>&gt; b = {{1,2},{3,4}}      <span class="comment">// A 2 by 2 array with initialized values</span></div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;array&lt;int&gt;</a>&gt; <a class="code hl_class" href="a00029.html">c</a>(10, <a class="code hl_class" href="a00029.html">array&lt;int&gt;</a>(10)); <span class="comment">// A 10 by 10 array of integers with uninitialized values</span></div>
+</div><!-- fragment --><p>Each element in the array is accessed with the indexing operator. The indices are zero based, i.e. the range of valid indices are from 0 to length - 1.</p>
+<div class="fragment"><div class="line">a[0] = some_value;</div>
+</div><!-- fragment --><p>When the array stores handles the elements are assigned using the handle assignment.</p>
+<div class="fragment"><div class="line"><span class="comment">// Declare an array with initial length 1</span></div>
+<div class="line"><a class="code hl_class" href="a00029.html">array&lt;Foo@&gt;</a> arr(1);</div>
+</div><!-- fragment --><div class="fragment"><div class="line"><span class="comment">// Set the first element to point to a new instance of Foo</span></div>
+<div class="line">@arr[0] = Foo();</div>
+</div><!-- fragment --><p>Arrays can also be created and initialized within expressions as anonymous objects.</p>
+<div class="fragment"><div class="line"><span class="comment">// Call a function that expects an array of integers as input</span></div>
+<div class="line">foo(<a class="code hl_class" href="a00029.html">array&lt;int&gt;</a> = {1,2,3,4});</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00157.html">array&lt; T &gt;</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

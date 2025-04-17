@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "array< T >", "a00029.html", null ],
+    [ "array< T >", "a00157.html", null ],
     [ "kActor", "a00105.html", [
       [ "kAI", "a00117.html", null ],
       [ "kPuppet", "a00121.html", null ],

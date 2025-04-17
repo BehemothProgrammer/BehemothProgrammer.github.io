@@ -1,6 +1,7 @@
 var annotated_dup =
 [
-    [ "array< T >", "a00029.html", "a00029" ],
+    [ "array", "a00029.html", "a00029" ],
+    [ "array< T >", "a00157.html", null ],
     [ "kActor", "a00105.html", "a00105" ],
     [ "kActorFactory", "a00125.html", "a00125" ],
     [ "kActorIterator", "a00109.html", "a00109" ],

@@ -137,11 +137,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1de466ad7ee8f74a98ab11b2168bfb28" id="r_a1de466ad7ee8f74a98ab11b2168bfb28"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1de466ad7ee8f74a98ab11b2168bfb28">GetNumNodes</a> () const</td></tr>
 <tr class="separator:a1de466ad7ee8f74a98ab11b2168bfb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fa3e25aa336bca03c985f2c39d70833" id="r_a1fa3e25aa336bca03c985f2c39d70833"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00041.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fa3e25aa336bca03c985f2c39d70833">GetNodeOrigin</a> (const int node, const <a class="el" href="a00041.html">kVec3</a> &amp;in offset)</td></tr>
+<tr class="memdesc:a1fa3e25aa336bca03c985f2c39d70833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.  <br /></td></tr>
 <tr class="separator:a1fa3e25aa336bca03c985f2c39d70833"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160fef0559719cc3be81bc69b95118b8" id="r_a160fef0559719cc3be81bc69b95118b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00045.html">kQuat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a160fef0559719cc3be81bc69b95118b8">GetNodeRotation</a> (const int node)</td></tr>
+<tr class="memdesc:a160fef0559719cc3be81bc69b95118b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.  <br /></td></tr>
 <tr class="separator:a160fef0559719cc3be81bc69b95118b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11aacbd542e06e3c8b16949c390d03be" id="r_a11aacbd542e06e3c8b16949c390d03be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00041.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11aacbd542e06e3c8b16949c390d03be">GetNodeScale</a> (const int node)</td></tr>
 <tr class="separator:a11aacbd542e06e3c8b16949c390d03be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbdce5a92a5a04c758818d0ef1cd72a9" id="r_adbdce5a92a5a04c758818d0ef1cd72a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbdce5a92a5a04c758818d0ef1cd72a9">ForceUpdateJoints</a> (const float interpolatedFraction=1.0f)</td></tr>
+<tr class="memdesc:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current)  <br /></td></tr>
+<tr class="separator:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae085315c76ba8071171f70c64e15bb3d" id="r_ae085315c76ba8071171f70c64e15bb3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00033.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae085315c76ba8071171f70c64e15bb3d">GetModelFile</a> () const</td></tr>
 <tr class="separator:ae085315c76ba8071171f70c64e15bb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ca4f6e3e76282ead5199aef1f0ae25" id="r_a11ca4f6e3e76282ead5199aef1f0ae25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00033.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11ca4f6e3e76282ead5199aef1f0ae25">GetAnimFile</a> () const</td></tr>
@@ -246,6 +251,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adbdce5a92a5a04c758818d0ef1cd72a9" name="adbdce5a92a5a04c758818d0ef1cd72a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbdce5a92a5a04c758818d0ef1cd72a9">&#9670;&#160;</a></span>ForceUpdateJoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::ForceUpdateJoints </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>interpolatedFraction</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current) </p>
+
+</div>
+</div>
 <a id="a11ca4f6e3e76282ead5199aef1f0ae25" name="a11ca4f6e3e76282ead5199aef1f0ae25"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11ca4f6e3e76282ead5199aef1f0ae25">&#9670;&#160;</a></span>GetAnimFile()</h2>
 
@@ -341,6 +365,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation. </p>
+
 </div>
 </div>
 <a id="a160fef0559719cc3be81bc69b95118b8" name="a160fef0559719cc3be81bc69b95118b8"></a>
@@ -357,6 +383,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation. </p>
 
 </div>
 </div>
@@ -573,7 +601,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">    nextFrame = frame + 1;</div>
 <div class="line">}</div>
 <div class="line">time += <a class="code hl_variable" href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a> * 7.5f;</div>
-<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01956">t1_scriptAPI.cpp:1956</a></div></div>
+<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01966">t1_scriptAPI.cpp:1966</a></div></div>
 </div><!-- fragment --> 
 </div>
 </div>

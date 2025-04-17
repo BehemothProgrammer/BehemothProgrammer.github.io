@@ -4,7 +4,7 @@ var searchData=
   ['damageorigin_1',['DamageOrigin',['../a00105.html#a0532a5ab9850545ac603d1d7adcdd595',1,'kActor']]],
   ['damagevelocity_2',['DamageVelocity',['../a00105.html#a276ecd844792bcc4906ae1942b2b37a3',1,'kActor']]],
   ['def_20h3_3',['&lt;H3&gt;DamageInfo def&lt;/H3&gt;',['../index.html#damageinfo',1,'']]],
-  ['def_20properties_4',['Actor Def Properties',['../a00154.html',1,'']]],
+  ['def_20properties_4',['Actor Def Properties',['../a00158.html',1,'']]],
   ['definition_5',['Definition',['../a00105.html#a371170d3ae2b375f17a029604ba396be',1,'kActor']]],
   ['deg2rad_6',['Deg2Rad',['../a00024.html#a557212cef4a71cdf1dc4737833928407',1,'Math']]],
   ['details_20h3_7',['&lt;H3&gt;Music Details&lt;/H3&gt;',['../index.html#music',1,'']]],

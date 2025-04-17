@@ -10,5 +10,6 @@ var searchData=
   ['normalizenoinvsqrt_7',['NormalizeNoInvSqrt',['../a00045.html#a2463a93e30340e54d51cd6e5d34dffff',1,'kQuat']]],
   ['nowalljump_8',['NoWallJump',['../a00121.html#abc8f1d48e6eb69cd351a88017f944fd2',1,'kPuppet']]],
   ['noweaponswitchonwaterland_9',['NoWeaponSwitchOnWaterLand',['../a00153.html#aea2e5133484bf525c83f374bf0f2d397',1,'kPlayer']]],
-  ['numframes_10',['NumFrames',['../a00101.html#a5359f76de3f148f62f93b7a9b108a699',1,'kAnimState']]]
+  ['numframes_10',['NumFrames',['../a00101.html#a5359f76de3f148f62f93b7a9b108a699',1,'kAnimState']]],
+  ['numnodes_11',['NumNodes',['../a00101.html#af4258f164fae9ad9e6010697de193be4',1,'kAnimState']]]
 ];

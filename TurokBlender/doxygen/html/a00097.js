@@ -3,6 +3,7 @@ var a00097 =
     [ "AddTrailEffect", "a00097.html#aafbc8a1a70df7e903851c443ef203924", null ],
     [ "ColorOverride", "a00097.html#ab9fd3a41dadb9c0d59d3b094591aabe7", null ],
     [ "ColorOverrideSections", "a00097.html#a524eb897c36370ecc3eaa71af331ac01", null ],
+    [ "ForceUpdateJoints", "a00097.html#adbdce5a92a5a04c758818d0ef1cd72a9", null ],
     [ "GetAnimFile", "a00097.html#a11ca4f6e3e76282ead5199aef1f0ae25", null ],
     [ "GetModelFile", "a00097.html#ae085315c76ba8071171f70c64e15bb3d", null ],
     [ "GetMorphFrame", "a00097.html#add54bf6344245456bcc8d436a9b1dbc4", null ],

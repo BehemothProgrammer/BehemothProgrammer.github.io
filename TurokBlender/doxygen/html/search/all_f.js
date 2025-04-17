@@ -52,7 +52,7 @@ var searchData=
   ['printhelp_49',['PrintHelp',['../a00149.html#a4961fe1c32e8d5367d2354e504217893',1,'kGame']]],
   ['printline_50',['PrintLine',['../a00149.html#a476dc5d1f558aad4f9eae3c85cf7ba8b',1,'kGame']]],
   ['project_51',['Project',['../a00041.html#abeb7823fd3d1c544a52030aaf5fd57f0',1,'kVec3']]],
-  ['properties_52',['Properties',['../a00154.html',1,'Actor Def Properties'],['../a00157.html',1,'Fx Properties']]],
+  ['properties_52',['Properties',['../a00158.html',1,'Actor Def Properties'],['../a00161.html',1,'Fx Properties']]],
   ['ps_5fantigravity_53',['PS_ANTIGRAVITY',['../a00002.html#aa1dd9725a858cb6329663cec055c6307af26cc7be510c6103c3103bb65d226eb9',1,'t1_scriptAPI.cpp']]],
   ['ps_5fclimbing_54',['PS_CLIMBING',['../a00002.html#aa1dd9725a858cb6329663cec055c6307aa797cac0dd25919a781a972d76e964eb',1,'t1_scriptAPI.cpp']]],
   ['ps_5ffalldeath_55',['PS_FALLDEATH',['../a00002.html#aa1dd9725a858cb6329663cec055c6307a6dbb7094ade57982e6c3f7ea9f24e5e0',1,'t1_scriptAPI.cpp']]],
@@ -63,6 +63,6 @@ var searchData=
   ['pside_5fback_60',['PSIDE_BACK',['../a00002.html#a5031bbdbfc099af810c7118a3f2a9ac9a4bc07914ccd5b76359f3200d9d966e31',1,'t1_scriptAPI.cpp']]],
   ['pside_5ffront_61',['PSIDE_FRONT',['../a00002.html#a5031bbdbfc099af810c7118a3f2a9ac9a8b779d48830e3a31e75e683b36684b1b',1,'t1_scriptAPI.cpp']]],
   ['pside_5fon_62',['PSIDE_ON',['../a00002.html#a5031bbdbfc099af810c7118a3f2a9ac9a5bc47473a54ae2e332bfd82f5ce787d4',1,'t1_scriptAPI.cpp']]],
-  ['public_20beta_20changes_63',['Public Beta Changes',['../a00155.html',1,'']]],
+  ['public_20beta_20changes_63',['Public Beta Changes',['../a00159.html',1,'']]],
   ['purgeunusedmodels_64',['PurgeUnusedModels',['../a00149.html#a73226b5962ad5573962d0d2087abd490',1,'kGame']]]
 ];

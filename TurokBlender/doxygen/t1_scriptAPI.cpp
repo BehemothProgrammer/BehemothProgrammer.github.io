@@ -154,7 +154,7 @@ enum EnumActorSpawnFlags3
 	ASF3_PROJECTILEATTACK9 = 256, ///< Demon chest Hadoken (anim_aiRangeAttack9)
 	ASF3_PROJECTILEATTACK10 = 512, ///< High Priest Lightning Red Flames (anim_aiRangeAttack10)
 	ASF3_MAKESPAWNANIMVISIBLE = 1024, ///< clears actor flags: ~(AF_HIDDEN|AF_DISABLED)
-	ASF3_NODRAWONCAMERA = 2048 ///< Will not draw this actor when viewing from camera unless camera flags has CMF_SHOW_HIDDEN_OBJECTS. 
+	ASF3_NODRAWONCAMERA = 2048 ///< Will not draw this actor when viewing from camera unless camera flags has CMF_SHOW_HIDDEN_OBJECTS.
 };
 
 enum EnumPlayerFlags
@@ -187,7 +187,7 @@ enum EnumPlayerStates
     PS_FALLDEATH = 5,
     PS_ANTIGRAVITY = 6
 }
-        
+
 enum EnumAIFlags
 {
 	AIF_ATTACKING = 1, ///< playing an attacking animation
@@ -195,7 +195,7 @@ enum EnumAIFlags
 	AIF_FIRSTATTACK = 4,
 	AIF_HEARDLOUDNOISE = 8,
 	AIF_BLOWNAWAY = 16, ///< being blown away by explosion
-	AIF_GOBACKTOLEASH = 32,
+	AIF_GOBACKTOLEASH = 32, ///<
 	AIF_RESSURECT = 64,
 	AIF_FEIGNDEATH = 128,
 	AIF_REGENERATE = 256,
@@ -483,41 +483,41 @@ namespace kexVibrationPlayer
 /**
  * @class array<T>
 It is possible to declare array variables with the array identifier followed by the type of the elements within angle brackets.
- 
+
 Example:
- 
+
 @code{.cpp}
   array<int> a, b, c;
   array<Foo@> d;
-@endcode  
- 
+@endcode
+
 a, b, and c are now arrays of integers, and d is an array of handles to objects of the Foo type.
- 
+
 When declaring arrays it is possible to define the initial size of the array by passing the length as a parameter to the constructor. The elements can also be individually initialized by specifying an initialization list. Example:
- 
+
 @code{.cpp}
   array<int> a;           // A zero-length array of integers
   array<int> b(3);        // An array of integers with 3 elements
   array<int> c(3, 1);     // An array of integers with 3 elements, all set to 1 by default
   array<int> d = {5,6,7}; // An array of integers with 3 elements with specific values
-@endcode  
- 
+@endcode
+
 Multidimensional arrays are supported as arrays of arrays, for example:
- 
+
 @code{.cpp}
   array<array<int>> a;                     // An empty array of arrays of integers
   array<array<int>> b = {{1,2},{3,4}}      // A 2 by 2 array with initialized values
   array<array<int>> c(10, array<int>(10)); // A 10 by 10 array of integers with uninitialized values
-@endcode  
- 
+@endcode
+
 Each element in the array is accessed with the indexing operator. The indices are zero based, i.e. the range of valid indices are from 0 to length - 1.
- 
+
 @code{.cpp}
     a[0] = some_value;
 @endcode
- 
+
 When the array stores handles the elements are assigned using the handle assignment.
- 
+
 @code{.cpp}
   // Declare an array with initial length 1
   array<Foo@> arr(1);
@@ -527,17 +527,17 @@ When the array stores handles the elements are assigned using the handle assignm
     // Set the first element to point to a new instance of Foo
     @arr[0] = Foo();
 @endcode
- 
+
 Arrays can also be created and initialized within expressions as anonymous objects.
- 
+
 @code{.cpp}
   // Call a function that expects an array of integers as input
   foo(array<int> = {1,2,3,4});
 @endcode
- 
+
  */
 template <class T>
-class array<T>
+class array	// class array<T>
 {
 public:
 	void insertAt(uint index, const T&in value); ///< Inserts a new element into the array at the specified index.
@@ -554,27 +554,27 @@ public:
 	void sortDesc(); ///< Sorts the elements in the array in descending order. For object types, this will use the type's opCmp method.
 	void sortDesc(uint startAt, uint count); ///< Sorts only the elements starting at index startAt and the following count elements in the array in descending order. For object types, this will use the type's opCmp method.
 	void reverse(); ///< Reverses the order of the elements in the array.
-    
+
     /**
     * @brief Returns the index of the first element that has the same value as the wanted value.
     * For object types, this will use the type's opEquals or opCmp method to compare the value. For arrays of handles any null handle will be skipped.
     * If no match is found will return a negative value.
     */
 	int find(const T&in value) const;
-    
+
     /**
     * @brief Returns the index of the first element that has the same value as the wanted value.
     * For object types, this will use the type's opEquals or opCmp method to compare the value. For arrays of handles any null handle will be skipped.
     * If no match is found will return a negative value.
     */
 	int find(uint startAt, const T&in value) const;
-    
+
     /**
     * @brief Searches for a matching address. These are especially useful for arrays of handles where specific instances of objects are desired, and not just objects that happen to have equal value.
     * If no match is found will return a negative value.
     */
 	int findByRef(const T&in value) const;
-    
+
     /**
     * @brief Searches for a matching address. These are especially useful for arrays of handles where specific instances of objects are desired, and not just objects that happen to have equal value.
     * If no match is found will return a negative value.
@@ -675,7 +675,7 @@ public:
 	kVec3& Lerp(const kVec3&in other, const float t); ///< Linearly interpolates between two vectors
 	kVec3& Project(const kVec3&in normal, const float value); ///< Projects a vector onto another vector
 	kVec3& Reflect(const kVec3&in normal, const float energyFactor); ///< Reflects a vector off the plane defined by a normal
-	kVec3& Randomize(const float value); ///< Randomizes x, y, z, components by value 
+	kVec3& Randomize(const float value); ///< Randomizes x, y, z, components by value
 	kVec3& CubicCurve(const kVec3&in pt1, const float value, const kVec3&in pt2);
 	kVec3& QuadraticCurve(const kVec3&in pt1, const float value, const kVec3&in pt2, const kVec3&in pt3);
 	kVec3 opAdd(const kVec3&in v) const;
@@ -761,7 +761,7 @@ public:
 	float Dot(const kPlane&in plane) const;
 	float Distance(const kVec3&in point) const; ///< 0 = PSIDE_ON. > 0 is PSIDE_FRONT. < 0 PSIDE_BACK.
 	float ToYaw() const; ///< Yaw of this plane.
-    
+
     /**
      * @brief Returns true if yaw is facing toward the plane. Usually used for climbing sectors.
      * @code{.cpp}
@@ -954,9 +954,10 @@ public:
 	const int GetNumAttachedTrails();
 	kVec3& Offset();
 	const int GetNumNodes() const;
-	kVec3 GetNodeOrigin(const int node, const kVec3&in offset);
-	kQuat GetNodeRotation(const int node);
+	kVec3 GetNodeOrigin(const int node, const kVec3&in offset); ///< Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
+	kQuat GetNodeRotation(const int node); ///< Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
 	kVec3 GetNodeScale(const int node);
+    void ForceUpdateJoints(const float interpolatedFraction = 1.0f); ///< Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current). This is an expensive operation so use sparingly.
 	kStr GetModelFile() const;
 	kStr GetAnimFile() const;
 	const bool IsMorph() const;
@@ -964,7 +965,7 @@ public:
     /**
      * @brief Set Morph Updating.
      * @param bUpdate: Set to false to handle updating it yourself per ModelFile (not per Actor).
-     * 
+     *
         Default Tick code:
         @code{.cpp}
         if(time >= 1.0f)
@@ -982,7 +983,7 @@ public:
         @endcode
      */
 	void SetMorphUpdating(const bool bUpdate);
-    
+
     /**
      * @brief Get Morph frame info
      * @param frame: 1=Init Frame, 2=Start Loop Frame. >= maxFrames then 1.
@@ -1003,8 +1004,9 @@ public:
 	void Set(const int animID, float speed, int flags); ///< EnumAnimStateFlags
 	const int CurrentFrame(); ///< current frame playing for the current animation. Must have an animation action keyframe for this to work, otherwise use TrackFrame() instead. This should be named more like last frame an action was checked to execute.
 	const int NumFrames(); ///< number of frames in this animation
+	const int NumNodes(); ///< number of nodes in this animation
 	const float PlayTime(); ///< increases by GAME_DELTA_TIME if not stopped or paused.
-	const float TrackTime(); ///< time from 0(on first frame) to 1(on last frame). 
+	const float TrackTime(); ///< time from 0(on first frame) to 1(on last frame).
 	bool IsPlaying(const int animID); ///< Returns true if current animations ID is animID and the animation is not stopped.
 	bool CheckAnimID(const int animID); ///< checks if animID exists
 	const int PlayingID() const; ///< the current animations ID
@@ -1021,6 +1023,9 @@ public:
 	void SetTrackTime(const float time); ///< 0.0(first frame) to 1.0(last frame)
     const int TrackFrame(void) const; ///< current frame playing for the current animation.
     const int TrackNextFrame(void) const; ///< next frame to play for the current animation.
+    kQuat GetRotation(const int animID, int nodeNum, int frame);
+    kVec3 GetOrigin(const int animID, int nodeNum, int frame);
+    const int GetAnimNumFrames(const int animID);
 	int flags; ///< EnumAnimStateFlags
 };
 
@@ -1100,12 +1105,17 @@ public:
 	void InflictGenericDamage(kActor@ inflictor, const int damage);
 	void InflictGenericDamage(kActor@ inflictor, const kexStr &damageDef, const int damage); ///< Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this funciton: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce
 	void InflictDamage(kActor@ inflictor, const kStr&in damageDef);
-	void InteractActorsAtPosition(const kVec3&in pos, const kStr&in callbackFunc, const float arg1 = 0, const float arg2 = 0, const float arg3 = 0, const float arg4 = 0);
+    /**
+     * @brief Calls a script function on all actors that are in the AreaNodes contained inside a bounds. The bounds is calcualated as: pos + this actors bounds(model bounds) + this actors radius
+     * @param pos The world position of where to check for actors
+     * @param callbackFunc a function on this actors script class that will be called (if it exists) for each actor in range. function header must be: void callbackFunc(kActor@, const float, const float, const float, const float)
+     */
+    void InteractActorsAtPosition(const kVec3&in pos, const kStr&in callbackFunc, const float arg1 = 0, const float arg2 = 0, const float arg3 = 0, const float arg4 = 0);
 	kScriptObject@ ScriptObject();
 	void MoveToPosition(const float x, const float y); ///< Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
 	bool RandomDecision(const int randomBit) const; ///< randomBit should be >= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.
 	void SetPosition(const kVec3&in pos, const bool clearInterpolation = true); ///< best way to set an actors position, will also set the sector and optionally clear interpolation
-    
+
     /**
      * @brief Get a map actors param value
      * @param paramID
@@ -1130,7 +1140,7 @@ public:
 	void ClearInterpolation();
 	void AutomapToggle(const bool show); ///< Use with Game.AutomapCustom(true);
 	void SetAutomapColor(const int r, const int g, const int b);
-    
+
     /**
      * @brief  Sets the actors param value. all params are int16.
      * @param param
@@ -1163,7 +1173,7 @@ public:
 	const int MapActorIndex() const; ///< Returns -1 if not a map actor
 	int& DifficultyMode(); ///< The difficulty this actor is currently set to
 	void OverrideOnDamageValue(const int damage, const bool bOverride = true); ///< call in OnPreDamage
-	bool& NoKnockBack(); ///< Will not receive knock back movement from things like the alien weapon for example. 
+	bool& NoKnockBack(); ///< Will not receive knock back movement from things like the alien weapon for example.
 	const float BaseHeight() const; ///< height of actor when spawned or when kAI regenerated
 	void RunAction(const int funcID, const float w = 0.0f, const float x = 0.0f, const float y = 0.0f, const float z = 0.0f); ///< run a function on the actor defined in defs/animActions.txt
 	float& AirFriction(); ///< default = 1.0f
@@ -1212,7 +1222,7 @@ class kWeapon : public kActor
 public:
 	kVec3 TransformToOwnerPosition(); ///< returns the OffsetPosition() * the players matrix.
 	kVec3 TransformToOwnerPosition(const kVec3&in vector); ///< returns the (OffsetPosition() + vector) * the players matrix.
-    
+
     /**
      * @brief SpawnsFx at the players at the position passed in * players rotation, then adds the
      * viewHeight + landingViewOffset to the z position. Sets PF_FIREDPROJECTILE PlayerFlags.
@@ -1328,7 +1338,7 @@ class kCamera
 {
 public:
 	void StartCinematic(const uint flags = 12); ///< EnumCameraFlags
-	void StopCinematic(const bool noFade = false); ///< if noFade is true will stop the cinematic immediately without fading out. 
+	void StopCinematic(const bool noFade = false); ///< if noFade is true will stop the cinematic immediately without fading out.
 	const int CinematicState() const; ///< EnumCameraStates
 	void SetLookAtActor(kActor@ actor);
 	void ClearLookAtActor();
@@ -1437,7 +1447,7 @@ public:
     void ChangeAreaFloorImpact(const int areaID, const int value); ///< value: EnumImpactType
     void ChangeAreaWallImpact(const int areaID, const int value); ///< value: EnumImpactType
 	void ChangeAreaWaterHeight(const int areaID, const float height); ///< WaterHeight is stored per area, not per sector or per vertex.
-    
+
     /**
      * @brief Returns an area arg value
      * @param areaID
@@ -1470,9 +1480,9 @@ public:
         @endcode
     */
 	const int16 GetAreaArg(const int areaID, const int arg) const;
-    
+
     /**
-     * @brief 
+     * @brief
      * @param areaID
      * @param arg
         @code{.cpp}
@@ -1521,7 +1531,7 @@ public:
      * @param heights: x is the height of pt1, y is the height of pt2, z is the height of pt3.
      */
 	void GetSectorCorners(const int sectorIndex, kVec3&out pt1, kVec3&out pt2, kVec3&out pt3, kVec3&out heights) const;
-    
+
     /**
      * @brief  Get the 3 sectors links. -1 means there was no sector linked to that edge.
      * Link 1 is pt1 to pt3
@@ -1559,7 +1569,7 @@ public:
 	void ResumeMusic();
 	kStr MusicSong();
 	void MusicPitch(const float pitch);
-    
+
     /**
      * @brief Start controller vibration from tactile sound file. Returns a handle.
      * @param path the path to the .bnvib file
@@ -1573,7 +1583,7 @@ public:
 	void StopTactile(int vibHandle);
 	void StopAllTactile();
 	void Restart();
-    
+
     /**
      * @brief Print a message to the HUD
      * @param text
@@ -1599,7 +1609,7 @@ public:
 	const int GetDifficulty(); ///< EnumDifficulty. Internally calls GameVariables.GetInt("g_difficulty")
 	void SetDifficulty(const int value); ///< EnumDifficulty
 	float GetGameSpeed();
-    
+
     /**
      * @brief Sets the current GameSpeed. kPuppet and kPlayerWeapon are not effected by GameSpeed.
      * @param speed 0..1
@@ -1632,9 +1642,9 @@ public:
 	void SetLifeForcePic(const kStr&in imagePath);
 	void ClearLifeForcePic();
 	void MessageBox(const kStr&in msg1, const kStr&in msg2);
-    
+
     /**
-     * @brief 
+     * @brief
      * @param msg1 top line
      * @param msg2 bottom line
         @code{.cpp}
@@ -1672,7 +1682,7 @@ public:
 	void GetDateAndTime(int&out seconds, int&out minutes, int&out hours, int&out day, int&out month, int&out year, kStr&out text);
 	void KillAllFx();
 	void StopSounds();
-    
+
     /**
      * @brief add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
      * if the id already exists then simply sets all it's variables.
@@ -1687,7 +1697,7 @@ public:
     bool SetTextOrigin(const int id, const float x, const float y);
     bool SetTextColor(const int id, const int r = 255, const int g = 255, const int b = 255, const int a = 255);
     bool SetTextColors(const int id, const int r = 255, const int g = 255, const int b = 255, const int a = 255, const int r2 = 255, const int g2 = 255, const int b2 = 255, const int a2 = 255);
-    
+
     /**
      * @brief Set the text scale, font, edge, center, shadow
      * @param font EnumGameFontType
@@ -1698,7 +1708,7 @@ public:
 	void ClearText();
     void GetTextSize(const kStr &in text, const int font, const float scale, float &out width, float &out height); ///< EnumGameFontType
     float GetHUDOffset(const bool user = false); ///< if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".
-    
+
     /**
      * @brief add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
      * if the id already exists then simply sets all it's variables.
@@ -1740,7 +1750,7 @@ public:
     bool LoadModDataFile(const kStr&in filename); ///< Returns false if couldn't load file. Clears and Sets GameModFileData with the contents of the loaded file.
 	void SetNoModSelect(const bool bToggle = true); ///< Disable the mod select menu when selecting new game for workshop mods only. (seta g_nomodselect "1")
 	void PlayMovie(const kStr&in filename, const bool skippable = true); ///< Only .ogv files (replaces/adds .ogv extension to filename). Can not read from kpfs.
-    
+
     /**
      * @brief Returns the key bind name of action. Returns empty string if nothing is bound.
      * @param action EnumInputActions
@@ -1748,7 +1758,7 @@ public:
      * @param sort sorts binds by keyboard, mouse, and controller binds. depending on if controller or keyboard is active.
      */
 	kStr GetActionBind(const int action, const bool first = true, const bool sort = true);
-    
+
     /**
      * @brief Returns the key bind name of the console command. Returns empty string if nothing is bound.
      * @param command the name of the console command.
@@ -1854,7 +1864,7 @@ public:
 	void SetSpiritualTime(const float time, const float blend); ///< time = time until cancels the effect. Should SetGameSpeed after calling this.
 	const float GetSpiritualTime() const;
 	const int GetWeaponGroup(const int weapon);
-    
+
     /**
      * @brief Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2.
      * then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. The group can also be set in weaponInfo.txt def file with the key "group"

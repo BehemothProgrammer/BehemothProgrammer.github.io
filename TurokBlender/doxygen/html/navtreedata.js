@@ -26,11 +26,11 @@ var NAVTREE =
 [
   [ "Turok", "index.html", [
     [ "Turok Manual", "index.html", "index" ],
-    [ "Actor Def Properties", "a00154.html", null ],
-    [ "Public Beta Changes", "a00155.html", null ],
-    [ "v3 Changes", "a00156.html", null ],
-    [ "Fx Properties", "a00157.html", null ],
-    [ "Map Format", "a00158.html", null ],
+    [ "Actor Def Properties", "a00158.html", null ],
+    [ "Public Beta Changes", "a00159.html", null ],
+    [ "v3 Changes", "a00160.html", null ],
+    [ "Fx Properties", "a00161.html", null ],
+    [ "Map Format", "a00162.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -70,8 +70,8 @@ var NAVTREEINDEX =
 "a00002.html#a92de7593743d6093b7d047ba407f5c81a0b5ec96c81d2197c9b6bddea0afb6636",
 "a00029.html#a6f59a14c763c21e1381ecf0f6a4a7ebf",
 "a00089.html#ae2310e9586f82596ba53594f460499ee",
-"a00121.html#a9ef69aedc2c802473bf3f81068ff8eda",
-"a00149.html#adca939df27549157559ce174036d14bd"
+"a00121.html#a84e1b67e71ec3df992fa3a3d00caf95c",
+"a00149.html#ad078b549dc05491c6568a290162ec5e5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
