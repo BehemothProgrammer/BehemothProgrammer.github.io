@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a11aacbd542e06e3c8b16949c390d03be" id="r_a11aacbd542e06e3c8b16949c390d03be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00041.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11aacbd542e06e3c8b16949c390d03be">GetNodeScale</a> (const int node)</td></tr>
 <tr class="separator:a11aacbd542e06e3c8b16949c390d03be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbdce5a92a5a04c758818d0ef1cd72a9" id="r_adbdce5a92a5a04c758818d0ef1cd72a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbdce5a92a5a04c758818d0ef1cd72a9">ForceUpdateJoints</a> (const float interpolatedFraction=1.0f)</td></tr>
-<tr class="memdesc:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current)  <br /></td></tr>
+<tr class="memdesc:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current). This is an expensive operation so use sparingly.  <br /></td></tr>
 <tr class="separator:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae085315c76ba8071171f70c64e15bb3d" id="r_ae085315c76ba8071171f70c64e15bb3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00033.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae085315c76ba8071171f70c64e15bb3d">GetModelFile</a> () const</td></tr>
 <tr class="separator:ae085315c76ba8071171f70c64e15bb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,7 +266,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current) </p>
+<p>Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current). This is an expensive operation so use sparingly. </p>
 
 </div>
 </div>

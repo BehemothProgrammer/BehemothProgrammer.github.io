@@ -226,7 +226,7 @@ Projectile Attack 1 = Fire (anim_aiRangeAttack1)
 
 \section actorfx <H3>ActorFx Commands</H3>
 \verbatim
-Note: Time increases by GAME_FRAME_TIME (0.25f) every tick and is effected by the current GameSpeed.
+Note: Time increases by GAME_FRAME_TIME (0.25f) every tick and is effected by the current GameSpeed (unless $use_gamespeed(0) is called).
 
 $idle                                           // Does nothing and processes the next command
 $wait (time)                                    // float time
@@ -240,6 +240,7 @@ $fade_scale ({x, y, z}, scaleTime, time)        // float x, y, z. float scaleTim
 $play_sound (ID)                                // Play a sound by ID
 $repeat                                         // Starts back at processing the first command again.
 $action (ID, {x y z w})                         // Calls a script animation function by ID with x,y,z,w values passed into the function.
+$use_gamespeed (use)                            // bool use. if set to 0 will not use gamespeed else will use gamespeed (default).
 \endverbatim
 
 \section species <H3>Species Mask (Unused)</H3>
