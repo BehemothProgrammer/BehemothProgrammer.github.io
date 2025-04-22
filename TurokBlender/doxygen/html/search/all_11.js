@@ -38,9 +38,10 @@ var searchData=
   ['rgbtohsv_35',['RGBToHSV',['../a00053.html#a2fbb6d7c22879de4aee737cca9473ee5',1,'kColor']]],
   ['roll_36',['Roll',['../a00105.html#a4252c7e3883e71bddffbeb74458c7fcd',1,'kActor']]],
   ['roll_37',['roll',['../a00129.html#ac2138395b25c25c282db344ee1fd1b3d',1,'kCamera']]],
-  ['rotation_38',['Rotation',['../a00105.html#ae6f6084cde757643232779d506071ab9',1,'kActor']]],
-  ['runaction_39',['RunAction',['../a00105.html#acd3a3c959c6b1d5a924976fd41e31b15',1,'kActor']]],
-  ['runfxevent_40',['RunFxEvent',['../a00105.html#aad5ec4ba6c8d3787b3d38025e090adee',1,'kActor']]],
-  ['runwalkpulse_41',['RunWalkPulse',['../a00149.html#afe4f52374df9f16bd97d5734826340f7',1,'kGame']]],
-  ['runwalktoggle_42',['RunWalkToggle',['../a00153.html#a3dcad7691f35ceb7c8ecf3e80ce774a6',1,'kPlayer']]]
+  ['rotatearoundorigin_38',['RotateAroundOrigin',['../a00105.html#aa8a63a190654fe123fe470d9a18546f5',1,'kActor']]],
+  ['rotation_39',['Rotation',['../a00105.html#ae6f6084cde757643232779d506071ab9',1,'kActor']]],
+  ['runaction_40',['RunAction',['../a00105.html#acd3a3c959c6b1d5a924976fd41e31b15',1,'kActor']]],
+  ['runfxevent_41',['RunFxEvent',['../a00105.html#aad5ec4ba6c8d3787b3d38025e090adee',1,'kActor']]],
+  ['runwalkpulse_42',['RunWalkPulse',['../a00149.html#afe4f52374df9f16bd97d5734826340f7',1,'kGame']]],
+  ['runwalktoggle_43',['RunWalkToggle',['../a00153.html#a3dcad7691f35ceb7c8ecf3e80ce774a6',1,'kPlayer']]]
 ];

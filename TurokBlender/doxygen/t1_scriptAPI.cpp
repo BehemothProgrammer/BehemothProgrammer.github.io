@@ -1191,10 +1191,11 @@ public:
     const kAngle &PrevLerpYaw(void) const;
     bool HasCustomRef(void) const;
     void AddCustomRef(void); ///< Keeps the actor from getting freed from memory.
-    void ClearCustomRef(void); ///< Allows the actor to get freed from memory if it has no references.
+    void ClearCustomRef(void); ///< Allows the actor to get freed from memory if it has no references. This will be called automatically when level is unloaded.
     void SetupHeadTrack(const kStr &in headTrackDef);   ///< Sets a headtrack
     float &SoundPitchModify();  ///< Override the final pitch of sounds owned by this actor. A value of 1000 raises the pitch by the amount tiny cheat does. A value of -1000 lowers the pitch by the amount the big head cheat does. Set to 0 to stop overriding. if less than 1 will override with no pitch change so tiny and big head mode don't affect it.
-    void RotateAroundOrigin(const kAngle &in angle, const kVec3 &in platformOrigin, const bool setPos = true) ///< The angle amount to rotate this actors position. if setPos is true will use SetPosition to position the actor else will use MoveToPosition.
+    void RotateAroundOrigin(const kAngle &in angle, const kVec3 &in platformOrigin, const bool setPos = true); ///< The angle amount to rotate this actors position. if setPos is true will use SetPosition to position the actor else will use MoveToPosition.
+    void LinkArea(); ///< Links the actor to an area node so that internally the actor can be found in quick searches (similar to a kd tree) for explosive damage radius checks, when InteractActorsAtPosition is called, kAI GetAttention checks, and collision checks against actors. Should only call whenever you set the actors Origin() directly. Calling MoveToPosition or SetPosition or when the actors movement is updated by velocity changes or by gravity then LinkArea will be called internally.
 };
 
 /**
