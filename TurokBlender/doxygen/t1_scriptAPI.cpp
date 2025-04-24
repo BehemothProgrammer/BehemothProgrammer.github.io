@@ -64,7 +64,7 @@ enum EnumActorFlags
 	AF_STAYINWATER = 67108864, ///< can't exit water sectors
 	AF_ALWAYSACTIVE = 134217728, ///< never sleep or go dormant
 	AF_COLLIDEDWITHWALL = 268435456, ///< collided with an edge. cleared at every OnTick call
-	AF_INVINCIBLE = 536870912, ///< will not recieve damage. OnDamage and OnDeath are never called
+	AF_INVINCIBLE = 536870912, ///< will not receive damage. OnDamage and OnDeath are never called
 	AF_ALLOWTINYENEMYCHEAT = 1073741824, ///< affected by tiny enemy game cheat
 	AF_NOMOVEMENT = -2147483648 ///< will not do collision movement
 };
@@ -148,7 +148,7 @@ enum EnumActorSpawnFlags3
 	ASF3_REGENERATEFROMSTART = 4, ///< Regen from starting position
 	ASF3_WALKINSTRAIGHTLINE = 8, ///< Set animation to Blend(ANIM_WALKING, (m_animSpeed * m_animScalar), 10, ANF_LOOP|ANF_ROOTMOTION); and do nothing else.
 	ASF3_KILLOUTSIDEOFVIEW = 16, ///< NOT USED
-	ASF3_NOTHINKER = 32, ///< AI will not function. Actores will not update movement. Actors OnBeginLevel will set their animation to ANIM_SPECIAL_EVENT.
+	ASF3_NOTHINKER = 32, ///< AI will not function. Actors will not update movement. Actors OnBeginLevel will set their animation to ANIM_SPECIAL_EVENT.
 	ASF3_AVOIDPLAYERS2 = 64, ///< NOT USED
 	ASF3_NOVIOLENTDEATH = 128, ///< ANIM_AIDEATHSTAND and ANIM_DEATHSTANDALT will not play when kAI is killed.
 	ASF3_PROJECTILEATTACK9 = 256, ///< Demon chest Hadoken (anim_aiRangeAttack9)
@@ -195,7 +195,7 @@ enum EnumAIFlags
 	AIF_FIRSTATTACK = 4,
 	AIF_HEARDLOUDNOISE = 8,
 	AIF_BLOWNAWAY = 16, ///< being blown away by explosion
-	AIF_GOBACKTOLEASH = 32, ///<
+	AIF_GOBACKTOLEASH = 32,
 	AIF_RESSURECT = 64,
 	AIF_FEIGNDEATH = 128,
 	AIF_REGENERATE = 256,
@@ -213,7 +213,7 @@ enum EnumAIFlags
 	AIF_TELEPORTING = 1048576, ///< in teleport state. ignore all chase logic
 	AIF_TELEPORTIN = 2097152, ///< playing teleport in animation
 	AIF_WAITFORCYCLE = 4194304, ///< prevent other animations from interrupting until the current one finishes
-	AIF_DAMAGEPANIC = 8388608 ///< become aggressive when target is outside it's active threshold (good for forcing AI to attack their target)
+	AIF_DAMAGEPANIC = 8388608 ///< become aggressive when target is outside its active threshold (good for forcing AI to attack their target)
 };
 
 enum EnumImpactType
@@ -954,8 +954,8 @@ public:
 	const int GetNumAttachedTrails();
 	kVec3& Offset();
 	const int GetNumNodes() const;
-	kVec3 GetNodeOrigin(const int node, const kVec3&in offset); ///< Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
-	kQuat GetNodeRotation(const int node); ///< Is calcaulated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
+	kVec3 GetNodeOrigin(const int node, const kVec3&in offset); ///< Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
+	kQuat GetNodeRotation(const int node); ///< Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
 	kVec3 GetNodeScale(const int node);
     void ForceUpdateJoints(const float interpolatedFraction = 1.0f); ///< Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current). This is an expensive operation so use sparingly.
 	kStr GetModelFile() const;
@@ -1084,7 +1084,7 @@ public:
 	kRenderModel@ RenderModel();
 	const bool InWater() const;
 	bool CheckPosition(const kVec3&in origin); ///< checks if the actor can move to this location
-	bool CheckPosition(const float angle, const float distance); ///< calls CheckPosition(kVec3 origin) with location being: Actor.Origin() + (angle*distance*actor.Radius())
+	bool CheckPosition(const float angle, const float distance); ///< calls CheckPosition(kVec3 origin) with origin being: Actor.Origin() + (angle*distance*Actor.Radius())
 	float GetTurnYaw(const kVec3&in lookAtLocation) const;
 	float GetAvoidanceAngle(const kVec3&in lookAtLocation, const float distance);
 	const float GetWaterHeight() const;
@@ -1103,10 +1103,10 @@ public:
 	float DistanceToPoint(const kVec3&in point) const; ///< calls DistanceToPoint(x,y,z)
 	float DistanceToPoint(const float x, const float y, const float z) const; ///< actors point is in the center
 	void InflictGenericDamage(kActor@ inflictor, const int damage);
-	void InflictGenericDamage(kActor@ inflictor, const kexStr &damageDef, const int damage); ///< Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this funciton: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce
+	void InflictGenericDamage(kActor@ inflictor, const kexStr &damageDef, const int damage); ///< Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this function: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce
 	void InflictDamage(kActor@ inflictor, const kStr&in damageDef);
     /**
-     * @brief Calls a script function on all actors that are in the AreaNodes contained inside a bounds. The bounds is calcualated as: pos + this actors bounds(model bounds) + this actors radius
+     * @brief Calls a script function on all actors that are in the AreaNodes contained inside a bounds. The bounds is calculated as: pos + this actors bounds(model bounds) + this actors radius
      * @param pos The world position of where to check for actors
      * @param callbackFunc a function on this actors script class that will be called (if it exists) for each actor in range. function header must be: void callbackFunc(kActor@, const float, const float, const float, const float)
      */
@@ -1317,7 +1317,7 @@ public:
     float &MaxFallVelocity(void);               ///< default = -200.0f
     bool &NoWallJump(void);                     ///< default = false
     bool &CustomViewEnable();                   ///< Set to true to enable the custom view
-    bool &CustomViewUnderwater();               ///< wheather the custom view is underwater or not
+    bool &CustomViewUnderwater();               ///< whether the custom view is underwater or not
     kAngle &CustomViewYaw();
     kAngle &CustomViewPitch();
     kAngle &CustomViewRoll();
@@ -1404,8 +1404,8 @@ public:
 class kPlayLoop
 {
 public:
-	const int Ticks() const; ///< effected by gamespeed
-	const int UnscaledTicks() const; ///< Not effected by GameSpeed
+	const int Ticks() const; ///< affected by gamespeed
+	const int UnscaledTicks() const; ///< Not affected by GameSpeed
 	void TagActorForBossBar(kActor@ actor);
 	void RemoveBossActor();
 	void CheckKeys(); ///< Prints HUD messages to tell the player how many keys they've found on the current HUBID
@@ -1469,7 +1469,7 @@ public:
         2: AAF_CHECKPOINT or AAF_SAVEGAME: CheckpointID
         3: AAF_EVENT: tag ID
         4: Not used
-        5: AAF_SECRET: the secret index value (set automatically when level loads starting at 0. Conflicts with AAF_DAMAGE (so I guess no secrets should be placed on damaga sectors))
+        5: AAF_SECRET: the secret index value (set automatically when level loads starting at 0. Conflicts with AAF_DAMAGE (so I guess no secrets should be placed on damage sectors))
 
         Default Scripts:
         0: Not used
@@ -1502,7 +1502,7 @@ public:
         2: AAF_CHECKPOINT or AAF_SAVEGAME: CheckpointID
         3: AAF_EVENT: tag ID
         4: Not used
-        5: AAF_SECRET: the secret index value (set automatically when level loads starting at 0. Conflicts with AAF_DAMAGE (so I guess no secrets should be placed on damaga sectors))
+        5: AAF_SECRET: the secret index value (set automatically when level loads starting at 0. Conflicts with AAF_DAMAGE (so I guess no secrets should be placed on damage sectors))
 
         Default Scripts:
         0: Not used
@@ -1516,9 +1516,9 @@ public:
      */
 	void ChangeAreaArg(const int areaID, const int arg, const int16 value);
 	void ChangeSectorHeight(const int sectorIndex, const float height); ///< Changes all sectors floor vertices with the same areaID to the height
-	void ChangeSectorCeilingHeight(const int sectorIndex, const float height); ///< Changes all sectors ceilng vertices with the same areaID to the height
-	void ChangeSectorCeilingHeightVertices(const int sectorIndex, const float height, const int ptMask = 7); ///< Changes only the sector ceiling vertices(specfied using the ptMask) to the height.
-	void ChangeSectorHeightVertices(const int sectorIndex, const float height, const int ptMask = 7); ///< Changes only the sector floor vertices(specfied using the ptMask) to the height.
+	void ChangeSectorCeilingHeight(const int sectorIndex, const float height); ///< Changes all sectors ceiling vertices with the same areaID to the height
+	void ChangeSectorCeilingHeightVertices(const int sectorIndex, const float height, const int ptMask = 7); ///< Changes only the sector ceiling vertices(specified using the ptMask) to the height.
+	void ChangeSectorHeightVertices(const int sectorIndex, const float height, const int ptMask = 7); ///< Changes only the sector floor vertices(specified using the ptMask) to the height.
 	const int FindNextClosestSector(const kVec3&in origin);
     /**
      * @brief Get the Sectors vertex position and height
@@ -1612,7 +1612,7 @@ public:
 	float GetGameSpeed();
 
     /**
-     * @brief Sets the current GameSpeed. kPuppet and kPlayerWeapon are not effected by GameSpeed.
+     * @brief Sets the current GameSpeed. kPuppet and kPlayerWeapon are not affected by GameSpeed.
      * @param speed 0..1
      * @param blendSpeed must be >= 1.0. This is the time it takes to lerp from current speed to the new speed. (lerp time = 1.0 / blendSpeed)
      */
@@ -1686,7 +1686,7 @@ public:
 
     /**
      * @brief add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
-     * if the id already exists then simply sets all it's variables.
+     * if the id already exists then simply sets all its variables.
      * @param font EnumGameFontType
      * @param edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
      */
@@ -1712,7 +1712,7 @@ public:
 
     /**
      * @brief add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
-     * if the id already exists then simply sets all it's variables.
+     * if the id already exists then simply sets all its variables.
      * @param edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
      */
     bool AddPic(const int id, const kStr &in path, const float x, const float y, const float w, const float h, const int edge = 0,
@@ -1807,7 +1807,7 @@ public:
 	void DisableLegalText(); ///< Removes the text at the bottom of the title screen
 	void OverrideFogType(const int value); ///< 0=none, 1=force Radial, 2=force Plane
     void ClearInterpolationOnGameObjects(); ///< Clears Interpolation on all gameobjects and the camera if it's active
-    void ShowDummyMenu(void); ///< Actors OnMenuTick fucntion will now be processed. Call ClearDummyMenu to close the dummy menu.
+    void ShowDummyMenu(void); ///< Actors OnMenuTick function will now be processed. Call ClearDummyMenu to close the dummy menu.
     void ClearDummyMenu(bool bClearAll = false);
     void ToggleCursor(bool b = false);
 };
@@ -1860,7 +1860,7 @@ public:
 	int16& MaxHealth(); ///< should be >= MaxExtraHealth and ExtraHealth
 	int16& MaxExtraHealth(); ///< should be <= MaxHealth
 	int16& ExtraHealth(); ///< should be <= MaxExtraHealth
-	bool GiveHealth(const int amount, const bool bMortalWound); ///< Takes into account extra health, and max health values. 0 is full health, negative amounts gives extra health. if bMortalWound is true which is for 2 and ultra health then health goes up to maxExtraHealth.
+	bool GiveHealth(const int amount, const bool bMortalWound); ///< Takes into account extra health, and max health values. 0 is full health, negative amounts give extra health. if bMortalWound is true which is for 2 and ultra health then health goes up to maxExtraHealth.
 	void CancelSpiritualTime(float blendTime = 1.0f); ///< if in spirit mode then will set gamespeed back to 1.0f using the passed in blendTime
 	void SetSpiritualTime(const float time, const float blend); ///< time = time until cancels the effect. Should SetGameSpeed after calling this.
 	const float GetSpiritualTime() const;

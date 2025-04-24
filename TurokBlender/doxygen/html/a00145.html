@@ -157,13 +157,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:acc6c001daa51d73a274a613e5c7aafcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes all sectors floor vertices with the same areaID to the height.  <br /></td></tr>
 <tr class="separator:acc6c001daa51d73a274a613e5c7aafcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f37358a81fcbdcbdbd0ce2d1bcdf227" id="r_a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f37358a81fcbdcbdbd0ce2d1bcdf227">ChangeSectorCeilingHeight</a> (const int sectorIndex, const float height)</td></tr>
-<tr class="memdesc:a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes all sectors ceilng vertices with the same areaID to the height.  <br /></td></tr>
+<tr class="memdesc:a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes all sectors ceiling vertices with the same areaID to the height.  <br /></td></tr>
 <tr class="separator:a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acacab52f468b0e8077c5aac4aaaa901a" id="r_acacab52f468b0e8077c5aac4aaaa901a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acacab52f468b0e8077c5aac4aaaa901a">ChangeSectorCeilingHeightVertices</a> (const int sectorIndex, const float height, const int ptMask=7)</td></tr>
-<tr class="memdesc:acacab52f468b0e8077c5aac4aaaa901a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes only the sector ceiling vertices(specfied using the ptMask) to the height.  <br /></td></tr>
+<tr class="memdesc:acacab52f468b0e8077c5aac4aaaa901a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes only the sector ceiling vertices(specified using the ptMask) to the height.  <br /></td></tr>
 <tr class="separator:acacab52f468b0e8077c5aac4aaaa901a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8675380908841bc9cf0a195b5e9f87ce" id="r_a8675380908841bc9cf0a195b5e9f87ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8675380908841bc9cf0a195b5e9f87ce">ChangeSectorHeightVertices</a> (const int sectorIndex, const float height, const int ptMask=7)</td></tr>
-<tr class="memdesc:a8675380908841bc9cf0a195b5e9f87ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes only the sector floor vertices(specfied using the ptMask) to the height.  <br /></td></tr>
+<tr class="memdesc:a8675380908841bc9cf0a195b5e9f87ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes only the sector floor vertices(specified using the ptMask) to the height.  <br /></td></tr>
 <tr class="separator:a8675380908841bc9cf0a195b5e9f87ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa1e79a345b4e7419c29d5faf15d422b" id="r_aaa1e79a345b4e7419c29d5faf15d422b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa1e79a345b4e7419c29d5faf15d422b">FindNextClosestSector</a> (const <a class="el" href="a00041.html">kVec3</a> &amp;in origin)</td></tr>
 <tr class="separator:aaa1e79a345b4e7419c29d5faf15d422b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,7 +239,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">2: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a> or <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a>: CheckpointID</div>
 <div class="line">3: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a>: tag ID</div>
 <div class="line">4: Not used</div>
-<div class="line">5: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a>: the secret index value (set automatically when level loads starting at 0. Conflicts with <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a> (so I guess no secrets should be placed on damaga sectors))</div>
+<div class="line">5: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a>: the secret index value (set automatically when level loads starting at 0. Conflicts with <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a> (so I guess no secrets should be placed on damage sectors))</div>
 <div class="line"> </div>
 <div class="line">Default Scripts:</div>
 <div class="line">0: Not used</div>
@@ -379,7 +379,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Changes all sectors ceilng vertices with the same areaID to the height. </p>
+<p>Changes all sectors ceiling vertices with the same areaID to the height. </p>
 
 </div>
 </div>
@@ -407,7 +407,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Changes only the sector ceiling vertices(specfied using the ptMask) to the height. </p>
+<p>Changes only the sector ceiling vertices(specified using the ptMask) to the height. </p>
 
 </div>
 </div>
@@ -458,7 +458,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Changes only the sector floor vertices(specfied using the ptMask) to the height. </p>
+<p>Changes only the sector floor vertices(specified using the ptMask) to the height. </p>
 
 </div>
 </div>
@@ -623,7 +623,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">2: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a> or <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a>: CheckpointID</div>
 <div class="line">3: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a>: tag ID</div>
 <div class="line">4: Not used</div>
-<div class="line">5: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a>: the secret index value (set automatically when level loads starting at 0. Conflicts with <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a> (so I guess no secrets should be placed on damaga sectors))</div>
+<div class="line">5: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a>: the secret index value (set automatically when level loads starting at 0. Conflicts with <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a> (so I guess no secrets should be placed on damage sectors))</div>
 <div class="line"> </div>
 <div class="line">Default Scripts:</div>
 <div class="line">0: Not used</div>

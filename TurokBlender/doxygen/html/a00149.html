@@ -191,7 +191,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8aa16bf7f9f4a4f450711dbd6dbb45c" id="r_ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8aa16bf7f9f4a4f450711dbd6dbb45c">GetGameSpeed</a> ()</td></tr>
 <tr class="separator:ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74e7d9ed68d0f6af26befd163b6b631" id="r_ad74e7d9ed68d0f6af26befd163b6b631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad74e7d9ed68d0f6af26befd163b6b631">SetGameSpeed</a> (const float speed, const float blendSpeed)</td></tr>
-<tr class="memdesc:ad74e7d9ed68d0f6af26befd163b6b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current GameSpeed. <a class="el" href="a00121.html">kPuppet</a> and kPlayerWeapon are not effected by GameSpeed.  <br /></td></tr>
+<tr class="memdesc:ad74e7d9ed68d0f6af26befd163b6b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current GameSpeed. <a class="el" href="a00121.html">kPuppet</a> and kPlayerWeapon are not affected by GameSpeed.  <br /></td></tr>
 <tr class="separator:ad74e7d9ed68d0f6af26befd163b6b631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275c0108126ac1398b2e40805ba11ff2" id="r_a275c0108126ac1398b2e40805ba11ff2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275c0108126ac1398b2e40805ba11ff2">GetHubKeyInfo</a> (const uint hubID, int &amp;out nKeys, int &amp;out remainingKeys, int &amp;out keyBits)</td></tr>
 <tr class="separator:a275c0108126ac1398b2e40805ba11ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -282,7 +282,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7016fd9cc56a5473f86c22379ef5006" id="r_af7016fd9cc56a5473f86c22379ef5006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7016fd9cc56a5473f86c22379ef5006">StopSounds</a> ()</td></tr>
 <tr class="separator:af7016fd9cc56a5473f86c22379ef5006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0b6a9e83203efc527f045866641aa3" id="r_a2f0b6a9e83203efc527f045866641aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f0b6a9e83203efc527f045866641aa3">AddText</a> (const int id, const int font, const <a class="el" href="a00033.html">kStr</a> &amp;in text, const float x, const float y, const int edge=0, const float scale=1.0f, const bool center=false, const bool shadow=false, const int r=255, const int g=255, const int b=255, const int a=255, const int r2=255, const int g2=255, const int b2=255, const int a2=255)</td></tr>
-<tr class="memdesc:a2f0b6a9e83203efc527f045866641aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables.  <br /></td></tr>
+<tr class="memdesc:a2f0b6a9e83203efc527f045866641aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables.  <br /></td></tr>
 <tr class="separator:a2f0b6a9e83203efc527f045866641aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d849e8fed84e0d6f6c538017fe7c28b" id="r_a8d849e8fed84e0d6f6c538017fe7c28b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d849e8fed84e0d6f6c538017fe7c28b">SetTextMsg</a> (const int id, const <a class="el" href="a00033.html">kStr</a> &amp;in text)</td></tr>
 <tr class="separator:a8d849e8fed84e0d6f6c538017fe7c28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,7 +306,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a23ec9a3d3b01a2b2e7632245f778e951"><td class="mdescLeft">&#160;</td><td class="mdescRight">if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".  <br /></td></tr>
 <tr class="separator:a23ec9a3d3b01a2b2e7632245f778e951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4dcfc882fb1c54478146d5981583b99" id="r_aa4dcfc882fb1c54478146d5981583b99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4dcfc882fb1c54478146d5981583b99">AddPic</a> (const int id, const <a class="el" href="a00033.html">kStr</a> &amp;in path, const float x, const float y, const float w, const float h, const int edge=0, const float s1=0.0f, const float t1=0.0f, const float s2=1.0f, const float t2=1.0f, const int r=255, const int g=255, const int b=255, const int a=255)</td></tr>
-<tr class="memdesc:aa4dcfc882fb1c54478146d5981583b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables.  <br /></td></tr>
+<tr class="memdesc:aa4dcfc882fb1c54478146d5981583b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables.  <br /></td></tr>
 <tr class="separator:aa4dcfc882fb1c54478146d5981583b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abed386912fe634d94e784b4bccb6a018" id="r_abed386912fe634d94e784b4bccb6a018"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abed386912fe634d94e784b4bccb6a018">SetPicTex</a> (const int id, const <a class="el" href="a00033.html">kStr</a> &amp;in path)</td></tr>
 <tr class="separator:abed386912fe634d94e784b4bccb6a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -467,7 +467,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa5e95f7a2279bb4f934a12ab7f19f4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears Interpolation on all gameobjects and the camera if it's active.  <br /></td></tr>
 <tr class="separator:afa5e95f7a2279bb4f934a12ab7f19f4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afed48f16502dfcb3b2d434969f5496ec" id="r_afed48f16502dfcb3b2d434969f5496ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afed48f16502dfcb3b2d434969f5496ec">ShowDummyMenu</a> (void)</td></tr>
-<tr class="memdesc:afed48f16502dfcb3b2d434969f5496ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actors OnMenuTick fucntion will now be processed. Call ClearDummyMenu to close the dummy menu.  <br /></td></tr>
+<tr class="memdesc:afed48f16502dfcb3b2d434969f5496ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actors OnMenuTick function will now be processed. Call ClearDummyMenu to close the dummy menu.  <br /></td></tr>
 <tr class="separator:afed48f16502dfcb3b2d434969f5496ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab66c07984860268eea02304cdb8a8b0a" id="r_ab66c07984860268eea02304cdb8a8b0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab66c07984860268eea02304cdb8a8b0a">ClearDummyMenu</a> (bool bClearAll=false)</td></tr>
 <tr class="separator:ab66c07984860268eea02304cdb8a8b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -562,7 +562,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables. </p>
+<p>add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edge</td><td>1=left side 2=right side (for convenience. You can set to 0 and offset x position with <a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951" title="if user is false will return the width to the edge of the screen (negative value)....">GetHUDOffset()</a> as well) </td></tr>
@@ -666,7 +666,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all it's variables. </p>
+<p>add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">font</td><td><a class="el" href="a00002.html#a114c570d0e038714966b85c131c56a2d">EnumGameFontType</a> </td></tr>
@@ -2753,7 +2753,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the current GameSpeed. <a class="el" href="a00121.html">kPuppet</a> and kPlayerWeapon are not effected by GameSpeed. </p>
+<p>Sets the current GameSpeed. <a class="el" href="a00121.html">kPuppet</a> and kPlayerWeapon are not affected by GameSpeed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">speed</td><td>0..1 </td></tr>
@@ -3404,7 +3404,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Actors OnMenuTick fucntion will now be processed. Call ClearDummyMenu to close the dummy menu. </p>
+<p>Actors OnMenuTick function will now be processed. Call ClearDummyMenu to close the dummy menu. </p>
 
 </div>
 </div>

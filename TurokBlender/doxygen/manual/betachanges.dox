@@ -3,9 +3,44 @@
 <H3>Changes since last beta update</H3>
 \verbatim 
 ----------------------------------------------------------------------------------------
+Def changes to make pickups cast shadows:
+defs/actors/ammo.txt
+defs/actors/health.txt
+defs/actors/keys.txt
+defs/actors/pickups.txt
+defs/actors/weapons.txt
+scripts/animal.txt
+    line 196, OnDamage: item.Flags() |= AF_CASTSHADOW;
+scripts/enemy/enemy.txt
+    line 192, TossItem: item.Flags() |= AF_CASTSHADOW;
+scripts/map/level48_script.txt
+    line 331, $script 8: g_pHunter.Flags() &= ~AF_SOLID;
+    line 337, $script 8: pItem.Flags() |= AF_CASTSHADOW;
+scripts/pickupSpawner.txt
+    line 251, SpawnItem: item.Flags() |= AF_CASTSHADOW;
+    line 287, SpawnItem: item.Flags() |= AF_CASTSHADOW;
+----------------------------------------------------------------------------------------
+defs/actors/player.txt
+    line 14: player.viewHeight               55.296
+----------------------------------------------------------------------------------------
+scripts/enemy/enemy.txt:
+    line 208, void TossGib: self.CheckPosition(kVec3(x, y, z));
+----------------------------------------------------------------------------------------
+scripts/main.txt:
+    line 164, void InitCampaignerStateVars: setFunc("campaignerShieldHealth", "0");
+----------------------------------------------------------------------------------------
+scripts/misc/giblet.txt: fixed checkPosition usage and prevent sound spam.
+----------------------------------------------------------------------------------------
 levels/level15.map - fix position of a brancho that was going through a platform while turning 
 ----------------------------------------------------------------------------------------
 defs/mapInfo.txt: added new "warpcp_" properties for HUBs
+----------------------------------------------------------------------------------------
+defs/headTrackInfo.txt: fixed head scales, added leaper and turok headtrackinfo
+----------------------------------------------------------------------------------------
+scripts/bosses/campaigner.txt: shield stuff
+----------------------------------------------------------------------------------------
+defs/damageInfo.txt: 
+added S_Plyr_Knife, M_Chrono_, M_Plyr_Explosion_25_hit_rad_20 (alien weapon), S_Damage__Nudge_Target_damage_25 (alien weapon)
 ----------------------------------------------------------------------------------------
 scripts/player.txt:
 line 423:
@@ -14,9 +49,22 @@ line 423:
         (World.GetAreaFlags(self.AreaID()) & AAF_ANTIGRAVITY) == 0)
 ```
 In OnDeath function changed CallDelayedMapScript to CallMapScript. (Prevents a softlock in mantis fight)
+
+void KnifeAttack: added check for non solid actor: line 608: (actor.Flags() & AF_SOLID) == 0)
+
+----------------------------------------------------------------------------------------
+actorfx/weapons.kafx:
+Added to first command in GunFire: $use_gamespeed (0)
+----------------------------------------------------------------------------------------
+scripts/enemy/turret.txt:
+line 48: if((self.Flags() & AF_DEAD) != 0 && m_deathFreezeTime <= 0)
+----------------------------------------------------------------------------------------
+scripts/misc/traps.txt:
+line 150: if(actor is null || (actor.Flags() & AF_SOLID) == 0)
 ----------------------------------------------------------------------------------------
 scripts/movers/floor.txt:
 line 58: Added: self.IgnoreSectorHeightChange() = true;
+line 353: void Rotate(void) : Player.Actor().RotateAroundOrigin(diff, self.Origin());
 ----------------------------------------------------------------------------------------
 scripts/bosses/trex.txt:
     line 831 Added:
