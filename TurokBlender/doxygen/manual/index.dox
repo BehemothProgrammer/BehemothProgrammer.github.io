@@ -56,16 +56,21 @@ void OnPreDamage(kActor @instigator, kDictMem @damageDef, const int damage) //al
 void OnDeath(kActor @killer, kDictMem @damageDef) //called only when actor dies
 void OnDamage(kActor @instigator, kDictMem @damageDef, const int damage) //always called even after death
 void OnEndLevel()
+void OnPreTick(void)  // For the player script only! Called right before all other actors are ticked
+void OnPostTick(void) // For the player script only! Called right after level script ticks
 
-ScriptObjectWeapon
+ScriptObjectWeapon : ScriptObject
 void OnBeginFire()
 void OnFire()
 void OnEndFire()
 void OnLower()
 void OnRaise()
 void OnHoldster()
+void OnPreRaise() // Called right when the weapon state is set to raise.
+void OnActorTick() // Called after the weapon calls OnTick for the kActor class (Should not use. Only here if needed)
 
-ScriptObjectPlayer
+
+ScriptObjectPlayer : ScriptObject
 void OnPickup(kActor @pickup)
 void OnArmorDamage(kActor @instigator, kDictMem @damageDef, const int damage)
 void OnEnterWater()
@@ -241,6 +246,22 @@ $play_sound (ID)                                // Play a sound by ID
 $repeat                                         // Starts back at processing the first command again.
 $action (ID, {x y z w})                         // Calls a script animation function by ID with x,y,z,w values passed into the function.
 $use_gamespeed (use)                            // bool use. if set to 0 will not use gamespeed else will use gamespeed (default).
+$spawnfx (FxID, {x y z}, time)                  // FxID (from defs/fileLookup.txt), {x, y, z} position relative to actor, time to keep spawning this particle (use 0 to spawn it only once right away).
+$spawnregenfx                                   // Spawns "fx/object_dissolve.kfx"
+\endverbatim
+
+\section actorfx <H3>Custom fonts ttf</H3>
+\verbatim
+Custom ttf font examples:
+Add custom ttf fonts in "defs/fileLookup.txt". For each font string the left side of the Pipe(|) character is the path to the font and the right side is the font size.
+The ttf font that the game uses is "fonts/zeroes_three.otf" and it has a font size of 48.
+Keep in mind to access the font you must add a value of 4 to use it. so when using the Game.AddText function pass in 4 to use the $0 custom font and 5 to use $1 and so on.
+This is an example of adding custom fonts:
+Fonts
+{
+    $0 = "fonts/RobotoMono-MediumItalic.ttf|48"
+    $1 = "fonts/RobotoMono-SemiBold.ttf|24.123"
+}
 \endverbatim
 
 \section species <H3>Species Mask (Unused)</H3>
@@ -391,6 +412,14 @@ Float:
     player.jumpMinSpeed
     player.jumpMaxSpeed
     player.jumpClimbSpeed
+    player.headBobScale
+    player.turnBobScale
+    player.strafeBobScale
+    player.underwaterBobScale
+    player.jumpBobScale
+    player.overrideWeaponOnTopFix
+    player.maxLives
+    player.maxLifeforces
 Int:
     g_difficulty                // Use Game.GetDifficulty or Game.SetDifficulty instead.
     g_startmap                  // The map to start on when starting a new game
@@ -407,12 +436,14 @@ Int:
     OverridePerPolyCollision    // Set: Game.OverridePerPolyCollision();  Get: GameVariables.GetInt("OverridePerPolyCollision", result);  0=none, 1=force disable, 2=force enable
     ConfirmMenuResult           // Get: GameVariables.GetInt("ConfirmMenuResult", result);  Set: GameVariables.SetValue("ConfirmMenuResult", "0");
     g_loadedgame                // Check OnBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after Map Script 0 is called.
+    OverrideRespawningEnemies   // Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result); 0=none, 1=Force Disable, 2=Force Enable
 Bool:
     g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel.
     g_resetboss                 // is set to 1 when warping to the boss using the warp boss cheats. This sets them to their initial state. Is set back to 0 after OnPostBeginLevel is called.
     g_timetrial                 // is set to 1 when selecting time trial from the menu. Is set back to 0 after OnPostBeginLevel is called.
     DisableUnderwaterMusic      // Use GameVariables.SetValue("DisableUnderwaterMusic", "1");
     DisableWaterReflection      // Use GameVariables.SetValue("DisableWaterReflection", "1");
+    NewExplosiveRadiusCheck     // (default False) Set to 1 to enable explosive damage checks from radius to actor cylinder(more accurate) instead of radius to actors center point. For all actors in the game.
 \endverbatim
 
 \section difficulty <H3>Difficulty</H3>

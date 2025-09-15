@@ -6,8 +6,9 @@ var a00033 =
     [ "Atoi", "a00033.html#ab568f35b5d8478d07d5bef2001dfcbcb", null ],
     [ "Contains", "a00033.html#a371dd47308284a566ff899e6bb249e90", null ],
     [ "ContainsNoCase", "a00033.html#a1bf4bf299b089243e5bf4d393fc4c88d", null ],
+    [ "EndsWith", "a00033.html#afee2b9ce0e62eeeede038dc4e1e4ef5a", null ],
     [ "Hash", "a00033.html#ae79c721f3e819490d060bf4bed380e50", null ],
-    [ "IndexOf", "a00033.html#ac297105b34716bb597f60a23f5bd99e6", null ],
+    [ "IndexOf", "a00033.html#afd67dbbfbe04c063cb535149c7ace7f9", null ],
     [ "IsEmpty", "a00033.html#a091158634771921eca80561ee90df802", null ],
     [ "Length", "a00033.html#a4cfbd63e8485b2d7054eff8d8c65e000", null ],
     [ "opAdd", "a00033.html#aa2f147ae9af84e61b48d37032a1f919a", null ],
@@ -23,7 +24,11 @@ var a00033 =
     [ "opAddAssign", "a00033.html#ae8c1c3da54a830c86c42b0efc8e0aabb", null ],
     [ "opAssign", "a00033.html#aebfdaf9ebcc72a0385ffe51e6ff60258", null ],
     [ "opEquals", "a00033.html#a32139025ccdedbe9fe3f34e604ee19ba", null ],
-    [ "opIndex", "a00033.html#a884b809760287a5f3d384a30d8b0c183", null ],
+    [ "opIndex", "a00033.html#a1fd01b1825ed4ddec144566da13e2edd", null ],
+    [ "opIndex", "a00033.html#aa428fe504f70ed9634f7f4f769afbafa", null ],
+    [ "ReplaceSubstr", "a00033.html#a1fc5fb1182e3622a408f014abc714fb3", null ],
+    [ "StartsWith", "a00033.html#aa6e812c95164bb58c627f3aed9143e30", null ],
+    [ "Substr", "a00033.html#a7ef66936ef1e8aaa25a4afd9c0aef263", null ],
     [ "ToLower", "a00033.html#a258e287bcdbfbf0d8d1e7ee391e85264", null ],
     [ "ToUpper", "a00033.html#a0693f106615d30cb1ef3c3b1d9f44f2d", null ]
 ];

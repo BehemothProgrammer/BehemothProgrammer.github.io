@@ -1,9 +1,12 @@
 var a00071 =
 [
-    [ "OnBeginFire", "a00071.html#a2a1133cd008239830e4dfc435e6deaf6", null ],
-    [ "OnEndFire", "a00071.html#ab992ce400bc1165df3dbd3c85cb23b44", null ],
-    [ "OnFire", "a00071.html#aada74c733d69af3554f00e7580178e30", null ],
-    [ "OnHoldster", "a00071.html#ace41c3dec26d9842ab04ce82a9194e11", null ],
-    [ "OnLower", "a00071.html#a6ac89ddae5f92fe953c7ee2d974489b0", null ],
-    [ "OnRaise", "a00071.html#a8f910a748b4a2f5d4184c259b6eb64ec", null ]
+    [ "~ref", "a00071.html#a74d362d1d68209049703200ca5623de6", null ],
+    [ "ref", "a00071.html#ab9202e327299bf2708153fa7987ac46b", null ],
+    [ "ref", "a00071.html#a9948672182f755555f866f15de7491b0", null ],
+    [ "ref", "a00071.html#a146325a3a0cccb55587007f36ba2f737", null ],
+    [ "opCast", "a00071.html#afe3eafca30a74924eed0e0c14516db6f", null ],
+    [ "opEquals", "a00071.html#af172800178956dfe834ee0efad74bb50", null ],
+    [ "opEquals", "a00071.html#a0bb3e76e472372f9b9af454d75f32b54", null ],
+    [ "opHndlAssign", "a00071.html#af09745abda619cc89b5397266e49c65f", null ],
+    [ "opHndlAssign", "a00071.html#afb7752afc34288772c12503cc480e3cf", null ]
 ];

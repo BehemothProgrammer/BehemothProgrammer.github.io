@@ -109,7 +109,22 @@ drawType                    // 0 = Default, 1 = Flat, 2 = Decal, 3 = Wall, 4 = S
 visibilityType              // 0 = Close, 1 = Far, 2 = Always, 3 = Invisible
 animType                    // 0 = Default, 1 = OneTime, 2 = Loop, 3 = SinWave, 4 = Random, 5 = RandomAndHold, 6 = DrawSingleFrame. Values other than 1-5 will run the onExpire or onWaterExpire events to occur when it reaches the last frame.
 priority                    // Not used
-
+spawnDistOffset             // float. When Fx are a certain distance away from the View they will not be created. Use this to add to that value.
+maxInstances                // int. By default only 200 instances of an Fx are allowed but you can use this to spawn more if needed.
+maxBulletBounces            // int. By default bullets can only bounce 3 times. Override the value.
+bBounceImpact               // bool. Will do ImpactEvents on Bounce.
+bounceImpactThreshold       // float. will continue to do bounce impacts as long as the velocity is >= to this value
+bOverrideMaxDrawScale       // bool. override the max draw scale of the fx which by default is 4096
+maxscale                    // float. The new max draw scale if bOverrideMaxDrawScale was set. (default is 4096)
+maxscaleRandom              // float. The new max draw scale random factor if bOverrideMaxDrawScale was set.
+bIgnoreGameSpeed            // bool. GameSpeed is always 1.0 for this Fx and the attached Trails.
+scriptClass                 // kStr. The name of the script class. You must inherit from ScriptObjectFx
+bScriptOnAllInstances       // bool. Will create a ScriptObjectFx for every instance that gets created. Else will create a ScriptObjectFx for only the first instance.
+modelName                   // kStr. Use for your own custom script purposes
+animName                    // kStr. Use for your own custom script purposes
+userString                  // kStr. Use for your own custom script purposes
+userID                      // int. Use for your own custom script purposes
+    
 -----Event Blocks:
 onImpact                    // The 10 OnImpact events with each surface type you can have.
 onExpire                    // happens when lifeTime runs out, unless underwater

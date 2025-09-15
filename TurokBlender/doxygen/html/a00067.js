@@ -1,5 +1,13 @@
 var a00067 =
 [
-    [ "OnSpawn", "a00067.html#a8220be42bfef1a62c78a2504c43ab320", null ],
-    [ "OnTick", "a00067.html#afb2a8de3f44f70e2d45f58d65d42cfe1", null ]
+    [ "GetGroupIndex", "a00067.html#a44195020e4b8c34eeb481ae0a896fe38", null ],
+    [ "GetGroupString", "a00067.html#a46e671fd533e7a61387508303ed29e97", null ],
+    [ "GetGroupString", "a00067.html#a053177ef7670999c3678e892797efba9", null ],
+    [ "GetString", "a00067.html#a3988f58cdeebc34d67f80549d1fd6c05", null ],
+    [ "GetString", "a00067.html#a914d1edbbda6477487034262a7a90782", null ],
+    [ "TranslateGroupString", "a00067.html#a1da460c04f99cebeccb78d2b2ee35651", null ],
+    [ "TranslateGroupStringWithArgs", "a00067.html#a482ef51bc9194a279c750c6cc89ea45a", null ],
+    [ "TranslateString", "a00067.html#aacfd7cf0fa93ca483b9d64fccd1a70bf", null ],
+    [ "TranslateString", "a00067.html#a56daa70623c0a07f5d582ec95f1e59eb", null ],
+    [ "TranslateStringWithArgs", "a00067.html#a3b0f6acd47e1f46f3ea27b7e23f94ac4", null ]
 ];

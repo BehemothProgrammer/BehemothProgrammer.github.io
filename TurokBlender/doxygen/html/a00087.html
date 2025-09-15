@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Member List</title>
+<title>Turok: kDict Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a00090.html',''); initResizable(true); });
+$(function(){initNavTree('a00087.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,23 +103,271 @@ $(function(){initNavTree('a00090.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">kSelectionListFloat Member List</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00084.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">kDict Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00090.html">kSelectionListFloat</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00090.html#a9bddcefc1dadd08e34bd8d1be229d249">AddItem</a>(float item, const int weight)</td><td class="entry"><a class="el" href="a00090.html">kSelectionListFloat</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00090.html#a12e4aa5d8d9483eb646dd5006fe449da">GetNumEntries</a>() const</td><td class="entry"><a class="el" href="a00090.html">kSelectionListFloat</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00090.html#afaf004e0aa9b68d73dbd06dbca234d77">kSelectionListFloat</a>()</td><td class="entry"><a class="el" href="a00090.html">kSelectionListFloat</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00090.html#a07cdb1d5fc876effc8ae98f3d0e85b51">opAssign</a>(const kSelectionListFloat &amp;in other)</td><td class="entry"><a class="el" href="a00090.html">kSelectionListFloat</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00090.html#abc976263c04aabf252654cf0a8225186">Reset</a>()</td><td class="entry"><a class="el" href="a00090.html">kSelectionListFloat</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00090.html#af3cc2656e6bf98ed5c1b281b078b27a4">Select</a>()</td><td class="entry"><a class="el" href="a00090.html">kSelectionListFloat</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>Editable Dictionary object that holds keys and values.  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a5f7731cd10bcea83e29390c743141528" id="r_a5f7731cd10bcea83e29390c743141528"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f7731cd10bcea83e29390c743141528">Add</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, const <a class="el" href="a00039.html">kStr</a> &amp;in value)</td></tr>
+<tr class="memdesc:a5f7731cd10bcea83e29390c743141528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new key/value.  <br /></td></tr>
+<tr class="separator:a5f7731cd10bcea83e29390c743141528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32e596cf283c880104d320f240e6fee1" id="r_a32e596cf283c880104d320f240e6fee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32e596cf283c880104d320f240e6fee1">Empty</a> ()</td></tr>
+<tr class="memdesc:a32e596cf283c880104d320f240e6fee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all keys/values.  <br /></td></tr>
+<tr class="separator:a32e596cf283c880104d320f240e6fee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fde95c1a3bad146abba4beef200f089" id="r_a2fde95c1a3bad146abba4beef200f089"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fde95c1a3bad146abba4beef200f089">SetValue</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, const <a class="el" href="a00039.html">kStr</a> &amp;in value)</td></tr>
+<tr class="memdesc:a2fde95c1a3bad146abba4beef200f089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for the specified key.  <br /></td></tr>
+<tr class="separator:a2fde95c1a3bad146abba4beef200f089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8ecf0e1b46e2fd5020c546e653faa6b" id="r_ac8ecf0e1b46e2fd5020c546e653faa6b"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8ecf0e1b46e2fd5020c546e653faa6b">HasKey</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key)</td></tr>
+<tr class="memdesc:ac8ecf0e1b46e2fd5020c546e653faa6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if key exists.  <br /></td></tr>
+<tr class="separator:ac8ecf0e1b46e2fd5020c546e653faa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab29bff0625d021683b45d64110ac5b53" id="r_ab29bff0625d021683b45d64110ac5b53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab29bff0625d021683b45d64110ac5b53">GetFloat</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, float &amp;out floatResult, const float defaultValue=0)</td></tr>
+<tr class="memdesc:ab29bff0625d021683b45d64110ac5b53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if found the key as a float type.  <br /></td></tr>
+<tr class="separator:ab29bff0625d021683b45d64110ac5b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78321701ccf3492e3b45da6eb50872e8" id="r_a78321701ccf3492e3b45da6eb50872e8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78321701ccf3492e3b45da6eb50872e8">GetInt</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, int &amp;out intResult, const int defaultValue=0)</td></tr>
+<tr class="memdesc:a78321701ccf3492e3b45da6eb50872e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if found the key as a int type.  <br /></td></tr>
+<tr class="separator:a78321701ccf3492e3b45da6eb50872e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc7b6f3c6e862d7b17fdaa89f012a46" id="r_a4cc7b6f3c6e862d7b17fdaa89f012a46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cc7b6f3c6e862d7b17fdaa89f012a46">GetBool</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, bool &amp;out boolResult, const bool defaultValue=false)</td></tr>
+<tr class="memdesc:a4cc7b6f3c6e862d7b17fdaa89f012a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if found the key as a bool type.  <br /></td></tr>
+<tr class="separator:a4cc7b6f3c6e862d7b17fdaa89f012a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99cb3a626c9b7c7211ad00718cf81a4c" id="r_a99cb3a626c9b7c7211ad00718cf81a4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99cb3a626c9b7c7211ad00718cf81a4c">GetString</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, <a class="el" href="a00039.html">kStr</a> &amp;out stringResult)</td></tr>
+<tr class="memdesc:a99cb3a626c9b7c7211ad00718cf81a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if found the key as a <a class="el" href="a00039.html" title="String class functions.">kStr</a> type.  <br /></td></tr>
+<tr class="separator:a99cb3a626c9b7c7211ad00718cf81a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db1bebbc11682941cc32fb5473292a6" id="r_a9db1bebbc11682941cc32fb5473292a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9db1bebbc11682941cc32fb5473292a6">GetVector</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, <a class="el" href="a00047.html">kVec3</a> &amp;out vectorResult)</td></tr>
+<tr class="memdesc:a9db1bebbc11682941cc32fb5473292a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if found the key as a <a class="el" href="a00047.html" title="Representation of 3D vectors and points.">kVec3</a> type.  <br /></td></tr>
+<tr class="separator:a9db1bebbc11682941cc32fb5473292a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Editable Dictionary object that holds keys and values. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00907">907</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5f7731cd10bcea83e29390c743141528" name="a5f7731cd10bcea83e29390c743141528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f7731cd10bcea83e29390c743141528">&#9670;&#160;</a></span>Add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kDict::Add </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new key/value. </p>
+
+</div>
+</div>
+<a id="a32e596cf283c880104d320f240e6fee1" name="a32e596cf283c880104d320f240e6fee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e596cf283c880104d320f240e6fee1">&#9670;&#160;</a></span>Empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kDict::Empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all keys/values. </p>
+
+</div>
+</div>
+<a id="a4cc7b6f3c6e862d7b17fdaa89f012a46" name="a4cc7b6f3c6e862d7b17fdaa89f012a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc7b6f3c6e862d7b17fdaa89f012a46">&#9670;&#160;</a></span>GetBool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kDict::GetBool </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;out</td>          <td class="paramname"><span class="paramname"><em>boolResult</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>defaultValue</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if found the key as a bool type. </p>
+
+</div>
+</div>
+<a id="ab29bff0625d021683b45d64110ac5b53" name="ab29bff0625d021683b45d64110ac5b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab29bff0625d021683b45d64110ac5b53">&#9670;&#160;</a></span>GetFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kDict::GetFloat </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;out</td>          <td class="paramname"><span class="paramname"><em>floatResult</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>defaultValue</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if found the key as a float type. </p>
+
+</div>
+</div>
+<a id="a78321701ccf3492e3b45da6eb50872e8" name="a78321701ccf3492e3b45da6eb50872e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78321701ccf3492e3b45da6eb50872e8">&#9670;&#160;</a></span>GetInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kDict::GetInt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>intResult</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>defaultValue</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if found the key as a int type. </p>
+
+</div>
+</div>
+<a id="a99cb3a626c9b7c7211ad00718cf81a4c" name="a99cb3a626c9b7c7211ad00718cf81a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99cb3a626c9b7c7211ad00718cf81a4c">&#9670;&#160;</a></span>GetString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kDict::GetString </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00039.html">kStr</a> &amp;out</td>          <td class="paramname"><span class="paramname"><em>stringResult</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if found the key as a <a class="el" href="a00039.html" title="String class functions.">kStr</a> type. </p>
+
+</div>
+</div>
+<a id="a9db1bebbc11682941cc32fb5473292a6" name="a9db1bebbc11682941cc32fb5473292a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db1bebbc11682941cc32fb5473292a6">&#9670;&#160;</a></span>GetVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kDict::GetVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00047.html">kVec3</a> &amp;out</td>          <td class="paramname"><span class="paramname"><em>vectorResult</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if found the key as a <a class="el" href="a00047.html" title="Representation of 3D vectors and points.">kVec3</a> type. </p>
+
+</div>
+</div>
+<a id="ac8ecf0e1b46e2fd5020c546e653faa6b" name="ac8ecf0e1b46e2fd5020c546e653faa6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8ecf0e1b46e2fd5020c546e653faa6b">&#9670;&#160;</a></span>HasKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kDict::HasKey </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if key exists. </p>
+
+</div>
+</div>
+<a id="a2fde95c1a3bad146abba4beef200f089" name="a2fde95c1a3bad146abba4beef200f089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fde95c1a3bad146abba4beef200f089">&#9670;&#160;</a></span>SetValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kDict::SetValue </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the value for the specified key. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00087.html">kDict</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

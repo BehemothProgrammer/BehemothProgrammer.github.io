@@ -380,13 +380,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afc5cc2cceb58d463d948181f2b1281db" id="r_afc5cc2cceb58d463d948181f2b1281db"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afc5cc2cceb58d463d948181f2b1281db">ViewZFar</a> ()</td></tr>
 <tr class="separator:afc5cc2cceb58d463d948181f2b1281db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d4576dfafa87c4073bc8f6c67724ced" id="r_a6d4576dfafa87c4073bc8f6c67724ced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d4576dfafa87c4073bc8f6c67724ced">SaveModFile</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in filename)</td></tr>
-<tr class="memdesc:a6d4576dfafa87c4073bc8f6c67724ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">make sure to call GameModFileData.Empty() before adding key/values to save  <br /></td></tr>
+<tr class="memdesc:a6d4576dfafa87c4073bc8f6c67724ced"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves a custom save file. make sure to call GameModFileData.Empty() before adding key/values to save.  <br /></td></tr>
 <tr class="separator:a6d4576dfafa87c4073bc8f6c67724ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ffeec26d3ea3057b7e46c7a7394d2a1" id="r_a4ffeec26d3ea3057b7e46c7a7394d2a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ffeec26d3ea3057b7e46c7a7394d2a1">LoadModFile</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in filename)</td></tr>
-<tr class="memdesc:a4ffeec26d3ea3057b7e46c7a7394d2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">make sure to call GameModFileData.Empty() after you're done loading  <br /></td></tr>
+<tr class="memdesc:a4ffeec26d3ea3057b7e46c7a7394d2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a custom save file. make sure to call GameModFileData.Empty() after you're done loading.  <br /></td></tr>
 <tr class="separator:a4ffeec26d3ea3057b7e46c7a7394d2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d2e8e266503ed27c5f13600ff604a8" id="r_ae2d2e8e266503ed27c5f13600ff604a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2d2e8e266503ed27c5f13600ff604a8">LoadModDataFile</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in filename)</td></tr>
-<tr class="memdesc:ae2d2e8e266503ed27c5f13600ff604a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false if couldn't load file. Clears and Sets GameModFileData with the contents of the loaded file.  <br /></td></tr>
+<tr class="memdesc:ae2d2e8e266503ed27c5f13600ff604a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load any file in your mod that is a <a class="el" href="a00081.html" title="Editable Dictionary object that holds keys and values.">kDict</a> binary. Use the python T1_json2modbin.py on the main scripting manual page to convert a json file to a <a class="el" href="a00081.html" title="Editable Dictionary object that holds keys and values.">kDict</a> binary. Returns false if couldn't load file. Clears and Sets GameModFileData with the contents of the loaded file.  <br /></td></tr>
 <tr class="separator:ae2d2e8e266503ed27c5f13600ff604a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49ecef94a3108389c97a45464514a4ea" id="r_a49ecef94a3108389c97a45464514a4ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49ecef94a3108389c97a45464514a4ea">SetNoModSelect</a> (const bool bToggle=true)</td></tr>
 <tr class="memdesc:a49ecef94a3108389c97a45464514a4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the mod select menu when selecting new game for workshop mods only. (seta g_nomodselect "1")  <br /></td></tr>
@@ -476,7 +476,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01557">1557</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01563">1563</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1106,9 +1106,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01971">t1_scriptAPI.cpp:1971</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01974">t1_scriptAPI.cpp:1974</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01972">t1_scriptAPI.cpp:1972</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01996">t1_scriptAPI.cpp:1996</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01999">t1_scriptAPI.cpp:1999</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01997">t1_scriptAPI.cpp:1997</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -2018,7 +2018,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns false if couldn't load file. Clears and Sets GameModFileData with the contents of the loaded file. </p>
+<p>Load any file in your mod that is a <a class="el" href="a00081.html" title="Editable Dictionary object that holds keys and values.">kDict</a> binary. Use the python T1_json2modbin.py on the main scripting manual page to convert a json file to a <a class="el" href="a00081.html" title="Editable Dictionary object that holds keys and values.">kDict</a> binary. Returns false if couldn't load file. Clears and Sets GameModFileData with the contents of the loaded file. </p>
 
 </div>
 </div>
@@ -2037,7 +2037,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>make sure to call GameModFileData.Empty() after you're done loading </p>
+<p>Loads a custom save file. make sure to call GameModFileData.Empty() after you're done loading. </p>
 
 </div>
 </div>
@@ -2631,7 +2631,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>make sure to call GameModFileData.Empty() before adding key/values to save </p>
+<p>Saves a custom save file. make sure to call GameModFileData.Empty() before adding key/values to save. </p>
 
 </div>
 </div>

@@ -75,7 +75,7 @@ Each of these defs can have a reverbType. These are the reverbType values:
 29 = Plate
 
 trails\*.txt files:
-"edgeSpawnSpeed" // scales the speed at which more edges spawn. Higher values spawn more often creating a smoother trail but at a big performance cost. default value = 1.0.
+"edgeSpawnSpeed" // scales the speed at which more edges spawn. Higher values spawn more often creating a smoother trail but at a performance cost. default value = 1.0. At GameSpeed 1.0 a edgeSpawnSpeed of 4.0 will create a TrailEdge every tick.
 
 ------------
 defs changes

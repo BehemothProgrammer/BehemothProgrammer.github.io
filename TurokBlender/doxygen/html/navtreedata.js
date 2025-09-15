@@ -26,11 +26,13 @@ var NAVTREE =
 [
   [ "Turok", "index.html", [
     [ "Turok Manual", "index.html", "index" ],
-    [ "Actor Def Properties", "a00158.html", null ],
-    [ "Public Beta Changes", "a00159.html", null ],
-    [ "v3 Changes", "a00160.html", null ],
-    [ "Fx Properties", "a00161.html", null ],
-    [ "Map Format", "a00162.html", null ],
+    [ "Actor Def Properties", "a00172.html", null ],
+    [ "Public Beta Changes", "a00173.html", null ],
+    [ "v3 Changes", "a00174.html", null ],
+    [ "Final Patch Modding Details", "a00175.html", null ],
+    [ "Fx Properties", "a00176.html", null ],
+    [ "Map Format", "a00177.html", null ],
+    [ "Trail Def Properties", "a00178.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -67,11 +69,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00002.html#a92de7593743d6093b7d047ba407f5c81a0b5ec96c81d2197c9b6bddea0afb6636",
-"a00029.html#a6f59a14c763c21e1381ecf0f6a4a7ebf",
-"a00089.html#ae2310e9586f82596ba53594f460499ee",
-"a00121.html#a8358ff5ee9ba7dceba68c50b3048fe1e",
-"a00149.html#acba6dcd7195be0efd1545b8721c57fad"
+"a00002.html#a92de7593743d6093b7d047ba407f5c81",
+"a00031.html#aae42fdc28a542d60443d0eea9abb9eca",
+"a00083.html#aada74c733d69af3554f00e7580178e30",
+"a00119.html#aca4e062accb736800bd4038f55856944",
+"a00135.html#ac0acfb049317aec76278e7718d748b0e",
+"a00159.html#a66ca28cdf8726080d5672c260d05a029",
+"globals_eval.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -1,13 +1,16 @@
 var a00055 =
 [
-    [ "GetGroupIndex", "a00055.html#a44195020e4b8c34eeb481ae0a896fe38", null ],
-    [ "GetGroupString", "a00055.html#a46e671fd533e7a61387508303ed29e97", null ],
-    [ "GetGroupString", "a00055.html#a053177ef7670999c3678e892797efba9", null ],
-    [ "GetString", "a00055.html#a3988f58cdeebc34d67f80549d1fd6c05", null ],
-    [ "GetString", "a00055.html#a914d1edbbda6477487034262a7a90782", null ],
-    [ "TranslateGroupString", "a00055.html#a1da460c04f99cebeccb78d2b2ee35651", null ],
-    [ "TranslateGroupStringWithArgs", "a00055.html#a482ef51bc9194a279c750c6cc89ea45a", null ],
-    [ "TranslateString", "a00055.html#aacfd7cf0fa93ca483b9d64fccd1a70bf", null ],
-    [ "TranslateString", "a00055.html#a56daa70623c0a07f5d582ec95f1e59eb", null ],
-    [ "TranslateStringWithArgs", "a00055.html#a3b0f6acd47e1f46f3ea27b7e23f94ac4", null ]
+    [ "kPlane", "a00055.html#a1b7add850c95ddb8910bbdf437e1c247", null ],
+    [ "kPlane", "a00055.html#a6eb55ad618ccf86fbdbdb90e0351b13a", null ],
+    [ "kPlane", "a00055.html#a89d73617d65d3c17f1269532d2e2b463", null ],
+    [ "kPlane", "a00055.html#aacd74df87b44e56f7cbc71133f26bc23", null ],
+    [ "kPlane", "a00055.html#aa94cb1745d50b59b280b3d5291f65240", null ],
+    [ "Distance", "a00055.html#a6e885fc36b494c4d0a482d2769a7e7e9", null ],
+    [ "Dot", "a00055.html#a8f128e7f9fe817d9b4526f5aca86bdda", null ],
+    [ "Dot", "a00055.html#a75a70b9b8859b5f29b24f2688fb0403f", null ],
+    [ "IsFacing", "a00055.html#a84c67cf3bcd8b07bb1146c823376bffb", null ],
+    [ "Normal", "a00055.html#a957a544845a1ef52d47d97d7f94c5159", null ],
+    [ "Normal", "a00055.html#a4f64323fa44b1e601cb9353f703a18f3", null ],
+    [ "PointOnSide", "a00055.html#aaaeef6c679b2709ae74cedb65ae3e54c", null ],
+    [ "ToYaw", "a00055.html#a386a35a5674fcad462609455a7dae8e3", null ]
 ];

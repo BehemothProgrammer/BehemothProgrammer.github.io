@@ -143,15 +143,30 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a091158634771921eca80561ee90df802" id="r_a091158634771921eca80561ee90df802"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a091158634771921eca80561ee90df802">IsEmpty</a> () const</td></tr>
 <tr class="memdesc:a091158634771921eca80561ee90df802"><td class="mdescLeft">&#160;</td><td class="mdescRight">length of string is 0  <br /></td></tr>
 <tr class="separator:a091158634771921eca80561ee90df802"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac297105b34716bb597f60a23f5bd99e6" id="r_ac297105b34716bb597f60a23f5bd99e6"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac297105b34716bb597f60a23f5bd99e6">IndexOf</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in) const</td></tr>
-<tr class="memdesc:ac297105b34716bb597f60a23f5bd99e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the zero-based index of the first occurrence of a specified string within this instance. The method returns uint64(-1) if the string is not found in this instance.  <br /></td></tr>
-<tr class="separator:ac297105b34716bb597f60a23f5bd99e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd67dbbfbe04c063cb535149c7ace7f9" id="r_afd67dbbfbe04c063cb535149c7ace7f9"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd67dbbfbe04c063cb535149c7ace7f9">IndexOf</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in s) const</td></tr>
+<tr class="memdesc:afd67dbbfbe04c063cb535149c7ace7f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reports the zero-based index of the first occurrence of a specified string within this instance. The method returns uint64(-1) if the string is not found in this instance.  <br /></td></tr>
+<tr class="separator:afd67dbbfbe04c063cb535149c7ace7f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cfbd63e8485b2d7054eff8d8c65e000" id="r_a4cfbd63e8485b2d7054eff8d8c65e000"><td class="memItemLeft" align="right" valign="top">uint64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cfbd63e8485b2d7054eff8d8c65e000">Length</a> () const</td></tr>
 <tr class="memdesc:a4cfbd63e8485b2d7054eff8d8c65e000"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the length of the string.  <br /></td></tr>
 <tr class="separator:a4cfbd63e8485b2d7054eff8d8c65e000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a884b809760287a5f3d384a30d8b0c183" id="r_a884b809760287a5f3d384a30d8b0c183"><td class="memItemLeft" align="right" valign="top">int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a884b809760287a5f3d384a30d8b0c183">opIndex</a> (const int64 i)</td></tr>
-<tr class="memdesc:a884b809760287a5f3d384a30d8b0c183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns The ASCII code of the character at the strings index.  <br /></td></tr>
-<tr class="separator:a884b809760287a5f3d384a30d8b0c183"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ef66936ef1e8aaa25a4afd9c0aef263" id="r_a7ef66936ef1e8aaa25a4afd9c0aef263"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00033.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ef66936ef1e8aaa25a4afd9c0aef263">Substr</a> (uint64 start, uint64 length) const</td></tr>
+<tr class="memdesc:a7ef66936ef1e8aaa25a4afd9c0aef263"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a substring from the current string. Will return the current string if start or length indexes are out of range.  <br /></td></tr>
+<tr class="separator:a7ef66936ef1e8aaa25a4afd9c0aef263"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fc5fb1182e3622a408f014abc714fb3" id="r_a1fc5fb1182e3622a408f014abc714fb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00033.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fc5fb1182e3622a408f014abc714fb3">ReplaceSubstr</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in from, const <a class="el" href="a00033.html">kStr</a> &amp;in to) const</td></tr>
+<tr class="memdesc:a1fc5fb1182e3622a408f014abc714fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="a00033.html" title="String class functions.">kStr</a> that replaced all occurrences of from with to.  <br /></td></tr>
+<tr class="separator:a1fc5fb1182e3622a408f014abc714fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e812c95164bb58c627f3aed9143e30" id="r_aa6e812c95164bb58c627f3aed9143e30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6e812c95164bb58c627f3aed9143e30">StartsWith</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in s) const</td></tr>
+<tr class="memdesc:aa6e812c95164bb58c627f3aed9143e30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this string starts with s.  <br /></td></tr>
+<tr class="separator:aa6e812c95164bb58c627f3aed9143e30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afee2b9ce0e62eeeede038dc4e1e4ef5a" id="r_afee2b9ce0e62eeeede038dc4e1e4ef5a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afee2b9ce0e62eeeede038dc4e1e4ef5a">EndsWith</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in s) const</td></tr>
+<tr class="memdesc:afee2b9ce0e62eeeede038dc4e1e4ef5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if this string ends with s.  <br /></td></tr>
+<tr class="separator:afee2b9ce0e62eeeede038dc4e1e4ef5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa428fe504f70ed9634f7f4f769afbafa" id="r_aa428fe504f70ed9634f7f4f769afbafa"><td class="memItemLeft" align="right" valign="top">const int8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa428fe504f70ed9634f7f4f769afbafa">opIndex</a> (const uint64 i) const</td></tr>
+<tr class="memdesc:aa428fe504f70ed9634f7f4f769afbafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the ASCII code of the character at the strings index.  <br /></td></tr>
+<tr class="separator:aa428fe504f70ed9634f7f4f769afbafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd01b1825ed4ddec144566da13e2edd" id="r_a1fd01b1825ed4ddec144566da13e2edd"><td class="memItemLeft" align="right" valign="top">int8 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fd01b1825ed4ddec144566da13e2edd">opIndex</a> (const uint64 i)</td></tr>
+<tr class="memdesc:a1fd01b1825ed4ddec144566da13e2edd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/Set the ASCII code of the character at the strings index.  <br /></td></tr>
+<tr class="separator:a1fd01b1825ed4ddec144566da13e2edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32139025ccdedbe9fe3f34e604ee19ba" id="r_a32139025ccdedbe9fe3f34e604ee19ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32139025ccdedbe9fe3f34e604ee19ba">opEquals</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in s) const</td></tr>
 <tr class="separator:a32139025ccdedbe9fe3f34e604ee19ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebfdaf9ebcc72a0385ffe51e6ff60258" id="r_aebfdaf9ebcc72a0385ffe51e6ff60258"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00033.html">kStr</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebfdaf9ebcc72a0385ffe51e6ff60258">opAssign</a> (const <a class="el" href="a00033.html">kStr</a> &amp;in s)</td></tr>
@@ -182,7 +197,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>String class functions. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00596">596</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00597">597</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a130b202d564082efa5f0782c377b5cf4" name="a130b202d564082efa5f0782c377b5cf4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a130b202d564082efa5f0782c377b5cf4">&#9670;&#160;</a></span>kStr() <span class="overload">[1/2]</span></h2>
@@ -295,6 +310,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afee2b9ce0e62eeeede038dc4e1e4ef5a" name="afee2b9ce0e62eeeede038dc4e1e4ef5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afee2b9ce0e62eeeede038dc4e1e4ef5a">&#9670;&#160;</a></span>EndsWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kStr::EndsWith </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if this string ends with s. </p>
+
+</div>
+</div>
 <a id="ae79c721f3e819490d060bf4bed380e50" name="ae79c721f3e819490d060bf4bed380e50"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae79c721f3e819490d060bf4bed380e50">&#9670;&#160;</a></span>Hash()</h2>
 
@@ -314,8 +348,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac297105b34716bb597f60a23f5bd99e6" name="ac297105b34716bb597f60a23f5bd99e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac297105b34716bb597f60a23f5bd99e6">&#9670;&#160;</a></span>IndexOf()</h2>
+<a id="afd67dbbfbe04c063cb535149c7ace7f9" name="afd67dbbfbe04c063cb535149c7ace7f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd67dbbfbe04c063cb535149c7ace7f9">&#9670;&#160;</a></span>IndexOf()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -323,7 +357,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">uint64 kStr::IndexOf </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>in</em></span></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -592,22 +626,106 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a884b809760287a5f3d384a30d8b0c183" name="a884b809760287a5f3d384a30d8b0c183"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a884b809760287a5f3d384a30d8b0c183">&#9670;&#160;</a></span>opIndex()</h2>
+<a id="a1fd01b1825ed4ddec144566da13e2edd" name="a1fd01b1825ed4ddec144566da13e2edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd01b1825ed4ddec144566da13e2edd">&#9670;&#160;</a></span>opIndex() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int8 kStr::opIndex </td>
+          <td class="memname">int8 &amp; kStr::opIndex </td>
           <td>(</td>
-          <td class="paramtype">const int64</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td class="paramtype">const uint64</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns The ASCII code of the character at the strings index. </p>
+<p>Get/Set the ASCII code of the character at the strings index. </p>
+
+</div>
+</div>
+<a id="aa428fe504f70ed9634f7f4f769afbafa" name="aa428fe504f70ed9634f7f4f769afbafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa428fe504f70ed9634f7f4f769afbafa">&#9670;&#160;</a></span>opIndex() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int8 kStr::opIndex </td>
+          <td>(</td>
+          <td class="paramtype">const uint64</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the ASCII code of the character at the strings index. </p>
+
+</div>
+</div>
+<a id="a1fc5fb1182e3622a408f014abc714fb3" name="a1fc5fb1182e3622a408f014abc714fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fc5fb1182e3622a408f014abc714fb3">&#9670;&#160;</a></span>ReplaceSubstr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00033.html">kStr</a> kStr::ReplaceSubstr </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>from</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>to</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a new <a class="el" href="a00033.html" title="String class functions.">kStr</a> that replaced all occurrences of from with to. </p>
+
+</div>
+</div>
+<a id="aa6e812c95164bb58c627f3aed9143e30" name="aa6e812c95164bb58c627f3aed9143e30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e812c95164bb58c627f3aed9143e30">&#9670;&#160;</a></span>StartsWith()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kStr::StartsWith </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00033.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>s</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if this string starts with s. </p>
+
+</div>
+</div>
+<a id="a7ef66936ef1e8aaa25a4afd9c0aef263" name="a7ef66936ef1e8aaa25a4afd9c0aef263"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ef66936ef1e8aaa25a4afd9c0aef263">&#9670;&#160;</a></span>Substr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00033.html">kStr</a> kStr::Substr </td>
+          <td>(</td>
+          <td class="paramtype">uint64</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return a substring from the current string. Will return the current string if start or length indexes are out of range. </p>
 
 </div>
 </div>

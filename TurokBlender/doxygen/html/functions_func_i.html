@@ -106,32 +106,119 @@ $(function(){initNavTree('functions_func_i.html',''); initResizable(true); });
 <div class="textblock">Here is a list of all functions with links to the classes they belong to:</div>
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
-<li>IgnoreSectorHeightChange()&#160;:&#160;<a class="el" href="a00105.html#a5a487286abbfd5b0e01612c76be47364">kActor</a></li>
-<li>ImpactType()&#160;:&#160;<a class="el" href="a00105.html#a20a0f31f8959182c0e1e26629ff231cf">kActor</a></li>
-<li>ImpactTypeDmg()&#160;:&#160;<a class="el" href="a00105.html#a63df3c56dfbe0ae7bda1c51dd1883e3a">kActor</a></li>
-<li>IndexOf()&#160;:&#160;<a class="el" href="a00033.html#ac297105b34716bb597f60a23f5bd99e6">kStr</a></li>
-<li>InflictDamage()&#160;:&#160;<a class="el" href="a00105.html#a9873de4b22e903b980184debf05dbffa">kActor</a></li>
-<li>InflictGenericDamage()&#160;:&#160;<a class="el" href="a00105.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a">kActor</a></li>
-<li>InputImageExists()&#160;:&#160;<a class="el" href="a00149.html#a5c94b44f722b71b311e73945be6ca038">kGame</a></li>
-<li>insertAt()&#160;:&#160;<a class="el" href="a00029.html#a42efa870e03001f965f2d049d81fb141">array&lt; T &gt;</a></li>
-<li>insertLast()&#160;:&#160;<a class="el" href="a00029.html#ab0c3b4cb8283dd07b02e5da3e6ed0fa6">array&lt; T &gt;</a></li>
-<li>InstanceOf()&#160;:&#160;<a class="el" href="a00105.html#a8409e24c8fe9c17d262d09f5ac88c4f6">kActor</a></li>
-<li>InteractActorsAtPosition()&#160;:&#160;<a class="el" href="a00105.html#a896d0a1e1b88d6ee892fdb6997ec7105">kActor</a></li>
-<li>InterceptVector()&#160;:&#160;<a class="el" href="a00133.html#a92248058c90919ce141ac075ab2b60bf">kCModel</a></li>
-<li>Interpolate()&#160;:&#160;<a class="el" href="a00037.html#a801fe2b3ba841f9d4485fbacb9b12c8a">kAngle</a></li>
-<li>Inverse()&#160;:&#160;<a class="el" href="a00045.html#a043c7c50ea5eca18e19666dad5a20c63">kQuat</a></li>
-<li>InWater()&#160;:&#160;<a class="el" href="a00105.html#a44f741c95ec0abc5e1d8258f543c1f4f">kActor</a></li>
-<li>IsActorPersistentMarked()&#160;:&#160;<a class="el" href="a00149.html#a3e269e100e4ffaad4ac04b2da7aebbde">kGame</a></li>
-<li>IsEmpty()&#160;:&#160;<a class="el" href="a00033.html#a091158634771921eca80561ee90df802">kStr</a></li>
-<li>isEmpty()&#160;:&#160;<a class="el" href="a00029.html#ae2b90993d4ae7d257eeeb332606175d3">array&lt; T &gt;</a></li>
-<li>IsFacing()&#160;:&#160;<a class="el" href="a00049.html#a84c67cf3bcd8b07bb1146c823376bffb">kPlane</a></li>
-<li>IsJoystickActive()&#160;:&#160;<a class="el" href="a00149.html#a3245e7c7c8a369175cf5add9378f5f2b">kGame</a></li>
-<li>IsMorph()&#160;:&#160;<a class="el" href="a00097.html#ab58356f5adc9176145cc993ed107260a">kRenderModel</a></li>
-<li>IsPersistentMarked()&#160;:&#160;<a class="el" href="a00105.html#a96439cd07fb03465951685aaf6c83838">kActor</a></li>
-<li>IsPlaying()&#160;:&#160;<a class="el" href="a00101.html#abf44ba2518ba4748e6f2cd4f6e58d073">kAnimState</a></li>
-<li>IsStale()&#160;:&#160;<a class="el" href="a00105.html#aa9ef5fcde203b757e578f6b26992ffa1">kActor</a></li>
-<li>IsTactilePlaying()&#160;:&#160;<a class="el" href="a00149.html#a284396c5fc730db862c0521d790b8bff">kGame</a></li>
-<li>IsWorkshop()&#160;:&#160;<a class="el" href="a00149.html#a8c8a66c3ddc4e005d73675be099be25a">kGame</a></li>
+<li>IgnoreFxGameSpeed()&#160;:&#160;<a class="el" href="a00111.html#adbaf150296c27d1164cc1feaf184448e">kActor</a></li>
+<li>IgnoreGameSpeed()&#160;:&#160;<a class="el" href="a00111.html#aa4c04ea3ea29a2cc8ceaba6c2135b17d">kActor</a>, <a class="el" href="a00135.html#afcbe35ca46b8183b2e160dfd4950f613">kFx</a></li>
+<li>IgnoreSectorHeightChange()&#160;:&#160;<a class="el" href="a00111.html#a5a487286abbfd5b0e01612c76be47364">kActor</a>, <a class="el" href="a00135.html#ac496150619a72b70bfef57a6011a0b77">kFx</a></li>
+<li>ImpactType()&#160;:&#160;<a class="el" href="a00111.html#a20a0f31f8959182c0e1e26629ff231cf">kActor</a>, <a class="el" href="a00135.html#a2262077acdd5eb717f7965f7316515c4">kFx</a></li>
+<li>ImpactTypeDmg()&#160;:&#160;<a class="el" href="a00111.html#a63df3c56dfbe0ae7bda1c51dd1883e3a">kActor</a>, <a class="el" href="a00135.html#a5ba00f8b05f1745c194d3913fce45227">kFx</a></li>
+<li>IndexOf()&#160;:&#160;<a class="el" href="a00039.html#afd67dbbfbe04c063cb535149c7ace7f9">kStr</a></li>
+<li>InflictDamage()&#160;:&#160;<a class="el" href="a00111.html#a9873de4b22e903b980184debf05dbffa">kActor</a></li>
+<li>InflictGenericDamage()&#160;:&#160;<a class="el" href="a00111.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a">kActor</a></li>
+<li>InfoActorInstance()&#160;:&#160;<a class="el" href="a00135.html#a3f31ebfaa86ccf59f4a53675026c8d30">kFx</a></li>
+<li>InfoAddOffset()&#160;:&#160;<a class="el" href="a00135.html#a09795153a13e9e1c4d2cca9e7b3476f3">kFx</a></li>
+<li>InfoAirFriction()&#160;:&#160;<a class="el" href="a00135.html#a3de7f75b04b8d26df0f8b63aa4b2bba1">kFx</a></li>
+<li>InfoAnimFriction()&#160;:&#160;<a class="el" href="a00135.html#aae4e78b4b55ef5b307ddcfa8e16399e1">kFx</a></li>
+<li>InfoAnimName()&#160;:&#160;<a class="el" href="a00135.html#aa7d48f20645d57d69dec9ea6008aae0c">kFx</a></li>
+<li>InfoAnimspeed()&#160;:&#160;<a class="el" href="a00135.html#a85a80815b1e149d07db4320f5ceceea1">kFx</a></li>
+<li>InfoAnimType()&#160;:&#160;<a class="el" href="a00135.html#ac07836338769df9a71b9f7d8f1ae1bbc">kFx</a></li>
+<li>InfoAttachSource()&#160;:&#160;<a class="el" href="a00135.html#a4384ffa51a0f13b0106b14135221e3e2">kFx</a></li>
+<li>InfoBlackColor()&#160;:&#160;<a class="el" href="a00135.html#a8fdf0facf16fecb0926ec3253f7dbe78">kFx</a></li>
+<li>InfoBlood()&#160;:&#160;<a class="el" href="a00135.html#aff721ab2d8b062af38b8359d867871f2">kFx</a></li>
+<li>InfoBounceImpact()&#160;:&#160;<a class="el" href="a00135.html#a54ced9a0ffcc659b30aea8de15cbc9b8">kFx</a></li>
+<li>InfoBounceImpactThreshold()&#160;:&#160;<a class="el" href="a00135.html#a8559322e588d4929e70ea7eadc609608">kFx</a></li>
+<li>InfoBrightnessRandom()&#160;:&#160;<a class="el" href="a00135.html#a94e9e20ad80cd6ef52143df49d2d24af">kFx</a></li>
+<li>InfoBullet()&#160;:&#160;<a class="el" href="a00135.html#a1b2aa7bca03f81ebf2ec1466410fcaac">kFx</a></li>
+<li>InfoCrossFade()&#160;:&#160;<a class="el" href="a00135.html#af705cce1981f65e509a84d5f67489538">kFx</a></li>
+<li>InfoDecalOffset()&#160;:&#160;<a class="el" href="a00135.html#a532ae42a37491dce1609f721195a2c3f">kFx</a></li>
+<li>InfoDepthBuffer()&#160;:&#160;<a class="el" href="a00135.html#a24017484879ee5e191fb328e88ddb0af">kFx</a></li>
+<li>InfoDestroyOnWaterSurface()&#160;:&#160;<a class="el" href="a00135.html#af3f812236350f8d9d6a0248aad060515">kFx</a></li>
+<li>InfoDrawDelay()&#160;:&#160;<a class="el" href="a00135.html#ab911b92f7c8f0093eef070cda64cd038">kFx</a></li>
+<li>InfoDrawOnBottom()&#160;:&#160;<a class="el" href="a00135.html#a71a6f27377598e2f0ac232ac93646326">kFx</a></li>
+<li>InfoDrawType()&#160;:&#160;<a class="el" href="a00135.html#a14812c96f254889bc4a1e3523f4c49a3">kFx</a></li>
+<li>InfoFadeinTime()&#160;:&#160;<a class="el" href="a00135.html#a102dd5502c6030d18599fa046ecb1617">kFx</a></li>
+<li>InfoFadeout()&#160;:&#160;<a class="el" href="a00135.html#ab4297f57b4e179e9f705a618338e048c">kFx</a></li>
+<li>InfoFadeoutTime()&#160;:&#160;<a class="el" href="a00135.html#a68a8c75f085cc77a4ac2edc57efadea9">kFx</a></li>
+<li>InfoFlash()&#160;:&#160;<a class="el" href="a00135.html#a28fa0a73ab0acca0faa3ff6a9632f8bd">kFx</a></li>
+<li>InfoForward()&#160;:&#160;<a class="el" href="a00135.html#aa8d5f0cc42abd6f9e52899c95228fcec">kFx</a></li>
+<li>InfoFriction()&#160;:&#160;<a class="el" href="a00135.html#aac99c180dc0444bbf402aa052e5cc0c6">kFx</a></li>
+<li>InfoFullScreen()&#160;:&#160;<a class="el" href="a00135.html#a6561f04feb6794b8c5ec9aa28c9a6999">kFx</a></li>
+<li>InfoGravity()&#160;:&#160;<a class="el" href="a00135.html#ad67fb66388a5b1b4b54904af6add268d">kFx</a></li>
+<li>InfoHueRandom()&#160;:&#160;<a class="el" href="a00135.html#a191423b6f5ad6b1e0f28c76c79231125">kFx</a></li>
+<li>InfoIgnoreGameSpeed()&#160;:&#160;<a class="el" href="a00135.html#a4483c8f8f2e9e03c1e780b51b1d98930">kFx</a></li>
+<li>InfoImpactEffect()&#160;:&#160;<a class="el" href="a00135.html#aa580d32aaed9952dc4ac341169927d0e">kFx</a></li>
+<li>InfoLensFlares()&#160;:&#160;<a class="el" href="a00135.html#a7037e5695cbcf6ed44886c9023ee8d28">kFx</a></li>
+<li>InfoLifetime()&#160;:&#160;<a class="el" href="a00135.html#a2582928810a1e5e9dcdb8b368eb9c921">kFx</a></li>
+<li>InfoMass()&#160;:&#160;<a class="el" href="a00135.html#a5e4b65b7272402ab1f8257c83b3efd85">kFx</a></li>
+<li>InfoMaxBulletBounces()&#160;:&#160;<a class="el" href="a00135.html#ad6e6733c518786721ed1bad7631b3ea1">kFx</a></li>
+<li>InfoMaxInstances()&#160;:&#160;<a class="el" href="a00135.html#a90205a40bef363f7d156404cb9dd09aa">kFx</a></li>
+<li>InfoMaxscale()&#160;:&#160;<a class="el" href="a00135.html#a5abee8e584b22c5ba8c618e63c85a12d">kFx</a></li>
+<li>InfoModelName()&#160;:&#160;<a class="el" href="a00135.html#accc3e2956bea2b520f3014721dce81cf">kFx</a></li>
+<li>InfoMuzzleEffect()&#160;:&#160;<a class="el" href="a00135.html#a38abe24c7f0fd51488d85f895bbe3463">kFx</a></li>
+<li>InfoMuzzleOffset()&#160;:&#160;<a class="el" href="a00135.html#a01d3222f021282cbabfae6061551b802">kFx</a></li>
+<li>InfoNoDirection()&#160;:&#160;<a class="el" href="a00135.html#a1538dfea8be6ec27504fab165cea6bb5">kFx</a></li>
+<li>InfoNoGroundSpawn()&#160;:&#160;<a class="el" href="a00135.html#a89ae0459010d22f1bb8f7cdeacb3c71f">kFx</a></li>
+<li>InfoNoHitSource()&#160;:&#160;<a class="el" href="a00135.html#a97774a12394072d3bc34d0841b6ed251">kFx</a></li>
+<li>InfoNoSpawnFar()&#160;:&#160;<a class="el" href="a00135.html#a120cf4e38e6be41a362bb6c4f83078b6">kFx</a></li>
+<li>InfoNoSpawnNear()&#160;:&#160;<a class="el" href="a00135.html#a2176fd4417afc28ed4352ef0d32da52c">kFx</a></li>
+<li>InfoNoSpawnNearFarDist()&#160;:&#160;<a class="el" href="a00135.html#ac3fb267c27f37a2aa521166c7760df14">kFx</a></li>
+<li>InfoNoWallSpawn()&#160;:&#160;<a class="el" href="a00135.html#a3e978bb99ddc7e93dbae676e8d92c77b">kFx</a></li>
+<li>InfoOffset()&#160;:&#160;<a class="el" href="a00135.html#aea8c503e666e4468db3d3ed5bb413da2">kFx</a></li>
+<li>InfoOffsetFromFloor()&#160;:&#160;<a class="el" href="a00135.html#a96b098bcc95a6452d4421ba64e0a5d7d">kFx</a></li>
+<li>InfoOnCollideActor()&#160;:&#160;<a class="el" href="a00135.html#a79c39419b5ee8f95257fcaab5f162ba8">kFx</a></li>
+<li>InfoOnCollideFloor()&#160;:&#160;<a class="el" href="a00135.html#abb058fab1df27b180746630df4b48952">kFx</a></li>
+<li>InfoOnCollideWall()&#160;:&#160;<a class="el" href="a00135.html#a60854edf3c9644440f8714a5115b13bb">kFx</a></li>
+<li>InfoOverrideMaxDrawScale()&#160;:&#160;<a class="el" href="a00135.html#a05dabee0c500dc5021f2fa191c03b676">kFx</a></li>
+<li>InfoPerPolyCollision()&#160;:&#160;<a class="el" href="a00135.html#a7dfff56d8fe5e858d0a7c8716878315a">kFx</a></li>
+<li>InfoProjectile()&#160;:&#160;<a class="el" href="a00135.html#a0f219115a2cc520cb9015bab44fc5486">kFx</a></li>
+<li>InfoRecurseLifetime()&#160;:&#160;<a class="el" href="a00135.html#ad9add5246c391d1e7782c50cd5b5293e">kFx</a></li>
+<li>InfoRestart()&#160;:&#160;<a class="el" href="a00135.html#a16bda5cd20da80d1e23940e730b057ca">kFx</a></li>
+<li>InfoRestrictAim()&#160;:&#160;<a class="el" href="a00135.html#a94163071f366b004ad9d9ba19e80152c">kFx</a></li>
+<li>InfoRotationOffset()&#160;:&#160;<a class="el" href="a00135.html#aa3b07fb0bb497865aab341f3ba511032">kFx</a></li>
+<li>InfoRotationPivotX()&#160;:&#160;<a class="el" href="a00135.html#a8370a741426b2f4925764e49a1775603">kFx</a></li>
+<li>InfoRotationPivotY()&#160;:&#160;<a class="el" href="a00135.html#a19359ed5eb87d20bcb87e146956f0518">kFx</a></li>
+<li>InfoRotationSpeed()&#160;:&#160;<a class="el" href="a00135.html#a11c8dfb10df6571935327b5e442e36f6">kFx</a></li>
+<li>InfoSaturationRandom()&#160;:&#160;<a class="el" href="a00135.html#a04cc492804c3798ec5e229a71a28777c">kFx</a></li>
+<li>InfoScale()&#160;:&#160;<a class="el" href="a00135.html#aae9d0bc0bb1872f21dae76dae367337f">kFx</a></li>
+<li>InfoScaleDest()&#160;:&#160;<a class="el" href="a00135.html#a9d2e8171c1b50a7e15c3e4083f7497af">kFx</a></li>
+<li>InfoScaleLerp()&#160;:&#160;<a class="el" href="a00135.html#aed5a3a7cb0a65289ce3b23806a48d537">kFx</a></li>
+<li>InfoSparkle()&#160;:&#160;<a class="el" href="a00135.html#ad0f4c0932b8cbde421a27ce202bc0dca">kFx</a></li>
+<li>InfoSpawnDistOffset()&#160;:&#160;<a class="el" href="a00135.html#a4c687beeffb2c7b06b489cca0213fcdc">kFx</a></li>
+<li>InfoStickOnTarget()&#160;:&#160;<a class="el" href="a00135.html#a6d93850b220d411c4aec05bf661feac0">kFx</a></li>
+<li>InfoStopAnimOnImpact()&#160;:&#160;<a class="el" href="a00135.html#a1250eef7cdb031a7a6565ed62148e586">kFx</a></li>
+<li>InfoTextureWrapMirrorHeight()&#160;:&#160;<a class="el" href="a00135.html#ad6f43d52d9d26fe763ca4d50733b2fa4">kFx</a></li>
+<li>InfoTextureWrapMirrorWidth()&#160;:&#160;<a class="el" href="a00135.html#ac0acfb049317aec76278e7718d748b0e">kFx</a></li>
+<li>InfoTranslation()&#160;:&#160;<a class="el" href="a00135.html#a2609f3211f4bff2e09fa19df1a87aa04">kFx</a></li>
+<li>InfoTranslationGlobalRandomScale()&#160;:&#160;<a class="el" href="a00135.html#af3aef2bbd06d86ee7f1e5d0f7a9ac05c">kFx</a></li>
+<li>InfoUserID()&#160;:&#160;<a class="el" href="a00135.html#a3f04df0286cf213edd1a5947df289bb1">kFx</a></li>
+<li>InfoUserString()&#160;:&#160;<a class="el" href="a00135.html#a0850be892edb812768308457c2649c71">kFx</a></li>
+<li>InfoVisibilityType()&#160;:&#160;<a class="el" href="a00135.html#ae1c7444d667e860f1c3dbc39a96865f5">kFx</a></li>
+<li>InfoWaterFriction()&#160;:&#160;<a class="el" href="a00135.html#a632aa910fc9178a072219b0573453d85">kFx</a></li>
+<li>InfoWeaponView()&#160;:&#160;<a class="el" href="a00135.html#af66bdc9db78dd70a091ba4eabb5a5f3d">kFx</a></li>
+<li>InfoWhiteColor()&#160;:&#160;<a class="el" href="a00135.html#aa61915270c1fe18da1e1823e6c110241">kFx</a></li>
+<li>InputImageExists()&#160;:&#160;<a class="el" href="a00159.html#a5c94b44f722b71b311e73945be6ca038">kGame</a></li>
+<li>insertAt()&#160;:&#160;<a class="el" href="a00035.html#a42efa870e03001f965f2d049d81fb141">array&lt; T &gt;</a></li>
+<li>insertLast()&#160;:&#160;<a class="el" href="a00035.html#ab0c3b4cb8283dd07b02e5da3e6ed0fa6">array&lt; T &gt;</a></li>
+<li>InstanceIndex()&#160;:&#160;<a class="el" href="a00135.html#a16f5a43f0c468d33595734c0de7987a3">kFx</a></li>
+<li>InstanceOf()&#160;:&#160;<a class="el" href="a00111.html#a8409e24c8fe9c17d262d09f5ac88c4f6">kActor</a>, <a class="el" href="a00135.html#ad0db0cd0e80a880a6ba84ac276c62cd5">kFx</a></li>
+<li>Instances()&#160;:&#160;<a class="el" href="a00135.html#a9dde79f464cbe2ffb024acf943ddc238">kFx</a></li>
+<li>InteractActorsAtPosition()&#160;:&#160;<a class="el" href="a00111.html#a896d0a1e1b88d6ee892fdb6997ec7105">kActor</a></li>
+<li>InterceptVector()&#160;:&#160;<a class="el" href="a00143.html#a92248058c90919ce141ac075ab2b60bf">kCModel</a></li>
+<li>Interpolate()&#160;:&#160;<a class="el" href="a00043.html#a801fe2b3ba841f9d4485fbacb9b12c8a">kAngle</a></li>
+<li>Inverse()&#160;:&#160;<a class="el" href="a00051.html#a043c7c50ea5eca18e19666dad5a20c63">kQuat</a></li>
+<li>InWater()&#160;:&#160;<a class="el" href="a00111.html#a44f741c95ec0abc5e1d8258f543c1f4f">kActor</a>, <a class="el" href="a00135.html#a5606740560e27303ef4379c5a24431a1">kFx</a></li>
+<li>IsActorPersistentMarked()&#160;:&#160;<a class="el" href="a00159.html#a3e269e100e4ffaad4ac04b2da7aebbde">kGame</a></li>
+<li>IsCheatActive()&#160;:&#160;<a class="el" href="a00159.html#a2eaccef1ed1315e030e285f6ce745a6c">kGame</a></li>
+<li>IsEmpty()&#160;:&#160;<a class="el" href="a00039.html#a091158634771921eca80561ee90df802">kStr</a></li>
+<li>isEmpty()&#160;:&#160;<a class="el" href="a00035.html#ae2b90993d4ae7d257eeeb332606175d3">array&lt; T &gt;</a></li>
+<li>IsFacing()&#160;:&#160;<a class="el" href="a00055.html#a84c67cf3bcd8b07bb1146c823376bffb">kPlane</a></li>
+<li>IsJoystickActive()&#160;:&#160;<a class="el" href="a00159.html#a3245e7c7c8a369175cf5add9378f5f2b">kGame</a></li>
+<li>IsMorph()&#160;:&#160;<a class="el" href="a00103.html#ab58356f5adc9176145cc993ed107260a">kRenderModel</a></li>
+<li>IsPersistentMarked()&#160;:&#160;<a class="el" href="a00111.html#a96439cd07fb03465951685aaf6c83838">kActor</a></li>
+<li>IsPlaying()&#160;:&#160;<a class="el" href="a00107.html#abf44ba2518ba4748e6f2cd4f6e58d073">kAnimState</a></li>
+<li>IsRunningMapScript()&#160;:&#160;<a class="el" href="a00159.html#a9f40bdccd7e722cff61309ea448ed17a">kGame</a></li>
+<li>IsStale()&#160;:&#160;<a class="el" href="a00111.html#aa9ef5fcde203b757e578f6b26992ffa1">kActor</a>, <a class="el" href="a00135.html#ac91f1b8480d0b7ddb2f5fea4a3b454bb">kFx</a></li>
+<li>IsTactilePlaying()&#160;:&#160;<a class="el" href="a00159.html#a284396c5fc730db862c0521d790b8bff">kGame</a></li>
+<li>IsWorkshop()&#160;:&#160;<a class="el" href="a00159.html#a8c8a66c3ddc4e005d73675be099be25a">kGame</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

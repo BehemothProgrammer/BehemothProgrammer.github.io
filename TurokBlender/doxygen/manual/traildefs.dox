@@ -1,0 +1,106 @@
+/** \page "Trail Def Properties"
+ 
+<H3>Trail Defs Properties:</H3>
+\verbatim
+---------------------------
+New Trail Defs:
+---------------------------
+    lifeTime        4.0
+    fadeOutTime     3.0
+    edgeLifeTime    1.0
+    scale           0.2
+    
+lifeTime        4.0 // Float. Must include! Lifetime of Trail. When lifetime is < 0 will stop spawning edges. When all edges are gone then the trail is removed.
+fadeOutTime     3.0 // Float. Must include! Time when will begin fading out
+edgeLifeTime    1.0 // Float. Must include! Lifetime of each spawnd edge.
+edgeSpawnSpeed  4.0 // Float (default = 1.0). Scales how quickly the trail will add an edge. Use if you more smooth curves. (For trails attached to models, 1.0 is every tick at GameSpeed 1. For Fx 4.0 is every tick at GameSpeed 1)
+scale           1.0 // Float. Must include! Scale of edges.
+startScale      1.0 // Float (default = 1.0). Multiplies all the edges start pos
+endScale        1.0 // Float (default = 1.0). Multiplies all the edges end pos
+bCloseEdges     1   // Bool (default = false). Adds an edge automatically from the start and end edge vertices. (Don't use if you need correct UV values for materials)
+startAlphaScale 1.0 // Float (default = 1.0). Multiplies all the edges start alpha color
+endAlphaScale   1.0 // Float (default = 1.0). Multiplies all the edges end alpha color
+smoothEdge      1   // Bool (default = 0). Moves the last Edge along with the Fx position every tick. This is always on for trails attached to models so there's no need to include this for trails only attached to actors.
+
+capEnds         0   //Integer (default = 0). 0 = None. 1 = Cap Start. 2 = Cap End. 3 = Cap Start and End.
+                    // * This only works if the edges create a convex polygon and the edges (vertices) are ordered (CW or CCW)
+
+useCapUV        1   //Bool (default = 0). Will enable the use of cap UV values that you specify in each vertex def.
+
+fxDrawType      -10 //Integer (default = 10). Override the Fx drawType. This effects the edge matrix that multiplies the edge position. (for trails attached to Fx only).
+                    //Using negative values will always use the starting trail matrix for each edge that's added. Example: -5 will set the starting matrix to the Billboard Matrix.
+                    //                       10 = Default. Uses the Fx orientation matrix that changes based on the Fx drawType.
+                    //                       1 = Same as Fx drawType 1 (Flat).
+                    //                       2 = Same as Fx drawType 2 (Decal).
+                    //                       4 = Same as Fx drawType 4 (Surface).
+                    //                       5 = Same as Fx drawType 5 (Billboard matrix).
+                    //                       Other values = Same as Fx other drawTypes (Sprite matrix).
+
+textureType     1   //Integer (default = 0). Must set to 1-3 to use a material. The type effects how the UV.x value will be calculated.
+                    //                       0 = None (Normal untextured Turok 1 trails)
+                    //                       1 = Adds UV.x by the distance it moved / 200
+                    //                       2 = whenever a trail segment is added UV.x goes from 0 to 1 across all the trails edges. (slowest (but not that slow so don't worry about it))
+                    //                       3 = each segments UV.x switches from 0 to 1 no matter the distance travelled.
+                    
+material        "materials/mat_trails/surf_trail_test"
+                    // UV.y (sides) value is calculated by the number of edges in the trail. The first edge will be 0 then every edge after that the UV.y is added by:
+                    // UV.y += 1.0f / (NumberOfEdges - 1.0f);
+                    // See Trail Material Notes below for more info on trail materials.
+
+segmentsU       1   //Float (default = 1.0). Multiplies the UV.x (forward/backward) value by this amount which makes it repeat more.
+segmentsV       1   //Float (default = 1.0). Multiplies the UV.y (sides) value by this amount which makes it repeat more.
+
+
+---------------------------------
+Start and End Vertex Definitions
+---------------------------------
+vertex_start    "Vertex_TekBowTrail_Start_1"
+vertex_end      "Vertex_Projectile_Weapon_Null"
+
+-----------
+Vertex Defs
+-----------
+pos     // kVec3. Must include! Values range from 0.0 to 255.0
+color   // kVec3. Must include! Values range from 0.0 to 255.0
+alpha   // Float (default 255.0) Values range from 0.0 to 255.0
+u 0.0   // Float (default 0). If exists in start vertex then will use this uv.x value for the start cap. If exists in the end vertex then will use that for the end cap. If this exists in the start vertex but not the end vertex then the start vertex u value is used for the end cap.
+v 1.0   // Float (default 0). If exists in start vertex then will use this uv.y value for the start cap. If exists in the end vertex then will use that for the end cap. If this exists in the start vertex but not the end vertex then the start vertex v value is used for the end cap.
+
+---------------------------
+|materials/mat_trails.kmat|
+---------------------------
+Trail Material Notes:
+- Only use "progs/trail" for the shader! Using another shader may appear to work but it isn't and may lead to graphical bugs or crashes.
+- If you want a normal trail with alpha < 1.0 then you should use these properties: blend, nodepthmask (or set color_diffuse alpha to less than 1.0)
+- If you want a trail that's opaque then don't include: blend, nodepthmask, and make sure the color_diffuse alpha is 1.0. Note* Trails are not sorted and so opaque may draw over or under blend trails.
+- Should include depthtest
+- The following material properties are not used: sort, alphatest, alphafunc, alphamask, fullbright, color_environment, param
+- You can use the cull property if you want but not including it is generally recommended so both sides of the triangles are drawn.
+- You can also use the uv_scroll property
+
+material surf_trail_test {
+    shader "progs/trail"
+    blend
+    depthtest
+    color_diffuse "0.000000 1.000000 0.501961 0.625000"
+    
+    sampler "diffuse" 0 "textures/tex0001_00.png" {
+        filter      linear
+        wrap        mirrored
+    }
+}
+
+material surf_trail_test2 {
+    shader "progs/trail"
+    depthtest
+    color_diffuse "1.0 1.0 1.0 1.0"
+
+    sampler "diffuse" 0 "textures/tex0169_00.png" {
+        filter      linear
+        wrap        repeat
+    }
+}
+
+\endverbatim
+
+*/

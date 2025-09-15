@@ -103,14 +103,35 @@ $(function(){initNavTree('a00051.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">kBitDelta Member List</div></div>
+  <div class="headertitle"><div class="title">kQuat Member List</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00051.html">kBitDelta</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="a00051.html">kQuat</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a7c3bc494d9df9678f22005fad085441c">ReadByte</a>()</td><td class="entry"><a class="el" href="a00051.html">kBitDelta</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a0e1a0d656915a613cf30fa3efbebb6cd">WriteByte</a>(const uint8 i)</td><td class="entry"><a class="el" href="a00051.html">kBitDelta</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a561ec3feff85c53e76560aed0e7a2d3d">Clear</a>()</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a3ef015ef9f0e30709a0c55284cede9ad">Diff</a>(const kQuat &amp;in rot) const</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a0beadbb6d9cbdcdd544a9c048c6fc493">GetAngles</a>(float &amp;out yaw, float &amp;out pitch, float &amp;out roll)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a043c7c50ea5eca18e19666dad5a20c63">Inverse</a>() const</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#aca126f190095f94f8b8e5b0c8882611c">kQuat</a>()</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a32751bc96f0f5d31a288ff6acc2bcdab">kQuat</a>(float angle, float x, float y, float z)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#ab2d62451302d57db81b7a5435b50aa3f">kQuat</a>(float angle, kVec3 &amp;in vector)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a769441de48cc315ac922401d9cd08518">kQuat</a>(float rotX, float rotY, float rotZ)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a83e79127acfcf8154be40ae76f6a0b0a">kQuat</a>(const kQuat &amp;in other)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#acf7182085cebfd516bf1ac6671dc935d">Normalize</a>()</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a2463a93e30340e54d51cd6e5d34dffff">NormalizeNoInvSqrt</a>()</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#add3f7cf8bfa745b28eb0c2112eece5e0">opAdd</a>(const kQuat &amp;in rot)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a83b675ea181c9baa6ebe27aab0ed164d">opAssign</a>(const kQuat &amp;in rot)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#aee223c5b5e67e65030623d114aac5fec">opMul</a>(const kQuat &amp;in rot)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a8c96f50a43f6240bfc927f4bbaf71a39">opMulAssign</a>(const kQuat &amp;in rot)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a6962a67c0f93e0b86be6cbe2ebd4c0b1">opSub</a>(const kQuat &amp;in rot)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a2e8723d2afa10bdf1a795c240d1c6e8b">Set</a>(const float x, const float y, const float z, const float w)</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#aeefe57f83182db394dfd4e31ec720ad6">Slerp</a>(const kQuat &amp;in rot, float t) const</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a56534e1e568899ce32fce472beff03e3">ToString</a>() const</td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a039b92fbed9bae689a7475b634658cbd">w</a></td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#aec2f211d5e78d629d4ab4db12436084f">x</a></td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00051.html#a06e870234a813b2ed8e7dc36879fbe7c">y</a></td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00051.html#a965044e21de1653e32464e8bb9bd8895">z</a></td><td class="entry"><a class="el" href="a00051.html">kQuat</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

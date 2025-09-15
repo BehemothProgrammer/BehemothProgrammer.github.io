@@ -145,42 +145,47 @@ OnEndLevel          &lt;--- called when map unloads
 </pre><h1><a class="anchor" id="sofuncs"></a>
 <h3>ScriptObject Functions</h3>
 </h1>
-<div class="fragment"><div class="line"><a class="code hl_class" href="a00073.html">ScriptObject</a></div>
-<div class="line"><span class="keywordtype">void</span> OnSpawn() - Required <span class="keywordflow">for</span> all <a class="code hl_class" href="a00073.html">ScriptObject</a></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="a00079.html">ScriptObject</a></div>
+<div class="line"><span class="keywordtype">void</span> OnSpawn() - Required <span class="keywordflow">for</span> all <a class="code hl_class" href="a00079.html">ScriptObject</a></div>
 <div class="line"><span class="keywordtype">void</span> OnBeginLevel()</div>
 <div class="line">void OnRestore()</div>
 <div class="line"><span class="keywordtype">void</span> OnPostBeginLevel()</div>
 <div class="line"><span class="keywordtype">void</span> OnSleep()</div>
 <div class="line"><span class="keywordtype">void</span> OnWake()</div>
-<div class="line"><span class="keywordtype">void</span> OnTouch(<a class="code hl_class" href="a00105.html">kActor</a> @theActorThatTouchedMe) <span class="comment">//called even if alseep</span></div>
-<div class="line"><span class="keywordtype">void</span> OnCollide(<a class="code hl_class" href="a00133.html">kCModel</a>@) <span class="comment">//called even if alseep</span></div>
-<div class="line"><span class="keywordtype">void</span> OnTick() - Required for all <a class="code hl_class" href="a00073.html">ScriptObject</a></div>
+<div class="line"><span class="keywordtype">void</span> OnTouch(<a class="code hl_class" href="a00111.html">kActor</a> @theActorThatTouchedMe) <span class="comment">//called even if alseep</span></div>
+<div class="line"><span class="keywordtype">void</span> OnCollide(<a class="code hl_class" href="a00143.html">kCModel</a>@) <span class="comment">//called even if alseep</span></div>
+<div class="line"><span class="keywordtype">void</span> OnTick() - Required for all <a class="code hl_class" href="a00079.html">ScriptObject</a></div>
 <div class="line"><span class="keywordtype">void</span> OnMenuTick() - called only when dummymenu active</div>
 <div class="line"><span class="keywordtype">void</span> OnRemoved() - called when actor is removed (Internally or through scripting). IsStale will return true immediately after this.</div>
 <div class="line"><span class="keywordtype">void</span> OnActivate()</div>
 <div class="line"><span class="keywordtype">void</span> OnDeactivate() <span class="comment">//Never used</span></div>
-<div class="line"><span class="keywordtype">void</span> OnPreDamage(<a class="code hl_class" href="a00105.html">kActor</a> @instigator, <a class="code hl_class" href="a00085.html">kDictMem</a> @damageDef, const <span class="keywordtype">int</span> damage) <span class="comment">//always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.</span></div>
-<div class="line"><span class="keywordtype">void</span> OnDeath(<a class="code hl_class" href="a00105.html">kActor</a> @killer, <a class="code hl_class" href="a00085.html">kDictMem</a> @damageDef) <span class="comment">//called only when actor dies</span></div>
-<div class="line"><span class="keywordtype">void</span> OnDamage(<a class="code hl_class" href="a00105.html">kActor</a> @instigator, <a class="code hl_class" href="a00085.html">kDictMem</a> @damageDef, const <span class="keywordtype">int</span> damage) <span class="comment">//always called even after death</span></div>
+<div class="line"><span class="keywordtype">void</span> OnPreDamage(<a class="code hl_class" href="a00111.html">kActor</a> @instigator, <a class="code hl_class" href="a00091.html">kDictMem</a> @damageDef, const <span class="keywordtype">int</span> damage) <span class="comment">//always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.</span></div>
+<div class="line"><span class="keywordtype">void</span> OnDeath(<a class="code hl_class" href="a00111.html">kActor</a> @killer, <a class="code hl_class" href="a00091.html">kDictMem</a> @damageDef) <span class="comment">//called only when actor dies</span></div>
+<div class="line"><span class="keywordtype">void</span> OnDamage(<a class="code hl_class" href="a00111.html">kActor</a> @instigator, <a class="code hl_class" href="a00091.html">kDictMem</a> @damageDef, const <span class="keywordtype">int</span> damage) <span class="comment">//always called even after death</span></div>
 <div class="line"><span class="keywordtype">void</span> OnEndLevel()</div>
+<div class="line"><span class="keywordtype">void</span> OnPreTick(<span class="keywordtype">void</span>)  <span class="comment">// For the player script only! Called right before all other actors are ticked</span></div>
+<div class="line"><span class="keywordtype">void</span> OnPostTick(<span class="keywordtype">void</span>) <span class="comment">// For the player script only! Called right after level script ticks</span></div>
 <div class="line"> </div>
-<div class="line"><a class="code hl_class" href="a00077.html">ScriptObjectWeapon</a></div>
+<div class="line"><a class="code hl_class" href="a00083.html">ScriptObjectWeapon</a> : <a class="code hl_class" href="a00079.html">ScriptObject</a></div>
 <div class="line"><span class="keywordtype">void</span> OnBeginFire()</div>
 <div class="line"><span class="keywordtype">void</span> OnFire()</div>
 <div class="line"><span class="keywordtype">void</span> OnEndFire()</div>
 <div class="line"><span class="keywordtype">void</span> OnLower()</div>
 <div class="line"><span class="keywordtype">void</span> OnRaise()</div>
 <div class="line"><span class="keywordtype">void</span> OnHoldster()</div>
+<div class="line"><span class="keywordtype">void</span> OnPreRaise() <span class="comment">// Called right when the weapon state is set to raise.</span></div>
+<div class="line"><span class="keywordtype">void</span> OnActorTick() <span class="comment">// Called after the weapon calls OnTick for the kActor class (Should not use. Only here if needed)</span></div>
 <div class="line"> </div>
-<div class="line">ScriptObjectPlayer</div>
-<div class="line"><span class="keywordtype">void</span> OnPickup(<a class="code hl_class" href="a00105.html">kActor</a> @pickup)</div>
-<div class="line"><span class="keywordtype">void</span> OnArmorDamage(<a class="code hl_class" href="a00105.html">kActor</a> @instigator, <a class="code hl_class" href="a00085.html">kDictMem</a> @damageDef, const <span class="keywordtype">int</span> damage)</div>
+<div class="line"> </div>
+<div class="line">ScriptObjectPlayer : <a class="code hl_class" href="a00079.html">ScriptObject</a></div>
+<div class="line"><span class="keywordtype">void</span> OnPickup(<a class="code hl_class" href="a00111.html">kActor</a> @pickup)</div>
+<div class="line"><span class="keywordtype">void</span> OnArmorDamage(<a class="code hl_class" href="a00111.html">kActor</a> @instigator, <a class="code hl_class" href="a00091.html">kDictMem</a> @damageDef, const <span class="keywordtype">int</span> damage)</div>
 <div class="line"><span class="keywordtype">void</span> OnEnterWater()</div>
-<div class="ttc" id="aa00073_html"><div class="ttname"><a href="a00073.html">ScriptObject</a></div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00863">t1_scriptAPI.cpp:864</a></div></div>
-<div class="ttc" id="aa00077_html"><div class="ttname"><a href="a00077.html">ScriptObjectWeapon</a></div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00870">t1_scriptAPI.cpp:871</a></div></div>
-<div class="ttc" id="aa00085_html"><div class="ttname"><a href="a00085.html">kDictMem</a></div><div class="ttdoc">Read only Dictionary object that holds keys and values.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00903">t1_scriptAPI.cpp:904</a></div></div>
-<div class="ttc" id="aa00105_html"><div class="ttname"><a href="a00105.html">kActor</a></div><div class="ttdoc">Base type used by all actors.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01036">t1_scriptAPI.cpp:1037</a></div></div>
-<div class="ttc" id="aa00133_html"><div class="ttname"><a href="a00133.html">kCModel</a></div><div class="ttdoc">The kCModel(CModel) global stores collision results when certain actor methods are called....</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01393">t1_scriptAPI.cpp:1394</a></div></div>
+<div class="ttc" id="aa00079_html"><div class="ttname"><a href="a00079.html">ScriptObject</a></div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00885">t1_scriptAPI.cpp:886</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">ScriptObjectWeapon</a></div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00892">t1_scriptAPI.cpp:893</a></div></div>
+<div class="ttc" id="aa00091_html"><div class="ttname"><a href="a00091.html">kDictMem</a></div><div class="ttdoc">Read only Dictionary object that holds keys and values.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00925">t1_scriptAPI.cpp:926</a></div></div>
+<div class="ttc" id="aa00111_html"><div class="ttname"><a href="a00111.html">kActor</a></div><div class="ttdoc">Base type used by all actors.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01062">t1_scriptAPI.cpp:1063</a></div></div>
+<div class="ttc" id="aa00143_html"><div class="ttname"><a href="a00143.html">kCModel</a></div><div class="ttdoc">The kCModel(CModel) global stores collision results when certain actor methods are called....</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01658">t1_scriptAPI.cpp:1659</a></div></div>
 </div><!-- fragment --><h1><a class="anchor" id="grunttypes"></a>
 <h3>GruntVariants</h3>
 </h1>
@@ -348,6 +353,21 @@ $play_sound (ID)                                // Play a sound by ID
 $repeat                                         // Starts back at processing the first command again.
 $action (ID, {x y z w})                         // Calls a script animation function by ID with x,y,z,w values passed into the function.
 $use_gamespeed (use)                            // bool use. if set to 0 will not use gamespeed else will use gamespeed (default).
+$spawnfx (FxID, {x y z}, time)                  // FxID (from defs/fileLookup.txt), {x, y, z} position relative to actor, time to keep spawning this particle (use 0 to spawn it only once right away).
+$spawnregenfx                                   // Spawns "fx/object_dissolve.kfx"
+</pre><h1><a class="anchor" id="actorfx"></a>
+<h3>ActorFx Commands</h3>
+</h1>
+<pre class="fragment">Custom ttf font examples:
+Add custom ttf fonts in "defs/fileLookup.txt". For each font string the left side of the Pipe(|) character is the path to the font and the right side is the font size.
+The ttf font that the game uses is "fonts/zeroes_three.otf" and it has a font size of 48.
+Keep in mind to access the font you must add a value of 4 to use it. so when using the Game.AddText function pass in 4 to use the $0 custom font and 5 to use $1 and so on.
+This is an example of adding custom fonts:
+Fonts
+{
+    $0 = "fonts/RobotoMono-MediumItalic.ttf|48"
+    $1 = "fonts/RobotoMono-SemiBold.ttf|24.123"
+}
 </pre><h1><a class="anchor" id="species"></a>
 <h3>Species Mask (Unused)</h3>
 </h1>
@@ -367,15 +387,15 @@ $use_gamespeed (use)                            // bool use. if set to 0 will no
 </div><!-- fragment --><h1><a class="anchor" id="shootactor"></a>
 <h3>Spawn A Shoot Only Actor</h3>
 </h1>
-<div class="fragment"><div class="line"><a class="code hl_class" href="a00041.html">kVec3</a> pos = <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().Origin();</div>
-<div class="line"><a class="code hl_class" href="a00105.html">kActor</a> @m_pDummyActor = <a class="code hl_variable" href="a00002.html#aef62f575aec9d59790e455f57bfce9d6">ActorFactory</a>.Spawn(<span class="stringliteral">&quot;DummyActor&quot;</span>, pos.<a class="code hl_variable" href="a00041.html#a14ded16405d5a8f259296d1788e7b48f">x</a>, pos.<a class="code hl_variable" href="a00041.html#aeb1547a0c82ca9754e4f4ec74ab5b605">y</a>, pos.<a class="code hl_variable" href="a00041.html#ae3fe49671cc9d398d9cc9f9e3acd9199">z</a>, <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().Yaw(), <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().SectorIndex());</div>
-<div class="line">m_pDummyActor.<a class="code hl_function" href="a00105.html#ab626c3aaeb7a6a359d21980bfbd735dc">Flags</a>() |= (<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a714d3df25914a4a563cfc9712d8fcf66">AF_DEAD</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a002ca40217e2d3c3d5f082b3c402d950">AF_NOMOVEMENT</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a645b0b7c182fc82706c5ba3c4035aa27">AF_NODRAW</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a652d0ae8d991108a977795e16a533835">AF_DISABLED</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a322c1ffb5dd96ce2f65be2ffb4fa6297">AF_ALWAYSACTIVE</a>);</div>
-<div class="line">m_pDummyActor.<a class="code hl_function" href="a00105.html#ab626c3aaeb7a6a359d21980bfbd735dc">Flags</a>() &amp;= ~(<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a844755a80fda6e88b391fecda6baaea4">AF_SOLID</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a53fb64cff30e28ca3be09f56007d7936">AF_CANBETOUCHED</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a88180f0594f2598bf656c6cbe1f940b1">AF_AVOIDWATER</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a8545d2dfcdf9ea8712b8dd4f4d75d41a">AF_ALIGNTOFLOOR</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a75f72d3446e979651e8774960eca0416">AF_CASTSHADOW</a>);</div>
-<div class="line">m_pDummyActor.<a class="code hl_function" href="a00105.html#a20a0f31f8959182c0e1e26629ff231cf">ImpactType</a>() = <a class="code hl_enumvalue" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492">IT_FLESH_HUMAN</a>;</div>
-<div class="line">m_pDummyActor.<a class="code hl_function" href="a00105.html#ad2740ee179fccb915440f581f793746c">Radius</a>() = 16;</div>
-<div class="line">m_pDummyActor.<a class="code hl_function" href="a00105.html#a4e4df775dd17639b5c2cf68c4893b5c2">Height</a>() = 32;</div>
-<div class="ttc" id="aa00002_html_a584923e56dc2b4c98227a52b433f8bef"><div class="ttname"><a href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a></div><div class="ttdeci">kPlayer Player</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01977">t1_scriptAPI.cpp:1977</a></div></div>
-<div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492"><div class="ttname"><a href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492">IT_FLESH_HUMAN</a></div><div class="ttdeci">@ IT_FLESH_HUMAN</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00225">t1_scriptAPI.cpp:225</a></div></div>
+<div class="fragment"><div class="line"><a class="code hl_class" href="a00047.html">kVec3</a> pos = <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().Origin();</div>
+<div class="line"><a class="code hl_class" href="a00111.html">kActor</a> @m_pDummyActor = <a class="code hl_variable" href="a00002.html#aef62f575aec9d59790e455f57bfce9d6">ActorFactory</a>.Spawn(<span class="stringliteral">&quot;DummyActor&quot;</span>, pos.<a class="code hl_variable" href="a00047.html#a14ded16405d5a8f259296d1788e7b48f">x</a>, pos.<a class="code hl_variable" href="a00047.html#aeb1547a0c82ca9754e4f4ec74ab5b605">y</a>, pos.<a class="code hl_variable" href="a00047.html#ae3fe49671cc9d398d9cc9f9e3acd9199">z</a>, <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().Yaw(), <a class="code hl_variable" href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a>.Actor().SectorIndex());</div>
+<div class="line">m_pDummyActor.<a class="code hl_function" href="a00111.html#ab626c3aaeb7a6a359d21980bfbd735dc">Flags</a>() |= (<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a714d3df25914a4a563cfc9712d8fcf66">AF_DEAD</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a002ca40217e2d3c3d5f082b3c402d950">AF_NOMOVEMENT</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a645b0b7c182fc82706c5ba3c4035aa27">AF_NODRAW</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a652d0ae8d991108a977795e16a533835">AF_DISABLED</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a322c1ffb5dd96ce2f65be2ffb4fa6297">AF_ALWAYSACTIVE</a>);</div>
+<div class="line">m_pDummyActor.<a class="code hl_function" href="a00111.html#ab626c3aaeb7a6a359d21980bfbd735dc">Flags</a>() &amp;= ~(<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a844755a80fda6e88b391fecda6baaea4">AF_SOLID</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a53fb64cff30e28ca3be09f56007d7936">AF_CANBETOUCHED</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a88180f0594f2598bf656c6cbe1f940b1">AF_AVOIDWATER</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a8545d2dfcdf9ea8712b8dd4f4d75d41a">AF_ALIGNTOFLOOR</a>|<a class="code hl_enumvalue" href="a00002.html#a9151ee2267044ca08162bc65329d7466a75f72d3446e979651e8774960eca0416">AF_CASTSHADOW</a>);</div>
+<div class="line">m_pDummyActor.<a class="code hl_function" href="a00111.html#a20a0f31f8959182c0e1e26629ff231cf">ImpactType</a>() = <a class="code hl_enumvalue" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492">IT_FLESH_HUMAN</a>;</div>
+<div class="line">m_pDummyActor.<a class="code hl_function" href="a00111.html#ad2740ee179fccb915440f581f793746c">Radius</a>() = 16;</div>
+<div class="line">m_pDummyActor.<a class="code hl_function" href="a00111.html#a4e4df775dd17639b5c2cf68c4893b5c2">Height</a>() = 32;</div>
+<div class="ttc" id="aa00002_html_a584923e56dc2b4c98227a52b433f8bef"><div class="ttname"><a href="a00002.html#a584923e56dc2b4c98227a52b433f8bef">Player</a></div><div class="ttdeci">kPlayer Player</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02359">t1_scriptAPI.cpp:2359</a></div></div>
+<div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492"><div class="ttname"><a href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492">IT_FLESH_HUMAN</a></div><div class="ttdeci">@ IT_FLESH_HUMAN</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00242">t1_scriptAPI.cpp:242</a></div></div>
 <div class="ttc" id="aa00002_html_a9151ee2267044ca08162bc65329d7466a002ca40217e2d3c3d5f082b3c402d950"><div class="ttname"><a href="a00002.html#a9151ee2267044ca08162bc65329d7466a002ca40217e2d3c3d5f082b3c402d950">AF_NOMOVEMENT</a></div><div class="ttdeci">@ AF_NOMOVEMENT</div><div class="ttdoc">will not do collision movement</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00069">t1_scriptAPI.cpp:69</a></div></div>
 <div class="ttc" id="aa00002_html_a9151ee2267044ca08162bc65329d7466a322c1ffb5dd96ce2f65be2ffb4fa6297"><div class="ttname"><a href="a00002.html#a9151ee2267044ca08162bc65329d7466a322c1ffb5dd96ce2f65be2ffb4fa6297">AF_ALWAYSACTIVE</a></div><div class="ttdeci">@ AF_ALWAYSACTIVE</div><div class="ttdoc">never sleep or go dormant</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00065">t1_scriptAPI.cpp:65</a></div></div>
 <div class="ttc" id="aa00002_html_a9151ee2267044ca08162bc65329d7466a53fb64cff30e28ca3be09f56007d7936"><div class="ttname"><a href="a00002.html#a9151ee2267044ca08162bc65329d7466a53fb64cff30e28ca3be09f56007d7936">AF_CANBETOUCHED</a></div><div class="ttdeci">@ AF_CANBETOUCHED</div><div class="ttdoc">allow invoking the OnTouch callback</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00059">t1_scriptAPI.cpp:59</a></div></div>
@@ -386,15 +406,15 @@ $use_gamespeed (use)                            // bool use. if set to 0 will no
 <div class="ttc" id="aa00002_html_a9151ee2267044ca08162bc65329d7466a844755a80fda6e88b391fecda6baaea4"><div class="ttname"><a href="a00002.html#a9151ee2267044ca08162bc65329d7466a844755a80fda6e88b391fecda6baaea4">AF_SOLID</a></div><div class="ttdeci">@ AF_SOLID</div><div class="ttdoc">Can be collided.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00038">t1_scriptAPI.cpp:38</a></div></div>
 <div class="ttc" id="aa00002_html_a9151ee2267044ca08162bc65329d7466a8545d2dfcdf9ea8712b8dd4f4d75d41a"><div class="ttname"><a href="a00002.html#a9151ee2267044ca08162bc65329d7466a8545d2dfcdf9ea8712b8dd4f4d75d41a">AF_ALIGNTOFLOOR</a></div><div class="ttdeci">@ AF_ALIGNTOFLOOR</div><div class="ttdoc">rotate along slopes</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00055">t1_scriptAPI.cpp:55</a></div></div>
 <div class="ttc" id="aa00002_html_a9151ee2267044ca08162bc65329d7466a88180f0594f2598bf656c6cbe1f940b1"><div class="ttname"><a href="a00002.html#a9151ee2267044ca08162bc65329d7466a88180f0594f2598bf656c6cbe1f940b1">AF_AVOIDWATER</a></div><div class="ttdeci">@ AF_AVOIDWATER</div><div class="ttdoc">clip against edges linking to water sectors</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00051">t1_scriptAPI.cpp:51</a></div></div>
-<div class="ttc" id="aa00002_html_aef62f575aec9d59790e455f57bfce9d6"><div class="ttname"><a href="a00002.html#aef62f575aec9d59790e455f57bfce9d6">ActorFactory</a></div><div class="ttdeci">kActorFactory ActorFactory</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01975">t1_scriptAPI.cpp:1975</a></div></div>
-<div class="ttc" id="aa00041_html"><div class="ttname"><a href="a00041.html">kVec3</a></div><div class="ttdoc">Representation of 3D vectors and points.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00658">t1_scriptAPI.cpp:659</a></div></div>
-<div class="ttc" id="aa00041_html_a14ded16405d5a8f259296d1788e7b48f"><div class="ttname"><a href="a00041.html#a14ded16405d5a8f259296d1788e7b48f">kVec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00709">t1_scriptAPI.cpp:709</a></div></div>
-<div class="ttc" id="aa00041_html_ae3fe49671cc9d398d9cc9f9e3acd9199"><div class="ttname"><a href="a00041.html#ae3fe49671cc9d398d9cc9f9e3acd9199">kVec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00711">t1_scriptAPI.cpp:711</a></div></div>
-<div class="ttc" id="aa00041_html_aeb1547a0c82ca9754e4f4ec74ab5b605"><div class="ttname"><a href="a00041.html#aeb1547a0c82ca9754e4f4ec74ab5b605">kVec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00710">t1_scriptAPI.cpp:710</a></div></div>
-<div class="ttc" id="aa00105_html_a20a0f31f8959182c0e1e26629ff231cf"><div class="ttname"><a href="a00105.html#a20a0f31f8959182c0e1e26629ff231cf">kActor::ImpactType</a></div><div class="ttdeci">int &amp; ImpactType()</div><div class="ttdoc">EnumImpactType.</div></div>
-<div class="ttc" id="aa00105_html_a4e4df775dd17639b5c2cf68c4893b5c2"><div class="ttname"><a href="a00105.html#a4e4df775dd17639b5c2cf68c4893b5c2">kActor::Height</a></div><div class="ttdeci">float &amp; Height()</div></div>
-<div class="ttc" id="aa00105_html_ab626c3aaeb7a6a359d21980bfbd735dc"><div class="ttname"><a href="a00105.html#ab626c3aaeb7a6a359d21980bfbd735dc">kActor::Flags</a></div><div class="ttdeci">uint &amp; Flags()</div><div class="ttdoc">EnumActorFlags.</div></div>
-<div class="ttc" id="aa00105_html_ad2740ee179fccb915440f581f793746c"><div class="ttname"><a href="a00105.html#ad2740ee179fccb915440f581f793746c">kActor::Radius</a></div><div class="ttdeci">float &amp; Radius()</div></div>
+<div class="ttc" id="aa00002_html_aef62f575aec9d59790e455f57bfce9d6"><div class="ttname"><a href="a00002.html#aef62f575aec9d59790e455f57bfce9d6">ActorFactory</a></div><div class="ttdeci">kActorFactory ActorFactory</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02357">t1_scriptAPI.cpp:2357</a></div></div>
+<div class="ttc" id="aa00047_html"><div class="ttname"><a href="a00047.html">kVec3</a></div><div class="ttdoc">Representation of 3D vectors and points.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00680">t1_scriptAPI.cpp:681</a></div></div>
+<div class="ttc" id="aa00047_html_a14ded16405d5a8f259296d1788e7b48f"><div class="ttname"><a href="a00047.html#a14ded16405d5a8f259296d1788e7b48f">kVec3::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00731">t1_scriptAPI.cpp:731</a></div></div>
+<div class="ttc" id="aa00047_html_ae3fe49671cc9d398d9cc9f9e3acd9199"><div class="ttname"><a href="a00047.html#ae3fe49671cc9d398d9cc9f9e3acd9199">kVec3::z</a></div><div class="ttdeci">float z</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00733">t1_scriptAPI.cpp:733</a></div></div>
+<div class="ttc" id="aa00047_html_aeb1547a0c82ca9754e4f4ec74ab5b605"><div class="ttname"><a href="a00047.html#aeb1547a0c82ca9754e4f4ec74ab5b605">kVec3::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00732">t1_scriptAPI.cpp:732</a></div></div>
+<div class="ttc" id="aa00111_html_a20a0f31f8959182c0e1e26629ff231cf"><div class="ttname"><a href="a00111.html#a20a0f31f8959182c0e1e26629ff231cf">kActor::ImpactType</a></div><div class="ttdeci">int &amp; ImpactType()</div><div class="ttdoc">EnumImpactType.</div></div>
+<div class="ttc" id="aa00111_html_a4e4df775dd17639b5c2cf68c4893b5c2"><div class="ttname"><a href="a00111.html#a4e4df775dd17639b5c2cf68c4893b5c2">kActor::Height</a></div><div class="ttdeci">float &amp; Height()</div></div>
+<div class="ttc" id="aa00111_html_ab626c3aaeb7a6a359d21980bfbd735dc"><div class="ttname"><a href="a00111.html#ab626c3aaeb7a6a359d21980bfbd735dc">kActor::Flags</a></div><div class="ttdeci">uint &amp; Flags()</div><div class="ttdoc">EnumActorFlags.</div></div>
+<div class="ttc" id="aa00111_html_ad2740ee179fccb915440f581f793746c"><div class="ttname"><a href="a00111.html#ad2740ee179fccb915440f581f793746c">kActor::Radius</a></div><div class="ttdeci">float &amp; Radius()</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="kfont"></a>
 <h3>kfont file</h3>
 </h1>
@@ -513,6 +533,14 @@ bKnife                  // (bool, 0) Used in scripts only.
     player.jumpMinSpeed
     player.jumpMaxSpeed
     player.jumpClimbSpeed
+    player.headBobScale
+    player.turnBobScale
+    player.strafeBobScale
+    player.underwaterBobScale
+    player.jumpBobScale
+    player.overrideWeaponOnTopFix
+    player.maxLives
+    player.maxLifeforces
 Int:
     g_difficulty                // Use Game.GetDifficulty or Game.SetDifficulty instead.
     g_startmap                  // The map to start on when starting a new game
@@ -529,12 +557,14 @@ Int:
     OverridePerPolyCollision    // Set: Game.OverridePerPolyCollision();  Get: GameVariables.GetInt("OverridePerPolyCollision", result);  0=none, 1=force disable, 2=force enable
     ConfirmMenuResult           // Get: GameVariables.GetInt("ConfirmMenuResult", result);  Set: GameVariables.SetValue("ConfirmMenuResult", "0");
     g_loadedgame                // Check OnBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after Map Script 0 is called.
+    OverrideRespawningEnemies   // Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result); 0=none, 1=Force Disable, 2=Force Enable
 Bool:
     g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel.
     g_resetboss                 // is set to 1 when warping to the boss using the warp boss cheats. This sets them to their initial state. Is set back to 0 after OnPostBeginLevel is called.
     g_timetrial                 // is set to 1 when selecting time trial from the menu. Is set back to 0 after OnPostBeginLevel is called.
     DisableUnderwaterMusic      // Use GameVariables.SetValue("DisableUnderwaterMusic", "1");
     DisableWaterReflection      // Use GameVariables.SetValue("DisableWaterReflection", "1");
+    NewExplosiveRadiusCheck     // (default False) Set to 1 to enable explosive damage checks from radius to actor cylinder(more accurate) instead of radius to actors center point. For all actors in the game.
 </pre><h1><a class="anchor" id="difficulty"></a>
 <h3>Difficulty</h3>
 </h1>

@@ -93,6 +93,10 @@ initialScale
 knife.damage     "15 15 15"     // Vector
 knife.backdamage 30             // int
 knife.blood      1              // int. 0=none, 1=red, 2=green, 3=spark
+removeTrailsOnAnimChange 1      // bool. Will remove all model trails on this actor when animation is set/blend
+ignoreGameSpeed     1           // bool. GameSpeed used for this actor will always be 1. (Default is true for kPuppet and kPlayerWeapon. Default is False for every other actor)
+ignoreFxGameSpeed   1           // bool. GameSpeed used for Fx whose source is this actor will always be 1. (Default is false)
+
 \endverbatim
 
 */
