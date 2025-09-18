@@ -38,7 +38,9 @@ OnEndLevel			<--- called when map unloads
 
 \section sofuncs <H3>ScriptObject Functions</H3>
 \code{.cpp}
+--------------------------------------------------
 ScriptObject
+--------------------------------------------------
 void OnSpawn() - Required for all ScriptObject
 void OnBeginLevel()
 void OnRestore()
@@ -59,7 +61,9 @@ void OnEndLevel()
 void OnPreTick(void)  // For the player script only! Called right before all other actors are ticked
 void OnPostTick(void) // For the player script only! Called right after level script ticks
 
+--------------------------------------------------
 ScriptObjectWeapon : ScriptObject
+--------------------------------------------------
 void OnBeginFire()
 void OnFire()
 void OnEndFire()
@@ -69,11 +73,31 @@ void OnHoldster()
 void OnPreRaise() // Called right when the weapon state is set to raise.
 void OnActorTick() // Called after the weapon calls OnTick for the kActor class (Should not use. Only here if needed)
 
-
+--------------------------------------------------
 ScriptObjectPlayer : ScriptObject
+--------------------------------------------------
 void OnPickup(kActor @pickup)
 void OnArmorDamage(kActor @instigator, kDictMem @damageDef, const int damage)
 void OnEnterWater()
+
+--------------------------------------------------
+ScriptObjectFx
+--------------------------------------------------
+kFx @self;
+TurokFxTest(kFx @actor)
+{
+    @self = actor;
+}
+    
+void OnTick(void)
+void OnRemoved(void)
+void OnCollide(kCModel @pCModel)    // Called just before any of the OnImpact functions.
+bool OnImpactWall(int impactType, const kVec3 &in normal)
+bool OnImpactFloor(int impactType, const kVec3 &in normal)
+bool OnImpactCeiling(int impactType, const kVec3 &in normal)
+bool OnImpactObject(int impactType, int impactDmgType, kActor@ actor, const kVec3 &in normal)
+void OnImpactWater(void)
+void OnExpire(void)    
 \endcode
 
 \section grunttypes <H3>GruntVariants</H3>

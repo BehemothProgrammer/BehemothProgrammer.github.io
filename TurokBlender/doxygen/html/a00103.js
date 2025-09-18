@@ -21,9 +21,7 @@ var a00103 =
     [ "SetModel", "a00103.html#adf62fd27c78ba5b0f5c52977745fd98e", null ],
     [ "SetMorphFrame", "a00103.html#a6a96c5a378ec5172f77994b31a517d23", null ],
     [ "SetMorphUpdating", "a00103.html#a5713ec0e338e73247af9203e873de02a", null ],
-    [ "SetRotationOffset", "a00103.html#a2b0be972770dd611634805e0dbfbabad", null ],
     [ "SetRotationOffset", "a00103.html#a77655f5926e2487b2a06b27669e7e0d9", null ],
-    [ "SetRotationOffset", "a00103.html#a180d9913eb6db05c37664a7db15d697b", null ],
     [ "SetRotationOffset", "a00103.html#ac3ad093ff064372a8c4ca35e31987043", null ],
     [ "SetTexture", "a00103.html#a76c97b974e5faaed3ee825b841270e2b", null ],
     [ "SetVisibility", "a00103.html#a0307149cd4eb33b4930dcb9851536d5c", null ]

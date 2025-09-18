@@ -966,15 +966,16 @@ class kRenderModel
 {
 public:
 	void SetModel(const kStr&in modelPath, const kStr&in modelAnimPath);
-	void SetRotationOffset(const int nodeIndex, const float rads, const float x, const float y, const float z);
-	void SetRotationOffset(const int nodeIndex, const kQuat&in rotation);
+	void SetRotationOffset(const int nodeIndex, const float rads, const float x, const float y, const float z, const bool clearInterpolation = false);
+	void SetRotationOffset(const int nodeIndex, const kQuat&in rotation, const bool clearInterpolation = false);
 	void SetTexture(const int section, const int textureID);
 	void SetVisibility(const int nodeIndex, const bool visible);
 	void HideSection(const int nodeIndex, const int section, const bool hide); ///< section is the surface index. must be 0-31 and must not be >= number of surfaces or will do nothing.
 	void AddTrailEffect(const kStr&in trailName, const int nodeIndex);
 	void RemoveTrailEffect(); ///< Removes all trail effects
 	const int GetNumAttachedTrails();
-	kVec3& Offset();
+	kVec3 &Offset();
+    kVec3 &PrevOffset();
 	const int GetNumNodes() const;
 	kVec3 GetNodeOrigin(const int node, const kVec3&in offset); ///< Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
 	kQuat GetNodeRotation(const int node); ///< Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.
@@ -1018,9 +1019,6 @@ public:
     void ColorOverride(const int node, const float r = 1.0f, const float g = 1.0f, const float b = 1.0f, const float a = 1.0f); ///< color values range from -1.0f to 1.0f. Call ColorOverrideSections to enable the override for sections on the node.
     void ColorOverrideSections(const int node, const int sectionMask = -1); ///< enable the color override for specific sections(materials) on the node by setting each bit. -1 = All, 0 = Stop override
     void ScaleOverride(const int node, const kVec3 &in scale);
-    kVec3 &PrevOffset();
-	void SetRotationOffset(const int nodeIndex, const float rads, const float x, const float y, const float z, const bool clearInterpolation = false);
-	void SetRotationOffset(const int nodeIndex, const kQuat&in rotation, const bool clearInterpolation = false);
 };
 
 class kAnimState

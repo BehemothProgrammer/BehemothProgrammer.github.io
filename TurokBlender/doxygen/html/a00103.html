@@ -114,10 +114,10 @@ $(function(){initNavTree('a00103.html',''); initResizable(true); });
 Public Member Functions</h2></td></tr>
 <tr class="memitem:adf62fd27c78ba5b0f5c52977745fd98e" id="r_adf62fd27c78ba5b0f5c52977745fd98e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf62fd27c78ba5b0f5c52977745fd98e">SetModel</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in modelPath, const <a class="el" href="a00039.html">kStr</a> &amp;in modelAnimPath)</td></tr>
 <tr class="separator:adf62fd27c78ba5b0f5c52977745fd98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b0be972770dd611634805e0dbfbabad" id="r_a2b0be972770dd611634805e0dbfbabad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b0be972770dd611634805e0dbfbabad">SetRotationOffset</a> (const int nodeIndex, const float rads, const float x, const float y, const float z)</td></tr>
-<tr class="separator:a2b0be972770dd611634805e0dbfbabad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a180d9913eb6db05c37664a7db15d697b" id="r_a180d9913eb6db05c37664a7db15d697b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a180d9913eb6db05c37664a7db15d697b">SetRotationOffset</a> (const int nodeIndex, const <a class="el" href="a00051.html">kQuat</a> &amp;in rotation)</td></tr>
-<tr class="separator:a180d9913eb6db05c37664a7db15d697b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77655f5926e2487b2a06b27669e7e0d9" id="r_a77655f5926e2487b2a06b27669e7e0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77655f5926e2487b2a06b27669e7e0d9">SetRotationOffset</a> (const int nodeIndex, const float rads, const float x, const float y, const float z, const bool clearInterpolation=false)</td></tr>
+<tr class="separator:a77655f5926e2487b2a06b27669e7e0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ad093ff064372a8c4ca35e31987043" id="r_ac3ad093ff064372a8c4ca35e31987043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3ad093ff064372a8c4ca35e31987043">SetRotationOffset</a> (const int nodeIndex, const <a class="el" href="a00051.html">kQuat</a> &amp;in rotation, const bool clearInterpolation=false)</td></tr>
+<tr class="separator:ac3ad093ff064372a8c4ca35e31987043"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76c97b974e5faaed3ee825b841270e2b" id="r_a76c97b974e5faaed3ee825b841270e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76c97b974e5faaed3ee825b841270e2b">SetTexture</a> (const int section, const int textureID)</td></tr>
 <tr class="separator:a76c97b974e5faaed3ee825b841270e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0307149cd4eb33b4930dcb9851536d5c" id="r_a0307149cd4eb33b4930dcb9851536d5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0307149cd4eb33b4930dcb9851536d5c">SetVisibility</a> (const int nodeIndex, const bool visible)</td></tr>
@@ -134,6 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ace8e4e7e9ac41c7f3e9ebe1088bc79c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade93d62556522531bf10fa75a8ca07df" id="r_ade93d62556522531bf10fa75a8ca07df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade93d62556522531bf10fa75a8ca07df">Offset</a> ()</td></tr>
 <tr class="separator:ade93d62556522531bf10fa75a8ca07df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa1b2b37aa6195754f25809ad6984cc" id="r_a1aa1b2b37aa6195754f25809ad6984cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa1b2b37aa6195754f25809ad6984cc">PrevOffset</a> ()</td></tr>
+<tr class="separator:a1aa1b2b37aa6195754f25809ad6984cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1de466ad7ee8f74a98ab11b2168bfb28" id="r_a1de466ad7ee8f74a98ab11b2168bfb28"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1de466ad7ee8f74a98ab11b2168bfb28">GetNumNodes</a> () const</td></tr>
 <tr class="separator:a1de466ad7ee8f74a98ab11b2168bfb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fa3e25aa336bca03c985f2c39d70833" id="r_a1fa3e25aa336bca03c985f2c39d70833"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fa3e25aa336bca03c985f2c39d70833">GetNodeOrigin</a> (const int node, const <a class="el" href="a00047.html">kVec3</a> &amp;in offset)</td></tr>
@@ -169,12 +171,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a524eb897c36370ecc3eaa71af331ac01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3fffa986d574f6214e7eaa2f3a98835" id="r_ae3fffa986d574f6214e7eaa2f3a98835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3fffa986d574f6214e7eaa2f3a98835">ScaleOverride</a> (const int node, const <a class="el" href="a00047.html">kVec3</a> &amp;in scale)</td></tr>
 <tr class="separator:ae3fffa986d574f6214e7eaa2f3a98835"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1aa1b2b37aa6195754f25809ad6984cc" id="r_a1aa1b2b37aa6195754f25809ad6984cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa1b2b37aa6195754f25809ad6984cc">PrevOffset</a> ()</td></tr>
-<tr class="separator:a1aa1b2b37aa6195754f25809ad6984cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77655f5926e2487b2a06b27669e7e0d9" id="r_a77655f5926e2487b2a06b27669e7e0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77655f5926e2487b2a06b27669e7e0d9">SetRotationOffset</a> (const int nodeIndex, const float rads, const float x, const float y, const float z, const bool clearInterpolation=false)</td></tr>
-<tr class="separator:a77655f5926e2487b2a06b27669e7e0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3ad093ff064372a8c4ca35e31987043" id="r_ac3ad093ff064372a8c4ca35e31987043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3ad093ff064372a8c4ca35e31987043">SetRotationOffset</a> (const int nodeIndex, const <a class="el" href="a00051.html">kQuat</a> &amp;in rotation, const bool clearInterpolation=false)</td></tr>
-<tr class="separator:ac3ad093ff064372a8c4ca35e31987043"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -650,48 +646,12 @@ Public Member Functions</h2></td></tr>
 <div class="line">    nextFrame = frame + 1;</div>
 <div class="line">}</div>
 <div class="line">time += <a class="code hl_variable" href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a> * 7.5f;</div>
-<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02349">t1_scriptAPI.cpp:2349</a></div></div>
+<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02347">t1_scriptAPI.cpp:2347</a></div></div>
 </div><!-- fragment --> 
 </div>
 </div>
-<a id="a2b0be972770dd611634805e0dbfbabad" name="a2b0be972770dd611634805e0dbfbabad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b0be972770dd611634805e0dbfbabad">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kRenderModel::SetRotationOffset </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>rads</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a77655f5926e2487b2a06b27669e7e0d9" name="a77655f5926e2487b2a06b27669e7e0d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77655f5926e2487b2a06b27669e7e0d9">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[2/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77655f5926e2487b2a06b27669e7e0d9">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -731,29 +691,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a180d9913eb6db05c37664a7db15d697b" name="a180d9913eb6db05c37664a7db15d697b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a180d9913eb6db05c37664a7db15d697b">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kRenderModel::SetRotationOffset </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="a00051.html">kQuat</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac3ad093ff064372a8c4ca35e31987043" name="ac3ad093ff064372a8c4ca35e31987043"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3ad093ff064372a8c4ca35e31987043">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[4/4]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ad093ff064372a8c4ca35e31987043">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

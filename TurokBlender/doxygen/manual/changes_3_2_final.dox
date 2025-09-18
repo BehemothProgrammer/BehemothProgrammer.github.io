@@ -42,6 +42,29 @@ Time Trial Start: "sounds/shaders/tt_start.ksnd"
 Menu Navigation: "sounds/shaders/menu_item_nav.ksnd"
 Menu Select:"sounds/shaders/menu_item_select.ksnd"
 
+--------------------------------------------------
+ScriptObjectFx
+--------------------------------------------------
+Constructor:
+    kFx @self;
+    TurokFxTest(kFx @actor)
+    {
+        @self = actor;
+    }
+
+Required Functions:    
+    void OnTick(void)
+
+Optional Functions:
+    void OnRemoved(void)
+    void OnCollide(kCModel @pCModel)    // Called just before any of the OnImpact functions.
+    bool OnImpactWall(int impactType, const kVec3 &in normal)
+    bool OnImpactFloor(int impactType, const kVec3 &in normal)
+    bool OnImpactCeiling(int impactType, const kVec3 &in normal)
+    bool OnImpactObject(int impactType, int impactDmgType, kActor@ actor, const kVec3 &in normal)
+    void OnImpactWater(void)
+    void OnExpire(void)    
+
 ---------------------------
 New Trail Defs:
 ---------------------------

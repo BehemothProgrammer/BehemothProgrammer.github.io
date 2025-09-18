@@ -1,7 +1,5 @@
 var NAVTREEINDEX7 =
 {
-"globals_eval.html":[10,1,4],
-"globals_eval.html":[10,1,4,0],
 "globals_eval_b.html":[10,1,4,1],
 "globals_eval_c.html":[10,1,4,2],
 "globals_eval_d.html":[10,1,4,3],
