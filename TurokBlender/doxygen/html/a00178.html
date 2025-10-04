@@ -107,15 +107,7 @@ $(function(){initNavTree('a00178.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h3>Trail Defs Properties:</h3>
-<pre class="fragment">---------------------------
-New Trail Defs:
----------------------------
-    lifeTime        4.0
-    fadeOutTime     3.0
-    edgeLifeTime    1.0
-    scale           0.2
-    
-lifeTime        4.0 // Float. Must include! Lifetime of Trail. When lifetime is &lt; 0 will stop spawning edges. When all edges are gone then the trail is removed.
+<pre class="fragment">lifeTime        4.0 // Float. Must include! Lifetime of Trail. When lifetime is &lt; 0 will stop spawning edges. When all edges are gone then the trail is removed.
 fadeOutTime     3.0 // Float. Must include! Time when will begin fading out
 edgeLifeTime    1.0 // Float. Must include! Lifetime of each spawnd edge.
 edgeSpawnSpeed  4.0 // Float (default = 1.0). Scales how quickly the trail will add an edge. Use if you more smooth curves. (For trails attached to models, 1.0 is every tick at GameSpeed 1. For Fx 4.0 is every tick at GameSpeed 1)

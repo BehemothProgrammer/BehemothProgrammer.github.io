@@ -111,6 +111,7 @@ var a00159 =
     [ "OpenMenuBindingsMenu", "a00159.html#a57309a8d164f39463db98768c245c5b4", null ],
     [ "OpenOptionsMenu", "a00159.html#a6a621a367c1da231f1d57989b36966dd", null ],
     [ "OpenWeaponBindingsMenu", "a00159.html#a1cd58b353fbd6ab7a1886d0242a14417", null ],
+    [ "OverrideBloom", "a00159.html#a40c3a394fe2c6ed5d75010cca65e01f1", null ],
     [ "OverrideFogType", "a00159.html#a19b1b5bf2d783e13c3057b42682bf027", null ],
     [ "OverridePerPolyCollision", "a00159.html#a1c0ae1e46c4db13da9d2e5b3884b8bdd", null ],
     [ "OverrideRespawningEnemies", "a00159.html#a0618138add7159c26fe61d64c9930fdd", null ],

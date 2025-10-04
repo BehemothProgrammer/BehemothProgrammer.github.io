@@ -84,12 +84,12 @@ void OnEnterWater()
 ScriptObjectFx
 --------------------------------------------------
 kFx @self;
-TurokFxTest(kFx @actor)
+TurokFxTest(kFx @fx)
 {
-    @self = actor;
+    @self = fx;
 }
     
-void OnTick(void)
+void OnTick(void)       // Required
 void OnRemoved(void)
 void OnCollide(kCModel @pCModel)    // Called just before any of the OnImpact functions.
 bool OnImpactWall(int impactType, const kVec3 &in normal)
@@ -274,7 +274,7 @@ $spawnfx (FxID, {x y z}, time)                  // FxID (from defs/fileLookup.tx
 $spawnregenfx                                   // Spawns "fx/object_dissolve.kfx"
 \endverbatim
 
-\section actorfx <H3>Custom fonts ttf</H3>
+\section customfonts <H3>Custom fonts ttf</H3>
 \verbatim
 Custom ttf font examples:
 Add custom ttf fonts in "defs/fileLookup.txt". For each font string the left side of the Pipe(|) character is the path to the font and the right side is the font size.
@@ -355,8 +355,8 @@ sounds[1] = //number of sounds in this shader
         bUpdateNoEnvelope = 0       // NOT USED
         bLinkToEnvelope = 0         // NOT USED
         bFullVolume = 0             // always play sound at maximum volume with no positioning
-        delay = 0                   // delay time (in ticks) before will start playing the sound
-        priority = 80               // when 64 sounds are being played, higher priority sounds will stop lower priority sounds in order to play. If there are no sounds it can override then will not play the sound.
+        delay = 0                   // delay time (in ticks) before this sound will start playing
+        priority = 80               // when 128 sounds are being played, higher priority sounds will stop lower priority sounds in order to play. If there are no sounds that it can override then it will not play the sound.
         random = 1.000000           // if not 1: if playloop ticks bit 1 is set then won't play, OR if random value from 0.0 to 1.0 >= random then won't play.
         radioVolume = 2             // 0: dist = (GAME_SCALE * 200) * 0.75f,  volume * 0.8f
                                     // 1 or any other value: dist = (GAME_SCALE * 200),  volume * 1.0f
@@ -444,6 +444,7 @@ Float:
     player.overrideWeaponOnTopFix
     player.maxLives
     player.maxLifeforces
+    player.walkMaxSpeed
 Int:
     g_difficulty                // Use Game.GetDifficulty or Game.SetDifficulty instead.
     g_startmap                  // The map to start on when starting a new game
@@ -461,6 +462,7 @@ Int:
     ConfirmMenuResult           // Get: GameVariables.GetInt("ConfirmMenuResult", result);  Set: GameVariables.SetValue("ConfirmMenuResult", "0");
     g_loadedgame                // Check OnBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after Map Script 0 is called.
     OverrideRespawningEnemies   // Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result); 0=none, 1=Force Disable, 2=Force Enable
+    OverrideBloom               // Set: Game.OverrideBloom();  Get: GameVariables.GetInt("OverrideBloom", result); 0=none, 1=Force Disable, 2=Force Enable
 Bool:
     g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel.
     g_resetboss                 // is set to 1 when warping to the boss using the warp boss cheats. This sets them to their initial state. Is set back to 0 after OnPostBeginLevel is called.

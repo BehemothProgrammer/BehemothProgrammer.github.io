@@ -266,7 +266,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a1f84f650dad328b84a01b0964e8d104c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Casts to <a class="el" href="a00123.html">kAI</a>. returns null if isn't a <a class="el" href="a00123.html">kAI</a>.  <br /></td></tr>
 <tr class="separator:a1f84f650dad328b84a01b0964e8d104c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6239fd23cd5a688511b28e0375d95d70" id="r_a6239fd23cd5a688511b28e0375d95d70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00135.html">kFx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6239fd23cd5a688511b28e0375d95d70">SpawnProjectile</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in fxPath, const <a class="el" href="a00047.html">kVec3</a> &amp;in pos, const <a class="el" href="a00047.html">kVec3</a> &amp;in targetLocation, const float maxAngle)</td></tr>
-<tr class="memdesc:a6239fd23cd5a688511b28e0375d95d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first Fx spawned.  <br /></td></tr>
+<tr class="memdesc:a6239fd23cd5a688511b28e0375d95d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first Fx spawned. targetLocation.z gets added by GAME_SCALE * 3.0f.  <br /></td></tr>
 <tr class="separator:a6239fd23cd5a688511b28e0375d95d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf51ec615dd7a156a9c708bf0bdb28d4" id="r_aaf51ec615dd7a156a9c708bf0bdb28d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf51ec615dd7a156a9c708bf0bdb28d4">MeleeObject</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in damageType, const <a class="el" href="a00047.html">kVec3</a> &amp;in offset, const float radius)</td></tr>
 <tr class="separator:aaf51ec615dd7a156a9c708bf0bdb28d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3057,7 +3057,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the first Fx spawned. </p>
+<p>Returns the first Fx spawned. targetLocation.z gets added by GAME_SCALE * 3.0f. </p>
 
 </div>
 </div>

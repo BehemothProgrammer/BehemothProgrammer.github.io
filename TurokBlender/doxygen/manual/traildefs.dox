@@ -2,14 +2,6 @@
  
 <H3>Trail Defs Properties:</H3>
 \verbatim
----------------------------
-New Trail Defs:
----------------------------
-    lifeTime        4.0
-    fadeOutTime     3.0
-    edgeLifeTime    1.0
-    scale           0.2
-    
 lifeTime        4.0 // Float. Must include! Lifetime of Trail. When lifetime is < 0 will stop spawning edges. When all edges are gone then the trail is removed.
 fadeOutTime     3.0 // Float. Must include! Time when will begin fading out
 edgeLifeTime    1.0 // Float. Must include! Lifetime of each spawnd edge.

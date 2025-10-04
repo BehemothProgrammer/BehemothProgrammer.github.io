@@ -47,9 +47,9 @@ ScriptObjectFx
 --------------------------------------------------
 Constructor:
     kFx @self;
-    TurokFxTest(kFx @actor)
+    TurokFxTest(kFx @fx)
     {
-        @self = actor;
+        @self = fx;
     }
 
 Required Functions:    
@@ -171,6 +171,7 @@ Game:
     void OpenAudioMenu();
     bool EnemiesAlwaysDropItems();  ///< Returns the gameplay menu option value
     void OverrideRespawningEnemies(const int value);  ///< Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result);  0=none, 1=force disable, 2=force enable
+    void OverrideBloom(const int value);  ///< Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result);  0=none, 1=force disable, 2=force enable
     void PlayMusicID(const int musicID, const int fadeTimeMS = 500, const bool loop = true);
     bool MusicIsFading();
     bool IsRunningMapScript(const int scriptID);
@@ -305,6 +306,7 @@ enum EnumCheatFlags
         
 GameVariable Special Keys:
     int "OverrideRespawningEnemies"
+    int "OverrideBloom"
     float "player.headBobScale"
     float "player.turnBobScale"
     float "player.strafeBobScale"

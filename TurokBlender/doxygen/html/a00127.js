@@ -62,6 +62,7 @@ var a00127 =
     [ "SetSwimStrafeSpeed", "a00127.html#aaa2b5f623eaa12657b099aca429a966a", null ],
     [ "SetTurnBobScale", "a00127.html#ac699e55615f86e9fb5c4c60ed1310647", null ],
     [ "SetUnderwaterBobScale", "a00127.html#a2ae505a5412aff209b812626fd685ddf", null ],
+    [ "SetWalkMaxSpeed", "a00127.html#a5b6ad73a966fd8a7a28c0a9fec16eba0", null ],
     [ "StrafeBobScale", "a00127.html#a161dcd485431b5b4353550971fe003e5", null ],
     [ "SwimBackwardAccel", "a00127.html#a69e611185bbabdbf43016060256b172c", null ],
     [ "SwimBackwardSpeed", "a00127.html#ad683f9304ebaf010434ae9caed360226", null ],
@@ -72,5 +73,6 @@ var a00127 =
     [ "SwimStrafeSpeed", "a00127.html#aa5ba5dd552074ac34739e68b33d12a67", null ],
     [ "TurnBobScale", "a00127.html#a36dc0bb2656def5403b0ca3daa70091b", null ],
     [ "UnderwaterBobScale", "a00127.html#aeda3c1c8bba83bdfa039bb90c0a3f1a8", null ],
-    [ "ViewHeight", "a00127.html#af869a108f25c7e7b3d3774e2ba1cb7ad", null ]
+    [ "ViewHeight", "a00127.html#af869a108f25c7e7b3d3774e2ba1cb7ad", null ],
+    [ "WalkMaxSpeed", "a00127.html#a390a2299453ccbb78c18e759208c655d", null ]
 ];

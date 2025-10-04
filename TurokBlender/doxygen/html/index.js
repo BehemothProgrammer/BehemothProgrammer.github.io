@@ -7,6 +7,7 @@ var index =
     [ "Area Args", "index.html#areaargs", null ],
     [ "Enemy Attack Flags", "index.html#enemyattackflags", null ],
     [ "ActorFx Commands", "index.html#actorfx", null ],
+    [ "Custom fonts ttf", "index.html#customfonts", null ],
     [ "Species Mask (Unused)", "index.html#species", null ],
     [ "Spawn A Shoot Only Actor", "index.html#shootactor", null ],
     [ "kfont file", "index.html#kfont", null ],
