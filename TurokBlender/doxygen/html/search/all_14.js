@@ -7,6 +7,7 @@ var searchData=
   ['unscaledticks_4',['UnscaledTicks',['../a00147.html#a6670df63ebfbc757f074492c4f149444',1,'kPlayLoop']]],
   ['unused_20h3_5',['&lt;H3&gt;Species Mask (Unused)&lt;/H3&gt;',['../index.html#species',1,'']]],
   ['usealtammo_6',['UseAltAmmo',['../a00167.html#aa20f009a0d4b047853e41db1bfbb16ca',1,'kPlayer']]],
-  ['usenewexplosiveradiuscheck_7',['UseNewExplosiveRadiusCheck',['../a00111.html#a1a4a72c16b208b88f5463bb3d08ffc4b',1,'kActor']]],
-  ['userinterrupted_8',['UserInterrupted',['../a00139.html#ade82550066ac575b5b82dc279136514c',1,'kCamera']]]
+  ['usecustomnostretch_7',['UseCustomNoStretch',['../a00159.html#aeafa0986e2d15588ccaf1f3a891cf2ca',1,'kGame']]],
+  ['usenewexplosiveradiuscheck_8',['UseNewExplosiveRadiusCheck',['../a00111.html#a1a4a72c16b208b88f5463bb3d08ffc4b',1,'kActor']]],
+  ['userinterrupted_9',['UserInterrupted',['../a00139.html#ade82550066ac575b5b82dc279136514c',1,'kCamera']]]
 ];

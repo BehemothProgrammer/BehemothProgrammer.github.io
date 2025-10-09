@@ -12,6 +12,7 @@ var a00159 =
     [ "CallDelayedMapScript", "a00159.html#a8dcd761ffc230b1a2e676435f0ba8ea6", null ],
     [ "CallDelayedMapScript", "a00159.html#a5760cf9e8daadcc19606e45c88b3cc4c", null ],
     [ "CallMapScript", "a00159.html#acfbe4d471487d207165398aa60549be0", null ],
+    [ "CanUseCustomNoStretch", "a00159.html#a8a6f45a70ea2ecae4348aeb98b2ad8e3", null ],
     [ "CenterMouse", "a00159.html#a01cd93718419664ab8ce6d6cba070be1", null ],
     [ "ChangeMap", "a00159.html#ac6f6548a550ec91a86a7b764bfc6f64d", null ],
     [ "ClearDummyMenu", "a00159.html#ab66c07984860268eea02304cdb8a8b0a", null ],
@@ -46,6 +47,7 @@ var a00159 =
     [ "GetGameSpeed", "a00159.html#ab8aa16bf7f9f4a4f450711dbd6dbb45c", null ],
     [ "GetHubKeyInfo", "a00159.html#a275c0108126ac1398b2e40805ba11ff2", null ],
     [ "GetHUDOffset", "a00159.html#a23ec9a3d3b01a2b2e7632245f778e951", null ],
+    [ "GetHUDOffsetNoStretch", "a00159.html#ad12ae76192c48a298da8a8d1359a83f0", null ],
     [ "GetInputImagePath", "a00159.html#a4102887e49ef658b1dac8899799bd422", null ],
     [ "GetLocalizedText", "a00159.html#a04ff30c07676a6cb0bbdfed44fb1544b", null ],
     [ "GetMapIDFromName", "a00159.html#a66a9b5d2b254b9e9199b31810921f404", null ],
@@ -188,6 +190,7 @@ var a00159 =
     [ "StopTactile", "a00159.html#a01c72a97e647b3b2c0ba099a8f08f71b", null ],
     [ "StopTimer", "a00159.html#a362b76f2c55c961c8591c02c42192750", null ],
     [ "ToggleCursor", "a00159.html#ada2035590400791fbfdb47e2ba1ca807", null ],
+    [ "UseCustomNoStretch", "a00159.html#aeafa0986e2d15588ccaf1f3a891cf2ca", null ],
     [ "ViewZFar", "a00159.html#afc5cc2cceb58d463d948181f2b1281db", null ],
     [ "WeaponWheelPulse", "a00159.html#ad42de85bcd62ffabd792c6b4c29e8549", null ],
     [ "WorldToHUDPoint", "a00159.html#ae8a5c614e60043b1b01e3c1d7eb927a3", null ]

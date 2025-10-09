@@ -31,7 +31,7 @@ Fonts
 
 Materials .kmat files:
 Added new property "uv_scroll". It's not effected by gamespeed and only the following shaders work with it:
-    world, world_purdycolors, colorOverlay, colorEmissive, trail
+    world, world_purdycolors, colorOverlay, colorEmissive, worldSphereMap, worldSphereMapOverlay, trail
 Usage:
     uv_scroll "1.0 0.5"
     

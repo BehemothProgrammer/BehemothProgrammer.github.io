@@ -1697,6 +1697,9 @@ public:
     int Mouse_Y();
     const bool GetCvarValue(const kStr&in cvarName, kStr&out result);
     void MouseToHUD(float&out x, float&out y); ///< Returns the HUD position of the mouse
+    void MouseToHUDNoStretch(float&out x, float&out y); ///< Returns the HUD position of the mouse
+    void ScreenPointMouseToHUD(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
+    void ScreenPointMouseToHUDNoStretch(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
 };
 
 class kWorld
@@ -2011,6 +2014,7 @@ public:
     void ClearText();
     void GetTextSize(const kStr &in text, const int font, const float scale, float &out width, float &out height); ///< EnumGameFontType
     float GetHUDOffset(const bool user = false); ///< if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".
+    float GetHUDOffsetNoStretch(const bool user = false); ///< if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".
 
     /**
      * @brief add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
@@ -2154,6 +2158,8 @@ public:
     int @GetSectorResult(const uint index); ///< Use after calling Game.GetSectorInBounds. Do not use at any other point!
     void NextSpawnFxSetResults(); ///< On the next call to SpawnFx or any other function that calls SpawnFx (such as SpawnProjectile and FireProjectile), all the Fx that were spawned will be stored in Game.GetFxResult. Do not make nested calls to this!
     kStr GetFxFile(const int fxID); ///< Returns the file path to the Fx by ID value as defined in defs/fileLookup.txt
+    bool &UseCustomNoStretch(); ///< Set to true to use the non stretch Hud fix for Custom Text and Pics
+    bool CanUseCustomNoStretch(); ///< Returns true if aspect ratio is 4:3 or bigger width
 };
 
 /**

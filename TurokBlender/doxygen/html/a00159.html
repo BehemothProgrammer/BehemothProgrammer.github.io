@@ -309,6 +309,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23ec9a3d3b01a2b2e7632245f778e951" id="r_a23ec9a3d3b01a2b2e7632245f778e951"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23ec9a3d3b01a2b2e7632245f778e951">GetHUDOffset</a> (const bool user=false)</td></tr>
 <tr class="memdesc:a23ec9a3d3b01a2b2e7632245f778e951"><td class="mdescLeft">&#160;</td><td class="mdescRight">if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".  <br /></td></tr>
 <tr class="separator:a23ec9a3d3b01a2b2e7632245f778e951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad12ae76192c48a298da8a8d1359a83f0" id="r_ad12ae76192c48a298da8a8d1359a83f0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad12ae76192c48a298da8a8d1359a83f0">GetHUDOffsetNoStretch</a> (const bool user=false)</td></tr>
+<tr class="memdesc:ad12ae76192c48a298da8a8d1359a83f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position".  <br /></td></tr>
+<tr class="separator:ad12ae76192c48a298da8a8d1359a83f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4dcfc882fb1c54478146d5981583b99" id="r_aa4dcfc882fb1c54478146d5981583b99"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4dcfc882fb1c54478146d5981583b99">AddPic</a> (const int id, const <a class="el" href="a00039.html">kStr</a> &amp;in path, const float x, const float y, const float w, const float h, const int edge=0, const float s1=0.0f, const float t1=0.0f, const float s2=1.0f, const float t2=1.0f, const int r=255, const int g=255, const int b=255, const int a=255)</td></tr>
 <tr class="memdesc:aa4dcfc882fb1c54478146d5981583b99"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom image to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables.  <br /></td></tr>
 <tr class="separator:aa4dcfc882fb1c54478146d5981583b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -586,10 +589,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a108bcb989265b0f450a3579d40fbad48" id="r_a108bcb989265b0f450a3579d40fbad48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a108bcb989265b0f450a3579d40fbad48">GetFxFile</a> (const int fxID)</td></tr>
 <tr class="memdesc:a108bcb989265b0f450a3579d40fbad48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the file path to the Fx by ID value as defined in defs/fileLookup.txt.  <br /></td></tr>
 <tr class="separator:a108bcb989265b0f450a3579d40fbad48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeafa0986e2d15588ccaf1f3a891cf2ca" id="r_aeafa0986e2d15588ccaf1f3a891cf2ca"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeafa0986e2d15588ccaf1f3a891cf2ca">UseCustomNoStretch</a> ()</td></tr>
+<tr class="memdesc:aeafa0986e2d15588ccaf1f3a891cf2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to true to use the non stretch Hud fix for Custom Text and Pics.  <br /></td></tr>
+<tr class="separator:aeafa0986e2d15588ccaf1f3a891cf2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6f45a70ea2ecae4348aeb98b2ad8e3" id="r_a8a6f45a70ea2ecae4348aeb98b2ad8e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6f45a70ea2ecae4348aeb98b2ad8e3">CanUseCustomNoStretch</a> ()</td></tr>
+<tr class="memdesc:a8a6f45a70ea2ecae4348aeb98b2ad8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if aspect ratio is 4:3 or bigger width.  <br /></td></tr>
+<tr class="separator:a8a6f45a70ea2ecae4348aeb98b2ad8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01857">1857</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01860">1860</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1004,6 +1013,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a6f45a70ea2ecae4348aeb98b2ad8e3" name="a8a6f45a70ea2ecae4348aeb98b2ad8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6f45a70ea2ecae4348aeb98b2ad8e3">&#9670;&#160;</a></span>CanUseCustomNoStretch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::CanUseCustomNoStretch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if aspect ratio is 4:3 or bigger width. </p>
+
+</div>
+</div>
 <a id="a01cd93718419664ab8ce6d6cba070be1" name="a01cd93718419664ab8ce6d6cba070be1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01cd93718419664ab8ce6d6cba070be1">&#9670;&#160;</a></span>CenterMouse()</h2>
 
@@ -1253,9 +1281,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02354">t1_scriptAPI.cpp:2354</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02357">t1_scriptAPI.cpp:2357</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02355">t1_scriptAPI.cpp:2355</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02360">t1_scriptAPI.cpp:2360</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02363">t1_scriptAPI.cpp:2363</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02361">t1_scriptAPI.cpp:2361</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -1738,6 +1766,25 @@ Public Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">float kGame::GetHUDOffset </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>user</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if user is false will return the width to the edge of the screen (negative value). if true will return the width from the menu option "HUD Position". </p>
+
+</div>
+</div>
+<a id="ad12ae76192c48a298da8a8d1359a83f0" name="ad12ae76192c48a298da8a8d1359a83f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad12ae76192c48a298da8a8d1359a83f0">&#9670;&#160;</a></span>GetHUDOffsetNoStretch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float kGame::GetHUDOffsetNoStretch </td>
           <td>(</td>
           <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>user</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
           <td></td>
@@ -4753,6 +4800,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeafa0986e2d15588ccaf1f3a891cf2ca" name="aeafa0986e2d15588ccaf1f3a891cf2ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeafa0986e2d15588ccaf1f3a891cf2ca">&#9670;&#160;</a></span>UseCustomNoStretch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kGame::UseCustomNoStretch </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set to true to use the non stretch Hud fix for Custom Text and Pics. </p>
 
 </div>
 </div>
