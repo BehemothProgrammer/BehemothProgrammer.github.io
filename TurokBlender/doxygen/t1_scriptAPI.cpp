@@ -481,15 +481,16 @@ enum EnumAreaFlags
 
 enum EnumSectorPlatformFlags
 {
-    SPF_FLOORVERTS          = (1 << 0),   // Changes sectors verts origin
-    SPF_CEILINGVERTS        = (1 << 1),   // Changes sectors verts heights
-    SPF_SAMEAREA            = (1 << 2),   // Effects sectors only with the same area as the starting sector
-    SPF_MOVEPLAYERINAIR     = (1 << 3),   // Player moves with the sectors even in the air
-    SPF_USEMOVETOFORPLAYER  = (1 << 4),   // Uses the MoveToPosition function to set the Players origin. else sets origin.
-    SPF_USEMOVETOFORAI      = (1 << 5),   // Uses the MoveToPosition function to set the AI origin. else sets origin.
-    SPF_USEMOVETOFOROTHER   = (1 << 6),   // Uses the MoveToPosition function to set other actors origin. else sets origin.
+    SPF_FLOORVERTS          = (1 << 0),   ///< Changes sectors verts origin
+    SPF_CEILINGVERTS        = (1 << 1),   ///< Changes sectors verts heights
+    SPF_SAMEAREA            = (1 << 2),   ///< Effects sectors only with the same area as the starting sector
+    SPF_MOVEPLAYERINAIR     = (1 << 3),   ///< Player moves with the sectors even in the air
+    SPF_USEMOVETOFORPLAYER  = (1 << 4),   ///< Uses the MoveToPosition function to set the Players origin. else sets origin.
+    SPF_USEMOVETOFORAI      = (1 << 5),   ///< Uses the MoveToPosition function to set the AI origin. else sets origin.
+    SPF_USEMOVETOFOROTHER   = (1 << 6),   ///< Uses the MoveToPosition function to set other actors origin. else sets origin.
+    SPF_MOVEOTHERACTORS     = (1 << 7),   ///< Moves other actors on the sectors that are not the player or AI.
 
-    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER
+    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEOTHERACTORS
 };
 
 namespace kexVibrationPlayer
@@ -1150,7 +1151,8 @@ public:
      */
     void InteractActorsAtPosition(const kVec3&in pos, const kStr&in callbackFunc, const float arg1 = 0, const float arg2 = 0, const float arg3 = 0, const float arg4 = 0);
     kScriptObject@ ScriptObject();
-    void MoveToPosition(const float x, const float y); ///< Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
+    const bool MoveToPosition(const float x, const float y); ///< Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
+    const bool MoveToPosition(const float x, const float y, uint clipFlags); ///< EnumClipFlags to use. Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
     bool RandomDecision(const int randomBit) const; ///< randomBit should be >= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.
     void SetPosition(const kVec3&in pos, const bool clearInterpolation = true); ///< best way to set an actors position (if you don't know the sector), will also set the sector and optionally clear interpolation
 
@@ -1457,7 +1459,8 @@ public:
     int GetWaterLevel() const; ///< EnumWaterLevel
     float DistanceToPoint(const kVec3 &in point) const; ///< calls DistanceToPoint(x,y,z)
     float DistanceToPoint(const float x, const float y, const float z) const; ///< Fx point is in the center
-    void MoveToPosition(const float x, const float y); ///< Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
+    const bool MoveToPosition(const float x, const float y); ///< Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
+    const bool MoveToPosition(const float x, const float y, uint clipFlags); ///< EnumClipFlags to use. Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
     void SetPosition(const kVec3 &in pos, const bool clearInterpolation = true); ///< best way to set an Fx position without knowing the sector, will also find/set the sector and optionally clear interpolation
     const float GetCeilingHeight() const; ///< calculates the ceiling height from the Fx sector and origin. Returns 0 if not in a sector.
     const float GetFloorHeight() const; ///< calculates the floor height from the Fx sector and origin. Returns 0 if not in a sector.

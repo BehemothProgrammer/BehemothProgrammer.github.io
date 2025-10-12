@@ -297,9 +297,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a896d0a1e1b88d6ee892fdb6997ec7105"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75cc2d13c7280d85b5b5e69097aee84a" id="r_a75cc2d13c7280d85b5b5e69097aee84a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00075.html">kScriptObject</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75cc2d13c7280d85b5b5e69097aee84a">ScriptObject</a> ()</td></tr>
 <tr class="separator:a75cc2d13c7280d85b5b5e69097aee84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73f149d13b4aca5508f7b1752e2bf1f3" id="r_a73f149d13b4aca5508f7b1752e2bf1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73f149d13b4aca5508f7b1752e2bf1f3">MoveToPosition</a> (const float x, const float y)</td></tr>
-<tr class="memdesc:a73f149d13b4aca5508f7b1752e2bf1f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.  <br /></td></tr>
-<tr class="separator:a73f149d13b4aca5508f7b1752e2bf1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64750075819ca466a3b238a836b2aab" id="r_ab64750075819ca466a3b238a836b2aab"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab64750075819ca466a3b238a836b2aab">MoveToPosition</a> (const float x, const float y)</td></tr>
+<tr class="memdesc:ab64750075819ca466a3b238a836b2aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.  <br /></td></tr>
+<tr class="separator:ab64750075819ca466a3b238a836b2aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9be844ecfe929d9d216de40670ef16b5" id="r_a9be844ecfe929d9d216de40670ef16b5"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9be844ecfe929d9d216de40670ef16b5">MoveToPosition</a> (const float x, const float y, uint clipFlags)</td></tr>
+<tr class="memdesc:a9be844ecfe929d9d216de40670ef16b5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a3f77cb5ac956672e1e1471570357030c">EnumClipFlags</a> to use. Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.  <br /></td></tr>
+<tr class="separator:a9be844ecfe929d9d216de40670ef16b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7ec8c67a5ea963ad087c485467e8eb4" id="r_ad7ec8c67a5ea963ad087c485467e8eb4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7ec8c67a5ea963ad087c485467e8eb4">RandomDecision</a> (const int randomBit) const</td></tr>
 <tr class="memdesc:ad7ec8c67a5ea963ad087c485467e8eb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">randomBit should be &gt;= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.  <br /></td></tr>
 <tr class="separator:ad7ec8c67a5ea963ad087c485467e8eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -499,7 +502,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base type used by all actors. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01073">1073</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01074">1074</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae3d55ba41a6198b2a54ed5cbe79a9969" name="ae3d55ba41a6198b2a54ed5cbe79a9969"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3d55ba41a6198b2a54ed5cbe79a9969">&#9670;&#160;</a></span>AddCustomRef()</h2>
@@ -1958,14 +1961,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a73f149d13b4aca5508f7b1752e2bf1f3" name="a73f149d13b4aca5508f7b1752e2bf1f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73f149d13b4aca5508f7b1752e2bf1f3">&#9670;&#160;</a></span>MoveToPosition()</h2>
+<a id="ab64750075819ca466a3b238a836b2aab" name="ab64750075819ca466a3b238a836b2aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64750075819ca466a3b238a836b2aab">&#9670;&#160;</a></span>MoveToPosition() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void kActor::MoveToPosition </td>
+          <td class="memname">const bool kActor::MoveToPosition </td>
           <td>(</td>
           <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
         </tr>
@@ -1977,7 +1980,35 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests. </p>
+<p>Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests. </p>
+
+</div>
+</div>
+<a id="a9be844ecfe929d9d216de40670ef16b5" name="a9be844ecfe929d9d216de40670ef16b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9be844ecfe929d9d216de40670ef16b5">&#9670;&#160;</a></span>MoveToPosition() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kActor::MoveToPosition </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>clipFlags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a3f77cb5ac956672e1e1471570357030c">EnumClipFlags</a> to use. Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests. </p>
 
 </div>
 </div>
