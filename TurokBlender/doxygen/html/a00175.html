@@ -317,7 +317,6 @@ kPuppet:
     void SetStrafeBobScale(const float scale);
     void SetUnderwaterBobScale(const float scale);
     void SetJumpBobScale(const float scale);
-    void SetOverrideWeaponOnTopFix(const int value);    ///&lt; 0=none(default), 1=Force disable fix, 2=Force enable fix
     void SetMaxLives(const int value);  ///&lt; Max lives from gaining Lifeforces
     void SetMaxLifeforces(const int value); ///&lt; Amount of Lifeforces needed to get a life
     const float HeadBobScale() const;
@@ -325,7 +324,6 @@ kPuppet:
     const float StrafeBobScale() const;
     const float UnderwaterBobScale() const;
     const float JumpBobScale() const;
-    const int OverrideWeaponOnTopFix() const;
     const int GetMaxLives() const;
     const int GetMaxLifeforces() const;
     
@@ -362,6 +360,7 @@ World:
     void SetAreaCullBits(const int area, const int bits);   ///&lt; if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255)
     const int GetSectorDrawOrder(const int sectorIndex) const;      ///&lt; lowest draw order (0) draws the sectors on the automap last
     void SetSectorDrawOrder(const int sectorIndex, const int drawOrder);    ///&lt; lowest draw order (0) draws the sectors on the automap last
+    void MoveSectorPlatform(const int sectorIndex, const kVec3 &amp;in moveDelta, const uint flags = SPR_DEFAULT); ///&lt; EnumSectorPlatformFlags. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors
 
 kAI:
     int &amp;Regenerate();  ///&lt; get/set current number of times the enemy will regenerate value. Regenerate is set right after OnBeginLevel is called and is set to a random value from 0 to the mapActors maxRegenerations value or the actors def ai.maxRegenerations value(for non map actors).
@@ -417,9 +416,8 @@ GameVariable Special Keys:
     float "player.strafeBobScale"
     float "player.underwaterBobScale"
     float "player.jumpBobScale"
-    float "player.overrideWeaponOnTopFix"
-    float "player.maxLives"
-    float "player.maxLifeforces"
+    int "player.maxLives"
+    int "player.maxLifeforces"
     bool "NewExplosiveRadiusCheck" ///&lt; (default False) Set to true to enable explosive damage checks from radius to actor cylinder(more accurate) instead of radius to actors center point. For all actors in the game.
 
 Fx New Params:
@@ -667,6 +665,19 @@ kFx (New Class for Fx):
     kStr InfoAnimName() const; ///&lt; Custom use
     kStr InfoUserString() const; ///&lt; Custom use
     int InfoUserID() const; ///&lt; Custom use
+    
+enum EnumSectorPlatformFlags
+{
+    SPF_FLOORVERTS          = (1 &lt;&lt; 0),   // Changes sectors verts origin
+    SPF_CEILINGVERTS        = (1 &lt;&lt; 1),   // Changes sectors verts heights
+    SPF_SAMEAREA            = (1 &lt;&lt; 2),   // Effects sectors only with the same area as the starting sector
+    SPF_MOVEPLAYERINAIR     = (1 &lt;&lt; 3),   // Player moves with the sectors even in the air
+    SPF_USEMOVETOFORPLAYER  = (1 &lt;&lt; 4),   // Uses the MoveToPosition function to set the Players origin. else sets origin.
+    SPF_USEMOVETOFORAI      = (1 &lt;&lt; 5),   // Uses the MoveToPosition function to set the AI origin. else sets origin.
+    SPF_USEMOVETOFOROTHER   = (1 &lt;&lt; 6),   // Uses the MoveToPosition function to set other actors origin. else sets origin.
+
+    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER
+};
 </pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

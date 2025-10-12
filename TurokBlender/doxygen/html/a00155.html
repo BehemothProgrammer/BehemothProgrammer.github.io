@@ -279,10 +279,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aca3dc90d36bb6766265e95a10cf7d454" id="r_aca3dc90d36bb6766265e95a10cf7d454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3dc90d36bb6766265e95a10cf7d454">SetSectorDrawOrder</a> (const int sectorIndex, const int drawOrder)</td></tr>
 <tr class="memdesc:aca3dc90d36bb6766265e95a10cf7d454"><td class="mdescLeft">&#160;</td><td class="mdescRight">lowest draw order (0) draws the sectors on the automap last  <br /></td></tr>
 <tr class="separator:aca3dc90d36bb6766265e95a10cf7d454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9acd5242b1c336444ad2dbc1fda499d" id="r_ae9acd5242b1c336444ad2dbc1fda499d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9acd5242b1c336444ad2dbc1fda499d">MoveSectorPlatform</a> (const int sectorIndex, const <a class="el" href="a00047.html">kVec3</a> &amp;in moveDelta, const uint flags=SPR_DEFAULT)</td></tr>
+<tr class="memdesc:ae9acd5242b1c336444ad2dbc1fda499d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a>. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors.  <br /></td></tr>
+<tr class="separator:ae9acd5242b1c336444ad2dbc1fda499d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01705">1705</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01717">1717</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a46796d92aa0b83b41d875719b9a2447f" name="a46796d92aa0b83b41d875719b9a2447f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46796d92aa0b83b41d875719b9a2447f">&#9670;&#160;</a></span>ChangeAreaArg()</h2>
@@ -1325,6 +1328,34 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9acd5242b1c336444ad2dbc1fda499d" name="ae9acd5242b1c336444ad2dbc1fda499d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9acd5242b1c336444ad2dbc1fda499d">&#9670;&#160;</a></span>MoveSectorPlatform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::MoveSectorPlatform </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>moveDelta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">SPR_DEFAULT</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a>. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors. </p>
 
 </div>
 </div>

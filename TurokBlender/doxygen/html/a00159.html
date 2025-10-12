@@ -386,8 +386,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a88f87aa40c20608bb442c1bae5036757"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83267655e2f2497bbfcf414a5820f584" id="r_a83267655e2f2497bbfcf414a5820f584"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a83267655e2f2497bbfcf414a5820f584">ShakeIntensity</a> ()</td></tr>
 <tr class="separator:a83267655e2f2497bbfcf414a5820f584"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8a5c614e60043b1b01e3c1d7eb927a3" id="r_ae8a5c614e60043b1b01e3c1d7eb927a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8a5c614e60043b1b01e3c1d7eb927a3">WorldToHUDPoint</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin)</td></tr>
-<tr class="separator:ae8a5c614e60043b1b01e3c1d7eb927a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac09ed4d3331f89dd39e6fbab3611cc84" id="r_ac09ed4d3331f89dd39e6fbab3611cc84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac09ed4d3331f89dd39e6fbab3611cc84">WorldToScreenPoint</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin)</td></tr>
+<tr class="separator:ac09ed4d3331f89dd39e6fbab3611cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056a8e6e12353c8b78daecee07c31981" id="r_a056a8e6e12353c8b78daecee07c31981"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a056a8e6e12353c8b78daecee07c31981">SphereInView</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin, const float radius)</td></tr>
 <tr class="separator:a056a8e6e12353c8b78daecee07c31981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3025436d725aadb0065522bac0e22d8f" id="r_a3025436d725aadb0065522bac0e22d8f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3025436d725aadb0065522bac0e22d8f">BoxInView</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in min, const <a class="el" href="a00047.html">kVec3</a> &amp;in max)</td></tr>
@@ -595,10 +595,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a6f45a70ea2ecae4348aeb98b2ad8e3" id="r_a8a6f45a70ea2ecae4348aeb98b2ad8e3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6f45a70ea2ecae4348aeb98b2ad8e3">CanUseCustomNoStretch</a> ()</td></tr>
 <tr class="memdesc:a8a6f45a70ea2ecae4348aeb98b2ad8e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if aspect ratio is 4:3 or bigger width.  <br /></td></tr>
 <tr class="separator:a8a6f45a70ea2ecae4348aeb98b2ad8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172c7735d49997720698f917b67293e0" id="r_a172c7735d49997720698f917b67293e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a172c7735d49997720698f917b67293e0">ScreenPointToHUD</a> (float sx, float sy, float &amp;out x, float &amp;out y)</td></tr>
+<tr class="memdesc:a172c7735d49997720698f917b67293e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HUD position of the screen point.  <br /></td></tr>
+<tr class="separator:a172c7735d49997720698f917b67293e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3999faa3ff84aec82893510434442a" id="r_a2b3999faa3ff84aec82893510434442a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b3999faa3ff84aec82893510434442a">ScreenPointToHUDNoStretch</a> (float sx, float sy, float &amp;out x, float &amp;out y)</td></tr>
+<tr class="memdesc:a2b3999faa3ff84aec82893510434442a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HUD position of the screen point.  <br /></td></tr>
+<tr class="separator:a2b3999faa3ff84aec82893510434442a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01860">1860</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01873">1873</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1281,9 +1287,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02360">t1_scriptAPI.cpp:2360</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02363">t1_scriptAPI.cpp:2363</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02361">t1_scriptAPI.cpp:2361</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02375">t1_scriptAPI.cpp:2375</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02378">t1_scriptAPI.cpp:2378</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02376">t1_scriptAPI.cpp:2376</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -3544,6 +3550,72 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a172c7735d49997720698f917b67293e0" name="a172c7735d49997720698f917b67293e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172c7735d49997720698f917b67293e0">&#9670;&#160;</a></span>ScreenPointToHUD()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::ScreenPointToHUD </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;out</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;out</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the HUD position of the screen point. </p>
+
+</div>
+</div>
+<a id="a2b3999faa3ff84aec82893510434442a" name="a2b3999faa3ff84aec82893510434442a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3999faa3ff84aec82893510434442a">&#9670;&#160;</a></span>ScreenPointToHUDNoStretch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::ScreenPointToHUDNoStretch </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sx</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sy</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;out</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;out</td>          <td class="paramname"><span class="paramname"><em>y</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the HUD position of the screen point. </p>
+
+</div>
+</div>
 <a id="add615686496c6a413bc8e0d239e365b4" name="add615686496c6a413bc8e0d239e365b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add615686496c6a413bc8e0d239e365b4">&#9670;&#160;</a></span>SetArmorFlash()</h2>
 
@@ -4858,14 +4930,14 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae8a5c614e60043b1b01e3c1d7eb927a3" name="ae8a5c614e60043b1b01e3c1d7eb927a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae8a5c614e60043b1b01e3c1d7eb927a3">&#9670;&#160;</a></span>WorldToHUDPoint()</h2>
+<a id="ac09ed4d3331f89dd39e6fbab3611cc84" name="ac09ed4d3331f89dd39e6fbab3611cc84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac09ed4d3331f89dd39e6fbab3611cc84">&#9670;&#160;</a></span>WorldToScreenPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00047.html">kVec3</a> kGame::WorldToHUDPoint </td>
+          <td class="memname"><a class="el" href="a00047.html">kVec3</a> kGame::WorldToScreenPoint </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>origin</em></span></td><td>)</td>
           <td></td>

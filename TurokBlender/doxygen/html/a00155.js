@@ -45,6 +45,7 @@ var a00155 =
     [ "GetSectorLinks", "a00155.html#a90c2341a91b5afc5112c05a36aee91bf", null ],
     [ "GetSectorNumBridges", "a00155.html#ada498cb1764ca50d9f65459ba9c1a1f1", null ],
     [ "GetSkyMaterial", "a00155.html#a90bc2794661ad0eb2e09847dac432067", null ],
+    [ "MoveSectorPlatform", "a00155.html#ae9acd5242b1c336444ad2dbc1fda499d", null ],
     [ "OverrideFogColor", "a00155.html#a654d22e3831f752328019fd8920ae252", null ],
     [ "OverrideSkyMaterial", "a00155.html#acca5ec836d0b5fee212f52a3bb2aa435", null ],
     [ "OverrideWaterFogColor", "a00155.html#a3e64f6f8deed81297d0aae9909c18975", null ],

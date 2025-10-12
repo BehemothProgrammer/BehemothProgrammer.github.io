@@ -434,6 +434,16 @@ var a00002 =
       [ "PS_FALLDEATH", "a00002.html#aa1dd9725a858cb6329663cec055c6307a6dbb7094ade57982e6c3f7ea9f24e5e0", null ],
       [ "PS_ANTIGRAVITY", "a00002.html#aa1dd9725a858cb6329663cec055c6307af26cc7be510c6103c3103bb65d226eb9", null ]
     ] ],
+    [ "EnumSectorPlatformFlags", "a00002.html#a5cb75a094a8e11122d301f84b419da46", [
+      [ "SPF_FLOORVERTS", "a00002.html#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7", null ],
+      [ "SPF_CEILINGVERTS", "a00002.html#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a", null ],
+      [ "SPF_SAMEAREA", "a00002.html#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d", null ],
+      [ "SPF_MOVEPLAYERINAIR", "a00002.html#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6", null ],
+      [ "SPF_USEMOVETOFORPLAYER", "a00002.html#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466", null ],
+      [ "SPF_USEMOVETOFORAI", "a00002.html#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9", null ],
+      [ "SPF_USEMOVETOFOROTHER", "a00002.html#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394", null ],
+      [ "SPF_DEFAULT", "a00002.html#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb", null ]
+    ] ],
     [ "EnumWaterLevel", "a00002.html#a5e22505f217a29863c13ead904bfad2f", [
       [ "WLT_INVALID", "a00002.html#a5e22505f217a29863c13ead904bfad2fa133366296e457a83980f0397bfa0e9c9", null ],
       [ "WLT_OVER", "a00002.html#a5e22505f217a29863c13ead904bfad2faab0fb040d09f5a62d23e08a2139a36f3", null ],

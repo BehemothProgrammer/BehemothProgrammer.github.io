@@ -759,6 +759,19 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a9662bed8b3938d6cc49499ba300a41eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cb75a094a8e11122d301f84b419da46" id="r_a5cb75a094a8e11122d301f84b419da46"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a> { <br />
+&#160;&#160;<a class="el" href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a> = (1 &lt;&lt; 0)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a">SPF_CEILINGVERTS</a> = (1 &lt;&lt; 1)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d">SPF_SAMEAREA</a> = (1 &lt;&lt; 2)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a> = (1 &lt;&lt; 3)
+, <br />
+&#160;&#160;<a class="el" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a> = (1 &lt;&lt; 4)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9">SPF_USEMOVETOFORAI</a> = (1 &lt;&lt; 5)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394">SPF_USEMOVETOFOROTHER</a> = (1 &lt;&lt; 6)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a> = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER
+<br />
+ }</td></tr>
+<tr class="separator:a5cb75a094a8e11122d301f84b419da46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4429a2ff145440621e9724313830922" id="r_ab4429a2ff145440621e9724313830922"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922">kexVibrationPlayer::channel_e</a> { <a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922afd68d8b7a5892f3b0cb85bbfcffa4fdd">kexVibrationPlayer::CHANNEL_WEAPON</a> = 0
 , <a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922a18c0ed03c058b494aafb031d1be6b92f">kexVibrationPlayer::CHANNEL_BODY</a> = 1
 , <a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922a7c3773e6646b3f59001bdb8c175cd1dc">kexVibrationPlayer::CHANNEL_DAMAGE</a> = 2
@@ -2716,6 +2729,51 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a5cb75a094a8e11122d301f84b419da46" name="a5cb75a094a8e11122d301f84b419da46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cb75a094a8e11122d301f84b419da46">&#9670;&#160;</a></span>EnumSectorPlatformFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7" name="a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7"></a>SPF_FLOORVERTS&#160;</td><td class="fieldinit">(1 &lt;&lt; 0)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a" name="a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a"></a>SPF_CEILINGVERTS&#160;</td><td class="fieldinit">(1 &lt;&lt; 1)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d" name="a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d"></a>SPF_SAMEAREA&#160;</td><td class="fieldinit">(1 &lt;&lt; 2)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6" name="a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6"></a>SPF_MOVEPLAYERINAIR&#160;</td><td class="fieldinit">(1 &lt;&lt; 3)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466" name="a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466"></a>SPF_USEMOVETOFORPLAYER&#160;</td><td class="fieldinit">(1 &lt;&lt; 4)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9" name="a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9"></a>SPF_USEMOVETOFORAI&#160;</td><td class="fieldinit">(1 &lt;&lt; 5)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394" name="a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394"></a>SPF_USEMOVETOFOROTHER&#160;</td><td class="fieldinit">(1 &lt;&lt; 6)&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb" name="a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb"></a>SPF_DEFAULT&#160;</td><td class="fieldinit">SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00482">482</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  483</span>{</div>
+<div class="line"><span class="lineno">  484</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a>          = (1 &lt;&lt; 0),   <span class="comment">// Changes sectors verts origin</span></div>
+<div class="line"><span class="lineno">  485</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a">SPF_CEILINGVERTS</a>        = (1 &lt;&lt; 1),   <span class="comment">// Changes sectors verts heights</span></div>
+<div class="line"><span class="lineno">  486</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d">SPF_SAMEAREA</a>            = (1 &lt;&lt; 2),   <span class="comment">// Effects sectors only with the same area as the starting sector</span></div>
+<div class="line"><span class="lineno">  487</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a>     = (1 &lt;&lt; 3),   <span class="comment">// Player moves with the sectors even in the air</span></div>
+<div class="line"><span class="lineno">  488</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a>  = (1 &lt;&lt; 4),   <span class="comment">// Uses the MoveToPosition function to set the Players origin. else sets origin.</span></div>
+<div class="line"><span class="lineno">  489</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9">SPF_USEMOVETOFORAI</a>      = (1 &lt;&lt; 5),   <span class="comment">// Uses the MoveToPosition function to set the AI origin. else sets origin.</span></div>
+<div class="line"><span class="lineno">  490</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394">SPF_USEMOVETOFOROTHER</a>   = (1 &lt;&lt; 6),   <span class="comment">// Uses the MoveToPosition function to set other actors origin. else sets origin.</span></div>
+<div class="line"><span class="lineno">  491</span> </div>
+<div class="line"><span class="lineno">  492</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a> = <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a">SPF_CEILINGVERTS</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a></div>
+<div class="line"><span class="lineno">  493</span>};</div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a></div><div class="ttdeci">@ SPF_FLOORVERTS</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00484">t1_scriptAPI.cpp:484</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a></div><div class="ttdeci">@ SPF_USEMOVETOFORPLAYER</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00488">t1_scriptAPI.cpp:488</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d">SPF_SAMEAREA</a></div><div class="ttdeci">@ SPF_SAMEAREA</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00486">t1_scriptAPI.cpp:486</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a></div><div class="ttdeci">@ SPF_DEFAULT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00492">t1_scriptAPI.cpp:492</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9">SPF_USEMOVETOFORAI</a></div><div class="ttdeci">@ SPF_USEMOVETOFORAI</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00489">t1_scriptAPI.cpp:489</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a></div><div class="ttdeci">@ SPF_MOVEPLAYERINAIR</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00487">t1_scriptAPI.cpp:487</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394">SPF_USEMOVETOFOROTHER</a></div><div class="ttdeci">@ SPF_USEMOVETOFOROTHER</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00490">t1_scriptAPI.cpp:490</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a">SPF_CEILINGVERTS</a></div><div class="ttdeci">@ SPF_CEILINGVERTS</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00485">t1_scriptAPI.cpp:485</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a5e22505f217a29863c13ead904bfad2f" name="a5e22505f217a29863c13ead904bfad2f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e22505f217a29863c13ead904bfad2f">&#9670;&#160;</a></span>EnumWaterLevel</h2>
 
@@ -3083,11 +3141,11 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><a class="code hl_function" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a>();</div>
 <div class="ttc" id="aa00002_html_a036fa599be44d9300e7e68836bc84cac"><div class="ttname"><a href="#a036fa599be44d9300e7e68836bc84cac">kStrSplit</a></div><div class="ttdeci">void kStrSplit(const kStr &amp;in s, const kStr &amp;in sep)</div></div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02360">t1_scriptAPI.cpp:2360</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02375">t1_scriptAPI.cpp:2375</a></div></div>
 <div class="ttc" id="aa00002_html_a62ecb3a8742780dd7a60227b58bb6425"><div class="ttname"><a href="#a62ecb3a8742780dd7a60227b58bb6425">kStrSplitLength</a></div><div class="ttdeci">uint kStrSplitLength()</div><div class="ttdoc">returns the amount of strings that were split</div></div>
 <div class="ttc" id="aa00002_html_ab3734771fb77f9d7b55707dbc0e6f473"><div class="ttname"><a href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a></div><div class="ttdeci">void kStrSplitClear()</div><div class="ttdoc">clear the list of split strings after your done. Not required to call because it gets cleared when yo...</div></div>
 <div class="ttc" id="aa00002_html_ade0fa312f49a45392ed9a7742807d101"><div class="ttname"><a href="#ade0fa312f49a45392ed9a7742807d101">kStrSplitGet</a></div><div class="ttdeci">kStr kStrSplitGet(const int index)</div><div class="ttdoc">returns the string at index</div></div>
-<div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">kStr</a></div><div class="ttdoc">String class functions.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00613">t1_scriptAPI.cpp:614</a></div></div>
+<div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">kStr</a></div><div class="ttdoc">String class functions.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00626">t1_scriptAPI.cpp:627</a></div></div>
 <div class="ttc" id="aa00039_html_a4cfbd63e8485b2d7054eff8d8c65e000"><div class="ttname"><a href="a00039.html#a4cfbd63e8485b2d7054eff8d8c65e000">kStr::Length</a></div><div class="ttdeci">uint64 Length() const</div><div class="ttdoc">Returns the length of the string.</div></div>
 </div><!-- fragment --> </td></tr>
   </table>
@@ -3166,7 +3224,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02364">2364</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02379">2379</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3182,7 +3240,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02367">2367</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02382">2382</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3198,7 +3256,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02369">2369</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02384">2384</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3214,7 +3272,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02363">2363</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02378">2378</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3230,7 +3288,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02356">2356</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02371">2371</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3246,7 +3304,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02355">2355</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02370">2370</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3262,7 +3320,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02357">2357</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02372">2372</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3278,7 +3336,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02359">2359</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02374">2374</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3294,7 +3352,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02358">2358</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02373">2373</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3312,7 +3370,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile, Game.LoadModFile, and Game.LoadModDataFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02362">2362</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02377">2377</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3328,7 +3386,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02361">2361</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02376">2376</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3344,7 +3402,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02366">2366</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02381">2381</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3360,7 +3418,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02365">2365</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02380">2380</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3376,7 +3434,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02360">2360</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02375">2375</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3392,7 +3450,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02368">2368</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02383">2383</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

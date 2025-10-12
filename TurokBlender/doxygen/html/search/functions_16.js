@@ -7,6 +7,6 @@ var searchData=
   ['weaponallowunderwater_4',['WeaponAllowUnderwater',['../a00167.html#ae84777f87a954e684cb06f1f03a78e97',1,'kPlayer']]],
   ['weaponusingaltammo_5',['WeaponUsingAltAmmo',['../a00167.html#a72c69b7eb7281d1ebb21b704219f8571',1,'kPlayer']]],
   ['weaponwheelpulse_6',['WeaponWheelPulse',['../a00159.html#ad42de85bcd62ffabd792c6b4c29e8549',1,'kGame']]],
-  ['worldtohudpoint_7',['WorldToHUDPoint',['../a00159.html#ae8a5c614e60043b1b01e3c1d7eb927a3',1,'kGame']]],
+  ['worldtoscreenpoint_7',['WorldToScreenPoint',['../a00159.html#ac09ed4d3331f89dd39e6fbab3611cc84',1,'kGame']]],
   ['writebyte_8',['WriteByte',['../a00063.html#a0e1a0d656915a613cf30fa3efbebb6cd',1,'kBitDelta']]]
 ];

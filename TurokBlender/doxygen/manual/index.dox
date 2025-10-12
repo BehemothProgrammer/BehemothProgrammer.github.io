@@ -441,9 +441,6 @@ Float:
     player.strafeBobScale
     player.underwaterBobScale
     player.jumpBobScale
-    player.overrideWeaponOnTopFix
-    player.maxLives
-    player.maxLifeforces
     player.walkMaxSpeed
 Int:
     g_difficulty                // Use Game.GetDifficulty or Game.SetDifficulty instead.
@@ -463,6 +460,8 @@ Int:
     g_loadedgame                // Check OnBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after Map Script 0 is called.
     OverrideRespawningEnemies   // Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result); 0=none, 1=Force Disable, 2=Force Enable
     OverrideBloom               // Set: Game.OverrideBloom();  Get: GameVariables.GetInt("OverrideBloom", result); 0=none, 1=Force Disable, 2=Force Enable
+    player.maxLives             // Get and Set using the kPuppet functions instead
+    player.maxLifeforces        // Get and Set using the kPuppet functions instead
 Bool:
     g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel.
     g_resetboss                 // is set to 1 when warping to the boss using the warp boss cheats. This sets them to their initial state. Is set back to 0 after OnPostBeginLevel is called.

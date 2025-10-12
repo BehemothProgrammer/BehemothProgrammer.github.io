@@ -22,13 +22,14 @@ var searchData=
   ['mousetohudnostretch_19',['MouseToHUDNoStretch',['../a00151.html#a2752dd19ebffa95d8f8655bd314bd3a3',1,'kSys']]],
   ['movedirection_20',['MoveDirection',['../a00143.html#aa86ed548f1903ec061bd17541803e2cd',1,'kCModel']]],
   ['movement_21',['Movement',['../a00111.html#aaf6c1cac37a93e4eb37f5bf04a5c5bfe',1,'kActor::Movement()'],['../a00135.html#a50f1f5818732720e66f2095b99bd46ee',1,'kFx::Movement()']]],
-  ['movetoposition_22',['MoveToPosition',['../a00111.html#a73f149d13b4aca5508f7b1752e2bf1f3',1,'kActor::MoveToPosition()'],['../a00135.html#a711f871f89479b774ea6c013d20e7775',1,'kFx::MoveToPosition(const float x, const float y)']]],
-  ['movingforce_23',['MovingForce',['../a00135.html#a8f378400e63d3ea863c9e803bd29ca58',1,'kFx']]],
-  ['musicisfading_24',['MusicIsFading',['../a00159.html#ac20c52a7fe6c9194bf6648ed64fc63fe',1,'kGame']]],
-  ['musicispaused_25',['MusicIsPaused',['../a00159.html#a0b8267d5c425cc968a9590c3e44ed8ef',1,'kGame']]],
-  ['musicisplaying_26',['MusicIsPlaying',['../a00159.html#a797b07d67e0ab05ca4a52bbe060a0e23',1,'kGame']]],
-  ['musicpitch_27',['MusicPitch',['../a00159.html#ab807ece55cc1815b6b95df28b9811305',1,'kGame']]],
-  ['musicsong_28',['MusicSong',['../a00159.html#ab61eeebe435735b4aafcd026632f6574',1,'kGame']]],
-  ['muzzlelifetime_29',['MuzzleLifeTime',['../a00135.html#ad31adc388522656647500acfdcf60e98',1,'kFx']]],
-  ['muzzleoffset_30',['MuzzleOffset',['../a00135.html#aa5fa57df44ae19d2630f2f1c78418ff0',1,'kFx']]]
+  ['movesectorplatform_22',['MoveSectorPlatform',['../a00155.html#ae9acd5242b1c336444ad2dbc1fda499d',1,'kWorld']]],
+  ['movetoposition_23',['MoveToPosition',['../a00111.html#a73f149d13b4aca5508f7b1752e2bf1f3',1,'kActor::MoveToPosition()'],['../a00135.html#a711f871f89479b774ea6c013d20e7775',1,'kFx::MoveToPosition(const float x, const float y)']]],
+  ['movingforce_24',['MovingForce',['../a00135.html#a8f378400e63d3ea863c9e803bd29ca58',1,'kFx']]],
+  ['musicisfading_25',['MusicIsFading',['../a00159.html#ac20c52a7fe6c9194bf6648ed64fc63fe',1,'kGame']]],
+  ['musicispaused_26',['MusicIsPaused',['../a00159.html#a0b8267d5c425cc968a9590c3e44ed8ef',1,'kGame']]],
+  ['musicisplaying_27',['MusicIsPlaying',['../a00159.html#a797b07d67e0ab05ca4a52bbe060a0e23',1,'kGame']]],
+  ['musicpitch_28',['MusicPitch',['../a00159.html#ab807ece55cc1815b6b95df28b9811305',1,'kGame']]],
+  ['musicsong_29',['MusicSong',['../a00159.html#ab61eeebe435735b4aafcd026632f6574',1,'kGame']]],
+  ['muzzlelifetime_30',['MuzzleLifeTime',['../a00135.html#ad31adc388522656647500acfdcf60e98',1,'kFx']]],
+  ['muzzleoffset_31',['MuzzleOffset',['../a00135.html#aa5fa57df44ae19d2630f2f1c78418ff0',1,'kFx']]]
 ];

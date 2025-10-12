@@ -29,8 +29,9 @@ var searchData=
   ['enumplayerconbuttons_26',['EnumPlayerConButtons',['../a00002.html#a04027a70cb906a4569af4fac41b3136e',1,'t1_scriptAPI.cpp']]],
   ['enumplayerflags_27',['EnumPlayerFlags',['../a00002.html#a8b3b3ff3194cf075961624b73976e3a0',1,'t1_scriptAPI.cpp']]],
   ['enumplayerstates_28',['EnumPlayerStates',['../a00002.html#aa1dd9725a858cb6329663cec055c6307',1,'t1_scriptAPI.cpp']]],
-  ['enumwaterlevel_29',['EnumWaterLevel',['../a00002.html#a5e22505f217a29863c13ead904bfad2f',1,'t1_scriptAPI.cpp']]],
-  ['enumweaponstates_30',['EnumWeaponStates',['../a00002.html#a873f60cfbdf531426744f3b44753c081',1,'t1_scriptAPI.cpp']]],
-  ['execution_20order_20h3_31',['&lt;H3&gt;Scripts Execution Order&lt;/H3&gt;',['../index.html#exeorder',1,'']]],
-  ['extrahealth_32',['ExtraHealth',['../a00167.html#a252b81e73d107f319390a0835de9065a',1,'kPlayer']]]
+  ['enumsectorplatformflags_29',['EnumSectorPlatformFlags',['../a00002.html#a5cb75a094a8e11122d301f84b419da46',1,'t1_scriptAPI.cpp']]],
+  ['enumwaterlevel_30',['EnumWaterLevel',['../a00002.html#a5e22505f217a29863c13ead904bfad2f',1,'t1_scriptAPI.cpp']]],
+  ['enumweaponstates_31',['EnumWeaponStates',['../a00002.html#a873f60cfbdf531426744f3b44753c081',1,'t1_scriptAPI.cpp']]],
+  ['execution_20order_20h3_32',['&lt;H3&gt;Scripts Execution Order&lt;/H3&gt;',['../index.html#exeorder',1,'']]],
+  ['extrahealth_33',['ExtraHealth',['../a00167.html#a252b81e73d107f319390a0835de9065a',1,'kPlayer']]]
 ];

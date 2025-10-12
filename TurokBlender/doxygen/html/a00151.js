@@ -6,8 +6,6 @@ var a00151 =
     [ "MouseToHUD", "a00151.html#a2385c7d1f45101ba0234e8edb6950fb3", null ],
     [ "MouseToHUDNoStretch", "a00151.html#a2752dd19ebffa95d8f8655bd314bd3a3", null ],
     [ "Print", "a00151.html#abe30c302f659304c08931619d1d5d3b5", null ],
-    [ "ScreenPointMouseToHUD", "a00151.html#a82a308cf8142675e35c28a56d70310c6", null ],
-    [ "ScreenPointMouseToHUDNoStretch", "a00151.html#af79ba123271a226fd95246426d9585cc", null ],
     [ "VideoHeight", "a00151.html#a669424b6c2c9b4f0498a1d0b5462a036", null ],
     [ "VideoWidth", "a00151.html#ac9d69389b173e0d38ddaee273d7c4858", null ],
     [ "Warning", "a00151.html#a91f10eab11a7bf4d15db12aeee7b3744", null ]

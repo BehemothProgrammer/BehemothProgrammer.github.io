@@ -138,6 +138,8 @@ var a00159 =
     [ "RunWalkPulse", "a00159.html#afe4f52374df9f16bd97d5734826340f7", null ],
     [ "SaveMenu", "a00159.html#a0beb3468a448a284af5d666981d00f13", null ],
     [ "SaveModFile", "a00159.html#a6d4576dfafa87c4073bc8f6c67724ced", null ],
+    [ "ScreenPointToHUD", "a00159.html#a172c7735d49997720698f917b67293e0", null ],
+    [ "ScreenPointToHUDNoStretch", "a00159.html#a2b3999faa3ff84aec82893510434442a", null ],
     [ "SetArmorFlash", "a00159.html#add615686496c6a413bc8e0d239e365b4", null ],
     [ "SetCursorHotPos", "a00159.html#a292969059468340ea5c7ce2f5cc44c33", null ],
     [ "SetDamageFlash", "a00159.html#a93ede08d52a5a80d4d13d4430551fc47", null ],
@@ -193,5 +195,5 @@ var a00159 =
     [ "UseCustomNoStretch", "a00159.html#aeafa0986e2d15588ccaf1f3a891cf2ca", null ],
     [ "ViewZFar", "a00159.html#afc5cc2cceb58d463d948181f2b1281db", null ],
     [ "WeaponWheelPulse", "a00159.html#ad42de85bcd62ffabd792c6b4c29e8549", null ],
-    [ "WorldToHUDPoint", "a00159.html#ae8a5c614e60043b1b01e3c1d7eb927a3", null ]
+    [ "WorldToScreenPoint", "a00159.html#ac09ed4d3331f89dd39e6fbab3611cc84", null ]
 ];

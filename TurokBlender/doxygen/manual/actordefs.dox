@@ -71,6 +71,7 @@ flags.alwaysActive
 flags.allowTinyEnemyCheat
 flags.noMovement
 ignoreSectorHeightChange
+ignoreSectorPlatformChange
 drawDelay                   - Don't draw the Actor until it has ticked once
 radius
 height

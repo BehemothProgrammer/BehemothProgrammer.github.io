@@ -23,6 +23,7 @@ var searchData=
   ['enumplayerconbuttons_20',['EnumPlayerConButtons',['../a00002.html#a04027a70cb906a4569af4fac41b3136e',1,'t1_scriptAPI.cpp']]],
   ['enumplayerflags_21',['EnumPlayerFlags',['../a00002.html#a8b3b3ff3194cf075961624b73976e3a0',1,'t1_scriptAPI.cpp']]],
   ['enumplayerstates_22',['EnumPlayerStates',['../a00002.html#aa1dd9725a858cb6329663cec055c6307',1,'t1_scriptAPI.cpp']]],
-  ['enumwaterlevel_23',['EnumWaterLevel',['../a00002.html#a5e22505f217a29863c13ead904bfad2f',1,'t1_scriptAPI.cpp']]],
-  ['enumweaponstates_24',['EnumWeaponStates',['../a00002.html#a873f60cfbdf531426744f3b44753c081',1,'t1_scriptAPI.cpp']]]
+  ['enumsectorplatformflags_23',['EnumSectorPlatformFlags',['../a00002.html#a5cb75a094a8e11122d301f84b419da46',1,'t1_scriptAPI.cpp']]],
+  ['enumwaterlevel_24',['EnumWaterLevel',['../a00002.html#a5e22505f217a29863c13ead904bfad2f',1,'t1_scriptAPI.cpp']]],
+  ['enumweaponstates_25',['EnumWeaponStates',['../a00002.html#a873f60cfbdf531426744f3b44753c081',1,'t1_scriptAPI.cpp']]]
 ];

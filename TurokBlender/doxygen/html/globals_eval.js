@@ -8,5 +8,6 @@ var globals_eval =
     [ "i", "globals_eval_i.html", null ],
     [ "l", "globals_eval_l.html", null ],
     [ "p", "globals_eval_p.html", null ],
+    [ "s", "globals_eval_s.html", null ],
     [ "w", "globals_eval_w.html", null ]
 ];

@@ -57,6 +57,7 @@ var a00111 =
     [ "IgnoreFxGameSpeed", "a00111.html#adbaf150296c27d1164cc1feaf184448e", null ],
     [ "IgnoreGameSpeed", "a00111.html#aa4c04ea3ea29a2cc8ceaba6c2135b17d", null ],
     [ "IgnoreSectorHeightChange", "a00111.html#a5a487286abbfd5b0e01612c76be47364", null ],
+    [ "IgnoreSectorPlatformChange", "a00111.html#a2fca1d68b13dc98ab22073c2ea195f3e", null ],
     [ "ImpactType", "a00111.html#a20a0f31f8959182c0e1e26629ff231cf", null ],
     [ "ImpactTypeDmg", "a00111.html#a63df3c56dfbe0ae7bda1c51dd1883e3a", null ],
     [ "InflictDamage", "a00111.html#a9873de4b22e903b980184debf05dbffa", null ],

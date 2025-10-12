@@ -479,6 +479,19 @@ enum EnumAreaFlags
     AAF_STOREWARPRETURN = -2147483648  ///< Unused
 };
 
+enum EnumSectorPlatformFlags
+{
+    SPF_FLOORVERTS          = (1 << 0),   // Changes sectors verts origin
+    SPF_CEILINGVERTS        = (1 << 1),   // Changes sectors verts heights
+    SPF_SAMEAREA            = (1 << 2),   // Effects sectors only with the same area as the starting sector
+    SPF_MOVEPLAYERINAIR     = (1 << 3),   // Player moves with the sectors even in the air
+    SPF_USEMOVETOFORPLAYER  = (1 << 4),   // Uses the MoveToPosition function to set the Players origin. else sets origin.
+    SPF_USEMOVETOFORAI      = (1 << 5),   // Uses the MoveToPosition function to set the AI origin. else sets origin.
+    SPF_USEMOVETOFOROTHER   = (1 << 6),   // Uses the MoveToPosition function to set other actors origin. else sets origin.
+
+    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER
+};
+
 namespace kexVibrationPlayer
 {
     enum channel_e
@@ -1079,6 +1092,7 @@ public:
     int& ImpactType(); ///< EnumImpactType
     int& ImpactTypeDmg(); ///< EnumImpactType. Overrides the damage def used. if is -1 (default) then does not override ImpactType()
     bool &IgnoreSectorHeightChange(void); ///< if true will not change position(or velocity and movement) when sector height changes.
+    bool &IgnoreSectorPlatformChange(void); ///< if true this actor will not change position(or velocity and movement) when sector platform moves.
     int& ModelVariation();
     int& SpeciesMask();
     uint& Flags(); ///< EnumActorFlags
@@ -1698,8 +1712,6 @@ public:
     const bool GetCvarValue(const kStr&in cvarName, kStr&out result);
     void MouseToHUD(float&out x, float&out y); ///< Returns the HUD position of the mouse
     void MouseToHUDNoStretch(float&out x, float&out y); ///< Returns the HUD position of the mouse
-    void ScreenPointMouseToHUD(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
-    void ScreenPointMouseToHUDNoStretch(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
 };
 
 class kWorld
@@ -1855,6 +1867,7 @@ public:
     void SetAreaCullBits(const int area, const int bits);   ///< if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255)
     const int GetSectorDrawOrder(const int sectorIndex) const;      ///< lowest draw order (0) draws the sectors on the automap last
     void SetSectorDrawOrder(const int sectorIndex, const int drawOrder);    ///< lowest draw order (0) draws the sectors on the automap last
+    void MoveSectorPlatform(const int sectorIndex, const kVec3 &in moveDelta, const uint flags = SPR_DEFAULT); ///< EnumSectorPlatformFlags. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors
 };
 
 class kGame
@@ -2051,7 +2064,7 @@ public:
     const float GetExtraZFar(); ///< a custom amount for modders to add to the zfar value
     void SetExtraZFar(const float zfar); ///< affects actors, ai, particles, fog and underwater. (works normally unlike the cvar r_zfarextent)
     const float ShakeIntensity();
-    kVec3 WorldToHUDPoint(const kVec3&in origin);
+    kVec3 WorldToScreenPoint(const kVec3&in origin);
     bool SphereInView(const kVec3&in origin, const float radius);
     bool BoxInView(const kVec3&in min, const kVec3&in max);
     const float ViewZFar();
@@ -2160,6 +2173,8 @@ public:
     kStr GetFxFile(const int fxID); ///< Returns the file path to the Fx by ID value as defined in defs/fileLookup.txt
     bool &UseCustomNoStretch(); ///< Set to true to use the non stretch Hud fix for Custom Text and Pics
     bool CanUseCustomNoStretch(); ///< Returns true if aspect ratio is 4:3 or bigger width
+    void ScreenPointToHUD(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
+    void ScreenPointToHUDNoStretch(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
 };
 
 /**
