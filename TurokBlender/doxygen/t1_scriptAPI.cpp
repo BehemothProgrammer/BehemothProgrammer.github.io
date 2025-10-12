@@ -1224,11 +1224,12 @@ public:
     kVec3 DamageOrigin(void) const; ///< The Origin point of the attacker (Fx, Actor, or null (returns this actors origin in that case)) who damaged this actor last. Gets set before OnPreDamage.
     kVec3 DamageVelocity(void) const; ///< The Velocity of the attacker (Fx, Actor, or null (returns this actors velocity in that case)) who damaged this actor last. Gets set before OnPreDamage.
     const bool CanSee(kPuppet@ puppet, const uint excludeClipFlags = 0); ///< excludeClipFlags to ignore/disable (EnumClipFlags). Note: This function that takes in the kPuppet arg is only available for kActor, not for kPuppet or kAI or kWeapon.
-    const kVec3 &PrevLerpOrigin(void) const;
-    const kQuat &PrevLerpRotation(void) const;
-    const kAngle &PrevLerpPitch(void) const;
-    const kAngle &PrevLerpRoll(void) const;
-    const kAngle &PrevLerpYaw(void) const;
+    kVec3 &PrevLerpOrigin(void);
+    kQuat &PrevLerpRotation(void);
+    kAngle &PrevLerpPitch(void);
+    kAngle &PrevLerpRoll(void);
+    kAngle &PrevLerpYaw(void);
+    float &PrevLerpFloorHeight(void);
     const int RefCount() const;    ///< Returns the number of references there are to this actor. If actor is stale and RefCount is 0 then it will be removed after the actor ticks.
     bool HasCustomRef(void) const;
     void AddCustomRef(void); ///< Keeps the actor from getting freed from memory.
@@ -1818,6 +1819,15 @@ public:
      * @param heights: x is the height of pt1, y is the height of pt2, z is the height of pt3.
      */
     void GetSectorCorners(const int sectorIndex, kVec3&out pt1, kVec3&out pt2, kVec3&out pt3, kVec3&out heights) const;
+
+    /**
+     * @brief Get the Sectors vertex indices. If invalid sectorIndex is passed in will return all -1.
+     * @param sectorIndex
+     * @param v1
+     * @param v2
+     * @param v3
+     */
+    void GetSectorVertIndices(const int sectorIndex, int &v1, int &v2, int &v3) const;
 
     /**
      * @brief  Get the 3 sectors links. -1 means there was no sector linked to that edge.

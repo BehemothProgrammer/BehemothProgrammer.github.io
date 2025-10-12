@@ -174,6 +174,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aef53ad7b8fbeb274133ffb7013b0a5f8" id="r_aef53ad7b8fbeb274133ffb7013b0a5f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef53ad7b8fbeb274133ffb7013b0a5f8">GetSectorCorners</a> (const int sectorIndex, <a class="el" href="a00047.html">kVec3</a> &amp;out pt1, <a class="el" href="a00047.html">kVec3</a> &amp;out pt2, <a class="el" href="a00047.html">kVec3</a> &amp;out pt3, <a class="el" href="a00047.html">kVec3</a> &amp;out heights) const</td></tr>
 <tr class="memdesc:aef53ad7b8fbeb274133ffb7013b0a5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Sectors vertex position and height Link 1 is pt1 to pt3 Link 2 is pt2 to pt1 Link 3 is pt3 to pt2.  <br /></td></tr>
 <tr class="separator:aef53ad7b8fbeb274133ffb7013b0a5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fdcda3e1140a2ed548c2ad87920672f" id="r_a3fdcda3e1140a2ed548c2ad87920672f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fdcda3e1140a2ed548c2ad87920672f">GetSectorVertIndices</a> (const int sectorIndex, int &amp;v1, int &amp;v2, int &amp;v3) const</td></tr>
+<tr class="memdesc:a3fdcda3e1140a2ed548c2ad87920672f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Sectors vertex indices. If invalid sectorIndex is passed in will return all -1.  <br /></td></tr>
+<tr class="separator:a3fdcda3e1140a2ed548c2ad87920672f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c2341a91b5afc5112c05a36aee91bf" id="r_a90c2341a91b5afc5112c05a36aee91bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90c2341a91b5afc5112c05a36aee91bf">GetSectorLinks</a> (const int sectorIndex, int &amp;out sectorIndex1, int &amp;out sectorIndex2, int &amp;out sectorIndex3) const</td></tr>
 <tr class="memdesc:a90c2341a91b5afc5112c05a36aee91bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the 3 sectors links. -1 means there was no sector linked to that edge. Link 1 is pt1 to pt3 Link 2 is pt2 to pt1 Link 3 is pt3 to pt2.  <br /></td></tr>
 <tr class="separator:a90c2341a91b5afc5112c05a36aee91bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -285,7 +288,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01720">1720</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01721">1721</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a46796d92aa0b83b41d875719b9a2447f" name="a46796d92aa0b83b41d875719b9a2447f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46796d92aa0b83b41d875719b9a2447f">&#9670;&#160;</a></span>ChangeAreaArg()</h2>
@@ -1311,6 +1314,48 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>number of bridge sectors this sector has </p>
+
+</div>
+</div>
+<a id="a3fdcda3e1140a2ed548c2ad87920672f" name="a3fdcda3e1140a2ed548c2ad87920672f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fdcda3e1140a2ed548c2ad87920672f">&#9670;&#160;</a></span>GetSectorVertIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::GetSectorVertIndices </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>v2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>v3</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Sectors vertex indices. If invalid sectorIndex is passed in will return all -1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sectorIndex</td><td></td></tr>
+    <tr><td class="paramname">v1</td><td></td></tr>
+    <tr><td class="paramname">v2</td><td></td></tr>
+    <tr><td class="paramname">v3</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
