@@ -63,6 +63,7 @@ var a00135 =
     [ "InfoAnimspeed", "a00135.html#a85a80815b1e149d07db4320f5ceceea1", null ],
     [ "InfoAnimType", "a00135.html#ac07836338769df9a71b9f7d8f1ae1bbc", null ],
     [ "InfoAttachSource", "a00135.html#a4384ffa51a0f13b0106b14135221e3e2", null ],
+    [ "InfoAttachSourceAnimOffset", "a00135.html#a0d1bca167f01cc443ac953b36040bf4d", null ],
     [ "InfoBlackColor", "a00135.html#a8fdf0facf16fecb0926ec3253f7dbe78", null ],
     [ "InfoBlood", "a00135.html#aff721ab2d8b062af38b8359d867871f2", null ],
     [ "InfoBounceImpact", "a00135.html#a54ced9a0ffcc659b30aea8de15cbc9b8", null ],

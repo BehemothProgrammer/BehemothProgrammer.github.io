@@ -194,10 +194,16 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ab9dc3f7cab0a9d631fe99f64e1e8f680" id="r_ab9dc3f7cab0a9d631fe99f64e1e8f680"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">flags</a></td></tr>
 <tr class="memdesc:ab9dc3f7cab0a9d631fe99f64e1e8f680"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>.  <br /></td></tr>
 <tr class="separator:ab9dc3f7cab0a9d631fe99f64e1e8f680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae34a326c4f7772558bab5a52f30f18" id="r_abae34a326c4f7772558bab5a52f30f18"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a></td></tr>
+<tr class="memdesc:abae34a326c4f7772558bab5a52f30f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">is somewhat the Z position of the root node. It's calculated as follows whenever the root motion is updated (ANF_ROOTMOTION must be set).  <br /></td></tr>
+<tr class="separator:abae34a326c4f7772558bab5a52f30f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dab9b8c667780b0ecc9144b75866fb9" id="r_a2dab9b8c667780b0ecc9144b75866fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dab9b8c667780b0ecc9144b75866fb9">rootMotion</a></td></tr>
+<tr class="memdesc:a2dab9b8c667780b0ecc9144b75866fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">the move direction of the root node from the prev frame to the current frame.  <br /></td></tr>
+<tr class="separator:a2dab9b8c667780b0ecc9144b75866fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01038">1038</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01040">1040</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1a73bd51e11bd000b1a92af66476828c" name="a1a73bd51e11bd000b1a92af66476828c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a73bd51e11bd000b1a92af66476828c">&#9670;&#160;</a></span>Blend()</h2>
@@ -729,6 +735,31 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="abae34a326c4f7772558bab5a52f30f18" name="abae34a326c4f7772558bab5a52f30f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae34a326c4f7772558bab5a52f30f18">&#9670;&#160;</a></span>baseOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float kAnimState::baseOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>is somewhat the Z position of the root node. It's calculated as follows whenever the root motion is updated (ANF_ROOTMOTION must be set). </p>
+<div class="fragment"><div class="line"><span class="comment">// vBlendPos: is the blended position of the root node (node 0) from the prev frame to the current frame.</span></div>
+<div class="line"><span class="comment">// m_pOwner-&gt;BaseHeight(): is the Height of the actor when it spawned (or when SetSpawnParams is called on non map actors).</span></div>
+<div class="line"><a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> = vBlendPos.z * m_pOwner-&gt;Scale().z;</div>
+<div class="line"><a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> -= m_pOwner-&gt;BaseHeight() * 0.6f;</div>
+<div class="line"><span class="keywordflow">if</span>(<a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> &lt; 0) <a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> = 0;</div>
+<div class="ttc" id="aa00107_html_abae34a326c4f7772558bab5a52f30f18"><div class="ttname"><a href="#abae34a326c4f7772558bab5a52f30f18">kAnimState::baseOffset</a></div><div class="ttdeci">float baseOffset</div><div class="ttdoc">is somewhat the Z position of the root node. It&#39;s calculated as follows whenever the root motion is u...</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01083">t1_scriptAPI.cpp:1083</a></div></div>
+</div><!-- fragment --><p> is the Z position of the root node. calculated as </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01083">1083</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ab9dc3f7cab0a9d631fe99f64e1e8f680" name="ab9dc3f7cab0a9d631fe99f64e1e8f680"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">&#9670;&#160;</a></span>flags</h2>
 
@@ -743,7 +774,25 @@ Public Attributes</h2></td></tr>
 
 <p><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01067">1067</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01069">1069</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2dab9b8c667780b0ecc9144b75866fb9" name="a2dab9b8c667780b0ecc9144b75866fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dab9b8c667780b0ecc9144b75866fb9">&#9670;&#160;</a></span>rootMotion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00047.html">kVec3</a> kAnimState::rootMotion</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the move direction of the root node from the prev frame to the current frame. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01084">1084</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

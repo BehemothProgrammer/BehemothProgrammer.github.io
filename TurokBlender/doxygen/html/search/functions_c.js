@@ -22,7 +22,7 @@ var searchData=
   ['mousetohudnostretch_19',['MouseToHUDNoStretch',['../a00151.html#a2752dd19ebffa95d8f8655bd314bd3a3',1,'kSys']]],
   ['movedirection_20',['MoveDirection',['../a00143.html#aa86ed548f1903ec061bd17541803e2cd',1,'kCModel']]],
   ['movement_21',['Movement',['../a00111.html#aaf6c1cac37a93e4eb37f5bf04a5c5bfe',1,'kActor::Movement()'],['../a00135.html#a50f1f5818732720e66f2095b99bd46ee',1,'kFx::Movement()']]],
-  ['movesectorplatform_22',['MoveSectorPlatform',['../a00155.html#ae9acd5242b1c336444ad2dbc1fda499d',1,'kWorld']]],
+  ['movesectorplatform_22',['MoveSectorPlatform',['../a00155.html#afaca9ab9271489153210991be9e1240e',1,'kWorld']]],
   ['movetoposition_23',['MoveToPosition',['../a00111.html#ab64750075819ca466a3b238a836b2aab',1,'kActor::MoveToPosition(const float x, const float y)'],['../a00111.html#a9be844ecfe929d9d216de40670ef16b5',1,'kActor::MoveToPosition(const float x, const float y, uint clipFlags)'],['../a00135.html#a9dc046563712f8500bac733fd96eb392',1,'kFx::MoveToPosition(const float x, const float y)'],['../a00135.html#aa81a50b100ad560a3e85862a99197346',1,'kFx::MoveToPosition(const float x, const float y, uint clipFlags)']]],
   ['movingforce_24',['MovingForce',['../a00135.html#a8f378400e63d3ea863c9e803bd29ca58',1,'kFx']]],
   ['musicisfading_25',['MusicIsFading',['../a00159.html#ac20c52a7fe6c9194bf6648ed64fc63fe',1,'kGame']]],

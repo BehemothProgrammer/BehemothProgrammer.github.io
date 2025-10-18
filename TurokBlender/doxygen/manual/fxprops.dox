@@ -28,6 +28,7 @@ bNoSpawnNear                // Will not spawn the effect if the squared distance
 bNoSpawnFar                 // Will not spawn the effect if the squared distance to the camera view is >= (GAME_SCALE * 20) * (GAME_SCALE * 20). You can use noSpawnNearFarDist to set the distance.
 noSpawnNearFarDist          // Set a custom squared distance to be used for bNoSpawnNear or bNoSpawnFar
 bAttachSource               // Sets to this Fx's owner position
+bAttachSourceAnimOffset     // if bAttachSource is set then this will add the actors AnimState baseOffset to origin.z
 bDrawOnBottom               // Will draw the Fx last
 bSparkle                    // Not used
 bCrossFade                  // Not used

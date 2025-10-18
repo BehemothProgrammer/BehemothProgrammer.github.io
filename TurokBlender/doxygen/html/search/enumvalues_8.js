@@ -3,10 +3,12 @@ var searchData=
   ['spf_5fceilingverts_0',['SPF_CEILINGVERTS',['../a00002.html#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a',1,'t1_scriptAPI.cpp']]],
   ['spf_5fdefault_1',['SPF_DEFAULT',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb',1,'t1_scriptAPI.cpp']]],
   ['spf_5ffloorverts_2',['SPF_FLOORVERTS',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7',1,'t1_scriptAPI.cpp']]],
-  ['spf_5fmoveotheractors_3',['SPF_MOVEOTHERACTORS',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01',1,'t1_scriptAPI.cpp']]],
-  ['spf_5fmoveplayerinair_4',['SPF_MOVEPLAYERINAIR',['../a00002.html#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6',1,'t1_scriptAPI.cpp']]],
-  ['spf_5fsamearea_5',['SPF_SAMEAREA',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d',1,'t1_scriptAPI.cpp']]],
-  ['spf_5fusemovetoforai_6',['SPF_USEMOVETOFORAI',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9',1,'t1_scriptAPI.cpp']]],
-  ['spf_5fusemovetoforother_7',['SPF_USEMOVETOFOROTHER',['../a00002.html#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394',1,'t1_scriptAPI.cpp']]],
-  ['spf_5fusemovetoforplayer_8',['SPF_USEMOVETOFORPLAYER',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466',1,'t1_scriptAPI.cpp']]]
+  ['spf_5fmoveai_3',['SPF_MOVEAI',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fmoveotheractors_4',['SPF_MOVEOTHERACTORS',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fmoveplayer_5',['SPF_MOVEPLAYER',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fmoveplayerinair_6',['SPF_MOVEPLAYERINAIR',['../a00002.html#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fsamearea_7',['SPF_SAMEAREA',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fusemovetoforai_8',['SPF_USEMOVETOFORAI',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fusemovetoforother_9',['SPF_USEMOVETOFOROTHER',['../a00002.html#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394',1,'t1_scriptAPI.cpp']]],
+  ['spf_5fusemovetoforplayer_10',['SPF_USEMOVETOFORPLAYER',['../a00002.html#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466',1,'t1_scriptAPI.cpp']]]
 ];

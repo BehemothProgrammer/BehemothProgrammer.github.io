@@ -768,9 +768,11 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a> = (1 &lt;&lt; 4)
 , <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9">SPF_USEMOVETOFORAI</a> = (1 &lt;&lt; 5)
 , <a class="el" href="#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394">SPF_USEMOVETOFOROTHER</a> = (1 &lt;&lt; 6)
-, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a> = (1 &lt;&lt; 7)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65">SPF_MOVEPLAYER</a> = (1 &lt;&lt; 7)
 , <br />
-&#160;&#160;<a class="el" href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a> = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEOTHERACTORS
+&#160;&#160;<a class="el" href="#a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90">SPF_MOVEAI</a> = (1 &lt;&lt; 8)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a> = (1 &lt;&lt; 9)
+, <a class="el" href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a> = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEPLAYER|SPF_MOVEAI|SPF_MOVEOTHERACTORS
 <br />
  }</td></tr>
 <tr class="separator:a5cb75a094a8e11122d301f84b419da46"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2757,9 +2759,13 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394" name="a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394"></a>SPF_USEMOVETOFOROTHER&#160;</td><td class="fieldinit">(1 &lt;&lt; 6)&#160;</td><td class="fielddoc"><p>Uses the MoveToPosition function to set other actors origin. else sets origin. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01" name="a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01"></a>SPF_MOVEOTHERACTORS&#160;</td><td class="fieldinit">(1 &lt;&lt; 7)&#160;</td><td class="fielddoc"><p>Moves other actors on the sectors that are not the player or AI. </p>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65" name="a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65"></a>SPF_MOVEPLAYER&#160;</td><td class="fieldinit">(1 &lt;&lt; 7)&#160;</td><td class="fielddoc"><p>Moves player. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb" name="a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb"></a>SPF_DEFAULT&#160;</td><td class="fieldinit">SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEOTHERACTORS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90" name="a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90"></a>SPF_MOVEAI&#160;</td><td class="fieldinit">(1 &lt;&lt; 8)&#160;</td><td class="fielddoc"><p>Moves AI. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01" name="a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01"></a>SPF_MOVEOTHERACTORS&#160;</td><td class="fieldinit">(1 &lt;&lt; 9)&#160;</td><td class="fielddoc"><p>Moves other actors on the sectors that are not the player or AI. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb" name="a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb"></a>SPF_DEFAULT&#160;</td><td class="fieldinit">SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEPLAYER|SPF_MOVEAI|SPF_MOVEOTHERACTORS&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="a00002_source.html#l00482">482</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
@@ -2771,15 +2777,19 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  488</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a>  = (1 &lt;&lt; 4),   <span class="comment">///&lt; Uses the MoveToPosition function to set the Players origin. else sets origin.</span></div>
 <div class="line"><span class="lineno">  489</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9">SPF_USEMOVETOFORAI</a>      = (1 &lt;&lt; 5),   <span class="comment">///&lt; Uses the MoveToPosition function to set the AI origin. else sets origin.</span></div>
 <div class="line"><span class="lineno">  490</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394">SPF_USEMOVETOFOROTHER</a>   = (1 &lt;&lt; 6),   <span class="comment">///&lt; Uses the MoveToPosition function to set other actors origin. else sets origin.</span></div>
-<div class="line"><span class="lineno">  491</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a>     = (1 &lt;&lt; 7),   <span class="comment">///&lt; Moves other actors on the sectors that are not the player or AI.</span></div>
-<div class="line"><span class="lineno">  492</span> </div>
-<div class="line"><span class="lineno">  493</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a> = <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a">SPF_CEILINGVERTS</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a></div>
-<div class="line"><span class="lineno">  494</span>};</div>
+<div class="line"><span class="lineno">  491</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65">SPF_MOVEPLAYER</a>          = (1 &lt;&lt; 7),   <span class="comment">///&lt; Moves player</span></div>
+<div class="line"><span class="lineno">  492</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90">SPF_MOVEAI</a>              = (1 &lt;&lt; 8),   <span class="comment">///&lt; Moves AI</span></div>
+<div class="line"><span class="lineno">  493</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a>     = (1 &lt;&lt; 9),   <span class="comment">///&lt; Moves other actors on the sectors that are not the player or AI.</span></div>
+<div class="line"><span class="lineno">  494</span> </div>
+<div class="line"><span class="lineno">  495</span>    <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a> = <a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46afee50e119f72eedbbafb3c157ae7035a">SPF_CEILINGVERTS</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65">SPF_MOVEPLAYER</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90">SPF_MOVEAI</a>|<a class="code hl_enumvalue" href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a></div>
+<div class="line"><span class="lineno">  496</span>};</div>
 <div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a0333269833f99888363b3ab75edafbd7">SPF_FLOORVERTS</a></div><div class="ttdeci">@ SPF_FLOORVERTS</div><div class="ttdoc">Changes sectors verts origin.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00484">t1_scriptAPI.cpp:484</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a165223404f181e12c209e75c35ccdc65">SPF_MOVEPLAYER</a></div><div class="ttdeci">@ SPF_MOVEPLAYER</div><div class="ttdoc">Moves player.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00491">t1_scriptAPI.cpp:491</a></div></div>
 <div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a235a628a97b6af44b4abff722f6b2466">SPF_USEMOVETOFORPLAYER</a></div><div class="ttdeci">@ SPF_USEMOVETOFORPLAYER</div><div class="ttdoc">Uses the MoveToPosition function to set the Players origin. else sets origin.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00488">t1_scriptAPI.cpp:488</a></div></div>
-<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a></div><div class="ttdeci">@ SPF_MOVEOTHERACTORS</div><div class="ttdoc">Moves other actors on the sectors that are not the player or AI.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00491">t1_scriptAPI.cpp:491</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a2b8c6893985ce74168a1cd0718c90a01">SPF_MOVEOTHERACTORS</a></div><div class="ttdeci">@ SPF_MOVEOTHERACTORS</div><div class="ttdoc">Moves other actors on the sectors that are not the player or AI.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00493">t1_scriptAPI.cpp:493</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a5757e3223b4ca7405b9c73b004e31b90">SPF_MOVEAI</a></div><div class="ttdeci">@ SPF_MOVEAI</div><div class="ttdoc">Moves AI.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00492">t1_scriptAPI.cpp:492</a></div></div>
 <div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a5e6562c20c2aff07abb6a1292e7f8b8d">SPF_SAMEAREA</a></div><div class="ttdeci">@ SPF_SAMEAREA</div><div class="ttdoc">Effects sectors only with the same area as the starting sector.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00486">t1_scriptAPI.cpp:486</a></div></div>
-<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a></div><div class="ttdeci">@ SPF_DEFAULT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00493">t1_scriptAPI.cpp:493</a></div></div>
+<div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a></div><div class="ttdeci">@ SPF_DEFAULT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00495">t1_scriptAPI.cpp:495</a></div></div>
 <div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46a7ffe40af4b71bcc2a5fc4390a0ddcca9">SPF_USEMOVETOFORAI</a></div><div class="ttdeci">@ SPF_USEMOVETOFORAI</div><div class="ttdoc">Uses the MoveToPosition function to set the AI origin. else sets origin.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00489">t1_scriptAPI.cpp:489</a></div></div>
 <div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46ac97bf4499fe70a9c32a3737108bbcee6">SPF_MOVEPLAYERINAIR</a></div><div class="ttdeci">@ SPF_MOVEPLAYERINAIR</div><div class="ttdoc">Player moves with the sectors even in the air.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00487">t1_scriptAPI.cpp:487</a></div></div>
 <div class="ttc" id="aa00002_html_a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394"><div class="ttname"><a href="#a5cb75a094a8e11122d301f84b419da46af4aa3c0ceaab92843864122fd0df0394">SPF_USEMOVETOFOROTHER</a></div><div class="ttdeci">@ SPF_USEMOVETOFOROTHER</div><div class="ttdoc">Uses the MoveToPosition function to set other actors origin. else sets origin.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00490">t1_scriptAPI.cpp:490</a></div></div>
@@ -3154,11 +3164,11 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><a class="code hl_function" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a>();</div>
 <div class="ttc" id="aa00002_html_a036fa599be44d9300e7e68836bc84cac"><div class="ttname"><a href="#a036fa599be44d9300e7e68836bc84cac">kStrSplit</a></div><div class="ttdeci">void kStrSplit(const kStr &amp;in s, const kStr &amp;in sep)</div></div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02388">t1_scriptAPI.cpp:2388</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02406">t1_scriptAPI.cpp:2406</a></div></div>
 <div class="ttc" id="aa00002_html_a62ecb3a8742780dd7a60227b58bb6425"><div class="ttname"><a href="#a62ecb3a8742780dd7a60227b58bb6425">kStrSplitLength</a></div><div class="ttdeci">uint kStrSplitLength()</div><div class="ttdoc">returns the amount of strings that were split</div></div>
 <div class="ttc" id="aa00002_html_ab3734771fb77f9d7b55707dbc0e6f473"><div class="ttname"><a href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a></div><div class="ttdeci">void kStrSplitClear()</div><div class="ttdoc">clear the list of split strings after your done. Not required to call because it gets cleared when yo...</div></div>
 <div class="ttc" id="aa00002_html_ade0fa312f49a45392ed9a7742807d101"><div class="ttname"><a href="#ade0fa312f49a45392ed9a7742807d101">kStrSplitGet</a></div><div class="ttdeci">kStr kStrSplitGet(const int index)</div><div class="ttdoc">returns the string at index</div></div>
-<div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">kStr</a></div><div class="ttdoc">String class functions.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00627">t1_scriptAPI.cpp:628</a></div></div>
+<div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">kStr</a></div><div class="ttdoc">String class functions.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00629">t1_scriptAPI.cpp:630</a></div></div>
 <div class="ttc" id="aa00039_html_a4cfbd63e8485b2d7054eff8d8c65e000"><div class="ttname"><a href="a00039.html#a4cfbd63e8485b2d7054eff8d8c65e000">kStr::Length</a></div><div class="ttdeci">uint64 Length() const</div><div class="ttdoc">Returns the length of the string.</div></div>
 </div><!-- fragment --> </td></tr>
   </table>
@@ -3237,7 +3247,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02392">2392</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02410">2410</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3253,7 +3263,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02395">2395</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02413">2413</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3269,7 +3279,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02397">2397</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02415">2415</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3285,7 +3295,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02391">2391</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02409">2409</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3301,7 +3311,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02384">2384</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02402">2402</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3317,7 +3327,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02383">2383</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02401">2401</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3333,7 +3343,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02385">2385</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02403">2403</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3349,7 +3359,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02387">2387</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02405">2405</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3365,7 +3375,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02386">2386</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02404">2404</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3383,7 +3393,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile, Game.LoadModFile, and Game.LoadModDataFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02390">2390</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02408">2408</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3399,7 +3409,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02389">2389</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02407">2407</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3415,7 +3425,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02394">2394</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02412">2412</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3431,7 +3441,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02393">2393</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02411">2411</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3447,7 +3457,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02388">2388</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02406">2406</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3463,7 +3473,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02396">2396</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02414">2414</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

@@ -26,5 +26,7 @@ var a00107 =
     [ "TrackFrame", "a00107.html#af8d9608e324b21dd45913a92dcb5771f", null ],
     [ "TrackNextFrame", "a00107.html#a7a84c360130c209bb0fb4b311027af04", null ],
     [ "TrackTime", "a00107.html#a13208a6a5d2a1f4c99de07f5830bcf37", null ],
-    [ "flags", "a00107.html#ab9dc3f7cab0a9d631fe99f64e1e8f680", null ]
+    [ "baseOffset", "a00107.html#abae34a326c4f7772558bab5a52f30f18", null ],
+    [ "flags", "a00107.html#ab9dc3f7cab0a9d631fe99f64e1e8f680", null ],
+    [ "rootMotion", "a00107.html#a2dab9b8c667780b0ecc9144b75866fb9", null ]
 ];

@@ -488,9 +488,11 @@ enum EnumSectorPlatformFlags
     SPF_USEMOVETOFORPLAYER  = (1 << 4),   ///< Uses the MoveToPosition function to set the Players origin. else sets origin.
     SPF_USEMOVETOFORAI      = (1 << 5),   ///< Uses the MoveToPosition function to set the AI origin. else sets origin.
     SPF_USEMOVETOFOROTHER   = (1 << 6),   ///< Uses the MoveToPosition function to set other actors origin. else sets origin.
-    SPF_MOVEOTHERACTORS     = (1 << 7),   ///< Moves other actors on the sectors that are not the player or AI.
+    SPF_MOVEPLAYER          = (1 << 7),   ///< Moves player
+    SPF_MOVEAI              = (1 << 8),   ///< Moves AI
+    SPF_MOVEOTHERACTORS     = (1 << 9),   ///< Moves other actors on the sectors that are not the player or AI.
 
-    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEOTHERACTORS
+    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEPLAYER|SPF_MOVEAI|SPF_MOVEOTHERACTORS
 };
 
 namespace kexVibrationPlayer
@@ -1065,6 +1067,21 @@ public:
     kVec3 GetOrigin(const int animID, int nodeNum, int frame);
     const int GetAnimNumFrames(const int animID);
     int flags; ///< EnumAnimStateFlags
+    
+
+    /**
+     * @brief is somewhat the Z position of the root node. It's calculated as follows whenever the
+     * root motion is updated (ANF_ROOTMOTION must be set).
+     * @code{.cpp}
+     * // vBlendPos: is the blended position of the root node (node 0) from the prev frame to the current frame.
+     * // m_pOwner->BaseHeight(): is the Height of the actor when it spawned (or when SetSpawnParams is called on non map actors).
+     * baseOffset = vBlendPos.z * m_pOwner->Scale().z;
+     * baseOffset -= m_pOwner->BaseHeight() * 0.6f;
+     * if(baseOffset < 0) baseOffset = 0;
+     * @endcode
+     */
+    float baseOffset;   ///< is the Z position of the root node. calculated as 
+    kVec3 rootMotion;   ///< the move direction of the root node from the prev frame to the current frame.
 };
 
 /**
@@ -1560,6 +1577,7 @@ public:
     bool InfoOverrideMaxDrawScale() const;
     bool InfoIgnoreGameSpeed() const;
     bool InfoAttachSource() const;
+    bool InfoAttachSourceAnimOffset() const;
     bool InfoDrawOnBottom() const;
     bool InfoSparkle() const;
     bool InfoCrossFade() const;
@@ -1880,7 +1898,7 @@ public:
     void SetAreaCullBits(const int area, const int bits);   ///< if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255)
     const int GetSectorDrawOrder(const int sectorIndex) const;      ///< lowest draw order (0) draws the sectors on the automap last
     void SetSectorDrawOrder(const int sectorIndex, const int drawOrder);    ///< lowest draw order (0) draws the sectors on the automap last
-    void MoveSectorPlatform(const int sectorIndex, const kVec3 &in moveDelta, const uint flags = SPR_DEFAULT); ///< EnumSectorPlatformFlags. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors
+    void MoveSectorPlatform(const int sectorIndex, const kVec3 &in moveDelta, const uint flags = SPF_DEFAULT); ///< EnumSectorPlatformFlags. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors
 };
 
 class kGame

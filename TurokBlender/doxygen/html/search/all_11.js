@@ -45,12 +45,13 @@ var searchData=
   ['rgbtohsv_42',['RGBToHSV',['../a00059.html#a2fbb6d7c22879de4aee737cca9473ee5',1,'kColor']]],
   ['roll_43',['Roll',['../a00111.html#a4252c7e3883e71bddffbeb74458c7fcd',1,'kActor::Roll()'],['../a00135.html#aa74fc21c84b6f8417153ef5e7ff51007',1,'kFx::Roll()']]],
   ['roll_44',['roll',['../a00139.html#ac2138395b25c25c282db344ee1fd1b3d',1,'kCamera']]],
-  ['rotatearoundorigin_45',['RotateAroundOrigin',['../a00111.html#aa8a63a190654fe123fe470d9a18546f5',1,'kActor']]],
-  ['rotation_46',['Rotation',['../a00111.html#ae6f6084cde757643232779d506071ab9',1,'kActor::Rotation()'],['../a00135.html#afe9778ebffef145502ef923c6de7a58e',1,'kFx::Rotation()']]],
-  ['rotationoffset_47',['RotationOffset',['../a00135.html#a5db65b85f74bb07d2241d260ba411a8e',1,'kFx']]],
-  ['rotationspeed_48',['RotationSpeed',['../a00135.html#abaf00b6a535ea48a56718fe39060d1eb',1,'kFx']]],
-  ['runaction_49',['RunAction',['../a00111.html#acd3a3c959c6b1d5a924976fd41e31b15',1,'kActor']]],
-  ['runfxevent_50',['RunFxEvent',['../a00111.html#aad5ec4ba6c8d3787b3d38025e090adee',1,'kActor']]],
-  ['runwalkpulse_51',['RunWalkPulse',['../a00159.html#afe4f52374df9f16bd97d5734826340f7',1,'kGame']]],
-  ['runwalktoggle_52',['RunWalkToggle',['../a00167.html#a3dcad7691f35ceb7c8ecf3e80ce774a6',1,'kPlayer']]]
+  ['rootmotion_45',['rootMotion',['../a00107.html#a2dab9b8c667780b0ecc9144b75866fb9',1,'kAnimState']]],
+  ['rotatearoundorigin_46',['RotateAroundOrigin',['../a00111.html#aa8a63a190654fe123fe470d9a18546f5',1,'kActor']]],
+  ['rotation_47',['Rotation',['../a00111.html#ae6f6084cde757643232779d506071ab9',1,'kActor::Rotation()'],['../a00135.html#afe9778ebffef145502ef923c6de7a58e',1,'kFx::Rotation()']]],
+  ['rotationoffset_48',['RotationOffset',['../a00135.html#a5db65b85f74bb07d2241d260ba411a8e',1,'kFx']]],
+  ['rotationspeed_49',['RotationSpeed',['../a00135.html#abaf00b6a535ea48a56718fe39060d1eb',1,'kFx']]],
+  ['runaction_50',['RunAction',['../a00111.html#acd3a3c959c6b1d5a924976fd41e31b15',1,'kActor']]],
+  ['runfxevent_51',['RunFxEvent',['../a00111.html#aad5ec4ba6c8d3787b3d38025e090adee',1,'kActor']]],
+  ['runwalkpulse_52',['RunWalkPulse',['../a00159.html#afe4f52374df9f16bd97d5734826340f7',1,'kGame']]],
+  ['runwalktoggle_53',['RunWalkToggle',['../a00167.html#a3dcad7691f35ceb7c8ecf3e80ce774a6',1,'kPlayer']]]
 ];

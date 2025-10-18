@@ -20,7 +20,9 @@ OnPostBeginLevel
 OnSleep
 OnWake
 OnTouch             <--- called even if alseep
+OnCollisionStart
 OnCollide           <--- called even if alseep
+OnCollisionFinish
 OnTick				<--- called only when awake
 ---
 OnMenuTick          <--- called only when dummymenu active
@@ -49,6 +51,16 @@ void OnSleep()
 void OnWake()
 void OnTouch(kActor @theActorThatTouchedMe) //called even if alseep
 void OnCollide(kCModel@) //called even if alseep
+void OnCollisionStart() // Collision Movement Check is starting
+void OnCollisionFinish() // Collision Movement Check has ended
+
+Actor and Fx:
+    void OnCollisionStart()
+    void OnCollisionFinish()
+
+Fx:
+    void OnCollidePost(void)
+    
 void OnTick() - Required for all ScriptObject
 void OnMenuTick() - called only when dummymenu active
 void OnRemoved() - called when actor is removed (Internally or through scripting). IsStale will return true immediately after this.
@@ -91,7 +103,10 @@ TurokFxTest(kFx @fx)
     
 void OnTick(void)       // Required
 void OnRemoved(void)
+void OnCollisionStart() // Collision Movement Check is starting
+void OnCollisionFinish() // Collision Movement Check has ended
 void OnCollide(kCModel @pCModel)    // Called just before any of the OnImpact functions.
+void OnCollidePost(void)            // Called right after OnCollide and the OnImpact functions.
 bool OnImpactWall(int impactType, const kVec3 &in normal)
 bool OnImpactFloor(int impactType, const kVec3 &in normal)
 bool OnImpactCeiling(int impactType, const kVec3 &in normal)
