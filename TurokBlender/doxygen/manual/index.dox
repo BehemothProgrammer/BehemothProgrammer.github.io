@@ -53,14 +53,6 @@ void OnTouch(kActor @theActorThatTouchedMe) //called even if alseep
 void OnCollide(kCModel@) //called even if alseep
 void OnCollisionStart() // Collision Movement Check is starting
 void OnCollisionFinish() // Collision Movement Check has ended
-
-Actor and Fx:
-    void OnCollisionStart()
-    void OnCollisionFinish()
-
-Fx:
-    void OnCollidePost(void)
-    
 void OnTick() - Required for all ScriptObject
 void OnMenuTick() - called only when dummymenu active
 void OnRemoved() - called when actor is removed (Internally or through scripting). IsStale will return true immediately after this.
