@@ -1080,7 +1080,7 @@ public:
      * if(baseOffset < 0) baseOffset = 0;
      * @endcode
      */
-    float baseOffset;   ///< is the Z position of the root node. calculated as 
+    float baseOffset;
     kVec3 rootMotion;   ///< the move direction of the root node from the prev frame to the current frame.
 };
 
