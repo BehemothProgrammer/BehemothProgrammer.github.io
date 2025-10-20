@@ -33,7 +33,8 @@ var searchData=
   ['log_30',['Log',['../a00030.html#a7e33b8127ff0f1dbe1e9f2cd2758a839',1,'Math']]],
   ['looksensscale_31',['LookSensScale',['../a00167.html#ae7b7e6fa98fa18b55adef26c83904725',1,'kPlayer']]],
   ['lookzoffset_32',['lookZOffset',['../a00139.html#a660cca8552dee6e563bfb3847e1ed5f7',1,'kCamera']]],
-  ['looping_33',['Looping',['../a00107.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
-  ['loudnoisealert_34',['LoudNoiseAlert',['../a00127.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
-  ['loudrange_35',['LoudRange',['../a00123.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
+  ['loopframe_33',['LoopFrame',['../a00107.html#a175297882d64452fc7f65fc5b83763d3',1,'kAnimState']]],
+  ['looping_34',['Looping',['../a00107.html#a89302d1d69aa1d9502e1ecff75209370',1,'kAnimState']]],
+  ['loudnoisealert_35',['LoudNoiseAlert',['../a00127.html#ad03c5802ae38cebc7f63754332a2fc00',1,'kPuppet']]],
+  ['loudrange_36',['LoudRange',['../a00123.html#af56ba88a54acb6dbdccc90306bf6b413',1,'kAI']]]
 ];

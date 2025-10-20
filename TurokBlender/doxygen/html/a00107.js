@@ -1,6 +1,7 @@
 var a00107 =
 [
     [ "Blend", "a00107.html#a1a73bd51e11bd000b1a92af66476828c", null ],
+    [ "Blend", "a00107.html#ac3e4a0e16932a45c83b6dfacf075c74d", null ],
     [ "Blending", "a00107.html#aad189c36c956255a6574d74eff5dfc43", null ],
     [ "ChangeSpeed", "a00107.html#ae1f518b29d30e6bc593ce85d56943ca4", null ],
     [ "CheckAnimID", "a00107.html#adb9c4632259d2c78207961237ff9b71e", null ],
@@ -10,6 +11,7 @@ var a00107 =
     [ "GetOrigin", "a00107.html#a51731061af541ed0cc2757f603ae1e14", null ],
     [ "GetRotation", "a00107.html#a9321a720792f7425d823e9ba032719b8", null ],
     [ "IsPlaying", "a00107.html#abf44ba2518ba4748e6f2cd4f6e58d073", null ],
+    [ "LoopFrame", "a00107.html#a175297882d64452fc7f65fc5b83763d3", null ],
     [ "Looping", "a00107.html#a89302d1d69aa1d9502e1ecff75209370", null ],
     [ "NumFrames", "a00107.html#a5359f76de3f148f62f93b7a9b108a699", null ],
     [ "NumNodes", "a00107.html#af4258f164fae9ad9e6010697de193be4", null ],
@@ -18,6 +20,7 @@ var a00107 =
     [ "PlayTime", "a00107.html#a5ebfefbc7fac98483370047a73ca014b", null ],
     [ "Resume", "a00107.html#a5e0897b9bfac9d238b4eb6109a0a36b5", null ],
     [ "Set", "a00107.html#a4d044cd96cbe2dbd798a2cc081a5b0a6", null ],
+    [ "Set", "a00107.html#a54ddac6a0fda454e0b9d525a7d5f1f7a", null ],
     [ "SetLastFrame", "a00107.html#a87c5bbf5028982c4e960ace40051b2eb", null ],
     [ "SetPlayTime", "a00107.html#a824ea272b235baffb2f1a70b364a3909", null ],
     [ "SetTrackTime", "a00107.html#ac514f49864de8487ac8ea9b953e6a831", null ],

@@ -394,10 +394,11 @@ sounds[1] = //number of sounds in this shader
 \verbatim
 damage          // (int, 1) Base damage
 randomFactor    // (float, 1.0) Scales damage randomly from this float value to 1.0. 1 = no random which is the default.
-bExplode        // (bool 0) Creates an explosion that hits all actors in a radius. Set the radius using the radius property. Can blow enemies away. In scripts TurokDestructible will be destroyed.
+bExplode        // (bool, 0) Creates an explosion that hits all actors in a radius. Set the radius using the radius property. Can blow enemies away. In scripts TurokDestructible will be destroyed.
 radius          // (float, default is Fx owners radius) Radius of damage effect for explosions and InflictDamage(if bQuake is defined). If not defined then InflictDamage will not do a radius check.
 noFallOff       // (bool, 0) for explosions always deal full damage no matter the distance to the actors position + half height.
 bExplodeReact   // (bool, 0) Can blows enemies away.
+altExpRadius    // (bool, 0) Uses the new explosive radius check
 bNoDamageSource // (bool, 0) Explosions will not damage the owner of the Fx.
 bNoAIBlast      // (bool, 0) if is set to 1 then will not allow the actor to be blown away.
 blastFalloff    // (float, 1.0) Scales the velocity of the actor that gets blown away.

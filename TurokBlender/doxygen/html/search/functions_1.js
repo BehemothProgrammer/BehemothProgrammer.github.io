@@ -2,7 +2,7 @@ var searchData=
 [
   ['backpack_0',['Backpack',['../a00167.html#a62936b02bfb4a77f85b2a90e523cd702',1,'kPlayer']]],
   ['baseheight_1',['BaseHeight',['../a00111.html#a8d104322dfb08c5a77a45d2fa8588974',1,'kActor']]],
-  ['blend_2',['Blend',['../a00107.html#a1a73bd51e11bd000b1a92af66476828c',1,'kAnimState']]],
+  ['blend_2',['Blend',['../a00107.html#a1a73bd51e11bd000b1a92af66476828c',1,'kAnimState::Blend(const int animID, float speed, float blend, int flags)'],['../a00107.html#ac3e4a0e16932a45c83b6dfacf075c74d',1,'kAnimState::Blend(const int animID, float speed, float blend, int flags, const int frame, const bool runActions=true, const bool noSoundActions=false)']]],
   ['blending_3',['Blending',['../a00107.html#aad189c36c956255a6574d74eff5dfc43',1,'kAnimState']]],
   ['blendscalar_4',['BlendScalar',['../a00123.html#a4ab7662a652b7ae9de23b2d5bcb910fa',1,'kAI']]],
   ['bossdamagescaler_5',['BossDamageScaler',['../a00159.html#a3251b6f922f35a94367f3dad501ae039',1,'kGame']]],

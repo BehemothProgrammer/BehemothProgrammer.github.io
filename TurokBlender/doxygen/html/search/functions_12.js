@@ -9,7 +9,7 @@ var searchData=
   ['scriptobject_6',['ScriptObject',['../a00111.html#a75cc2d13c7280d85b5b5e69097aee84a',1,'kActor::ScriptObject()'],['../a00135.html#a51c1299298b3f0fac00de24900208cdb',1,'kFx::ScriptObject()']]],
   ['sectorindex_7',['SectorIndex',['../a00111.html#abd1b7f5c76360c403755863944f68ffb',1,'kActor::SectorIndex()'],['../a00135.html#a3b69e5a9154f8a8f3915c5859d5efac3',1,'kFx::SectorIndex()'],['../a00139.html#ab502a94caa8a3001bf185cf30ccfd2b0',1,'kCamera::SectorIndex()']]],
   ['select_8',['Select',['../a00095.html#af8eca92d7f967f7f4d69ab44ea94f3cc',1,'kSelectionListInt::Select()'],['../a00099.html#af3cc2656e6bf98ed5c1b281b078b27a4',1,'kSelectionListFloat::Select()']]],
-  ['set_9',['Set',['../a00047.html#a1cde03f9b4a09217f98be907d55a4bdc',1,'kVec3::Set()'],['../a00051.html#a2e8723d2afa10bdf1a795c240d1c6e8b',1,'kQuat::Set()'],['../a00107.html#a4d044cd96cbe2dbd798a2cc081a5b0a6',1,'kAnimState::Set()']]],
+  ['set_9',['Set',['../a00047.html#a1cde03f9b4a09217f98be907d55a4bdc',1,'kVec3::Set()'],['../a00051.html#a2e8723d2afa10bdf1a795c240d1c6e8b',1,'kQuat::Set()'],['../a00107.html#a4d044cd96cbe2dbd798a2cc081a5b0a6',1,'kAnimState::Set(const int animID, float speed, int flags)'],['../a00107.html#a54ddac6a0fda454e0b9d525a7d5f1f7a',1,'kAnimState::Set(const int animID, float speed, int flags, const int frame, const bool runActions=true, const bool noSoundActions=false)']]],
   ['setareaambience_10',['SetAreaAmbience',['../a00155.html#aaa2f4339743edfd54b8bb751b97db20f',1,'kWorld']]],
   ['setareablendlength_11',['SetAreaBlendLength',['../a00155.html#afad02ca2fc35fec080d997307be6608f',1,'kWorld']]],
   ['setareacullbits_12',['SetAreaCullBits',['../a00155.html#ad3d5ea6f80f087595f818108d1011eee',1,'kWorld']]],

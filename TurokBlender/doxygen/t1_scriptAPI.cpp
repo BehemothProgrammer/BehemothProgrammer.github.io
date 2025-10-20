@@ -1041,10 +1041,12 @@ class kAnimState
 {
 public:
     void Blend(const int animID, float speed, float blend, int flags); ///< EnumAnimStateFlags
+    void Blend(const int animID, float speed, float blend, int flags, const int frame, const bool runActions = true, const bool noSoundActions = false); ///< EnumAnimStateFlags. Blends the animation to the frame while optionally running all previous actions
     void Set(const int animID, float speed, int flags); ///< EnumAnimStateFlags
+    void Set(const int animID, float speed, int flags, const int frame, const bool runActions = true, const bool noSoundActions = false); ///< EnumAnimStateFlags. Sets the animation to the frame while optionally running all previous actions
     const int CurrentFrame(); ///< current frame playing for the current animation. Must have an animation action keyframe for this to work, otherwise use TrackFrame() instead. This should be named more like last frame an action was checked to execute.
-    const int NumFrames(); ///< number of frames in this animation
-    const int NumNodes(); ///< number of nodes in this animation
+    const int NumFrames(); ///< number of frames in this animation. Returns -1 if no animation set.
+    const int NumNodes(); ///< number of nodes in this animation. Returns -1 if no animation set.
     const float PlayTime(); ///< increases by GAME_DELTA_TIME if not stopped or paused.
     const float TrackTime(); ///< time from 0(on first frame) to 1(on last frame).
     bool IsPlaying(const int animID); ///< Returns true if current animations ID is animID and the animation is not stopped.
@@ -1066,9 +1068,9 @@ public:
     kQuat GetRotation(const int animID, int nodeNum, int frame);
     kVec3 GetOrigin(const int animID, int nodeNum, int frame);
     const int GetAnimNumFrames(const int animID);
+    const int LoopFrame(); ///< The frame the animation loops back to when it reaches the last frame. Returns -1 if no animation set.
     int flags; ///< EnumAnimStateFlags
     
-
     /**
      * @brief is somewhat the Z position of the root node. It's calculated as follows whenever the
      * root motion is updated (ANF_ROOTMOTION must be set).
@@ -1081,7 +1083,7 @@ public:
      * @endcode
      */
     float baseOffset;
-    kVec3 rootMotion;   ///< the move direction of the root node from the prev frame to the current frame.
+    kVec3 rootMotion; ///< the move direction of the root node from the prev frame to the current frame.
 };
 
 /**
