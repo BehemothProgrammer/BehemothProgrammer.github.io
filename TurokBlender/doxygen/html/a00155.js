@@ -50,6 +50,7 @@ var a00155 =
     [ "OverrideFogColor", "a00155.html#a654d22e3831f752328019fd8920ae252", null ],
     [ "OverrideSkyMaterial", "a00155.html#acca5ec836d0b5fee212f52a3bb2aa435", null ],
     [ "OverrideWaterFogColor", "a00155.html#a3e64f6f8deed81297d0aae9909c18975", null ],
+    [ "PointInsideSector", "a00155.html#ace28c637868d49feac62f70e30a2f724", null ],
     [ "SetAreaAmbience", "a00155.html#aaa2f4339743edfd54b8bb751b97db20f", null ],
     [ "SetAreaBlendLength", "a00155.html#afad02ca2fc35fec080d997307be6608f", null ],
     [ "SetAreaCullBits", "a00155.html#ad3d5ea6f80f087595f818108d1011eee", null ],

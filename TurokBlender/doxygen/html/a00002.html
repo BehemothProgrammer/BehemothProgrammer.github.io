@@ -2074,7 +2074,7 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a3f77cb5ac956672e1e1471570357030ca10faeff2740ffee565a18f5d37b9f6e4" name="a3f77cb5ac956672e1e1471570357030ca10faeff2740ffee565a18f5d37b9f6e4"></a>CF_NOCLIPTARGETACTORS&#160;</td><td class="fieldinit">4194304&#160;</td><td class="fielddoc"><p>don't clip actors that are targeted by moving object </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc" name="a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc"></a>CF_COLLIDETRIGGERS&#160;</td><td class="fieldinit">8388608&#160;</td><td class="fielddoc"><p>block edges belonging to a trigger </p>
+<tr><td class="fieldname"><a id="a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc" name="a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc"></a>CF_COLLIDETRIGGERS&#160;</td><td class="fieldinit">8388608&#160;</td><td class="fielddoc"><p>block edges belonging to a trigger. Can't cross into sectors if sector has AAF_EVENT. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a3f77cb5ac956672e1e1471570357030ca29aa22ddc576bb2a33e8e23aeb7a768d" name="a3f77cb5ac956672e1e1471570357030ca29aa22ddc576bb2a33e8e23aeb7a768d"></a>CF_STANDONOBJECTS&#160;</td><td class="fieldinit">16777216&#160;</td><td class="fielddoc"><p>allow vertical clipping of objects </p>
 </td></tr>
@@ -2115,7 +2115,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  389</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030caf510bbfe290b46bd0fdce352ef2677fd">CF_COLLIDEWATER</a> = 1048576, <span class="comment">///&lt; clip movement against the water surface</span></div>
 <div class="line"><span class="lineno">  390</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030ca39c5db56c6fffa6209419049ec71d80f">CF_USEWALLRADIUS</a> = 2097152, <span class="comment">///&lt; clip and project movement away from walls based on wall radius</span></div>
 <div class="line"><span class="lineno">  391</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030ca10faeff2740ffee565a18f5d37b9f6e4">CF_NOCLIPTARGETACTORS</a> = 4194304, <span class="comment">///&lt; don&#39;t clip actors that are targeted by moving object</span></div>
-<div class="line"><span class="lineno">  392</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc">CF_COLLIDETRIGGERS</a> = 8388608, <span class="comment">///&lt; block edges belonging to a trigger</span></div>
+<div class="line"><span class="lineno">  392</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc">CF_COLLIDETRIGGERS</a> = 8388608, <span class="comment">///&lt; block edges belonging to a trigger. Can&#39;t cross into sectors if sector has AAF_EVENT.</span></div>
 <div class="line"><span class="lineno">  393</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030ca29aa22ddc576bb2a33e8e23aeb7a768d">CF_STANDONOBJECTS</a> = 16777216, <span class="comment">///&lt; allow vertical clipping of objects</span></div>
 <div class="line"><span class="lineno">  394</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030caf6b662d955a0f0aa4f311284ace72622">CF_GREASESLIDEOBJECTS</a> = 33554432, <span class="comment">///&lt; always keep movement projected away from collided objects</span></div>
 <div class="line"><span class="lineno">  395</span>    <a class="code hl_enumvalue" href="#a3f77cb5ac956672e1e1471570357030ca373f781b36a4b690a32961d275f23142">CF_ALLOWRESTRICTEDAREAS</a> = 67108864, <span class="comment">///&lt; don&#39;t collide with edges belonging to a restricted sector</span></div>
@@ -2137,7 +2137,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030ca6abd4c66826c44cc584997b9d95676c9"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030ca6abd4c66826c44cc584997b9d95676c9">CF_NOEXITWATER</a></div><div class="ttdeci">@ CF_NOEXITWATER</div><div class="ttdoc">block all edges that links to a non-water sector</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00373">t1_scriptAPI.cpp:373</a></div></div>
 <div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030ca8dac62f576fa16b2cfcbcc3ffe7f4387"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030ca8dac62f576fa16b2cfcbcc3ffe7f4387">CF_WALKWALLS</a></div><div class="ttdeci">@ CF_WALKWALLS</div><div class="ttdoc">don&#39;t restrict movement to steep slopes</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00376">t1_scriptAPI.cpp:376</a></div></div>
 <div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030ca8e1107644e032667dc527587d9ec805b"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030ca8e1107644e032667dc527587d9ec805b">CF_NOCOLLIDEFUNC</a></div><div class="ttdeci">@ CF_NOCOLLIDEFUNC</div><div class="ttdoc">don&#39;t invoke the OnCollide callback on the moving object</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00386">t1_scriptAPI.cpp:386</a></div></div>
-<div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc">CF_COLLIDETRIGGERS</a></div><div class="ttdeci">@ CF_COLLIDETRIGGERS</div><div class="ttdoc">block edges belonging to a trigger</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00392">t1_scriptAPI.cpp:392</a></div></div>
+<div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030ca93418f757b0b6bd9d76665f8b6d156bc">CF_COLLIDETRIGGERS</a></div><div class="ttdeci">@ CF_COLLIDETRIGGERS</div><div class="ttdoc">block edges belonging to a trigger. Can&#39;t cross into sectors if sector has AAF_EVENT.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00392">t1_scriptAPI.cpp:392</a></div></div>
 <div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030caa527d6146d727eafdd967247ce1232fc"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030caa527d6146d727eafdd967247ce1232fc">CF_NOEXITWALLS</a></div><div class="ttdeci">@ CF_NOEXITWALLS</div><div class="ttdoc">clip all edges, regardless if they link to another sector or not</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00385">t1_scriptAPI.cpp:385</a></div></div>
 <div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030caafbd0e3322217eb4cd0264b408af1a84"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030caafbd0e3322217eb4cd0264b408af1a84">CF_COLLIDECORPSES</a></div><div class="ttdeci">@ CF_COLLIDECORPSES</div><div class="ttdoc">clip against actors flagged as dead</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00384">t1_scriptAPI.cpp:384</a></div></div>
 <div class="ttc" id="aa00002_html_a3f77cb5ac956672e1e1471570357030cab1983bc5d3290b14b5e9bac9aa7121d6"><div class="ttname"><a href="#a3f77cb5ac956672e1e1471570357030cab1983bc5d3290b14b5e9bac9aa7121d6">CF_POLYCOLLISION</a></div><div class="ttdeci">@ CF_POLYCOLLISION</div><div class="ttdoc">clip movement against all model polygons of an object</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00398">t1_scriptAPI.cpp:398</a></div></div>
@@ -3164,7 +3164,7 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><a class="code hl_function" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a>();</div>
 <div class="ttc" id="aa00002_html_a036fa599be44d9300e7e68836bc84cac"><div class="ttname"><a href="#a036fa599be44d9300e7e68836bc84cac">kStrSplit</a></div><div class="ttdeci">void kStrSplit(const kStr &amp;in s, const kStr &amp;in sep)</div></div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02408">t1_scriptAPI.cpp:2408</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02414">t1_scriptAPI.cpp:2414</a></div></div>
 <div class="ttc" id="aa00002_html_a62ecb3a8742780dd7a60227b58bb6425"><div class="ttname"><a href="#a62ecb3a8742780dd7a60227b58bb6425">kStrSplitLength</a></div><div class="ttdeci">uint kStrSplitLength()</div><div class="ttdoc">returns the amount of strings that were split</div></div>
 <div class="ttc" id="aa00002_html_ab3734771fb77f9d7b55707dbc0e6f473"><div class="ttname"><a href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a></div><div class="ttdeci">void kStrSplitClear()</div><div class="ttdoc">clear the list of split strings after your done. Not required to call because it gets cleared when yo...</div></div>
 <div class="ttc" id="aa00002_html_ade0fa312f49a45392ed9a7742807d101"><div class="ttname"><a href="#ade0fa312f49a45392ed9a7742807d101">kStrSplitGet</a></div><div class="ttdeci">kStr kStrSplitGet(const int index)</div><div class="ttdoc">returns the string at index</div></div>
@@ -3247,7 +3247,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02412">2412</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02418">2418</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3263,7 +3263,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02415">2415</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02421">2421</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3279,7 +3279,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02417">2417</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02423">2423</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3295,7 +3295,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02411">2411</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02417">2417</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3311,7 +3311,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02404">2404</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02410">2410</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3327,7 +3327,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02403">2403</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02409">2409</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3343,7 +3343,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02405">2405</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02411">2411</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3359,7 +3359,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02407">2407</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02413">2413</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3375,7 +3375,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02406">2406</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02412">2412</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3393,7 +3393,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile, Game.LoadModFile, and Game.LoadModDataFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02410">2410</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02416">2416</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3409,7 +3409,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02409">2409</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02415">2415</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3425,7 +3425,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02414">2414</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02420">2420</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3441,7 +3441,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02413">2413</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02419">2419</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3457,7 +3457,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02408">2408</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02414">2414</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3473,7 +3473,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02416">2416</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02422">2422</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

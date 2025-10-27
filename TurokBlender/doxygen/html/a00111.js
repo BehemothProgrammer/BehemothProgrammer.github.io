@@ -18,6 +18,7 @@ var a00111 =
     [ "CheckPosition", "a00111.html#a9193eb64a11aab2814c5f3da3d979743", null ],
     [ "ChildOfTarget", "a00111.html#aad1c307b7f8c36b4a2c328ca1015aa0d", null ],
     [ "ClearCustomRef", "a00111.html#a3400ff6f42bdb48fc76aa5030df4aeb6", null ],
+    [ "ClearFxEvent", "a00111.html#a77a898464adf0ae27d2e9ba59b32fa97", null ],
     [ "ClearInterpolation", "a00111.html#ad32cdd50fa4e3caa6f1e0cd13a468298", null ],
     [ "ClipFlags", "a00111.html#a79d8fb16c51c558c39d18533c84a9058", null ],
     [ "DamageFx", "a00111.html#a0eb5af8816d65d3e6259880c0eddda44", null ],

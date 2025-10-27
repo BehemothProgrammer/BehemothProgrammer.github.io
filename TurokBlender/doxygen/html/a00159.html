@@ -128,6 +128,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af41068b8da76384b5df8726f810f0539" id="r_af41068b8da76384b5df8726f810f0539"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af41068b8da76384b5df8726f810f0539">PlaySoundID</a> (const int soundID)</td></tr>
 <tr class="separator:af41068b8da76384b5df8726f810f0539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa2529769d61380b0096584d51139fd6" id="r_aaa2529769d61380b0096584d51139fd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa2529769d61380b0096584d51139fd6">PlayMusic</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in path, const bool loop)</td></tr>
+<tr class="memdesc:aaa2529769d61380b0096584d51139fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use PlayMusicID instead.  <br /></td></tr>
 <tr class="separator:aaa2529769d61380b0096584d51139fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a797b07d67e0ab05ca4a52bbe060a0e23" id="r_a797b07d67e0ab05ca4a52bbe060a0e23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a797b07d67e0ab05ca4a52bbe060a0e23">MusicIsPlaying</a> ()</td></tr>
 <tr class="separator:a797b07d67e0ab05ca4a52bbe060a0e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,6 +138,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3d0bbfd3107bda13c642cff96367073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2954134d432df7b07f5ca1699994c1e" id="r_ac2954134d432df7b07f5ca1699994c1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2954134d432df7b07f5ca1699994c1e">ResumeMusic</a> ()</td></tr>
 <tr class="separator:ac2954134d432df7b07f5ca1699994c1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a337939b4b554ad8a8b3352fff542ec" id="r_a6a337939b4b554ad8a8b3352fff542ec"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a337939b4b554ad8a8b3352fff542ec">MusicPlayTime</a> ()</td></tr>
+<tr class="memdesc:a6a337939b4b554ad8a8b3352fff542ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the amount of time the music has been playing for in seconds. Doesn't reset back to 0 when looping. if no music is playing returns -1.0.  <br /></td></tr>
+<tr class="separator:a6a337939b4b554ad8a8b3352fff542ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab61eeebe435735b4aafcd026632f6574" id="r_ab61eeebe435735b4aafcd026632f6574"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab61eeebe435735b4aafcd026632f6574">MusicSong</a> ()</td></tr>
 <tr class="separator:ab61eeebe435735b4aafcd026632f6574"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab807ece55cc1815b6b95df28b9811305" id="r_ab807ece55cc1815b6b95df28b9811305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab807ece55cc1815b6b95df28b9811305">MusicPitch</a> (const float pitch)</td></tr>
@@ -523,6 +527,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0618138add7159c26fe61d64c9930fdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set: Game.OverrideRespawningEnemies(); Get: GameVariables.GetInt("OverrideRespawningEnemies", result); 0=none, 1=force disable, 2=force enable.  <br /></td></tr>
 <tr class="separator:a0618138add7159c26fe61d64c9930fdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92a20789af5924057ee6306d45c6c864" id="r_a92a20789af5924057ee6306d45c6c864"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92a20789af5924057ee6306d45c6c864">PlayMusicID</a> (const int musicID, const int fadeTimeMS=500, const bool loop=true)</td></tr>
+<tr class="memdesc:a92a20789af5924057ee6306d45c6c864"><td class="mdescLeft">&#160;</td><td class="mdescRight">MusicID -2 plays previous track, -1 stops the music.  <br /></td></tr>
 <tr class="separator:a92a20789af5924057ee6306d45c6c864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac20c52a7fe6c9194bf6648ed64fc63fe" id="r_ac20c52a7fe6c9194bf6648ed64fc63fe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac20c52a7fe6c9194bf6648ed64fc63fe">MusicIsFading</a> ()</td></tr>
 <tr class="separator:ac20c52a7fe6c9194bf6648ed64fc63fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -601,10 +606,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2b3999faa3ff84aec82893510434442a" id="r_a2b3999faa3ff84aec82893510434442a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b3999faa3ff84aec82893510434442a">ScreenPointToHUDNoStretch</a> (float sx, float sy, float &amp;out x, float &amp;out y)</td></tr>
 <tr class="memdesc:a2b3999faa3ff84aec82893510434442a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HUD position of the screen point.  <br /></td></tr>
 <tr class="separator:a2b3999faa3ff84aec82893510434442a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a909f9eef766d3ecb58e3f820aa0e9103" id="r_a909f9eef766d3ecb58e3f820aa0e9103"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a909f9eef766d3ecb58e3f820aa0e9103">NoDamageFlash</a> (void)</td></tr>
+<tr class="separator:a909f9eef766d3ecb58e3f820aa0e9103"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df8e81c9d75c547ff342d58e931d546" id="r_a6df8e81c9d75c547ff342d58e931d546"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6df8e81c9d75c547ff342d58e931d546">NoPickupFlash</a> (void)</td></tr>
+<tr class="separator:a6df8e81c9d75c547ff342d58e931d546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1efa60647f414fb043f6f53ce4c987" id="r_a0f1efa60647f414fb043f6f53ce4c987"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1efa60647f414fb043f6f53ce4c987">NoArmorFlash</a> (void)</td></tr>
+<tr class="separator:a0f1efa60647f414fb043f6f53ce4c987"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01906">1906</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01908">1908</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1287,9 +1298,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02408">t1_scriptAPI.cpp:2408</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02411">t1_scriptAPI.cpp:2411</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02409">t1_scriptAPI.cpp:2409</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02414">t1_scriptAPI.cpp:2414</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02417">t1_scriptAPI.cpp:2417</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02415">t1_scriptAPI.cpp:2415</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -2751,6 +2762,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6a337939b4b554ad8a8b3352fff542ec" name="a6a337939b4b554ad8a8b3352fff542ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a337939b4b554ad8a8b3352fff542ec">&#9670;&#160;</a></span>MusicPlayTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float kGame::MusicPlayTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the amount of time the music has been playing for in seconds. Doesn't reset back to 0 when looping. if no music is playing returns -1.0. </p>
+
+</div>
+</div>
 <a id="ab61eeebe435735b4aafcd026632f6574" name="ab61eeebe435735b4aafcd026632f6574"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab61eeebe435735b4aafcd026632f6574">&#9670;&#160;</a></span>MusicSong()</h2>
 
@@ -2822,6 +2852,57 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>On the next call to SpawnFx or any other function that calls SpawnFx (such as SpawnProjectile and FireProjectile), all the Fx that were spawned will be stored in Game.GetFxResult. Do not make nested calls to this! </p>
+
+</div>
+</div>
+<a id="a0f1efa60647f414fb043f6f53ce4c987" name="a0f1efa60647f414fb043f6f53ce4c987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f1efa60647f414fb043f6f53ce4c987">&#9670;&#160;</a></span>NoArmorFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kGame::NoArmorFlash </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a909f9eef766d3ecb58e3f820aa0e9103" name="a909f9eef766d3ecb58e3f820aa0e9103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a909f9eef766d3ecb58e3f820aa0e9103">&#9670;&#160;</a></span>NoDamageFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kGame::NoDamageFlash </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6df8e81c9d75c547ff342d58e931d546" name="a6df8e81c9d75c547ff342d58e931d546"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6df8e81c9d75c547ff342d58e931d546">&#9670;&#160;</a></span>NoPickupFlash()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kGame::NoPickupFlash </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -3204,6 +3285,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Use PlayMusicID instead. </p>
+
 </div>
 </div>
 <a id="a92a20789af5924057ee6306d45c6c864" name="a92a20789af5924057ee6306d45c6c864"></a>
@@ -3229,6 +3312,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>MusicID -2 plays previous track, -1 stops the music. </p>
 
 </div>
 </div>

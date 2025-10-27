@@ -285,10 +285,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afaca9ab9271489153210991be9e1240e" id="r_afaca9ab9271489153210991be9e1240e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaca9ab9271489153210991be9e1240e">MoveSectorPlatform</a> (const int sectorIndex, const <a class="el" href="a00047.html">kVec3</a> &amp;in moveDelta, const uint flags=<a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a>)</td></tr>
 <tr class="memdesc:afaca9ab9271489153210991be9e1240e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a>. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors.  <br /></td></tr>
 <tr class="separator:afaca9ab9271489153210991be9e1240e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace28c637868d49feac62f70e30a2f724" id="r_ace28c637868d49feac62f70e30a2f724"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace28c637868d49feac62f70e30a2f724">PointInsideSector</a> (const int sectorIndex, const <a class="el" href="a00047.html">kVec3</a> &amp;in point) const</td></tr>
+<tr class="memdesc:ace28c637868d49feac62f70e30a2f724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if point is inside the sector (XY only)  <br /></td></tr>
+<tr class="separator:ace28c637868d49feac62f70e30a2f724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01741">1741</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01742">1742</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a46796d92aa0b83b41d875719b9a2447f" name="a46796d92aa0b83b41d875719b9a2447f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46796d92aa0b83b41d875719b9a2447f">&#9670;&#160;</a></span>ChangeAreaArg()</h2>
@@ -1476,6 +1479,29 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>rgb values are 0-255 </p>
+
+</div>
+</div>
+<a id="ace28c637868d49feac62f70e30a2f724" name="ace28c637868d49feac62f70e30a2f724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace28c637868d49feac62f70e30a2f724">&#9670;&#160;</a></span>PointInsideSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kWorld::PointInsideSector </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if point is inside the sector (XY only) </p>
 
 </div>
 </div>

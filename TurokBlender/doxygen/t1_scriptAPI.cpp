@@ -389,7 +389,7 @@ enum EnumClipFlags
     CF_COLLIDEWATER = 1048576, ///< clip movement against the water surface
     CF_USEWALLRADIUS = 2097152, ///< clip and project movement away from walls based on wall radius
     CF_NOCLIPTARGETACTORS = 4194304, ///< don't clip actors that are targeted by moving object
-    CF_COLLIDETRIGGERS = 8388608, ///< block edges belonging to a trigger
+    CF_COLLIDETRIGGERS = 8388608, ///< block edges belonging to a trigger. Can't cross into sectors if sector has AAF_EVENT.
     CF_STANDONOBJECTS = 16777216, ///< allow vertical clipping of objects
     CF_GREASESLIDEOBJECTS = 33554432, ///< always keep movement projected away from collided objects
     CF_ALLOWRESTRICTEDAREAS = 67108864, ///< don't collide with edges belonging to a restricted sector
@@ -1191,7 +1191,8 @@ public:
     const float GetCeilingHeight() const; ///< calculates the ceiling height from the actors sector and origin. Returns 0 if not in a sector.
     const float GetFloorHeight() const; ///< calculates the floor height from the actors sector and origin. Returns 0 if not in a sector.
     void RunFxEvent(const kStr&in fxEventName); ///< Runs an ActorFX event. Example: RunFxEvent("Enemy_Freeze");
-    bool FxEventActive(); ///< Returns true if FxEvent is running
+    void ClearFxEvent(); ///< Clears all data for the actors ActorFx on this actor
+    bool FxEventActive(); ///< Returns true if ActorFx is running
     const int GetSectorIndexAtLocation(const kVec3&in pos, uint excludeClipFlags = 0); ///< excludeClipFlags to ignore/disable (EnumClipFlags)
     void MarkPersistentBit(const bool clear);
     const bool IsPersistentMarked();
@@ -1901,6 +1902,7 @@ public:
     const int GetSectorDrawOrder(const int sectorIndex) const;      ///< lowest draw order (0) draws the sectors on the automap last
     void SetSectorDrawOrder(const int sectorIndex, const int drawOrder);    ///< lowest draw order (0) draws the sectors on the automap last
     void MoveSectorPlatform(const int sectorIndex, const kVec3 &in moveDelta, const uint flags = SPF_DEFAULT); ///< EnumSectorPlatformFlags. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors
+    const bool PointInsideSector(const int sectorIndex, const kVec3 &in point) const; ///< Returns true if point is inside the sector (XY only)
 };
 
 class kGame
@@ -1912,11 +1914,12 @@ public:
     void HaltMapScript(const int scriptID);
     void PlaySound(const kStr&in path);
     void PlaySoundID(const int soundID);
-    void PlayMusic(const kStr&in path, const bool loop);
+    void PlayMusic(const kStr&in path, const bool loop); ///< Use PlayMusicID instead.
     bool MusicIsPlaying();
     bool MusicIsPaused();
     void PauseMusic();
     void ResumeMusic();
+    float MusicPlayTime(); ///< Returns the amount of time the music has been playing for in seconds. Doesn't reset back to 0 when looping. if no music is playing returns -1.0
     kStr MusicSong();
     void MusicPitch(const float pitch);
 
@@ -2180,7 +2183,7 @@ public:
     void OpenAudioMenu();
     bool EnemiesAlwaysDropItems();  ///< Returns the gameplay menu option value
     void OverrideRespawningEnemies(const int value);  ///< Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result);  0=none, 1=force disable, 2=force enable
-    void PlayMusicID(const int musicID, const int fadeTimeMS = 500, const bool loop = true);
+    void PlayMusicID(const int musicID, const int fadeTimeMS = 500, const bool loop = true); ///< MusicID -2 plays previous track, -1 stops the music.
     bool MusicIsFading();
     bool IsRunningMapScript(const int scriptID);
     kStr GetMapNameFromID(const int mapID); ///< Finds the name of the map with the mapID
@@ -2208,6 +2211,9 @@ public:
     bool CanUseCustomNoStretch(); ///< Returns true if aspect ratio is 4:3 or bigger width
     void ScreenPointToHUD(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
     void ScreenPointToHUDNoStretch(float sx, float sy, float&out x, float&out y); ///< Returns the HUD position of the screen point
+    bool &NoDamageFlash(void);
+    bool &NoPickupFlash(void);
+    bool &NoArmorFlash(void);
 };
 
 /**
