@@ -1259,7 +1259,7 @@ public:
     void RotateAroundOrigin(const kAngle &in angle, const kVec3 &in platformOrigin, const bool setPos = true); ///< The angle amount to rotate this actors position. if setPos is true will use SetPosition to position the actor else will use MoveToPosition.
     void LinkArea(); ///< Links the actor to an area node so that internally the actor can be found in quick searches (similar to a kd-tree) for explosive damage radius checks, when InteractActorsAtPosition is called, kAI GetAttention checks, and collision checks against actors. Should only call whenever you set the actors Origin() directly. Calling MoveToPosition or SetPosition or when the actors movement is updated by velocity changes or by gravity then LinkArea will be called internally.
     void CheckLinkArea();   ///< If origin or radius changed since the last LinkArea then calls LinkArea else does nothing. Links the Actor to an area node so that internally the Actor can be found in quick searches (similar to a kd-tree).
-    float SoundPlayTime(const kStr &in file); ///< returns -1 if sound is not playing. Returns the amount of time in seconds the sound has been playing for. file is the "wavefile" property in the sound shader.
+    float SoundPlayTime(const kStr &in file, const uint index = 0); ///< returns -1.0f if sound is not playing. Returns the amount of time in seconds the sound has been playing for. file is the path to the .ksnd file. use index to specify which sound to check for in the ksnd starting at 0.
     bool &RemoveTrailsOnAnimChange(); ///< Will remove all model trails on this actor when animation is set/blend
     const float GetCurrentGameSpeed(void) const; ///< Gamespeed of this Actor (default 1.0f)
     void SetCurrentGameSpeed(const float speed); ///< Set Gamespeed of this Actor (default 1.0f)
@@ -2214,6 +2214,8 @@ public:
     bool &NoDamageFlash(void);
     bool &NoPickupFlash(void);
     bool &NoArmorFlash(void);
+    void SetAllSoundsPitchScale(const float pitchScale); ///< Sets all playing sounds pitch scale
+    void SetGlobalSoundPitch(const float pitch); ///< When sounds begin to play their pitch is scaled by this value
 };
 
 /**

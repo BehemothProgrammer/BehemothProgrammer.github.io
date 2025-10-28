@@ -356,6 +356,7 @@ sounds[1] = //number of sounds in this shader
         wavefile = "sounds/waves/talset/ashamed.wav" // the sound file path
         bOneInstancePerSource = 0   // if sound has a source then this can only be played if this sound is not being played.
         bLoop = 0                   // loops the sound when it plays
+        bNoGlobalPitch = 0          // ignores global pitch scale value
         bEnableVolumeEnvelope = 0   // enable the volume_envelope lerp
         bEnablePitchEnvelope = 0    // enable the pitch_envelope lerp
         bFadeIfObstructed = 0       // on every other tick, if the sound has a source and CanSee player then keeps volume at normal, if can't see the player then fades out the volume.

@@ -612,6 +612,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6df8e81c9d75c547ff342d58e931d546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f1efa60647f414fb043f6f53ce4c987" id="r_a0f1efa60647f414fb043f6f53ce4c987"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1efa60647f414fb043f6f53ce4c987">NoArmorFlash</a> (void)</td></tr>
 <tr class="separator:a0f1efa60647f414fb043f6f53ce4c987"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6af12bdcfd24c7b13acb57af1d1cb8a2" id="r_a6af12bdcfd24c7b13acb57af1d1cb8a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6af12bdcfd24c7b13acb57af1d1cb8a2">SetAllSoundsPitchScale</a> (const float pitchScale)</td></tr>
+<tr class="memdesc:a6af12bdcfd24c7b13acb57af1d1cb8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all playing sounds pitch scale.  <br /></td></tr>
+<tr class="separator:a6af12bdcfd24c7b13acb57af1d1cb8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a01d5cfccdef2f98006164b24969a9b" id="r_a5a01d5cfccdef2f98006164b24969a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a01d5cfccdef2f98006164b24969a9b">SetGlobalSoundPitch</a> (const float pitch)</td></tr>
+<tr class="memdesc:a5a01d5cfccdef2f98006164b24969a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">When sounds begin to play their pitch is scaled by this value.  <br /></td></tr>
+<tr class="separator:a5a01d5cfccdef2f98006164b24969a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -1298,9 +1304,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02414">t1_scriptAPI.cpp:2414</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02417">t1_scriptAPI.cpp:2417</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02415">t1_scriptAPI.cpp:2415</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02416">t1_scriptAPI.cpp:2416</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02419">t1_scriptAPI.cpp:2419</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02417">t1_scriptAPI.cpp:2417</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -3701,6 +3707,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6af12bdcfd24c7b13acb57af1d1cb8a2" name="a6af12bdcfd24c7b13acb57af1d1cb8a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6af12bdcfd24c7b13acb57af1d1cb8a2">&#9670;&#160;</a></span>SetAllSoundsPitchScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::SetAllSoundsPitchScale </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>pitchScale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets all playing sounds pitch scale. </p>
+
+</div>
+</div>
 <a id="add615686496c6a413bc8e0d239e365b4" name="add615686496c6a413bc8e0d239e365b4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add615686496c6a413bc8e0d239e365b4">&#9670;&#160;</a></span>SetArmorFlash()</h2>
 
@@ -3827,6 +3852,25 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a5a01d5cfccdef2f98006164b24969a9b" name="a5a01d5cfccdef2f98006164b24969a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a01d5cfccdef2f98006164b24969a9b">&#9670;&#160;</a></span>SetGlobalSoundPitch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::SetGlobalSoundPitch </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>pitch</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When sounds begin to play their pitch is scaled by this value. </p>
 
 </div>
 </div>
