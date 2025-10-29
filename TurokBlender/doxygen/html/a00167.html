@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: kPlayer Class Reference</title>
+<title>Turok: kWorld Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,616 +106,1007 @@ $(function(){initNavTree('a00167.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00164.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">kPlayer Class Reference</div></div>
+  <div class="headertitle"><div class="title">kWorld Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a51530aa7c9b564d62c48f118ac59202f" id="r_a51530aa7c9b564d62c48f118ac59202f"><td class="memItemLeft" align="right" valign="top">const uint16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51530aa7c9b564d62c48f118ac59202f">Buttons</a> () const</td></tr>
-<tr class="memdesc:a51530aa7c9b564d62c48f118ac59202f"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns <a class="el" href="a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78">EnumPlayerButtons</a>  <br /></td></tr>
-<tr class="separator:a51530aa7c9b564d62c48f118ac59202f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90b7cc6d01c83b755c3f01d8c303c7f0" id="r_a90b7cc6d01c83b755c3f01d8c303c7f0"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90b7cc6d01c83b755c3f01d8c303c7f0">ButtonHeldTime</a> (const int btn)</td></tr>
-<tr class="memdesc:a90b7cc6d01c83b755c3f01d8c303c7f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">btn type is <a class="el" href="a00002.html#a535fd14ac2206cff551e68d507e620c0">EnumInputActions</a>  <br /></td></tr>
-<tr class="separator:a90b7cc6d01c83b755c3f01d8c303c7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09bdf282de9c50d8bf21462590571f19" id="r_a09bdf282de9c50d8bf21462590571f19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00127.html">kPuppet</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09bdf282de9c50d8bf21462590571f19">Actor</a> ()</td></tr>
-<tr class="separator:a09bdf282de9c50d8bf21462590571f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a735bca530c88d5c8bc495fe7d48fc1aa" id="r_a735bca530c88d5c8bc495fe7d48fc1aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a735bca530c88d5c8bc495fe7d48fc1aa">ConsumeAmmo</a> (const int ammo, const bool preferredAmmo=true)</td></tr>
-<tr class="separator:a735bca530c88d5c8bc495fe7d48fc1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8601e769b44c3ce6f521a173ae7054e" id="r_af8601e769b44c3ce6f521a173ae7054e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8601e769b44c3ce6f521a173ae7054e">ConsumeAltAmmo</a> (const int ammo)</td></tr>
-<tr class="separator:af8601e769b44c3ce6f521a173ae7054e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed3467092239895a6307866bbae3dfac" id="r_aed3467092239895a6307866bbae3dfac"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed3467092239895a6307866bbae3dfac">GetAmmo</a> (const int weaponID) const</td></tr>
-<tr class="separator:aed3467092239895a6307866bbae3dfac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f73209251df37713c7505c322f6d2a" id="r_a15f73209251df37713c7505c322f6d2a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15f73209251df37713c7505c322f6d2a">GetAltAmmo</a> (const int weaponID) const</td></tr>
-<tr class="separator:a15f73209251df37713c7505c322f6d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad04697b2730dc03205fbc032b11136c7" id="r_ad04697b2730dc03205fbc032b11136c7"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad04697b2730dc03205fbc032b11136c7">HasAmmo</a> (const int weaponID, const bool checkAlt=true) const</td></tr>
-<tr class="memdesc:ad04697b2730dc03205fbc032b11136c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">if checkAlt is false only checks primary ammo  <br /></td></tr>
-<tr class="separator:ad04697b2730dc03205fbc032b11136c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0031e84971f5928addca949868858c2b" id="r_a0031e84971f5928addca949868858c2b"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0031e84971f5928addca949868858c2b">HasAltAmmo</a> (const int weaponID) const</td></tr>
-<tr class="separator:a0031e84971f5928addca949868858c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04bdbf3e87f45f54b1abb2737e8f0675" id="r_a04bdbf3e87f45f54b1abb2737e8f0675"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04bdbf3e87f45f54b1abb2737e8f0675">HasAltAmmo</a> () const</td></tr>
-<tr class="separator:a04bdbf3e87f45f54b1abb2737e8f0675"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3e077292ee5923b081b6484a0958195" id="r_ad3e077292ee5923b081b6484a0958195"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3e077292ee5923b081b6484a0958195">HasWeapon</a> (const int weaponID) const</td></tr>
-<tr class="separator:ad3e077292ee5923b081b6484a0958195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa20f009a0d4b047853e41db1bfbb16ca" id="r_aa20f009a0d4b047853e41db1bfbb16ca"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa20f009a0d4b047853e41db1bfbb16ca">UseAltAmmo</a> ()</td></tr>
-<tr class="separator:aa20f009a0d4b047853e41db1bfbb16ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a842f5956bad09cc5366b521a776c7c7c" id="r_a842f5956bad09cc5366b521a776c7c7c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a842f5956bad09cc5366b521a776c7c7c">CurrentWeapon</a> () const</td></tr>
-<tr class="separator:a842f5956bad09cc5366b521a776c7c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae48f202c2e1e7489d44508c8f66c4b89" id="r_ae48f202c2e1e7489d44508c8f66c4b89"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae48f202c2e1e7489d44508c8f66c4b89">GiveWeapon</a> (const int weaponID, const int ammo, const bool switchNewWeapon=true)</td></tr>
-<tr class="memdesc:ae48f202c2e1e7489d44508c8f66c4b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns true if gave ammo else returns false because already has full primary ammo. if switchNewWeapon is false it will not auto switch to the weapon.  <br /></td></tr>
-<tr class="separator:ae48f202c2e1e7489d44508c8f66c4b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab382a70aa56834574e3b1728b0e38baa" id="r_ab382a70aa56834574e3b1728b0e38baa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab382a70aa56834574e3b1728b0e38baa">RemoveWeapon</a> (const int weapon)</td></tr>
-<tr class="separator:ab382a70aa56834574e3b1728b0e38baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadeddfea49654de0ef80a704050b1227" id="r_aadeddfea49654de0ef80a704050b1227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aadeddfea49654de0ef80a704050b1227">Lock</a> ()</td></tr>
-<tr class="separator:aadeddfea49654de0ef80a704050b1227"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abdfd0f51bac3e19927cad316465e0a3d" id="r_abdfd0f51bac3e19927cad316465e0a3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abdfd0f51bac3e19927cad316465e0a3d">Unlock</a> ()</td></tr>
-<tr class="separator:abdfd0f51bac3e19927cad316465e0a3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d56113eb7f8fefd71791d6f36c61577" id="r_a2d56113eb7f8fefd71791d6f36c61577"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d56113eb7f8fefd71791d6f36c61577">Armor</a> ()</td></tr>
-<tr class="separator:a2d56113eb7f8fefd71791d6f36c61577"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29d220020a1f54f85118a8e63b89cdd9" id="r_a29d220020a1f54f85118a8e63b89cdd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29d220020a1f54f85118a8e63b89cdd9">Victory</a> (const int warpActorID=- 1, const int mapID=- 1)</td></tr>
-<tr class="separator:a29d220020a1f54f85118a8e63b89cdd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d130e18d026002f6b896b73177a1e14" id="r_a8d130e18d026002f6b896b73177a1e14"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d130e18d026002f6b896b73177a1e14">Locked</a> () const</td></tr>
-<tr class="separator:a8d130e18d026002f6b896b73177a1e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5f1d5e0a876e23d8785664e4838df5b" id="r_ad5f1d5e0a876e23d8785664e4838df5b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f1d5e0a876e23d8785664e4838df5b">Lives</a> () const</td></tr>
-<tr class="separator:ad5f1d5e0a876e23d8785664e4838df5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54a2c6e6e5162e733961bedc6ed5fa94" id="r_a54a2c6e6e5162e733961bedc6ed5fa94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a2c6e6e5162e733961bedc6ed5fa94">SetLives</a> (const int amount)</td></tr>
-<tr class="separator:a54a2c6e6e5162e733961bedc6ed5fa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0641da86e4711c5d119e0561bbf69e6c" id="r_a0641da86e4711c5d119e0561bbf69e6c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0641da86e4711c5d119e0561bbf69e6c">LifeForces</a> ()</td></tr>
-<tr class="separator:a0641da86e4711c5d119e0561bbf69e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fc2f56c6558d278924252b3f79eb81a" id="r_a6fc2f56c6558d278924252b3f79eb81a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fc2f56c6558d278924252b3f79eb81a">SetLifeForces</a> (const int amount)</td></tr>
-<tr class="separator:a6fc2f56c6558d278924252b3f79eb81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62936b02bfb4a77f85b2a90e523cd702" id="r_a62936b02bfb4a77f85b2a90e523cd702"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62936b02bfb4a77f85b2a90e523cd702">Backpack</a> ()</td></tr>
-<tr class="separator:a62936b02bfb4a77f85b2a90e523cd702"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dcad7691f35ceb7c8ecf3e80ce774a6" id="r_a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dcad7691f35ceb7c8ecf3e80ce774a6">RunWalkToggle</a> ()</td></tr>
-<tr class="memdesc:a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true walking is enabled. (saves)  <br /></td></tr>
-<tr class="separator:a3dcad7691f35ceb7c8ecf3e80ce774a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab31aa67b958296a91eca1fc32da3d67e" id="r_ab31aa67b958296a91eca1fc32da3d67e"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab31aa67b958296a91eca1fc32da3d67e">NoLandClearVel</a> ()</td></tr>
-<tr class="memdesc:ab31aa67b958296a91eca1fc32da3d67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true, when doing a hard landing you will not lose your velocity (saves)  <br /></td></tr>
-<tr class="separator:ab31aa67b958296a91eca1fc32da3d67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea2e5133484bf525c83f374bf0f2d397" id="r_aea2e5133484bf525c83f374bf0f2d397"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea2e5133484bf525c83f374bf0f2d397">NoWeaponSwitchOnWaterLand</a> ()</td></tr>
-<tr class="memdesc:aea2e5133484bf525c83f374bf0f2d397"><td class="mdescLeft">&#160;</td><td class="mdescRight">will not auto switch weapon when entering/exiting water. (saves)  <br /></td></tr>
-<tr class="separator:aea2e5133484bf525c83f374bf0f2d397"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29512d41bb7e93a4f3f1dbf2e83c890a" id="r_a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29512d41bb7e93a4f3f1dbf2e83c890a">GiveAmmo</a> (const int weapon, const int amount, const bool altAmmo)</td></tr>
-<tr class="memdesc:a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set amount to negative values to take ammo  <br /></td></tr>
-<tr class="separator:a29512d41bb7e93a4f3f1dbf2e83c890a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41161389d55a084f9311f7fcc95aa4b3" id="r_a41161389d55a084f9311f7fcc95aa4b3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41161389d55a084f9311f7fcc95aa4b3">CurrentCheckPoint</a> ()</td></tr>
-<tr class="memdesc:a41161389d55a084f9311f7fcc95aa4b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns warpTID  <br /></td></tr>
-<tr class="separator:a41161389d55a084f9311f7fcc95aa4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6543ccc8bbca31eb60659e62bf1a7a8a" id="r_a6543ccc8bbca31eb60659e62bf1a7a8a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6543ccc8bbca31eb60659e62bf1a7a8a">CurrentCheckPointMap</a> ()</td></tr>
-<tr class="separator:a6543ccc8bbca31eb60659e62bf1a7a8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f3f23277ff6cf1d7a1a504d110ea262" id="r_a1f3f23277ff6cf1d7a1a504d110ea262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f3f23277ff6cf1d7a1a504d110ea262">SetCheckPoint</a> (const int warpTID, const int map)</td></tr>
-<tr class="separator:a1f3f23277ff6cf1d7a1a504d110ea262"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac10388411b171ee372707e623b32a72a" id="r_ac10388411b171ee372707e623b32a72a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac10388411b171ee372707e623b32a72a">GetButtonAngles</a> () const</td></tr>
-<tr class="separator:ac10388411b171ee372707e623b32a72a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafc55fd2da128959db67d58f88cc13be" id="r_aafc55fd2da128959db67d58f88cc13be"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafc55fd2da128959db67d58f88cc13be">GetButtonMovement</a> () const</td></tr>
-<tr class="separator:aafc55fd2da128959db67d58f88cc13be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72c69b7eb7281d1ebb21b704219f8571" id="r_a72c69b7eb7281d1ebb21b704219f8571"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72c69b7eb7281d1ebb21b704219f8571">WeaponUsingAltAmmo</a> (const int weapon) const</td></tr>
-<tr class="separator:a72c69b7eb7281d1ebb21b704219f8571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71bd381e47c3c9bdc54756556a33514e" id="r_a71bd381e47c3c9bdc54756556a33514e"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71bd381e47c3c9bdc54756556a33514e">SetWeaponUseAltAmmo</a> (const int weapon, const bool bToggle)</td></tr>
-<tr class="separator:a71bd381e47c3c9bdc54756556a33514e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae84777f87a954e684cb06f1f03a78e97" id="r_ae84777f87a954e684cb06f1f03a78e97"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae84777f87a954e684cb06f1f03a78e97">WeaponAllowUnderwater</a> (const int weapon) const</td></tr>
-<tr class="separator:ae84777f87a954e684cb06f1f03a78e97"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd9fcec891eddc985bf36853aac69843" id="r_acd9fcec891eddc985bf36853aac69843"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd9fcec891eddc985bf36853aac69843">ChangeWeapon</a> (const int weapon)</td></tr>
-<tr class="separator:acd9fcec891eddc985bf36853aac69843"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d31b1f7906cea2c6e728df57ce8c3f4" id="r_a6d31b1f7906cea2c6e728df57ce8c3f4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6d31b1f7906cea2c6e728df57ce8c3f4">PendingWeapon</a> () const</td></tr>
-<tr class="separator:a6d31b1f7906cea2c6e728df57ce8c3f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68ecc9027548b29a5bc6b96412f13987" id="r_a68ecc9027548b29a5bc6b96412f13987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68ecc9027548b29a5bc6b96412f13987">CycleNextWeapon</a> (const bool bCheckAmmo=false)</td></tr>
-<tr class="separator:a68ecc9027548b29a5bc6b96412f13987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a000e427c74530a661603829ab1b03563" id="r_a000e427c74530a661603829ab1b03563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a000e427c74530a661603829ab1b03563">CyclePrevWeapon</a> (const bool bCheckAmmo=false)</td></tr>
-<tr class="separator:a000e427c74530a661603829ab1b03563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20a8abe826af3d6175c330820ffdc111" id="r_a20a8abe826af3d6175c330820ffdc111"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00119.html">kWeapon</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20a8abe826af3d6175c330820ffdc111">GetWeaponActor</a> (const int weapon)</td></tr>
-<tr class="separator:a20a8abe826af3d6175c330820ffdc111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7345ef2668796ad80f93a060bf3634a" id="r_ac7345ef2668796ad80f93a060bf3634a"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7345ef2668796ad80f93a060bf3634a">MaxHealth</a> ()</td></tr>
-<tr class="memdesc:ac7345ef2668796ad80f93a060bf3634a"><td class="mdescLeft">&#160;</td><td class="mdescRight">should be &gt;= MaxExtraHealth and ExtraHealth  <br /></td></tr>
-<tr class="separator:ac7345ef2668796ad80f93a060bf3634a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7508f45e2fce32efab56c6512196649a" id="r_a7508f45e2fce32efab56c6512196649a"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7508f45e2fce32efab56c6512196649a">MaxExtraHealth</a> ()</td></tr>
-<tr class="memdesc:a7508f45e2fce32efab56c6512196649a"><td class="mdescLeft">&#160;</td><td class="mdescRight">should be &lt;= MaxHealth  <br /></td></tr>
-<tr class="separator:a7508f45e2fce32efab56c6512196649a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a252b81e73d107f319390a0835de9065a" id="r_a252b81e73d107f319390a0835de9065a"><td class="memItemLeft" align="right" valign="top">int16 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a252b81e73d107f319390a0835de9065a">ExtraHealth</a> ()</td></tr>
-<tr class="memdesc:a252b81e73d107f319390a0835de9065a"><td class="mdescLeft">&#160;</td><td class="mdescRight">should be &lt;= MaxExtraHealth  <br /></td></tr>
-<tr class="separator:a252b81e73d107f319390a0835de9065a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e60b0eda64d2ba2be8a7242f9ca979f" id="r_a5e60b0eda64d2ba2be8a7242f9ca979f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e60b0eda64d2ba2be8a7242f9ca979f">GiveHealth</a> (const int amount, const bool bMortalWound)</td></tr>
-<tr class="memdesc:a5e60b0eda64d2ba2be8a7242f9ca979f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Takes into account extra health, and max health values. 0 is full health, negative amounts give extra health. if bMortalWound is true which is for 2 and ultra health then health goes up to maxExtraHealth.  <br /></td></tr>
-<tr class="separator:a5e60b0eda64d2ba2be8a7242f9ca979f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bcb1243ee40ced3c40f5f04e0906251" id="r_a5bcb1243ee40ced3c40f5f04e0906251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5bcb1243ee40ced3c40f5f04e0906251">CancelSpiritualTime</a> (float blendTime=1.0f)</td></tr>
-<tr class="memdesc:a5bcb1243ee40ced3c40f5f04e0906251"><td class="mdescLeft">&#160;</td><td class="mdescRight">if in spirit mode then will set gamespeed back to 1.0f using the passed in blendTime  <br /></td></tr>
-<tr class="separator:a5bcb1243ee40ced3c40f5f04e0906251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71c14aedfb8280790cb78075d6abbdbd" id="r_a71c14aedfb8280790cb78075d6abbdbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71c14aedfb8280790cb78075d6abbdbd">SetSpiritualTime</a> (const float time, const float blend)</td></tr>
-<tr class="memdesc:a71c14aedfb8280790cb78075d6abbdbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">time = time until cancels the effect. Should SetGameSpeed after calling this.  <br /></td></tr>
-<tr class="separator:a71c14aedfb8280790cb78075d6abbdbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58cecd2784fced6900e8b2e37d0778f6" id="r_a58cecd2784fced6900e8b2e37d0778f6"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58cecd2784fced6900e8b2e37d0778f6">GetSpiritualTime</a> () const</td></tr>
-<tr class="separator:a58cecd2784fced6900e8b2e37d0778f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ee74fd0a9d56f095ec52d5fe5e58508" id="r_a4ee74fd0a9d56f095ec52d5fe5e58508"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee74fd0a9d56f095ec52d5fe5e58508">GetWeaponGroup</a> (const int weapon)</td></tr>
-<tr class="separator:a4ee74fd0a9d56f095ec52d5fe5e58508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac859f503f55a1bf9477cb412f9ba36de" id="r_ac859f503f55a1bf9477cb412f9ba36de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac859f503f55a1bf9477cb412f9ba36de">SetWeaponGroup</a> (const int weapon, const int group)</td></tr>
-<tr class="memdesc:ac859f503f55a1bf9477cb412f9ba36de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. The group can also be set in weaponInfo.txt def file with the key "group".  <br /></td></tr>
-<tr class="separator:ac859f503f55a1bf9477cb412f9ba36de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa7b2abe7fd81f67d32410b3d5d81506" id="r_aaa7b2abe7fd81f67d32410b3d5d81506"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa7b2abe7fd81f67d32410b3d5d81506">SilentCheckPoints</a> (void)</td></tr>
-<tr class="memdesc:aaa7b2abe7fd81f67d32410b3d5d81506"><td class="mdescLeft">&#160;</td><td class="mdescRight">if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.  <br /></td></tr>
-<tr class="separator:aaa7b2abe7fd81f67d32410b3d5d81506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b7e6fa98fa18b55adef26c83904725" id="r_ae7b7e6fa98fa18b55adef26c83904725"><td class="memItemLeft" align="right" valign="top">float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7b7e6fa98fa18b55adef26c83904725">LookSensScale</a> ()</td></tr>
-<tr class="memdesc:ae7b7e6fa98fa18b55adef26c83904725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales mouse/controller/gyro sensitivity (default = 1.0f)  <br /></td></tr>
-<tr class="separator:ae7b7e6fa98fa18b55adef26c83904725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a334c826845a64f83ae22106d0734d883" id="r_a334c826845a64f83ae22106d0734d883"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00123.html">kActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a334c826845a64f83ae22106d0734d883">GetActorByTID</a> (const int tagID, const int typeFilter=- 1) const</td></tr>
+<tr class="memdesc:a334c826845a64f83ae22106d0734d883"><td class="mdescLeft">&#160;</td><td class="mdescRight">if typeFilter is -1 checks any type otherwise only returns the actor of that type  <br /></td></tr>
+<tr class="separator:a334c826845a64f83ae22106d0734d883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae02caddea17b7c48275900adfb6a334b" id="r_ae02caddea17b7c48275900adfb6a334b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae02caddea17b7c48275900adfb6a334b">TriggerActorsByTID</a> (<a class="el" href="a00123.html">kActor</a>@ instigator, const int tagID)</td></tr>
+<tr class="memdesc:ae02caddea17b7c48275900adfb6a334b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers an actor (that is not the instigator) that has the same tagID. Returns true if triggered an actor.  <br /></td></tr>
+<tr class="separator:ae02caddea17b7c48275900adfb6a334b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cd88ae8e9d10913723498798b62a2a1" id="r_a9cd88ae8e9d10913723498798b62a2a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cd88ae8e9d10913723498798b62a2a1">ChangeAreaFlag</a> (const int areaID, const uint flags, const bool active)</td></tr>
+<tr class="memdesc:a9cd88ae8e9d10913723498798b62a2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Only sets the areaID flags and not the sector flags. Should most likely prefer using FloodMatchingAreaFlags so the sectors get set as well.  <br /></td></tr>
+<tr class="separator:a9cd88ae8e9d10913723498798b62a2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928b224d762e50c93bbe11635cca3b3d" id="r_a928b224d762e50c93bbe11635cca3b3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a928b224d762e50c93bbe11635cca3b3d">FloodFillAreaFlags</a> (const int sectorIndex, const uint flags, const bool active)</td></tr>
+<tr class="memdesc:a928b224d762e50c93bbe11635cca3b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Sets flags on all adjacent sectors until it finds a sector that has the flags already set (or cleared if active is false)  <br /></td></tr>
+<tr class="separator:a928b224d762e50c93bbe11635cca3b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fdeb44917499ac0d19a9474f467abb0" id="r_a1fdeb44917499ac0d19a9474f467abb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fdeb44917499ac0d19a9474f467abb0">FloodFillAreaFlags</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin, const uint flags, const bool active)</td></tr>
+<tr class="memdesc:a1fdeb44917499ac0d19a9474f467abb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Calls FloodMatchingAreaFlags with FindNextClosestSector(origin) sector.  <br /></td></tr>
+<tr class="separator:a1fdeb44917499ac0d19a9474f467abb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001d1232a78a97f760f060f9cbc6e0fc" id="r_a001d1232a78a97f760f060f9cbc6e0fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001d1232a78a97f760f060f9cbc6e0fc">FloodMatchingAreaFlags</a> (const int sectorIndex, const uint flags, const bool active)</td></tr>
+<tr class="memdesc:a001d1232a78a97f760f060f9cbc6e0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Sets flags on all adjacent sectors with matching areaID.  <br /></td></tr>
+<tr class="separator:a001d1232a78a97f760f060f9cbc6e0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a783b98c5d6b5b32780569530102f06e5" id="r_a783b98c5d6b5b32780569530102f06e5"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a783b98c5d6b5b32780569530102f06e5">GetAreaFlags</a> (const int areaID) const</td></tr>
+<tr class="memdesc:a783b98c5d6b5b32780569530102f06e5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>.  <br /></td></tr>
+<tr class="separator:a783b98c5d6b5b32780569530102f06e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05290649d86b97fa1c10293c8a7815f9" id="r_a05290649d86b97fa1c10293c8a7815f9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05290649d86b97fa1c10293c8a7815f9">GetAreaFloorImpact</a> (const int areaID) const</td></tr>
+<tr class="memdesc:a05290649d86b97fa1c10293c8a7815f9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a>.  <br /></td></tr>
+<tr class="separator:a05290649d86b97fa1c10293c8a7815f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe429358c3975a88d2166ab88f3243e7" id="r_abe429358c3975a88d2166ab88f3243e7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe429358c3975a88d2166ab88f3243e7">GetAreaWallImpact</a> (const int areaID) const</td></tr>
+<tr class="memdesc:abe429358c3975a88d2166ab88f3243e7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a>.  <br /></td></tr>
+<tr class="separator:abe429358c3975a88d2166ab88f3243e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f66f5262d53982c64b3f4aaab08593e" id="r_a1f66f5262d53982c64b3f4aaab08593e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f66f5262d53982c64b3f4aaab08593e">ChangeAreaFloorImpact</a> (const int areaID, const int value)</td></tr>
+<tr class="memdesc:a1f66f5262d53982c64b3f4aaab08593e"><td class="mdescLeft">&#160;</td><td class="mdescRight">value: <a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a>  <br /></td></tr>
+<tr class="separator:a1f66f5262d53982c64b3f4aaab08593e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006d8defcbca3792761f27f61f486519" id="r_a006d8defcbca3792761f27f61f486519"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a006d8defcbca3792761f27f61f486519">ChangeAreaWallImpact</a> (const int areaID, const int value)</td></tr>
+<tr class="memdesc:a006d8defcbca3792761f27f61f486519"><td class="mdescLeft">&#160;</td><td class="mdescRight">value: <a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a>  <br /></td></tr>
+<tr class="separator:a006d8defcbca3792761f27f61f486519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf2307521af91a0c957932f9d2c9e7ce" id="r_adf2307521af91a0c957932f9d2c9e7ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf2307521af91a0c957932f9d2c9e7ce">ChangeAreaWaterHeight</a> (const int areaID, const float height)</td></tr>
+<tr class="memdesc:adf2307521af91a0c957932f9d2c9e7ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">WaterHeight is stored per area, not per sector or per vertex.  <br /></td></tr>
+<tr class="separator:adf2307521af91a0c957932f9d2c9e7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add54e873f4bf80388c695eea824352c5" id="r_add54e873f4bf80388c695eea824352c5"><td class="memItemLeft" align="right" valign="top">const int16&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add54e873f4bf80388c695eea824352c5">GetAreaArg</a> (const int areaID, const int arg) const</td></tr>
+<tr class="memdesc:add54e873f4bf80388c695eea824352c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an area arg value.  <br /></td></tr>
+<tr class="separator:add54e873f4bf80388c695eea824352c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46796d92aa0b83b41d875719b9a2447f" id="r_a46796d92aa0b83b41d875719b9a2447f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46796d92aa0b83b41d875719b9a2447f">ChangeAreaArg</a> (const int areaID, const int arg, const int16 value)</td></tr>
+<tr class="separator:a46796d92aa0b83b41d875719b9a2447f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6c001daa51d73a274a613e5c7aafcb" id="r_acc6c001daa51d73a274a613e5c7aafcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc6c001daa51d73a274a613e5c7aafcb">ChangeSectorHeight</a> (const int sectorIndex, const float height)</td></tr>
+<tr class="memdesc:acc6c001daa51d73a274a613e5c7aafcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes all sectors floor vertices with the same areaID to the height.  <br /></td></tr>
+<tr class="separator:acc6c001daa51d73a274a613e5c7aafcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f37358a81fcbdcbdbd0ce2d1bcdf227" id="r_a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f37358a81fcbdcbdbd0ce2d1bcdf227">ChangeSectorCeilingHeight</a> (const int sectorIndex, const float height)</td></tr>
+<tr class="memdesc:a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes all sectors ceiling vertices with the same areaID to the height.  <br /></td></tr>
+<tr class="separator:a5f37358a81fcbdcbdbd0ce2d1bcdf227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acacab52f468b0e8077c5aac4aaaa901a" id="r_acacab52f468b0e8077c5aac4aaaa901a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acacab52f468b0e8077c5aac4aaaa901a">ChangeSectorCeilingHeightVertices</a> (const int sectorIndex, const float height, const int ptMask=7)</td></tr>
+<tr class="memdesc:acacab52f468b0e8077c5aac4aaaa901a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes only the sector ceiling vertices(specified using the ptMask) to the height.  <br /></td></tr>
+<tr class="separator:acacab52f468b0e8077c5aac4aaaa901a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8675380908841bc9cf0a195b5e9f87ce" id="r_a8675380908841bc9cf0a195b5e9f87ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8675380908841bc9cf0a195b5e9f87ce">ChangeSectorHeightVertices</a> (const int sectorIndex, const float height, const int ptMask=7)</td></tr>
+<tr class="memdesc:a8675380908841bc9cf0a195b5e9f87ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes only the sector floor vertices(specified using the ptMask) to the height.  <br /></td></tr>
+<tr class="separator:a8675380908841bc9cf0a195b5e9f87ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1e79a345b4e7419c29d5faf15d422b" id="r_aaa1e79a345b4e7419c29d5faf15d422b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa1e79a345b4e7419c29d5faf15d422b">FindNextClosestSector</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin)</td></tr>
+<tr class="memdesc:aaa1e79a345b4e7419c29d5faf15d422b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the sector that this point is best in. Returns -1 if not inside and above/on a sector.  <br /></td></tr>
+<tr class="separator:aaa1e79a345b4e7419c29d5faf15d422b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf58bfe135bde2b89a4205d3366f055f" id="r_aaf58bfe135bde2b89a4205d3366f055f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf58bfe135bde2b89a4205d3366f055f">FindClosestSectorByDistance</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin)</td></tr>
+<tr class="memdesc:aaf58bfe135bde2b89a4205d3366f055f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the closest sector. Will return -1 only if the map contains no sectors.  <br /></td></tr>
+<tr class="separator:aaf58bfe135bde2b89a4205d3366f055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef53ad7b8fbeb274133ffb7013b0a5f8" id="r_aef53ad7b8fbeb274133ffb7013b0a5f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef53ad7b8fbeb274133ffb7013b0a5f8">GetSectorCorners</a> (const int sectorIndex, <a class="el" href="a00047.html">kVec3</a> &amp;out pt1, <a class="el" href="a00047.html">kVec3</a> &amp;out pt2, <a class="el" href="a00047.html">kVec3</a> &amp;out pt3, <a class="el" href="a00047.html">kVec3</a> &amp;out heights) const</td></tr>
+<tr class="memdesc:aef53ad7b8fbeb274133ffb7013b0a5f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Sectors vertex position and height Link 1 is pt1 to pt3 Link 2 is pt2 to pt1 Link 3 is pt3 to pt2.  <br /></td></tr>
+<tr class="separator:aef53ad7b8fbeb274133ffb7013b0a5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fdcda3e1140a2ed548c2ad87920672f" id="r_a3fdcda3e1140a2ed548c2ad87920672f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fdcda3e1140a2ed548c2ad87920672f">GetSectorVertIndices</a> (const int sectorIndex, int &amp;v1, int &amp;v2, int &amp;v3) const</td></tr>
+<tr class="memdesc:a3fdcda3e1140a2ed548c2ad87920672f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Sectors vertex indices. If invalid sectorIndex is passed in will return all -1.  <br /></td></tr>
+<tr class="separator:a3fdcda3e1140a2ed548c2ad87920672f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90c2341a91b5afc5112c05a36aee91bf" id="r_a90c2341a91b5afc5112c05a36aee91bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90c2341a91b5afc5112c05a36aee91bf">GetSectorLinks</a> (const int sectorIndex, int &amp;out sectorIndex1, int &amp;out sectorIndex2, int &amp;out sectorIndex3) const</td></tr>
+<tr class="memdesc:a90c2341a91b5afc5112c05a36aee91bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the 3 sectors links. -1 means there was no sector linked to that edge. Link 1 is pt1 to pt3 Link 2 is pt2 to pt1 Link 3 is pt3 to pt2.  <br /></td></tr>
+<tr class="separator:a90c2341a91b5afc5112c05a36aee91bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada498cb1764ca50d9f65459ba9c1a1f1" id="r_ada498cb1764ca50d9f65459ba9c1a1f1"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada498cb1764ca50d9f65459ba9c1a1f1">GetSectorNumBridges</a> (const int sectorIndex) const</td></tr>
+<tr class="memdesc:ada498cb1764ca50d9f65459ba9c1a1f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of bridge sectors this sector has  <br /></td></tr>
+<tr class="separator:ada498cb1764ca50d9f65459ba9c1a1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3074d5fb03f8cdaeba7922c28f7ee9db" id="r_a3074d5fb03f8cdaeba7922c28f7ee9db"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3074d5fb03f8cdaeba7922c28f7ee9db">GetSectorBridge</a> (const int sectorIndex, const uint bridge) const</td></tr>
+<tr class="memdesc:a3074d5fb03f8cdaeba7922c28f7ee9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the sector of the bridge. Use GetSectorNumBridges to loop through them all.  <br /></td></tr>
+<tr class="separator:a3074d5fb03f8cdaeba7922c28f7ee9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7554d69a83c2508d3921b1a522a2e21f" id="r_a7554d69a83c2508d3921b1a522a2e21f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7554d69a83c2508d3921b1a522a2e21f">GetSectorAreaID</a> (const int sectorIndex) const</td></tr>
+<tr class="separator:a7554d69a83c2508d3921b1a522a2e21f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08435577bc419c2f431bfa3d413a3f48" id="r_a08435577bc419c2f431bfa3d413a3f48"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08435577bc419c2f431bfa3d413a3f48">GetNumSectors</a> () const</td></tr>
+<tr class="separator:a08435577bc419c2f431bfa3d413a3f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195f083a958579133b6833b9cd2f4b2f" id="r_a195f083a958579133b6833b9cd2f4b2f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a195f083a958579133b6833b9cd2f4b2f">GetNumAreas</a> () const</td></tr>
+<tr class="separator:a195f083a958579133b6833b9cd2f4b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce61c2aa2f5bcdabdf50418bc772148" id="r_a3ce61c2aa2f5bcdabdf50418bc772148"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ce61c2aa2f5bcdabdf50418bc772148">GetNumActors</a> () const</td></tr>
+<tr class="memdesc:a3ce61c2aa2f5bcdabdf50418bc772148"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of actors that are in the current maps data  <br /></td></tr>
+<tr class="separator:a3ce61c2aa2f5bcdabdf50418bc772148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a835097f4be85efc67be9d4ee21f9434c" id="r_a835097f4be85efc67be9d4ee21f9434c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a835097f4be85efc67be9d4ee21f9434c">GetSectorFlags</a> (const int sectorIndex) const</td></tr>
+<tr class="memdesc:a835097f4be85efc67be9d4ee21f9434c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 16 bit unsigned integer. Only the first 16 area flags (up to AAF_MAPPED) are used for sectors.  <br /></td></tr>
+<tr class="separator:a835097f4be85efc67be9d4ee21f9434c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b4afab1c8c35dc20f8ce0c8fb29b35" id="r_a32b4afab1c8c35dc20f8ce0c8fb29b35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32b4afab1c8c35dc20f8ce0c8fb29b35">SetSectorFlags</a> (const int sectorIndex, const int flags)</td></tr>
+<tr class="memdesc:a32b4afab1c8c35dc20f8ce0c8fb29b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Keep in mind sector flags are a 16 bit unsigned integer and only the first 16 area flags (up to AAF_MAPPED) are used for sector flags.  <br /></td></tr>
+<tr class="separator:a32b4afab1c8c35dc20f8ce0c8fb29b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90bc2794661ad0eb2e09847dac432067" id="r_a90bc2794661ad0eb2e09847dac432067"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90bc2794661ad0eb2e09847dac432067">GetSkyMaterial</a> () const</td></tr>
+<tr class="separator:a90bc2794661ad0eb2e09847dac432067"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca5ec836d0b5fee212f52a3bb2aa435" id="r_acca5ec836d0b5fee212f52a3bb2aa435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acca5ec836d0b5fee212f52a3bb2aa435">OverrideSkyMaterial</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in path)</td></tr>
+<tr class="memdesc:acca5ec836d0b5fee212f52a3bb2aa435"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example path: "skies/skyMaterials/sky_brown" You can clear the sky with an empty string: "" Do not pass in invalid paths!  <br /></td></tr>
+<tr class="separator:acca5ec836d0b5fee212f52a3bb2aa435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654d22e3831f752328019fd8920ae252" id="r_a654d22e3831f752328019fd8920ae252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a654d22e3831f752328019fd8920ae252">OverrideFogColor</a> (const int r, const int g, const int b)</td></tr>
+<tr class="memdesc:a654d22e3831f752328019fd8920ae252"><td class="mdescLeft">&#160;</td><td class="mdescRight">rgb values are 0-255  <br /></td></tr>
+<tr class="separator:a654d22e3831f752328019fd8920ae252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0f8d9dc1c127ff4086ea99c101c2ecd" id="r_af0f8d9dc1c127ff4086ea99c101c2ecd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0f8d9dc1c127ff4086ea99c101c2ecd">ClearOverrideFogColor</a> ()</td></tr>
+<tr class="memdesc:af0f8d9dc1c127ff4086ea99c101c2ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops overriding and uses the sector color.  <br /></td></tr>
+<tr class="separator:af0f8d9dc1c127ff4086ea99c101c2ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e64f6f8deed81297d0aae9909c18975" id="r_a3e64f6f8deed81297d0aae9909c18975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e64f6f8deed81297d0aae9909c18975">OverrideWaterFogColor</a> (const int r, const int g, const int b)</td></tr>
+<tr class="memdesc:a3e64f6f8deed81297d0aae9909c18975"><td class="mdescLeft">&#160;</td><td class="mdescRight">rgb values are 0-255  <br /></td></tr>
+<tr class="separator:a3e64f6f8deed81297d0aae9909c18975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae794449bb109b9d2216a43338f78f58d" id="r_ae794449bb109b9d2216a43338f78f58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae794449bb109b9d2216a43338f78f58d">ClearOverrideWaterFogColor</a> ()</td></tr>
+<tr class="memdesc:ae794449bb109b9d2216a43338f78f58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops overriding and uses the sector color.  <br /></td></tr>
+<tr class="separator:ae794449bb109b9d2216a43338f78f58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf58bfe135bde2b89a4205d3366f055f" id="r_aaf58bfe135bde2b89a4205d3366f055f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf58bfe135bde2b89a4205d3366f055f">FindClosestSectorByDistance</a> (const <a class="el" href="a00047.html">kVec3</a> &amp;in origin)</td></tr>
+<tr class="separator:aaf58bfe135bde2b89a4205d3366f055f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a4a526ce7543020017500a1f0f2088" id="r_a18a4a526ce7543020017500a1f0f2088"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18a4a526ce7543020017500a1f0f2088">GetAreaWaterHeight</a> (const int area) const</td></tr>
+<tr class="separator:a18a4a526ce7543020017500a1f0f2088"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51ca4e9ea28f7836be99c9a294ae4257" id="r_a51ca4e9ea28f7836be99c9a294ae4257"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51ca4e9ea28f7836be99c9a294ae4257">GetAreaFogZFar</a> (const int area) const</td></tr>
+<tr class="separator:a51ca4e9ea28f7836be99c9a294ae4257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad017f6157e5ec9c730940d247d9c9361" id="r_ad017f6157e5ec9c730940d247d9c9361"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad017f6157e5ec9c730940d247d9c9361">SetAreaFogZFar</a> (const int area, const float zfar)</td></tr>
+<tr class="separator:ad017f6157e5ec9c730940d247d9c9361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05881e1e8c99b3b6114d2d0da8358df6" id="r_a05881e1e8c99b3b6114d2d0da8358df6"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a05881e1e8c99b3b6114d2d0da8358df6">GetAreaWaterZFar</a> (const int area) const</td></tr>
+<tr class="separator:a05881e1e8c99b3b6114d2d0da8358df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc2ae7333c8bc81b39933211e848db34" id="r_acc2ae7333c8bc81b39933211e848db34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc2ae7333c8bc81b39933211e848db34">SetAreaWaterZFar</a> (const int area, const float zfar)</td></tr>
+<tr class="separator:acc2ae7333c8bc81b39933211e848db34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27eb0fd1b19000e0c1326c12d30634b" id="r_ae27eb0fd1b19000e0c1326c12d30634b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae27eb0fd1b19000e0c1326c12d30634b">GetAreaFogColor</a> (const int area) const</td></tr>
+<tr class="memdesc:ae27eb0fd1b19000e0c1326c12d30634b"><td class="mdescLeft">&#160;</td><td class="mdescRight">color values are in range 0-255  <br /></td></tr>
+<tr class="separator:ae27eb0fd1b19000e0c1326c12d30634b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a86a26669cda131744dc5df69d53dee" id="r_a6a86a26669cda131744dc5df69d53dee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a86a26669cda131744dc5df69d53dee">SetAreaFogColor</a> (const int area, const <a class="el" href="a00047.html">kVec3</a> &amp;in color)</td></tr>
+<tr class="memdesc:a6a86a26669cda131744dc5df69d53dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">color values are in range 0-255  <br /></td></tr>
+<tr class="separator:a6a86a26669cda131744dc5df69d53dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4836361f019ea890128e9001572bd8" id="r_abd4836361f019ea890128e9001572bd8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd4836361f019ea890128e9001572bd8">GetAreaWaterColor</a> (const int area) const</td></tr>
+<tr class="memdesc:abd4836361f019ea890128e9001572bd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">color values are in range 0-255  <br /></td></tr>
+<tr class="separator:abd4836361f019ea890128e9001572bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f3528fd1301f5639f983e51e727660c" id="r_a6f3528fd1301f5639f983e51e727660c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f3528fd1301f5639f983e51e727660c">SetAreaWaterColor</a> (const int area, const <a class="el" href="a00047.html">kVec3</a> &amp;in color)</td></tr>
+<tr class="memdesc:a6f3528fd1301f5639f983e51e727660c"><td class="mdescLeft">&#160;</td><td class="mdescRight">color values are in range 0-255  <br /></td></tr>
+<tr class="separator:a6f3528fd1301f5639f983e51e727660c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6db206e0a61294dfe0ecd80e6deffde" id="r_af6db206e0a61294dfe0ecd80e6deffde"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6db206e0a61294dfe0ecd80e6deffde">GetAreaSkyHeight</a> (const int area) const</td></tr>
+<tr class="separator:af6db206e0a61294dfe0ecd80e6deffde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad28e4c00c5526a3a5efbc959c54df630" id="r_ad28e4c00c5526a3a5efbc959c54df630"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad28e4c00c5526a3a5efbc959c54df630">SetAreaSkyHeight</a> (const int area, const float height)</td></tr>
+<tr class="separator:ad28e4c00c5526a3a5efbc959c54df630"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9b001c58cd5bb745c56bd62f5e29daf" id="r_ab9b001c58cd5bb745c56bd62f5e29daf"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9b001c58cd5bb745c56bd62f5e29daf">GetAreaSkySpeed</a> (const int area) const</td></tr>
+<tr class="memdesc:ab9b001c58cd5bb745c56bd62f5e29daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">speed scale is this value / 100. 100 is normal speed.  <br /></td></tr>
+<tr class="separator:ab9b001c58cd5bb745c56bd62f5e29daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fa7748ab7219fa9799f85f57b3b7aa" id="r_ae0fa7748ab7219fa9799f85f57b3b7aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0fa7748ab7219fa9799f85f57b3b7aa">SetAreaSkySpeed</a> (const int area, const float speed)</td></tr>
+<tr class="memdesc:ae0fa7748ab7219fa9799f85f57b3b7aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">speed scale is this value / 100. 100 is normal speed.  <br /></td></tr>
+<tr class="separator:ae0fa7748ab7219fa9799f85f57b3b7aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a242398662c08b545c61cd07e32546ac4" id="r_a242398662c08b545c61cd07e32546ac4"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a242398662c08b545c61cd07e32546ac4">GetAreaBlendLength</a> (const int area) const</td></tr>
+<tr class="memdesc:a242398662c08b545c61cd07e32546ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">the speed to interpolate the fog color/start/zfar values when they change  <br /></td></tr>
+<tr class="separator:a242398662c08b545c61cd07e32546ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad02ca2fc35fec080d997307be6608f" id="r_afad02ca2fc35fec080d997307be6608f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afad02ca2fc35fec080d997307be6608f">SetAreaBlendLength</a> (const int area, const float blendLength)</td></tr>
+<tr class="memdesc:afad02ca2fc35fec080d997307be6608f"><td class="mdescLeft">&#160;</td><td class="mdescRight">a blendLength value of 1.0 interpolates the fog color/start/zfar values at 0.066666 (1/15) per tick.  <br /></td></tr>
+<tr class="separator:afad02ca2fc35fec080d997307be6608f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014885ea73869b9be7dd51886b658ab9" id="r_a014885ea73869b9be7dd51886b658ab9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a014885ea73869b9be7dd51886b658ab9">GetAreaAmbience</a> (const int area) const</td></tr>
+<tr class="separator:a014885ea73869b9be7dd51886b658ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2f4339743edfd54b8bb751b97db20f" id="r_aaa2f4339743edfd54b8bb751b97db20f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa2f4339743edfd54b8bb751b97db20f">SetAreaAmbience</a> (const int area, const int ambience)</td></tr>
+<tr class="separator:aaa2f4339743edfd54b8bb751b97db20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2aedc619b09a4e0bd2e2d798405678" id="r_acb2aedc619b09a4e0bd2e2d798405678"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acb2aedc619b09a4e0bd2e2d798405678">GetAreaMapColor</a> (const int area) const</td></tr>
+<tr class="separator:acb2aedc619b09a4e0bd2e2d798405678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743c1083bc612d6b27d0e58924bc758a" id="r_a743c1083bc612d6b27d0e58924bc758a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a743c1083bc612d6b27d0e58924bc758a">SetAreaMapColor</a> (const int area, const int color)</td></tr>
+<tr class="separator:a743c1083bc612d6b27d0e58924bc758a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27f0bfdbd62936bbe29e22810477f01" id="r_ac27f0bfdbd62936bbe29e22810477f01"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac27f0bfdbd62936bbe29e22810477f01">GetAreaMusic</a> (const int area) const</td></tr>
+<tr class="separator:ac27f0bfdbd62936bbe29e22810477f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94e7ec0c66b69b79faeb8c80e43b0d3" id="r_ad94e7ec0c66b69b79faeb8c80e43b0d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad94e7ec0c66b69b79faeb8c80e43b0d3">SetAreaMusic</a> (const int area, const int music)</td></tr>
+<tr class="separator:ad94e7ec0c66b69b79faeb8c80e43b0d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f388b2f71a39d714670126dba67cafe" id="r_a5f388b2f71a39d714670126dba67cafe"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f388b2f71a39d714670126dba67cafe">GetAreaCullBits</a> (const int area) const</td></tr>
+<tr class="memdesc:a5f388b2f71a39d714670126dba67cafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255)  <br /></td></tr>
+<tr class="separator:a5f388b2f71a39d714670126dba67cafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d5ea6f80f087595f818108d1011eee" id="r_ad3d5ea6f80f087595f818108d1011eee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad3d5ea6f80f087595f818108d1011eee">SetAreaCullBits</a> (const int area, const int bits)</td></tr>
+<tr class="memdesc:ad3d5ea6f80f087595f818108d1011eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255)  <br /></td></tr>
+<tr class="separator:ad3d5ea6f80f087595f818108d1011eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3002994c9ea2a71fcef11c3bf14f8fce" id="r_a3002994c9ea2a71fcef11c3bf14f8fce"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3002994c9ea2a71fcef11c3bf14f8fce">GetSectorDrawOrder</a> (const int sectorIndex) const</td></tr>
+<tr class="memdesc:a3002994c9ea2a71fcef11c3bf14f8fce"><td class="mdescLeft">&#160;</td><td class="mdescRight">lowest draw order (0) draws the sectors on the automap last  <br /></td></tr>
+<tr class="separator:a3002994c9ea2a71fcef11c3bf14f8fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3dc90d36bb6766265e95a10cf7d454" id="r_aca3dc90d36bb6766265e95a10cf7d454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca3dc90d36bb6766265e95a10cf7d454">SetSectorDrawOrder</a> (const int sectorIndex, const int drawOrder)</td></tr>
+<tr class="memdesc:aca3dc90d36bb6766265e95a10cf7d454"><td class="mdescLeft">&#160;</td><td class="mdescRight">lowest draw order (0) draws the sectors on the automap last  <br /></td></tr>
+<tr class="separator:aca3dc90d36bb6766265e95a10cf7d454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaca9ab9271489153210991be9e1240e" id="r_afaca9ab9271489153210991be9e1240e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaca9ab9271489153210991be9e1240e">MoveSectorPlatform</a> (const int sectorIndex, const <a class="el" href="a00047.html">kVec3</a> &amp;in moveDelta, const uint flags=<a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a>)</td></tr>
+<tr class="memdesc:afaca9ab9271489153210991be9e1240e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a>. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors.  <br /></td></tr>
+<tr class="separator:afaca9ab9271489153210991be9e1240e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace28c637868d49feac62f70e30a2f724" id="r_ace28c637868d49feac62f70e30a2f724"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace28c637868d49feac62f70e30a2f724">PointInsideSector</a> (const int sectorIndex, const <a class="el" href="a00047.html">kVec3</a> &amp;in point) const</td></tr>
+<tr class="memdesc:ace28c637868d49feac62f70e30a2f724"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if point is inside the sector (XY only)  <br /></td></tr>
+<tr class="separator:ace28c637868d49feac62f70e30a2f724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02241">2241</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01862">1862</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a09bdf282de9c50d8bf21462590571f19" name="a09bdf282de9c50d8bf21462590571f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09bdf282de9c50d8bf21462590571f19">&#9670;&#160;</a></span>Actor()</h2>
+<a id="a46796d92aa0b83b41d875719b9a2447f" name="a46796d92aa0b83b41d875719b9a2447f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46796d92aa0b83b41d875719b9a2447f">&#9670;&#160;</a></span>ChangeAreaArg()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00127.html">kPuppet</a> kPlayer::Actor </td>
+          <td class="memname">void kWorld::ChangeAreaArg </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2d56113eb7f8fefd71791d6f36c61577" name="a2d56113eb7f8fefd71791d6f36c61577"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2d56113eb7f8fefd71791d6f36c61577">&#9670;&#160;</a></span>Armor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int16 &amp; kPlayer::Armor </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a62936b02bfb4a77f85b2a90e523cd702" name="a62936b02bfb4a77f85b2a90e523cd702"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62936b02bfb4a77f85b2a90e523cd702">&#9670;&#160;</a></span>Backpack()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool &amp; kPlayer::Backpack </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a90b7cc6d01c83b755c3f01d8c303c7f0" name="a90b7cc6d01c83b755c3f01d8c303c7f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90b7cc6d01c83b755c3f01d8c303c7f0">&#9670;&#160;</a></span>ButtonHeldTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint kPlayer::ButtonHeldTime </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>btn</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>btn type is <a class="el" href="a00002.html#a535fd14ac2206cff551e68d507e620c0">EnumInputActions</a> </p>
-
-</div>
-</div>
-<a id="a51530aa7c9b564d62c48f118ac59202f" name="a51530aa7c9b564d62c48f118ac59202f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51530aa7c9b564d62c48f118ac59202f">&#9670;&#160;</a></span>Buttons()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const uint16 kPlayer::Buttons </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>returns <a class="el" href="a00002.html#aabf16b7d3937c39c8c0518c07b7d4f78">EnumPlayerButtons</a> </p>
-
-</div>
-</div>
-<a id="a5bcb1243ee40ced3c40f5f04e0906251" name="a5bcb1243ee40ced3c40f5f04e0906251"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bcb1243ee40ced3c40f5f04e0906251">&#9670;&#160;</a></span>CancelSpiritualTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::CancelSpiritualTime </td>
-          <td>(</td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>blendTime</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>if in spirit mode then will set gamespeed back to 1.0f using the passed in blendTime </p>
-
-</div>
-</div>
-<a id="acd9fcec891eddc985bf36853aac69843" name="acd9fcec891eddc985bf36853aac69843"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd9fcec891eddc985bf36853aac69843">&#9670;&#160;</a></span>ChangeWeapon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::ChangeWeapon </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af8601e769b44c3ce6f521a173ae7054e" name="af8601e769b44c3ce6f521a173ae7054e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8601e769b44c3ce6f521a173ae7054e">&#9670;&#160;</a></span>ConsumeAltAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::ConsumeAltAmmo </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ammo</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a735bca530c88d5c8bc495fe7d48fc1aa" name="a735bca530c88d5c8bc495fe7d48fc1aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a735bca530c88d5c8bc495fe7d48fc1aa">&#9670;&#160;</a></span>ConsumeAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::ConsumeAmmo </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ammo</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>preferredAmmo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a41161389d55a084f9311f7fcc95aa4b3" name="a41161389d55a084f9311f7fcc95aa4b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41161389d55a084f9311f7fcc95aa4b3">&#9670;&#160;</a></span>CurrentCheckPoint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::CurrentCheckPoint </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>returns warpTID </p>
-
-</div>
-</div>
-<a id="a6543ccc8bbca31eb60659e62bf1a7a8a" name="a6543ccc8bbca31eb60659e62bf1a7a8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6543ccc8bbca31eb60659e62bf1a7a8a">&#9670;&#160;</a></span>CurrentCheckPointMap()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::CurrentCheckPointMap </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a842f5956bad09cc5366b521a776c7c7c" name="a842f5956bad09cc5366b521a776c7c7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a842f5956bad09cc5366b521a776c7c7c">&#9670;&#160;</a></span>CurrentWeapon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::CurrentWeapon </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a68ecc9027548b29a5bc6b96412f13987" name="a68ecc9027548b29a5bc6b96412f13987"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68ecc9027548b29a5bc6b96412f13987">&#9670;&#160;</a></span>CycleNextWeapon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::CycleNextWeapon </td>
-          <td>(</td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bCheckAmmo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a000e427c74530a661603829ab1b03563" name="a000e427c74530a661603829ab1b03563"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a000e427c74530a661603829ab1b03563">&#9670;&#160;</a></span>CyclePrevWeapon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::CyclePrevWeapon </td>
-          <td>(</td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bCheckAmmo</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a252b81e73d107f319390a0835de9065a" name="a252b81e73d107f319390a0835de9065a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a252b81e73d107f319390a0835de9065a">&#9670;&#160;</a></span>ExtraHealth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int16 &amp; kPlayer::ExtraHealth </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>should be &lt;= MaxExtraHealth </p>
-
-</div>
-</div>
-<a id="a15f73209251df37713c7505c322f6d2a" name="a15f73209251df37713c7505c322f6d2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15f73209251df37713c7505c322f6d2a">&#9670;&#160;</a></span>GetAltAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::GetAltAmmo </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aed3467092239895a6307866bbae3dfac" name="aed3467092239895a6307866bbae3dfac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed3467092239895a6307866bbae3dfac">&#9670;&#160;</a></span>GetAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::GetAmmo </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac10388411b171ee372707e623b32a72a" name="ac10388411b171ee372707e623b32a72a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac10388411b171ee372707e623b32a72a">&#9670;&#160;</a></span>GetButtonAngles()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00047.html">kVec3</a> kPlayer::GetButtonAngles </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aafc55fd2da128959db67d58f88cc13be" name="aafc55fd2da128959db67d58f88cc13be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafc55fd2da128959db67d58f88cc13be">&#9670;&#160;</a></span>GetButtonMovement()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const <a class="el" href="a00047.html">kVec3</a> kPlayer::GetButtonMovement </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a58cecd2784fced6900e8b2e37d0778f6" name="a58cecd2784fced6900e8b2e37d0778f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58cecd2784fced6900e8b2e37d0778f6">&#9670;&#160;</a></span>GetSpiritualTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float kPlayer::GetSpiritualTime </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a20a8abe826af3d6175c330820ffdc111" name="a20a8abe826af3d6175c330820ffdc111"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20a8abe826af3d6175c330820ffdc111">&#9670;&#160;</a></span>GetWeaponActor()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="a00119.html">kWeapon</a> kPlayer::GetWeaponActor </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4ee74fd0a9d56f095ec52d5fe5e58508" name="a4ee74fd0a9d56f095ec52d5fe5e58508"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ee74fd0a9d56f095ec52d5fe5e58508">&#9670;&#160;</a></span>GetWeaponGroup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::GetWeaponGroup </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29512d41bb7e93a4f3f1dbf2e83c890a" name="a29512d41bb7e93a4f3f1dbf2e83c890a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29512d41bb7e93a4f3f1dbf2e83c890a">&#9670;&#160;</a></span>GiveAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kPlayer::GiveAmmo </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>altAmmo</em></span>&#160;)</td>
+          <td class="paramtype">const int16</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>set amount to negative values to take ammo </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">areaID</td><td></td></tr>
+    <tr><td class="paramname">arg</td><td><div class="fragment"><div class="line">though args can be used <span class="keywordflow">for</span> anything, they are typically used in <span class="keyword">this</span> fashion:</div>
+<div class="line">0: warp ID</div>
+<div class="line">1: warp level ID or trigger sound ID</div>
+<div class="line">2: checkpoint ID</div>
+<div class="line">3: tag ID</div>
+<div class="line">4: floor damage hit points</div>
+<div class="line">5: floor damage rate</div>
+<div class="line"> </div>
+<div class="line">Hardcoded:</div>
+<div class="line">0: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a>: WarpID</div>
+<div class="line">1: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a>: WarpLevelID,  <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a> and <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47">AAF_EVENTSOUND</a>: soundID to play when player enters sector</div>
+<div class="line">2: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a> or <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a>: CheckpointID</div>
+<div class="line">3: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a>: tag ID</div>
+<div class="line">4: Not used</div>
+<div class="line">5: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a>: the secret index value (set automatically when level loads starting at 0. Conflicts with <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a> (so I guess no secrets should be placed on damage sectors))</div>
+<div class="line"> </div>
+<div class="line">Default Scripts:</div>
+<div class="line">0: Not used</div>
+<div class="line">1: Not used</div>
+<div class="line">2: Not used</div>
+<div class="line">3: Not used</div>
+<div class="line">4: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a>: amount of damage to <span class="keywordflow">do</span> to the player when they<span class="stringliteral">&#39;re on the ground</span></div>
+<div class="line"><span class="stringliteral">5: Always used as floor damage delay no matter the AAF flags. Should be used with AAF_DAMAGE only. 1 second = 1024</span></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a></div><div class="ttdeci">@ AAF_CHECKPOINT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00474">t1_scriptAPI.cpp:474</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a></div><div class="ttdeci">@ AAF_EVENT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00464">t1_scriptAPI.cpp:464</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a></div><div class="ttdeci">@ AAF_DAMAGE</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00467">t1_scriptAPI.cpp:467</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a></div><div class="ttdeci">@ AAF_SAVEGAME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00475">t1_scriptAPI.cpp:475</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47">AAF_EVENTSOUND</a></div><div class="ttdeci">@ AAF_EVENTSOUND</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00471">t1_scriptAPI.cpp:471</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a></div><div class="ttdeci">@ AAF_TELEPORT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00466">t1_scriptAPI.cpp:466</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a></div><div class="ttdeci">@ AAF_SECRET</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00459">t1_scriptAPI.cpp:459</a></div></div>
+</div><!-- fragment --> </td></tr>
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a5e60b0eda64d2ba2be8a7242f9ca979f" name="a5e60b0eda64d2ba2be8a7242f9ca979f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e60b0eda64d2ba2be8a7242f9ca979f">&#9670;&#160;</a></span>GiveHealth()</h2>
+<a id="a9cd88ae8e9d10913723498798b62a2a1" name="a9cd88ae8e9d10913723498798b62a2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd88ae8e9d10913723498798b62a2a1">&#9670;&#160;</a></span>ChangeAreaFlag()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool kPlayer::GiveHealth </td>
+          <td class="memname">void kWorld::ChangeAreaFlag </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bMortalWound</em></span>&#160;)</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>active</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Takes into account extra health, and max health values. 0 is full health, negative amounts give extra health. if bMortalWound is true which is for 2 and ultra health then health goes up to maxExtraHealth. </p>
+<p>(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Only sets the areaID flags and not the sector flags. Should most likely prefer using FloodMatchingAreaFlags so the sectors get set as well. </p>
 
 </div>
 </div>
-<a id="ae48f202c2e1e7489d44508c8f66c4b89" name="ae48f202c2e1e7489d44508c8f66c4b89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae48f202c2e1e7489d44508c8f66c4b89">&#9670;&#160;</a></span>GiveWeapon()</h2>
+<a id="a1f66f5262d53982c64b3f4aaab08593e" name="a1f66f5262d53982c64b3f4aaab08593e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f66f5262d53982c64b3f4aaab08593e">&#9670;&#160;</a></span>ChangeAreaFloorImpact()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool kPlayer::GiveWeapon </td>
+          <td class="memname">void kWorld::ChangeAreaFloorImpact </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ammo</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>switchNewWeapon</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>returns true if gave ammo else returns false because already has full primary ammo. if switchNewWeapon is false it will not auto switch to the weapon. </p>
+<p>value: <a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a> </p>
 
 </div>
 </div>
-<a id="a04bdbf3e87f45f54b1abb2737e8f0675" name="a04bdbf3e87f45f54b1abb2737e8f0675"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a04bdbf3e87f45f54b1abb2737e8f0675">&#9670;&#160;</a></span>HasAltAmmo() <span class="overload">[1/2]</span></h2>
+<a id="a006d8defcbca3792761f27f61f486519" name="a006d8defcbca3792761f27f61f486519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006d8defcbca3792761f27f61f486519">&#9670;&#160;</a></span>ChangeAreaWallImpact()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const bool kPlayer::HasAltAmmo </td>
+          <td class="memname">void kWorld::ChangeAreaWallImpact </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>value: <a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a> </p>
+
+</div>
+</div>
+<a id="adf2307521af91a0c957932f9d2c9e7ce" name="adf2307521af91a0c957932f9d2c9e7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf2307521af91a0c957932f9d2c9e7ce">&#9670;&#160;</a></span>ChangeAreaWaterHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ChangeAreaWaterHeight </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>WaterHeight is stored per area, not per sector or per vertex. </p>
+
+</div>
+</div>
+<a id="a5f37358a81fcbdcbdbd0ce2d1bcdf227" name="a5f37358a81fcbdcbdbd0ce2d1bcdf227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f37358a81fcbdcbdbd0ce2d1bcdf227">&#9670;&#160;</a></span>ChangeSectorCeilingHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ChangeSectorCeilingHeight </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes all sectors ceiling vertices with the same areaID to the height. </p>
+
+</div>
+</div>
+<a id="acacab52f468b0e8077c5aac4aaaa901a" name="acacab52f468b0e8077c5aac4aaaa901a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acacab52f468b0e8077c5aac4aaaa901a">&#9670;&#160;</a></span>ChangeSectorCeilingHeightVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ChangeSectorCeilingHeightVertices </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ptMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">7</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes only the sector ceiling vertices(specified using the ptMask) to the height. </p>
+
+</div>
+</div>
+<a id="acc6c001daa51d73a274a613e5c7aafcb" name="acc6c001daa51d73a274a613e5c7aafcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6c001daa51d73a274a613e5c7aafcb">&#9670;&#160;</a></span>ChangeSectorHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ChangeSectorHeight </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes all sectors floor vertices with the same areaID to the height. </p>
+
+</div>
+</div>
+<a id="a8675380908841bc9cf0a195b5e9f87ce" name="a8675380908841bc9cf0a195b5e9f87ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8675380908841bc9cf0a195b5e9f87ce">&#9670;&#160;</a></span>ChangeSectorHeightVertices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ChangeSectorHeightVertices </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ptMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">7</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes only the sector floor vertices(specified using the ptMask) to the height. </p>
+
+</div>
+</div>
+<a id="af0f8d9dc1c127ff4086ea99c101c2ecd" name="af0f8d9dc1c127ff4086ea99c101c2ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0f8d9dc1c127ff4086ea99c101c2ecd">&#9670;&#160;</a></span>ClearOverrideFogColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ClearOverrideFogColor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stops overriding and uses the sector color. </p>
+
+</div>
+</div>
+<a id="ae794449bb109b9d2216a43338f78f58d" name="ae794449bb109b9d2216a43338f78f58d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae794449bb109b9d2216a43338f78f58d">&#9670;&#160;</a></span>ClearOverrideWaterFogColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::ClearOverrideWaterFogColor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stops overriding and uses the sector color. </p>
+
+</div>
+</div>
+<a id="aaf58bfe135bde2b89a4205d3366f055f" name="aaf58bfe135bde2b89a4205d3366f055f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf58bfe135bde2b89a4205d3366f055f">&#9670;&#160;</a></span>FindClosestSectorByDistance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::FindClosestSectorByDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>origin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the closest sector. Will return -1 only if the map contains no sectors. </p>
+
+</div>
+</div>
+<a id="aaf58bfe135bde2b89a4205d3366f055f" name="aaf58bfe135bde2b89a4205d3366f055f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf58bfe135bde2b89a4205d3366f055f">&#9670;&#160;</a></span>FindClosestSectorByDistance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::FindClosestSectorByDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>origin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa1e79a345b4e7419c29d5faf15d422b" name="aaa1e79a345b4e7419c29d5faf15d422b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa1e79a345b4e7419c29d5faf15d422b">&#9670;&#160;</a></span>FindNextClosestSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::FindNextClosestSector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>origin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the sector that this point is best in. Returns -1 if not inside and above/on a sector. </p>
+
+</div>
+</div>
+<a id="a928b224d762e50c93bbe11635cca3b3d" name="a928b224d762e50c93bbe11635cca3b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a928b224d762e50c93bbe11635cca3b3d">&#9670;&#160;</a></span>FloodFillAreaFlags() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::FloodFillAreaFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>active</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Sets flags on all adjacent sectors until it finds a sector that has the flags already set (or cleared if active is false) </p>
+
+</div>
+</div>
+<a id="a1fdeb44917499ac0d19a9474f467abb0" name="a1fdeb44917499ac0d19a9474f467abb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fdeb44917499ac0d19a9474f467abb0">&#9670;&#160;</a></span>FloodFillAreaFlags() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::FloodFillAreaFlags </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>origin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>active</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Calls FloodMatchingAreaFlags with FindNextClosestSector(origin) sector. </p>
+
+</div>
+</div>
+<a id="a001d1232a78a97f760f060f9cbc6e0fc" name="a001d1232a78a97f760f060f9cbc6e0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001d1232a78a97f760f060f9cbc6e0fc">&#9670;&#160;</a></span>FloodMatchingAreaFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::FloodMatchingAreaFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>active</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(<a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>) Sets flags on all adjacent sectors with matching areaID. </p>
+
+</div>
+</div>
+<a id="a334c826845a64f83ae22106d0734d883" name="a334c826845a64f83ae22106d0734d883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334c826845a64f83ae22106d0734d883">&#9670;&#160;</a></span>GetActorByTID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00123.html">kActor</a> kWorld::GetActorByTID </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>tagID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>typeFilter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-&#160;1</span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if typeFilter is -1 checks any type otherwise only returns the actor of that type </p>
+
+</div>
+</div>
+<a id="a014885ea73869b9be7dd51886b658ab9" name="a014885ea73869b9be7dd51886b658ab9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014885ea73869b9be7dd51886b658ab9">&#9670;&#160;</a></span>GetAreaAmbience()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetAreaAmbience </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add54e873f4bf80388c695eea824352c5" name="add54e873f4bf80388c695eea824352c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add54e873f4bf80388c695eea824352c5">&#9670;&#160;</a></span>GetAreaArg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int16 kWorld::GetAreaArg </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>arg</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns an area arg value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">areaID</td><td></td></tr>
+    <tr><td class="paramname">arg</td><td><div class="fragment"><div class="line">though args can be used <span class="keywordflow">for</span> anything, they are typically used in <span class="keyword">this</span> fashion:</div>
+<div class="line">0: warp ID</div>
+<div class="line">1: warp level ID or trigger sound ID</div>
+<div class="line">2: checkpoint ID</div>
+<div class="line">3: tag ID</div>
+<div class="line">4: floor damage hit points</div>
+<div class="line">5: floor damage rate</div>
+<div class="line"> </div>
+<div class="line">Hardcoded:</div>
+<div class="line">0: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a>: WarpID</div>
+<div class="line">1: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a>: WarpLevelID,  <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a> and <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47">AAF_EVENTSOUND</a>: soundID to play when player enters sector</div>
+<div class="line">2: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a> or <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a>: CheckpointID</div>
+<div class="line">3: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a>: tag ID</div>
+<div class="line">4: Not used</div>
+<div class="line">5: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a>: the secret index value (set automatically when level loads starting at 0. Conflicts with <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a> (so I guess no secrets should be placed on damage sectors))</div>
+<div class="line"> </div>
+<div class="line">Default Scripts:</div>
+<div class="line">0: Not used</div>
+<div class="line">1: Not used</div>
+<div class="line">2: Not used</div>
+<div class="line">3: Not used</div>
+<div class="line">4: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a>: amount of damage to <span class="keywordflow">do</span> to the player when they<span class="stringliteral">&#39;re on the ground</span></div>
+<div class="line"><span class="stringliteral">5: Always used as floor damage delay no matter the AAF flags. Should be used with AAF_DAMAGE only. 1 second = 1024</span></div>
+</div><!-- fragment --> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a242398662c08b545c61cd07e32546ac4" name="a242398662c08b545c61cd07e32546ac4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a242398662c08b545c61cd07e32546ac4">&#9670;&#160;</a></span>GetAreaBlendLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kWorld::GetAreaBlendLength </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the speed to interpolate the fog color/start/zfar values when they change </p>
+
+</div>
+</div>
+<a id="a5f388b2f71a39d714670126dba67cafe" name="a5f388b2f71a39d714670126dba67cafe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f388b2f71a39d714670126dba67cafe">&#9670;&#160;</a></span>GetAreaCullBits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetAreaCullBits </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255) </p>
+
+</div>
+</div>
+<a id="a783b98c5d6b5b32780569530102f06e5" name="a783b98c5d6b5b32780569530102f06e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783b98c5d6b5b32780569530102f06e5">&#9670;&#160;</a></span>GetAreaFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint kWorld::GetAreaFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eb">EnumAreaFlags</a>. </p>
+
+</div>
+</div>
+<a id="a05290649d86b97fa1c10293c8a7815f9" name="a05290649d86b97fa1c10293c8a7815f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05290649d86b97fa1c10293c8a7815f9">&#9670;&#160;</a></span>GetAreaFloorImpact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetAreaFloorImpact </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a>. </p>
+
+</div>
+</div>
+<a id="ae27eb0fd1b19000e0c1326c12d30634b" name="ae27eb0fd1b19000e0c1326c12d30634b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27eb0fd1b19000e0c1326c12d30634b">&#9670;&#160;</a></span>GetAreaFogColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00047.html">kVec3</a> kWorld::GetAreaFogColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>color values are in range 0-255 </p>
+
+</div>
+</div>
+<a id="a51ca4e9ea28f7836be99c9a294ae4257" name="a51ca4e9ea28f7836be99c9a294ae4257"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51ca4e9ea28f7836be99c9a294ae4257">&#9670;&#160;</a></span>GetAreaFogZFar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kWorld::GetAreaFogZFar </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb2aedc619b09a4e0bd2e2d798405678" name="acb2aedc619b09a4e0bd2e2d798405678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2aedc619b09a4e0bd2e2d798405678">&#9670;&#160;</a></span>GetAreaMapColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetAreaMapColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac27f0bfdbd62936bbe29e22810477f01" name="ac27f0bfdbd62936bbe29e22810477f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac27f0bfdbd62936bbe29e22810477f01">&#9670;&#160;</a></span>GetAreaMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetAreaMusic </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6db206e0a61294dfe0ecd80e6deffde" name="af6db206e0a61294dfe0ecd80e6deffde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6db206e0a61294dfe0ecd80e6deffde">&#9670;&#160;</a></span>GetAreaSkyHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kWorld::GetAreaSkyHeight </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9b001c58cd5bb745c56bd62f5e29daf" name="ab9b001c58cd5bb745c56bd62f5e29daf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9b001c58cd5bb745c56bd62f5e29daf">&#9670;&#160;</a></span>GetAreaSkySpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kWorld::GetAreaSkySpeed </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>speed scale is this value / 100. 100 is normal speed. </p>
+
+</div>
+</div>
+<a id="abe429358c3975a88d2166ab88f3243e7" name="abe429358c3975a88d2166ab88f3243e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe429358c3975a88d2166ab88f3243e7">&#9670;&#160;</a></span>GetAreaWallImpact()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetAreaWallImpact </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>areaID</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a6499f7b8f6430ac669788ed4c13cecd7">EnumImpactType</a>. </p>
+
+</div>
+</div>
+<a id="abd4836361f019ea890128e9001572bd8" name="abd4836361f019ea890128e9001572bd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4836361f019ea890128e9001572bd8">&#9670;&#160;</a></span>GetAreaWaterColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00047.html">kVec3</a> kWorld::GetAreaWaterColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>color values are in range 0-255 </p>
+
+</div>
+</div>
+<a id="a18a4a526ce7543020017500a1f0f2088" name="a18a4a526ce7543020017500a1f0f2088"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a4a526ce7543020017500a1f0f2088">&#9670;&#160;</a></span>GetAreaWaterHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kWorld::GetAreaWaterHeight </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05881e1e8c99b3b6114d2d0da8358df6" name="a05881e1e8c99b3b6114d2d0da8358df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05881e1e8c99b3b6114d2d0da8358df6">&#9670;&#160;</a></span>GetAreaWaterZFar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kWorld::GetAreaWaterZFar </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ce61c2aa2f5bcdabdf50418bc772148" name="a3ce61c2aa2f5bcdabdf50418bc772148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce61c2aa2f5bcdabdf50418bc772148">&#9670;&#160;</a></span>GetNumActors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetNumActors </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of actors that are in the current maps data </p>
+
+</div>
+</div>
+<a id="a195f083a958579133b6833b9cd2f4b2f" name="a195f083a958579133b6833b9cd2f4b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195f083a958579133b6833b9cd2f4b2f">&#9670;&#160;</a></span>GetNumAreas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetNumAreas </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
@@ -725,16 +1116,16 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0031e84971f5928addca949868858c2b" name="a0031e84971f5928addca949868858c2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0031e84971f5928addca949868858c2b">&#9670;&#160;</a></span>HasAltAmmo() <span class="overload">[2/2]</span></h2>
+<a id="a08435577bc419c2f431bfa3d413a3f48" name="a08435577bc419c2f431bfa3d413a3f48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08435577bc419c2f431bfa3d413a3f48">&#9670;&#160;</a></span>GetNumSectors()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const bool kPlayer::HasAltAmmo </td>
+          <td class="memname">const int kWorld::GetNumSectors </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -742,468 +1133,245 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad04697b2730dc03205fbc032b11136c7" name="ad04697b2730dc03205fbc032b11136c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad04697b2730dc03205fbc032b11136c7">&#9670;&#160;</a></span>HasAmmo()</h2>
+<a id="a7554d69a83c2508d3921b1a522a2e21f" name="a7554d69a83c2508d3921b1a522a2e21f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7554d69a83c2508d3921b1a522a2e21f">&#9670;&#160;</a></span>GetSectorAreaID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const bool kPlayer::HasAmmo </td>
+          <td class="memname">const int kWorld::GetSectorAreaID </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3074d5fb03f8cdaeba7922c28f7ee9db" name="a3074d5fb03f8cdaeba7922c28f7ee9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3074d5fb03f8cdaeba7922c28f7ee9db">&#9670;&#160;</a></span>GetSectorBridge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kWorld::GetSectorBridge </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>checkAlt</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>&#160;) const</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>bridge</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>if checkAlt is false only checks primary ammo </p>
+<p>Get the sector of the bridge. Use GetSectorNumBridges to loop through them all. </p>
 
 </div>
 </div>
-<a id="ad3e077292ee5923b081b6484a0958195" name="ad3e077292ee5923b081b6484a0958195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3e077292ee5923b081b6484a0958195">&#9670;&#160;</a></span>HasWeapon()</h2>
+<a id="aef53ad7b8fbeb274133ffb7013b0a5f8" name="aef53ad7b8fbeb274133ffb7013b0a5f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef53ad7b8fbeb274133ffb7013b0a5f8">&#9670;&#160;</a></span>GetSectorCorners()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const bool kPlayer::HasWeapon </td>
+          <td class="memname">void kWorld::GetSectorCorners </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weaponID</em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0641da86e4711c5d119e0561bbf69e6c" name="a0641da86e4711c5d119e0561bbf69e6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0641da86e4711c5d119e0561bbf69e6c">&#9670;&#160;</a></span>LifeForces()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::LifeForces </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ad5f1d5e0a876e23d8785664e4838df5b" name="ad5f1d5e0a876e23d8785664e4838df5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5f1d5e0a876e23d8785664e4838df5b">&#9670;&#160;</a></span>Lives()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::Lives </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aadeddfea49654de0ef80a704050b1227" name="aadeddfea49654de0ef80a704050b1227"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aadeddfea49654de0ef80a704050b1227">&#9670;&#160;</a></span>Lock()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::Lock </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8d130e18d026002f6b896b73177a1e14" name="a8d130e18d026002f6b896b73177a1e14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d130e18d026002f6b896b73177a1e14">&#9670;&#160;</a></span>Locked()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool kPlayer::Locked </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae7b7e6fa98fa18b55adef26c83904725" name="ae7b7e6fa98fa18b55adef26c83904725"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7b7e6fa98fa18b55adef26c83904725">&#9670;&#160;</a></span>LookSensScale()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float &amp; kPlayer::LookSensScale </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Scales mouse/controller/gyro sensitivity (default = 1.0f) </p>
-
-</div>
-</div>
-<a id="a7508f45e2fce32efab56c6512196649a" name="a7508f45e2fce32efab56c6512196649a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7508f45e2fce32efab56c6512196649a">&#9670;&#160;</a></span>MaxExtraHealth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int16 &amp; kPlayer::MaxExtraHealth </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>should be &lt;= MaxHealth </p>
-
-</div>
-</div>
-<a id="ac7345ef2668796ad80f93a060bf3634a" name="ac7345ef2668796ad80f93a060bf3634a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7345ef2668796ad80f93a060bf3634a">&#9670;&#160;</a></span>MaxHealth()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int16 &amp; kPlayer::MaxHealth </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>should be &gt;= MaxExtraHealth and ExtraHealth </p>
-
-</div>
-</div>
-<a id="ab31aa67b958296a91eca1fc32da3d67e" name="ab31aa67b958296a91eca1fc32da3d67e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab31aa67b958296a91eca1fc32da3d67e">&#9670;&#160;</a></span>NoLandClearVel()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool &amp; kPlayer::NoLandClearVel </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>if true, when doing a hard landing you will not lose your velocity (saves) </p>
-
-</div>
-</div>
-<a id="aea2e5133484bf525c83f374bf0f2d397" name="aea2e5133484bf525c83f374bf0f2d397"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea2e5133484bf525c83f374bf0f2d397">&#9670;&#160;</a></span>NoWeaponSwitchOnWaterLand()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool &amp; kPlayer::NoWeaponSwitchOnWaterLand </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>will not auto switch weapon when entering/exiting water. (saves) </p>
-
-</div>
-</div>
-<a id="a6d31b1f7906cea2c6e728df57ce8c3f4" name="a6d31b1f7906cea2c6e728df57ce8c3f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d31b1f7906cea2c6e728df57ce8c3f4">&#9670;&#160;</a></span>PendingWeapon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int kPlayer::PendingWeapon </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab382a70aa56834574e3b1728b0e38baa" name="ab382a70aa56834574e3b1728b0e38baa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab382a70aa56834574e3b1728b0e38baa">&#9670;&#160;</a></span>RemoveWeapon()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool kPlayer::RemoveWeapon </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3dcad7691f35ceb7c8ecf3e80ce774a6" name="a3dcad7691f35ceb7c8ecf3e80ce774a6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dcad7691f35ceb7c8ecf3e80ce774a6">&#9670;&#160;</a></span>RunWalkToggle()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool &amp; kPlayer::RunWalkToggle </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>if true walking is enabled. (saves) </p>
-
-</div>
-</div>
-<a id="a1f3f23277ff6cf1d7a1a504d110ea262" name="a1f3f23277ff6cf1d7a1a504d110ea262"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f3f23277ff6cf1d7a1a504d110ea262">&#9670;&#160;</a></span>SetCheckPoint()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::SetCheckPoint </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>warpTID</em></span>, </td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>map</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6fc2f56c6558d278924252b3f79eb81a" name="a6fc2f56c6558d278924252b3f79eb81a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6fc2f56c6558d278924252b3f79eb81a">&#9670;&#160;</a></span>SetLifeForces()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::SetLifeForces </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a54a2c6e6e5162e733961bedc6ed5fa94" name="a54a2c6e6e5162e733961bedc6ed5fa94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a2c6e6e5162e733961bedc6ed5fa94">&#9670;&#160;</a></span>SetLives()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::SetLives </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>amount</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a71c14aedfb8280790cb78075d6abbdbd" name="a71c14aedfb8280790cb78075d6abbdbd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71c14aedfb8280790cb78075d6abbdbd">&#9670;&#160;</a></span>SetSpiritualTime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::SetSpiritualTime </td>
-          <td>(</td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>, </td>
+          <td class="paramtype"><a class="el" href="a00047.html">kVec3</a> &amp;out</td>          <td class="paramname"><span class="paramname"><em>pt1</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>blend</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>time = time until cancels the effect. Should SetGameSpeed after calling this. </p>
-
-</div>
-</div>
-<a id="ac859f503f55a1bf9477cb412f9ba36de" name="ac859f503f55a1bf9477cb412f9ba36de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac859f503f55a1bf9477cb412f9ba36de">&#9670;&#160;</a></span>SetWeaponGroup()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::SetWeaponGroup </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+          <td class="paramtype"><a class="el" href="a00047.html">kVec3</a> &amp;out</td>          <td class="paramname"><span class="paramname"><em>pt2</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>group</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Binds this weapon to another weapons index. Example: you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2. then set your new pistols(14) group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs. The group can also be set in weaponInfo.txt def file with the key "group". </p>
-
-</div>
-</div>
-<a id="a71bd381e47c3c9bdc54756556a33514e" name="a71bd381e47c3c9bdc54756556a33514e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71bd381e47c3c9bdc54756556a33514e">&#9670;&#160;</a></span>SetWeaponUseAltAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool kPlayer::SetWeaponUseAltAmmo </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span>, </td>
+          <td class="paramtype"><a class="el" href="a00047.html">kVec3</a> &amp;out</td>          <td class="paramname"><span class="paramname"><em>pt3</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bToggle</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="a00047.html">kVec3</a> &amp;out</td>          <td class="paramname"><span class="paramname"><em>heights</em></span>&#160;) const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the Sectors vertex position and height Link 1 is pt1 to pt3 Link 2 is pt2 to pt1 Link 3 is pt3 to pt2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sectorIndex</td><td></td></tr>
+    <tr><td class="paramname">pt1</td><td></td></tr>
+    <tr><td class="paramname">pt2</td><td></td></tr>
+    <tr><td class="paramname">pt3</td><td></td></tr>
+    <tr><td class="paramname">heights</td><td>x is the height of pt1, y is the height of pt2, z is the height of pt3. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="aaa7b2abe7fd81f67d32410b3d5d81506" name="aaa7b2abe7fd81f67d32410b3d5d81506"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa7b2abe7fd81f67d32410b3d5d81506">&#9670;&#160;</a></span>SilentCheckPoints()</h2>
+<a id="a3002994c9ea2a71fcef11c3bf14f8fce" name="a3002994c9ea2a71fcef11c3bf14f8fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3002994c9ea2a71fcef11c3bf14f8fce">&#9670;&#160;</a></span>GetSectorDrawOrder()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool &amp; kPlayer::SilentCheckPoints </td>
+          <td class="memname">const int kWorld::GetSectorDrawOrder </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts. </p>
+<p>lowest draw order (0) draws the sectors on the automap last </p>
 
 </div>
 </div>
-<a id="abdfd0f51bac3e19927cad316465e0a3d" name="abdfd0f51bac3e19927cad316465e0a3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abdfd0f51bac3e19927cad316465e0a3d">&#9670;&#160;</a></span>Unlock()</h2>
+<a id="a835097f4be85efc67be9d4ee21f9434c" name="a835097f4be85efc67be9d4ee21f9434c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835097f4be85efc67be9d4ee21f9434c">&#9670;&#160;</a></span>GetSectorFlags()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void kPlayer::Unlock </td>
+          <td class="memname">const int kWorld::GetSectorFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns a 16 bit unsigned integer. Only the first 16 area flags (up to AAF_MAPPED) are used for sectors. </p>
+
+</div>
+</div>
+<a id="a90c2341a91b5afc5112c05a36aee91bf" name="a90c2341a91b5afc5112c05a36aee91bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c2341a91b5afc5112c05a36aee91bf">&#9670;&#160;</a></span>GetSectorLinks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::GetSectorLinks </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>sectorIndex1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>sectorIndex2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>sectorIndex3</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the 3 sectors links. -1 means there was no sector linked to that edge. Link 1 is pt1 to pt3 Link 2 is pt2 to pt1 Link 3 is pt3 to pt2. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sectorIndex</td><td></td></tr>
+    <tr><td class="paramname">sectorIndex1</td><td></td></tr>
+    <tr><td class="paramname">sectorIndex2</td><td></td></tr>
+    <tr><td class="paramname">sectorIndex3</td><td>a sectorIndex with -1 is no sector. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ada498cb1764ca50d9f65459ba9c1a1f1" name="ada498cb1764ca50d9f65459ba9c1a1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada498cb1764ca50d9f65459ba9c1a1f1">&#9670;&#160;</a></span>GetSectorNumBridges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint kWorld::GetSectorNumBridges </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of bridge sectors this sector has </p>
+
+</div>
+</div>
+<a id="a3fdcda3e1140a2ed548c2ad87920672f" name="a3fdcda3e1140a2ed548c2ad87920672f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fdcda3e1140a2ed548c2ad87920672f">&#9670;&#160;</a></span>GetSectorVertIndices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::GetSectorVertIndices </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>v1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>v2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;</td>          <td class="paramname"><span class="paramname"><em>v3</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Sectors vertex indices. If invalid sectorIndex is passed in will return all -1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sectorIndex</td><td></td></tr>
+    <tr><td class="paramname">v1</td><td></td></tr>
+    <tr><td class="paramname">v2</td><td></td></tr>
+    <tr><td class="paramname">v3</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a90bc2794661ad0eb2e09847dac432067" name="a90bc2794661ad0eb2e09847dac432067"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90bc2794661ad0eb2e09847dac432067">&#9670;&#160;</a></span>GetSkyMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="a00039.html">kStr</a> kWorld::GetSkyMaterial </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa20f009a0d4b047853e41db1bfbb16ca" name="aa20f009a0d4b047853e41db1bfbb16ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa20f009a0d4b047853e41db1bfbb16ca">&#9670;&#160;</a></span>UseAltAmmo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool &amp; kPlayer::UseAltAmmo </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29d220020a1f54f85118a8e63b89cdd9" name="a29d220020a1f54f85118a8e63b89cdd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29d220020a1f54f85118a8e63b89cdd9">&#9670;&#160;</a></span>Victory()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kPlayer::Victory </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>warpActorID</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-&#160;1</span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-&#160;1</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae84777f87a954e684cb06f1f03a78e97" name="ae84777f87a954e684cb06f1f03a78e97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae84777f87a954e684cb06f1f03a78e97">&#9670;&#160;</a></span>WeaponAllowUnderwater()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const bool kPlayer::WeaponAllowUnderwater </td>
-          <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -1211,20 +1379,439 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a72c69b7eb7281d1ebb21b704219f8571" name="a72c69b7eb7281d1ebb21b704219f8571"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72c69b7eb7281d1ebb21b704219f8571">&#9670;&#160;</a></span>WeaponUsingAltAmmo()</h2>
+<a id="afaca9ab9271489153210991be9e1240e" name="afaca9ab9271489153210991be9e1240e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaca9ab9271489153210991be9e1240e">&#9670;&#160;</a></span>MoveSectorPlatform()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const bool kPlayer::WeaponUsingAltAmmo </td>
+          <td class="memname">void kWorld::MoveSectorPlatform </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>weapon</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>moveDelta</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46a71adb42e9bd6acd980e61488340848eb">SPF_DEFAULT</a></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a5cb75a094a8e11122d301f84b419da46">EnumSectorPlatformFlags</a>. Moves bridge sectors vertices not connected to non bridge sectors by moveDelta amount affecting actors. </p>
+
+</div>
+</div>
+<a id="a654d22e3831f752328019fd8920ae252" name="a654d22e3831f752328019fd8920ae252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654d22e3831f752328019fd8920ae252">&#9670;&#160;</a></span>OverrideFogColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::OverrideFogColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>rgb values are 0-255 </p>
+
+</div>
+</div>
+<a id="acca5ec836d0b5fee212f52a3bb2aa435" name="acca5ec836d0b5fee212f52a3bb2aa435"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acca5ec836d0b5fee212f52a3bb2aa435">&#9670;&#160;</a></span>OverrideSkyMaterial()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::OverrideSkyMaterial </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Example path: "skies/skyMaterials/sky_brown" You can clear the sky with an empty string: "" Do not pass in invalid paths! </p>
+
+</div>
+</div>
+<a id="a3e64f6f8deed81297d0aae9909c18975" name="a3e64f6f8deed81297d0aae9909c18975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e64f6f8deed81297d0aae9909c18975">&#9670;&#160;</a></span>OverrideWaterFogColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::OverrideWaterFogColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>g</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>rgb values are 0-255 </p>
+
+</div>
+</div>
+<a id="ace28c637868d49feac62f70e30a2f724" name="ace28c637868d49feac62f70e30a2f724"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace28c637868d49feac62f70e30a2f724">&#9670;&#160;</a></span>PointInsideSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kWorld::PointInsideSector </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>point</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if point is inside the sector (XY only) </p>
+
+</div>
+</div>
+<a id="aaa2f4339743edfd54b8bb751b97db20f" name="aaa2f4339743edfd54b8bb751b97db20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2f4339743edfd54b8bb751b97db20f">&#9670;&#160;</a></span>SetAreaAmbience()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaAmbience </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>ambience</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afad02ca2fc35fec080d997307be6608f" name="afad02ca2fc35fec080d997307be6608f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad02ca2fc35fec080d997307be6608f">&#9670;&#160;</a></span>SetAreaBlendLength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaBlendLength </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>blendLength</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a blendLength value of 1.0 interpolates the fog color/start/zfar values at 0.066666 (1/15) per tick. </p>
+
+</div>
+</div>
+<a id="ad3d5ea6f80f087595f818108d1011eee" name="ad3d5ea6f80f087595f818108d1011eee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d5ea6f80f087595f818108d1011eee">&#9670;&#160;</a></span>SetAreaCullBits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaCullBits </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>bits</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if any staticmeshes cullBits have any of the area cullBits set then it will draw. (default callbits is 255) </p>
+
+</div>
+</div>
+<a id="a6a86a26669cda131744dc5df69d53dee" name="a6a86a26669cda131744dc5df69d53dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a86a26669cda131744dc5df69d53dee">&#9670;&#160;</a></span>SetAreaFogColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaFogColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>color values are in range 0-255 </p>
+
+</div>
+</div>
+<a id="ad017f6157e5ec9c730940d247d9c9361" name="ad017f6157e5ec9c730940d247d9c9361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad017f6157e5ec9c730940d247d9c9361">&#9670;&#160;</a></span>SetAreaFogZFar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaFogZFar </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>zfar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a743c1083bc612d6b27d0e58924bc758a" name="a743c1083bc612d6b27d0e58924bc758a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743c1083bc612d6b27d0e58924bc758a">&#9670;&#160;</a></span>SetAreaMapColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaMapColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad94e7ec0c66b69b79faeb8c80e43b0d3" name="ad94e7ec0c66b69b79faeb8c80e43b0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94e7ec0c66b69b79faeb8c80e43b0d3">&#9670;&#160;</a></span>SetAreaMusic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaMusic </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>music</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad28e4c00c5526a3a5efbc959c54df630" name="ad28e4c00c5526a3a5efbc959c54df630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad28e4c00c5526a3a5efbc959c54df630">&#9670;&#160;</a></span>SetAreaSkyHeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaSkyHeight </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>height</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0fa7748ab7219fa9799f85f57b3b7aa" name="ae0fa7748ab7219fa9799f85f57b3b7aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0fa7748ab7219fa9799f85f57b3b7aa">&#9670;&#160;</a></span>SetAreaSkySpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaSkySpeed </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>speed scale is this value / 100. 100 is normal speed. </p>
+
+</div>
+</div>
+<a id="a6f3528fd1301f5639f983e51e727660c" name="a6f3528fd1301f5639f983e51e727660c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f3528fd1301f5639f983e51e727660c">&#9670;&#160;</a></span>SetAreaWaterColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaWaterColor </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>color</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>color values are in range 0-255 </p>
+
+</div>
+</div>
+<a id="acc2ae7333c8bc81b39933211e848db34" name="acc2ae7333c8bc81b39933211e848db34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc2ae7333c8bc81b39933211e848db34">&#9670;&#160;</a></span>SetAreaWaterZFar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetAreaWaterZFar </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>area</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>zfar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca3dc90d36bb6766265e95a10cf7d454" name="aca3dc90d36bb6766265e95a10cf7d454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca3dc90d36bb6766265e95a10cf7d454">&#9670;&#160;</a></span>SetSectorDrawOrder()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetSectorDrawOrder </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>drawOrder</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lowest draw order (0) draws the sectors on the automap last </p>
+
+</div>
+</div>
+<a id="a32b4afab1c8c35dc20f8ce0c8fb29b35" name="a32b4afab1c8c35dc20f8ce0c8fb29b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b4afab1c8c35dc20f8ce0c8fb29b35">&#9670;&#160;</a></span>SetSectorFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kWorld::SetSectorFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Keep in mind sector flags are a 16 bit unsigned integer and only the first 16 area flags (up to AAF_MAPPED) are used for sector flags. </p>
+
+</div>
+</div>
+<a id="ae02caddea17b7c48275900adfb6a334b" name="ae02caddea17b7c48275900adfb6a334b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae02caddea17b7c48275900adfb6a334b">&#9670;&#160;</a></span>TriggerActorsByTID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kWorld::TriggerActorsByTID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00123.html">kActor</a>@</td>          <td class="paramname"><span class="paramname"><em>instigator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>tagID</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Triggers an actor (that is not the instigator) that has the same tagID. Returns true if triggered an actor. </p>
 
 </div>
 </div>
@@ -1233,7 +1820,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00167.html">kPlayer</a></li>
+    <li class="navelem"><a class="el" href="a00167.html">kWorld</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

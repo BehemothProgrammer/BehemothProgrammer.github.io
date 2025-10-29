@@ -1,8 +1,6 @@
 var a00091 =
 [
-    [ "GetBool", "a00091.html#a601873ed5b3746a3fb3ae85cf0c3aca6", null ],
-    [ "GetFloat", "a00091.html#a6197429ccfe694fee8c05a703bbbacab", null ],
-    [ "GetInt", "a00091.html#aa34eb0e0cb913bd446013ae5ffae019b", null ],
-    [ "GetString", "a00091.html#a808afb9dd5f4289361cbf08f4afb9f8b", null ],
-    [ "GetVector", "a00091.html#a53743b86984c0b023deaeb17ed22ba04", null ]
+    [ "OnArmorDamage", "a00091.html#ad2be3558eb039e155999b90721be8df9", null ],
+    [ "OnEnterWater", "a00091.html#a45e579245d76d85c2a1d5a55c7f3d0c0", null ],
+    [ "OnPickup", "a00091.html#a9ded7ff9ac0142895005a91ba6769f10", null ]
 ];

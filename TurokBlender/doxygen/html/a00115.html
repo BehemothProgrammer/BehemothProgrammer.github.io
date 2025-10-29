@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: kActorIterator Class Reference</title>
+<title>Turok: kRenderModel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,91 +106,656 @@ $(function(){initNavTree('a00115.html',''); initResizable(true); });
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="a00112.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">kActorIterator Class Reference</div></div>
+  <div class="headertitle"><div class="title">kRenderModel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>The way to iterate through all actors in the map. Example code:  
- <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a99a84899c783e71d09af781c914ed989" id="r_a99a84899c783e71d09af781c914ed989"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a84899c783e71d09af781c914ed989">kActorIterator</a> ()</td></tr>
-<tr class="separator:a99a84899c783e71d09af781c914ed989"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5606c64889cedece597554850c2c2a73" id="r_a5606c64889cedece597554850c2c2a73"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00111.html">kActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5606c64889cedece597554850c2c2a73">Get</a> ()</td></tr>
-<tr class="memdesc:a5606c64889cedece597554850c2c2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next actor in the iterator.  <br /></td></tr>
-<tr class="separator:a5606c64889cedece597554850c2c2a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77a615c1305ce57ab223b8545b43bdf6" id="r_a77a615c1305ce57ab223b8545b43bdf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77a615c1305ce57ab223b8545b43bdf6">Reset</a> ()</td></tr>
-<tr class="memdesc:a77a615c1305ce57ab223b8545b43bdf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the iterator back to the first actor.  <br /></td></tr>
-<tr class="separator:a77a615c1305ce57ab223b8545b43bdf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf62fd27c78ba5b0f5c52977745fd98e" id="r_adf62fd27c78ba5b0f5c52977745fd98e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf62fd27c78ba5b0f5c52977745fd98e">SetModel</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in modelPath, const <a class="el" href="a00039.html">kStr</a> &amp;in modelAnimPath)</td></tr>
+<tr class="separator:adf62fd27c78ba5b0f5c52977745fd98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77655f5926e2487b2a06b27669e7e0d9" id="r_a77655f5926e2487b2a06b27669e7e0d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77655f5926e2487b2a06b27669e7e0d9">SetRotationOffset</a> (const int nodeIndex, const float rads, const float x, const float y, const float z, const bool clearInterpolation=false)</td></tr>
+<tr class="separator:a77655f5926e2487b2a06b27669e7e0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3ad093ff064372a8c4ca35e31987043" id="r_ac3ad093ff064372a8c4ca35e31987043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3ad093ff064372a8c4ca35e31987043">SetRotationOffset</a> (const int nodeIndex, const <a class="el" href="a00051.html">kQuat</a> &amp;in rotation, const bool clearInterpolation=false)</td></tr>
+<tr class="separator:ac3ad093ff064372a8c4ca35e31987043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c97b974e5faaed3ee825b841270e2b" id="r_a76c97b974e5faaed3ee825b841270e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76c97b974e5faaed3ee825b841270e2b">SetTexture</a> (const int section, const int textureID)</td></tr>
+<tr class="separator:a76c97b974e5faaed3ee825b841270e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0307149cd4eb33b4930dcb9851536d5c" id="r_a0307149cd4eb33b4930dcb9851536d5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0307149cd4eb33b4930dcb9851536d5c">SetVisibility</a> (const int nodeIndex, const bool visible)</td></tr>
+<tr class="separator:a0307149cd4eb33b4930dcb9851536d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e5e04268fe95badaec171601710c3b" id="r_a33e5e04268fe95badaec171601710c3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33e5e04268fe95badaec171601710c3b">HideSection</a> (const int nodeIndex, const int section, const bool hide)</td></tr>
+<tr class="memdesc:a33e5e04268fe95badaec171601710c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">section is the surface index. must be 0-31 and must not be &gt;= number of surfaces or will do nothing.  <br /></td></tr>
+<tr class="separator:a33e5e04268fe95badaec171601710c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafbc8a1a70df7e903851c443ef203924" id="r_aafbc8a1a70df7e903851c443ef203924"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafbc8a1a70df7e903851c443ef203924">AddTrailEffect</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in trailName, const int nodeIndex)</td></tr>
+<tr class="separator:aafbc8a1a70df7e903851c443ef203924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40a070a792ba1be1a456acd9aaf8a6d" id="r_ae40a070a792ba1be1a456acd9aaf8a6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae40a070a792ba1be1a456acd9aaf8a6d">RemoveTrailEffect</a> ()</td></tr>
+<tr class="memdesc:ae40a070a792ba1be1a456acd9aaf8a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all trail effects.  <br /></td></tr>
+<tr class="separator:ae40a070a792ba1be1a456acd9aaf8a6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace8e4e7e9ac41c7f3e9ebe1088bc79c9" id="r_ace8e4e7e9ac41c7f3e9ebe1088bc79c9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace8e4e7e9ac41c7f3e9ebe1088bc79c9">GetNumAttachedTrails</a> ()</td></tr>
+<tr class="separator:ace8e4e7e9ac41c7f3e9ebe1088bc79c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade93d62556522531bf10fa75a8ca07df" id="r_ade93d62556522531bf10fa75a8ca07df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade93d62556522531bf10fa75a8ca07df">Offset</a> ()</td></tr>
+<tr class="separator:ade93d62556522531bf10fa75a8ca07df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aa1b2b37aa6195754f25809ad6984cc" id="r_a1aa1b2b37aa6195754f25809ad6984cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aa1b2b37aa6195754f25809ad6984cc">PrevOffset</a> ()</td></tr>
+<tr class="separator:a1aa1b2b37aa6195754f25809ad6984cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1de466ad7ee8f74a98ab11b2168bfb28" id="r_a1de466ad7ee8f74a98ab11b2168bfb28"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1de466ad7ee8f74a98ab11b2168bfb28">GetNumNodes</a> () const</td></tr>
+<tr class="separator:a1de466ad7ee8f74a98ab11b2168bfb28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa3e25aa336bca03c985f2c39d70833" id="r_a1fa3e25aa336bca03c985f2c39d70833"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fa3e25aa336bca03c985f2c39d70833">GetNodeOrigin</a> (const int node, const <a class="el" href="a00047.html">kVec3</a> &amp;in offset)</td></tr>
+<tr class="memdesc:a1fa3e25aa336bca03c985f2c39d70833"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.  <br /></td></tr>
+<tr class="separator:a1fa3e25aa336bca03c985f2c39d70833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a160fef0559719cc3be81bc69b95118b8" id="r_a160fef0559719cc3be81bc69b95118b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00051.html">kQuat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a160fef0559719cc3be81bc69b95118b8">GetNodeRotation</a> (const int node)</td></tr>
+<tr class="memdesc:a160fef0559719cc3be81bc69b95118b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation.  <br /></td></tr>
+<tr class="separator:a160fef0559719cc3be81bc69b95118b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11aacbd542e06e3c8b16949c390d03be" id="r_a11aacbd542e06e3c8b16949c390d03be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00047.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11aacbd542e06e3c8b16949c390d03be">GetNodeScale</a> (const int node)</td></tr>
+<tr class="separator:a11aacbd542e06e3c8b16949c390d03be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbdce5a92a5a04c758818d0ef1cd72a9" id="r_adbdce5a92a5a04c758818d0ef1cd72a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbdce5a92a5a04c758818d0ef1cd72a9">ForceUpdateJoints</a> (const float interpolatedFraction=1.0f)</td></tr>
+<tr class="memdesc:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current). This is an expensive operation so use sparingly.  <br /></td></tr>
+<tr class="separator:adbdce5a92a5a04c758818d0ef1cd72a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae085315c76ba8071171f70c64e15bb3d" id="r_ae085315c76ba8071171f70c64e15bb3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae085315c76ba8071171f70c64e15bb3d">GetModelFile</a> () const</td></tr>
+<tr class="separator:ae085315c76ba8071171f70c64e15bb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ca4f6e3e76282ead5199aef1f0ae25" id="r_a11ca4f6e3e76282ead5199aef1f0ae25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11ca4f6e3e76282ead5199aef1f0ae25">GetAnimFile</a> () const</td></tr>
+<tr class="separator:a11ca4f6e3e76282ead5199aef1f0ae25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab58356f5adc9176145cc993ed107260a" id="r_ab58356f5adc9176145cc993ed107260a"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab58356f5adc9176145cc993ed107260a">IsMorph</a> () const</td></tr>
+<tr class="separator:ab58356f5adc9176145cc993ed107260a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5713ec0e338e73247af9203e873de02a" id="r_a5713ec0e338e73247af9203e873de02a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5713ec0e338e73247af9203e873de02a">SetMorphUpdating</a> (const bool bUpdate)</td></tr>
+<tr class="memdesc:a5713ec0e338e73247af9203e873de02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Morph Updating.  <br /></td></tr>
+<tr class="separator:a5713ec0e338e73247af9203e873de02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add54bf6344245456bcc8d436a9b1dbc4" id="r_add54bf6344245456bcc8d436a9b1dbc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add54bf6344245456bcc8d436a9b1dbc4">GetMorphFrame</a> (int &amp;out frame, int &amp;out nextFrame, int &amp;out maxFrames, float &amp;out time) const</td></tr>
+<tr class="memdesc:add54bf6344245456bcc8d436a9b1dbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Morph frame info.  <br /></td></tr>
+<tr class="separator:add54bf6344245456bcc8d436a9b1dbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a96c5a378ec5172f77994b31a517d23" id="r_a6a96c5a378ec5172f77994b31a517d23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a96c5a378ec5172f77994b31a517d23">SetMorphFrame</a> (const int frame, const int nextFrame, const float time)</td></tr>
+<tr class="separator:a6a96c5a378ec5172f77994b31a517d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fd3a41dadb9c0d59d3b094591aabe7" id="r_ab9fd3a41dadb9c0d59d3b094591aabe7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9fd3a41dadb9c0d59d3b094591aabe7">ColorOverride</a> (const int node, const float r=1.0f, const float g=1.0f, const float b=1.0f, const float a=1.0f)</td></tr>
+<tr class="memdesc:ab9fd3a41dadb9c0d59d3b094591aabe7"><td class="mdescLeft">&#160;</td><td class="mdescRight">color values range from -1.0f to 1.0f. Call ColorOverrideSections to enable the override for sections on the node.  <br /></td></tr>
+<tr class="separator:ab9fd3a41dadb9c0d59d3b094591aabe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a524eb897c36370ecc3eaa71af331ac01" id="r_a524eb897c36370ecc3eaa71af331ac01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a524eb897c36370ecc3eaa71af331ac01">ColorOverrideSections</a> (const int node, const int sectionMask=-1)</td></tr>
+<tr class="memdesc:a524eb897c36370ecc3eaa71af331ac01"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable the color override for specific sections(materials) on the node by setting each bit. -1 = All, 0 = Stop override  <br /></td></tr>
+<tr class="separator:a524eb897c36370ecc3eaa71af331ac01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3fffa986d574f6214e7eaa2f3a98835" id="r_ae3fffa986d574f6214e7eaa2f3a98835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3fffa986d574f6214e7eaa2f3a98835">ScaleOverride</a> (const int node, const <a class="el" href="a00047.html">kVec3</a> &amp;in scale)</td></tr>
+<tr class="separator:ae3fffa986d574f6214e7eaa2f3a98835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The way to iterate through all actors in the map. Example code: </p>
-<div class="fragment"><div class="line"><a class="code hl_function" href="#a99a84899c783e71d09af781c914ed989">kActorIterator</a> it;</div>
-<div class="line"><a class="code hl_class" href="a00111.html">kActor</a> @actor;</div>
-<div class="line"><span class="keywordflow">while</span>((@actor = it.<a class="code hl_function" href="#a5606c64889cedece597554850c2c2a73">Get</a>()) !is null)</div>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01101">1101</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aafbc8a1a70df7e903851c443ef203924" name="aafbc8a1a70df7e903851c443ef203924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafbc8a1a70df7e903851c443ef203924">&#9670;&#160;</a></span>AddTrailEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::AddTrailEffect </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>trailName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9fd3a41dadb9c0d59d3b094591aabe7" name="ab9fd3a41dadb9c0d59d3b094591aabe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9fd3a41dadb9c0d59d3b094591aabe7">&#9670;&#160;</a></span>ColorOverride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::ColorOverride </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>r</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>g</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>b</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>a</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>color values range from -1.0f to 1.0f. Call ColorOverrideSections to enable the override for sections on the node. </p>
+
+</div>
+</div>
+<a id="a524eb897c36370ecc3eaa71af331ac01" name="a524eb897c36370ecc3eaa71af331ac01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a524eb897c36370ecc3eaa71af331ac01">&#9670;&#160;</a></span>ColorOverrideSections()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::ColorOverrideSections </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>sectionMask</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable the color override for specific sections(materials) on the node by setting each bit. -1 = All, 0 = Stop override </p>
+
+</div>
+</div>
+<a id="adbdce5a92a5a04c758818d0ef1cd72a9" name="adbdce5a92a5a04c758818d0ef1cd72a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbdce5a92a5a04c758818d0ef1cd72a9">&#9670;&#160;</a></span>ForceUpdateJoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::ForceUpdateJoints </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>interpolatedFraction</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1.0f</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Force update node matrices and then call GetNodeOrigin/GetNodeRotation to get current value. interpolatedFraction should be in the range 0.0 (prev) to 1.0 (current). This is an expensive operation so use sparingly. </p>
+
+</div>
+</div>
+<a id="a11ca4f6e3e76282ead5199aef1f0ae25" name="a11ca4f6e3e76282ead5199aef1f0ae25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ca4f6e3e76282ead5199aef1f0ae25">&#9670;&#160;</a></span>GetAnimFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00039.html">kStr</a> kRenderModel::GetAnimFile </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae085315c76ba8071171f70c64e15bb3d" name="ae085315c76ba8071171f70c64e15bb3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae085315c76ba8071171f70c64e15bb3d">&#9670;&#160;</a></span>GetModelFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00039.html">kStr</a> kRenderModel::GetModelFile </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add54bf6344245456bcc8d436a9b1dbc4" name="add54bf6344245456bcc8d436a9b1dbc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add54bf6344245456bcc8d436a9b1dbc4">&#9670;&#160;</a></span>GetMorphFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::GetMorphFrame </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>nextFrame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;out</td>          <td class="paramname"><span class="paramname"><em>maxFrames</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float &amp;out</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Morph frame info. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame</td><td>1=Init Frame, 2=Start Loop Frame. &gt;= maxFrames then 1. </td></tr>
+    <tr><td class="paramname">nextFrame</td><td>2=Init Frame, 3=Start Loop Frame. &gt;= maxFrames then 2. </td></tr>
+    <tr><td class="paramname">maxFrames</td><td></td></tr>
+    <tr><td class="paramname">time</td><td>0..1 (lerp time between frame and nextFrame meshes) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1fa3e25aa336bca03c985f2c39d70833" name="a1fa3e25aa336bca03c985f2c39d70833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa3e25aa336bca03c985f2c39d70833">&#9670;&#160;</a></span>GetNodeOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00047.html">kVec3</a> kRenderModel::GetNodeOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation. </p>
+
+</div>
+</div>
+<a id="a160fef0559719cc3be81bc69b95118b8" name="a160fef0559719cc3be81bc69b95118b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a160fef0559719cc3be81bc69b95118b8">&#9670;&#160;</a></span>GetNodeRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00051.html">kQuat</a> kRenderModel::GetNodeRotation </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is calculated on draw. Can call ForceUpdateJoints if you need the current value for interpolation. </p>
+
+</div>
+</div>
+<a id="a11aacbd542e06e3c8b16949c390d03be" name="a11aacbd542e06e3c8b16949c390d03be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11aacbd542e06e3c8b16949c390d03be">&#9670;&#160;</a></span>GetNodeScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00047.html">kVec3</a> kRenderModel::GetNodeScale </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace8e4e7e9ac41c7f3e9ebe1088bc79c9" name="ace8e4e7e9ac41c7f3e9ebe1088bc79c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace8e4e7e9ac41c7f3e9ebe1088bc79c9">&#9670;&#160;</a></span>GetNumAttachedTrails()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kRenderModel::GetNumAttachedTrails </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1de466ad7ee8f74a98ab11b2168bfb28" name="a1de466ad7ee8f74a98ab11b2168bfb28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1de466ad7ee8f74a98ab11b2168bfb28">&#9670;&#160;</a></span>GetNumNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kRenderModel::GetNumNodes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33e5e04268fe95badaec171601710c3b" name="a33e5e04268fe95badaec171601710c3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33e5e04268fe95badaec171601710c3b">&#9670;&#160;</a></span>HideSection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::HideSection </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>hide</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>section is the surface index. must be 0-31 and must not be &gt;= number of surfaces or will do nothing. </p>
+
+</div>
+</div>
+<a id="ab58356f5adc9176145cc993ed107260a" name="ab58356f5adc9176145cc993ed107260a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab58356f5adc9176145cc993ed107260a">&#9670;&#160;</a></span>IsMorph()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kRenderModel::IsMorph </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade93d62556522531bf10fa75a8ca07df" name="ade93d62556522531bf10fa75a8ca07df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade93d62556522531bf10fa75a8ca07df">&#9670;&#160;</a></span>Offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00047.html">kVec3</a> &amp; kRenderModel::Offset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aa1b2b37aa6195754f25809ad6984cc" name="a1aa1b2b37aa6195754f25809ad6984cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aa1b2b37aa6195754f25809ad6984cc">&#9670;&#160;</a></span>PrevOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00047.html">kVec3</a> &amp; kRenderModel::PrevOffset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae40a070a792ba1be1a456acd9aaf8a6d" name="ae40a070a792ba1be1a456acd9aaf8a6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae40a070a792ba1be1a456acd9aaf8a6d">&#9670;&#160;</a></span>RemoveTrailEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::RemoveTrailEffect </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes all trail effects. </p>
+
+</div>
+</div>
+<a id="ae3fffa986d574f6214e7eaa2f3a98835" name="ae3fffa986d574f6214e7eaa2f3a98835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3fffa986d574f6214e7eaa2f3a98835">&#9670;&#160;</a></span>ScaleOverride()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::ScaleOverride </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>node</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00047.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf62fd27c78ba5b0f5c52977745fd98e" name="adf62fd27c78ba5b0f5c52977745fd98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf62fd27c78ba5b0f5c52977745fd98e">&#9670;&#160;</a></span>SetModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::SetModel </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>modelPath</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>modelAnimPath</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a96c5a378ec5172f77994b31a517d23" name="a6a96c5a378ec5172f77994b31a517d23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a96c5a378ec5172f77994b31a517d23">&#9670;&#160;</a></span>SetMorphFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::SetMorphFrame </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nextFrame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5713ec0e338e73247af9203e873de02a" name="a5713ec0e338e73247af9203e873de02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5713ec0e338e73247af9203e873de02a">&#9670;&#160;</a></span>SetMorphUpdating()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::SetMorphUpdating </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>bUpdate</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set Morph Updating. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bUpdate</td><td>Set to false to handle updating it yourself per ModelFile (not per Actor).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Default Tick code: </p><div class="fragment"><div class="line"><span class="keywordflow">if</span>(time &gt;= 1.0f)</div>
 <div class="line">{</div>
-<div class="line">    <span class="comment">// Do something with actor</span></div>
+<div class="line">    time = 0;</div>
+<div class="line">    frame++;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span>(frame &gt;= maxFrames)</div>
+<div class="line">    {</div>
+<div class="line">        frame = 2;</div>
+<div class="line">    }</div>
+<div class="line">    nextFrame = frame + 1;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00111_html"><div class="ttname"><a href="a00111.html">kActor</a></div><div class="ttdoc">Base type used by all actors.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01093">t1_scriptAPI.cpp:1094</a></div></div>
-<div class="ttc" id="aa00115_html_a5606c64889cedece597554850c2c2a73"><div class="ttname"><a href="#a5606c64889cedece597554850c2c2a73">kActorIterator::Get</a></div><div class="ttdeci">kActor Get()</div><div class="ttdoc">Returns the next actor in the iterator.</div></div>
-<div class="ttc" id="aa00115_html_a99a84899c783e71d09af781c914ed989"><div class="ttname"><a href="#a99a84899c783e71d09af781c914ed989">kActorIterator::kActorIterator</a></div><div class="ttdeci">kActorIterator()</div></div>
+<div class="line">time += <a class="code hl_variable" href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a> * 7.5f;</div>
+<div class="ttc" id="aa00002_html_a293a6cf6cf09ffb7d3fdc65c8fd4a32e"><div class="ttname"><a href="a00002.html#a293a6cf6cf09ffb7d3fdc65c8fd4a32e">GAME_DELTA_TIME</a></div><div class="ttdeci">const float GAME_DELTA_TIME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02532">t1_scriptAPI.cpp:2532</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01288">1288</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a99a84899c783e71d09af781c914ed989" name="a99a84899c783e71d09af781c914ed989"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99a84899c783e71d09af781c914ed989">&#9670;&#160;</a></span>kActorIterator()</h2>
+</div>
+</div>
+<a id="a77655f5926e2487b2a06b27669e7e0d9" name="a77655f5926e2487b2a06b27669e7e0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77655f5926e2487b2a06b27669e7e0d9">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">kActorIterator::kActorIterator </td>
+          <td class="memname">void kRenderModel::SetRotationOffset </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>rads</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>z</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>clearInterpolation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5606c64889cedece597554850c2c2a73" name="a5606c64889cedece597554850c2c2a73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5606c64889cedece597554850c2c2a73">&#9670;&#160;</a></span>Get()</h2>
+<a id="ac3ad093ff064372a8c4ca35e31987043" name="ac3ad093ff064372a8c4ca35e31987043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3ad093ff064372a8c4ca35e31987043">&#9670;&#160;</a></span>SetRotationOffset() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="a00111.html">kActor</a> kActorIterator::Get </td>
+          <td class="memname">void kRenderModel::SetRotationOffset </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="a00051.html">kQuat</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>rotation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>clearInterpolation</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the next actor in the iterator. </p>
-
 </div>
 </div>
-<a id="a77a615c1305ce57ab223b8545b43bdf6" name="a77a615c1305ce57ab223b8545b43bdf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77a615c1305ce57ab223b8545b43bdf6">&#9670;&#160;</a></span>Reset()</h2>
+<a id="a76c97b974e5faaed3ee825b841270e2b" name="a76c97b974e5faaed3ee825b841270e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c97b974e5faaed3ee825b841270e2b">&#9670;&#160;</a></span>SetTexture()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void kActorIterator::Reset </td>
+          <td class="memname">void kRenderModel::SetTexture </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>section</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>textureID</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Resets the iterator back to the first actor. </p>
+</div>
+</div>
+<a id="a0307149cd4eb33b4930dcb9851536d5c" name="a0307149cd4eb33b4930dcb9851536d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0307149cd4eb33b4930dcb9851536d5c">&#9670;&#160;</a></span>SetVisibility()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kRenderModel::SetVisibility </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>nodeIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>visible</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -199,7 +764,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="a00115.html">kActorIterator</a></li>
+    <li class="navelem"><a class="el" href="a00115.html">kRenderModel</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

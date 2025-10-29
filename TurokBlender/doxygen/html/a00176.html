@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Fx Properties</title>
+<title>Turok: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a00176.html',''); initResizable(true); });
+$(function(){initNavTree('a00179.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -102,149 +102,67 @@ $(function(){initNavTree('a00176.html',''); initResizable(true); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Fx Properties</div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">kPlayer Member List</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><pre class="fragment">Credit to Smoke39 (https://smoke39.github.io/turok/fx.html) for the comments on some of these after rotationOffset. There's too many properties to explain!
 
-bFadeout                    // Not used
-bStopAnimOnImpact           // if impacts a floor and onCollideFloor is Bounce or Reflect then stops animating the sprite
-bOffsetFromFloor            // sprite z position += (textureAtlasHeight - (GAME_SCALE * 0.4f)) * drawScale
-bTextureWrapMirrorWidth     // Mirrors sprite horizontally and vertically
-bTextureWrapMirrorHeight    // Not used
-bDepthBuffer                // if set will draw behind objects otherwise will draw in front
-bActorInstance              // Not used
-bScaleLerp                  // if is 0 will multiply scale by scaleDest otherwise will add scaleDest
-bLensFlares                 // Enable Lens Flare effect.
-lensFlares                  // Path to the lens flare. lensFlares = "lensflares/sunflare.klf"
-bBlood                      // Blood effects won't spawn if the menu option is set to no blood or actor has the no blood flag set.
-bAddOffset                  // The velocity passed into SpawnFx will be added to the initial velocity of this Fx. kActor::SpawnProjectile, kActor::FireProjectile, all Game.SpawnFx except the one that has a velocity param, and kexEmitter's use no velocity. kActor::SpawnFx will use the actors Movement() as the velocity.
-bNoDirection                // Uses no rotation (World forward direction) for translation and offset (including random variants)
-bFlash                      // Changes the sunDirection based on the Fx Origin. Adds white color to the sunLightColor and black color to the sunAmbientColor. (only the last Fx that was created with this property will take effect)
-bProjectile                 // If this Fx has an owner actor then rotation is set towards the owners target. Also allows more than 200 instances.
-bDestroyOnWaterSurface      // Removes this Fx when it enters or exits the areas water height. If this Fx is a bBullet then will only remove it when velocity.z is less than 0.
-bStickOnTarget              // if collides with an actor then it's position is set to the actors position + half the height of the actor.
-bBullet                     // bounces off collided walls/floors if onCollideWall/onCollideFloor is Bounce or Reflect. Also allows more than 200 instances.
-bWeaponView                 // Draws in the camera view
-bFullScreen                 // Draws to the center of the camera view and forward by GAME_SCALE * 20.
-bDecalOffset                // if drawType is a decal(2) and onCollideWall is not default(0) then the z position will never be lower than floorheight + (GAME_SCALE * 0.1f) otherwise the z position will never be lower than floorheight + 3.413333333333334f. bOffsetFromFloor can still further affect the z position offset after this.
-bNoSpawnNear                // Will not spawn the effect if the squared distance to the camera view is &lt;= (GAME_SCALE * 20) * (GAME_SCALE * 20). You can use noSpawnNearFarDist to set the distance.
-bNoSpawnFar                 // Will not spawn the effect if the squared distance to the camera view is &gt;= (GAME_SCALE * 20) * (GAME_SCALE * 20). You can use noSpawnNearFarDist to set the distance.
-noSpawnNearFarDist          // Set a custom squared distance to be used for bNoSpawnNear or bNoSpawnFar
-bAttachSource               // Sets to this Fx's owner position
-bAttachSourceAnimOffset     // if bAttachSource is set then this will add the actors AnimState baseOffset to origin.z
-bDrawOnBottom               // Will draw the Fx last
-bSparkle                    // Not used
-bCrossFade                  // Not used
-bImpactEffect               // Not used
-bRestrictAim                // if Fx is a bProjectile then will RestrictAim towards the target by 90 degrees yaw. and will move forward if not in that fov.
-bNoWallSpawn                // if onCollideWall is Destroy(1) then won't spawn impact fx. Bullets won't spawn impact fx and could bounce forever.
-bNoGroundSpawn              // if onCollideFloor is Destroy(1) then won't spawn impact fx. if onCollideFloor is Bounce(3) or Reflect(2) and Fx is a bullet then won't spawn impact fx and could bounce forever.
-bRetainVelocity             // Not used
-bNoHitSource                // Not used
-bPerPolyCollision           // Enables poly collision checks on static meshes if the menu option precise is on.
-bDrawDelay                  // Don't draw the Fx until it has ticked once
-bMuzzleEffect               // enables muzzle effect using the cameras view and muzzleOffset property. Lifetime of a muzzle effect is 0.03125 seconds.
-muzzleOffset                // position offset of muzzle effect.
-mass                        // used as bounce damping.
-translationRandomGlobal     // scale value of 0 to 1
-translationRandom           // scales from 0 to 1 how much to apply randomness to the translation.
-translation                 // scales from 0 to 1 how much to apply (forwardSpeed + forwardSpeedRandom) to the initial velocity.
-gravity                     // Amount to increase the velocities z value every tick. (real value is this value divided by 3072)
-gravityRandomScale          // Random amount applied to gravity. (real value is this value divided by 3072)
-friction                    // if on the ground then velocity xy is multiplied by this value. (real friction value is (1.0f - this value))
-airFriction                 // if is not 0.0 then increases the forward velocity of this Fx every tick by this value * GameSpeed.
-waterFriction               // if in water then velocity xy is multiplied by this value. (real waterFriction value is (1.0f - this value)). Afterwards if the Fx z velocity is &lt; 0 then the z velocity is multiplied by 0.905f
-animFriction                // if is not 0.0 and animtype != 6(DrawSingleFrame) then:
-    float af = 1.0f; // final animFriction result used
-    if(animFriction != 0.0f)
-    {
-        float d = 30.0f * (velocity.Length() / animFriction);
-        if(d &lt;= 1.0f)
-        {
-            af = d;
-        }
-    }
-    if(animtype != 6)
-    {
-        frameTime -= ((15.0f * af) * GameSpeed); // if frameTime &lt;= 0 then sprite advances to the next frame.
-        ...
-    }
-        
-scale                       // the draw scale of this Fx
-scaleRandom                 // random amount applied to the draw scale
-scaleDest                   // Used with bScaleLerp
-scaleDestRandom             // random amount applied to scaleDest
-forwardSpeed                // forwardSpeed * finalTranslationValue is the initial velocity
-forwardSpeedRandom          // random amount applied to forwardSpeed
-offset                      // starting position offset
-offsetRandom                // random amount applied to offset
-rotationOffset              // radians, clockwise
-rotationOffsetRandom        // random amount applied to rotationOffset
-rotationSpeed               // radians per 1⁄15 seconds, clockwise
-rotationSpeedRandom         // random amount applied to rotationSpeedRandom
-rotationPivotX              // offset from the particles's physical location to render the sprite
-rotationPivotY              // offset from the particles's physical location to render the sprite
-shader                      // shader to render the sprite with
-sprite                      // sprite to represent the particle with
-trailFile                   // Not used
-trailDefinition_1           // "Trail_TekBow_Crossline_1" (max of 4 trails)
-trailDefinition_2           // "Trail_TekBow_Crossline_2"
-trailDefinition_3           // "Trail_TekBow_Crossline_3"
-trailDefinition_4           // "Trail_TekBow_Crossline_4"
-instances                   // number of this fx to spawn
-instancesRandom             // random amount applied to instances
-recurseLifetime             // amount of time until this Fx will no longer spawn any more child Fx.
-recurseLifetimeRandom       // random amount applied to recurseLifetime
-lifeTime                    // how long the particle will exist, in 1⁄15 seconds
-lifeTimeRandom              // random amount applied to lifeTime
-restart                     // The delay from a random value from 0 to this value (in 1⁄15 seconds). the fx will not tick during this delay.
-animSpeed                   // sets frameTime to this value if animType is 2, 3, or 4. (See animFriction for the code to how the frameTime decreases)
-whiteColor                  // alters light colors of the sprite
-blackColor                  // alters dark colors of the sprite
-hueRandom                   // color randomization
-saturationRandom            // color randomization
-brightnessRandom            // color randomization
-fadeInTime                  // fade in during first fadeInTime 1⁄15 seconds of lifeTime
-fadeOutTime                 // fade out during last fadeOutTime 1⁄15 seconds of lifeTime
-onCollideActor              // 0 = Default, 1 = Destroy, 2 = Reflect (Same as Bounce), 3 = Bounce (Same as Reflect). Other values are undefined.
-onCollideWall               // sector with link or cliff sector with plane y direction &gt;= 0.5
-onCollideFloor              // same as other 2 but with the floor
-drawType                    // 0 = Default, 1 = Flat, 2 = Decal, 3 = Wall, 4 = Surface, 5 = Billboard, 6 = hidden
-visibilityType              // 0 = Close, 1 = Far, 2 = Always, 3 = Invisible
-animType                    // 0 = Default, 1 = OneTime, 2 = Loop, 3 = SinWave, 4 = Random, 5 = RandomAndHold, 6 = DrawSingleFrame. Values other than 1-5 will run the onExpire or onWaterExpire events to occur when it reaches the last frame.
-priority                    // Not used
-spawnDistOffset             // float. When Fx are a certain distance away from the View they will not be created. Use this to add to that value.
-maxInstances                // int. By default only 200 instances of an Fx are allowed but you can use this to spawn more if needed.
-maxBulletBounces            // int. By default bullets can only bounce 3 times. Override the value.
-bBounceImpact               // bool. Will do ImpactEvents on Bounce.
-bounceImpactThreshold       // float. will continue to do bounce impacts as long as the velocity is &gt;= to this value
-bOverrideMaxDrawScale       // bool. override the max draw scale of the fx which by default is 4096
-maxscale                    // float. The new max draw scale if bOverrideMaxDrawScale was set. (default is 4096)
-maxscaleRandom              // float. The new max draw scale random factor if bOverrideMaxDrawScale was set.
-bIgnoreGameSpeed            // bool. GameSpeed is always 1.0 for this Fx and the attached Trails.
-scriptClass                 // kStr. The name of the script class. You must inherit from ScriptObjectFx
-bScriptOnAllInstances       // bool. Will create a ScriptObjectFx for every instance that gets created. Else will create a ScriptObjectFx for only the first instance.
-modelName                   // kStr. Use for your own custom script purposes
-animName                    // kStr. Use for your own custom script purposes
-userString                  // kStr. Use for your own custom script purposes
-userID                      // int. Use for your own custom script purposes
-    
------Event Blocks:
-onImpact                    // The 10 OnImpact events with each surface type you can have.
-onExpire                    // happens when lifeTime runs out, unless underwater
-onTick                      // happens continuously, unless underwater
-onWaterImpact               // happens when entering or exiting water. If this Fx is a bBullet then will only be called if velocity.z is less than 0.
-onWaterExpire               // happens instead of onExpire when lifeTime runs out, if underwater
-onWaterTick                 // happens continuously instead of onTick while underwater
-
------Inside event blocks you can define:
-fx                          // spawn another effect. fx = "fx/blood.kfx"
-sound                       // play a sound. sound = "sounds/shaders/bullet_impact_13.ksnd"
-damageClass                 // deal damage, from defs/damageInfo.txt. damageClass = "S_Damage_Target_damage_10". ignored by onWaterImpact.
-</pre> </div></div><!-- contents -->
-</div><!-- PageDoc -->
+<p>This is the complete list of members for <a class="el" href="a00179.html">kPlayer</a>, including all inherited members.</p>
+<table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a09bdf282de9c50d8bf21462590571f19">Actor</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a2d56113eb7f8fefd71791d6f36c61577">Armor</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a62936b02bfb4a77f85b2a90e523cd702">Backpack</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a90b7cc6d01c83b755c3f01d8c303c7f0">ButtonHeldTime</a>(const int btn)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a51530aa7c9b564d62c48f118ac59202f">Buttons</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a5bcb1243ee40ced3c40f5f04e0906251">CancelSpiritualTime</a>(float blendTime=1.0f)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#acd9fcec891eddc985bf36853aac69843">ChangeWeapon</a>(const int weapon)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#af8601e769b44c3ce6f521a173ae7054e">ConsumeAltAmmo</a>(const int ammo)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a735bca530c88d5c8bc495fe7d48fc1aa">ConsumeAmmo</a>(const int ammo, const bool preferredAmmo=true)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a41161389d55a084f9311f7fcc95aa4b3">CurrentCheckPoint</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a6543ccc8bbca31eb60659e62bf1a7a8a">CurrentCheckPointMap</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a842f5956bad09cc5366b521a776c7c7c">CurrentWeapon</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a68ecc9027548b29a5bc6b96412f13987">CycleNextWeapon</a>(const bool bCheckAmmo=false)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a000e427c74530a661603829ab1b03563">CyclePrevWeapon</a>(const bool bCheckAmmo=false)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a252b81e73d107f319390a0835de9065a">ExtraHealth</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a15f73209251df37713c7505c322f6d2a">GetAltAmmo</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#aed3467092239895a6307866bbae3dfac">GetAmmo</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ac10388411b171ee372707e623b32a72a">GetButtonAngles</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#aafc55fd2da128959db67d58f88cc13be">GetButtonMovement</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a58cecd2784fced6900e8b2e37d0778f6">GetSpiritualTime</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a20a8abe826af3d6175c330820ffdc111">GetWeaponActor</a>(const int weapon)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a4ee74fd0a9d56f095ec52d5fe5e58508">GetWeaponGroup</a>(const int weapon)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a29512d41bb7e93a4f3f1dbf2e83c890a">GiveAmmo</a>(const int weapon, const int amount, const bool altAmmo)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a5e60b0eda64d2ba2be8a7242f9ca979f">GiveHealth</a>(const int amount, const bool bMortalWound)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#ae48f202c2e1e7489d44508c8f66c4b89">GiveWeapon</a>(const int weaponID, const int ammo, const bool switchNewWeapon=true)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a0031e84971f5928addca949868858c2b">HasAltAmmo</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a04bdbf3e87f45f54b1abb2737e8f0675">HasAltAmmo</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ad04697b2730dc03205fbc032b11136c7">HasAmmo</a>(const int weaponID, const bool checkAlt=true) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#ad3e077292ee5923b081b6484a0958195">HasWeapon</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a0641da86e4711c5d119e0561bbf69e6c">LifeForces</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#ad5f1d5e0a876e23d8785664e4838df5b">Lives</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#aadeddfea49654de0ef80a704050b1227">Lock</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a8d130e18d026002f6b896b73177a1e14">Locked</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ae7b7e6fa98fa18b55adef26c83904725">LookSensScale</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a7508f45e2fce32efab56c6512196649a">MaxExtraHealth</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ac7345ef2668796ad80f93a060bf3634a">MaxHealth</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#ab31aa67b958296a91eca1fc32da3d67e">NoLandClearVel</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#aea2e5133484bf525c83f374bf0f2d397">NoWeaponSwitchOnWaterLand</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a6d31b1f7906cea2c6e728df57ce8c3f4">PendingWeapon</a>() const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ab382a70aa56834574e3b1728b0e38baa">RemoveWeapon</a>(const int weapon)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a3dcad7691f35ceb7c8ecf3e80ce774a6">RunWalkToggle</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a1f3f23277ff6cf1d7a1a504d110ea262">SetCheckPoint</a>(const int warpTID, const int map)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a6fc2f56c6558d278924252b3f79eb81a">SetLifeForces</a>(const int amount)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#a54a2c6e6e5162e733961bedc6ed5fa94">SetLives</a>(const int amount)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a71c14aedfb8280790cb78075d6abbdbd">SetSpiritualTime</a>(const float time, const float blend)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ac859f503f55a1bf9477cb412f9ba36de">SetWeaponGroup</a>(const int weapon, const int group)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a71bd381e47c3c9bdc54756556a33514e">SetWeaponUseAltAmmo</a>(const int weapon, const bool bToggle)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#aaa7b2abe7fd81f67d32410b3d5d81506">SilentCheckPoints</a>(void)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#abdfd0f51bac3e19927cad316465e0a3d">Unlock</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#aa20f009a0d4b047853e41db1bfbb16ca">UseAltAmmo</a>()</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a29d220020a1f54f85118a8e63b89cdd9">Victory</a>(const int warpActorID=- 1, const int mapID=- 1)</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="a00179.html#ae84777f87a954e684cb06f1f03a78e97">WeaponAllowUnderwater</a>(const int weapon) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="a00179.html#a72c69b7eb7281d1ebb21b704219f8571">WeaponUsingAltAmmo</a>(const int weapon) const</td><td class="entry"><a class="el" href="a00179.html">kPlayer</a></td><td class="entry"></td></tr>
+</table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

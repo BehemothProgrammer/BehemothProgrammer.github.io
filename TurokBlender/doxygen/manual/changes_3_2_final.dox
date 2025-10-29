@@ -570,9 +570,11 @@ enum EnumSectorPlatformFlags
     SPF_USEMOVETOFORPLAYER  = (1 << 4),   ///< Uses the MoveToPosition function to set the Players origin. else sets origin.
     SPF_USEMOVETOFORAI      = (1 << 5),   ///< Uses the MoveToPosition function to set the AI origin. else sets origin.
     SPF_USEMOVETOFOROTHER   = (1 << 6),   ///< Uses the MoveToPosition function to set other actors origin. else sets origin.
-    SPF_MOVEOTHERACTORS     = (1 << 7),   ///< Moves other actors on the sectors that are not the player or AI.
+    SPF_MOVEPLAYER          = (1 << 7),   ///< Moves player
+    SPF_MOVEAI              = (1 << 8),   ///< Moves AI
+    SPF_MOVEOTHERACTORS     = (1 << 9),   ///< Moves other actors on the sectors that are not the player or AI.
 
-    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEOTHERACTORS
+    SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEPLAYER|SPF_MOVEAI|SPF_MOVEOTHERACTORS
 };
 
 \endverbatim

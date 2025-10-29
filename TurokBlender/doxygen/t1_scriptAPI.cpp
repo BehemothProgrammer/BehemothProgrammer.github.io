@@ -895,25 +895,145 @@ public:
 class kScriptObject
 {
 public:
+    /**
+     * @brief Access to ScriptObject class script obj ref. Should never be null.
+        @code{.cpp}
+            TurokEnemy @enemyObj = cast<TurokEnemy@>(actor.ScriptObject().obj);
+        @endcode
+     */
     ref obj;
 };
 
+class kScriptObjectFx
+{
+public:
+    /**
+     * @brief Access to ScriptObjectFx class script obj ref. Should never be null.
+        @code{.cpp}
+            MyCoolFx @coolFx = cast<MyCoolFx@>(fx.ScriptObject().obj);
+        @endcode
+     */
+    ref obj;
+};
+
+/**
+ * @class ScriptObject
+ * @brief Actor script classes must inherit from this class
+ * @code{.cpp}
+ *  class TurokActor : ScriptObject
+ *  {
+ *      kActor  @self;
+ *      TurokActor(kActor @actor)
+ *      {
+ *          @self = actor;
+ *      }
+ *  }
+ * @endcode
+ */
 class ScriptObject
 {
 public:
-    void OnTick();
-    void OnSpawn();
+    void OnSpawn(); ///< Required
+    void OnTick(); ///< Required
+    void OnBeginLevel();
+    void OnRestore();
+    void OnPostBeginLevel();
+    void OnSleep();
+    void OnWake();
+    void OnTouch(kActor @theActorThatTouchedMe); ///< called even if alseep
+    void OnCollide(kCModel@); ///< called even if alseep
+    void OnCollisionStart(); ///< Collision Movement Check is starting
+    void OnCollisionFinish(); ///< Collision Movement Check has ended
+    void OnMenuTick(); ///< called only when dummymenu active
+    void OnRemoved(); ///< called when actor is removed (Internally or through scripting). IsStale will return true immediately after this, RenderModel will be null, and the scriptobject will be destroyed.
+    void OnActivate();
+    void OnDeactivate(); ///< Never used
+    void OnPreDamage(kActor @instigator, kDictMem @damageDef, const int damage); ///< always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.
+    void OnDeath(kActor @killer, kDictMem @damageDef); ///< called only when actor dies
+    void OnDamage(kActor @instigator, kDictMem @damageDef, const int damage); ///< always called even after death
+    void OnEndLevel();
+    void OnPreTick();  ///< For the player script only! Called right before all other actors are ticked
+    void OnPostTick(); ///< For the player script only! Called right after level script ticks
 };
 
-class ScriptObjectWeapon
+/**
+ * @class ScriptObjectWeapon
+ * @brief Weapon script classes must inherit from this class
+ * @code{.cpp}
+ *  class TurokWeapon : ScriptObjectWeapon
+ *  {
+ *      kWeapon @self;
+ *      TurokWeapon(kWeapon @actor)
+ *      {
+ *          @self = actor;
+ *      }
+ *  }
+ * @endcode
+ */
+class ScriptObjectWeapon : public ScriptObject
 {
 public:
-    void OnBeginFire();
-    void OnFire();
-    void OnEndFire();
-    void OnLower();
-    void OnRaise();
-    void OnHoldster();
+    void OnBeginFire(); ///< Required
+    void OnFire(); ///< Required
+    void OnEndFire(); ///< Required
+    void OnLower(); ///< Required
+    void OnRaise(); ///< Required
+    void OnHoldster(); ///< Required
+    void OnPreRaise() ///< Optional. Called right when the weapon state is set to raise.
+    void OnActorTick() ///< Optional. Called after the weapon calls OnTick for the kActor class (Should not use. Only here if needed)
+};
+
+/**
+ * @class ScriptObjectPlayer
+ * @brief Player script class must inherit from this class
+ * @code{.cpp}
+ *  class TurokPlayer : ScriptObjectPlayer
+ *  {
+ *      kPuppet @self;
+ *      TurokPlayer(kPuppet @actor)
+ *      {
+ *          @self = actor;
+ *      }
+ *  }
+ * @endcode
+ */
+class ScriptObjectPlayer : public ScriptObject
+{
+public:
+    void OnPickup(kActor @pickup);
+    void OnArmorDamage(kActor @instigator, kDictMem @damageDef, const int damage);
+    void OnEnterWater();
+};
+
+/**
+ * @class ScriptObjectFx
+ * @brief Fx script class must inherit from this class
+ * @code{.cpp}
+ *  class TurokFx : ScriptObjectFx
+ *  {
+ *      kFx @self;
+ *      TurokFx(kFx @fx)
+ *      {
+ *          @self = fx;
+ *      }
+ *  }
+ * @endcode
+ */
+class ScriptObjectFx
+{
+public:
+    void OnTick(); ///< Required
+    void OnRemoved(); ///< called when actor is removed (Internally or through scripting). IsStale will return true immediately after this.
+    void OnCollisionStart(); ///< Collision Movement Check is starting
+    void OnCollisionFinish(); ///< Collision Movement Check has ended
+    void OnCollide(kCModel @pCModel); ///< Called just before any of the OnImpact functions (except water).
+    void OnCollidePost(); ///< Called right after OnCollide and the OnImpact functions (except water).
+    bool OnImpactWall(int impactType, const kVec3 &in normal);
+    bool OnImpactFloor(int impactType, const kVec3 &in normal);
+    bool OnImpactCeiling(int impactType, const kVec3 &in normal);
+    bool OnImpactObject(int impactType, int impactDmgType, kActor@ actor, const kVec3 &in normal);
+    void OnImpactWater(); ///< Called OnTick after Fx Movement update
+    void OnExpire(); ///< Called OnTick
 };
 
 /**
@@ -1169,7 +1289,7 @@ public:
      * @param callbackFunc a function on this actors script class that will be called (if it exists) for each actor in range. function header must be: void callbackFunc(kActor@ actor, const float arg1, const float arg2, const float arg3, const float arg4)
      */
     void InteractActorsAtPosition(const kVec3&in pos, const kStr&in callbackFunc, const float arg1 = 0, const float arg2 = 0, const float arg3 = 0, const float arg4 = 0);
-    kScriptObject@ ScriptObject();
+    kScriptObject@ ScriptObject(); ///< Returns the ScriptObject that holds the obj ref to the custom script. Will return null if actor doesn't have a custom script or the actor was removed.
     const bool MoveToPosition(const float x, const float y); ///< Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
     const bool MoveToPosition(const float x, const float y, uint clipFlags); ///< EnumClipFlags to use. Returns True if new position is in the same sector as the actor else returns false and it set a new sector. Moves the world object to a desired position at xy coordinates. Movement will use hitscan collision for quick collision tests.
     bool RandomDecision(const int randomBit) const; ///< randomBit should be >= 2. if a random value has the bit set and actors GameTicks also has the bit set then returns true.
@@ -1497,7 +1617,7 @@ public:
     const int GameTicks() const;
     float RadiusDamageFactor(const kVec3 &in origin, const float radius) const;
     bool InWater();
-    kScriptObjectFx @ScriptObject();
+    kScriptObjectFx @ScriptObject(); ///< Returns the ScriptObject that holds the obj ref to the custom script. Will return null if kFx doesn't have a custom script.
     void ClearInterpolation();
     const bool DrawDelay() const;
     const float GetCurrentGameSpeed(void) const; ///< Gamespeed of this Fx (default 1.0f)
@@ -1511,8 +1631,8 @@ public:
     float &RecurseLifeTime();
     bool &DidWaterImpact();
     bool &IgnoreGameSpeed(); ///< GameSpeed used for this Fx will always be CurrentGameSpeed. (Default = false)
-    kActor @GetOwnerAsActor();
-    kFx @GetOwnerAsFx();
+    kActor @GetOwnerAsActor(); ///< Returns null if is not an Actor
+    kFx @GetOwnerAsFx();    ///< Returns null if is not an Fx
     void SetOwnerAsActor(kActor@ actor);
     void SetOwnerAsFx(kFx@ fx);
     kFx @GetParentFx();
