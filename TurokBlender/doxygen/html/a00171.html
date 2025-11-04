@@ -201,6 +201,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a275c0108126ac1398b2e40805ba11ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abce4c3468fdd5ad5c48949d522e5a7b8" id="r_abce4c3468fdd5ad5c48949d522e5a7b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abce4c3468fdd5ad5c48949d522e5a7b8">SetHubKey</a> (const uint hubID, int key)</td></tr>
 <tr class="separator:abce4c3468fdd5ad5c48949d522e5a7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc63209189225b2bf2ef041f0b222a3" id="r_a4bc63209189225b2bf2ef041f0b222a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bc63209189225b2bf2ef041f0b222a3">SetHubKey</a> (const uint hubID, int keyBits, int remainingKeys)</td></tr>
+<tr class="memdesc:a4bc63209189225b2bf2ef041f0b222a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the keybits and remainingKeys directly.  <br /></td></tr>
+<tr class="separator:a4bc63209189225b2bf2ef041f0b222a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a486d3860659f086e62135d4256a1a554" id="r_a486d3860659f086e62135d4256a1a554"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html">kFx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a486d3860659f086e62135d4256a1a554">SpawnFx</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in fxPath, <a class="el" href="a00123.html">kActor</a>@ source, const <a class="el" href="a00047.html">kVec3</a> &amp;in velocity, const <a class="el" href="a00047.html">kVec3</a> &amp;in origin, const <a class="el" href="a00051.html">kQuat</a> &amp;in rotation)</td></tr>
 <tr class="separator:a486d3860659f086e62135d4256a1a554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a37d15ec205bf8fefb1052bf0a1fa4f" id="r_a5a37d15ec205bf8fefb1052bf0a1fa4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00147.html">kFx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a37d15ec205bf8fefb1052bf0a1fa4f">SpawnFx</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in fxPath, <a class="el" href="a00139.html">kPuppet</a>@ source, const <a class="el" href="a00047.html">kVec3</a> &amp;in velocity, const <a class="el" href="a00047.html">kVec3</a> &amp;in origin, const <a class="el" href="a00051.html">kQuat</a> &amp;in rotation)</td></tr>
@@ -441,6 +444,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e269e100e4ffaad4ac04b2da7aebbde" id="r_a3e269e100e4ffaad4ac04b2da7aebbde"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e269e100e4ffaad4ac04b2da7aebbde">IsActorPersistentMarked</a> (const int actorIndex, const int hubID=-1, const int mapNum=0)</td></tr>
 <tr class="memdesc:a3e269e100e4ffaad4ac04b2da7aebbde"><td class="mdescLeft">&#160;</td><td class="mdescRight">an invalid hub or map uses current maps persistent data.  <br /></td></tr>
 <tr class="separator:a3e269e100e4ffaad4ac04b2da7aebbde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a659c72a9d260d72b183fa05c7186f118" id="r_a659c72a9d260d72b183fa05c7186f118"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a659c72a9d260d72b183fa05c7186f118">ClearAllMapsPersistData</a> (void)</td></tr>
+<tr class="memdesc:a659c72a9d260d72b183fa05c7186f118"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all sector and actor persistent data for all maps in the game.  <br /></td></tr>
+<tr class="separator:a659c72a9d260d72b183fa05c7186f118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55c1d406d5e709129ff4870a6ff3aaa" id="r_aa55c1d406d5e709129ff4870a6ff3aaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa55c1d406d5e709129ff4870a6ff3aaa">ClearMapPersistData</a> (int mapID)</td></tr>
+<tr class="memdesc:aa55c1d406d5e709129ff4870a6ff3aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears all sector and actor persistent data for the map and returns true. Returns false if map was not found.  <br /></td></tr>
+<tr class="separator:aa55c1d406d5e709129ff4870a6ff3aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3db9e5fcca2a0727a2fce2a1dcdb208" id="r_ac3db9e5fcca2a0727a2fce2a1dcdb208"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3db9e5fcca2a0727a2fce2a1dcdb208">GetPreventOpenPauseMenu</a> ()</td></tr>
 <tr class="separator:ac3db9e5fcca2a0727a2fce2a1dcdb208"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13011da7cb29d213e1f5163d1efad08a" id="r_a13011da7cb29d213e1f5163d1efad08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13011da7cb29d213e1f5163d1efad08a">SetPreventOpenPauseMenu</a> (const bool value)</td></tr>
@@ -534,7 +543,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9f40bdccd7e722cff61309ea448ed17a" id="r_a9f40bdccd7e722cff61309ea448ed17a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f40bdccd7e722cff61309ea448ed17a">IsRunningMapScript</a> (const int scriptID)</td></tr>
 <tr class="separator:a9f40bdccd7e722cff61309ea448ed17a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf79d459ece81f0efde5d7140c8a3112" id="r_aaf79d459ece81f0efde5d7140c8a3112"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf79d459ece81f0efde5d7140c8a3112">GetMapNameFromID</a> (const int mapID)</td></tr>
-<tr class="memdesc:aaf79d459ece81f0efde5d7140c8a3112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the name of the map with the mapID.  <br /></td></tr>
+<tr class="memdesc:aaf79d459ece81f0efde5d7140c8a3112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the name of the map with the mapID. Returns an empty string couldn't find the map.  <br /></td></tr>
 <tr class="separator:aaf79d459ece81f0efde5d7140c8a3112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14e5517c76bea84815c2e05c65db60df" id="r_a14e5517c76bea84815c2e05c65db60df"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14e5517c76bea84815c2e05c65db60df">GetMaxZDrawDistance</a> ()</td></tr>
 <tr class="memdesc:a14e5517c76bea84815c2e05c65db60df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns GetExtraZFar + the max z-draw distance from the active map def.  <br /></td></tr>
@@ -618,6 +627,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5a01d5cfccdef2f98006164b24969a9b" id="r_a5a01d5cfccdef2f98006164b24969a9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a01d5cfccdef2f98006164b24969a9b">SetGlobalSoundPitch</a> (const float pitch)</td></tr>
 <tr class="memdesc:a5a01d5cfccdef2f98006164b24969a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">When sounds begin to play their pitch is scaled by this value.  <br /></td></tr>
 <tr class="separator:a5a01d5cfccdef2f98006164b24969a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e73154e85a7a6c65893b1180d54187e" id="r_a8e73154e85a7a6c65893b1180d54187e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e73154e85a7a6c65893b1180d54187e">GetMapSecretBits</a> (int mapID)</td></tr>
+<tr class="memdesc:a8e73154e85a7a6c65893b1180d54187e"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the secretBits found in this map. Returns 0 if map not found.  <br /></td></tr>
+<tr class="separator:a8e73154e85a7a6c65893b1180d54187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a817aafdef3af04ef45bce8a5e95aa8b1" id="r_a817aafdef3af04ef45bce8a5e95aa8b1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a817aafdef3af04ef45bce8a5e95aa8b1">GetMapSecretsFound</a> (int mapID)</td></tr>
+<tr class="memdesc:a817aafdef3af04ef45bce8a5e95aa8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of secrets found in this map. Returns 0 if map not found.  <br /></td></tr>
+<tr class="separator:a817aafdef3af04ef45bce8a5e95aa8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6ba0fe6eea9c7d2a7d9cb274b96e413" id="r_ae6ba0fe6eea9c7d2a7d9cb274b96e413"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6ba0fe6eea9c7d2a7d9cb274b96e413">SetMapSecretsFound</a> (int mapID, int secretBits)</td></tr>
+<tr class="memdesc:ae6ba0fe6eea9c7d2a7d9cb274b96e413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns false if map could not be found. secretBits only uses the first 16 bits, that means each map can only hold 16 secrets.  <br /></td></tr>
+<tr class="separator:ae6ba0fe6eea9c7d2a7d9cb274b96e413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8bdb00aef0de655c66696d2a41b0e6b" id="r_ae8bdb00aef0de655c66696d2a41b0e6b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8bdb00aef0de655c66696d2a41b0e6b">GetHubSecretsFound</a> (const uint hubID)</td></tr>
+<tr class="memdesc:ae8bdb00aef0de655c66696d2a41b0e6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of secrets found in all the maps in this HUB. Returns 0 if HUB not found.  <br /></td></tr>
+<tr class="separator:ae8bdb00aef0de655c66696d2a41b0e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39e870353652402326c932cd42334b9" id="r_ab39e870353652402326c932cd42334b9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab39e870353652402326c932cd42334b9">GetHubIDFromMapID</a> (int mapID)</td></tr>
+<tr class="memdesc:ab39e870353652402326c932cd42334b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the HUB ID value. Returns -1 if not found.  <br /></td></tr>
+<tr class="separator:ab39e870353652402326c932cd42334b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0927f54201e4dbc708ad076020d4bd0d" id="r_a0927f54201e4dbc708ad076020d4bd0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0927f54201e4dbc708ad076020d4bd0d">GetHubTitle</a> (int hubID)</td></tr>
+<tr class="memdesc:a0927f54201e4dbc708ad076020d4bd0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HUB's Title def property. Returns empty string if not found.  <br /></td></tr>
+<tr class="separator:a0927f54201e4dbc708ad076020d4bd0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c76d0ccf68208dd82fe512629930529" id="r_a6c76d0ccf68208dd82fe512629930529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c76d0ccf68208dd82fe512629930529">GetHubDefName</a> (int hubID)</td></tr>
+<tr class="memdesc:a6c76d0ccf68208dd82fe512629930529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HUB's def name. Returns empty string if not found.  <br /></td></tr>
+<tr class="separator:a6c76d0ccf68208dd82fe512629930529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -1089,6 +1119,25 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a659c72a9d260d72b183fa05c7186f118" name="a659c72a9d260d72b183fa05c7186f118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a659c72a9d260d72b183fa05c7186f118">&#9670;&#160;</a></span>ClearAllMapsPersistData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::ClearAllMapsPersistData </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all sector and actor persistent data for all maps in the game. </p>
+
+</div>
+</div>
 <a id="ab66c07984860268eea02304cdb8a8b0a" name="ab66c07984860268eea02304cdb8a8b0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab66c07984860268eea02304cdb8a8b0a">&#9670;&#160;</a></span>ClearDummyMenu()</h2>
 
@@ -1156,6 +1205,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa55c1d406d5e709129ff4870a6ff3aaa" name="aa55c1d406d5e709129ff4870a6ff3aaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa55c1d406d5e709129ff4870a6ff3aaa">&#9670;&#160;</a></span>ClearMapPersistData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::ClearMapPersistData </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clears all sector and actor persistent data for the map and returns true. Returns false if map was not found. </p>
 
 </div>
 </div>
@@ -1304,9 +1372,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02536">t1_scriptAPI.cpp:2536</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02539">t1_scriptAPI.cpp:2539</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02537">t1_scriptAPI.cpp:2537</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02548">t1_scriptAPI.cpp:2548</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02551">t1_scriptAPI.cpp:2551</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02549">t1_scriptAPI.cpp:2549</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -1750,6 +1818,44 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6c76d0ccf68208dd82fe512629930529" name="a6c76d0ccf68208dd82fe512629930529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c76d0ccf68208dd82fe512629930529">&#9670;&#160;</a></span>GetHubDefName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00039.html">kStr</a> kGame::GetHubDefName </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hubID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the HUB's def name. Returns empty string if not found. </p>
+
+</div>
+</div>
+<a id="ab39e870353652402326c932cd42334b9" name="ab39e870353652402326c932cd42334b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39e870353652402326c932cd42334b9">&#9670;&#160;</a></span>GetHubIDFromMapID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kGame::GetHubIDFromMapID </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return the HUB ID value. Returns -1 if not found. </p>
+
+</div>
+</div>
 <a id="a275c0108126ac1398b2e40805ba11ff2" name="a275c0108126ac1398b2e40805ba11ff2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a275c0108126ac1398b2e40805ba11ff2">&#9670;&#160;</a></span>GetHubKeyInfo()</h2>
 
@@ -1778,6 +1884,44 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8bdb00aef0de655c66696d2a41b0e6b" name="ae8bdb00aef0de655c66696d2a41b0e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8bdb00aef0de655c66696d2a41b0e6b">&#9670;&#160;</a></span>GetHubSecretsFound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kGame::GetHubSecretsFound </td>
+          <td>(</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>hubID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of secrets found in all the maps in this HUB. Returns 0 if HUB not found. </p>
+
+</div>
+</div>
+<a id="a0927f54201e4dbc708ad076020d4bd0d" name="a0927f54201e4dbc708ad076020d4bd0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0927f54201e4dbc708ad076020d4bd0d">&#9670;&#160;</a></span>GetHubTitle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00039.html">kStr</a> kGame::GetHubTitle </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hubID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the HUB's Title def property. Returns empty string if not found. </p>
 
 </div>
 </div>
@@ -1887,7 +2031,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Finds the name of the map with the mapID. </p>
+<p>Finds the name of the map with the mapID. Returns an empty string couldn't find the map. </p>
 
 </div>
 </div>
@@ -1907,6 +2051,44 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This returns the HUB number NOT the map number. mapName is the HUB name such as "Map_Jungle". Returns -1 if not found. </p>
+
+</div>
+</div>
+<a id="a8e73154e85a7a6c65893b1180d54187e" name="a8e73154e85a7a6c65893b1180d54187e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e73154e85a7a6c65893b1180d54187e">&#9670;&#160;</a></span>GetMapSecretBits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kGame::GetMapSecretBits </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the secretBits found in this map. Returns 0 if map not found. </p>
+
+</div>
+</div>
+<a id="a817aafdef3af04ef45bce8a5e95aa8b1" name="a817aafdef3af04ef45bce8a5e95aa8b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a817aafdef3af04ef45bce8a5e95aa8b1">&#9670;&#160;</a></span>GetMapSecretsFound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kGame::GetMapSecretsFound </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the number of secrets found in this map. Returns 0 if map not found. </p>
 
 </div>
 </div>
@@ -3875,7 +4057,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="abce4c3468fdd5ad5c48949d522e5a7b8" name="abce4c3468fdd5ad5c48949d522e5a7b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abce4c3468fdd5ad5c48949d522e5a7b8">&#9670;&#160;</a></span>SetHubKey()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abce4c3468fdd5ad5c48949d522e5a7b8">&#9670;&#160;</a></span>SetHubKey() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3892,6 +4074,34 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bc63209189225b2bf2ef041f0b222a3" name="a4bc63209189225b2bf2ef041f0b222a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc63209189225b2bf2ef041f0b222a3">&#9670;&#160;</a></span>SetHubKey() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::SetHubKey </td>
+          <td>(</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>hubID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>keyBits</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>remainingKeys</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the keybits and remainingKeys directly. </p>
 
 </div>
 </div>
@@ -3926,6 +4136,29 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6ba0fe6eea9c7d2a7d9cb274b96e413" name="ae6ba0fe6eea9c7d2a7d9cb274b96e413"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6ba0fe6eea9c7d2a7d9cb274b96e413">&#9670;&#160;</a></span>SetMapSecretsFound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::SetMapSecretsFound </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mapID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>secretBits</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns false if map could not be found. secretBits only uses the first 16 bits, that means each map can only hold 16 secrets. </p>
 
 </div>
 </div>

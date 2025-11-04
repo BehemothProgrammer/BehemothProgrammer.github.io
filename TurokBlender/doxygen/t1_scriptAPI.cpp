@@ -2091,6 +2091,7 @@ public:
     void SetGameSpeed(const float speed, const float blendSpeed);
     bool GetHubKeyInfo(const uint hubID, int&out nKeys, int&out remainingKeys, int&out keyBits);
     bool SetHubKey(const uint hubID, int key);
+    bool SetHubKey(const uint hubID, int keyBits, int remainingKeys); ///< Set the keybits and remainingKeys directly
     kFx @SpawnFx(const kStr&in fxPath, kActor@ source, const kVec3&in velocity, const kVec3&in origin, const kQuat&in rotation);
     kFx @SpawnFx(const kStr&in fxPath, kPuppet@ source, const kVec3&in velocity, const kVec3&in origin, const kQuat&in rotation);
     kFx @SpawnFx(const kStr&in fxPath, kActor@ source, const kVec3&in origin, const kQuat&in rotation);
@@ -2267,6 +2268,8 @@ public:
     kStr PlayerName(); ///< Returns "Player" if could not get name
     void MarkActorPersistentBit(const int actorIndex, const bool clear = false, const int hubID = -1, const int mapNum = 0); ///< an invalid hub or map uses current maps persistent data.
     const bool IsActorPersistentMarked(const int actorIndex, const int hubID = -1, const int mapNum = 0); ///< an invalid hub or map uses current maps persistent data.
+    void ClearAllMapsPersistData(void); ///< Clears all sector and actor persistent data for all maps in the game
+    bool ClearMapPersistData(int mapID); ///< Clears all sector and actor persistent data for the map and returns true. Returns false if map was not found.
     const bool GetPreventOpenPauseMenu();
     void SetPreventOpenPauseMenu(const bool value);
     void ShowPauseMenu(); ///< Should always check if(PlayLoop.CanOpenPauseMenu())
@@ -2306,7 +2309,7 @@ public:
     void PlayMusicID(const int musicID, const int fadeTimeMS = 500, const bool loop = true); ///< MusicID -2 plays previous track, -1 stops the music.
     bool MusicIsFading();
     bool IsRunningMapScript(const int scriptID);
-    kStr GetMapNameFromID(const int mapID); ///< Finds the name of the map with the mapID
+    kStr GetMapNameFromID(const int mapID); ///< Finds the name of the map with the mapID. Returns an empty string couldn't find the map.
     const float GetMaxZDrawDistance();  ///< Returns GetExtraZFar + the max z-draw distance from the active map def.
     bool IsCheatActive(const int cheatBits); ///< EnumCheatFlags. Returns true if cheats are active
     void SetWaterReflectionAlpha(const float alpha);            ///< Default is 1.0f
@@ -2336,6 +2339,13 @@ public:
     bool &NoArmorFlash(void);
     void SetAllSoundsPitchScale(const float pitchScale); ///< Sets all playing sounds pitch scale
     void SetGlobalSoundPitch(const float pitch); ///< When sounds begin to play their pitch is scaled by this value
+    int GetMapSecretBits(int mapID); ///< returns the secretBits found in this map. Returns 0 if map not found.
+    int GetMapSecretsFound(int mapID); ///< Returns the number of secrets found in this map. Returns 0 if map not found.
+    bool SetMapSecretsFound(int mapID, int secretBits); ///< Returns false if map could not be found. secretBits only uses the first 16 bits, that means each map can only hold 16 secrets.
+    int GetHubSecretsFound(const uint hubID); ///< Returns the number of secrets found in all the maps in this HUB. Returns 0 if HUB not found.
+    int GetHubIDFromMapID(int mapID); ///< Return the HUB ID value. Returns -1 if not found.
+    kStr GetHubTitle(int hubID); ///< Returns the HUB's Title def property. Returns empty string if not found.
+    kStr GetHubDefName(int hubID); ///< Returns the HUB's def name. Returns empty string if not found.
 };
 
 /**
@@ -2419,6 +2429,8 @@ public:
     void SetWeaponGroup(const int weapon, const int group);
     bool &SilentCheckPoints(void); ///< if true won't show checkpoint message or play sound when on a checkpoint area. Gets set back to false when level starts.
     float &LookSensScale(); ///< Scales mouse/controller/gyro sensitivity (default = 1.0f)
+    const int16 SecretCount(void) const; ///< Total number of secrets currently found over the entire game
+    void SetSecretCount(const int amount); ///< Set the total number of secrets currently found over the entire game
 };
 
 namespace Math
