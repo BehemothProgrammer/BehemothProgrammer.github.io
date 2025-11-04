@@ -1281,7 +1281,7 @@ public:
     float DistanceToPoint(const kVec3&in point) const; ///< calls DistanceToPoint(x,y,z)
     float DistanceToPoint(const float x, const float y, const float z) const; ///< actors point is in the center
     void InflictGenericDamage(kActor@ inflictor, const int damage);
-    void InflictGenericDamage(kActor@ inflictor, const kexStr &damageDef, const int damage); ///< Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this function: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce
+    void InflictGenericDamage(kActor@ inflictor, const kStr &damageDef, const int damage); ///< Can pass in a damage def. The damageDef keys used are mainly for custom scripting purposes only. Only the following keys are used internally when calling this function: bImpact, impactDamp, impactFalloff, bKnockback, knockBackForce
     void InflictDamage(kActor@ inflictor, const kStr&in damageDef);
     /**
      * @brief Calls a script function on all actors that are in the AreaNodes (KD-Tree search) contained inside a bounds. The bounds is calculated as: pos + this actors bounds(model bounds) + this actors radius. This will call for actors not necessarily in the bounds of the actor so checking distance is required in your script function.
@@ -1527,7 +1527,7 @@ public:
     kAngle &CustomViewYaw();
     kAngle &CustomViewPitch();
     kAngle &CustomViewRoll();
-    kexVec3 &CustomViewOrigin();
+    kVec3 &CustomViewOrigin();
     void SetHeadBobScale(const float scale);
     void SetTurnBobScale(const float scale);
     void SetStrafeBobScale(const float scale);
