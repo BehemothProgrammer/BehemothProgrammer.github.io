@@ -23,7 +23,7 @@ var searchData=
   ['index_2edox_20',['index.dox',['../a00020.html',1,'']]],
   ['indexof_21',['IndexOf',['../a00039.html#afd67dbbfbe04c063cb535149c7ace7f9',1,'kStr']]],
   ['inflictdamage_22',['InflictDamage',['../a00123.html#a9873de4b22e903b980184debf05dbffa',1,'kActor']]],
-  ['inflictgenericdamage_23',['InflictGenericDamage',['../a00123.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a',1,'kActor::InflictGenericDamage(kActor@ inflictor, const int damage)'],['../a00123.html#a6fd66f08d236854a4b596f652db8d9b2',1,'kActor::InflictGenericDamage(kActor@ inflictor, const kexStr &amp;damageDef, const int damage)']]],
+  ['inflictgenericdamage_23',['InflictGenericDamage',['../a00123.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a',1,'kActor::InflictGenericDamage(kActor@ inflictor, const int damage)'],['../a00123.html#a58d417d7977434dd86ae5f93b2f76cae',1,'kActor::InflictGenericDamage(kActor@ inflictor, const kStr &amp;damageDef, const int damage)']]],
   ['infoactorinstance_24',['InfoActorInstance',['../a00147.html#a3f31ebfaa86ccf59f4a53675026c8d30',1,'kFx']]],
   ['infoaddoffset_25',['InfoAddOffset',['../a00147.html#a09795153a13e9e1c4d2cca9e7b3476f3',1,'kFx']]],
   ['infoairfriction_26',['InfoAirFriction',['../a00147.html#a3de7f75b04b8d26df0f8b63aa4b2bba1',1,'kFx']]],

@@ -63,7 +63,7 @@ var a00123 =
     [ "ImpactTypeDmg", "a00123.html#a63df3c56dfbe0ae7bda1c51dd1883e3a", null ],
     [ "InflictDamage", "a00123.html#a9873de4b22e903b980184debf05dbffa", null ],
     [ "InflictGenericDamage", "a00123.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a", null ],
-    [ "InflictGenericDamage", "a00123.html#a6fd66f08d236854a4b596f652db8d9b2", null ],
+    [ "InflictGenericDamage", "a00123.html#a58d417d7977434dd86ae5f93b2f76cae", null ],
     [ "InstanceOf", "a00123.html#a8409e24c8fe9c17d262d09f5ac88c4f6", null ],
     [ "InteractActorsAtPosition", "a00123.html#a896d0a1e1b88d6ee892fdb6997ec7105", null ],
     [ "InWater", "a00123.html#a44f741c95ec0abc5e1d8258f543c1f4f", null ],

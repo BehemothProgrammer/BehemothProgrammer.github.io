@@ -176,7 +176,7 @@ var searchData=
   ['currentweapon_173',['CurrentWeapon',['../a00179.html#a842f5956bad09cc5366b521a776c7c7c',1,'kPlayer']]],
   ['custom_20fonts_20ttf_20h3_174',['&lt;H3&gt;Custom fonts ttf&lt;/H3&gt;',['../index.html#customfonts',1,'']]],
   ['customviewenable_175',['CustomViewEnable',['../a00139.html#ae907ea04b81b18117a4b7213ac0898be',1,'kPuppet']]],
-  ['customvieworigin_176',['CustomViewOrigin',['../a00139.html#a64788ab57210e7c3f286105ef3e4d1b5',1,'kPuppet']]],
+  ['customvieworigin_176',['CustomViewOrigin',['../a00139.html#a21d94a34b51c87c1a1f2152465163301',1,'kPuppet']]],
   ['customviewpitch_177',['CustomViewPitch',['../a00139.html#a2cb72b62bc3712b42fe69f92faf24d4e',1,'kPuppet']]],
   ['customviewroll_178',['CustomViewRoll',['../a00139.html#a65d107f4572681dd2e5e633ebf99e95b',1,'kPuppet']]],
   ['customviewunderwater_179',['CustomViewUnderwater',['../a00139.html#ab0a8d9a5a73052158520c1b43f3e029c',1,'kPuppet']]],
