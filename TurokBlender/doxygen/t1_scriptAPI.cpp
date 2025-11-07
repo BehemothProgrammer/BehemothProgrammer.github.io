@@ -366,36 +366,37 @@ enum EnumDifficulty
 
 enum EnumClipFlags
 {
-    CF_CLIPEDGES = 1, ///< clip movement against edges that don't link to sectors
-    CF_IGNOREBLOCKERS = 2, ///< don't clip edges belonging to blocking sectors
-    CF_DROPOFF = 4, ///< allows passing through platforms or ledges
-    CF_NOENTERWATER = 8, ///< block all edges that links to a water sector
-    CF_NOEXITWATER = 16, ///< block all edges that links to a non-water sector
-    CF_NOCLIPSTATICS = 32, ///< don't collide with static models
-    CF_NOCLIPACTORS = 64, ///< don't collide with dynamic objects/actors
-    CF_WALKWALLS = 128, ///< don't restrict movement to steep slopes
-    CF_COLLIDEFLOORS = 256, ///< project and clip movement against non-flat floors
-    CF_HITSCAN = 512, ///< performs a single-pass trace. useful for hitscans
-    CF_ALLOWCLIMB = 1024, ///< collide with sectors flagged as climbable
-    CF_ALLOWCRAWL = 2048, ///< collide with sectors flagged as crawlable
-    CF_NOSTEPDOWN = 4096, ///< don't clamp z-axis when walking down slopes
-    CF_NOSLOPESTEP = 8192, ///< don't project z-axis movement along slopes
-    CF_COLLIDEHEIGHT = 16384, ///< clip against ceilings
-    CF_COLLIDECORPSES = 32768, ///< clip against actors flagged as dead
-    CF_NOEXITWALLS = 65536, ///< clip all edges, regardless if they link to another sector or not
-    CF_NOCOLLIDEFUNC = 131072, ///< don't invoke the OnCollide callback on the moving object
-    CF_NOFLOORADJUST = 262144, ///< don't keep z-axis above floor plane
-    CF_NOCEILINGADJUST = 524288, ///< don't keep z-axis below ceiling plane
-    CF_COLLIDEWATER = 1048576, ///< clip movement against the water surface
-    CF_USEWALLRADIUS = 2097152, ///< clip and project movement away from walls based on wall radius
-    CF_NOCLIPTARGETACTORS = 4194304, ///< don't clip actors that are targeted by moving object
-    CF_COLLIDETRIGGERS = 8388608, ///< block edges belonging to a trigger. Can't cross into sectors if sector has AAF_EVENT.
-    CF_STANDONOBJECTS = 16777216, ///< allow vertical clipping of objects
-    CF_GREASESLIDEOBJECTS = 33554432, ///< always keep movement projected away from collided objects
-    CF_ALLOWRESTRICTEDAREAS = 67108864, ///< don't collide with edges belonging to a restricted sector
-    CF_COLLIDECLIFFS = 134217728, ///< collide with non-walkable floors
-    CF_CHECKLINKEDBRIDGES = 268435456, ///< do extensive checks against overlapping bridge sectors
-    CF_POLYCOLLISION = 536870912 ///< clip movement against all model polygons of an object
+    CF_CLIPEDGES = 1 << 0, ///< clip movement against edges that don't link to sectors
+    CF_IGNOREBLOCKERS = 1 << 1, ///< don't clip edges belonging to blocking sectors
+    CF_DROPOFF = 1 << 2, ///< allows passing through platforms or ledges
+    CF_NOENTERWATER = 1 << 3, ///< block all edges that links to a water sector
+    CF_NOEXITWATER = 1 << 4, ///< block all edges that links to a non-water sector
+    CF_NOCLIPSTATICS = 1 << 5, ///< don't collide with static models
+    CF_NOCLIPACTORS = 1 << 6, ///< don't collide with dynamic objects/actors
+    CF_WALKWALLS = 1 << 7, ///< don't restrict movement to steep slopes
+    CF_COLLIDEFLOORS = 1 << 8, ///< project and clip movement against non-flat floors
+    CF_HITSCAN = 1 << 9, ///< performs a single-pass trace. useful for hitscans
+    CF_ALLOWCLIMB = 1 << 10, ///< collide with sectors flagged as climbable
+    CF_ALLOWCRAWL = 1 << 11, ///< collide with sectors flagged as crawlable
+    CF_NOSTEPDOWN = 1 << 12, ///< don't clamp z-axis when walking down slopes
+    CF_NOSLOPESTEP = 1 << 13, ///< don't project z-axis movement along slopes
+    CF_COLLIDEHEIGHT = 1 << 14, ///< clip against ceilings
+    CF_COLLIDECORPSES = 1 << 15, ///< clip against actors flagged as dead
+    CF_NOEXITWALLS = 1 << 16, ///< clip all edges, regardless if they link to another sector or not
+    CF_NOCOLLIDEFUNC = 1 << 17, ///< don't invoke the OnCollide callback on the moving object
+    CF_NOFLOORADJUST = 1 << 18, ///< don't keep z-axis above floor plane
+    CF_NOCEILINGADJUST = 1 << 19, ///< don't keep z-axis below ceiling plane
+    CF_COLLIDEWATER = 1 << 20, ///< clip movement against the water surface
+    CF_USEWALLRADIUS = 1 << 21, ///< clip and project movement away from walls based on wall radius
+    CF_NOCLIPTARGETACTORS = 1 << 22, ///< don't clip actors that are targeted by moving object
+    CF_COLLIDETRIGGERS = 1 << 23, ///< block edges belonging to a trigger. Can't cross into sectors if sector has AAF_EVENT.
+    CF_STANDONOBJECTS = 1 << 24, ///< allow vertical clipping of objects
+    CF_GREASESLIDEOBJECTS = 1 << 25, ///< always keep movement projected away from collided objects
+    CF_ALLOWRESTRICTEDAREAS = 1 << 26, ///< don't collide with edges belonging to a restricted sector
+    CF_COLLIDECLIFFS = 1 << 27, ///< collide with non-walkable floors
+    CF_CHECKLINKEDBRIDGES = 1 << 28, ///< do extensive checks against overlapping bridge sectors
+    CF_POLYCOLLISION = 1 << 29, ///< clip movement against all model polygons of an object
+    CF_COLLIDEPLAYERBLOCKER = 1 << 30 ///< collide with edges linked to player blocking regions (AAF_WARPRETURN)
 };
 
 enum EnumWaterLevel
@@ -445,38 +446,38 @@ enum EnumCameraStates
 
 enum EnumAreaFlags
 {
-    AAF_WATER = 1,
-    AAF_BLOCK = 2,
-    AAF_TOGGLE = 4, ///< if on and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. Used for door areas.
-    AAF_CLIFF = 8, ///< is a wall
-    AAF_CLIMB = 16, ///< climb up sectors faster than AAF_LADDER
-    AAF_ONESIDED = 32, ///< Bridge
-    AAF_CEILING = 64,
-    AAF_CRAWL = 128,
-    AAF_ENTERCRAWL = 256, ///< Exactly the same as AAF_CRAWL
-    AAF_HIDDEN = 512,
-    AAF_ENTERED = 1024, ///< Not shown in Editor. Used in kex editor only for fill sector commands. When map is saved in kex editor all sectors will have this flag off.
-    AAF_SECRET = 2048,
-    AAF_RESTRICTED = 4096, ///< kAI can't enter the area
-    AAF_SLOPETEST = 8192, ///< overrides AAF_CLIFF flag. If the sectors floor plane up direction is <= 0.5 then is a wall (a wall is the same as the AAF_CLIFF flag).
-    AAF_DEATHPIT = 16384,
-    AAF_MAPPED = 32768,
-    AAF_EVENT = 65536,
-    AAF_REPEATABLE = 131072, ///< Unused
-    AAF_TELEPORT = 262144,
-    AAF_DAMAGE = 524288,
-    AAF_DRAWSKY = 1048576,
-    AAF_TELEPORTAIR = 2097152,
-    AAF_LAVA = 4194304,
-    AAF_EVENTSOUND = 8388608,
-    AAF_ANTIGRAVITY = 16777216,
-    AAF_LADDER = 33554432, ///< climb up sectors slower than AAF_CLIMB
-    AAF_CHECKPOINT = 67108864,
-    AAF_SAVEGAME = 134217728,
-    AAF_WARPRETURN = 268435456, ///< Unused
-    AAF_SHALLOWWATER = 536870912,
-    AAF_DRAWSUN = 1073741824,
-    AAF_STOREWARPRETURN = -2147483648  ///< Unused
+    AAF_WATER = 1 << 0,
+    AAF_BLOCK = 1 << 1,
+    AAF_TOGGLE = 1 << 2, ///< if on and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. Used for door areas.
+    AAF_CLIFF = 1 << 3, ///< is a wall
+    AAF_CLIMB = 1 << 4, ///< climb up sectors faster than AAF_LADDER
+    AAF_ONESIDED = 1 << 5, ///< Bridge
+    AAF_CEILING = 1 << 6,
+    AAF_CRAWL = 1 << 7,
+    AAF_ENTERCRAWL = 1 << 8, ///< Exactly the same as AAF_CRAWL except actors won't collide with this sector when CF_ALLOWCRAWL is not set.
+    AAF_HIDDEN = 1 << 9,
+    AAF_ENTERED = 1 << 10, ///< Not shown in Editor. Used in kex editor only for fill sector commands. When map is saved in kex editor all sectors will have this flag off.
+    AAF_SECRET = 1 << 11,
+    AAF_RESTRICTED = 1 << 12, ///< kAI can't enter the area
+    AAF_SLOPETEST = 1 << 13, ///< overrides AAF_CLIFF flag. If the sectors floor plane up direction is <= 0.5 then is a wall (a wall is the same as the AAF_CLIFF flag).
+    AAF_DEATHPIT = 1 << 14,
+    AAF_MAPPED = 1 << 15,
+    AAF_EVENT = 1 << 16,
+    AAF_REPEATABLE = 1 << 17, ///< Unused. In the original game this is used in combination with AAF_EVENT and will only trigger the event if the actor has also collided with a wall.
+    AAF_TELEPORT = 1 << 18,
+    AAF_DAMAGE = 1 << 19,
+    AAF_DRAWSKY = 1 << 20,
+    AAF_TELEPORTAIR = 1 << 21,
+    AAF_LAVA = 1 << 22,
+    AAF_EVENTSOUND = 1 << 23,
+    AAF_ANTIGRAVITY = 1 << 24,
+    AAF_LADDER = 1 << 25, ///< climb up sectors slower than AAF_CLIMB
+    AAF_CHECKPOINT = 1 << 26,
+    AAF_SAVEGAME = 1 << 27,
+    AAF_WARPRETURN = 1 << 28, ///< In Remaster it's used as a PlayerBlocking sector. used with clipflag CF_COLLIDEPLAYERBLOCKER.
+    AAF_SHALLOWWATER = 1 << 29,
+    AAF_DRAWSUN = 1 << 30,
+    AAF_STOREWARPRETURN = 1 << 31  ///< Unused
 };
 
 enum EnumSectorPlatformFlags
@@ -1660,6 +1661,8 @@ public:
     const int Instances() const; ///< Same as the instances value in the fx file.
     float &FrameTime(); ///< The current time left before the Fx sprite tries going to the next frame in the sprite.
     int &BulletBounces();
+    uint &ClipFlagsInclude(); ///< ClipFlags to always include on Fx movement collision
+    uint &ClipFlagsExclude(); ///< ClipFlags to always exclude on Fx movement collision
     const int FxIndex() const;  ///< The index in the fx file array
     const int InstanceIndex() const;
     bool &DoUpdateTickEvents(); ///< If set to false the Fx will not call Tick or WaterTick events.
@@ -1690,6 +1693,7 @@ public:
     bool InfoFlash() const;
     bool InfoProjectile() const;
     bool InfoDestroyOnWaterSurface() const;
+    bool InfoDestroyOnNoWater() const;
     bool InfoStickOnTarget() const;
     bool InfoBullet() const;
     bool InfoWeaponView() const;
@@ -1753,6 +1757,8 @@ public:
     int InfoMaxBulletBounces() const;
     int InfoMaxInstances() const;
     float InfoSpawnDistOffset() const;
+    int InfoClipFlagsInclude() const;
+    int InfoClipFlagsExclude() const;
     kStr InfoModelName() const; ///< Custom use
     kStr InfoAnimName() const; ///< Custom use
     kStr InfoUserString() const; ///< Custom use
@@ -1863,6 +1869,7 @@ class kWorld
 {
 public:
     kActor@ GetActorByTID(const int tagID, const int typeFilter = - 1) const; ///< if typeFilter is -1 checks any type otherwise only returns the actor of that type
+    kActor@ GetActorByType(const int typeFilter) const; ///< Returns the first map actor of the same type
     bool TriggerActorsByTID(kActor@ instigator, const int tagID); ///< Triggers an actor (that is not the instigator) that has the same tagID. Returns true if triggered an actor.
     void ChangeAreaFlag(const int areaID, const uint flags, const bool active); ///< (EnumAreaFlags) Only sets the areaID flags and not the sector flags. Should most likely prefer using FloodMatchingAreaFlags so the sectors get set as well.
     void FloodFillAreaFlags(const int sectorIndex, const uint flags, const bool active); ///< (EnumAreaFlags) Sets flags on all adjacent sectors until it finds a sector that has the flags already set (or cleared if active is false)

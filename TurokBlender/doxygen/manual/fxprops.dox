@@ -19,6 +19,7 @@ bNoDirection                // Uses no rotation (World forward direction) for tr
 bFlash                      // Changes the sunDirection based on the Fx Origin. Adds white color to the sunLightColor and black color to the sunAmbientColor. (only the last Fx that was created with this property will take effect)
 bProjectile                 // If this Fx has an owner actor then rotation is set towards the owners target. Also allows more than 200 instances.
 bDestroyOnWaterSurface      // Removes this Fx when it enters or exits the areas water height. If this Fx is a bBullet then will only remove it when velocity.z is less than 0.
+bDestroyOnNoWater           // Removes this Fx when it's no longer in water.
 bStickOnTarget              // if collides with an actor then it's position is set to the actors position + half the height of the actor.
 bBullet                     // bounces off collided walls/floors if onCollideWall/onCollideFloor is Bounce or Reflect. Also allows more than 200 instances.
 bWeaponView                 // Draws in the camera view
@@ -119,6 +120,8 @@ bOverrideMaxDrawScale       // bool. override the max draw scale of the fx which
 maxscale                    // float. The new max draw scale if bOverrideMaxDrawScale was set. (default is 4096)
 maxscaleRandom              // float. The new max draw scale random factor if bOverrideMaxDrawScale was set.
 bIgnoreGameSpeed            // bool. GameSpeed is always 1.0 for this Fx and the attached Trails.
+clipFlagsInclude            // int. ClipFlags to always include on Fx movement collision
+clipFlagsExclude            // int. ClipFlags to always exclude on Fx movement collision
 scriptClass                 // kStr. The name of the script class. You must inherit from ScriptObjectFx
 bScriptOnAllInstances       // bool. Will create a ScriptObjectFx for every instance that gets created. Else will create a ScriptObjectFx for only the first instance.
 modelName                   // kStr. Use for your own custom script purposes

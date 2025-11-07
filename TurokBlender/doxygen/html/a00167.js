@@ -18,6 +18,7 @@ var a00167 =
     [ "FloodFillAreaFlags", "a00167.html#a1fdeb44917499ac0d19a9474f467abb0", null ],
     [ "FloodMatchingAreaFlags", "a00167.html#a001d1232a78a97f760f060f9cbc6e0fc", null ],
     [ "GetActorByTID", "a00167.html#a334c826845a64f83ae22106d0734d883", null ],
+    [ "GetActorByType", "a00167.html#a67e80ca62466357314645fcd6550fb8f", null ],
     [ "GetAreaAmbience", "a00167.html#a014885ea73869b9be7dd51886b658ab9", null ],
     [ "GetAreaArg", "a00167.html#add54e873f4bf80388c695eea824352c5", null ],
     [ "GetAreaBlendLength", "a00167.html#a242398662c08b545c61cd07e32546ac4", null ],

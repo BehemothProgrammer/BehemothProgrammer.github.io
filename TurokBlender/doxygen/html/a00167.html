@@ -115,6 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a334c826845a64f83ae22106d0734d883" id="r_a334c826845a64f83ae22106d0734d883"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00123.html">kActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a334c826845a64f83ae22106d0734d883">GetActorByTID</a> (const int tagID, const int typeFilter=- 1) const</td></tr>
 <tr class="memdesc:a334c826845a64f83ae22106d0734d883"><td class="mdescLeft">&#160;</td><td class="mdescRight">if typeFilter is -1 checks any type otherwise only returns the actor of that type  <br /></td></tr>
 <tr class="separator:a334c826845a64f83ae22106d0734d883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e80ca62466357314645fcd6550fb8f" id="r_a67e80ca62466357314645fcd6550fb8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00123.html">kActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67e80ca62466357314645fcd6550fb8f">GetActorByType</a> (const int typeFilter) const</td></tr>
+<tr class="memdesc:a67e80ca62466357314645fcd6550fb8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the first map actor of the same type.  <br /></td></tr>
+<tr class="separator:a67e80ca62466357314645fcd6550fb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae02caddea17b7c48275900adfb6a334b" id="r_ae02caddea17b7c48275900adfb6a334b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae02caddea17b7c48275900adfb6a334b">TriggerActorsByTID</a> (<a class="el" href="a00123.html">kActor</a>@ instigator, const int tagID)</td></tr>
 <tr class="memdesc:ae02caddea17b7c48275900adfb6a334b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Triggers an actor (that is not the instigator) that has the same tagID. Returns true if triggered an actor.  <br /></td></tr>
 <tr class="separator:ae02caddea17b7c48275900adfb6a334b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,7 +294,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01862">1862</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01868">1868</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a46796d92aa0b83b41d875719b9a2447f" name="a46796d92aa0b83b41d875719b9a2447f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a46796d92aa0b83b41d875719b9a2447f">&#9670;&#160;</a></span>ChangeAreaArg()</h2>
@@ -342,13 +345,13 @@ Public Member Functions</h2></td></tr>
 <div class="line">3: Not used</div>
 <div class="line">4: <a class="code hl_enumvalue" href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a>: amount of damage to <span class="keywordflow">do</span> to the player when they<span class="stringliteral">&#39;re on the ground</span></div>
 <div class="line"><span class="stringliteral">5: Always used as floor damage delay no matter the AAF flags. Should be used with AAF_DAMAGE only. 1 second = 1024</span></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a></div><div class="ttdeci">@ AAF_CHECKPOINT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00474">t1_scriptAPI.cpp:474</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a></div><div class="ttdeci">@ AAF_EVENT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00464">t1_scriptAPI.cpp:464</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a></div><div class="ttdeci">@ AAF_DAMAGE</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00467">t1_scriptAPI.cpp:467</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a></div><div class="ttdeci">@ AAF_SAVEGAME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00475">t1_scriptAPI.cpp:475</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47">AAF_EVENTSOUND</a></div><div class="ttdeci">@ AAF_EVENTSOUND</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00471">t1_scriptAPI.cpp:471</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a></div><div class="ttdeci">@ AAF_TELEPORT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00466">t1_scriptAPI.cpp:466</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a></div><div class="ttdeci">@ AAF_SECRET</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00459">t1_scriptAPI.cpp:459</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba023a46e06ce78f828ecce885254d7758">AAF_CHECKPOINT</a></div><div class="ttdeci">@ AAF_CHECKPOINT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00475">t1_scriptAPI.cpp:475</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba0390f5392abd165f547a38249afda141">AAF_EVENT</a></div><div class="ttdeci">@ AAF_EVENT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00465">t1_scriptAPI.cpp:465</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba1cb18a2c3c2f0020963591a16150a120">AAF_DAMAGE</a></div><div class="ttdeci">@ AAF_DAMAGE</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00468">t1_scriptAPI.cpp:468</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41eba86cf7377ea4e2421e5f9c66b7bfc2ddf">AAF_SAVEGAME</a></div><div class="ttdeci">@ AAF_SAVEGAME</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00476">t1_scriptAPI.cpp:476</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebab6baaec100866b538a03d97ad2331a47">AAF_EVENTSOUND</a></div><div class="ttdeci">@ AAF_EVENTSOUND</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00472">t1_scriptAPI.cpp:472</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebacd1cdda659145acb0fe6ae2fe6fcbdbe">AAF_TELEPORT</a></div><div class="ttdeci">@ AAF_TELEPORT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00467">t1_scriptAPI.cpp:467</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4"><div class="ttname"><a href="a00002.html#a9662bed8b3938d6cc49499ba300a41ebad28c5abeb76ddbc8191c47f9d11a55a4">AAF_SECRET</a></div><div class="ttdeci">@ AAF_SECRET</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00460">t1_scriptAPI.cpp:460</a></div></div>
 </div><!-- fragment --> </td></tr>
     <tr><td class="paramname">value</td><td></td></tr>
   </table>
@@ -753,6 +756,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>if typeFilter is -1 checks any type otherwise only returns the actor of that type </p>
+
+</div>
+</div>
+<a id="a67e80ca62466357314645fcd6550fb8f" name="a67e80ca62466357314645fcd6550fb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e80ca62466357314645fcd6550fb8f">&#9670;&#160;</a></span>GetActorByType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00123.html">kActor</a> kWorld::GetActorByType </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>typeFilter</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the first map actor of the same type. </p>
 
 </div>
 </div>
