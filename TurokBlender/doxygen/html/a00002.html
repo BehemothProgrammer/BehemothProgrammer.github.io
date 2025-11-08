@@ -787,6 +787,16 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a5cb75a094a8e11122d301f84b419da46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcf1ae03f2e5343792ea1917225fd2f" id="r_a4dcf1ae03f2e5343792ea1917225fd2f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2f">EnumCustomHUDFlags</a> { <br />
+&#160;&#160;<a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539">CHF_HIDECINEMA</a> = 1 &lt;&lt; 0
+, <a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45">CHF_HIDEMENU</a> = 1 &lt;&lt; 1
+, <a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd">CHF_HIDEDUMMYMENU</a> = 1 &lt;&lt; 2
+, <a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75">CHF_HIDENOHUD</a> = 1 &lt;&lt; 3
+, <br />
+&#160;&#160;<a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20">CHF_ALPHASCALE</a> = 1 &lt;&lt; 4
+<br />
+ }</td></tr>
+<tr class="separator:a4dcf1ae03f2e5343792ea1917225fd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4429a2ff145440621e9724313830922" id="r_ab4429a2ff145440621e9724313830922"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922">kexVibrationPlayer::channel_e</a> { <a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922afd68d8b7a5892f3b0cb85bbfcffa4fdd">kexVibrationPlayer::CHANNEL_WEAPON</a> = 0
 , <a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922a18c0ed03c058b494aafb031d1be6b92f">kexVibrationPlayer::CHANNEL_BODY</a> = 1
 , <a class="el" href="a00029.html#ab4429a2ff145440621e9724313830922a7c3773e6646b3f59001bdb8c175cd1dc">kexVibrationPlayer::CHANNEL_DAMAGE</a> = 2
@@ -919,6 +929,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ab3734771fb77f9d7b55707dbc0e6f473" id="r_ab3734771fb77f9d7b55707dbc0e6f473"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a> ()</td></tr>
 <tr class="memdesc:ab3734771fb77f9d7b55707dbc0e6f473"><td class="mdescLeft">&#160;</td><td class="mdescRight">clear the list of split strings after your done. Not required to call because it gets cleared when you call kStrSplit but if you don't want those strings still hanging around you can clear them now.  <br /></td></tr>
 <tr class="separator:ab3734771fb77f9d7b55707dbc0e6f473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6213c4659070e90940e6267261b0996" id="r_ac6213c4659070e90940e6267261b0996"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6213c4659070e90940e6267261b0996">GameVarsSetAdd</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, const <a class="el" href="a00039.html">kStr</a> &amp;in value)</td></tr>
+<tr class="memdesc:ac6213c4659070e90940e6267261b0996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the key and value to GameVariables if it doesn't exist otherwise sets the existing keys value.  <br /></td></tr>
+<tr class="separator:ac6213c4659070e90940e6267261b0996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7b2fea88b6578c707b0c44e1211779" id="r_a2f7b2fea88b6578c707b0c44e1211779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7b2fea88b6578c707b0c44e1211779">GameModFileDataSetAdd</a> (const <a class="el" href="a00039.html">kStr</a> &amp;in key, const <a class="el" href="a00039.html">kStr</a> &amp;in value)</td></tr>
+<tr class="memdesc:a2f7b2fea88b6578c707b0c44e1211779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the key and value to GameModFileData if it doesn't exist otherwise sets the existing keys value.  <br /></td></tr>
+<tr class="separator:a2f7b2fea88b6578c707b0c44e1211779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a0831ce14a21e51a8d38d353184bf6e" id="r_a8a0831ce14a21e51a8d38d353184bf6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00059.html">kColor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a0831ce14a21e51a8d38d353184bf6e">kexColor_FromHSL</a> (float hue, float sat, float lit)</td></tr>
 <tr class="memdesc:a8a0831ce14a21e51a8d38d353184bf6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Not used. (garbage from kexengine)  <br /></td></tr>
 <tr class="separator:a8a0831ce14a21e51a8d38d353184bf6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2222,6 +2238,46 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a4dcf1ae03f2e5343792ea1917225fd2f" name="a4dcf1ae03f2e5343792ea1917225fd2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcf1ae03f2e5343792ea1917225fd2f">&#9670;&#160;</a></span>EnumCustomHUDFlags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a4dcf1ae03f2e5343792ea1917225fd2f">EnumCustomHUDFlags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="3">Enumerator</th></tr><tr><td class="fieldname"><a id="a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539" name="a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539"></a>CHF_HIDECINEMA&#160;</td><td class="fieldinit">1 &lt;&lt; 0&#160;</td><td class="fielddoc"><p>Hide when cinema is active. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45" name="a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45"></a>CHF_HIDEMENU&#160;</td><td class="fieldinit">1 &lt;&lt; 1&#160;</td><td class="fielddoc"><p>Hide when menu is active. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd" name="a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd"></a>CHF_HIDEDUMMYMENU&#160;</td><td class="fieldinit">1 &lt;&lt; 2&#160;</td><td class="fielddoc"><p>Hide when dummy menu is active. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75" name="a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75"></a>CHF_HIDENOHUD&#160;</td><td class="fieldinit">1 &lt;&lt; 3&#160;</td><td class="fielddoc"><p>Hide when Show HUD menu option is off. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20" name="a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20"></a>CHF_ALPHASCALE&#160;</td><td class="fieldinit">1 &lt;&lt; 4&#160;</td><td class="fielddoc"><p>Scales color alpha values by the HUD opacity menu option. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00499">499</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  500</span>{</div>
+<div class="line"><span class="lineno">  501</span>    <a class="code hl_enumvalue" href="#a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539">CHF_HIDECINEMA</a>    = 1 &lt;&lt; 0, <span class="comment">///&lt; Hide when cinema is active</span></div>
+<div class="line"><span class="lineno">  502</span>    <a class="code hl_enumvalue" href="#a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45">CHF_HIDEMENU</a>      = 1 &lt;&lt; 1, <span class="comment">///&lt; Hide when menu is active</span></div>
+<div class="line"><span class="lineno">  503</span>    <a class="code hl_enumvalue" href="#a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd">CHF_HIDEDUMMYMENU</a> = 1 &lt;&lt; 2, <span class="comment">///&lt; Hide when dummy menu is active</span></div>
+<div class="line"><span class="lineno">  504</span>    <a class="code hl_enumvalue" href="#a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75">CHF_HIDENOHUD</a>     = 1 &lt;&lt; 3, <span class="comment">///&lt; Hide when Show HUD menu option is off</span></div>
+<div class="line"><span class="lineno">  505</span>    <a class="code hl_enumvalue" href="#a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20">CHF_ALPHASCALE</a>    = 1 &lt;&lt; 4  <span class="comment">///&lt; Scales color alpha values by the HUD opacity menu option</span></div>
+<div class="line"><span class="lineno">  506</span>};</div>
+<div class="ttc" id="aa00002_html_a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20"><div class="ttname"><a href="#a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20">CHF_ALPHASCALE</a></div><div class="ttdeci">@ CHF_ALPHASCALE</div><div class="ttdoc">Scales color alpha values by the HUD opacity menu option.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00505">t1_scriptAPI.cpp:505</a></div></div>
+<div class="ttc" id="aa00002_html_a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45"><div class="ttname"><a href="#a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45">CHF_HIDEMENU</a></div><div class="ttdeci">@ CHF_HIDEMENU</div><div class="ttdoc">Hide when menu is active.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00502">t1_scriptAPI.cpp:502</a></div></div>
+<div class="ttc" id="aa00002_html_a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75"><div class="ttname"><a href="#a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75">CHF_HIDENOHUD</a></div><div class="ttdeci">@ CHF_HIDENOHUD</div><div class="ttdoc">Hide when Show HUD menu option is off.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00504">t1_scriptAPI.cpp:504</a></div></div>
+<div class="ttc" id="aa00002_html_a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539"><div class="ttname"><a href="#a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539">CHF_HIDECINEMA</a></div><div class="ttdeci">@ CHF_HIDECINEMA</div><div class="ttdoc">Hide when cinema is active.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00501">t1_scriptAPI.cpp:501</a></div></div>
+<div class="ttc" id="aa00002_html_a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd"><div class="ttname"><a href="#a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd">CHF_HIDEDUMMYMENU</a></div><div class="ttdeci">@ CHF_HIDEDUMMYMENU</div><div class="ttdoc">Hide when dummy menu is active.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00503">t1_scriptAPI.cpp:503</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="ad2d71bfb758a2e17bf72d27b0113095e" name="ad2d71bfb758a2e17bf72d27b0113095e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad2d71bfb758a2e17bf72d27b0113095e">&#9670;&#160;</a></span>EnumDifficulty</h2>
 
@@ -2354,7 +2410,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7a15c7686c0d1c583ace719e001fe1959d" name="a6499f7b8f6430ac669788ed4c13cecd7a15c7686c0d1c583ace719e001fe1959d"></a>IT_STONE&#160;</td><td class="fieldinit">3&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492" name="a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492"></a>IT_FLESH_HUMAN&#160;</td><td class="fieldinit">4&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7a6dafcf915b64c967ce6fc22b6f514e4a" name="a6499f7b8f6430ac669788ed4c13cecd7a6dafcf915b64c967ce6fc22b6f514e4a"></a>IT_FLESH_CREATURE&#160;</td><td class="fieldinit">5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2" name="a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2"></a>IT_FLESH_UNDEAD&#160;</td><td class="fieldinit">6&#160;</td><td class="fielddoc"><p>AKA IT_FLESH_WATER. </p>
+<tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2" name="a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2"></a>IT_FLESH_UNDEAD&#160;</td><td class="fieldinit">6&#160;</td><td class="fielddoc"><p>AKA IT_FLESH_WATER. Not used in the remaster for anything by default. In the original game if an Fx was underwater and hit an actor that had an impact type of IT_FLESH_HUMAN or IT_FLESH_CREATURE it would do a IT_FLESH_UNDEAD impact instead. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7a70cf73ea13f928d5a40b05d1b8f1cbcf" name="a6499f7b8f6430ac669788ed4c13cecd7a70cf73ea13f928d5a40b05d1b8f1cbcf"></a>IT_LAVA&#160;</td><td class="fieldinit">7&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6499f7b8f6430ac669788ed4c13cecd7a45a7c9189f63d43fbaf9e3c92e022303" name="a6499f7b8f6430ac669788ed4c13cecd7a45a7c9189f63d43fbaf9e3c92e022303"></a>IT_SLIME&#160;</td><td class="fieldinit">8&#160;</td><td class="fielddoc"></td></tr>
@@ -2369,7 +2425,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  241</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7a15c7686c0d1c583ace719e001fe1959d">IT_STONE</a> = 3,</div>
 <div class="line"><span class="lineno">  242</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492">IT_FLESH_HUMAN</a> = 4,</div>
 <div class="line"><span class="lineno">  243</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7a6dafcf915b64c967ce6fc22b6f514e4a">IT_FLESH_CREATURE</a> = 5,</div>
-<div class="line"><span class="lineno">  244</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2">IT_FLESH_UNDEAD</a> = 6, <span class="comment">///&lt; AKA IT_FLESH_WATER</span></div>
+<div class="line"><span class="lineno">  244</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2">IT_FLESH_UNDEAD</a> = 6, <span class="comment">///&lt; AKA IT_FLESH_WATER. Not used in the remaster for anything by default. In the original game if an Fx was underwater and hit an actor that had an impact type of IT_FLESH_HUMAN or IT_FLESH_CREATURE it would do a IT_FLESH_UNDEAD impact instead.</span></div>
 <div class="line"><span class="lineno">  245</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7a70cf73ea13f928d5a40b05d1b8f1cbcf">IT_LAVA</a> = 7,</div>
 <div class="line"><span class="lineno">  246</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7a45a7c9189f63d43fbaf9e3c92e022303">IT_SLIME</a> = 8,</div>
 <div class="line"><span class="lineno">  247</span>    <a class="code hl_enumvalue" href="#a6499f7b8f6430ac669788ed4c13cecd7a2dc0e2d625645e79fa6bd58629851ece">IT_FORCEFIELD</a> = 9</div>
@@ -2382,7 +2438,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7a70cf73ea13f928d5a40b05d1b8f1cbcf"><div class="ttname"><a href="#a6499f7b8f6430ac669788ed4c13cecd7a70cf73ea13f928d5a40b05d1b8f1cbcf">IT_LAVA</a></div><div class="ttdeci">@ IT_LAVA</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00245">t1_scriptAPI.cpp:245</a></div></div>
 <div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492"><div class="ttname"><a href="#a6499f7b8f6430ac669788ed4c13cecd7a7fafc12fde1697e6aca52d0a6db74492">IT_FLESH_HUMAN</a></div><div class="ttdeci">@ IT_FLESH_HUMAN</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00242">t1_scriptAPI.cpp:242</a></div></div>
 <div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7af26fca3eb1ce5c324809da6b64ba6db8"><div class="ttname"><a href="#a6499f7b8f6430ac669788ed4c13cecd7af26fca3eb1ce5c324809da6b64ba6db8">IT_WATER</a></div><div class="ttdeci">@ IT_WATER</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00239">t1_scriptAPI.cpp:239</a></div></div>
-<div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2"><div class="ttname"><a href="#a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2">IT_FLESH_UNDEAD</a></div><div class="ttdeci">@ IT_FLESH_UNDEAD</div><div class="ttdoc">AKA IT_FLESH_WATER.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00244">t1_scriptAPI.cpp:244</a></div></div>
+<div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2"><div class="ttname"><a href="#a6499f7b8f6430ac669788ed4c13cecd7af2bda55ce3f9a796a2749a45cc0f43a2">IT_FLESH_UNDEAD</a></div><div class="ttdeci">@ IT_FLESH_UNDEAD</div><div class="ttdoc">AKA IT_FLESH_WATER. Not used in the remaster for anything by default. In the original game if an Fx w...</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00244">t1_scriptAPI.cpp:244</a></div></div>
 <div class="ttc" id="aa00002_html_a6499f7b8f6430ac669788ed4c13cecd7afbac8fab194825ae3a4f19047c6b8fe7"><div class="ttname"><a href="#a6499f7b8f6430ac669788ed4c13cecd7afbac8fab194825ae3a4f19047c6b8fe7">IT_METAL</a></div><div class="ttdeci">@ IT_METAL</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00240">t1_scriptAPI.cpp:240</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -2960,6 +3016,52 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a2f7b2fea88b6578c707b0c44e1211779" name="a2f7b2fea88b6578c707b0c44e1211779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f7b2fea88b6578c707b0c44e1211779">&#9670;&#160;</a></span>GameModFileDataSetAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameModFileDataSetAdd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the key and value to GameModFileData if it doesn't exist otherwise sets the existing keys value. </p>
+
+</div>
+</div>
+<a id="ac6213c4659070e90940e6267261b0996" name="ac6213c4659070e90940e6267261b0996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6213c4659070e90940e6267261b0996">&#9670;&#160;</a></span>GameVarsSetAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameVarsSetAdd </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>key</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00039.html">kStr</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds the key and value to GameVariables if it doesn't exist otherwise sets the existing keys value. </p>
+
+</div>
+</div>
 <a id="a8a0831ce14a21e51a8d38d353184bf6e" name="a8a0831ce14a21e51a8d38d353184bf6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a0831ce14a21e51a8d38d353184bf6e">&#9670;&#160;</a></span>kexColor_FromHSL()</h2>
 
@@ -3179,11 +3281,11 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><a class="code hl_function" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a>();</div>
 <div class="ttc" id="aa00002_html_a036fa599be44d9300e7e68836bc84cac"><div class="ttname"><a href="#a036fa599be44d9300e7e68836bc84cac">kStrSplit</a></div><div class="ttdeci">void kStrSplit(const kStr &amp;in s, const kStr &amp;in sep)</div></div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02555">t1_scriptAPI.cpp:2555</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02567">t1_scriptAPI.cpp:2567</a></div></div>
 <div class="ttc" id="aa00002_html_a62ecb3a8742780dd7a60227b58bb6425"><div class="ttname"><a href="#a62ecb3a8742780dd7a60227b58bb6425">kStrSplitLength</a></div><div class="ttdeci">uint kStrSplitLength()</div><div class="ttdoc">returns the amount of strings that were split</div></div>
 <div class="ttc" id="aa00002_html_ab3734771fb77f9d7b55707dbc0e6f473"><div class="ttname"><a href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a></div><div class="ttdeci">void kStrSplitClear()</div><div class="ttdoc">clear the list of split strings after your done. Not required to call because it gets cleared when yo...</div></div>
 <div class="ttc" id="aa00002_html_ade0fa312f49a45392ed9a7742807d101"><div class="ttname"><a href="#ade0fa312f49a45392ed9a7742807d101">kStrSplitGet</a></div><div class="ttdeci">kStr kStrSplitGet(const int index)</div><div class="ttdoc">returns the string at index</div></div>
-<div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">kStr</a></div><div class="ttdoc">String class functions.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00630">t1_scriptAPI.cpp:631</a></div></div>
+<div class="ttc" id="aa00039_html"><div class="ttname"><a href="a00039.html">kStr</a></div><div class="ttdoc">String class functions.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00639">t1_scriptAPI.cpp:640</a></div></div>
 <div class="ttc" id="aa00039_html_a4cfbd63e8485b2d7054eff8d8c65e000"><div class="ttname"><a href="a00039.html#a4cfbd63e8485b2d7054eff8d8c65e000">kStr::Length</a></div><div class="ttdeci">uint64 Length() const</div><div class="ttdoc">Returns the length of the string.</div></div>
 </div><!-- fragment --> </td></tr>
   </table>
@@ -3262,7 +3364,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02559">2559</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02571">2571</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3278,7 +3380,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02562">2562</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02574">2574</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3294,7 +3396,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02564">2564</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02576">2576</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3310,7 +3412,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02558">2558</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02570">2570</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3326,7 +3428,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02551">2551</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02563">2563</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3342,7 +3444,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02550">2550</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02562">2562</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3358,7 +3460,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02552">2552</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02564">2564</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3374,7 +3476,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02554">2554</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02566">2566</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3390,7 +3492,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02553">2553</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02565">2565</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3408,7 +3510,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile, Game.LoadModFile, and Game.LoadModDataFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02557">2557</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02569">2569</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3424,7 +3526,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02556">2556</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02568">2568</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3440,7 +3542,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02561">2561</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02573">2573</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3456,7 +3558,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02560">2560</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02572">2572</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3472,7 +3574,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02555">2555</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02567">2567</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -3488,7 +3590,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02563">2563</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02575">2575</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>

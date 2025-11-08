@@ -313,6 +313,13 @@ var a00002 =
       [ "CRF_ADJUST", "a00002.html#a3871eb3e81ea144e97909e770fc809e0a31793ace7007b0bab102a20609b1edb7", null ],
       [ "CRF_WALLRADIUS", "a00002.html#a3871eb3e81ea144e97909e770fc809e0ad296fd6b686ed493dc645572753bb527", null ]
     ] ],
+    [ "EnumCustomHUDFlags", "a00002.html#a4dcf1ae03f2e5343792ea1917225fd2f", [
+      [ "CHF_HIDECINEMA", "a00002.html#a4dcf1ae03f2e5343792ea1917225fd2fa913eaa01705c8db8b59c15ed43736539", null ],
+      [ "CHF_HIDEMENU", "a00002.html#a4dcf1ae03f2e5343792ea1917225fd2fa48c61b56c0dcb6a3270a90058ce8fb45", null ],
+      [ "CHF_HIDEDUMMYMENU", "a00002.html#a4dcf1ae03f2e5343792ea1917225fd2faf3639981433ce3fda45a1fdb8a9b71cd", null ],
+      [ "CHF_HIDENOHUD", "a00002.html#a4dcf1ae03f2e5343792ea1917225fd2fa8f7f60525aa6eb24c31bb38488c2ac75", null ],
+      [ "CHF_ALPHASCALE", "a00002.html#a4dcf1ae03f2e5343792ea1917225fd2fa30f69b2748ae6457a0861f6932525b20", null ]
+    ] ],
     [ "EnumDifficulty", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095e", [
       [ "DIFFICULTY_EASY", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095ea95f48065472a7866854a3c9b9ea8347e", null ],
       [ "DIFFICULTY_NORMAL", "a00002.html#ad2d71bfb758a2e17bf72d27b0113095ea599e2a9348d6630a59c4224deee53991", null ],
@@ -501,6 +508,8 @@ var a00002 =
     [ "Math::f2i", "a00030.html#ad8f5dcc5abdd4eb575319d5394920b8e", null ],
     [ "Math::Fabs", "a00030.html#a888d044b1a7df3fdbce8b884620755b1", null ],
     [ "Math::Floor", "a00030.html#a378700ae3ba15e6676f27de60e84f357", null ],
+    [ "GameModFileDataSetAdd", "a00002.html#a2f7b2fea88b6578c707b0c44e1211779", null ],
+    [ "GameVarsSetAdd", "a00002.html#ac6213c4659070e90940e6267261b0996", null ],
     [ "Math::HermiteBlend", "a00030.html#a90ef69249e88fa69d239cb9f5e78a8ea", null ],
     [ "Math::i2f", "a00030.html#ac42b939fd6d5893c844c29cd16aae33b", null ],
     [ "Math::IncMax", "a00030.html#ab6773b9020103b245a72c0b39f9b8f42", null ],

@@ -62,8 +62,6 @@ void OnPreDamage(kActor @instigator, kDictMem @damageDef, const int damage) //al
 void OnDeath(kActor @killer, kDictMem @damageDef) //called only when actor dies
 void OnDamage(kActor @instigator, kDictMem @damageDef, const int damage) //always called even after death
 void OnEndLevel()
-void OnPreTick(void)  // For the player script only! Called right before all other actors are ticked
-void OnPostTick(void) // For the player script only! Called right after level script ticks
 
 --------------------------------------------------
 ScriptObjectWeapon : ScriptObject
@@ -466,18 +464,19 @@ Int:
     OverrideFogType             // Set: Game.OverrideFogType();  Get: GameVariables.GetInt("OverrideFogType", result);  0=none, 1=force Radial, 2=force Plane
     OverridePerPolyCollision    // Set: Game.OverridePerPolyCollision();  Get: GameVariables.GetInt("OverridePerPolyCollision", result);  0=none, 1=force disable, 2=force enable
     ConfirmMenuResult           // Get: GameVariables.GetInt("ConfirmMenuResult", result);  Set: GameVariables.SetValue("ConfirmMenuResult", "0");
-    g_loadedgame                // Check OnBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after Map Script 0 is called.
     OverrideRespawningEnemies   // Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result); 0=none, 1=Force Disable, 2=Force Enable
     OverrideBloom               // Set: Game.OverrideBloom();  Get: GameVariables.GetInt("OverrideBloom", result); 0=none, 1=Force Disable, 2=Force Enable
     player.maxLives             // Get and Set using the kPuppet functions instead
     player.maxLifeforces        // Get and Set using the kPuppet functions instead
+    g_loadedgame                // Check OnBeginLevel or OnPostBeginLevel. value is the save slot from 1 to 16. any other value is game was not loaded. Is set to 0 after OnPostBeginLevel is called.
 Bool:
-    g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel.
+    g_newgame                   // is set to 1 when starting a newgame. Check OnBeginLevel or OnPostBeginLevel. Is set to 0 after OnPostBeginLevel is called.
     g_resetboss                 // is set to 1 when warping to the boss using the warp boss cheats. This sets them to their initial state. Is set back to 0 after OnPostBeginLevel is called.
     g_timetrial                 // is set to 1 when selecting time trial from the menu. Is set back to 0 after OnPostBeginLevel is called.
     DisableUnderwaterMusic      // Use GameVariables.SetValue("DisableUnderwaterMusic", "1");
     DisableWaterReflection      // Use GameVariables.SetValue("DisableWaterReflection", "1");
     NewExplosiveRadiusCheck     // (default False) Set to 1 to enable explosive damage checks from radius to actor cylinder(more accurate) instead of radius to actors center point. For all actors in the game.
+    DisableAutomapRotate        // (default False) Set to 1 to make the automap no longer rotate with the player.
 \endverbatim
 
 \section difficulty <H3>Difficulty</H3>

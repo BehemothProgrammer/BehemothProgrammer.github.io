@@ -241,7 +241,7 @@ enum EnumImpactType
     IT_STONE = 3,
     IT_FLESH_HUMAN = 4,
     IT_FLESH_CREATURE = 5,
-    IT_FLESH_UNDEAD = 6, ///< AKA IT_FLESH_WATER
+    IT_FLESH_UNDEAD = 6, ///< AKA IT_FLESH_WATER. Not used in the remaster for anything by default. In the original game if an Fx was underwater and hit an actor that had an impact type of IT_FLESH_HUMAN or IT_FLESH_CREATURE it would do a IT_FLESH_UNDEAD impact instead.
     IT_LAVA = 7,
     IT_SLIME = 8,
     IT_FORCEFIELD = 9
@@ -494,6 +494,15 @@ enum EnumSectorPlatformFlags
     SPF_MOVEOTHERACTORS     = (1 << 9),   ///< Moves other actors on the sectors that are not the player or AI.
 
     SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEPLAYER|SPF_MOVEAI|SPF_MOVEOTHERACTORS
+};
+
+enum EnumCustomHUDFlags
+{
+    CHF_HIDECINEMA    = 1 << 0, ///< Hide when cinema is active
+    CHF_HIDEMENU      = 1 << 1, ///< Hide when menu is active
+    CHF_HIDEDUMMYMENU = 1 << 2, ///< Hide when dummy menu is active
+    CHF_HIDENOHUD     = 1 << 3, ///< Hide when Show HUD menu option is off
+    CHF_ALPHASCALE    = 1 << 4  ///< Scales color alpha values by the HUD opacity menu option
 };
 
 namespace kexVibrationPlayer
@@ -953,8 +962,6 @@ public:
     void OnDeath(kActor @killer, kDictMem @damageDef); ///< called only when actor dies
     void OnDamage(kActor @instigator, kDictMem @damageDef, const int damage); ///< always called even after death
     void OnEndLevel();
-    void OnPreTick();  ///< For the player script only! Called right before all other actors are ticked
-    void OnPostTick(); ///< For the player script only! Called right after level script ticks
 };
 
 /**
@@ -2185,6 +2192,7 @@ public:
      * @param edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
      */
     bool SetTextProps(const int id, const float scale, const int font = 0, const int edge = 0, const bool center = false, const bool shadow = false);
+    bool SetTextFlags(const int id, const int flags); ///< EnumCustomHUDFlags
     void SetTextOrder(const int id, const int order);
     void ClearTextInterpolation(const int id);
     bool RemoveText(const int id);
@@ -2205,6 +2213,7 @@ public:
     bool SetPicOrigin(const int id, const float x, const float y);
     bool SetPicEdge(const int id, const int edge); ///< edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
     bool SetPicAngle(const int id, const float angle); ///< in rads
+    bool SetPicFlags(const int id, const int flags); ///< EnumCustomHUDFlags
     bool SetPicWH(const int id, const float w, const float h);
     bool SetPicUV(const int id, const float s1 = 0.0f, const float t1 = 0.0f, const float s2 = 1.0f, const float t2 = 1.0f);
     bool SetPicColor(const int id, const int r = 255, const int g = 255, const int b = 255, const int a = 255);
@@ -2353,6 +2362,7 @@ public:
     int GetHubIDFromMapID(int mapID); ///< Return the HUB ID value. Returns -1 if not found.
     kStr GetHubTitle(int hubID); ///< Returns the HUB's Title def property. Returns empty string if not found.
     kStr GetHubDefName(int hubID); ///< Returns the HUB's def name. Returns empty string if not found.
+    const bool IsFrozenObjects(); ///< Returns true if the freezeobjects console command is enabled
 };
 
 /**
@@ -2537,6 +2547,8 @@ void kStrSplit(const kStr &in s, const kStr &in sep);
 kStr kStrSplitGet(const int index); ///< returns the string at index
 uint kStrSplitLength(); ///< returns the amount of strings that were split
 void kStrSplitClear(); ///< clear the list of split strings after your done. Not required to call because it gets cleared when you call kStrSplit but if you don't want those strings still hanging around you can clear them now.
+void GameVarsSetAdd(const kStr &in key, const kStr &in value); ///< Adds the key and value to GameVariables if it doesn't exist otherwise sets the existing keys value.
+void GameModFileDataSetAdd(const kStr &in key, const kStr &in value); ///< Adds the key and value to GameModFileData if it doesn't exist otherwise sets the existing keys value.
 kColor kexColor_FromHSL(float hue, float sat, float lit); ///< Not used. (garbage from kexengine)
 kColor kexColor_Random(); ///< Not used. (garbage from kexengine)
 kColor kexColor_Tab20(uint i); ///< Not used. (garbage from kexengine)

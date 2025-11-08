@@ -116,9 +116,12 @@ These changes require you to check if the weapon has ammo in your OnFire() funct
 - new optional function void OnPreRaise(). Called right when the weapon state is set to raise.
 - new weapon def keys: fov 47.5, noWalkAnim 1, noGenericBobbing 1, forceGenericBobbing 1
 
-New player script only optional functions:
-"void OnPreTick(void)"  ///&lt; Called right before all other actors are ticked
-"void OnPostTick(void)" ///&lt; Called right after level script ticks
+New main global script functions:
+"void GlobalTick()"
+"void GlobalPostTick()"
+"void GlobalBeginLevel()"
+"void GlobalPostBeginLevel()"
+"void GlobalEndLevel()"
 
 New ActorFx Property:
     $spawnfx (375, {0.0 0.0 0.0}, 0.0) // FxID, {x, y, z} position relative to actor, time to keep spawning this particle (use 0 to spawn it only once).

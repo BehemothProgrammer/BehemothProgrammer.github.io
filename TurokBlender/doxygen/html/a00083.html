@@ -175,12 +175,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad31b6c4d81190ebaee0431a62079501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bd171532737b2fcdf35de8f18caf7c0" id="r_a9bd171532737b2fcdf35de8f18caf7c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bd171532737b2fcdf35de8f18caf7c0">OnEndLevel</a> ()</td></tr>
 <tr class="separator:a9bd171532737b2fcdf35de8f18caf7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d55b928a395214d280654771e2d0dc5" id="r_a4d55b928a395214d280654771e2d0dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d55b928a395214d280654771e2d0dc5">OnPreTick</a> ()</td></tr>
-<tr class="memdesc:a4d55b928a395214d280654771e2d0dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the player script only! Called right before all other actors are ticked.  <br /></td></tr>
-<tr class="separator:a4d55b928a395214d280654771e2d0dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a7bbabc28dd73139b2432ecd3cf1cce" id="r_a4a7bbabc28dd73139b2432ecd3cf1cce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a7bbabc28dd73139b2432ecd3cf1cce">OnPostTick</a> ()</td></tr>
-<tr class="memdesc:a4a7bbabc28dd73139b2432ecd3cf1cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">For the player script only! Called right after level script ticks.  <br /></td></tr>
-<tr class="separator:a4a7bbabc28dd73139b2432ecd3cf1cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Actor script classes must inherit from this class. </p>
@@ -192,10 +186,10 @@ Public Member Functions</h2></td></tr>
 <div class="line">        @self = actor;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">ScriptObject</a></div><div class="ttdoc">Actor script classes must inherit from this class.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00934">t1_scriptAPI.cpp:935</a></div></div>
-<div class="ttc" id="aa00123_html"><div class="ttname"><a href="a00123.html">kActor</a></div><div class="ttdoc">Base type used by all actors.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01214">t1_scriptAPI.cpp:1215</a></div></div>
+<div class="ttc" id="aa00083_html"><div class="ttname"><a href="a00083.html">ScriptObject</a></div><div class="ttdoc">Actor script classes must inherit from this class.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00943">t1_scriptAPI.cpp:944</a></div></div>
+<div class="ttc" id="aa00123_html"><div class="ttname"><a href="a00123.html">kActor</a></div><div class="ttdoc">Base type used by all actors.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01221">t1_scriptAPI.cpp:1222</a></div></div>
 </div><!-- fragment --> 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00934">934</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00943">943</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a64b887aed4e97c2eba6b7225ac53c5bd" name="a64b887aed4e97c2eba6b7225ac53c5bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64b887aed4e97c2eba6b7225ac53c5bd">&#9670;&#160;</a></span>OnActivate()</h2>
@@ -411,25 +405,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4a7bbabc28dd73139b2432ecd3cf1cce" name="a4a7bbabc28dd73139b2432ecd3cf1cce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a7bbabc28dd73139b2432ecd3cf1cce">&#9670;&#160;</a></span>OnPostTick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScriptObject::OnPostTick </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>For the player script only! Called right after level script ticks. </p>
-
-</div>
-</div>
 <a id="a482d3645f9c43effe16125ac2bb14d85" name="a482d3645f9c43effe16125ac2bb14d85"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a482d3645f9c43effe16125ac2bb14d85">&#9670;&#160;</a></span>OnPreDamage()</h2>
 
@@ -455,25 +430,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death. </p>
-
-</div>
-</div>
-<a id="a4d55b928a395214d280654771e2d0dc5" name="a4d55b928a395214d280654771e2d0dc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d55b928a395214d280654771e2d0dc5">&#9670;&#160;</a></span>OnPreTick()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ScriptObject::OnPreTick </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>For the player script only! Called right before all other actors are ticked. </p>
 
 </div>
 </div>

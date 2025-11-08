@@ -113,12 +113,13 @@ var searchData=
   ['isempty_110',['IsEmpty',['../a00039.html#a091158634771921eca80561ee90df802',1,'kStr']]],
   ['isempty_111',['isEmpty',['../a00035.html#ae2b90993d4ae7d257eeeb332606175d3',1,'array']]],
   ['isfacing_112',['IsFacing',['../a00055.html#a84c67cf3bcd8b07bb1146c823376bffb',1,'kPlane']]],
-  ['isjoystickactive_113',['IsJoystickActive',['../a00171.html#a3245e7c7c8a369175cf5add9378f5f2b',1,'kGame']]],
-  ['ismorph_114',['IsMorph',['../a00115.html#ab58356f5adc9176145cc993ed107260a',1,'kRenderModel']]],
-  ['ispersistentmarked_115',['IsPersistentMarked',['../a00123.html#a96439cd07fb03465951685aaf6c83838',1,'kActor']]],
-  ['isplaying_116',['IsPlaying',['../a00119.html#abf44ba2518ba4748e6f2cd4f6e58d073',1,'kAnimState']]],
-  ['isrunningmapscript_117',['IsRunningMapScript',['../a00171.html#a9f40bdccd7e722cff61309ea448ed17a',1,'kGame']]],
-  ['isstale_118',['IsStale',['../a00123.html#aa9ef5fcde203b757e578f6b26992ffa1',1,'kActor::IsStale()'],['../a00147.html#ac91f1b8480d0b7ddb2f5fea4a3b454bb',1,'kFx::IsStale()']]],
-  ['istactileplaying_119',['IsTactilePlaying',['../a00171.html#a284396c5fc730db862c0521d790b8bff',1,'kGame::IsTactilePlaying(int vibHandle)'],['../a00171.html#a16375eea7e5936571d1f014cd2ceeb85',1,'kGame::IsTactilePlaying(int vibHandle, const kStr &amp;in path)']]],
-  ['isworkshop_120',['IsWorkshop',['../a00171.html#a8c8a66c3ddc4e005d73675be099be25a',1,'kGame']]]
+  ['isfrozenobjects_113',['IsFrozenObjects',['../a00171.html#a0aaad346f1d8e5be94d2fe1449eea17c',1,'kGame']]],
+  ['isjoystickactive_114',['IsJoystickActive',['../a00171.html#a3245e7c7c8a369175cf5add9378f5f2b',1,'kGame']]],
+  ['ismorph_115',['IsMorph',['../a00115.html#ab58356f5adc9176145cc993ed107260a',1,'kRenderModel']]],
+  ['ispersistentmarked_116',['IsPersistentMarked',['../a00123.html#a96439cd07fb03465951685aaf6c83838',1,'kActor']]],
+  ['isplaying_117',['IsPlaying',['../a00119.html#abf44ba2518ba4748e6f2cd4f6e58d073',1,'kAnimState']]],
+  ['isrunningmapscript_118',['IsRunningMapScript',['../a00171.html#a9f40bdccd7e722cff61309ea448ed17a',1,'kGame']]],
+  ['isstale_119',['IsStale',['../a00123.html#aa9ef5fcde203b757e578f6b26992ffa1',1,'kActor::IsStale()'],['../a00147.html#ac91f1b8480d0b7ddb2f5fea4a3b454bb',1,'kFx::IsStale()']]],
+  ['istactileplaying_120',['IsTactilePlaying',['../a00171.html#a284396c5fc730db862c0521d790b8bff',1,'kGame::IsTactilePlaying(int vibHandle)'],['../a00171.html#a16375eea7e5936571d1f014cd2ceeb85',1,'kGame::IsTactilePlaying(int vibHandle, const kStr &amp;in path)']]],
+  ['isworkshop_121',['IsWorkshop',['../a00171.html#a8c8a66c3ddc4e005d73675be099be25a',1,'kGame']]]
 ];

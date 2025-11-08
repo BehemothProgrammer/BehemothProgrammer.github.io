@@ -302,6 +302,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a62ce5990ff21e38715a6c85b46662b80" id="r_a62ce5990ff21e38715a6c85b46662b80"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62ce5990ff21e38715a6c85b46662b80">SetTextProps</a> (const int id, const float scale, const int font=0, const int edge=0, const bool center=false, const bool shadow=false)</td></tr>
 <tr class="memdesc:a62ce5990ff21e38715a6c85b46662b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the text scale, font, edge, center, shadow.  <br /></td></tr>
 <tr class="separator:a62ce5990ff21e38715a6c85b46662b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0599a514eba8446754e9d8d6870f5e7d" id="r_a0599a514eba8446754e9d8d6870f5e7d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0599a514eba8446754e9d8d6870f5e7d">SetTextFlags</a> (const int id, const int flags)</td></tr>
+<tr class="memdesc:a0599a514eba8446754e9d8d6870f5e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a4dcf1ae03f2e5343792ea1917225fd2f">EnumCustomHUDFlags</a>.  <br /></td></tr>
+<tr class="separator:a0599a514eba8446754e9d8d6870f5e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab562dd267da7400ce3e64c49b285224b" id="r_ab562dd267da7400ce3e64c49b285224b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab562dd267da7400ce3e64c49b285224b">SetTextOrder</a> (const int id, const int order)</td></tr>
 <tr class="separator:ab562dd267da7400ce3e64c49b285224b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192654a2e3162abbf6a8665af5a24244" id="r_a192654a2e3162abbf6a8665af5a24244"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a192654a2e3162abbf6a8665af5a24244">ClearTextInterpolation</a> (const int id)</td></tr>
@@ -332,6 +335,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a574efe19bb7104a45ab8499c3e748012" id="r_a574efe19bb7104a45ab8499c3e748012"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a574efe19bb7104a45ab8499c3e748012">SetPicAngle</a> (const int id, const float angle)</td></tr>
 <tr class="memdesc:a574efe19bb7104a45ab8499c3e748012"><td class="mdescLeft">&#160;</td><td class="mdescRight">in rads  <br /></td></tr>
 <tr class="separator:a574efe19bb7104a45ab8499c3e748012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5926389dfed9353a893103f782d578dc" id="r_a5926389dfed9353a893103f782d578dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5926389dfed9353a893103f782d578dc">SetPicFlags</a> (const int id, const int flags)</td></tr>
+<tr class="memdesc:a5926389dfed9353a893103f782d578dc"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a4dcf1ae03f2e5343792ea1917225fd2f">EnumCustomHUDFlags</a>.  <br /></td></tr>
+<tr class="separator:a5926389dfed9353a893103f782d578dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36ac3538c9f0afff00a42a38daa71895" id="r_a36ac3538c9f0afff00a42a38daa71895"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ac3538c9f0afff00a42a38daa71895">SetPicWH</a> (const int id, const float w, const float h)</td></tr>
 <tr class="separator:a36ac3538c9f0afff00a42a38daa71895"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20807816d2aea0d41698999cc6c5b51f" id="r_a20807816d2aea0d41698999cc6c5b51f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20807816d2aea0d41698999cc6c5b51f">SetPicUV</a> (const int id, const float s1=0.0f, const float t1=0.0f, const float s2=1.0f, const float t2=1.0f)</td></tr>
@@ -648,10 +654,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c76d0ccf68208dd82fe512629930529" id="r_a6c76d0ccf68208dd82fe512629930529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00039.html">kStr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c76d0ccf68208dd82fe512629930529">GetHubDefName</a> (int hubID)</td></tr>
 <tr class="memdesc:a6c76d0ccf68208dd82fe512629930529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the HUB's def name. Returns empty string if not found.  <br /></td></tr>
 <tr class="separator:a6c76d0ccf68208dd82fe512629930529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aaad346f1d8e5be94d2fe1449eea17c" id="r_a0aaad346f1d8e5be94d2fe1449eea17c"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0aaad346f1d8e5be94d2fe1449eea17c">IsFrozenObjects</a> ()</td></tr>
+<tr class="memdesc:a0aaad346f1d8e5be94d2fe1449eea17c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the freezeobjects console command is enabled.  <br /></td></tr>
+<tr class="separator:a0aaad346f1d8e5be94d2fe1449eea17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02035">2035</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02042">2042</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="aa4dcfc882fb1c54478146d5981583b99" name="aa4dcfc882fb1c54478146d5981583b99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4dcfc882fb1c54478146d5981583b99">&#9670;&#160;</a></span>AddPic()</h2>
@@ -1372,9 +1381,9 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02555">t1_scriptAPI.cpp:2555</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02558">t1_scriptAPI.cpp:2558</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02556">t1_scriptAPI.cpp:2556</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02567">t1_scriptAPI.cpp:2567</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02570">t1_scriptAPI.cpp:2570</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02568">t1_scriptAPI.cpp:2568</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
@@ -2603,6 +2612,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="a00002.html#a092fa12d85156c39edae43e61e4dc7f7">EnumCheatFlags</a>. Returns true if cheats are active. </p>
+
+</div>
+</div>
+<a id="a0aaad346f1d8e5be94d2fe1449eea17c" name="a0aaad346f1d8e5be94d2fe1449eea17c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aaad346f1d8e5be94d2fe1449eea17c">&#9670;&#160;</a></span>IsFrozenObjects()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kGame::IsFrozenObjects </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the freezeobjects console command is enabled. </p>
 
 </div>
 </div>
@@ -4282,6 +4310,29 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5926389dfed9353a893103f782d578dc" name="a5926389dfed9353a893103f782d578dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5926389dfed9353a893103f782d578dc">&#9670;&#160;</a></span>SetPicFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::SetPicFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a4dcf1ae03f2e5343792ea1917225fd2f">EnumCustomHUDFlags</a>. </p>
+
+</div>
+</div>
 <a id="a0e666d173da9346c083d92b39526c9e8" name="a0e666d173da9346c083d92b39526c9e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0e666d173da9346c083d92b39526c9e8">&#9670;&#160;</a></span>SetPickupFlash()</h2>
 
@@ -4537,6 +4588,29 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0599a514eba8446754e9d8d6870f5e7d" name="a0599a514eba8446754e9d8d6870f5e7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0599a514eba8446754e9d8d6870f5e7d">&#9670;&#160;</a></span>SetTextFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::SetTextFlags </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a4dcf1ae03f2e5343792ea1917225fd2f">EnumCustomHUDFlags</a>. </p>
 
 </div>
 </div>
