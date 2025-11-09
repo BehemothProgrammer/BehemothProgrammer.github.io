@@ -1,410 +1,410 @@
 enum EnumPlaneSide
 {
     PSIDE_FRONT = 0,
-    PSIDE_BACK = 1,
-    PSIDE_ON = 2
+    PSIDE_BACK  = 1,
+    PSIDE_ON    = 2
 };
 
 enum kexLocPlatform_e ///< Not used (garbage included automatically from kexengine)
 {
-    LocPlatform_UserPlatformCount = 8,
-    LocPlatform_Windows = 1,
-    LocPlatform_Linux = 2,
-    LocPlatform_Mac = 4,
-    LocPlatform_Switch = 8,
-    LocPlatform_XboxOne = 16,
-    LocPlatform_PlayStation4 = 32,
-    LocPlatform_XboxSeries = 64,
-    LocPlatform_WindowsStore = 128,
-    LocPlatform_PlayStation5 = 256,
-    LocPlatform_FirstUserPlatform = 16777216,
-    LocPlatform_Current = 1
+    LocPlatform_UserPlatformCount   = 8,
+    LocPlatform_Windows             = 1,
+    LocPlatform_Linux               = 2,
+    LocPlatform_Mac                 = 4,
+    LocPlatform_Switch              = 8,
+    LocPlatform_XboxOne             = 16,
+    LocPlatform_PlayStation4        = 32,
+    LocPlatform_XboxSeries          = 64,
+    LocPlatform_WindowsStore        = 128,
+    LocPlatform_PlayStation5        = 256,
+    LocPlatform_FirstUserPlatform   = 16777216,
+    LocPlatform_Current             = 1
 };
 
 enum EnumAnimStateFlags
 {
-    ANF_BLEND = 1,
-    ANF_LOOP = 2,
-    ANF_STOPPED = 4,
-    ANF_NOINTERRUPT = 8,
-    ANF_ROOTMOTION = 16,
-    ANF_PAUSED = 32,
-    ANF_CYCLECOMPLETED = 64,
-    ANF_LINEARBLEND = 128
+    ANF_BLEND           = 1 << 0,
+    ANF_LOOP            = 1 << 1,
+    ANF_STOPPED         = 1 << 2,
+    ANF_NOINTERRUPT     = 1 << 3,
+    ANF_ROOTMOTION      = 1 << 4,
+    ANF_PAUSED          = 1 << 5,
+    ANF_CYCLECOMPLETED  = 1 << 6,
+    ANF_LINEARBLEND     = 1 << 7
 };
 
 enum EnumActorFlags
 {
-    AF_SOLID = 1, ///< Can be collided
-    AF_DORMANT = 2, ///< if on then is asleep (won't be updated onTick) else is awake
-    AF_SNAPTOFLOOR = 4, ///< adjust z-axis to floor on spawn
-    AF_CLIMBWALLS = 8, ///< allows entering of wall sectors
-    AF_WOUNDEDMORTALLY = 16, ///< if on this actor will drop a mortal wound because it was hit by a super arrow shot
-    AF_CASTSHADOW = 32, ///< can cast a simple shadow
-    AF_TRIGGERSTUFF = 64, ///< NOT USED
-    AF_HIDDEN = 128, ///< don't draw but continue updating. can't be collided
-    AF_ACTIVATED = 256, ///< was triggered
-    AF_DISABLED = 512, ///< don't update animations
-    AF_ENTEREDAREAEVENT = 1024, ///< just entered a trigger sector
-    AF_REMOVEONCOMPLETION = 2048, ///< remove after finishing a special animation
-    AF_NOBLOOD = 4096, ///< don't spawn particles flagged as blood
-    AF_AVOIDWATER = 8192, ///< clip against edges linking to water sectors
-    AF_FLOATINWATERONDEATH = 16384, ///< rise to the surface while dead
-    AF_DEAD = 32768, ///< actor is dead. handle special cases for collision
-    AF_STATIONARY = 65536, ///< Sniper. don't update the animation's root motion
-    AF_ALIGNTOFLOOR = 131072, ///< rotate along slopes
-    AF_NODRAW = 262144, ///< don't render
-    AF_NONSHOOTABLE = 524288, ///< Fx won't hit actors if this flag is set.
-    AF_FULLVOLUME = 1048576, ///< all sounds coming from this actor will be heard at full volume
-    AF_CANBETOUCHED = 2097152, ///< allow invoking the OnTouch callback
-    AF_IGNORESOUNDEVENTS = 4194304, ///< don't call kexAnimState::Action_PlaySound
-    AF_TRIGGERANIMATION = 8388608, ///< play special animation on trigger/spawn
-    AF_HOLDTRIGGERANIM = 16777216, ///< pause special animation until triggered (is also invincible)
-    AF_TRIGGERNAIMDELAY = 33554432, ///< delay a bit before starting special animation
-    AF_STAYINWATER = 67108864, ///< can't exit water sectors
-    AF_ALWAYSACTIVE = 134217728, ///< never sleep or go dormant
-    AF_COLLIDEDWITHWALL = 268435456, ///< collided with an edge. cleared at every OnTick call
-    AF_INVINCIBLE = 536870912, ///< will not receive damage. OnDamage and OnDeath are never called
-    AF_ALLOWTINYENEMYCHEAT = 1073741824, ///< affected by tiny enemy game cheat
-    AF_NOMOVEMENT = -2147483648 ///< will not do collision movement
+    AF_SOLID                = 1 << 0,  ///< Can be collided
+    AF_DORMANT              = 1 << 1,  ///< if on then is asleep (won't be updated onTick) else is awake
+    AF_SNAPTOFLOOR          = 1 << 2,  ///< adjust z-axis to floor on spawn
+    AF_CLIMBWALLS           = 1 << 3,  ///< allows entering of wall sectors
+    AF_WOUNDEDMORTALLY      = 1 << 4,  ///< if on this actor will drop a mortal wound because it was hit by a super arrow shot
+    AF_CASTSHADOW           = 1 << 5,  ///< can cast a simple shadow
+    AF_TRIGGERSTUFF         = 1 << 6,  ///< NOT USED
+    AF_HIDDEN               = 1 << 7,  ///< don't draw but continue updating. can't be collided
+    AF_ACTIVATED            = 1 << 8,  ///< was triggered
+    AF_DISABLED             = 1 << 9,  ///< don't update animations
+    AF_ENTEREDAREAEVENT     = 1 << 10, ///< just entered a trigger sector
+    AF_REMOVEONCOMPLETION   = 1 << 11, ///< remove after finishing a special animation
+    AF_NOBLOOD              = 1 << 12, ///< don't spawn particles flagged as blood
+    AF_AVOIDWATER           = 1 << 13, ///< clip against edges linking to water sectors
+    AF_FLOATINWATERONDEATH  = 1 << 14, ///< rise to the surface while dead
+    AF_DEAD                 = 1 << 15, ///< actor is dead. handle special cases for collision
+    AF_STATIONARY           = 1 << 16, ///< Sniper. don't update the animation's root motion
+    AF_ALIGNTOFLOOR         = 1 << 17, ///< rotate along slopes
+    AF_NODRAW               = 1 << 18, ///< don't render
+    AF_NONSHOOTABLE         = 1 << 19, ///< Fx won't hit actors if this flag is set.
+    AF_FULLVOLUME           = 1 << 20, ///< all sounds coming from this actor will be heard at full volume
+    AF_CANBETOUCHED         = 1 << 21, ///< allow invoking the OnTouch callback
+    AF_IGNORESOUNDEVENTS    = 1 << 22, ///< don't call kexAnimState::Action_PlaySound
+    AF_TRIGGERANIMATION     = 1 << 23, ///< play special animation on trigger/spawn
+    AF_HOLDTRIGGERANIM      = 1 << 24, ///< pause special animation until triggered (is also invincible)
+    AF_TRIGGERNAIMDELAY     = 1 << 25, ///< delay a bit before starting special animation
+    AF_STAYINWATER          = 1 << 26, ///< can't exit water sectors
+    AF_ALWAYSACTIVE         = 1 << 27, ///< never sleep or go dormant
+    AF_COLLIDEDWITHWALL     = 1 << 28, ///< collided with an edge. cleared at every OnTick call
+    AF_INVINCIBLE           = 1 << 29, ///< will not receive damage. OnDamage and OnDeath are never called
+    AF_ALLOWTINYENEMYCHEAT  = 1 << 30, ///< affected by tiny enemy game cheat
+    AF_NOMOVEMENT           = 1 << 31  ///< will not do collision movement
 };
 
 enum EnumActorSpawnFlags1
 {
-    ASF1_SOLID = 1,
-    ASF1_PROJECTILEATTACK1 = 2, ///< High Priest Flame Attack (anim_aiRangeAttack1)
-    ASF1_LEADER = 4, ///< Flocker ai run toward Leaders to get attention.
-    ASF1_SNAPTOFLOOR = 8,
-    ASF1_EXPLOSIONDEATH = 16, ///< NOT USED
-    ASF1_CLIMBWALLS = 32,
-    ASF1_PROJECTILEATTACK2 = 64, ///< Pistol Fire (anim_aiRangeAttack2)
-    ASF1_NOREPEATEXPLOSION = 128, ///< NOT USED
-    ASF1_DIEONEXPLOSION = 256, ///< NOT USED
-    ASF1_FLOCKER = 512, ///< flocks to a leader kAI
-    ASF1_SLOW = 1024, ///< NOT USED
-    ASF1_RANDOMRESURRECTION = 2048, ///< NOT USED
-    ASF1_RANDOMFEIGNDEATH = 4096, ///< NOT USED
-    ASF1_KAMIKAZE = 8192, ///< if has no target then targets player and sets agitation to 300
-    ASF1_AVOIDPLAYERS = 16384, ///< NOT USED
-    ASF1_FLOATINWATERONDEATH = 32768, ///< kAI will float up to the top of the water when they are dead
-    ASF1_TELEPORT = 65536, ///< allows kAI to teleport on SetupAISpawnFlags
-    ASF1_CASTSHADOW = 131072, ///< sets AF_CASTSHADOW on SetSpawnParams
-    ASF1_TELEPORTWAIT = 262144, ///< allows enemy to move around for 1.5 - 4.5 seconds before teleporting back in.
-    ASF1_USESTRONGATTACKS = 524288, ///< anim_aiMelee1
-    ASF1_USEWEAKATTACKS = 1048576, ///< anim_aiAltMelee1
-    ASF1_SNIPER = 2097152,
-    ASF1_MELTONDEATH = 4194304, ///< allows melt effect and regeneration
-    ASF1_AVOIDWATER = 8388608, ///< sets AF_AVOIDWATER on SetSpawnParams
-    ASF1_FLYING = 16777216, ///< NOT USED
-    ASF1_TELEPORTAVOIDWATER = 33554432,
-    ASF1_TELEPORTAVOIDCLIFFS = 67108864,
-    ASF1_TRIGGERSTUFF = 134217728, ///< Sets AF_TRIGGERSTUFF on SetupSpawnParams
-    ASF1_CANNOTCAUSEAFIGHT = 268435456, ///< if another actor was damaged by this actor with this flag set then other actor will not target this actor.
-    ASF1_NOWALLCOLLISION = 536870912, ///< NOT USED
-    ASF1_SCREENSHAKE = 1073741824, ///< Used in floor mover scripts to shake screen.
-    ASF1_RESPAWNANIMATION = -2147483648 ///< Enables respawning animation effect
+    ASF1_SOLID                  = 1 << 0,
+    ASF1_PROJECTILEATTACK1      = 1 << 1,  ///< High Priest Flame Attack (anim_aiRangeAttack1)
+    ASF1_LEADER                 = 1 << 2,  ///< Flocker ai run toward Leaders to get attention.
+    ASF1_SNAPTOFLOOR            = 1 << 3,
+    ASF1_EXPLOSIONDEATH         = 1 << 4,  ///< NOT USED
+    ASF1_CLIMBWALLS             = 1 << 5,
+    ASF1_PROJECTILEATTACK2      = 1 << 6,  ///< Pistol Fire (anim_aiRangeAttack2)
+    ASF1_NOREPEATEXPLOSION      = 1 << 7,  ///< NOT USED
+    ASF1_DIEONEXPLOSION         = 1 << 8,  ///< NOT USED
+    ASF1_FLOCKER                = 1 << 9,  ///< flocks to a leader kAI
+    ASF1_SLOW                   = 1 << 10, ///< NOT USED
+    ASF1_RANDOMRESURRECTION     = 1 << 11, ///< NOT USED
+    ASF1_RANDOMFEIGNDEATH       = 1 << 12, ///< NOT USED
+    ASF1_KAMIKAZE               = 1 << 13, ///< if has no target then targets player and sets agitation to 300
+    ASF1_AVOIDPLAYERS           = 1 << 14, ///< NOT USED
+    ASF1_FLOATINWATERONDEATH    = 1 << 15, ///< kAI will float up to the top of the water when they are dead
+    ASF1_TELEPORT               = 1 << 16, ///< allows kAI to teleport on SetupAISpawnFlags
+    ASF1_CASTSHADOW             = 1 << 17, ///< sets AF_CASTSHADOW on SetSpawnParams
+    ASF1_TELEPORTWAIT           = 1 << 18, ///< allows enemy to move around for 1.5 - 4.5 seconds before teleporting back in.
+    ASF1_USESTRONGATTACKS       = 1 << 19, ///< anim_aiMelee1
+    ASF1_USEWEAKATTACKS         = 1 << 20, ///< anim_aiAltMelee1
+    ASF1_SNIPER                 = 1 << 21,
+    ASF1_MELTONDEATH            = 1 << 22, ///< allows melt effect and regeneration
+    ASF1_AVOIDWATER             = 1 << 23, ///< sets AF_AVOIDWATER on SetSpawnParams
+    ASF1_FLYING                 = 1 << 24, ///< NOT USED
+    ASF1_TELEPORTAVOIDWATER     = 1 << 25,
+    ASF1_TELEPORTAVOIDCLIFFS    = 1 << 26,
+    ASF1_TRIGGERSTUFF           = 1 << 27, ///< Sets AF_TRIGGERSTUFF on SetupSpawnParams
+    ASF1_CANNOTCAUSEAFIGHT      = 1 << 28, ///< if another actor was damaged by this actor with this flag set then other actor will not target this actor.
+    ASF1_NOWALLCOLLISION        = 1 << 29, ///< NOT USED
+    ASF1_SCREENSHAKE            = 1 << 30, ///< Used in floor mover scripts to shake screen.
+    ASF1_RESPAWNANIMATION       = 1 << 31  ///< Enables respawning animation effect
 };
 
 enum EnumActorSpawnFlags2
 {
-    ASF2_DROPITEM_MASK1 = 1, ///< Explosive shells
-    ASF2_DROPITEM_MASK2 = 2, ///< Grenade
-    ASF2_DROPITEM_MASK3 = 4, ///< Medium Health
-    ASF2_DROPITEM_MASK4 = 8, ///< Full Health
-    ASF2_DROPITEM_MASK5 = 16, ///< Ultra Health
-    ASF2_DROPITEM_MASK6 = 32, ///< Small Health
-    ASF2_DROPITEM_MASK7 = 64, ///< Large Health
-    ASF2_DROPITEM_MASK8 = 128, ///< Minigun ammo
-    ASF2_DROPITEM_MASK9 = 256, ///< Mortal Wound
-    ASF2_DROPITEM_MASK10 = 512, ///< 4 Rockets
-    ASF2_DROPITEM_MASK11 = 1024, ///< Shotgun Shells
-    ASF2_DROPITEM_MASK12 = 2048, ///< Energy Cell
-    ASF2_DROPITEM_MASK13 = 4096, ///< Large Energy Cell
-    ASF2_DROPITEM_MASK14 = 8192, ///< Clip
-    ASF2_REMOVEONCOMPLETION = 16384, ///< Sets AF_REMOVEONCOMPLETION
-    ASF2_NOBLOOD = 32768,
-    ASF2_HOLDTRIGGERANIMATION = 65536,
-    ASF2_PROJECTILEATTACK3 = 131072, ///< crouch rifle Fire (anim_aiRangeAttack7)
-    ASF2_PROJECTILEATTACK4 = 262144, ///< (anim_aiRangeAttack8)
-    ASF2_DROPITEMONDAMAGE = 524288, ///< NOT USED
-    ASF2_NOAUTOMAPDRAW = 1048576,  ///< if map all or show enemies cheats are on then will not draw this actor on the automap.
-    ASF2_ALTERNATEMOVES = 2097152, ///< is for holding two handed weapons
-    ASF2_UNUSED1 = 4194304, ///< NOT USED
-    ASF2_UNUSED2 = 8388608, ///< NOT USED
-    ASF2_PROJECTILEATTACK5 = 16777216, ///< Stand Rifle Fire (anim_aiRangeAttack5)
-    ASF2_PROJECTILEATTACK6 = 33554432, ///< Pipe Blow (anim_aiRangeAttack6)
-    ASF2_MORTALWOUNDIMPACT = 67108864, ///< Can be hit by a super arrow shot and if ASF2_DROPITEM_MASK9 is on has a chance to drop a mortal wound
-    ASF2_STAYINWATER = 134217728, ///< sets AF_STAYINWATER on SetSpawnParams
-    ASF2_WARPDEATH = 268435456, ///< NOT USED
-    ASF2_STOREWARPRETURN = 536870912, ///< Used in portal scripts
-    ASF2_PROJECTILEATTACK7 = 1073741824, ///< Grenade Throw (anim_aiRangeAttack3)
-    ASF2_PROJECTILEATTACK8 = -2147483648 ///< High Priest Homing Blue Flame (anim_aiRangeAttack4)
+    ASF2_DROPITEM_MASK1         = 1 << 0,  ///< Explosive shells
+    ASF2_DROPITEM_MASK2         = 1 << 1,  ///< Grenade
+    ASF2_DROPITEM_MASK3         = 1 << 2,  ///< Medium Health
+    ASF2_DROPITEM_MASK4         = 1 << 3,  ///< Full Health
+    ASF2_DROPITEM_MASK5         = 1 << 4,  ///< Ultra Health
+    ASF2_DROPITEM_MASK6         = 1 << 5,  ///< Small Health
+    ASF2_DROPITEM_MASK7         = 1 << 6,  ///< Large Health
+    ASF2_DROPITEM_MASK8         = 1 << 7,  ///< Minigun ammo
+    ASF2_DROPITEM_MASK9         = 1 << 8,  ///< Mortal Wound
+    ASF2_DROPITEM_MASK10        = 1 << 9,  ///< 4 Rockets
+    ASF2_DROPITEM_MASK11        = 1 << 10, ///< Shotgun Shells
+    ASF2_DROPITEM_MASK12        = 1 << 11, ///< Energy Cell
+    ASF2_DROPITEM_MASK13        = 1 << 12, ///< Large Energy Cell
+    ASF2_DROPITEM_MASK14        = 1 << 13, ///< Clip
+    ASF2_REMOVEONCOMPLETION     = 1 << 14, ///< Sets AF_REMOVEONCOMPLETION
+    ASF2_NOBLOOD                = 1 << 15,
+    ASF2_HOLDTRIGGERANIMATION   = 1 << 16,
+    ASF2_PROJECTILEATTACK3      = 1 << 17, ///< crouch rifle Fire (anim_aiRangeAttack7)
+    ASF2_PROJECTILEATTACK4      = 1 << 18, ///< (anim_aiRangeAttack8)
+    ASF2_DROPITEMONDAMAGE       = 1 << 19, ///< NOT USED
+    ASF2_NOAUTOMAPDRAW          = 1 << 20, ///< if map all or show enemies cheats are on then will not draw this actor on the automap.
+    ASF2_ALTERNATEMOVES         = 1 << 21, ///< is for holding two handed weapons
+    ASF2_UNUSED1                = 1 << 22, ///< NOT USED
+    ASF2_UNUSED2                = 1 << 23, ///< NOT USED
+    ASF2_PROJECTILEATTACK5      = 1 << 24, ///< Stand Rifle Fire (anim_aiRangeAttack5)
+    ASF2_PROJECTILEATTACK6      = 1 << 25, ///< Pipe Blow (anim_aiRangeAttack6)
+    ASF2_MORTALWOUNDIMPACT      = 1 << 26, ///< Can be hit by a super arrow shot and if ASF2_DROPITEM_MASK9 is on has a chance to drop a mortal wound
+    ASF2_STAYINWATER            = 1 << 27, ///< sets AF_STAYINWATER on SetSpawnParams
+    ASF2_WARPDEATH              = 1 << 28, ///< NOT USED
+    ASF2_STOREWARPRETURN        = 1 << 29, ///< Used in portal scripts
+    ASF2_PROJECTILEATTACK7      = 1 << 30, ///< Grenade Throw (anim_aiRangeAttack3)
+    ASF2_PROJECTILEATTACK8      = 1 << 31  ///< High Priest Homing Blue Flame (anim_aiRangeAttack4)
 };
 
 enum EnumActorSpawnFlags3
 {
-    ASF3_RETURNWARP = 1, ///< Used in portal scripts
-    ASF3_PLAYTRIGGERANIMONCE = 2, ///< MarkPersistentBit(false) when activated
-    ASF3_REGENERATEFROMSTART = 4, ///< Regen from starting position
-    ASF3_WALKINSTRAIGHTLINE = 8, ///< Set animation to Blend(ANIM_WALKING, (m_animSpeed * m_animScalar), 10, ANF_LOOP|ANF_ROOTMOTION); and do nothing else.
-    ASF3_KILLOUTSIDEOFVIEW = 16, ///< NOT USED
-    ASF3_NOTHINKER = 32, ///< AI will not function. Actors will not update movement. Actors OnBeginLevel will set their animation to ANIM_SPECIAL_EVENT.
-    ASF3_AVOIDPLAYERS2 = 64, ///< NOT USED
-    ASF3_NOVIOLENTDEATH = 128, ///< ANIM_AIDEATHSTAND and ANIM_DEATHSTANDALT will not play when kAI is killed.
-    ASF3_PROJECTILEATTACK9 = 256, ///< Demon chest Hadoken (anim_aiRangeAttack9)
-    ASF3_PROJECTILEATTACK10 = 512, ///< High Priest Lightning Red Flames (anim_aiRangeAttack10)
-    ASF3_MAKESPAWNANIMVISIBLE = 1024, ///< clears actor flags: ~(AF_HIDDEN|AF_DISABLED)
-    ASF3_NODRAWONCAMERA = 2048 ///< Will not draw this actor when viewing from camera unless camera flags has CMF_SHOW_HIDDEN_OBJECTS.
+    ASF3_RETURNWARP             = 1 << 0,  ///< Used in portal scripts
+    ASF3_PLAYTRIGGERANIMONCE    = 1 << 1,  ///< MarkPersistentBit(false) when activated
+    ASF3_REGENERATEFROMSTART    = 1 << 2,  ///< Regen from starting position
+    ASF3_WALKINSTRAIGHTLINE     = 1 << 3,  ///< Set animation to Blend(ANIM_WALKING, (m_animSpeed * m_animScalar), 10, ANF_LOOP|ANF_ROOTMOTION); and do nothing else.
+    ASF3_KILLOUTSIDEOFVIEW      = 1 << 4,  ///< NOT USED
+    ASF3_NOTHINKER              = 1 << 5,  ///< AI will not function. Actors will not update movement. Actors OnBeginLevel will set their animation to ANIM_SPECIAL_EVENT.
+    ASF3_AVOIDPLAYERS2          = 1 << 6,  ///< NOT USED
+    ASF3_NOVIOLENTDEATH         = 1 << 7,  ///< ANIM_AIDEATHSTAND and ANIM_DEATHSTANDALT will not play when kAI is killed.
+    ASF3_PROJECTILEATTACK9      = 1 << 8,  ///< Demon chest Hadoken (anim_aiRangeAttack9)
+    ASF3_PROJECTILEATTACK10     = 1 << 9,  ///< High Priest Lightning Red Flames (anim_aiRangeAttack10)
+    ASF3_MAKESPAWNANIMVISIBLE   = 1 << 10, ///< clears actor flags: ~(AF_HIDDEN|AF_DISABLED)
+    ASF3_NODRAWONCAMERA         = 1 << 11  ///< Will not draw this actor when viewing from camera unless camera flags has CMF_SHOW_HIDDEN_OBJECTS.
 };
 
 enum EnumPlayerFlags
 {
-    PF_NOCLIP = 1,
-    PF_FLY = 2,
-    PF_DEAD = 4,
-    PF_GOD = 8, ///< Is reset when level beings
-    PF_JUMPING = 16, ///< is jumping (moving up). flag is off when reached max jump height or let go of jump button.
-    PF_HASJUMPED = 32,
-    PF_INWARPAREA = 64, ///< in sector area with AAF_TELEPORT flag.
-    PF_CLIMBTHRUST = 128,
-    PF_NOAIRFRICTION = 256,
-    PF_CRAWLING = 512,
-    PF_PREVENTDEATHCAM = 1024, ///< will stop the death cinematic or the deadAnimView from triggering when the player dies.
-    PF_FIREDPROJECTILE = 2048, ///< set when FireProjectile is called. Cleared OnTick if weapon is not in WS_FIRE state and player is not locked.
-    PF_FALLINGDEATHPIT = 4096, ///< currently falling in a death pit. Cleared after level begins.
-    PF_WEAPONSTEAL = 8192, ///< on when campaigner steals weapon
-    PF_NOSECTORMUSIC = 16384, ///< disables music changes when changing sectors
-    PF_NOTOUCH = 32768, ///< disables invoking onTouch callbacks
-    PF_NOCEILINGGLIDE = 65536 ///< disables the ceiling glide glitch
+    PF_NOCLIP           = 1 << 0,
+    PF_FLY              = 1 << 1,
+    PF_DEAD             = 1 << 2,
+    PF_GOD              = 1 << 3,  ///< Is reset when level beings
+    PF_JUMPING          = 1 << 4,  ///< is jumping (moving up). flag is off when reached max jump height or let go of jump button.
+    PF_HASJUMPED        = 1 << 5,
+    PF_INWARPAREA       = 1 << 6,  ///< in sector area with AAF_TELEPORT flag.
+    PF_CLIMBTHRUST      = 1 << 7,
+    PF_NOAIRFRICTION    = 1 << 8,
+    PF_CRAWLING         = 1 << 9,
+    PF_PREVENTDEATHCAM  = 1 << 10, ///< will stop the death cinematic or the deadAnimView from triggering when the player dies.
+    PF_FIREDPROJECTILE  = 1 << 11, ///< set when FireProjectile is called. Cleared OnTick if weapon is not in WS_FIRE state and player is not locked.
+    PF_FALLINGDEATHPIT  = 1 << 12, ///< currently falling in a death pit. Cleared after level begins.
+    PF_WEAPONSTEAL      = 1 << 13, ///< on when campaigner steals weapon
+    PF_NOSECTORMUSIC    = 1 << 14, ///< disables music changes when changing sectors
+    PF_NOTOUCH          = 1 << 15, ///< disables invoking onTouch callbacks
+    PF_NOCEILINGGLIDE   = 1 << 16  ///< disables the ceiling glide glitch
 };
 
 enum EnumPlayerStates
 {
-    PS_WALKING = 0,
-    PS_JUMPING = 1,
-    PS_CLIMBING = 2,
-    PS_SWIMMING = 3,
-    PS_UNDERWATER = 4,
-    PS_FALLDEATH = 5,
-    PS_ANTIGRAVITY = 6
+    PS_WALKING      = 0,
+    PS_JUMPING      = 1,
+    PS_CLIMBING     = 2,
+    PS_SWIMMING     = 3,
+    PS_UNDERWATER   = 4,
+    PS_FALLDEATH    = 5,
+    PS_ANTIGRAVITY  = 6
 };
 
 enum EnumCheatFlags
 {
-    GC_BIG_HEADS = 1 << 0,
-    GC_TINY_ENEMY = 1 << 1,
-    GC_INFINITE_AMMO = 1 << 2,
-    GC_PURDY_COLORS = 1 << 3,
-    GC_SPIRIT_MODE = 1 << 4,
-    GC_INVINCIBILITY = 1 << 5,
-    GC_FLIGHT = 1 << 6,
-    GC_DISCO = 1 << 7,
-    GC_INFINITE_LIVES = 1 << 8,
-    GC_ALL_MAP = 1 << 9,
-    GC_SHOW_ENEMIES = 1 << 10,
-    GC_NOCLIP = 1 << 11,
+    GC_BIG_HEADS        = 1 << 0,
+    GC_TINY_ENEMY       = 1 << 1,
+    GC_INFINITE_AMMO    = 1 << 2,
+    GC_PURDY_COLORS     = 1 << 3,
+    GC_SPIRIT_MODE      = 1 << 4,
+    GC_INVINCIBILITY    = 1 << 5,
+    GC_FLIGHT           = 1 << 6,
+    GC_DISCO            = 1 << 7,
+    GC_INFINITE_LIVES   = 1 << 8,
+    GC_ALL_MAP          = 1 << 9,
+    GC_SHOW_ENEMIES     = 1 << 10,
+    GC_NOCLIP           = 1 << 11,
 };
 
 enum EnumAIFlags
 {
-    AIF_ATTACKING = 1, ///< playing an attacking animation
-    AIF_WASSOLID = 2,
-    AIF_FIRSTATTACK = 4,
-    AIF_HEARDLOUDNOISE = 8,
-    AIF_BLOWNAWAY = 16, ///< being blown away by explosion
-    AIF_GOBACKTOLEASH = 32,
-    AIF_RESSURECT = 64,
-    AIF_FEIGNDEATH = 128,
-    AIF_REGENERATE = 256,
-    AIF_SEETARGET = 512,
-    AIF_NOCHASE = 1024, ///< disable chase logic
-    AIF_REGENERATEANIM = 2048,
-    AIF_NOTHINK = 4096, ///< don't run ai logic
-    AIF_RUNNING = 8192, ///< Is playing running animation
-    AIF_GETATTENTION = 16384,
-    AIF_REGENANIMDELAY = 32768,
-    AIF_HEARDQUIETNOISE = 65536,
-    AIF_AWAYFROMLEASH = 131072,
-    AIF_TELEPORTAWAY = 262144, ///< playing teleport out animation
-    AIF_TELEPORTMOVESLOW = 524288, ///< chasing while underground
-    AIF_TELEPORTING = 1048576, ///< in teleport state. ignore all chase logic
-    AIF_TELEPORTIN = 2097152, ///< playing teleport in animation
-    AIF_WAITFORCYCLE = 4194304, ///< prevent other animations from interrupting until the current one finishes
-    AIF_DAMAGEPANIC = 8388608 ///< become aggressive when target is outside its active threshold (good for forcing AI to attack their target)
+    AIF_ATTACKING           = 1 << 0,  ///< playing an attacking animation
+    AIF_WASSOLID            = 1 << 1,
+    AIF_FIRSTATTACK         = 1 << 2,
+    AIF_HEARDLOUDNOISE      = 1 << 3,
+    AIF_BLOWNAWAY           = 1 << 4,  ///< being blown away by explosion
+    AIF_GOBACKTOLEASH       = 1 << 5,
+    AIF_RESSURECT           = 1 << 6,
+    AIF_FEIGNDEATH          = 1 << 7,
+    AIF_REGENERATE          = 1 << 8,
+    AIF_SEETARGET           = 1 << 9,
+    AIF_NOCHASE             = 1 << 10, ///< disable chase logic
+    AIF_REGENERATEANIM      = 1 << 11,
+    AIF_NOTHINK             = 1 << 12, ///< don't run ai logic
+    AIF_RUNNING             = 1 << 13, ///< Is playing running animation
+    AIF_GETATTENTION        = 1 << 14,
+    AIF_REGENANIMDELAY      = 1 << 15,
+    AIF_HEARDQUIETNOISE     = 1 << 16,
+    AIF_AWAYFROMLEASH       = 1 << 17,
+    AIF_TELEPORTAWAY        = 1 << 18, ///< playing teleport out animation
+    AIF_TELEPORTMOVESLOW    = 1 << 19, ///< chasing while underground
+    AIF_TELEPORTING         = 1 << 20, ///< in teleport state. ignore all chase logic
+    AIF_TELEPORTIN          = 1 << 21, ///< playing teleport in animation
+    AIF_WAITFORCYCLE        = 1 << 22, ///< prevent other animations from interrupting until the current one finishes
+    AIF_DAMAGEPANIC         = 1 << 23  ///< become aggressive when target is outside its active threshold (good for forcing AI to attack their target)
 };
 
 enum EnumImpactType
 {
-    IT_DEFAULT = 0,
-    IT_WATER = 1,
-    IT_METAL = 2,
-    IT_STONE = 3,
-    IT_FLESH_HUMAN = 4,
-    IT_FLESH_CREATURE = 5,
-    IT_FLESH_UNDEAD = 6, ///< AKA IT_FLESH_WATER. Not used in the remaster for anything by default. In the original game if an Fx was underwater and hit an actor that had an impact type of IT_FLESH_HUMAN or IT_FLESH_CREATURE it would do a IT_FLESH_UNDEAD impact instead.
-    IT_LAVA = 7,
-    IT_SLIME = 8,
-    IT_FORCEFIELD = 9
+    IT_DEFAULT          = 0,
+    IT_WATER            = 1,
+    IT_METAL            = 2,
+    IT_STONE            = 3,
+    IT_FLESH_HUMAN      = 4,
+    IT_FLESH_CREATURE   = 5,
+    IT_FLESH_UNDEAD     = 6, ///< AKA IT_FLESH_WATER. Not used in the remaster for anything by default. In the original game if an Fx was underwater and hit an actor that had an impact type of IT_FLESH_HUMAN or IT_FLESH_CREATURE it would do a IT_FLESH_UNDEAD impact instead.
+    IT_LAVA             = 7,
+    IT_SLIME            = 8,
+    IT_FORCEFIELD       = 9
 };
 
 enum EnumGameFontType
 {
-    GFT_BIG = 0,
-    GFT_SMALL = 1,
+    GFT_BIG     = 0,
+    GFT_SMALL   = 1,
     GFT_NUMBERS = 2,
-    GFT_TTF = 3
+    GFT_TTF     = 3
 };
 
 enum EnumClipResultFlags
 {
     CRF_NOCOLLISION = 0,
-    CRF_FLOOR = 1, ///< made contact with a floor
-    CRF_CEILING = 2, ///< made contact with a ceiling
-    CRF_WALL = 4, ///< made contact with an edge (sector edge that isn't linked to another sector)
-    CRF_OBJECT = 8, ///< made contact with an actor
-    CRF_MESH = 16, ///< made contact with a static object
-    CRF_ADJUST = 32, ///< z-axis was adjusted (ceiling or floor)
-    CRF_WALLRADIUS = 64 ///< made contact with an edge during the wall radius collision test
+    CRF_FLOOR       = 1 << 0, ///< made contact with a floor
+    CRF_CEILING     = 1 << 1, ///< made contact with a ceiling
+    CRF_WALL        = 1 << 2, ///< made contact with an edge (sector edge that isn't linked to another sector)
+    CRF_OBJECT      = 1 << 3, ///< made contact with an actor
+    CRF_MESH        = 1 << 4, ///< made contact with a static object
+    CRF_ADJUST      = 1 << 5, ///< z-axis was adjusted (ceiling or floor)
+    CRF_WALLRADIUS  = 1 << 6  ///< made contact with an edge during the wall radius collision test
 };
 
 enum EnumWeaponStates
 {
-    WS_IDLE = 0,
-    WS_RAISE = 1,
-    WS_LOWER = 2,
-    WS_FIRE = 3, ///< Is currently firing
-    WS_HOLDSTER = 4, ///< Set when dead (with no death cinematic) or when climbing. Should set weapon anim to ANIM_WEAPONSWAPOUT if you set this state manually.
-    WS_WALK = 5, ///< NOT USED
-    WS_RUN = 6, ///< NOT USED
-    WS_DISCHARGE = 7, ///< set after OnEndFire is called. If was in WS_FIRE state and not pressing the Attack button.
-    WS_FIREUNDERWATER = 8 ///< NOT USED
+    WS_IDLE             = 0,
+    WS_RAISE            = 1,
+    WS_LOWER            = 2,
+    WS_FIRE             = 3, ///< Is currently firing
+    WS_HOLDSTER         = 4, ///< Set when dead (with no death cinematic) or when climbing. Should set weapon anim to ANIM_WEAPONSWAPOUT if you set this state manually.
+    WS_WALK             = 5, ///< NOT USED
+    WS_RUN              = 6, ///< NOT USED
+    WS_DISCHARGE        = 7, ///< set after OnEndFire is called. If was in WS_FIRE state and not pressing the Attack button.
+    WS_FIREUNDERWATER   = 8  ///< NOT USED
 };
 
 enum EnumInputActions
 {
-    IA_ATTACK = 0,
-    IA_JUMP = 1,
-    IA_FORWARD = 2,
-    IA_BACKWARD = 3,
-    IA_STRAFELEFT = 4,
-    IA_STRAFERIGHT = 5,
-    IA_WEAPNEXT = 6,
-    IA_WEAPPREV = 7,
-    IA_MAPZOOMIN = 8,
-    IA_MAPZOOMOUT = 9,
-    IA_CUSTOM1 = 10,
-    IA_CUSTOM2 = 11
+    IA_ATTACK       = 0,
+    IA_JUMP         = 1,
+    IA_FORWARD      = 2,
+    IA_BACKWARD     = 3,
+    IA_STRAFELEFT   = 4,
+    IA_STRAFERIGHT  = 5,
+    IA_WEAPNEXT     = 6,
+    IA_WEAPPREV     = 7,
+    IA_MAPZOOMIN    = 8,
+    IA_MAPZOOMOUT   = 9,
+    IA_CUSTOM1      = 10,
+    IA_CUSTOM2      = 11
 };
 
 enum EnumPlayerButtons
 {
-    BC_ATTACK = 1,
-    BC_JUMP = 2,
-    BC_FORWARD = 4,
-    BC_BACKWARD = 8,
-    BC_STRAFELEFT = 16,
-    BC_STRAFERIGHT = 32,
-    BC_WEAPONRIGHT = 64,
-    BC_WEAPONLEFT = 128,
-    BC_MAPZOOMIN = 256,
-    BC_MAPZOOMOUT = 512,
-    BC_CUSTOM1 = 1024,
-    BC_CUSTOM2 = 2048
+    BC_ATTACK       = 1 << 0,
+    BC_JUMP         = 1 << 1,
+    BC_FORWARD      = 1 << 2,
+    BC_BACKWARD     = 1 << 3,
+    BC_STRAFELEFT   = 1 << 4,
+    BC_STRAFERIGHT  = 1 << 5,
+    BC_WEAPONRIGHT  = 1 << 6,
+    BC_WEAPONLEFT   = 1 << 7,
+    BC_MAPZOOMIN    = 1 << 8,
+    BC_MAPZOOMOUT   = 1 << 9,
+    BC_CUSTOM1      = 1 << 10,
+    BC_CUSTOM2      = 1 << 11
 };
 
 enum EnumPlayerConButtons
 {
-    CBC_WEAPON1 = 1,
-    CBC_WEAPON2 = 2,
-    CBC_WEAPON3 = 4,
-    CBC_WEAPON4 = 8,
-    CBC_WEAPON5 = 16,
-    CBC_WEAPON6 = 32,
-    CBC_WEAPON7 = 64,
-    CBC_WEAPON8 = 128,
-    CBC_WEAPON9 = 256,
-    CBC_WEAPON10 = 512,
-    CBC_WEAPON11 = 1024,
-    CBC_WEAPON12 = 2048,
-    CBC_WEAPON13 = 4096,
-    CBC_WEAPON14 = 8192,
-    CBC_AUTOMAP = 16384,
-    CBC_CHANGEAMMO = 32768,
-    CBC_RUNWALK = 65536,
-    CBC_MENUUP = 131072,
-    CBC_MENUDOWN = 262144,
-    CBC_MENULEFT = 524288,
-    CBC_MENURIGHT = 1048576,
-    CBC_MENUSELECT = 2097152,
-    CBC_MENUDESELECT = 4194304,
-    CBC_MENUBACK = 8388608,
-    CBC_MENUCANCEL = 16777216,
-    CBC_MENUACTIVATE = 33554432
+    CBC_WEAPON1         = 1 << 0,
+    CBC_WEAPON2         = 1 << 1,
+    CBC_WEAPON3         = 1 << 2,
+    CBC_WEAPON4         = 1 << 3,
+    CBC_WEAPON5         = 1 << 4,
+    CBC_WEAPON6         = 1 << 5,
+    CBC_WEAPON7         = 1 << 6,
+    CBC_WEAPON8         = 1 << 7,
+    CBC_WEAPON9         = 1 << 8,
+    CBC_WEAPON10        = 1 << 9,
+    CBC_WEAPON11        = 1 << 10,
+    CBC_WEAPON12        = 1 << 11,
+    CBC_WEAPON13        = 1 << 12,
+    CBC_WEAPON14        = 1 << 13,
+    CBC_AUTOMAP         = 1 << 14,
+    CBC_CHANGEAMMO      = 1 << 15,
+    CBC_RUNWALK         = 1 << 16,
+    CBC_MENUUP          = 1 << 17,
+    CBC_MENUDOWN        = 1 << 18,
+    CBC_MENULEFT        = 1 << 19,
+    CBC_MENURIGHT       = 1 << 20,
+    CBC_MENUSELECT      = 1 << 21,
+    CBC_MENUDESELECT    = 1 << 22,
+    CBC_MENUBACK        = 1 << 23,
+    CBC_MENUCANCEL      = 1 << 24,
+    CBC_MENUACTIVATE    = 1 << 25
 };
 
 enum EnumGameButtonEvents
 {
-    GBE_MENU_UP = 1,
-    GBE_MENU_RIGHT = 2,
-    GBE_MENU_DOWN = 4,
-    GBE_MENU_LEFT = 8,
-    GBE_MENU_SELECT = 16,
-    GBE_MENU_CANCEL = 32,
-    GBE_MENU_BACK = 64,
-    GBE_MENU_ACTIVATE = 128,
-    GBE_MENU_DESELECT = 256,
-    GBE_MENU_MOUSESELECT = 512
+    GBE_MENU_UP             = 1 << 0,
+    GBE_MENU_RIGHT          = 1 << 1,
+    GBE_MENU_DOWN           = 1 << 2,
+    GBE_MENU_LEFT           = 1 << 3,
+    GBE_MENU_SELECT         = 1 << 4,
+    GBE_MENU_CANCEL         = 1 << 5,
+    GBE_MENU_BACK           = 1 << 6,
+    GBE_MENU_ACTIVATE       = 1 << 7,
+    GBE_MENU_DESELECT       = 1 << 8,
+    GBE_MENU_MOUSESELECT    = 1 << 9
 };
 
 enum EnumDifficulty
 {
-    DIFFICULTY_EASY = 0,
-    DIFFICULTY_NORMAL = 1,
-    DIFFICULTY_HARD = 2,
+    DIFFICULTY_EASY     = 0,
+    DIFFICULTY_NORMAL   = 1,
+    DIFFICULTY_HARD     = 2,
     DIFFICULTY_HARDCORE = 3
 };
 
 enum EnumClipFlags
 {
-    CF_CLIPEDGES = 1 << 0, ///< clip movement against edges that don't link to sectors
-    CF_IGNOREBLOCKERS = 1 << 1, ///< don't clip edges belonging to blocking sectors
-    CF_DROPOFF = 1 << 2, ///< allows passing through platforms or ledges
-    CF_NOENTERWATER = 1 << 3, ///< block all edges that links to a water sector
-    CF_NOEXITWATER = 1 << 4, ///< block all edges that links to a non-water sector
-    CF_NOCLIPSTATICS = 1 << 5, ///< don't collide with static models
-    CF_NOCLIPACTORS = 1 << 6, ///< don't collide with dynamic objects/actors
-    CF_WALKWALLS = 1 << 7, ///< don't restrict movement to steep slopes
-    CF_COLLIDEFLOORS = 1 << 8, ///< project and clip movement against non-flat floors
-    CF_HITSCAN = 1 << 9, ///< performs a single-pass trace. useful for hitscans
-    CF_ALLOWCLIMB = 1 << 10, ///< collide with sectors flagged as climbable
-    CF_ALLOWCRAWL = 1 << 11, ///< collide with sectors flagged as crawlable
-    CF_NOSTEPDOWN = 1 << 12, ///< don't clamp z-axis when walking down slopes
-    CF_NOSLOPESTEP = 1 << 13, ///< don't project z-axis movement along slopes
-    CF_COLLIDEHEIGHT = 1 << 14, ///< clip against ceilings
-    CF_COLLIDECORPSES = 1 << 15, ///< clip against actors flagged as dead
-    CF_NOEXITWALLS = 1 << 16, ///< clip all edges, regardless if they link to another sector or not
-    CF_NOCOLLIDEFUNC = 1 << 17, ///< don't invoke the OnCollide callback on the moving object
-    CF_NOFLOORADJUST = 1 << 18, ///< don't keep z-axis above floor plane
-    CF_NOCEILINGADJUST = 1 << 19, ///< don't keep z-axis below ceiling plane
-    CF_COLLIDEWATER = 1 << 20, ///< clip movement against the water surface
-    CF_USEWALLRADIUS = 1 << 21, ///< clip and project movement away from walls based on wall radius
-    CF_NOCLIPTARGETACTORS = 1 << 22, ///< don't clip actors that are targeted by moving object
-    CF_COLLIDETRIGGERS = 1 << 23, ///< block edges belonging to a trigger. Can't cross into sectors if sector has AAF_EVENT.
-    CF_STANDONOBJECTS = 1 << 24, ///< allow vertical clipping of objects
-    CF_GREASESLIDEOBJECTS = 1 << 25, ///< always keep movement projected away from collided objects
+    CF_CLIPEDGES            = 1 << 0,  ///< clip movement against edges that don't link to sectors
+    CF_IGNOREBLOCKERS       = 1 << 1,  ///< don't clip edges belonging to blocking sectors
+    CF_DROPOFF              = 1 << 2,  ///< allows passing through platforms or ledges
+    CF_NOENTERWATER         = 1 << 3,  ///< block all edges that links to a water sector
+    CF_NOEXITWATER          = 1 << 4,  ///< block all edges that links to a non-water sector
+    CF_NOCLIPSTATICS        = 1 << 5,  ///< don't collide with static models
+    CF_NOCLIPACTORS         = 1 << 6,  ///< don't collide with dynamic objects/actors
+    CF_WALKWALLS            = 1 << 7,  ///< don't restrict movement to steep slopes
+    CF_COLLIDEFLOORS        = 1 << 8,  ///< project and clip movement against non-flat floors
+    CF_HITSCAN              = 1 << 9,  ///< performs a single-pass trace. useful for hitscans
+    CF_ALLOWCLIMB           = 1 << 10, ///< collide with sectors flagged as climbable
+    CF_ALLOWCRAWL           = 1 << 11, ///< collide with sectors flagged as crawlable
+    CF_NOSTEPDOWN           = 1 << 12, ///< don't clamp z-axis when walking down slopes
+    CF_NOSLOPESTEP          = 1 << 13, ///< don't project z-axis movement along slopes
+    CF_COLLIDEHEIGHT        = 1 << 14, ///< clip against ceilings
+    CF_COLLIDECORPSES       = 1 << 15, ///< clip against actors flagged as dead
+    CF_NOEXITWALLS          = 1 << 16, ///< clip all edges, regardless if they link to another sector or not
+    CF_NOCOLLIDEFUNC        = 1 << 17, ///< don't invoke the OnCollide callback on the moving object
+    CF_NOFLOORADJUST        = 1 << 18, ///< don't keep z-axis above floor plane
+    CF_NOCEILINGADJUST      = 1 << 19, ///< don't keep z-axis below ceiling plane
+    CF_COLLIDEWATER         = 1 << 20, ///< clip movement against the water surface
+    CF_USEWALLRADIUS        = 1 << 21, ///< clip and project movement away from walls based on wall radius
+    CF_NOCLIPTARGETACTORS   = 1 << 22, ///< don't clip actors that are targeted by moving object
+    CF_COLLIDETRIGGERS      = 1 << 23, ///< block edges belonging to a trigger. Can't cross into sectors if sector has AAF_EVENT.
+    CF_STANDONOBJECTS       = 1 << 24, ///< allow vertical clipping of objects
+    CF_GREASESLIDEOBJECTS   = 1 << 25, ///< always keep movement projected away from collided objects
     CF_ALLOWRESTRICTEDAREAS = 1 << 26, ///< don't collide with edges belonging to a restricted sector
-    CF_COLLIDECLIFFS = 1 << 27, ///< collide with non-walkable floors
-    CF_CHECKLINKEDBRIDGES = 1 << 28, ///< do extensive checks against overlapping bridge sectors
-    CF_POLYCOLLISION = 1 << 29, ///< clip movement against all model polygons of an object
-    CF_COLLIDEPLAYERBLOCKER = 1 << 30 ///< collide with edges linked to player blocking regions (AAF_WARPRETURN)
+    CF_COLLIDECLIFFS        = 1 << 27, ///< collide with non-walkable floors
+    CF_CHECKLINKEDBRIDGES   = 1 << 28, ///< do extensive checks against overlapping bridge sectors
+    CF_POLYCOLLISION        = 1 << 29, ///< clip movement against all model polygons of an object
+    CF_COLLIDEPLAYERBLOCKER = 1 << 30  ///< collide with edges linked to player blocking regions (AAF_WARPRETURN)
 };
 
 enum EnumWaterLevel
 {
     WLT_INVALID = 0, ///< Not in water sectors
-    WLT_OVER = 1, ///< In water sector but over the water height
+    WLT_OVER    = 1, ///< In water sector but over the water height
     WLT_BETWEEN = 2, ///< In water sector and floating above the water
-    WLT_UNDER = 3 ///< In water sector and under the water height
+    WLT_UNDER   = 3  ///< In water sector and under the water height
 };
 
 /**
@@ -413,85 +413,85 @@ enum EnumWaterLevel
  */
 enum EnumCameraLerpType
 {
-    CMLT_NONE = 0, ///< time is set to time / speed.
-    CMLT_LINEAR = 1, ///< time is set to time / speed.
+    CMLT_NONE       = 0, ///< time is set to time / speed.
+    CMLT_LINEAR     = 1, ///< time is set to time / speed.
     CMLT_LINEARLOOP = 2, ///< time is set to time / speed. If time is > 1.0 then time -= 1.0
-    CMLT_COSINE = 3, ///< time will never be higher than speed. time = CosTween(time * (1.0f / speed));
-    CMLT_COSINE_POW = 4 ///< time will never be higher than speed. time = CosTween(Pow(time * (1.0f / speed), 3));
+    CMLT_COSINE     = 3, ///< time will never be higher than speed. time = CosTween(time * (1.0f / speed));
+    CMLT_COSINE_POW = 4  ///< time will never be higher than speed. time = CosTween(Pow(time * (1.0f / speed), 3));
 };
 
 enum EnumCameraFlags
 {
-    CMF_NO_INITIAL_FADEOUT = 1,
-    CMF_NO_LETTERBOX = 2,
-    CMF_LOCK_PLAYER = 4,
-    CMF_UNLOCK_PLAYER_ON_FINISH = 8,
-    CMF_INITIAL_FADEIN = 16,
-    CMF_SHOW_CREDITS = 32,
-    CMF_CHANGE_MAP_AFTER_FADE = 64,
-    CMF_SHOW_HIDDEN_OBJECTS = 128,
-    CMF_NO_INITIAL_FADEIN = 256
+    CMF_NO_INITIAL_FADEOUT      = 1 << 0,
+    CMF_NO_LETTERBOX            = 1 << 1,
+    CMF_LOCK_PLAYER             = 1 << 2,
+    CMF_UNLOCK_PLAYER_ON_FINISH = 1 << 3,
+    CMF_INITIAL_FADEIN          = 1 << 4,
+    CMF_SHOW_CREDITS            = 1 << 5,
+    CMF_CHANGE_MAP_AFTER_FADE   = 1 << 6,
+    CMF_SHOW_HIDDEN_OBJECTS     = 1 << 7,
+    CMF_NO_INITIAL_FADEIN       = 1 << 8
 };
 
 enum EnumCameraStates
 {
-    CAMS_IDLE = 0,
-    CAMS_FADEOUT = 1,
-    CAMS_FADEIN = 2,
-    CAMS_ACTIVE = 3,
-    CAMS_ACTIVE_TO_FADEOUT = 4,
+    CAMS_IDLE               = 0,
+    CAMS_FADEOUT            = 1,
+    CAMS_FADEIN             = 2,
+    CAMS_ACTIVE             = 3,
+    CAMS_ACTIVE_TO_FADEOUT  = 4,
     CAMS_FADEBACK_TO_CLIENT = 5,
-    CAMS_RESTORE_TO_CLIENT = 6
+    CAMS_RESTORE_TO_CLIENT  = 6
 };
 
 enum EnumAreaFlags
 {
-    AAF_WATER = 1 << 0,
-    AAF_BLOCK = 1 << 1,
-    AAF_TOGGLE = 1 << 2, ///< if on and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. Used for door areas.
-    AAF_CLIFF = 1 << 3, ///< is a wall
-    AAF_CLIMB = 1 << 4, ///< climb up sectors faster than AAF_LADDER
-    AAF_ONESIDED = 1 << 5, ///< Bridge
-    AAF_CEILING = 1 << 6,
-    AAF_CRAWL = 1 << 7,
-    AAF_ENTERCRAWL = 1 << 8, ///< Exactly the same as AAF_CRAWL except actors won't collide with this sector when CF_ALLOWCRAWL is not set.
-    AAF_HIDDEN = 1 << 9,
-    AAF_ENTERED = 1 << 10, ///< Not shown in Editor. Used in kex editor only for fill sector commands. When map is saved in kex editor all sectors will have this flag off.
-    AAF_SECRET = 1 << 11,
-    AAF_RESTRICTED = 1 << 12, ///< kAI can't enter the area
-    AAF_SLOPETEST = 1 << 13, ///< overrides AAF_CLIFF flag. If the sectors floor plane up direction is <= 0.5 then is a wall (a wall is the same as the AAF_CLIFF flag).
-    AAF_DEATHPIT = 1 << 14,
-    AAF_MAPPED = 1 << 15,
-    AAF_EVENT = 1 << 16,
-    AAF_REPEATABLE = 1 << 17, ///< Unused. In the original game this is used in combination with AAF_EVENT and will only trigger the event if the actor has also collided with a wall.
-    AAF_TELEPORT = 1 << 18,
-    AAF_DAMAGE = 1 << 19,
-    AAF_DRAWSKY = 1 << 20,
-    AAF_TELEPORTAIR = 1 << 21,
-    AAF_LAVA = 1 << 22,
-    AAF_EVENTSOUND = 1 << 23,
-    AAF_ANTIGRAVITY = 1 << 24,
-    AAF_LADDER = 1 << 25, ///< climb up sectors slower than AAF_CLIMB
-    AAF_CHECKPOINT = 1 << 26,
-    AAF_SAVEGAME = 1 << 27,
-    AAF_WARPRETURN = 1 << 28, ///< In Remaster it's used as a PlayerBlocking sector. used with clipflag CF_COLLIDEPLAYERBLOCKER.
-    AAF_SHALLOWWATER = 1 << 29,
-    AAF_DRAWSUN = 1 << 30,
+    AAF_WATER           = 1 << 0,
+    AAF_BLOCK           = 1 << 1,
+    AAF_TOGGLE          = 1 << 2,  ///< if on and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. Used for door areas.
+    AAF_CLIFF           = 1 << 3,  ///< is a wall
+    AAF_CLIMB           = 1 << 4,  ///< climb up sectors faster than AAF_LADDER
+    AAF_ONESIDED        = 1 << 5,  ///< Bridge
+    AAF_CEILING         = 1 << 6,
+    AAF_CRAWL           = 1 << 7,
+    AAF_ENTERCRAWL      = 1 << 8,  ///< Exactly the same as AAF_CRAWL except actors won't collide with this sector when CF_ALLOWCRAWL is not set.
+    AAF_HIDDEN          = 1 << 9,
+    AAF_ENTERED         = 1 << 10, ///< Not shown in Editor. Used in kex editor only for fill sector commands. When map is saved in kex editor all sectors will have this flag off.
+    AAF_SECRET          = 1 << 11,
+    AAF_RESTRICTED      = 1 << 12, ///< kAI can't enter the area
+    AAF_SLOPETEST       = 1 << 13, ///< overrides AAF_CLIFF flag. If the sectors floor plane up direction is <= 0.5 then is a wall (a wall is the same as the AAF_CLIFF flag).
+    AAF_DEATHPIT        = 1 << 14,
+    AAF_MAPPED          = 1 << 15,
+    AAF_EVENT           = 1 << 16,
+    AAF_REPEATABLE      = 1 << 17, ///< Unused. In the original game this is used in combination with AAF_EVENT and will only trigger the event if the actor has also collided with a wall.
+    AAF_TELEPORT        = 1 << 18,
+    AAF_DAMAGE          = 1 << 19,
+    AAF_DRAWSKY         = 1 << 20,
+    AAF_TELEPORTAIR     = 1 << 21,
+    AAF_LAVA            = 1 << 22,
+    AAF_EVENTSOUND      = 1 << 23,
+    AAF_ANTIGRAVITY     = 1 << 24,
+    AAF_LADDER          = 1 << 25, ///< climb up sectors slower than AAF_CLIMB
+    AAF_CHECKPOINT      = 1 << 26,
+    AAF_SAVEGAME        = 1 << 27,
+    AAF_WARPRETURN      = 1 << 28, ///< In Remaster it's used as a PlayerBlocking sector. used with clipflag CF_COLLIDEPLAYERBLOCKER.
+    AAF_SHALLOWWATER    = 1 << 29,
+    AAF_DRAWSUN         = 1 << 30,
     AAF_STOREWARPRETURN = 1 << 31  ///< Unused
 };
 
 enum EnumSectorPlatformFlags
 {
-    SPF_FLOORVERTS          = (1 << 0),   ///< Changes sectors verts origin
-    SPF_CEILINGVERTS        = (1 << 1),   ///< Changes sectors verts heights
-    SPF_SAMEAREA            = (1 << 2),   ///< Effects sectors only with the same area as the starting sector
-    SPF_MOVEPLAYERINAIR     = (1 << 3),   ///< Player moves with the sectors even in the air
-    SPF_USEMOVETOFORPLAYER  = (1 << 4),   ///< Uses the MoveToPosition function to set the Players origin. else sets origin.
-    SPF_USEMOVETOFORAI      = (1 << 5),   ///< Uses the MoveToPosition function to set the AI origin. else sets origin.
-    SPF_USEMOVETOFOROTHER   = (1 << 6),   ///< Uses the MoveToPosition function to set other actors origin. else sets origin.
-    SPF_MOVEPLAYER          = (1 << 7),   ///< Moves player
-    SPF_MOVEAI              = (1 << 8),   ///< Moves AI
-    SPF_MOVEOTHERACTORS     = (1 << 9),   ///< Moves other actors on the sectors that are not the player or AI.
+    SPF_FLOORVERTS          = 1 << 0,   ///< Changes sectors verts origin
+    SPF_CEILINGVERTS        = 1 << 1,   ///< Changes sectors verts heights
+    SPF_SAMEAREA            = 1 << 2,   ///< Effects sectors only with the same area as the starting sector
+    SPF_MOVEPLAYERINAIR     = 1 << 3,   ///< Player moves with the sectors even in the air
+    SPF_USEMOVETOFORPLAYER  = 1 << 4,   ///< Uses the MoveToPosition function to set the Players origin. else sets origin.
+    SPF_USEMOVETOFORAI      = 1 << 5,   ///< Uses the MoveToPosition function to set the AI origin. else sets origin.
+    SPF_USEMOVETOFOROTHER   = 1 << 6,   ///< Uses the MoveToPosition function to set other actors origin. else sets origin.
+    SPF_MOVEPLAYER          = 1 << 7,   ///< Moves player
+    SPF_MOVEAI              = 1 << 8,   ///< Moves AI
+    SPF_MOVEOTHERACTORS     = 1 << 9,   ///< Moves other actors on the sectors that are not the player or AI.
 
     SPF_DEFAULT = SPF_FLOORVERTS|SPF_CEILINGVERTS|SPF_MOVEPLAYERINAIR|SPF_USEMOVETOFORPLAYER|SPF_MOVEPLAYER|SPF_MOVEAI|SPF_MOVEOTHERACTORS
 };
@@ -509,17 +509,17 @@ namespace kexVibrationPlayer
 {
     enum channel_e
     {
-        CHANNEL_WEAPON = 0,
-        CHANNEL_BODY = 1,
-        CHANNEL_DAMAGE = 2,
-        CHANNEL_WORLD = 3
+        CHANNEL_WEAPON  = 0,
+        CHANNEL_BODY    = 1,
+        CHANNEL_DAMAGE  = 2,
+        CHANNEL_WORLD   = 3
     };
 
     enum position_e
     {
-        POSITION_LEFT = 0,
-        POSITION_RIGHT = 1,
-        POSITION_NEUTRAL = 2
+        POSITION_LEFT       = 0,
+        POSITION_RIGHT      = 1,
+        POSITION_NEUTRAL    = 2
     };
 }
 
@@ -1833,7 +1833,7 @@ public:
     kVec3& InterceptVector(); ///< Returns the vector that intersected the collided geometry
     kVec3& ContactNormal(); ///< Returns the normalized vector of the collided surface
     const float& Fraction(); ///< returns the 0.0 - 1.0 range of the point of intersection from start to end trace. (If fraction is == 1.0 then no intersection occured.)
-    const uint ClipResult(); ///< specifies the type of intersection (flags)
+    const uint ClipResult(); ///< specifies the type of intersection (flags. EnumClipResultFlags)
     kActor@ ContactActor(); ///< handle pointer to actor that was collided (null if none was collided)
     kVec3& MoveDirection(); ///< Movement vector of the object
 };
@@ -1854,7 +1854,7 @@ public:
     const bool CheckWarping(); ///< Checks if Warping or FreeWarping is in progress.
     const bool CanOpenPauseMenu(); ///< Checks if it's okay to be able to open a menu
     const bool CanOpenSaveMenu(); ///< Checks if it's okay to be able to open the save menu
-    const int NewMapWarpTID(); ///< Returns the warp TID the player warped to from another map. Returns -1 of didn't warp from another map. Check before OnPostBeginLevel.
+    const int NewMapWarpTID(); ///< Returns the warp TID the player warped to from another map. Returns -1 if didn't warp from another map. Check before OnPostBeginLevel.
     void ClearWarpInterpolation(void); ///< Clearing the interpolation for kPuppet will also clear the warp interpolation.
 };
 
