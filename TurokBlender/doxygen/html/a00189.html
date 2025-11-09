@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Map Format</title>
+<title>Turok: v3 Changes</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,381 +103,236 @@ $(function(){initNavTree('a00189.html',''); initResizable(true); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Map Format</div></div>
+  <div class="headertitle"><div class="title">v3 Changes</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><pre class="fragment">//
-// Turok EX Map Format Specifications
-// 
-// By BehemothProgrammer
-// Revised: 07/03/19
-//
+<div class="textblock"><h3>Updating</h3>
+<pre class="fragment">//----------------------------------------------------------
+// Updating your levels
+//----------------------------------------------------------
+The water hack that positions all water surfaces (models) downwards by 8 is longer done in this update.
+Water is exactly where you place it. So if you require the model to be where it was before with the hack then move your water models down by 8.
 
-//-----------------------------------------------------------------------------
-//
-// What is this document for?
-//
-//-----------------------------------------------------------------------------
+//----------------------------------------------------------
+// Updating your scripts
+//----------------------------------------------------------
+There was changes for tactile (controller vibration) support a long time ago for Switch and ps4 and I don't have the change history
+for that so comparing all files with the previous version is the only way to see all the changes. Using a program such as WinMerge to compare 2 folders can help with that.
+If you've done a lot of scripting for your mod then I'd recommend either doing a file compare and make sure you bring all changes over to your mod or
+copying all the games scripts to your mod and then applying your changes over top of them.
 
-This technical document explains the Turok Dinosaur Hunter Remastered .map file
-format and is targeted towards users with programming experience.
+Angelscript has been updated and brings new features and changes.
 
-//-----------------------------------------------------------------------------
-//
-// Map Format
-//
-//-----------------------------------------------------------------------------
+1) Make sure to add: #pragma once
+To the very top of each common script file so it will only be included once.
+2) There was missing enums before and they have been exposed to scripting. Make sure you aren't redefining any of the enums now.
+3) Make sure you aren't overwriting any new exposed function names. such as Math::Clamp
+4) I've found that there seems to be problems with having a global variable/function in the map script that has imported a script that was also imported in the game module and they have the same name of a global function in the game module. You may need to rename one of these to avoid this "error". (Name conflict. '' is a global function.)
 
-Map files (.MAP) are binary files that are read with offset addresses to data structures.
-It uses a kexArchive format which is also based directly on Iguana's archive format for their file structure in Turok 1 and 2.
-Having a good idea of how the archive format works will allow you to be able to parse the file,
-including data from the Turok 1 and 2 roms which applies to CARTDATA.DAT in Turok 1. And for N64 roms,
-same format except that the dwords are in big endian format.
-
-There are two types of archive formats: indexed and data sets. I'll start off with indexed:
-
-In an indexed archive the header always begins with 4 bytes(int) which is the number of offsets. Then for N offsets you got 4 bytes(int).
-And there is 1 offset added to the end of the offsets that points to the end of the archive.
-Each offset is relative to the beginning of the archives header.
-These offsets can lead to 1 of 3 things; another indexed archive, a data set archive, or arbitrary data.
-If you want to determine the size of the data it's offsetting to, you can subtract the next offset with the current one.
-The archives have padded the data in rounds of 8/16 bytes.
-
-Data sets are similar, except that they begin with 8 bytes. first 4 bytes(int) being the stride size, and the second 4 bytes(int) is the count.
-Following that is a glob of bytes which is stride size * count (the data structure)
-
-//-----------------------------------------------------------------------------
-//
-// Step by step walkthrough of reading a map
-//
-//-----------------------------------------------------------------------------
-
-So let's start by opening a .map file in a hex editor of your choice.
-The first thing you'll see is a indexed archive so that means the very first 4 bytes(int) in the file is the root archive headers number of offsets.
-
-You'll see that the value should be 7, for 7 offsets. (It'll say 8 if there's visibility tables for the map)
-Now let's read the first offset(the maps version number) for this root indexed archive(the next 4 bytes(int)).
-Go to that byte in your hex editor at 0 (start of header) + the first offset value.
-Which will take you to arbitrary data, 4 bytes(int), which we know is the maps version number and it's value should be 1.
-
-Now let's go back to our root indexed archive and follow the second offset which will take us to another indexed archive which we already know has
-offsets related to the maps World Properties. This world indexed archive has 3 offsets.
-
-The first offset in the world archive leads to arbitrary data:      Sunlight Direction  - 12 bytes (3 floats, xyz)
-The second offset in the world archive leads to arbitrary data:     Sunlight Color      - 16 bytes (4 floats, rgba)
-The third offset in the world archive leads to arbitrary data:      Ambient Color       - 16 bytes (4 floats, rgba)
-
-Now let's go back to our root indexed archive and follow the third offset which will take us to a dataset archive which we know
-is just a string for the World Sky Material. Remember this is a dataset archive. We read the archive header;
-the first 4 bytes(int) being the size of each object in bytes, in this example is 29 (for: skies/skyMaterials/sky_brown and a 0 null byte at the end).
-the second 4 bytes(int) being the number of objects which is 1 (for 1 string).
-We then read the next 29 bytes as chars for our string of the World Sky Material (and you probably want to remove or not read the last 0 null character from the string).
-
-Now let's go back to our root indexed archive and follow the fourth offset which will take us to a indexed archive (Collision) which has 3 offsets.
-The first offset leads to a dataset archive that is all the vertices in the map used for our sectors.
-Again, read it's header like you did with the World Sky Material string.
-the first 4 bytes(int) is the size in bytes that each vertice uses (which is 16 bytes)
-the second 4 bytes(int) being the number of vertices in the map.
-
-name                bytes              notes    
----------------------------------------------------------
-Position            12 (3 floats)      xyz
-Height              4 (float)          The ceiling height
-
-Let's follow the second offset in the Collision indexed archive which takes us to a dataset archive (SectorSets).
-Read the header to get the size(which is 64) and count.
-
-name                bytes              notes    
----------------------------------------------------------
-flags               4 (uint)
-fog color           4 (4 bytes)        rgba
-water color         4 (4 bytes)        rgba
-fog zfar            4 (float)
-water zfar          4 (float)
-water height        4 (float)
-sky height          4 (float)
-sky speed           4 (float)
-blend length        4 (float)
-args                12 (6 int16)
-floor impact id     1 (byte)
-wall impact id      1 (byte)
-ambience            1 (byte)
-automap color ID    1 (byte)
-music               1 (byte)
-cull bits           1 (byte)           Kex editor assigns a default value of 255
-unused              2 (2 bytes)        unused bytes. both are always 0
-
-Let's follow the third offset in the Collision indexed archive which takes us to a dataset archive (Sectors).
-Read the header to get the size(which is 18) and count. IMPORTANT NOTE: The kex editor saves sectors of size 18 bytes, however the original maps only stored 16 bytes of data that did not include draw order, which was added in TurokEX. So the size might be 16 or 18 depending on if it's from the original turok map editor or the kex editor.
-
-name                bytes              notes    
----------------------------------------------------------
-SectorSet Index     2 (uint16)
-flags               2 (uint16)          This is exactly the same as the first 16 bits in the SectorSet flags
-indices             6 (3 uint16)        The 3 vertice indexes this sector uses
-edge links          6 (3 uint16)        The 3 edges of this sector. The index to the other sector that shares an edge with the current sector. If it's 0xffff then nothing is linked and the edge is a solid wall.
-draw order          2 (int16)          Prioritizes automap colors (in kex editor saved maps only)
-
-Now let's go back to our root indexed archive and follow the fifth offset which will take us to a indexed archive (Grid Bounds) which has 3 offsets.
-The first offset leads to a dataset archive that is the grid bounds size width and height. Read the header. Size and count should both be 2.
-
-name                bytes              notes    
----------------------------------------------------------
-width               2 (int16)          number of grid bounds on the x axis
-height              2 (int16)          number of grid bounds on the y axis
-
-The second offset in the Grid Bounds indexed archive leads to a dataset archive that is all the grid bounds min x and y position.
-Read the header. Size(which is 8) and count (which should be width*height).
-
-name                bytes              notes    
----------------------------------------------------------
-min x               4 (float)
-min y               4 (float)
-
-The third offset in the Grid Bounds indexed archive leads to a dataset archive that is all the grid bounds max x and y position.
-Read the header. Size(which is 8) and count (which should be width*height).
-
-name                bytes              notes    
----------------------------------------------------------
-max x               4 (float)
-max y               4 (float)
-
-Now let's go back to our root indexed archive and follow the sixth offset which will take us to a indexed archive (Grid Sections).
-The number of offsets is the number of grid sections.
-Each offset leads to a indexed archive which is the static meshes that the grid section contains and it has 2 offsets.
-The static meshes archives first offset leads to a dataset archive that is all the static meshes properties in this grid section.
-Read the header. Size(which is 88) and count.
-
-name                bytes              notes    
----------------------------------------------------------
-origin              12 (3 floats)      xyz
-scale               12 (3 floats)      xyz
-rotation            16 (4 floats)      quaternion xyzw
-bounding box min    12 (3 floats)      xyz
-bounding box max    12 (3 floats)      xyz
-texture index       4 (int)
-flags               4 (uint)
-sector index        4 (int)
-collision radius    4 (float)
-collision height    4 (float)
-cull bits           4 (int)            cull bits was used for vis culling and its only used in Hub 5. It's just a arbitrary flag. If the flag matches the bits set for the sector you're viewing in, then they're culled out. cull bits were manually set by hand by the developers. Kex Editor always sets this to a value of -1
-
-The second offset in the static meshes archive leads to a indexed archive (static meshes model files)
-The number of offsets is the number of static meshes in the grid section.
-Each offset leads to a dataset archive that is the string used for the static meshes model path.
-
-Now let's go back to our root indexed archive and follow the seventh offset which will take us to a indexed archive (Actors) which has 3 offsets.
-The first offset leads to a dataset archive that is all the actors in the map properties. Read the header. Size(which is 140) and count.
-
-name                   bytes              notes    
----------------------------------------------------------
-type                   4 (int)
-origin                 12 (3 floats)      xyz
-scale                  12 (3 floats)      xyz
-yaw                    4 (float)          in rads
-sector index           4 (int)
-bounding box min       12 (3 floats)      xyz
-bounding box max       12 (3 floats)      xyz
-sight range            4 (float)          squared
-sight fov              4 (float)          in rads
-loud range             4 (float)          squared
-quiet range            4 (float)          squared
-attack range           4 (float)          squared
-fly height             4 (float)          squared
-collision width        4 (float)          
-collision wall width   4 (float)         
-collision height       4 (float)
-collision dead height  4 (float)          also known as Step Height
-melee range            4 (float)          squared
-leash radius           4 (float)          squared
-trigger delay          4 (float)          
-species mask           4 (int)            unused in Turok EX. Kex editor sets this value to 255.
-Spawn Flags 1          4 (uint)
-Spawn Flags 2          4 (uint)
-Spawn Flags 3          2 (uint16)
-Health                 2 (int16)
-TID                    2 (int16)
-Target TID             2 (int16)
-Max Regenerations      2 (int16)
-Attack Chance          1 (byte)
-Trigger Anim           1 (byte)
-Variant                1 (sbyte)
-Texture                1 (sbyte)
-Params 1               1 (sbyte)
-Params 2               1 (sbyte)
-
-The second offset in the actors archive leads to a indexed archive (actors model files)
-The number of offsets is the number of actors in the map.
-Each offset leads to a dataset archive that is the string used for the actors model path.
-
-The third offset in the actors archive leads to a indexed archive (actors anim files)
-The number of offsets is the number of actors in the map.
-Each offset leads to a dataset archive that is the string used for the actors anim path.
+//----------------------------------------------------------
+// Updating localization files
+//----------------------------------------------------------
+Previously the localization files did not have keys for all words. You must have keys for everything now.
+There has been many changes to these files so I recommend copying those files over and applying your changes on top of them.
+</pre><h3>Files</h3>
+<pre class="fragment">defs/weaponInfo.txt
+New property added: "group" (can also be assigned through scripting and is not needed in the def if done that way)
+Binds this weapon to another weapons index.
+Example you made a new pistol weapon at index 14 and want to group it with default pistol that has the index 2.
+then set your new pistols group to 2 and whenever the user presses the key assigned to the original pistol 2 it will cycle between them. instead of the user having to cycle to the new weapon with next/prev weapon inputs.
 
 
-If there was only 7 offsets in the root indexed archive then you've read through the entire file! If you have an eighth offset then that will lead
-to the maps Visibility tables dataset archive which answers the question: which staticmeshes are visible from this sector. 
-Size 328 (example. number of static meshes / 8 (for each bit) then ceil it plus padding)
-Count 4207 (example. This is number of sectors in the map)
+defs/environmentInfo.txt
+Sectors Ambience value are these defs minus 1. So a sectors ambience value of 3 = "Environment_Cave   2".
+Each of these defs can have a reverbType. These are the reverbType values:
+0 = Cave
+1 = Forest
+2 = Underwater
+3 = Stone Room
+4 = Auditorium
+5 = Arena
+6 = Default
+7 = Generic
+8 = Padded Cell
+9 = Room
+10 = Bathroom
+11 = Living Room
+12 = Concert Hall
+13 = Hanger
+14 = Carpeted Hallway
+15 = Hallway
+16 = Stone Corridor
+17 = Alley
+18 = City
+19 = Mountains
+20 = Quarry
+21 = Plain
+22 = Parking Lot
+23 = Sewer Pipe
+24 = Small Room
+25 = Medium Room
+26 = Large Room
+27 = Medium Hall
+28 = Large Hall
+29 = Plate
 
+trails\*.txt files:
+"edgeSpawnSpeed" // scales the speed at which more edges spawn. Higher values spawn more often creating a smoother trail but at a performance cost. default value = 1.0. At GameSpeed 1.0 a edgeSpawnSpeed of 4.0 will create a TrailEdge every tick.
 
-Before you start writing your code to read/write the map you pretty much have to have
-a class/system for handling indexed/data set archives in place before hand.
+------------
+defs changes
+------------
+defs/ammoInfo.txt
+    Ammo_Rocket, max from 6 to 24, maxBackpack from 24 to 48
 
+defs/damageInfo.txt
+    Added new Generic damages entry that uses new flag bExplodeReact for the tek arrows and shotgun explosive shells.
+        S_Damage_Target_React_damage_50 {     bExplodeReact 1      randomFactor 1.0     damage 50 }
+        
+defs/environmentInfo.txt
+    added new type to give a reverb effect for the spirit world levels.
+        Environment_Spiritual 10
+        {
+            reverbType          5
+        }
 
-//-----------------------------------------------------------------------------
-//
-// Enums
-//
-//-----------------------------------------------------------------------------
+defs/fileLookoup.txt
+    fixed filename for Sounds:
+        $467 = "sounds/shaders/generic_82_humvee_idle__looped_.ksnd"
+        $468 = "sounds/shaders/generic_83_humvee_accelerate__looped_.ksnd"
+        
+    Added new Portal type which tells the game which models to apply alpha vertices around the model.
+    Before it was hardcoded to only work with models: models/dyn_portal01 and models/dyn_portal02
+        Portal
+        {
+            $0 = "models/dyn_portal01.bin"
+            $1 = "models/dyn_portal02.bin"
+        }
 
-enum ActorSpawnFlags1
-{
-    Solid                 = (1 &lt;&lt; 0),
-    ProjectileAttack1     = (1 &lt;&lt; 1),
-    Leader                = (1 &lt;&lt; 2),
-    SnapToFloor           = (1 &lt;&lt; 3),
-    ExplosionDeath        = (1 &lt;&lt; 4),
-    ClimbWalls            = (1 &lt;&lt; 5),
-    ProjectileAttack2     = (1 &lt;&lt; 6),
-    NoRepeatExplosion     = (1 &lt;&lt; 7),
-    DieOnExplosion        = (1 &lt;&lt; 8),
-    Flocker               = (1 &lt;&lt; 9),
-    SlowEnemy             = (1 &lt;&lt; 10),
-    RandomResurrection    = (1 &lt;&lt; 11),
-    RandomFeignDeath      = (1 &lt;&lt; 12),
-    Kamikaze              = (1 &lt;&lt; 13),
-    AvoidPlayers          = (1 &lt;&lt; 14),
-    FloatInWaterOnDeath   = (1 &lt;&lt; 15),
-    Teleport              = (1 &lt;&lt; 16),
-    CastShadow            = (1 &lt;&lt; 17),
-    TeleportWait          = (1 &lt;&lt; 18),
-    UseStrongAttacks      = (1 &lt;&lt; 19),
-    UseWeakAttacks        = (1 &lt;&lt; 20),
-    Sniper                = (1 &lt;&lt; 21),
-    MeltOnDeath           = (1 &lt;&lt; 22),
-    AvoidWater            = (1 &lt;&lt; 23),
-    Flying                = (1 &lt;&lt; 24),
-    TeleportAvoidWater    = (1 &lt;&lt; 25),
-    TeleportAvoidCliffs   = (1 &lt;&lt; 26),
-    TriggerStuff          = (1 &lt;&lt; 27),
-    CannotCauseAFight     = (1 &lt;&lt; 28),
-    NoWallCollision       = (1 &lt;&lt; 29),
-    ScreenShake           = (1 &lt;&lt; 30),
-    RespawnAnimation      = (1 &lt;&lt; 31)
-}
+defs/levelIconInfo.txt
+    Chrono icons manually set in this file now so it can be customized with mods.
 
-enum ActorSpawnFlags2
-{
-    DropItemMask1           = (1 &lt;&lt; 0), //Explosive Shells
-    DropItemMask2           = (1 &lt;&lt; 1), //Grenade
-    DropItemMask3           = (1 &lt;&lt; 2), //Medium Health
-    DropItemMask4           = (1 &lt;&lt; 3), //Full Health
-    DropItemMask5           = (1 &lt;&lt; 4), //Ultra Health
-    DropItemMask6           = (1 &lt;&lt; 5), //Small Health
-    DropItemMask7           = (1 &lt;&lt; 6), //Large Health
-    DropItemMask8           = (1 &lt;&lt; 7), //Minigun ammo
-    DropItemMask9           = (1 &lt;&lt; 8), //Mortal Wound
-    DropItemMask10          = (1 &lt;&lt; 9), //Rockets
-    DropItemMask11          = (1 &lt;&lt; 10), //Shotgun Shells
-    DropItemMask12          = (1 &lt;&lt; 11), //Energy Cell
-    DropItemMask13          = (1 &lt;&lt; 12), //Large Energy Cell
-    DropItemMask14          = (1 &lt;&lt; 13), //Clip
-    RemoveOnCompletion      = (1 &lt;&lt; 14),
-    NoBlood                 = (1 &lt;&lt; 15),
-    HoldTriggerAnimation    = (1 &lt;&lt; 16),
-    ProjectileAttack3       = (1 &lt;&lt; 17),
-    ProjectileAttack4       = (1 &lt;&lt; 18),
-    DropItemOnDamage        = (1 &lt;&lt; 19),
-    NoAutomapDraw           = (1 &lt;&lt; 20),
-    AlternateMoves          = (1 &lt;&lt; 21),
-    AntiAliasingReduced     = (1 &lt;&lt; 22),
-    AntiAliasingFull        = (1 &lt;&lt; 23),
-    ProjectileAttack5       = (1 &lt;&lt; 24),
-    ProjectileAttack6       = (1 &lt;&lt; 25),
-    MortalWoundImpact       = (1 &lt;&lt; 26),
-    StayInWater             = (1 &lt;&lt; 27),
-    DeviceWarpDeath         = (1 &lt;&lt; 28),
-    StoreWarpReturn         = (1 &lt;&lt; 29),
-    ProjectileAttack7       = (1 &lt;&lt; 30),
-    ProjectileAttack8       = (1 &lt;&lt; 31)
-}
+defs/mapInfo.txt
+    title text for each hub is now localized.
 
-enum ActorSpawnFlags3
-{
-    ReturnWarp              = (1 &lt;&lt; 0),
-    PlayTriggerAnimOnce     = (1 &lt;&lt; 1),
-    RegenerateFromStart     = (1 &lt;&lt; 2),
-    WalkInStraightLine      = (1 &lt;&lt; 3),
-    KillOutsideOfView       = (1 &lt;&lt; 4),
-    NoThinker               = (1 &lt;&lt; 5),
-    AvoidPlayers2           = (1 &lt;&lt; 6),
-    NoViolentDeath          = (1 &lt;&lt; 7),
-    ProjectileAttack9       = (1 &lt;&lt; 8),
-    ProjectileAttack10      = (1 &lt;&lt; 9),
-    MakeSpawnAnimVisible    = (1 &lt;&lt; 10),
-    NoDrawOnCamera          = (1 &lt;&lt; 11)
-}
+defs/textureSetInfo.txt
+    Animate tex0550_00. Last level, one of the corner models had this texture that didn't animate.
+    
+defs/actors/animals.txt
+    Added Brachiosaurus used in level 6.
+        Animal_Bracho 24
+    
+defs/actors/misc.txt
+    Added TakenWeapon used in campaigner fight.
+        TakenWeapon 801
+    
+defs/actors/weapons.txt
+    Wpn_RocketLauncher  417, pickup.weapon.giveAmmo from 6 to 24    
 
-enum SpeciesMask //Unused. Here for completion.
-{
-    Raptor          = (1 &lt;&lt; 0),
-    Human1          = (1 &lt;&lt; 1),
-    SaberTiger      = (1 &lt;&lt; 2),
-    Dimetrodon      = (1 &lt;&lt; 3),
-    Triceratops     = (1 &lt;&lt; 4),
-    Moschops        = (1 &lt;&lt; 5),
-    Pteranodon      = (1 &lt;&lt; 6),
-    Subterranean    = (1 &lt;&lt; 7),
-    Leaper          = (1 &lt;&lt; 8),
-    Alien           = (1 &lt;&lt; 9),
-    Hulk            = (1 &lt;&lt; 10),
-    Robot           = (1 &lt;&lt; 11),
-    MantisBoss      = (1 &lt;&lt; 12)
-}
+---------------
+scripts changes
+---------------
+scripts/main.txt
+    line 222: Added empty savegame callback function for modders.
+    line 262: Added: GameVariables.SetValue("g_gallerymap", "levels/level50.map");
 
-enum SectorSetFlags
-{
-    Water                   = (1 &lt;&lt; 0),
-    Block                   = (1 &lt;&lt; 1),
-    Toggle                  = (1 &lt;&lt; 2),
-    Cliff                   = (1 &lt;&lt; 3),
-    Climb                   = (1 &lt;&lt; 4),
-    OneSided                = (1 &lt;&lt; 5),
-    Ceiling                 = (1 &lt;&lt; 6),
-    Crawl                   = (1 &lt;&lt; 7),
-    EnterCrawl              = (1 &lt;&lt; 8),
-    Hidden                  = (1 &lt;&lt; 9),
-    Entered                 = (1 &lt;&lt; 10),
-    Secret                  = (1 &lt;&lt; 11),
-    Restricted              = (1 &lt;&lt; 12),
-    SlopeTest               = (1 &lt;&lt; 13),
-    DeathPit                = (1 &lt;&lt; 14),
-    Mapped                  = (1 &lt;&lt; 15),
-    Event                   = (1 &lt;&lt; 16),
-    Reapeatable             = (1 &lt;&lt; 17),
-    Teleport                = (1 &lt;&lt; 18),
-    Damage                  = (1 &lt;&lt; 19),
-    DrawSky                 = (1 &lt;&lt; 20),
-    TeleportAir             = (1 &lt;&lt; 21),
-    Lava                    = (1 &lt;&lt; 22),
-    EventSound              = (1 &lt;&lt; 23),
-    AntiGravity             = (1 &lt;&lt; 24),
-    Ladder                  = (1 &lt;&lt; 25),
-    Checkpoint              = (1 &lt;&lt; 26),
-    SaveGame                = (1 &lt;&lt; 27),
-    WarpReturn              = (1 &lt;&lt; 28),
-    ShallowWater            = (1 &lt;&lt; 29),
-    DrawSun                 = (1 &lt;&lt; 30),
-    StoreWarpReturn         = (1 &lt;&lt; 31)
-}
+scripts/animations.txt: #pragma once  added to top of file for this script to be included only once.
 
-enum StaticMeshFlags
-{
-    Collide             = (1 &lt;&lt; 0),
-    NoPolyCollision     = (1 &lt;&lt; 1),
-    NoDrawCamera        = (1 &lt;&lt; 2)
-}
+scripts/common.txt: #pragma once  added to top of file for this script to be included only once.
+
+scripts/animal.txt: added TurokBracho class. TurokFish now snap to starting height if z position changed (moved up a ramp)
+
+---------------------------------------
+scripts/weapons.txt:
+**** There was changes for tactile (controller vibration) support a long time ago for switch and ps4.
+     I do not have the change history for that so comparing this file with the previous version is the only
+     way to see all the changes. Below is a list of the changes for this version only.
+
+    Arrow projectiles now fire using the correct height:
+        line 317: origin.z += src.ViewHeight() + src.LandingViewOffset();
+
+    Check if using alt ammo since the player can switch between ammo types now (similar to Turok 2):
+        line 339: if(self.Owner().HasAltAmmo())   --&gt;   if(self.Owner().UseAltAmmo())
+        line 436: bFiredExpslosiveShells = Player.HasAltAmmo();   --&gt;   bFiredExpslosiveShells = Player.UseAltAmmo()
+        line 534: if(self.Owner().HasAltAmmo())   --&gt;   if(self.Owner().UseAltAmmo())
+        
+    Rocket Consume ammo from 1 to 4:
+        line 1034: self.Owner().ConsumeAmmo(1);   --&gt;   self.Owner().ConsumeAmmo(4);
+        
+    TurokAccelerator campaigner weapon steal OnBeginFire:
+        line 1075:
+            if(Game.GetCurrentMapID() == 0)
+            {
+                self.Owner().Actor().PlayerFlags() |= PF_WEAPONSTEAL;
+                self.PreventFire() = true;
+                return;
+            }
+            
+    TurokFusionCannon campaigner weapon steal OnBeginFire:
+        line 1316:
+            if(Game.GetCurrentMapID() == 0)
+            {
+                self.Owner().Actor().PlayerFlags() |= PF_WEAPONSTEAL;
+                self.PreventFire() = true;
+                return;
+            }
+    
+    Vibration file used for TurokFusionCannon changed:
+        line 1352: "tactile/explo_nuke.bnvib"   --&gt;   "tactile/explo1p.bnvib"
+
+---------------------------------------
+
+scripts/map/level00_script.txt: line 363: handle screen shake intensity.
+scripts/map/level01_script.txt: line 278: handle screen shake intensity.
+scripts/map/level42_script.txt: line 85 and 93: passed in false to Game.ShowMainMenu so the mouse does not get centered when opening that menu.
+scripts/map/level47_script.txt: Training level. Almost entire script changed to work correctly with the message and sound events.
+scripts/map/level48_script.txt: Longhunter level.
+    line 57: Added: Game.PlaySound("sounds/shaders/generic_87_humvee_jump.ksnd");    
+scripts/map/level50_script.txt: Gallery level. Completely rewritten and fully functional with additional features and actors to view.
+
+scripts/enemy/enemy.txt:
+    line 780: check for AF_WOUNDEDMORTALLY flag now from super arrow shot.
+    line 814: Added OnDamage function so enemies can be frozen by shockwave weapon even when dead. 
+scripts/enemy/insect.txt: Can freeze this enemy now. line 47: TurokEnemy::OnDeath(killer, damageDef);
+scripts/enemy/sentry.txt: Removed OnDeath function so the base class can be called so we can freeze this enemy now.
+scripts/enemy/turret.txt:
+    line 47: Added call to base class   TurokEnemy::OnTick();
+    line 64: changes to OnDeath so enemy can be frozen.
+    
+scripts/player.txt:
+    - functions: KnifeAttack and KnifeParticles now handle custom def properties
+    - KnifeAttack checks if actor is dead or actor.TriggerInvincibility() for enemies waiting to be triggered to make them not get hit.
+    - Changed all knife hit values
+    - OnTick AAF_LAVA lowers the players frictions. AAF_DAMAGE is not needed as well.
+    
+scripts/bosses/longhunter.txt
+    invincible while being in a non fight state.
+    Added OnPreDamage callback function to change damage based on difficulty. 
+    line 979: replace non working function Math::Clamp
+
+scripts/bosses/hummer.txt
+    line 122: fixed filepath. self.PlaySound("sounds/shaders/generic_83_humvee_accelerate__looped_.ksnd");
+    line 301: hummer wheels not stopping
+    line 707: Added OnPreDamage callback function to change damage based on difficulty
+    
+    Hummer no longer gets knocked back by weapons like the alien gun.
+    line 633: self.NoKnockBack() = true;
+    
+    Hummer death smoke effects play correctly when respawning:
+    line 674:
+        self.AnimState().Set(anim_aiDeathStand, 6.0f, ANF_ROOTMOTION);
+        self.AnimState().SetLastFrame();
+        self.AnimState().SetPlayTime(4.0f);
+
+scripts/bosses/mantis.txt: handle screen shake intensity. make him invincible while being a statue. Added OnPreDamage callback function to change damage based on difficulty.
+scripts/bosses/trex.txt: handle screen shake intensity. Added OnPreDamage callback function to change damage based on difficulty.
+scripts/bosses/campainger.txt: lots of changes to steal weapon from the player and be damaged by the correct weapons.
+    
+scripts/misc/mantisObjects.txt: line 195: handle screen shake intensity
+scripts/misc/quakeSource.txt: line 134: handle screen shake intensity
+scripts/misc/catacombWater.txt: Actor 319 origin was suppose to be set to the water height on activation and fixed it from being able to be activated again. Fixes level 5 water outdoor area when the water is draining.
+scripts/misc/warpPortal.txt: StoreWarpPoint now sets the actors exact position, yaw and sector.
+scripts/misc/traps.txt: Added void Unused24 function to hide falling rocks when idle and show when activated. handle screenshake intensity. Game.ShakeIntensity().
 </pre> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

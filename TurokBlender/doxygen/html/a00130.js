@@ -1,9 +1,19 @@
 var a00130 =
 [
-    [ "ClipResult", "a00130.html#a8f2ce33c8b847339a444beac8378b6b4", null ],
-    [ "ContactActor", "a00130.html#a6094f8f152436fc9fd501cc25d17b6b6", null ],
-    [ "ContactNormal", "a00130.html#a1c6db8bf3182b083c74736acdd4d12bd", null ],
-    [ "Fraction", "a00130.html#aca609c9dc31264e5054d9f6862f8634c", null ],
-    [ "InterceptVector", "a00130.html#a92248058c90919ce141ac075ab2b60bf", null ],
-    [ "MoveDirection", "a00130.html#aa86ed548f1903ec061bd17541803e2cd", null ]
+    [ "AllowUnderwater", "a00130.html#ae0ccb8717a72736793978c2316537d9e", null ],
+    [ "ClearInterpolationOffsetPosition", "a00130.html#a625e0039c1020117b69ed4991107cd33", null ],
+    [ "FireProjectile", "a00130.html#a3f8d2f47ec4f53626c8d7a7f56f436ec", null ],
+    [ "ForceGenericBobbing", "a00130.html#aba002ac2a00685771c0b98ca8d72b3e7", null ],
+    [ "FOV", "a00130.html#a1c8fe5323a786cbae380a1df46327fb1", null ],
+    [ "NoGenericBobbing", "a00130.html#a4ff0b87baad5335462fd9a55f3d85b17", null ],
+    [ "NoWalkAnim", "a00130.html#a628201efad5a2c7799d02b8a35089d25", null ],
+    [ "OffsetPosition", "a00130.html#ae61b909c07b146bf3484531234a11640", null ],
+    [ "Owner", "a00130.html#a6b2a2c04ba25ac14f2e7a3b00d76f283", null ],
+    [ "PlaySpeed", "a00130.html#a0c2d3951829717172fd82585f1ae7398", null ],
+    [ "PlaySpeedSwapIn", "a00130.html#a7b488ff298acbd8ac9bd5a9fed1ecedd", null ],
+    [ "PlaySpeedSwapOut", "a00130.html#aa4698a697dada6e6388c9c508c6320f7", null ],
+    [ "PreventFire", "a00130.html#aca4e062accb736800bd4038f55856944", null ],
+    [ "State", "a00130.html#a9d006cb1078bd04392572025e078cebf", null ],
+    [ "TransformToOwnerPosition", "a00130.html#a57fbb2409b2f55fc04ad4272ff74a5c3", null ],
+    [ "TransformToOwnerPosition", "a00130.html#a5cefa7533266cf9a707182e0058fd981", null ]
 ];

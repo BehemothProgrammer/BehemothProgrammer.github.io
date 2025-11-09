@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['veczero_0',['vecZero',['../a00030.html#a339a71b4b51565ae957d6620263a0e53',1,'Math']]]
+  ['veczero_0',['vecZero',['../a00002.html#aa68e48fc447cca5d46b970cbcef824ab',1,'t1_scriptAPI.cpp']]]
 ];

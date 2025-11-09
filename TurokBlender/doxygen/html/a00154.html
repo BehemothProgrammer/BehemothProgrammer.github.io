@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Actor Def Properties</title>
+<title>Turok: kCModel Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,108 +102,163 @@ $(function(){initNavTree('a00154.html',''); initResizable(true); });
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Actor Def Properties</div></div>
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00151.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">kCModel Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h3>Actors Defs Properties:</h3>
-<pre class="fragment">ai.maxRegenerations     - only available in sobek.exe (not in editor.exe and will not set when placing actor in editor :( )
-deadHeight              - only available in editor.exe - sets actor StepHeight (not in sobek.exe So this will only take effect when placing actors on the map in the editor)
-ai.sightRange           - only available in editor.exe (not in sobek.exe So this will only take effect when placing actors on the map)
-defaultEditorModel      - editor.exe only
-defaultEditorAnim       - editor.exe only
- 
-classname                   "kexActor"
-scriptClass                 "TurokGrunt"
-headTrackDefinition         "HeadTrack_Human"
-footStepSound               "FootStep_Common"
-ai.meleeRange
-ai.attackRange
-ai.leashRadius
-ai.sightFOV
-ai.spanWidth
-ai.loudRange                - is used for when the player runs
-ai.quietRange               - is only used for when the player walks
-ai.desiredYawSpeed
-ai.drawDistanceFactor
-ai.attackChance
-ai.altstance
-ai.noKnockBack
-ai.teleport
-ai.teleportMove
-ai.noSharpTurning
-ai.chaseInWater
-ai.discoDances
-clipFlag.edges
-clipFlag.ignoreBlockers
-clipFlag.dropOff
-clipFlag.noEnterWater
-clipFlag.noExitWater
-clipFlag.noClipStatics
-clipFlag.noClipActors
-clipFlag.walkWalls
-clipFlag.collideFloors
-clipFlag.hitScan
-clipFlag.allowClimb
-clipFlag.allowCrawl
-clipFlag.noStepDown
-clipFlag.noSlopeStep
-clipFlag.collideHeight
-clipFlag.collideCorpses
-clipFlag.noExitWalls
-clipFlag.noCollideFunction
-clipFlag.noFloorAdjust
-clipFlag.noCeilingAdjust
-clipFlag.collideWater
-clipFlag.useWallRadius
-clipFlag.collideTriggers
-clipFlag.standOnObjects
-clipFlag.greaseSlideObjects
-clipFlag.allowRestrictedAreas
-flags.solid
-flags.castShadow
-flags.avoidWater
-flags.stayInWater
-flags.removeOnCompletion
-flags.noBlood
-flags.seeTargetInWater
-flags.alignToFloor
-flags.hidden
-flags.noDraw
-flags.fullVolume
-flags.canBeTouched
-flags.alwaysActive
-flags.allowTinyEnemyCheat
-flags.noMovement
-ignoreSectorHeightChange
-drawDelay                   - Don't draw the Actor until it has ticked once
-radius
-height
-stepHeight
-wallRadius
-mass
-friction
-airFriction
-waterFriction
-gravity
-bounceDamp
-animSpeed
-sleepRange                  - The range when the actor will go to sleep/awake
-health
-impactType
-modelVariation
-initialModel
-initialAnim
-initialScale
-knife.damage     "15 15 15"     // Vector
-knife.backdamage 30             // int
-knife.blood      1              // int. 0=none, 1=red, 2=green, 3=spark
-</pre> </div></div><!-- contents -->
-</div><!-- PageDoc -->
+
+<p>The <a class="el" href="a00154.html" title="The kCModel(CModel) global stores collision results when certain actor methods are called....">kCModel(CModel)</a> global stores collision results when certain actor methods are called. Those methods are as follows: GetSectorIndexAtLocation const bool CanSee(<a class="el" href="a00122.html" title="Base type used by all actors.">kActor</a>@, const uint = 0) MoveToPosition SpawnProjectile bool CheckPosition(const kVec3 &amp;in)  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a92248058c90919ce141ac075ab2b60bf" id="r_a92248058c90919ce141ac075ab2b60bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92248058c90919ce141ac075ab2b60bf">InterceptVector</a> ()</td></tr>
+<tr class="memdesc:a92248058c90919ce141ac075ab2b60bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the vector that intersected the collided geometry.  <br /></td></tr>
+<tr class="separator:a92248058c90919ce141ac075ab2b60bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6db8bf3182b083c74736acdd4d12bd" id="r_a1c6db8bf3182b083c74736acdd4d12bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c6db8bf3182b083c74736acdd4d12bd">ContactNormal</a> ()</td></tr>
+<tr class="memdesc:a1c6db8bf3182b083c74736acdd4d12bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the normalized vector of the collided surface.  <br /></td></tr>
+<tr class="separator:a1c6db8bf3182b083c74736acdd4d12bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca609c9dc31264e5054d9f6862f8634c" id="r_aca609c9dc31264e5054d9f6862f8634c"><td class="memItemLeft" align="right" valign="top">const float &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca609c9dc31264e5054d9f6862f8634c">Fraction</a> ()</td></tr>
+<tr class="memdesc:aca609c9dc31264e5054d9f6862f8634c"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the 0.0 - 1.0 range of the point of intersection from start to end trace. (If fraction is == 1.0 then no intersection occured.)  <br /></td></tr>
+<tr class="separator:aca609c9dc31264e5054d9f6862f8634c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f2ce33c8b847339a444beac8378b6b4" id="r_a8f2ce33c8b847339a444beac8378b6b4"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f2ce33c8b847339a444beac8378b6b4">ClipResult</a> ()</td></tr>
+<tr class="memdesc:a8f2ce33c8b847339a444beac8378b6b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">specifies the type of intersection (flags. <a class="el" href="a00002.html#a3871eb3e81ea144e97909e770fc809e0">EnumClipResultFlags</a>)  <br /></td></tr>
+<tr class="separator:a8f2ce33c8b847339a444beac8378b6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6094f8f152436fc9fd501cc25d17b6b6" id="r_a6094f8f152436fc9fd501cc25d17b6b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00122.html">kActor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6094f8f152436fc9fd501cc25d17b6b6">ContactActor</a> ()</td></tr>
+<tr class="memdesc:a6094f8f152436fc9fd501cc25d17b6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle pointer to actor that was collided (null if none was collided)  <br /></td></tr>
+<tr class="separator:a6094f8f152436fc9fd501cc25d17b6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa86ed548f1903ec061bd17541803e2cd" id="r_aa86ed548f1903ec061bd17541803e2cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa86ed548f1903ec061bd17541803e2cd">MoveDirection</a> ()</td></tr>
+<tr class="memdesc:aa86ed548f1903ec061bd17541803e2cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Movement vector of the object.  <br /></td></tr>
+<tr class="separator:aa86ed548f1903ec061bd17541803e2cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="a00154.html" title="The kCModel(CModel) global stores collision results when certain actor methods are called....">kCModel(CModel)</a> global stores collision results when certain actor methods are called. Those methods are as follows: GetSectorIndexAtLocation const bool CanSee(<a class="el" href="a00122.html" title="Base type used by all actors.">kActor</a>@, const uint = 0) MoveToPosition SpawnProjectile bool CheckPosition(const kVec3 &amp;in) </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01830">1830</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8f2ce33c8b847339a444beac8378b6b4" name="a8f2ce33c8b847339a444beac8378b6b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f2ce33c8b847339a444beac8378b6b4">&#9670;&#160;</a></span>ClipResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint kCModel::ClipResult </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>specifies the type of intersection (flags. <a class="el" href="a00002.html#a3871eb3e81ea144e97909e770fc809e0">EnumClipResultFlags</a>) </p>
+
+</div>
+</div>
+<a id="a6094f8f152436fc9fd501cc25d17b6b6" name="a6094f8f152436fc9fd501cc25d17b6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6094f8f152436fc9fd501cc25d17b6b6">&#9670;&#160;</a></span>ContactActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00122.html">kActor</a> kCModel::ContactActor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>handle pointer to actor that was collided (null if none was collided) </p>
+
+</div>
+</div>
+<a id="a1c6db8bf3182b083c74736acdd4d12bd" name="a1c6db8bf3182b083c74736acdd4d12bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6db8bf3182b083c74736acdd4d12bd">&#9670;&#160;</a></span>ContactNormal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> &amp; kCModel::ContactNormal </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the normalized vector of the collided surface. </p>
+
+</div>
+</div>
+<a id="aca609c9dc31264e5054d9f6862f8634c" name="aca609c9dc31264e5054d9f6862f8634c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca609c9dc31264e5054d9f6862f8634c">&#9670;&#160;</a></span>Fraction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float &amp; kCModel::Fraction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the 0.0 - 1.0 range of the point of intersection from start to end trace. (If fraction is == 1.0 then no intersection occured.) </p>
+
+</div>
+</div>
+<a id="a92248058c90919ce141ac075ab2b60bf" name="a92248058c90919ce141ac075ab2b60bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92248058c90919ce141ac075ab2b60bf">&#9670;&#160;</a></span>InterceptVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> &amp; kCModel::InterceptVector </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the vector that intersected the collided geometry. </p>
+
+</div>
+</div>
+<a id="aa86ed548f1903ec061bd17541803e2cd" name="aa86ed548f1903ec061bd17541803e2cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa86ed548f1903ec061bd17541803e2cd">&#9670;&#160;</a></span>MoveDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> &amp; kCModel::MoveDirection </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Movement vector of the object. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00154.html">kCModel</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

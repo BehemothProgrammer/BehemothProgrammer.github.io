@@ -26,18 +26,17 @@ var NAVTREE =
 [
   [ "Turok", "index.html", [
     [ "Turok Manual", "index.html", "index" ],
-    [ "Actor Def Properties", "a00184.html", null ],
-    [ "Public Beta Changes", "a00185.html", null ],
-    [ "v3 Changes", "a00186.html", null ],
-    [ "Final Patch Modding Details", "a00187.html", null ],
-    [ "Fx Properties", "a00188.html", null ],
-    [ "Map Format", "a00189.html", null ],
-    [ "Trail Def Properties", "a00190.html", null ],
+    [ "Actor Def Properties", "a00187.html", null ],
+    [ "Public Beta Changes", "a00188.html", null ],
+    [ "v3 Changes", "a00189.html", null ],
+    [ "Final Patch Modding Details", "a00190.html", null ],
+    [ "Fx Properties", "a00191.html", null ],
+    [ "Map Format", "a00192.html", null ],
+    [ "Trail Def Properties", "a00193.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
         [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ],
         [ "Variables", "namespacemembers_vars.html", null ],
         [ "Enumerations", "namespacemembers_enum.html", null ],
         [ "Enumerator", "namespacemembers_eval.html", null ]
@@ -69,13 +68,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "a00002.html",
-"a00002.html#a9151ee2267044ca08162bc65329d7466a652d0ae8d991108a977795e16a533835",
-"a00031.html",
-"a00067.html#a914d1edbbda6477487034262a7a90782",
-"a00123.html#aab5fc2ffc7557471c21902943adc9f25",
-"a00147.html#a680b2e9fbf0715d3bb5535e96b5320a7",
-"a00167.html#af0f8d9dc1c127ff4086ea99c101c2ecd",
-"a00179.html#a6fc2f56c6558d278924252b3f79eb81a"
+"a00002.html#a8b3b3ff3194cf075961624b73976e3a0af2171f5b71fc16d25ddcdbf8cf90df9f",
+"a00029.html#aaef7bb1a064854df00f368a7f0ed4ee4",
+"a00062.html#a7c3bc494d9df9678f22005fad085441c",
+"a00122.html#a9d078c82a2e751cc1f21fd2ffec9fcf6",
+"a00146.html#a61f484351dfff51679a30ceecb1e4c3b",
+"a00166.html#ad3d5ea6f80f087595f818108d1011eee",
+"a00178.html#a4ee74fd0a9d56f095ec52d5fe5e58508"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

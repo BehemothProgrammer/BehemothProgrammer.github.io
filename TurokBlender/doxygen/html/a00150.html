@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Member List</title>
+<title>Turok: kCamera Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a00153.html',''); initResizable(true); });
+$(function(){initNavTree('a00150.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,70 +103,1022 @@ $(function(){initNavTree('a00153.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">kPlayer Member List</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a00147.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">kCamera Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1fef994bbe4758e717df353ba64ba74d" id="r_a1fef994bbe4758e717df353ba64ba74d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fef994bbe4758e717df353ba64ba74d">StartCinematic</a> (const uint flags=12)</td></tr>
+<tr class="memdesc:a1fef994bbe4758e717df353ba64ba74d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>.  <br /></td></tr>
+<tr class="separator:a1fef994bbe4758e717df353ba64ba74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa279741b2465f66d886f6c6af7c3d023" id="r_aa279741b2465f66d886f6c6af7c3d023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa279741b2465f66d886f6c6af7c3d023">StopCinematic</a> (const bool noFade=false)</td></tr>
+<tr class="memdesc:aa279741b2465f66d886f6c6af7c3d023"><td class="mdescLeft">&#160;</td><td class="mdescRight">if noFade is true will stop the cinematic immediately without fading out.  <br /></td></tr>
+<tr class="separator:aa279741b2465f66d886f6c6af7c3d023"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07120c1256ccff90a21ebde3f8c89476" id="r_a07120c1256ccff90a21ebde3f8c89476"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07120c1256ccff90a21ebde3f8c89476">CinematicState</a> () const</td></tr>
+<tr class="memdesc:a07120c1256ccff90a21ebde3f8c89476"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ab498177c17802a7bd8b867d4757971e8">EnumCameraStates</a>.  <br /></td></tr>
+<tr class="separator:a07120c1256ccff90a21ebde3f8c89476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13be44270d65662547cbfe4dcd14d22a" id="r_a13be44270d65662547cbfe4dcd14d22a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13be44270d65662547cbfe4dcd14d22a">SetLookAtActor</a> (<a class="el" href="a00122.html">kActor</a>@ actor)</td></tr>
+<tr class="separator:a13be44270d65662547cbfe4dcd14d22a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5d7bfd0f7770d14e0c1e61668e23861" id="r_ac5d7bfd0f7770d14e0c1e61668e23861"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5d7bfd0f7770d14e0c1e61668e23861">ClearLookAtActor</a> ()</td></tr>
+<tr class="separator:ac5d7bfd0f7770d14e0c1e61668e23861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed25c9fa850c02105c9fe48bf56932c9" id="r_aed25c9fa850c02105c9fe48bf56932c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed25c9fa850c02105c9fe48bf56932c9">SetRotateEyeVector</a> (const <a class="el" href="a00046.html">kVec3</a> &amp;in vector)</td></tr>
+<tr class="memdesc:aed25c9fa850c02105c9fe48bf56932c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The focus position that is used when AutoPlayRotationTrack is called if there is no LookAtActor set.  <br /></td></tr>
+<tr class="separator:aed25c9fa850c02105c9fe48bf56932c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa9887ad46573256a2c3475c3693f4c" id="r_a3fa9887ad46573256a2c3475c3693f4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fa9887ad46573256a2c3475c3693f4c">SetFinalView</a> (const int view)</td></tr>
+<tr class="memdesc:a3fa9887ad46573256a2c3475c3693f4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the view to use for the camera origin and direction. view must be in range 0-2  <br /></td></tr>
+<tr class="separator:a3fa9887ad46573256a2c3475c3693f4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9815694a90ae58c4268880e26ade11cb" id="r_a9815694a90ae58c4268880e26ade11cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9815694a90ae58c4268880e26ade11cb">SetRotationTrack</a> (const int view, const float startAngle, const float destAngle, const float startDist, const float destDist, const float startEyeZOffset=0, const float destEyeZOffset=0, const float startFocusZOffset=0, const float destFocusZOffset=0)</td></tr>
+<tr class="memdesc:a9815694a90ae58c4268880e26ade11cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use with TweenRotationTrack and AutoPlayRotationTrack.  <br /></td></tr>
+<tr class="separator:a9815694a90ae58c4268880e26ade11cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86d17ca88ff8c26619524ed22c982c5a" id="r_a86d17ca88ff8c26619524ed22c982c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86d17ca88ff8c26619524ed22c982c5a">SetPositionTrack</a> (const int view, const <a class="el" href="a00046.html">kVec3</a> &amp;in startEye, const <a class="el" href="a00046.html">kVec3</a> &amp;in destEye, const <a class="el" href="a00046.html">kVec3</a> &amp;in startFocus, const <a class="el" href="a00046.html">kVec3</a> &amp;in endFocus)</td></tr>
+<tr class="memdesc:a86d17ca88ff8c26619524ed22c982c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets eye and focus start and dest positions for use with TweenPositionTrack and AutoPlayPositionTrack.  <br /></td></tr>
+<tr class="separator:a86d17ca88ff8c26619524ed22c982c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa78f11854cb54c07a2bdb3912ab6e722" id="r_aa78f11854cb54c07a2bdb3912ab6e722"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa78f11854cb54c07a2bdb3912ab6e722">TweenPositionTrack</a> (const int view, const float time)</td></tr>
+<tr class="memdesc:aa78f11854cb54c07a2bdb3912ab6e722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lerps eye and focus positions to the start and dest positions using the time param (clamped 0..1). Call SetPositionTrack to set the start and dest positions.  <br /></td></tr>
+<tr class="separator:aa78f11854cb54c07a2bdb3912ab6e722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a172b42a4ea16f3a06982fba8e3d17d93" id="r_a172b42a4ea16f3a06982fba8e3d17d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a172b42a4ea16f3a06982fba8e3d17d93">TweenRotationTrack</a> (const int view, const <a class="el" href="a00046.html">kVec3</a> &amp;in pos, const float time)</td></tr>
+<tr class="memdesc:a172b42a4ea16f3a06982fba8e3d17d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lerps all variables set when SetRotationTrack was called using the time param (clamped 0..1).  <br /></td></tr>
+<tr class="separator:a172b42a4ea16f3a06982fba8e3d17d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a695c08c6c265f1ed4ccaa394755fa" id="r_ad8a695c08c6c265f1ed4ccaa394755fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad8a695c08c6c265f1ed4ccaa394755fa">AutoPlayPositionTrack</a> (const int view, const float speed, const int lerpType)</td></tr>
+<tr class="memdesc:ad8a695c08c6c265f1ed4ccaa394755fa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a2523efc03626a43d2fb3e90a06195b3c" title="Lerp type when doing AutoPlayPositionTrack, AutoPlayRotationTrack, or AutoPlayBlendTrack....">EnumCameraLerpType</a>. Calls TweenPositionTrack on the view using speed and lerpType.  <br /></td></tr>
+<tr class="separator:ad8a695c08c6c265f1ed4ccaa394755fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bf8a8f694ccefb3985ef45de45ffa4" id="r_af6bf8a8f694ccefb3985ef45de45ffa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bf8a8f694ccefb3985ef45de45ffa4">AutoPlayRotationTrack</a> (const int view, const float speed, const int lerpType)</td></tr>
+<tr class="memdesc:af6bf8a8f694ccefb3985ef45de45ffa4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a2523efc03626a43d2fb3e90a06195b3c" title="Lerp type when doing AutoPlayPositionTrack, AutoPlayRotationTrack, or AutoPlayBlendTrack....">EnumCameraLerpType</a>. Calls TweenRotationTrack on the view using speed and lerpType.  <br /></td></tr>
+<tr class="separator:af6bf8a8f694ccefb3985ef45de45ffa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b9eeb3f13a4e40abad7f7a4fd50f7a" id="r_ae3b9eeb3f13a4e40abad7f7a4fd50f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3b9eeb3f13a4e40abad7f7a4fd50f7a">AutoPlayBlendTrack</a> (const int viewA, const int viewB, const int viewC, const float speed, const int lerpType)</td></tr>
+<tr class="memdesc:ae3b9eeb3f13a4e40abad7f7a4fd50f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a2523efc03626a43d2fb3e90a06195b3c" title="Lerp type when doing AutoPlayPositionTrack, AutoPlayRotationTrack, or AutoPlayBlendTrack....">EnumCameraLerpType</a>. Blends between viewB and viewC eye and focus. and sets the results to viewA.  <br /></td></tr>
+<tr class="separator:ae3b9eeb3f13a4e40abad7f7a4fd50f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd6877fc05af47bec3379b536ba8c95" id="r_a2cd6877fc05af47bec3379b536ba8c95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cd6877fc05af47bec3379b536ba8c95">SetEyeView</a> (const <a class="el" href="a00046.html">kVec3</a> &amp;in position)</td></tr>
+<tr class="memdesc:a2cd6877fc05af47bec3379b536ba8c95"><td class="mdescLeft">&#160;</td><td class="mdescRight">position of camera (finalview). finalview must be set or will do nothing.  <br /></td></tr>
+<tr class="separator:a2cd6877fc05af47bec3379b536ba8c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64281a147d33121e2b1cd833f6a1bb68" id="r_a64281a147d33121e2b1cd833f6a1bb68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64281a147d33121e2b1cd833f6a1bb68">SetFocusView</a> (const <a class="el" href="a00046.html">kVec3</a> &amp;in position)</td></tr>
+<tr class="memdesc:a64281a147d33121e2b1cd833f6a1bb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">position of where the camera (finalview) is looking at. (Sets look direction from eye and focus positions). finalview must be set or will do nothing.  <br /></td></tr>
+<tr class="separator:a64281a147d33121e2b1cd833f6a1bb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce" id="r_a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce">ZoomEyeViewToPosition</a> (const <a class="el" href="a00046.html">kVec3</a> &amp;in position, const float speed)</td></tr>
+<tr class="memdesc:a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">linear lerp finalview eye position to position using speed. finalview must be set or will do nothing.  <br /></td></tr>
+<tr class="separator:a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33be7b51eb2f1db1fb3f6a121e1dfa32" id="r_a33be7b51eb2f1db1fb3f6a121e1dfa32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33be7b51eb2f1db1fb3f6a121e1dfa32">ZoomFocusViewToPosition</a> (const <a class="el" href="a00046.html">kVec3</a> &amp;in position, const float speed)</td></tr>
+<tr class="memdesc:a33be7b51eb2f1db1fb3f6a121e1dfa32"><td class="mdescLeft">&#160;</td><td class="mdescRight">linear lerp finalview focus position to position using speed. finalview must be set or will do nothing.  <br /></td></tr>
+<tr class="separator:a33be7b51eb2f1db1fb3f6a121e1dfa32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0e2fff7906e71b7353317715ecea45e" id="r_ad0e2fff7906e71b7353317715ecea45e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0e2fff7906e71b7353317715ecea45e">GetEyeView</a> ()</td></tr>
+<tr class="memdesc:ad0e2fff7906e71b7353317715ecea45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">position of camera (finalview). finalview must be set or will return vecZero.  <br /></td></tr>
+<tr class="separator:ad0e2fff7906e71b7353317715ecea45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc4c783f7b45c8393d93f3ae4a065559" id="r_adc4c783f7b45c8393d93f3ae4a065559"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc4c783f7b45c8393d93f3ae4a065559">GetFocusView</a> ()</td></tr>
+<tr class="memdesc:adc4c783f7b45c8393d93f3ae4a065559"><td class="mdescLeft">&#160;</td><td class="mdescRight">position of where the camera (finalview) is looking at. finalview must be set or will return vecZero.  <br /></td></tr>
+<tr class="separator:adc4c783f7b45c8393d93f3ae4a065559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0dd480662bdcb104d678b8f062d0321" id="r_af0dd480662bdcb104d678b8f062d0321"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0dd480662bdcb104d678b8f062d0321">ClearFinalView</a> ()</td></tr>
+<tr class="memdesc:af0dd480662bdcb104d678b8f062d0321"><td class="mdescLeft">&#160;</td><td class="mdescRight">finalview is set to null  <br /></td></tr>
+<tr class="separator:af0dd480662bdcb104d678b8f062d0321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd4b6a0c1c2a3d0131d75c329bc9127" id="r_a4cd4b6a0c1c2a3d0131d75c329bc9127"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd4b6a0c1c2a3d0131d75c329bc9127">ClearViewTracks</a> ()</td></tr>
+<tr class="memdesc:a4cd4b6a0c1c2a3d0131d75c329bc9127"><td class="mdescLeft">&#160;</td><td class="mdescRight">views 0-2 all variables are set to 0  <br /></td></tr>
+<tr class="separator:a4cd4b6a0c1c2a3d0131d75c329bc9127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade82550066ac575b5b82dc279136514c" id="r_ade82550066ac575b5b82dc279136514c"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade82550066ac575b5b82dc279136514c">UserInterrupted</a> () const</td></tr>
+<tr class="memdesc:ade82550066ac575b5b82dc279136514c"><td class="mdescLeft">&#160;</td><td class="mdescRight">User pressed left click or escape key or any controller button. While <a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> == CAMS_ACTIVE and used <a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a> CMF_LOCK_PLAYER.  <br /></td></tr>
+<tr class="separator:ade82550066ac575b5b82dc279136514c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b8a297cc614004092b8b20eee59ec5" id="r_ad2b8a297cc614004092b8b20eee59ec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2b8a297cc614004092b8b20eee59ec5">SetUserInterrupted</a> (const bool toggle)</td></tr>
+<tr class="memdesc:ad2b8a297cc614004092b8b20eee59ec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to false to set the user interrupted to false.  <br /></td></tr>
+<tr class="separator:ad2b8a297cc614004092b8b20eee59ec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5731e3995d298618d8e2422595830d3d" id="r_a5731e3995d298618d8e2422595830d3d"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5731e3995d298618d8e2422595830d3d">Active</a> () const</td></tr>
+<tr class="separator:a5731e3995d298618d8e2422595830d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dc1506b7992e65195ba6ead411aa4ff" id="r_a1dc1506b7992e65195ba6ead411aa4ff"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dc1506b7992e65195ba6ead411aa4ff">Enabled</a> () const</td></tr>
+<tr class="memdesc:a1dc1506b7992e65195ba6ead411aa4ff"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> &gt;= CAMS_FADEOUT (Not Idle)  <br /></td></tr>
+<tr class="separator:a1dc1506b7992e65195ba6ead411aa4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8815376b225f4cec737fbaf1890acd00" id="r_a8815376b225f4cec737fbaf1890acd00"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8815376b225f4cec737fbaf1890acd00">ViewingFromCamera</a> () const</td></tr>
+<tr class="memdesc:a8815376b225f4cec737fbaf1890acd00"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> &gt;= CAMS_FADEIN &amp;&amp; <a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> &lt;= CAMS_ACTIVE_TO_FADEOUT.  <br /></td></tr>
+<tr class="separator:a8815376b225f4cec737fbaf1890acd00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaad71cf2101fe4bafb9c02e3c5dfdeba" id="r_aaad71cf2101fe4bafb9c02e3c5dfdeba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaad71cf2101fe4bafb9c02e3c5dfdeba">Tremor</a> ()</td></tr>
+<tr class="memdesc:aaad71cf2101fe4bafb9c02e3c5dfdeba"><td class="mdescLeft">&#160;</td><td class="mdescRight">x = adds to yaw, y = adds to pitch, z = adds to roll. lerps to vecZero using lerpTime of GAME_FRAME_TIME.  <br /></td></tr>
+<tr class="separator:aaad71cf2101fe4bafb9c02e3c5dfdeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4603b0609ab95534e78094ddd83f13f" id="r_ab4603b0609ab95534e78094ddd83f13f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4603b0609ab95534e78094ddd83f13f">SetSector</a> (const uint sectorIndex)</td></tr>
+<tr class="separator:ab4603b0609ab95534e78094ddd83f13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab502a94caa8a3001bf185cf30ccfd2b0" id="r_ab502a94caa8a3001bf185cf30ccfd2b0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab502a94caa8a3001bf185cf30ccfd2b0">SectorIndex</a> ()</td></tr>
+<tr class="separator:ab502a94caa8a3001bf185cf30ccfd2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7df322884048b41eaa4fedfe07b45c78" id="r_a7df322884048b41eaa4fedfe07b45c78"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7df322884048b41eaa4fedfe07b45c78">AreaID</a> () const</td></tr>
+<tr class="separator:a7df322884048b41eaa4fedfe07b45c78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae860c734d4e762d9a4ef0fbd49bff9c9" id="r_ae860c734d4e762d9a4ef0fbd49bff9c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae860c734d4e762d9a4ef0fbd49bff9c9">ClearInterpolation</a> ()</td></tr>
+<tr class="separator:ae860c734d4e762d9a4ef0fbd49bff9c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5f214b3562576647b7c01258bb2a875" id="r_ad5f214b3562576647b7c01258bb2a875"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f214b3562576647b7c01258bb2a875">Flags</a> () const</td></tr>
+<tr class="memdesc:ad5f214b3562576647b7c01258bb2a875"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>.  <br /></td></tr>
+<tr class="separator:ad5f214b3562576647b7c01258bb2a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60aab86681d204dadcd624aab3ea24b4" id="r_a60aab86681d204dadcd624aab3ea24b4"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60aab86681d204dadcd624aab3ea24b4">ClearInterpolationOnTick</a> (void)</td></tr>
+<tr class="memdesc:a60aab86681d204dadcd624aab3ea24b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to false to handle interpolation yourself  <br /></td></tr>
+<tr class="separator:a60aab86681d204dadcd624aab3ea24b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78f9d6eb7e963929a97813fa45eddd2" id="r_ae78f9d6eb7e963929a97813fa45eddd2"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae78f9d6eb7e963929a97813fa45eddd2">AllowMenusWhenActive</a> (void)</td></tr>
+<tr class="memdesc:ae78f9d6eb7e963929a97813fa45eddd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to true to allow the pause menu to be opened during a cinematic  <br /></td></tr>
+<tr class="separator:ae78f9d6eb7e963929a97813fa45eddd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3b0a88e622e164f3e7a29e84362ba6f2" id="r_a3b0a88e622e164f3e7a29e84362ba6f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b0a88e622e164f3e7a29e84362ba6f2">origin</a></td></tr>
+<tr class="memdesc:a3b0a88e622e164f3e7a29e84362ba6f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">current position of camera. if a finalview is set then the origin will be set to the finalview's eye position.  <br /></td></tr>
+<tr class="separator:a3b0a88e622e164f3e7a29e84362ba6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4cc9462864dcb385bd753ec1da2096" id="r_acf4cc9462864dcb385bd753ec1da2096"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00042.html">kAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf4cc9462864dcb385bd753ec1da2096">yaw</a></td></tr>
+<tr class="memdesc:acf4cc9462864dcb385bd753ec1da2096"><td class="mdescLeft">&#160;</td><td class="mdescRight">if a finalview is set then the yaw will be set to the finalview's look direction.  <br /></td></tr>
+<tr class="separator:acf4cc9462864dcb385bd753ec1da2096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d28871f0c311e58ef322798c5316964" id="r_a3d28871f0c311e58ef322798c5316964"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00042.html">kAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d28871f0c311e58ef322798c5316964">pitch</a></td></tr>
+<tr class="memdesc:a3d28871f0c311e58ef322798c5316964"><td class="mdescLeft">&#160;</td><td class="mdescRight">if a finalview is set then the pitch will be set to the finalview's look direction.  <br /></td></tr>
+<tr class="separator:a3d28871f0c311e58ef322798c5316964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2138395b25c25c282db344ee1fd1b3d" id="r_ac2138395b25c25c282db344ee1fd1b3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00042.html">kAngle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2138395b25c25c282db344ee1fd1b3d">roll</a></td></tr>
+<tr class="memdesc:ac2138395b25c25c282db344ee1fd1b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">if a finalview is set then the roll will be set to 0.  <br /></td></tr>
+<tr class="separator:ac2138395b25c25c282db344ee1fd1b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9096dfcd502f0f92b8f55933ac064e6" id="r_ac9096dfcd502f0f92b8f55933ac064e6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9096dfcd502f0f92b8f55933ac064e6">fov</a></td></tr>
+<tr class="memdesc:ac9096dfcd502f0f92b8f55933ac064e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Camera FOV (default is 74.0)  <br /></td></tr>
+<tr class="separator:ac9096dfcd502f0f92b8f55933ac064e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660cca8552dee6e563bfb3847e1ed5f7" id="r_a660cca8552dee6e563bfb3847e1ed5f7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a660cca8552dee6e563bfb3847e1ed5f7">lookZOffset</a></td></tr>
+<tr class="memdesc:a660cca8552dee6e563bfb3847e1ed5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used only if LookAtActor has been set.  <br /></td></tr>
+<tr class="separator:a660cca8552dee6e563bfb3847e1ed5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01775">1775</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5731e3995d298618d8e2422595830d3d" name="a5731e3995d298618d8e2422595830d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5731e3995d298618d8e2422595830d3d">&#9670;&#160;</a></span>Active()</h2>
 
-<p>This is the complete list of members for <a class="el" href="a00153.html">kPlayer</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a09bdf282de9c50d8bf21462590571f19">Actor</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a2d56113eb7f8fefd71791d6f36c61577">Armor</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a62936b02bfb4a77f85b2a90e523cd702">Backpack</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a90b7cc6d01c83b755c3f01d8c303c7f0">ButtonHeldTime</a>(const int btn)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a51530aa7c9b564d62c48f118ac59202f">Buttons</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a5bcb1243ee40ced3c40f5f04e0906251">CancelSpiritualTime</a>(float blendTime=1.0f)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#acd9fcec891eddc985bf36853aac69843">ChangeWeapon</a>(const int weapon)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#af8601e769b44c3ce6f521a173ae7054e">ConsumeAltAmmo</a>(const int ammo)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a735bca530c88d5c8bc495fe7d48fc1aa">ConsumeAmmo</a>(const int ammo, const bool preferredAmmo=true)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a41161389d55a084f9311f7fcc95aa4b3">CurrentCheckPoint</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a6543ccc8bbca31eb60659e62bf1a7a8a">CurrentCheckPointMap</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a842f5956bad09cc5366b521a776c7c7c">CurrentWeapon</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a68ecc9027548b29a5bc6b96412f13987">CycleNextWeapon</a>(const bool bCheckAmmo=false)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a000e427c74530a661603829ab1b03563">CyclePrevWeapon</a>(const bool bCheckAmmo=false)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a252b81e73d107f319390a0835de9065a">ExtraHealth</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a15f73209251df37713c7505c322f6d2a">GetAltAmmo</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#aed3467092239895a6307866bbae3dfac">GetAmmo</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ac10388411b171ee372707e623b32a72a">GetButtonAngles</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#aafc55fd2da128959db67d58f88cc13be">GetButtonMovement</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a58cecd2784fced6900e8b2e37d0778f6">GetSpiritualTime</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a20a8abe826af3d6175c330820ffdc111">GetWeaponActor</a>(const int weapon)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a4ee74fd0a9d56f095ec52d5fe5e58508">GetWeaponGroup</a>(const int weapon)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a29512d41bb7e93a4f3f1dbf2e83c890a">GiveAmmo</a>(const int weapon, const int amount, const bool altAmmo)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a5e60b0eda64d2ba2be8a7242f9ca979f">GiveHealth</a>(const int amount, const bool bMortalWound)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#ae48f202c2e1e7489d44508c8f66c4b89">GiveWeapon</a>(const int weaponID, const int ammo, const bool switchNewWeapon=true)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a0031e84971f5928addca949868858c2b">HasAltAmmo</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a04bdbf3e87f45f54b1abb2737e8f0675">HasAltAmmo</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ad04697b2730dc03205fbc032b11136c7">HasAmmo</a>(const int weaponID, const bool checkAlt=true) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#ad3e077292ee5923b081b6484a0958195">HasWeapon</a>(const int weaponID) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a0641da86e4711c5d119e0561bbf69e6c">LifeForces</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#ad5f1d5e0a876e23d8785664e4838df5b">Lives</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#aadeddfea49654de0ef80a704050b1227">Lock</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a8d130e18d026002f6b896b73177a1e14">Locked</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ae7b7e6fa98fa18b55adef26c83904725">LookSensScale</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a7508f45e2fce32efab56c6512196649a">MaxExtraHealth</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ac7345ef2668796ad80f93a060bf3634a">MaxHealth</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#ab31aa67b958296a91eca1fc32da3d67e">NoLandClearVel</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#aea2e5133484bf525c83f374bf0f2d397">NoWeaponSwitchOnWaterLand</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a6d31b1f7906cea2c6e728df57ce8c3f4">PendingWeapon</a>() const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ab382a70aa56834574e3b1728b0e38baa">RemoveWeapon</a>(const int weapon)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a3dcad7691f35ceb7c8ecf3e80ce774a6">RunWalkToggle</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a1f3f23277ff6cf1d7a1a504d110ea262">SetCheckPoint</a>(const int warpTID, const int map)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a6fc2f56c6558d278924252b3f79eb81a">SetLifeForces</a>(const int amount)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#a54a2c6e6e5162e733961bedc6ed5fa94">SetLives</a>(const int amount)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a71c14aedfb8280790cb78075d6abbdbd">SetSpiritualTime</a>(const float time, const float blend)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ac859f503f55a1bf9477cb412f9ba36de">SetWeaponGroup</a>(const int weapon, const int group)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a71bd381e47c3c9bdc54756556a33514e">SetWeaponUseAltAmmo</a>(const int weapon, const bool bToggle)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#aaa7b2abe7fd81f67d32410b3d5d81506">SilentCheckPoints</a>(void)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#abdfd0f51bac3e19927cad316465e0a3d">Unlock</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#aa20f009a0d4b047853e41db1bfbb16ca">UseAltAmmo</a>()</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a29d220020a1f54f85118a8e63b89cdd9">Victory</a>(const int warpActorID=- 1, const int mapID=- 1)</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00153.html#ae84777f87a954e684cb06f1f03a78e97">WeaponAllowUnderwater</a>(const int weapon) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00153.html#a72c69b7eb7281d1ebb21b704219f8571">WeaponUsingAltAmmo</a>(const int weapon) const</td><td class="entry"><a class="el" href="a00153.html">kPlayer</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kCamera::Active </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae78f9d6eb7e963929a97813fa45eddd2" name="ae78f9d6eb7e963929a97813fa45eddd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78f9d6eb7e963929a97813fa45eddd2">&#9670;&#160;</a></span>AllowMenusWhenActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kCamera::AllowMenusWhenActive </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set to true to allow the pause menu to be opened during a cinematic </p>
+
+</div>
+</div>
+<a id="a7df322884048b41eaa4fedfe07b45c78" name="a7df322884048b41eaa4fedfe07b45c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df322884048b41eaa4fedfe07b45c78">&#9670;&#160;</a></span>AreaID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kCamera::AreaID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3b9eeb3f13a4e40abad7f7a4fd50f7a" name="ae3b9eeb3f13a4e40abad7f7a4fd50f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b9eeb3f13a4e40abad7f7a4fd50f7a">&#9670;&#160;</a></span>AutoPlayBlendTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::AutoPlayBlendTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>viewA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>viewB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>viewC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>lerpType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a2523efc03626a43d2fb3e90a06195b3c" title="Lerp type when doing AutoPlayPositionTrack, AutoPlayRotationTrack, or AutoPlayBlendTrack....">EnumCameraLerpType</a>. Blends between viewB and viewC eye and focus. and sets the results to viewA. </p>
+
+</div>
+</div>
+<a id="ad8a695c08c6c265f1ed4ccaa394755fa" name="ad8a695c08c6c265f1ed4ccaa394755fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a695c08c6c265f1ed4ccaa394755fa">&#9670;&#160;</a></span>AutoPlayPositionTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::AutoPlayPositionTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>lerpType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a2523efc03626a43d2fb3e90a06195b3c" title="Lerp type when doing AutoPlayPositionTrack, AutoPlayRotationTrack, or AutoPlayBlendTrack....">EnumCameraLerpType</a>. Calls TweenPositionTrack on the view using speed and lerpType. </p>
+
+</div>
+</div>
+<a id="af6bf8a8f694ccefb3985ef45de45ffa4" name="af6bf8a8f694ccefb3985ef45de45ffa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bf8a8f694ccefb3985ef45de45ffa4">&#9670;&#160;</a></span>AutoPlayRotationTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::AutoPlayRotationTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>lerpType</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a2523efc03626a43d2fb3e90a06195b3c" title="Lerp type when doing AutoPlayPositionTrack, AutoPlayRotationTrack, or AutoPlayBlendTrack....">EnumCameraLerpType</a>. Calls TweenRotationTrack on the view using speed and lerpType. </p>
+
+</div>
+</div>
+<a id="a07120c1256ccff90a21ebde3f8c89476" name="a07120c1256ccff90a21ebde3f8c89476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07120c1256ccff90a21ebde3f8c89476">&#9670;&#160;</a></span>CinematicState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kCamera::CinematicState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#ab498177c17802a7bd8b867d4757971e8">EnumCameraStates</a>. </p>
+
+</div>
+</div>
+<a id="af0dd480662bdcb104d678b8f062d0321" name="af0dd480662bdcb104d678b8f062d0321"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0dd480662bdcb104d678b8f062d0321">&#9670;&#160;</a></span>ClearFinalView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::ClearFinalView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>finalview is set to null </p>
+
+</div>
+</div>
+<a id="ae860c734d4e762d9a4ef0fbd49bff9c9" name="ae860c734d4e762d9a4ef0fbd49bff9c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae860c734d4e762d9a4ef0fbd49bff9c9">&#9670;&#160;</a></span>ClearInterpolation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::ClearInterpolation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60aab86681d204dadcd624aab3ea24b4" name="a60aab86681d204dadcd624aab3ea24b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60aab86681d204dadcd624aab3ea24b4">&#9670;&#160;</a></span>ClearInterpolationOnTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool &amp; kCamera::ClearInterpolationOnTick </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set to false to handle interpolation yourself </p>
+
+</div>
+</div>
+<a id="ac5d7bfd0f7770d14e0c1e61668e23861" name="ac5d7bfd0f7770d14e0c1e61668e23861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5d7bfd0f7770d14e0c1e61668e23861">&#9670;&#160;</a></span>ClearLookAtActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::ClearLookAtActor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4cd4b6a0c1c2a3d0131d75c329bc9127" name="a4cd4b6a0c1c2a3d0131d75c329bc9127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd4b6a0c1c2a3d0131d75c329bc9127">&#9670;&#160;</a></span>ClearViewTracks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::ClearViewTracks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>views 0-2 all variables are set to 0 </p>
+
+</div>
+</div>
+<a id="a1dc1506b7992e65195ba6ead411aa4ff" name="a1dc1506b7992e65195ba6ead411aa4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dc1506b7992e65195ba6ead411aa4ff">&#9670;&#160;</a></span>Enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kCamera::Enabled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> &gt;= CAMS_FADEOUT (Not Idle) </p>
+
+</div>
+</div>
+<a id="ad5f214b3562576647b7c01258bb2a875" name="ad5f214b3562576647b7c01258bb2a875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5f214b3562576647b7c01258bb2a875">&#9670;&#160;</a></span>Flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint kCamera::Flags </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>. </p>
+
+</div>
+</div>
+<a id="ad0e2fff7906e71b7353317715ecea45e" name="ad0e2fff7906e71b7353317715ecea45e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0e2fff7906e71b7353317715ecea45e">&#9670;&#160;</a></span>GetEyeView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> kCamera::GetEyeView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>position of camera (finalview). finalview must be set or will return vecZero. </p>
+
+</div>
+</div>
+<a id="adc4c783f7b45c8393d93f3ae4a065559" name="adc4c783f7b45c8393d93f3ae4a065559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc4c783f7b45c8393d93f3ae4a065559">&#9670;&#160;</a></span>GetFocusView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> kCamera::GetFocusView </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>position of where the camera (finalview) is looking at. finalview must be set or will return vecZero. </p>
+
+</div>
+</div>
+<a id="ab502a94caa8a3001bf185cf30ccfd2b0" name="ab502a94caa8a3001bf185cf30ccfd2b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab502a94caa8a3001bf185cf30ccfd2b0">&#9670;&#160;</a></span>SectorIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kCamera::SectorIndex </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cd6877fc05af47bec3379b536ba8c95" name="a2cd6877fc05af47bec3379b536ba8c95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd6877fc05af47bec3379b536ba8c95">&#9670;&#160;</a></span>SetEyeView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetEyeView </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>position of camera (finalview). finalview must be set or will do nothing. </p>
+
+</div>
+</div>
+<a id="a3fa9887ad46573256a2c3475c3693f4c" name="a3fa9887ad46573256a2c3475c3693f4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa9887ad46573256a2c3475c3693f4c">&#9670;&#160;</a></span>SetFinalView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetFinalView </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the view to use for the camera origin and direction. view must be in range 0-2 </p>
+
+</div>
+</div>
+<a id="a64281a147d33121e2b1cd833f6a1bb68" name="a64281a147d33121e2b1cd833f6a1bb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64281a147d33121e2b1cd833f6a1bb68">&#9670;&#160;</a></span>SetFocusView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetFocusView </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>position of where the camera (finalview) is looking at. (Sets look direction from eye and focus positions). finalview must be set or will do nothing. </p>
+
+</div>
+</div>
+<a id="a13be44270d65662547cbfe4dcd14d22a" name="a13be44270d65662547cbfe4dcd14d22a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13be44270d65662547cbfe4dcd14d22a">&#9670;&#160;</a></span>SetLookAtActor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetLookAtActor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00122.html">kActor</a>@</td>          <td class="paramname"><span class="paramname"><em>actor</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86d17ca88ff8c26619524ed22c982c5a" name="a86d17ca88ff8c26619524ed22c982c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86d17ca88ff8c26619524ed22c982c5a">&#9670;&#160;</a></span>SetPositionTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetPositionTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>startEye</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>destEye</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>startFocus</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>endFocus</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets eye and focus start and dest positions for use with TweenPositionTrack and AutoPlayPositionTrack. </p>
+
+</div>
+</div>
+<a id="aed25c9fa850c02105c9fe48bf56932c9" name="aed25c9fa850c02105c9fe48bf56932c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed25c9fa850c02105c9fe48bf56932c9">&#9670;&#160;</a></span>SetRotateEyeVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetRotateEyeVector </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>vector</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The focus position that is used when AutoPlayRotationTrack is called if there is no LookAtActor set. </p>
+
+</div>
+</div>
+<a id="a9815694a90ae58c4268880e26ade11cb" name="a9815694a90ae58c4268880e26ade11cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9815694a90ae58c4268880e26ade11cb">&#9670;&#160;</a></span>SetRotationTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetRotationTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>startAngle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>destAngle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>startDist</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>destDist</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>startEyeZOffset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>destEyeZOffset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>startFocusZOffset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>destFocusZOffset</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Use with TweenRotationTrack and AutoPlayRotationTrack. </p>
+
+</div>
+</div>
+<a id="ab4603b0609ab95534e78094ddd83f13f" name="ab4603b0609ab95534e78094ddd83f13f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4603b0609ab95534e78094ddd83f13f">&#9670;&#160;</a></span>SetSector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetSector </td>
+          <td>(</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>sectorIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2b8a297cc614004092b8b20eee59ec5" name="ad2b8a297cc614004092b8b20eee59ec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b8a297cc614004092b8b20eee59ec5">&#9670;&#160;</a></span>SetUserInterrupted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetUserInterrupted </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>toggle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set to false to set the user interrupted to false. </p>
+
+</div>
+</div>
+<a id="a1fef994bbe4758e717df353ba64ba74d" name="a1fef994bbe4758e717df353ba64ba74d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fef994bbe4758e717df353ba64ba74d">&#9670;&#160;</a></span>StartCinematic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::StartCinematic </td>
+          <td>(</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">12</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>. </p>
+
+</div>
+</div>
+<a id="aa279741b2465f66d886f6c6af7c3d023" name="aa279741b2465f66d886f6c6af7c3d023"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa279741b2465f66d886f6c6af7c3d023">&#9670;&#160;</a></span>StopCinematic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::StopCinematic </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>noFade</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if noFade is true will stop the cinematic immediately without fading out. </p>
+
+</div>
+</div>
+<a id="aaad71cf2101fe4bafb9c02e3c5dfdeba" name="aaad71cf2101fe4bafb9c02e3c5dfdeba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaad71cf2101fe4bafb9c02e3c5dfdeba">&#9670;&#160;</a></span>Tremor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> &amp; kCamera::Tremor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>x = adds to yaw, y = adds to pitch, z = adds to roll. lerps to vecZero using lerpTime of GAME_FRAME_TIME. </p>
+
+</div>
+</div>
+<a id="aa78f11854cb54c07a2bdb3912ab6e722" name="aa78f11854cb54c07a2bdb3912ab6e722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78f11854cb54c07a2bdb3912ab6e722">&#9670;&#160;</a></span>TweenPositionTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::TweenPositionTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lerps eye and focus positions to the start and dest positions using the time param (clamped 0..1). Call SetPositionTrack to set the start and dest positions. </p>
+
+</div>
+</div>
+<a id="a172b42a4ea16f3a06982fba8e3d17d93" name="a172b42a4ea16f3a06982fba8e3d17d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a172b42a4ea16f3a06982fba8e3d17d93">&#9670;&#160;</a></span>TweenRotationTrack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::TweenRotationTrack </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>view</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lerps all variables set when SetRotationTrack was called using the time param (clamped 0..1). </p>
+
+</div>
+</div>
+<a id="ade82550066ac575b5b82dc279136514c" name="ade82550066ac575b5b82dc279136514c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade82550066ac575b5b82dc279136514c">&#9670;&#160;</a></span>UserInterrupted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kCamera::UserInterrupted </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>User pressed left click or escape key or any controller button. While <a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> == CAMS_ACTIVE and used <a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a> CMF_LOCK_PLAYER. </p>
+
+</div>
+</div>
+<a id="a8815376b225f4cec737fbaf1890acd00" name="a8815376b225f4cec737fbaf1890acd00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8815376b225f4cec737fbaf1890acd00">&#9670;&#160;</a></span>ViewingFromCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kCamera::ViewingFromCamera </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> &gt;= CAMS_FADEIN &amp;&amp; <a class="el" href="#a07120c1256ccff90a21ebde3f8c89476" title="EnumCameraStates.">CinematicState()</a> &lt;= CAMS_ACTIVE_TO_FADEOUT. </p>
+
+</div>
+</div>
+<a id="a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce" name="a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fd2f7c9f2fa7ee0a4e0e6c32f9246ce">&#9670;&#160;</a></span>ZoomEyeViewToPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::ZoomEyeViewToPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>linear lerp finalview eye position to position using speed. finalview must be set or will do nothing. </p>
+
+</div>
+</div>
+<a id="a33be7b51eb2f1db1fb3f6a121e1dfa32" name="a33be7b51eb2f1db1fb3f6a121e1dfa32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33be7b51eb2f1db1fb3f6a121e1dfa32">&#9670;&#160;</a></span>ZoomFocusViewToPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::ZoomFocusViewToPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="a00046.html">kVec3</a> &amp;in</td>          <td class="paramname"><span class="paramname"><em>position</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>linear lerp finalview focus position to position using speed. finalview must be set or will do nothing. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ac9096dfcd502f0f92b8f55933ac064e6" name="ac9096dfcd502f0f92b8f55933ac064e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9096dfcd502f0f92b8f55933ac064e6">&#9670;&#160;</a></span>fov</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float kCamera::fov</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Camera FOV (default is 74.0) </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01815">1815</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a660cca8552dee6e563bfb3847e1ed5f7" name="a660cca8552dee6e563bfb3847e1ed5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a660cca8552dee6e563bfb3847e1ed5f7">&#9670;&#160;</a></span>lookZOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float kCamera::lookZOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used only if LookAtActor has been set. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01816">1816</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3b0a88e622e164f3e7a29e84362ba6f2" name="a3b0a88e622e164f3e7a29e84362ba6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b0a88e622e164f3e7a29e84362ba6f2">&#9670;&#160;</a></span>origin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> kCamera::origin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>current position of camera. if a finalview is set then the origin will be set to the finalview's eye position. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01811">1811</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3d28871f0c311e58ef322798c5316964" name="a3d28871f0c311e58ef322798c5316964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d28871f0c311e58ef322798c5316964">&#9670;&#160;</a></span>pitch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html">kAngle</a> kCamera::pitch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if a finalview is set then the pitch will be set to the finalview's look direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01813">1813</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2138395b25c25c282db344ee1fd1b3d" name="ac2138395b25c25c282db344ee1fd1b3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2138395b25c25c282db344ee1fd1b3d">&#9670;&#160;</a></span>roll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html">kAngle</a> kCamera::roll</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if a finalview is set then the roll will be set to 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01814">1814</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acf4cc9462864dcb385bd753ec1da2096" name="acf4cc9462864dcb385bd753ec1da2096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4cc9462864dcb385bd753ec1da2096">&#9670;&#160;</a></span>yaw</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00042.html">kAngle</a> kCamera::yaw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if a finalview is set then the yaw will be set to the finalview's look direction. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01812">1812</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00150.html">kCamera</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

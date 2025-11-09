@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Member List</title>
+<title>Turok: kAnimState Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a00121.html',''); initResizable(true); });
+$(function(){initNavTree('a00118.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,202 +103,823 @@ $(function(){initNavTree('a00121.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">kPuppet Member List</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="a00115.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">kAnimState Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a1a73bd51e11bd000b1a92af66476828c" id="r_a1a73bd51e11bd000b1a92af66476828c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a73bd51e11bd000b1a92af66476828c">Blend</a> (const int animID, float speed, float blend, int <a class="el" href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">flags</a>)</td></tr>
+<tr class="memdesc:a1a73bd51e11bd000b1a92af66476828c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>.  <br /></td></tr>
+<tr class="separator:a1a73bd51e11bd000b1a92af66476828c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e4a0e16932a45c83b6dfacf075c74d" id="r_ac3e4a0e16932a45c83b6dfacf075c74d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3e4a0e16932a45c83b6dfacf075c74d">Blend</a> (const int animID, float speed, float blend, int <a class="el" href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">flags</a>, const int frame, const bool runActions=true, const bool noSoundActions=false)</td></tr>
+<tr class="memdesc:ac3e4a0e16932a45c83b6dfacf075c74d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. Blends the animation to the frame while optionally running all previous actions.  <br /></td></tr>
+<tr class="separator:ac3e4a0e16932a45c83b6dfacf075c74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d044cd96cbe2dbd798a2cc081a5b0a6" id="r_a4d044cd96cbe2dbd798a2cc081a5b0a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d044cd96cbe2dbd798a2cc081a5b0a6">Set</a> (const int animID, float speed, int <a class="el" href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">flags</a>)</td></tr>
+<tr class="memdesc:a4d044cd96cbe2dbd798a2cc081a5b0a6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>.  <br /></td></tr>
+<tr class="separator:a4d044cd96cbe2dbd798a2cc081a5b0a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54ddac6a0fda454e0b9d525a7d5f1f7a" id="r_a54ddac6a0fda454e0b9d525a7d5f1f7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54ddac6a0fda454e0b9d525a7d5f1f7a">Set</a> (const int animID, float speed, int <a class="el" href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">flags</a>, const int frame, const bool runActions=true, const bool noSoundActions=false)</td></tr>
+<tr class="memdesc:a54ddac6a0fda454e0b9d525a7d5f1f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. Sets the animation to the frame while optionally running all previous actions.  <br /></td></tr>
+<tr class="separator:a54ddac6a0fda454e0b9d525a7d5f1f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54034216c47bf9aab8f9157bf17eae8c" id="r_a54034216c47bf9aab8f9157bf17eae8c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54034216c47bf9aab8f9157bf17eae8c">CurrentFrame</a> ()</td></tr>
+<tr class="memdesc:a54034216c47bf9aab8f9157bf17eae8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">current frame playing for the current animation. Must have an animation action keyframe for this to work, otherwise use <a class="el" href="#af8d9608e324b21dd45913a92dcb5771f" title="current frame playing for the current animation.">TrackFrame()</a> instead. This should be named more like last frame an action was checked to execute.  <br /></td></tr>
+<tr class="separator:a54034216c47bf9aab8f9157bf17eae8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5359f76de3f148f62f93b7a9b108a699" id="r_a5359f76de3f148f62f93b7a9b108a699"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5359f76de3f148f62f93b7a9b108a699">NumFrames</a> ()</td></tr>
+<tr class="memdesc:a5359f76de3f148f62f93b7a9b108a699"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of frames in this animation. Returns -1 if no animation set.  <br /></td></tr>
+<tr class="separator:a5359f76de3f148f62f93b7a9b108a699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4258f164fae9ad9e6010697de193be4" id="r_af4258f164fae9ad9e6010697de193be4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4258f164fae9ad9e6010697de193be4">NumNodes</a> ()</td></tr>
+<tr class="memdesc:af4258f164fae9ad9e6010697de193be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of nodes in this animation. Returns -1 if no animation set.  <br /></td></tr>
+<tr class="separator:af4258f164fae9ad9e6010697de193be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ebfefbc7fac98483370047a73ca014b" id="r_a5ebfefbc7fac98483370047a73ca014b"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ebfefbc7fac98483370047a73ca014b">PlayTime</a> ()</td></tr>
+<tr class="memdesc:a5ebfefbc7fac98483370047a73ca014b"><td class="mdescLeft">&#160;</td><td class="mdescRight">increases by GAME_DELTA_TIME if not stopped or paused.  <br /></td></tr>
+<tr class="separator:a5ebfefbc7fac98483370047a73ca014b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13208a6a5d2a1f4c99de07f5830bcf37" id="r_a13208a6a5d2a1f4c99de07f5830bcf37"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13208a6a5d2a1f4c99de07f5830bcf37">TrackTime</a> ()</td></tr>
+<tr class="memdesc:a13208a6a5d2a1f4c99de07f5830bcf37"><td class="mdescLeft">&#160;</td><td class="mdescRight">time from 0(on first frame) to 1(on last frame).  <br /></td></tr>
+<tr class="separator:a13208a6a5d2a1f4c99de07f5830bcf37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf44ba2518ba4748e6f2cd4f6e58d073" id="r_abf44ba2518ba4748e6f2cd4f6e58d073"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf44ba2518ba4748e6f2cd4f6e58d073">IsPlaying</a> (const int animID)</td></tr>
+<tr class="memdesc:abf44ba2518ba4748e6f2cd4f6e58d073"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if current animations ID is animID and the animation is not stopped.  <br /></td></tr>
+<tr class="separator:abf44ba2518ba4748e6f2cd4f6e58d073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb9c4632259d2c78207961237ff9b71e" id="r_adb9c4632259d2c78207961237ff9b71e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb9c4632259d2c78207961237ff9b71e">CheckAnimID</a> (const int animID)</td></tr>
+<tr class="memdesc:adb9c4632259d2c78207961237ff9b71e"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks if animID exists  <br /></td></tr>
+<tr class="separator:adb9c4632259d2c78207961237ff9b71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89c8c4ef7ef00144b3555d973b5e0d9" id="r_af89c8c4ef7ef00144b3555d973b5e0d9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af89c8c4ef7ef00144b3555d973b5e0d9">PlayingID</a> () const</td></tr>
+<tr class="memdesc:af89c8c4ef7ef00144b3555d973b5e0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">the current animations ID  <br /></td></tr>
+<tr class="separator:af89c8c4ef7ef00144b3555d973b5e0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5257f033f89b5744df1b68e0ce2c5ce4" id="r_a5257f033f89b5744df1b68e0ce2c5ce4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5257f033f89b5744df1b68e0ce2c5ce4">Stop</a> ()</td></tr>
+<tr class="memdesc:a5257f033f89b5744df1b68e0ce2c5ce4"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags |= ANF_STOPPED; flags &amp;= ~ANF_LOOP;  <br /></td></tr>
+<tr class="separator:a5257f033f89b5744df1b68e0ce2c5ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738d2a0ca147acda595d7aa686127033" id="r_a738d2a0ca147acda595d7aa686127033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a738d2a0ca147acda595d7aa686127033">Pause</a> ()</td></tr>
+<tr class="memdesc:a738d2a0ca147acda595d7aa686127033"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags |= ANF_PAUSED;  <br /></td></tr>
+<tr class="separator:a738d2a0ca147acda595d7aa686127033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e0897b9bfac9d238b4eb6109a0a36b5" id="r_a5e0897b9bfac9d238b4eb6109a0a36b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e0897b9bfac9d238b4eb6109a0a36b5">Resume</a> ()</td></tr>
+<tr class="memdesc:a5e0897b9bfac9d238b4eb6109a0a36b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">flags &amp;= ~ANF_PAUSED;  <br /></td></tr>
+<tr class="separator:a5e0897b9bfac9d238b4eb6109a0a36b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae80dfb059df20ca5d4f9784db4d365" id="r_abae80dfb059df20ca5d4f9784db4d365"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abae80dfb059df20ca5d4f9784db4d365">Stopped</a> () const</td></tr>
+<tr class="memdesc:abae80dfb059df20ca5d4f9784db4d365"><td class="mdescLeft">&#160;</td><td class="mdescRight">(flags &amp; ANF_STOPPED) != 0  <br /></td></tr>
+<tr class="separator:abae80dfb059df20ca5d4f9784db4d365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad189c36c956255a6574d74eff5dfc43" id="r_aad189c36c956255a6574d74eff5dfc43"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad189c36c956255a6574d74eff5dfc43">Blending</a> () const</td></tr>
+<tr class="memdesc:aad189c36c956255a6574d74eff5dfc43"><td class="mdescLeft">&#160;</td><td class="mdescRight">(flags &amp; ANF_BLEND) != 0  <br /></td></tr>
+<tr class="separator:aad189c36c956255a6574d74eff5dfc43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89302d1d69aa1d9502e1ecff75209370" id="r_a89302d1d69aa1d9502e1ecff75209370"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89302d1d69aa1d9502e1ecff75209370">Looping</a> () const</td></tr>
+<tr class="memdesc:a89302d1d69aa1d9502e1ecff75209370"><td class="mdescLeft">&#160;</td><td class="mdescRight">(flags &amp; ANF_LOOP) != 0  <br /></td></tr>
+<tr class="separator:a89302d1d69aa1d9502e1ecff75209370"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17101362da04cead84716fe0158b876f" id="r_a17101362da04cead84716fe0158b876f"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17101362da04cead84716fe0158b876f">CycleCompleted</a> () const</td></tr>
+<tr class="memdesc:a17101362da04cead84716fe0158b876f"><td class="mdescLeft">&#160;</td><td class="mdescRight">(flags &amp; ANF_CYCLECOMPLETED) != 0  <br /></td></tr>
+<tr class="separator:a17101362da04cead84716fe0158b876f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1f518b29d30e6bc593ce85d56943ca4" id="r_ae1f518b29d30e6bc593ce85d56943ca4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1f518b29d30e6bc593ce85d56943ca4">ChangeSpeed</a> (const float speed)</td></tr>
+<tr class="memdesc:ae1f518b29d30e6bc593ce85d56943ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scales speed of the current animation where 1.0 = 15fps and 4.0 = 60fps.  <br /></td></tr>
+<tr class="separator:ae1f518b29d30e6bc593ce85d56943ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c5bbf5028982c4e960ace40051b2eb" id="r_a87c5bbf5028982c4e960ace40051b2eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87c5bbf5028982c4e960ace40051b2eb">SetLastFrame</a> (const bool execActions=false)</td></tr>
+<tr class="memdesc:a87c5bbf5028982c4e960ace40051b2eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). applies the stop flag (flags |= ANF_STOPPED).  <br /></td></tr>
+<tr class="separator:a87c5bbf5028982c4e960ace40051b2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a824ea272b235baffb2f1a70b364a3909" id="r_a824ea272b235baffb2f1a70b364a3909"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a824ea272b235baffb2f1a70b364a3909">SetPlayTime</a> (const float time)</td></tr>
+<tr class="memdesc:a824ea272b235baffb2f1a70b364a3909"><td class="mdescLeft">&#160;</td><td class="mdescRight">The total time in seconds this animation has been playing.  <br /></td></tr>
+<tr class="separator:a824ea272b235baffb2f1a70b364a3909"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac514f49864de8487ac8ea9b953e6a831" id="r_ac514f49864de8487ac8ea9b953e6a831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac514f49864de8487ac8ea9b953e6a831">SetTrackTime</a> (const float time)</td></tr>
+<tr class="memdesc:ac514f49864de8487ac8ea9b953e6a831"><td class="mdescLeft">&#160;</td><td class="mdescRight">0.0(first frame) to 1.0(last frame)  <br /></td></tr>
+<tr class="separator:ac514f49864de8487ac8ea9b953e6a831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d9608e324b21dd45913a92dcb5771f" id="r_af8d9608e324b21dd45913a92dcb5771f"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8d9608e324b21dd45913a92dcb5771f">TrackFrame</a> (void) const</td></tr>
+<tr class="memdesc:af8d9608e324b21dd45913a92dcb5771f"><td class="mdescLeft">&#160;</td><td class="mdescRight">current frame playing for the current animation.  <br /></td></tr>
+<tr class="separator:af8d9608e324b21dd45913a92dcb5771f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a84c360130c209bb0fb4b311027af04" id="r_a7a84c360130c209bb0fb4b311027af04"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a84c360130c209bb0fb4b311027af04">TrackNextFrame</a> (void) const</td></tr>
+<tr class="memdesc:a7a84c360130c209bb0fb4b311027af04"><td class="mdescLeft">&#160;</td><td class="mdescRight">next frame to play for the current animation.  <br /></td></tr>
+<tr class="separator:a7a84c360130c209bb0fb4b311027af04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9321a720792f7425d823e9ba032719b8" id="r_a9321a720792f7425d823e9ba032719b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00050.html">kQuat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9321a720792f7425d823e9ba032719b8">GetRotation</a> (const int animID, int nodeNum, int frame)</td></tr>
+<tr class="separator:a9321a720792f7425d823e9ba032719b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51731061af541ed0cc2757f603ae1e14" id="r_a51731061af541ed0cc2757f603ae1e14"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51731061af541ed0cc2757f603ae1e14">GetOrigin</a> (const int animID, int nodeNum, int frame)</td></tr>
+<tr class="separator:a51731061af541ed0cc2757f603ae1e14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bc989e9bf0e034f8be1c23c15f4ebc4" id="r_a3bc989e9bf0e034f8be1c23c15f4ebc4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3bc989e9bf0e034f8be1c23c15f4ebc4">GetAnimNumFrames</a> (const int animID)</td></tr>
+<tr class="separator:a3bc989e9bf0e034f8be1c23c15f4ebc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a175297882d64452fc7f65fc5b83763d3" id="r_a175297882d64452fc7f65fc5b83763d3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a175297882d64452fc7f65fc5b83763d3">LoopFrame</a> ()</td></tr>
+<tr class="memdesc:a175297882d64452fc7f65fc5b83763d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The frame the animation loops back to when it reaches the last frame. Returns -1 if no animation set.  <br /></td></tr>
+<tr class="separator:a175297882d64452fc7f65fc5b83763d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ab9dc3f7cab0a9d631fe99f64e1e8f680" id="r_ab9dc3f7cab0a9d631fe99f64e1e8f680"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">flags</a></td></tr>
+<tr class="memdesc:ab9dc3f7cab0a9d631fe99f64e1e8f680"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>.  <br /></td></tr>
+<tr class="separator:ab9dc3f7cab0a9d631fe99f64e1e8f680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abae34a326c4f7772558bab5a52f30f18" id="r_abae34a326c4f7772558bab5a52f30f18"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a></td></tr>
+<tr class="memdesc:abae34a326c4f7772558bab5a52f30f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">is somewhat the Z position of the root node. It's calculated as follows whenever the root motion is updated (ANF_ROOTMOTION must be set).  <br /></td></tr>
+<tr class="separator:abae34a326c4f7772558bab5a52f30f18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dab9b8c667780b0ecc9144b75866fb9" id="r_a2dab9b8c667780b0ecc9144b75866fb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="a00046.html">kVec3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dab9b8c667780b0ecc9144b75866fb9">rootMotion</a></td></tr>
+<tr class="memdesc:a2dab9b8c667780b0ecc9144b75866fb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">the move direction of the root node from the prev frame to the current frame.  <br /></td></tr>
+<tr class="separator:a2dab9b8c667780b0ecc9144b75866fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01168">1168</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1a73bd51e11bd000b1a92af66476828c" name="a1a73bd51e11bd000b1a92af66476828c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a73bd51e11bd000b1a92af66476828c">&#9670;&#160;</a></span>Blend() <span class="overload">[1/2]</span></h2>
 
-<p>This is the complete list of members for <a class="el" href="a00121.html">kPuppet</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ae3d55ba41a6198b2a54ed5cbe79a9969">AddCustomRef</a>(void)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#afbe4d54218a18928160884001f668930">AirFriction</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ad4a5ea1bc77dd04b3f47b8a529eeab14">AnimSpeed</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#acabc028c9c99f0729b225e5b56c48696">AnimState</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a0ff7714a1115485b6b06ef41557919dc">AreaID</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a95c38254a9a00d08f04847d68db30fd6">AutomapToggle</a>(const bool show)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a8d104322dfb08c5a77a45d2fa8588974">BaseHeight</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a11b7604ae8a6b8c6c8d5c1c36f6524f3">BounceDamp</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a905f9b2695d6f21655d557260cedf214">CanSee</a>(kActor@ actor, const uint excludeClipFlags=0)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a72100717049afa5313adfdde2b7e51a8">CanSee</a>(kPuppet@ puppet, const uint excludeClipFlags=0)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a7d176216c1f093498a8e725f839aec50">CastToActor</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a1f84f650dad328b84a01b0964e8d104c">CastToAI</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ae8c2150b7676fa64a511789dfb024e7b">CeilingHeight</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a9193eb64a11aab2814c5f3da3d979743">CheckPosition</a>(const kVec3 &amp;in origin)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a37c9eb04875caab74b81d8111a38a41f">CheckPosition</a>(const float angle, const float distance)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#aad1c307b7f8c36b4a2c328ca1015aa0d">ChildOfTarget</a>(void)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a3400ff6f42bdb48fc76aa5030df4aeb6">ClearCustomRef</a>(void)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ad32cdd50fa4e3caa6f1e0cd13a468298">ClearInterpolation</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#aae604caf5d18c68f857136a46928612a">ClimbJumpAmount</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a79d8fb16c51c558c39d18533c84a9058">ClipFlags</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#ae907ea04b81b18117a4b7213ac0898be">CustomViewEnable</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a64788ab57210e7c3f286105ef3e4d1b5">CustomViewOrigin</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a2cb72b62bc3712b42fe69f92faf24d4e">CustomViewPitch</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a65d107f4572681dd2e5e633ebf99e95b">CustomViewRoll</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#ab0a8d9a5a73052158520c1b43f3e029c">CustomViewUnderwater</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a74ac1e13c2eafcc672799cd7b266d36b">CustomViewYaw</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a0532a5ab9850545ac603d1d7adcdd595">DamageOrigin</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a276ecd844792bcc4906ae1942b2b37a3">DamageVelocity</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a371170d3ae2b375f17a029604ba396be">Definition</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a0ccbd740b1abd14dfa2f278037866e58">DifficultyMode</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ac255eb2b03bcd4f7c863da7799b395ab">DistanceToPoint</a>(const kVec3 &amp;in point) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a2f1fee5a490ea44c667342d164a66fbe">DistanceToPoint</a>(const float x, const float y, const float z) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a0196d6e428a2f40cd4e0707eca24a58a">DrawDelay</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ab626c3aaeb7a6a359d21980bfbd735dc">Flags</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a527c26a06041e5899c035140f44aa375">FloorHeight</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a0b87048bf97f48e6395def19265855f6">Friction</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a29655aad9d9b283a4bab0620c9ef91e6">FxEventActive</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#af4860ca802614d404868a9fca5314402">GameTicks</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#af6d33716e819293c492f18bdbef7cefe">GetAvoidanceAngle</a>(const kVec3 &amp;in lookAtLocation, const float distance)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a3887ab2fe37620046c2aaf9f1d38469a">GetBoundsMinMax</a>(kVec3 &amp;out min, kVec3 &amp;out max) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#acb1311bd23178e90bc335f3b67ff61c3">GetCeilingHeight</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a3389bb13722808df1a8d0afe20c91ae2">GetCustomDeadHeight</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aa9dc57331ae0bb9dde9265845483a534">GetFloorHeight</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a191d1fd662155b1a4f06dd59077b818e">GetOverrideKeyTouchTID</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a9ab47e773468bd4ccf15f5a03c2e837f">GetSectorIndexAtLocation</a>(const kVec3 &amp;in pos, uint excludeClipFlags=0)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ac735c9a92c812bf5f3764f53f50448ea">GetSkyHeight</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#adf340d3887b342d8ad3bf59db5f982ba">GetState</a>(void) const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a58636af6bcd08a10942e5f0f8b709a47">GetTarget</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a02b163e8c72ad61d91004c507cabb2bb">GetTransformedVector</a>(const kVec3 &amp;in vector)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#adea60c9044c67ec269149aad718c2e83">GetTurnYaw</a>(const kVec3 &amp;in lookAtLocation) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a0f7524bd3ae2efaf5bb03d58f3ad0d1b">GetUsingCustomDeadHeight</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a26feef831fcb5e14aa29c2d451b4315e">GetWaterHeight</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aab5fc2ffc7557471c21902943adc9f25">GetWaterLevel</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a4f87edb106af45f1b872107ca6d469ee">Gravity</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a224f4bf36bd035f692579b1fc348d7ce">GroundBackwardAccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#ada1b31d6fd764f16941ea66182d7d3ce">GroundBackwardSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a3dffe6edcb47ef997eb69fd05d0eaf9b">GroundDeaccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a4a30b21da3fdc84b9f3a5ed6237d3cac">GroundForwardAccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a480bd00c3dffb2c3eb9306f4ff13965a">GroundForwardSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a5fe0be6ab6b43920bf30b683b9110153">GroundStrafeAccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a0520ef5a2934818d9c0a4659fbdabb16">GroundStrafeSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ae6f56ab328ccefd9fb8e831af9ff54c5">HasCustomRef</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ad281de9af8128a67c25529c14830a1b9">Health</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a4e4df775dd17639b5c2cf68c4893b5c2">Height</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a5a487286abbfd5b0e01612c76be47364">IgnoreSectorHeightChange</a>(void)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a20a0f31f8959182c0e1e26629ff231cf">ImpactType</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a63df3c56dfbe0ae7bda1c51dd1883e3a">ImpactTypeDmg</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a9873de4b22e903b980184debf05dbffa">InflictDamage</a>(kActor@ inflictor, const kStr &amp;in damageDef)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a7d7a47c3e7fcfdbfda1a2a61bba8560a">InflictGenericDamage</a>(kActor@ inflictor, const int damage)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a6fd66f08d236854a4b596f652db8d9b2">InflictGenericDamage</a>(kActor@ inflictor, const kexStr &amp;damageDef, const int damage)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a8409e24c8fe9c17d262d09f5ac88c4f6">InstanceOf</a>(const kStr &amp;in className) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a896d0a1e1b88d6ee892fdb6997ec7105">InteractActorsAtPosition</a>(const kVec3 &amp;in pos, const kStr &amp;in callbackFunc, const float arg1=0, const float arg2=0, const float arg3=0, const float arg4=0)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a44f741c95ec0abc5e1d8258f543c1f4f">InWater</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a96439cd07fb03465951685aaf6c83838">IsPersistentMarked</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aa9ef5fcde203b757e578f6b26992ffa1">IsStale</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a9db2835ef4b9367984726a09117ec0ed">JumpMaxSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a0c6a40fbb4f2832a24683c4b76a04820">JumpMinSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a2011f22ed1b5a678064bace4256325bd">LandingViewOffset</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a39863efbc232dde95339d2b9f110318d">LinkArea</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#ad03c5802ae38cebc7f63754332a2fc00">LoudNoiseAlert</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a107f8fc639d821d22658cb619861f376">MapActorIndex</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#af66c7b0271ce1b35b7307796f3f66547">MarkPersistentBit</a>(const bool clear)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a1e9021f696f5c53202cae6cb4fb31841">Mass</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#ad93d02c6418e3955dee08429698f371c">MaxFallVelocity</a>(void)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aaf51ec615dd7a156a9c708bf0bdb28d4">MeleeObject</a>(const kStr &amp;in damageType, const kVec3 &amp;in offset, const float radius)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a9a0da135c50d0330c8ac40f6cc88172a">ModelVariation</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aaf6c1cac37a93e4eb37f5bf04a5c5bfe">Movement</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a73f149d13b4aca5508f7b1752e2bf1f3">MoveToPosition</a>(const float x, const float y)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a197fc4c6ad04c90ea06f94a4deb4fc11">NoKnockBack</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#abc8f1d48e6eb69cd351a88017f944fd2">NoWallJump</a>(void)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a08865866fc5a4e89f6db4d6f9b6d8b51">OnGround</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ac45e7cd4cb25bddadae2005063d47aaa">Origin</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a86ed488d37977ce08f9303092c3214f9">OverrideFOV</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#afd7a98ac86442cf07f298548b4f42fd7">OverrideKeyTouchTID</a>(const bool bOverride, const int16 tid)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a5f4d26612b99077543b996f34b7d486b">OverrideOnDamageValue</a>(const int damage, const bool bOverride=true)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a46257fc77bbe94f22db1ad628b6c4512">OverrideShadow</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a9ef69aedc2c802473bf3f81068ff8eda">OverrideWalkRun</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a5e2e3c34073de725f3269eaed8575315">OverridingKeyTouchTID</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a2313d88e409530a642e1538464560f6b">Oxygen</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#af9c2140fc1c980a2319d083284486a3d">OxygenOut</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a38f4e46f4de11f094049779756d5630b">Pitch</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a57c6558a42f0aff9c992ae1fe109f290">PlayerFlags</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ab9e13bef693a9770eca46a1ee331c51a">PlaySound</a>(const kStr &amp;in soundPath)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ad514a00dadb3b1885e739d90454ef433">PlaySoundWithLookupID</a>(const int soundID)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aaf316a774355739bdf8c6ccedd7fcf33">PrevLerpOrigin</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a3255c66f638e28186c2f30cca9ee7a97">PrevLerpPitch</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a85b9c38792443efbf30791c54c37db4a">PrevLerpRoll</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#aacf6a387a2c685ae45eda3c1929bbda8">PrevLerpRotation</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aa4095e4e52bb216745a488a9cd5d8d45">PrevLerpYaw</a>(void) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a5ba0aa2b10764483e49e04b0398b545c">PrevOrigin</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a4890d12040d089cadba12670f212fdf8">QuietNoiseAlert</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ad2740ee179fccb915440f581f793746c">Radius</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ad7ec8c67a5ea963ad087c485467e8eb4">RandomDecision</a>(const int randomBit) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a6215f2b7cebff619c68b6cad90bd96ff">RecoilPitch</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a384f12414519f85924065fda818393e0">Remove</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a7b6ea1f97060c3ad6880ab8cb7f25f45">RenderModel</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a4252c7e3883e71bddffbeb74458c7fcd">Roll</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#aa8a63a190654fe123fe470d9a18546f5">RotateAroundOrigin</a>(const kAngle &amp;in angle, const kVec3 &amp;in platformOrigin, const bool setPos=true)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ae6f6084cde757643232779d506071ab9">Rotation</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#acd3a3c959c6b1d5a924976fd41e31b15">RunAction</a>(const int funcID, const float w=0.0f, const float x=0.0f, const float y=0.0f, const float z=0.0f)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aad5ec4ba6c8d3787b3d38025e090adee">RunFxEvent</a>(const kStr &amp;in fxEventName)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ab8dac7e0cb8a39fec5f3bd07e0a5c077">Scale</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a75cc2d13c7280d85b5b5e69097aee84a">ScriptObject</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#abd1b7f5c76360c403755863944f68ffb">SectorIndex</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a69dbb2479a213f0e2062e2507902d35d">SetAutomapColor</a>(const int r, const int g, const int b)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a8358ff5ee9ba7dceba68c50b3048fe1e">SetCrawl</a>(const bool crawl)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a227905430052780ba3fd312725f1dfeb">SetCustomDeadHeight</a>(const bool bUse, const float height)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a1b161c5fc97c88307abd702bb5199dc1">SetGroundBackwardAccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a3004ef6f8d874ade756df05057405a05">SetGroundBackwardSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a845afd50e2f5f87a8e09c788bd5a174f">SetGroundDeaccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#ad1a636367ece89df2e46a17897f4c8b7">SetGroundForwardAccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a5c8e11aa7d3f11e83a43b366cf7e9e1a">SetGroundForwardSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a465aabad6fc98097072b60d87ec0f591">SetGroundStrafeAccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a610f22a001c8ca77f08ca5de5dad6d95">SetGroundStrafeSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a809750e22af602958e356bec5ace6d5a">SetHeadTrackTarget</a>(kActor@ actor)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a063992ee778d465d61766808e1605fd9">SetJumpClimbSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a4ccbb1d9cf430856941ba35a48c6429c">SetJumpMaxSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a8b3235b15fe80eaea0b24a45644ee5f2">SetJumpMinSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a127f644925097831f5c60693d65f7380">SetModel</a>(kStr &amp;in modelFile, kStr &amp;in animFile)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#ae7503e46479fe47754c8b71566a448c8">SetOverrideShadow</a>(const int value)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a3133a227d9a8a7bad9e11fab2d6aca99">SetOverrideWalkRun</a>(const int value)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a3c183eda117ffae394c176e58a2a3d6a">SetPosition</a>(const kVec3 &amp;in pos, const bool clearInterpolation=true)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a528e0362db3aefac02ca1438342af1cc">SetSector</a>(const uint sectorIndex)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#aeb90c16b6979d229bb721489ff5f5d5a">SetSpawnFlags1</a>(const uint flags)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a9277450ef8d9c0a3bd0121cd32b79391">SetSpawnFlags2</a>(const uint flags)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a0eb564dc0bc706ab8758e921ba83c4ab">SetSpawnFlags3</a>(const uint flags)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a66fba31a1b6c6e8eaac8cba2c07a6a14">SetSpawnParams</a>(const int param, const int16 value)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a7dd9c433d4ab31ef24e4a9f86c920d81">SetSwimBackwardAccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a2848f0c29a65962a491c48b0bda69621">SetSwimBackwardSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#aa74b9681067aef762494fe4557d1d520">SetSwimDeaccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a3a92ba64a867f8628ca13bd5864422c5">SetSwimForwardAccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a84e1b67e71ec3df992fa3a3d00caf95c">SetSwimForwardSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a9fa1305a608ab3d44613afa5d063e2f9">SetSwimStrafeAccel</a>(const float accel)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#aaa2b5f623eaa12657b099aca429a966a">SetSwimStrafeSpeed</a>(const float speed)</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a8cc2b39f818d15c169b42bce7013028e">SetTarget</a>(kActor@ actor)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#aa877f949b96583ba103529ba87ef2559">SetupHeadTrack</a>(const kStr &amp;in headTrackDef)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a83b20f85051573201ce0089390624748">SetupSpawnParams</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ad46d64fa69067466fe38fc129df504f5">SkipKeyTouchCinema</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aeb4ed2caceb297e8fe682f43e2655969">SoundPitchModify</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#addda766aefba598b876688ff8ace5620">SpawnFlags1</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#aa0f4a05bd22b55238c98bdc9afa5721b">SpawnFlags2</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ab724e885e4ed6604aba267ad7b7d84ac">SpawnFlags3</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ac40e4a62e300f8a5d1c3a7d73db61b9a">SpawnFx</a>(const kStr &amp;in fxPath, const kVec3 &amp;in pos)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a25f34208e47e8cf59b97d5e22f2d214a">SpawnFx</a>(const kStr &amp;in fxPath, const kVec3 &amp;in pos, const kQuat &amp;in rot)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a0f71dffbcdc6cae9aa287b3fe6f4787e">SpawnParams</a>(const int paramID) const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ae4c0cbf185da4b11d0e58e163b4e05db">SpawnProjectile</a>(const kStr &amp;in fxPath, const kVec3 &amp;in pos, const kVec3 &amp;in targetLocation, const float maxAngle)</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#abc1308f09f8c8a6f9e2c1e90aed1c126">SpeciesMask</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#abd512d87ee708db8b27ea0763b724331">StepHeight</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a0cfddebfb166e7d3b3325c5ae3071287">StopLoopingSounds</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a9eb44745f60994ef9d11c011978e607d">StopSound</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a69e611185bbabdbf43016060256b172c">SwimBackwardAccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#ad683f9304ebaf010434ae9caed360226">SwimBackwardSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#adae84c20d2c0f5275931b93e7f89efb8">SwimDeaccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#af819df7e52e47f7f6ffc673a6068c94b">SwimForwardAccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#a736c3dc11b55edd392ad4e5b12ce359e">SwimForwardSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#a93c1356f3df622d60d59f588597ce524">SwimStrafeAccel</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00121.html#aa5ba5dd552074ac34739e68b33d12a67">SwimStrafeSpeed</a>() const</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a6cdd21ef7384843e9bc6ad529ceeefa9">TID</a>() const</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#ad6fccf4ca00b32d0ef7fc1bb9b6e2137">TriggerInvincibility</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#ac88e37d365f99070914f2e6fa921c99a">Type</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a2d95617bd6383e5f595c6953f58b44a7">Velocity</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00121.html#af869a108f25c7e7b3d3774e2ba1cb7ad">ViewHeight</a>()</td><td class="entry"><a class="el" href="a00121.html">kPuppet</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a7841d2964f08e6964554a464511b9e02">WallRadius</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00105.html#a37f7a8eb5c6e31c9e013c969add2da24">WaterFriction</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00105.html#a683d49cc31b0239b0c709c8351e0fea7">Yaw</a>()</td><td class="entry"><a class="el" href="a00105.html">kActor</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Blend </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>blend</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. </p>
+
+</div>
+</div>
+<a id="ac3e4a0e16932a45c83b6dfacf075c74d" name="ac3e4a0e16932a45c83b6dfacf075c74d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e4a0e16932a45c83b6dfacf075c74d">&#9670;&#160;</a></span>Blend() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Blend </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>blend</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>runActions</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>noSoundActions</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. Blends the animation to the frame while optionally running all previous actions. </p>
+
+</div>
+</div>
+<a id="aad189c36c956255a6574d74eff5dfc43" name="aad189c36c956255a6574d74eff5dfc43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad189c36c956255a6574d74eff5dfc43">&#9670;&#160;</a></span>Blending()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kAnimState::Blending </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(flags &amp; ANF_BLEND) != 0 </p>
+
+</div>
+</div>
+<a id="ae1f518b29d30e6bc593ce85d56943ca4" name="ae1f518b29d30e6bc593ce85d56943ca4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1f518b29d30e6bc593ce85d56943ca4">&#9670;&#160;</a></span>ChangeSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::ChangeSpeed </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scales speed of the current animation where 1.0 = 15fps and 4.0 = 60fps. </p>
+
+</div>
+</div>
+<a id="adb9c4632259d2c78207961237ff9b71e" name="adb9c4632259d2c78207961237ff9b71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb9c4632259d2c78207961237ff9b71e">&#9670;&#160;</a></span>CheckAnimID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kAnimState::CheckAnimID </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>checks if animID exists </p>
+
+</div>
+</div>
+<a id="a54034216c47bf9aab8f9157bf17eae8c" name="a54034216c47bf9aab8f9157bf17eae8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54034216c47bf9aab8f9157bf17eae8c">&#9670;&#160;</a></span>CurrentFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::CurrentFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>current frame playing for the current animation. Must have an animation action keyframe for this to work, otherwise use <a class="el" href="#af8d9608e324b21dd45913a92dcb5771f" title="current frame playing for the current animation.">TrackFrame()</a> instead. This should be named more like last frame an action was checked to execute. </p>
+
+</div>
+</div>
+<a id="a17101362da04cead84716fe0158b876f" name="a17101362da04cead84716fe0158b876f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17101362da04cead84716fe0158b876f">&#9670;&#160;</a></span>CycleCompleted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kAnimState::CycleCompleted </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(flags &amp; ANF_CYCLECOMPLETED) != 0 </p>
+
+</div>
+</div>
+<a id="a3bc989e9bf0e034f8be1c23c15f4ebc4" name="a3bc989e9bf0e034f8be1c23c15f4ebc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bc989e9bf0e034f8be1c23c15f4ebc4">&#9670;&#160;</a></span>GetAnimNumFrames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::GetAnimNumFrames </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51731061af541ed0cc2757f603ae1e14" name="a51731061af541ed0cc2757f603ae1e14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51731061af541ed0cc2757f603ae1e14">&#9670;&#160;</a></span>GetOrigin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> kAnimState::GetOrigin </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nodeNum</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9321a720792f7425d823e9ba032719b8" name="a9321a720792f7425d823e9ba032719b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9321a720792f7425d823e9ba032719b8">&#9670;&#160;</a></span>GetRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00050.html">kQuat</a> kAnimState::GetRotation </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>nodeNum</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf44ba2518ba4748e6f2cd4f6e58d073" name="abf44ba2518ba4748e6f2cd4f6e58d073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf44ba2518ba4748e6f2cd4f6e58d073">&#9670;&#160;</a></span>IsPlaying()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kAnimState::IsPlaying </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if current animations ID is animID and the animation is not stopped. </p>
+
+</div>
+</div>
+<a id="a175297882d64452fc7f65fc5b83763d3" name="a175297882d64452fc7f65fc5b83763d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a175297882d64452fc7f65fc5b83763d3">&#9670;&#160;</a></span>LoopFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::LoopFrame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The frame the animation loops back to when it reaches the last frame. Returns -1 if no animation set. </p>
+
+</div>
+</div>
+<a id="a89302d1d69aa1d9502e1ecff75209370" name="a89302d1d69aa1d9502e1ecff75209370"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89302d1d69aa1d9502e1ecff75209370">&#9670;&#160;</a></span>Looping()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kAnimState::Looping </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(flags &amp; ANF_LOOP) != 0 </p>
+
+</div>
+</div>
+<a id="a5359f76de3f148f62f93b7a9b108a699" name="a5359f76de3f148f62f93b7a9b108a699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5359f76de3f148f62f93b7a9b108a699">&#9670;&#160;</a></span>NumFrames()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::NumFrames </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of frames in this animation. Returns -1 if no animation set. </p>
+
+</div>
+</div>
+<a id="af4258f164fae9ad9e6010697de193be4" name="af4258f164fae9ad9e6010697de193be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4258f164fae9ad9e6010697de193be4">&#9670;&#160;</a></span>NumNodes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::NumNodes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>number of nodes in this animation. Returns -1 if no animation set. </p>
+
+</div>
+</div>
+<a id="a738d2a0ca147acda595d7aa686127033" name="a738d2a0ca147acda595d7aa686127033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738d2a0ca147acda595d7aa686127033">&#9670;&#160;</a></span>Pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Pause </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>flags |= ANF_PAUSED; </p>
+
+</div>
+</div>
+<a id="af89c8c4ef7ef00144b3555d973b5e0d9" name="af89c8c4ef7ef00144b3555d973b5e0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89c8c4ef7ef00144b3555d973b5e0d9">&#9670;&#160;</a></span>PlayingID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::PlayingID </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the current animations ID </p>
+
+</div>
+</div>
+<a id="a5ebfefbc7fac98483370047a73ca014b" name="a5ebfefbc7fac98483370047a73ca014b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ebfefbc7fac98483370047a73ca014b">&#9670;&#160;</a></span>PlayTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kAnimState::PlayTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>increases by GAME_DELTA_TIME if not stopped or paused. </p>
+
+</div>
+</div>
+<a id="a5e0897b9bfac9d238b4eb6109a0a36b5" name="a5e0897b9bfac9d238b4eb6109a0a36b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e0897b9bfac9d238b4eb6109a0a36b5">&#9670;&#160;</a></span>Resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Resume </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>flags &amp;= ~ANF_PAUSED; </p>
+
+</div>
+</div>
+<a id="a4d044cd96cbe2dbd798a2cc081a5b0a6" name="a4d044cd96cbe2dbd798a2cc081a5b0a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d044cd96cbe2dbd798a2cc081a5b0a6">&#9670;&#160;</a></span>Set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Set </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. </p>
+
+</div>
+</div>
+<a id="a54ddac6a0fda454e0b9d525a7d5f1f7a" name="a54ddac6a0fda454e0b9d525a7d5f1f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54ddac6a0fda454e0b9d525a7d5f1f7a">&#9670;&#160;</a></span>Set() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Set </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>animID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>frame</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>runActions</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>noSoundActions</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. Sets the animation to the frame while optionally running all previous actions. </p>
+
+</div>
+</div>
+<a id="a87c5bbf5028982c4e960ace40051b2eb" name="a87c5bbf5028982c4e960ace40051b2eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c5bbf5028982c4e960ace40051b2eb">&#9670;&#160;</a></span>SetLastFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::SetLastFrame </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>execActions</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if execActions is true, runs all key frame actions in the animation except Footstep(55) and PlaySound(248). applies the stop flag (flags |= ANF_STOPPED). </p>
+
+</div>
+</div>
+<a id="a824ea272b235baffb2f1a70b364a3909" name="a824ea272b235baffb2f1a70b364a3909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824ea272b235baffb2f1a70b364a3909">&#9670;&#160;</a></span>SetPlayTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::SetPlayTime </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The total time in seconds this animation has been playing. </p>
+
+</div>
+</div>
+<a id="ac514f49864de8487ac8ea9b953e6a831" name="ac514f49864de8487ac8ea9b953e6a831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac514f49864de8487ac8ea9b953e6a831">&#9670;&#160;</a></span>SetTrackTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::SetTrackTime </td>
+          <td>(</td>
+          <td class="paramtype">const float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>0.0(first frame) to 1.0(last frame) </p>
+
+</div>
+</div>
+<a id="a5257f033f89b5744df1b68e0ce2c5ce4" name="a5257f033f89b5744df1b68e0ce2c5ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5257f033f89b5744df1b68e0ce2c5ce4">&#9670;&#160;</a></span>Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kAnimState::Stop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>flags |= ANF_STOPPED; flags &amp;= ~ANF_LOOP; </p>
+
+</div>
+</div>
+<a id="abae80dfb059df20ca5d4f9784db4d365" name="abae80dfb059df20ca5d4f9784db4d365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae80dfb059df20ca5d4f9784db4d365">&#9670;&#160;</a></span>Stopped()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const bool kAnimState::Stopped </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>(flags &amp; ANF_STOPPED) != 0 </p>
+
+</div>
+</div>
+<a id="af8d9608e324b21dd45913a92dcb5771f" name="af8d9608e324b21dd45913a92dcb5771f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d9608e324b21dd45913a92dcb5771f">&#9670;&#160;</a></span>TrackFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::TrackFrame </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>current frame playing for the current animation. </p>
+
+</div>
+</div>
+<a id="a7a84c360130c209bb0fb4b311027af04" name="a7a84c360130c209bb0fb4b311027af04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a84c360130c209bb0fb4b311027af04">&#9670;&#160;</a></span>TrackNextFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int kAnimState::TrackNextFrame </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>next frame to play for the current animation. </p>
+
+</div>
+</div>
+<a id="a13208a6a5d2a1f4c99de07f5830bcf37" name="a13208a6a5d2a1f4c99de07f5830bcf37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13208a6a5d2a1f4c99de07f5830bcf37">&#9670;&#160;</a></span>TrackTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const float kAnimState::TrackTime </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time from 0(on first frame) to 1(on last frame). </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="abae34a326c4f7772558bab5a52f30f18" name="abae34a326c4f7772558bab5a52f30f18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae34a326c4f7772558bab5a52f30f18">&#9670;&#160;</a></span>baseOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float kAnimState::baseOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>is somewhat the Z position of the root node. It's calculated as follows whenever the root motion is updated (ANF_ROOTMOTION must be set). </p>
+<div class="fragment"><div class="line"><span class="comment">// vBlendPos: is the blended position of the root node (node 0) from the prev frame to the current frame.</span></div>
+<div class="line"><span class="comment">// m_pOwner-&gt;BaseHeight(): is the Height of the actor when it spawned (or when SetSpawnParams is called on non map actors).</span></div>
+<div class="line"><a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> = vBlendPos.z * m_pOwner-&gt;Scale().z;</div>
+<div class="line"><a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> -= m_pOwner-&gt;BaseHeight() * 0.6f;</div>
+<div class="line"><span class="keywordflow">if</span>(<a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> &lt; 0) <a class="code hl_variable" href="#abae34a326c4f7772558bab5a52f30f18">baseOffset</a> = 0;</div>
+<div class="ttc" id="aa00118_html_abae34a326c4f7772558bab5a52f30f18"><div class="ttname"><a href="#abae34a326c4f7772558bab5a52f30f18">kAnimState::baseOffset</a></div><div class="ttdeci">float baseOffset</div><div class="ttdoc">is somewhat the Z position of the root node. It&#39;s calculated as follows whenever the root motion is u...</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01213">t1_scriptAPI.cpp:1213</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01213">1213</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab9dc3f7cab0a9d631fe99f64e1e8f680" name="ab9dc3f7cab0a9d631fe99f64e1e8f680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9dc3f7cab0a9d631fe99f64e1e8f680">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kAnimState::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#a458a94bc550e7c2486c663601c06c52c">EnumAnimStateFlags</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01200">1200</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2dab9b8c667780b0ecc9144b75866fb9" name="a2dab9b8c667780b0ecc9144b75866fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dab9b8c667780b0ecc9144b75866fb9">&#9670;&#160;</a></span>rootMotion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="a00046.html">kVec3</a> kAnimState::rootMotion</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the move direction of the root node from the prev frame to the current frame. </p>
+
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01214">1214</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00118.html">kAnimState</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

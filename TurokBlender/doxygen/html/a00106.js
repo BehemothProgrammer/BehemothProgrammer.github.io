@@ -1,6 +1,9 @@
 var a00106 =
 [
-    [ "kActorIterator", "a00106.html#a99a84899c783e71d09af781c914ed989", null ],
-    [ "Get", "a00106.html#a5606c64889cedece597554850c2c2a73", null ],
-    [ "Reset", "a00106.html#a77a615c1305ce57ab223b8545b43bdf6", null ]
+    [ "kSelectionListInt", "a00106.html#a8c0be3aee9ed35304fc094ee1e5e7aa0", null ],
+    [ "AddItem", "a00106.html#aa4f975d04ebe9f8981dbf71210d7678e", null ],
+    [ "GetNumEntries", "a00106.html#a31db1f558fb69fd0f951773b4ed8ddaa", null ],
+    [ "opAssign", "a00106.html#a3c416e07a3238f1198e81a3c18d715e9", null ],
+    [ "Reset", "a00106.html#ae2310e9586f82596ba53594f460499ee", null ],
+    [ "Select", "a00106.html#af8eca92d7f967f7f4d69ab44ea94f3cc", null ]
 ];

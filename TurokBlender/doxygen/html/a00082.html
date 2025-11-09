@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Turok: Member List</title>
+<title>Turok: ScriptObject Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,7 +77,7 @@ $(function() { codefold.init(0); });
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('a00085.html',''); initResizable(true); });
+$(function(){initNavTree('a00082.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -103,22 +103,469 @@ $(function(){initNavTree('a00085.html',''); initResizable(true); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">kDictMem Member List</div></div>
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="a00079.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ScriptObject Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="a00085.html">kDictMem</a>, including all inherited members.</p>
-<table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="a00085.html#a601873ed5b3746a3fb3ae85cf0c3aca6">GetBool</a>(const kStr &amp;in key, bool &amp;out boolResult, const bool defaultValue=false)</td><td class="entry"><a class="el" href="a00085.html">kDictMem</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00085.html#a6197429ccfe694fee8c05a703bbbacab">GetFloat</a>(const kStr &amp;in key, float &amp;out floatResult, const float defaultValue=0)</td><td class="entry"><a class="el" href="a00085.html">kDictMem</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00085.html#aa34eb0e0cb913bd446013ae5ffae019b">GetInt</a>(const kStr &amp;in key, int &amp;out intResult, const int defaultValue=0)</td><td class="entry"><a class="el" href="a00085.html">kDictMem</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="a00085.html#a808afb9dd5f4289361cbf08f4afb9f8b">GetString</a>(const kStr &amp;in key, kStr &amp;out stringResult)</td><td class="entry"><a class="el" href="a00085.html">kDictMem</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="a00085.html#a53743b86984c0b023deaeb17ed22ba04">GetVector</a>(const kStr &amp;in key, kVec3 &amp;out vectorResult)</td><td class="entry"><a class="el" href="a00085.html">kDictMem</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<p>Actor script classes must inherit from this class.  
+ <a href="#details">More...</a></p>
+<div class="dynheader">
+Inheritance diagram for ScriptObject:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="a00082.png" usemap="#ScriptObject_map" alt=""/>
+  <map id="ScriptObject_map" name="ScriptObject_map">
+<area href="a00090.html" title="Player script class must inherit from this class." alt="ScriptObjectPlayer" shape="rect" coords="0,56,128,80"/>
+<area href="a00086.html" title="Weapon script classes must inherit from this class." alt="ScriptObjectWeapon" shape="rect" coords="138,56,266,80"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8220be42bfef1a62c78a2504c43ab320" id="r_a8220be42bfef1a62c78a2504c43ab320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8220be42bfef1a62c78a2504c43ab320">OnSpawn</a> ()</td></tr>
+<tr class="memdesc:a8220be42bfef1a62c78a2504c43ab320"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required.  <br /></td></tr>
+<tr class="separator:a8220be42bfef1a62c78a2504c43ab320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2a8de3f44f70e2d45f58d65d42cfe1" id="r_afb2a8de3f44f70e2d45f58d65d42cfe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb2a8de3f44f70e2d45f58d65d42cfe1">OnTick</a> ()</td></tr>
+<tr class="memdesc:afb2a8de3f44f70e2d45f58d65d42cfe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required.  <br /></td></tr>
+<tr class="separator:afb2a8de3f44f70e2d45f58d65d42cfe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95dfe264971b949d5119f48a3706286" id="r_ad95dfe264971b949d5119f48a3706286"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95dfe264971b949d5119f48a3706286">OnBeginLevel</a> ()</td></tr>
+<tr class="separator:ad95dfe264971b949d5119f48a3706286"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefdd220598a2c5a9fbd1769cb3c7bf8f" id="r_aefdd220598a2c5a9fbd1769cb3c7bf8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aefdd220598a2c5a9fbd1769cb3c7bf8f">OnRestore</a> ()</td></tr>
+<tr class="separator:aefdd220598a2c5a9fbd1769cb3c7bf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac851234032a2b0f3e70b2b8a3acb6287" id="r_ac851234032a2b0f3e70b2b8a3acb6287"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac851234032a2b0f3e70b2b8a3acb6287">OnPostBeginLevel</a> ()</td></tr>
+<tr class="separator:ac851234032a2b0f3e70b2b8a3acb6287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e61f5e4ddfb1b5afc266aacb8251ea2" id="r_a0e61f5e4ddfb1b5afc266aacb8251ea2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e61f5e4ddfb1b5afc266aacb8251ea2">OnSleep</a> ()</td></tr>
+<tr class="separator:a0e61f5e4ddfb1b5afc266aacb8251ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6191a312287c4e2be9e0a75ff301e4ba" id="r_a6191a312287c4e2be9e0a75ff301e4ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6191a312287c4e2be9e0a75ff301e4ba">OnWake</a> ()</td></tr>
+<tr class="separator:a6191a312287c4e2be9e0a75ff301e4ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5c5a47df57fc5b1f96dd45819479d20" id="r_ab5c5a47df57fc5b1f96dd45819479d20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5c5a47df57fc5b1f96dd45819479d20">OnTouch</a> (<a class="el" href="a00122.html">kActor</a> @theActorThatTouchedMe)</td></tr>
+<tr class="memdesc:ab5c5a47df57fc5b1f96dd45819479d20"><td class="mdescLeft">&#160;</td><td class="mdescRight">called even if alseep  <br /></td></tr>
+<tr class="separator:ab5c5a47df57fc5b1f96dd45819479d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348c34671e336348e69ad7c784d0aa26" id="r_a348c34671e336348e69ad7c784d0aa26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a348c34671e336348e69ad7c784d0aa26">OnCollide</a> (<a class="el" href="a00154.html">kCModel</a>@)</td></tr>
+<tr class="memdesc:a348c34671e336348e69ad7c784d0aa26"><td class="mdescLeft">&#160;</td><td class="mdescRight">called even if alseep  <br /></td></tr>
+<tr class="separator:a348c34671e336348e69ad7c784d0aa26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ebdacb4ab7d96e90868f87e4c32e39" id="r_a09ebdacb4ab7d96e90868f87e4c32e39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09ebdacb4ab7d96e90868f87e4c32e39">OnCollisionStart</a> ()</td></tr>
+<tr class="memdesc:a09ebdacb4ab7d96e90868f87e4c32e39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision Movement Check is starting.  <br /></td></tr>
+<tr class="separator:a09ebdacb4ab7d96e90868f87e4c32e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ae9f7b3aedcd81ae7aff6dd26f0d93" id="r_ae8ae9f7b3aedcd81ae7aff6dd26f0d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ae9f7b3aedcd81ae7aff6dd26f0d93">OnCollisionFinish</a> ()</td></tr>
+<tr class="memdesc:ae8ae9f7b3aedcd81ae7aff6dd26f0d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collision Movement Check has ended.  <br /></td></tr>
+<tr class="separator:ae8ae9f7b3aedcd81ae7aff6dd26f0d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12fdf0ab3ba2cbe2792e905fd65790c5" id="r_a12fdf0ab3ba2cbe2792e905fd65790c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12fdf0ab3ba2cbe2792e905fd65790c5">OnMenuTick</a> ()</td></tr>
+<tr class="memdesc:a12fdf0ab3ba2cbe2792e905fd65790c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">called only when dummymenu active  <br /></td></tr>
+<tr class="separator:a12fdf0ab3ba2cbe2792e905fd65790c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dc31aaddeb12018113dce25fa4856d0" id="r_a3dc31aaddeb12018113dce25fa4856d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dc31aaddeb12018113dce25fa4856d0">OnRemoved</a> ()</td></tr>
+<tr class="memdesc:a3dc31aaddeb12018113dce25fa4856d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">called when actor is removed (Internally or through scripting). IsStale will return true immediately after this, RenderModel will be null, and the scriptobject will be destroyed.  <br /></td></tr>
+<tr class="separator:a3dc31aaddeb12018113dce25fa4856d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b887aed4e97c2eba6b7225ac53c5bd" id="r_a64b887aed4e97c2eba6b7225ac53c5bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b887aed4e97c2eba6b7225ac53c5bd">OnActivate</a> ()</td></tr>
+<tr class="separator:a64b887aed4e97c2eba6b7225ac53c5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e" id="r_ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e">OnDeactivate</a> ()</td></tr>
+<tr class="memdesc:ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Never used.  <br /></td></tr>
+<tr class="separator:ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a482d3645f9c43effe16125ac2bb14d85" id="r_a482d3645f9c43effe16125ac2bb14d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a482d3645f9c43effe16125ac2bb14d85">OnPreDamage</a> (<a class="el" href="a00122.html">kActor</a> @instigator, <a class="el" href="a00102.html">kDictMem</a> @damageDef, const int damage)</td></tr>
+<tr class="memdesc:a482d3645f9c43effe16125ac2bb14d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death.  <br /></td></tr>
+<tr class="separator:a482d3645f9c43effe16125ac2bb14d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9c4a45623222f769367976af7f11892" id="r_af9c4a45623222f769367976af7f11892"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9c4a45623222f769367976af7f11892">OnDeath</a> (<a class="el" href="a00122.html">kActor</a> @killer, <a class="el" href="a00102.html">kDictMem</a> @damageDef)</td></tr>
+<tr class="memdesc:af9c4a45623222f769367976af7f11892"><td class="mdescLeft">&#160;</td><td class="mdescRight">called only when actor dies  <br /></td></tr>
+<tr class="separator:af9c4a45623222f769367976af7f11892"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad31b6c4d81190ebaee0431a62079501e" id="r_ad31b6c4d81190ebaee0431a62079501e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad31b6c4d81190ebaee0431a62079501e">OnDamage</a> (<a class="el" href="a00122.html">kActor</a> @instigator, <a class="el" href="a00102.html">kDictMem</a> @damageDef, const int damage)</td></tr>
+<tr class="memdesc:ad31b6c4d81190ebaee0431a62079501e"><td class="mdescLeft">&#160;</td><td class="mdescRight">always called even after death  <br /></td></tr>
+<tr class="separator:ad31b6c4d81190ebaee0431a62079501e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd171532737b2fcdf35de8f18caf7c0" id="r_a9bd171532737b2fcdf35de8f18caf7c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bd171532737b2fcdf35de8f18caf7c0">OnEndLevel</a> ()</td></tr>
+<tr class="separator:a9bd171532737b2fcdf35de8f18caf7c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Actor script classes must inherit from this class. </p>
+<div class="fragment"><div class="line"><span class="keyword">class </span>TurokActor : <a class="code hl_class" href="a00082.html">ScriptObject</a></div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_class" href="a00122.html">kActor</a>  @self;</div>
+<div class="line">    TurokActor(<a class="code hl_class" href="a00122.html">kActor</a> @actor)</div>
+<div class="line">    {</div>
+<div class="line">        @self = actor;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aa00082_html"><div class="ttname"><a href="a00082.html">ScriptObject</a></div><div class="ttdoc">Actor script classes must inherit from this class.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00943">t1_scriptAPI.cpp:944</a></div></div>
+<div class="ttc" id="aa00122_html"><div class="ttname"><a href="a00122.html">kActor</a></div><div class="ttdoc">Base type used by all actors.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l01221">t1_scriptAPI.cpp:1222</a></div></div>
+</div><!-- fragment --> 
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l00943">943</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a64b887aed4e97c2eba6b7225ac53c5bd" name="a64b887aed4e97c2eba6b7225ac53c5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b887aed4e97c2eba6b7225ac53c5bd">&#9670;&#160;</a></span>OnActivate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnActivate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad95dfe264971b949d5119f48a3706286" name="ad95dfe264971b949d5119f48a3706286"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95dfe264971b949d5119f48a3706286">&#9670;&#160;</a></span>OnBeginLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnBeginLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a348c34671e336348e69ad7c784d0aa26" name="a348c34671e336348e69ad7c784d0aa26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a348c34671e336348e69ad7c784d0aa26">&#9670;&#160;</a></span>OnCollide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnCollide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00154.html">kCModel</a>@</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>called even if alseep </p>
+
+</div>
+</div>
+<a id="ae8ae9f7b3aedcd81ae7aff6dd26f0d93" name="ae8ae9f7b3aedcd81ae7aff6dd26f0d93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ae9f7b3aedcd81ae7aff6dd26f0d93">&#9670;&#160;</a></span>OnCollisionFinish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnCollisionFinish </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collision Movement Check has ended. </p>
+
+</div>
+</div>
+<a id="a09ebdacb4ab7d96e90868f87e4c32e39" name="a09ebdacb4ab7d96e90868f87e4c32e39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09ebdacb4ab7d96e90868f87e4c32e39">&#9670;&#160;</a></span>OnCollisionStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnCollisionStart </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Collision Movement Check is starting. </p>
+
+</div>
+</div>
+<a id="ad31b6c4d81190ebaee0431a62079501e" name="ad31b6c4d81190ebaee0431a62079501e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31b6c4d81190ebaee0431a62079501e">&#9670;&#160;</a></span>OnDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnDamage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00122.html">kActor</a> @</td>          <td class="paramname"><span class="paramname"><em>instigator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00102.html">kDictMem</a> @</td>          <td class="paramname"><span class="paramname"><em>damageDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>damage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>always called even after death </p>
+
+</div>
+</div>
+<a id="ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e" name="ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b8ef53b4ff0cc66a4a75d3bb1c2a7e">&#9670;&#160;</a></span>OnDeactivate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnDeactivate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Never used. </p>
+
+</div>
+</div>
+<a id="af9c4a45623222f769367976af7f11892" name="af9c4a45623222f769367976af7f11892"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9c4a45623222f769367976af7f11892">&#9670;&#160;</a></span>OnDeath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnDeath </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00122.html">kActor</a> @</td>          <td class="paramname"><span class="paramname"><em>killer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00102.html">kDictMem</a> @</td>          <td class="paramname"><span class="paramname"><em>damageDef</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>called only when actor dies </p>
+
+</div>
+</div>
+<a id="a9bd171532737b2fcdf35de8f18caf7c0" name="a9bd171532737b2fcdf35de8f18caf7c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bd171532737b2fcdf35de8f18caf7c0">&#9670;&#160;</a></span>OnEndLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnEndLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12fdf0ab3ba2cbe2792e905fd65790c5" name="a12fdf0ab3ba2cbe2792e905fd65790c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12fdf0ab3ba2cbe2792e905fd65790c5">&#9670;&#160;</a></span>OnMenuTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnMenuTick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>called only when dummymenu active </p>
+
+</div>
+</div>
+<a id="ac851234032a2b0f3e70b2b8a3acb6287" name="ac851234032a2b0f3e70b2b8a3acb6287"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac851234032a2b0f3e70b2b8a3acb6287">&#9670;&#160;</a></span>OnPostBeginLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnPostBeginLevel </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a482d3645f9c43effe16125ac2bb14d85" name="a482d3645f9c43effe16125ac2bb14d85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482d3645f9c43effe16125ac2bb14d85">&#9670;&#160;</a></span>OnPreDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnPreDamage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00122.html">kActor</a> @</td>          <td class="paramname"><span class="paramname"><em>instigator</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="a00102.html">kDictMem</a> @</td>          <td class="paramname"><span class="paramname"><em>damageDef</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>damage</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>always called when damaged even after death. Call OverrideOnDamageValue on the actor if you need to override the damage value to prevent death. </p>
+
+</div>
+</div>
+<a id="a3dc31aaddeb12018113dce25fa4856d0" name="a3dc31aaddeb12018113dce25fa4856d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dc31aaddeb12018113dce25fa4856d0">&#9670;&#160;</a></span>OnRemoved()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnRemoved </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>called when actor is removed (Internally or through scripting). IsStale will return true immediately after this, RenderModel will be null, and the scriptobject will be destroyed. </p>
+
+</div>
+</div>
+<a id="aefdd220598a2c5a9fbd1769cb3c7bf8f" name="aefdd220598a2c5a9fbd1769cb3c7bf8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefdd220598a2c5a9fbd1769cb3c7bf8f">&#9670;&#160;</a></span>OnRestore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnRestore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e61f5e4ddfb1b5afc266aacb8251ea2" name="a0e61f5e4ddfb1b5afc266aacb8251ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e61f5e4ddfb1b5afc266aacb8251ea2">&#9670;&#160;</a></span>OnSleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnSleep </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8220be42bfef1a62c78a2504c43ab320" name="a8220be42bfef1a62c78a2504c43ab320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8220be42bfef1a62c78a2504c43ab320">&#9670;&#160;</a></span>OnSpawn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnSpawn </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Required. </p>
+
+</div>
+</div>
+<a id="afb2a8de3f44f70e2d45f58d65d42cfe1" name="afb2a8de3f44f70e2d45f58d65d42cfe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb2a8de3f44f70e2d45f58d65d42cfe1">&#9670;&#160;</a></span>OnTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnTick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Required. </p>
+
+</div>
+</div>
+<a id="ab5c5a47df57fc5b1f96dd45819479d20" name="ab5c5a47df57fc5b1f96dd45819479d20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5c5a47df57fc5b1f96dd45819479d20">&#9670;&#160;</a></span>OnTouch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnTouch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="a00122.html">kActor</a> @</td>          <td class="paramname"><span class="paramname"><em>theActorThatTouchedMe</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>called even if alseep </p>
+
+</div>
+</div>
+<a id="a6191a312287c4e2be9e0a75ff301e4ba" name="a6191a312287c4e2be9e0a75ff301e4ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6191a312287c4e2be9e0a75ff301e4ba">&#9670;&#160;</a></span>OnWake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObject::OnWake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="a00082.html">ScriptObject</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

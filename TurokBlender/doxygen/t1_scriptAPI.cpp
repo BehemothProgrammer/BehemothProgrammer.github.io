@@ -2450,6 +2450,32 @@ public:
     void SetSecretCount(const int amount); ///< Set the total number of secrets currently found over the entire game
 };
 
+/**
+ * @class kScriptTMap
+ * @brief A map/dictionary that stores key/values as kStr. Example code to iterate each key/value:
+ * @code{.cpp}
+ *  kScriptTMap tmap;
+ *  kStr key, value;
+ *  tmap.ItBegin();
+ *  while(tmap.ItNext(key, value))
+ *  {
+ *      Sys.Print("Key: " + key + ", Value: " + value);
+ *  }
+ * @endcode
+ */
+class kScriptTMap
+{
+    void ItBegin(); ///< Resets the iterator back to the first key/value
+    bool ItNext(kStr &out key, kStr &out value); ///< key and value is set to the next key/value in the iterator. Returns false if reached the end.
+    bool Add(const kStr &in key, const kStr &in value); ///< if the key doesn't exist then adds the key/value and returns false. If the key already exists then sets the value and returns true.
+    bool Find(const kStr &in key, kStr &out value); ///< if the key exists then sets value and returns true. If key was not found then returns false.
+    bool HasKey(const kStr &in key); ///< Returns true if the key exists
+    bool Remove(const kStr &in key); ///< Removes the key if it exists and returns true.
+    void Clear();
+    bool IsEmpty();
+    uint Count();
+}
+
 namespace Math
 {
     float Sin(float f); ///< Returns the sine of angle f in radians
@@ -2557,7 +2583,7 @@ kColor kexColor_Tab20Light(uint i); ///< Not used. (garbage from kexengine)
 kColor kexColor_ViridisScale(float v); ///< Not used. (garbage from kexengine)
 kColor kexColor_LerpRGB(const kColor&in from, const kColor&in to, float time); ///< Not used. (garbage from kexengine)
 int kexRandInt(); ///< Range -2147483648..2147483647
-uint kexRandUInt() ///< Range 0..4294967295
+uint kexRandUInt(); ///< Range 0..4294967295
 void delay(const float time); ///< used in map scripts to delay execution of script
 const float GAME_FRAME_TIME = 0.25f;
 const float GAME_DELTA_TIME = 0.016666668f;
