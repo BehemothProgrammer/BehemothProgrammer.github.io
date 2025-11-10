@@ -239,7 +239,8 @@ var a00002 =
       [ "CMF_SHOW_CREDITS", "a00002.html#ada6b177ceea735f45942786e807b3ec2ae0db4255fd79740eb36f76af71c948fb", null ],
       [ "CMF_CHANGE_MAP_AFTER_FADE", "a00002.html#ada6b177ceea735f45942786e807b3ec2a30a2b18837b59883c919eeba6c4c8618", null ],
       [ "CMF_SHOW_HIDDEN_OBJECTS", "a00002.html#ada6b177ceea735f45942786e807b3ec2a70d1826e6022a619064fa88c3958f2bd", null ],
-      [ "CMF_NO_INITIAL_FADEIN", "a00002.html#ada6b177ceea735f45942786e807b3ec2ae16985f72c2f8daaf559113c93245aa9", null ]
+      [ "CMF_NO_INITIAL_FADEIN", "a00002.html#ada6b177ceea735f45942786e807b3ec2ae16985f72c2f8daaf559113c93245aa9", null ],
+      [ "CMF_NO_SUNLENSFLARE", "a00002.html#ada6b177ceea735f45942786e807b3ec2ab10eeda6c0ccc955fb1c9f15b96bf69e", null ]
     ] ],
     [ "EnumCameraLerpType", "a00002.html#a2523efc03626a43d2fb3e90a06195b3c", [
       [ "CMLT_NONE", "a00002.html#a2523efc03626a43d2fb3e90a06195b3cada3d4ae52f26e53c1d7e3d8eb73c3d85", null ],

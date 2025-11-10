@@ -128,6 +128,8 @@ var a00146 =
     [ "InfoScale", "a00146.html#aae9d0bc0bb1872f21dae76dae367337f", null ],
     [ "InfoScaleDest", "a00146.html#a9d2e8171c1b50a7e15c3e4083f7497af", null ],
     [ "InfoScaleLerp", "a00146.html#aed5a3a7cb0a65289ce3b23806a48d537", null ],
+    [ "InfoSourceAlive", "a00146.html#a5e399638bfe311ab18a235ccc15efa81", null ],
+    [ "InfoSourceDead", "a00146.html#a0042da285d206d11adaa78c14be7d486", null ],
     [ "InfoSparkle", "a00146.html#ad0f4c0932b8cbde421a27ce202bc0dca", null ],
     [ "InfoSpawnDistOffset", "a00146.html#a4c687beeffb2c7b06b489cca0213fcdc", null ],
     [ "InfoStickOnTarget", "a00146.html#a6d93850b220d411c4aec05bf661feac0", null ],

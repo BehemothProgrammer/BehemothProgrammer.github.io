@@ -144,6 +144,8 @@ bNoWallSpawn                // if onCollideWall is Destroy(1) then won't spawn i
 bNoGroundSpawn              // if onCollideFloor is Destroy(1) then won't spawn impact fx. if onCollideFloor is Bounce(3) or Reflect(2) and Fx is a bullet then won't spawn impact fx and could bounce forever.
 bRetainVelocity             // Not used
 bNoHitSource                // Not used
+bSourceAlive                // Will only spawn if source(owner) is alive
+bSourceDead                 // Will only spawn if source(owner) is dead
 bPerPolyCollision           // Enables poly collision checks on static meshes if the menu option precise is on.
 bDrawDelay                  // Don't draw the Fx until it has ticked once
 bMuzzleEffect               // enables muzzle effect using the cameras view and muzzleOffset property. Lifetime of a muzzle effect is 0.03125 seconds.

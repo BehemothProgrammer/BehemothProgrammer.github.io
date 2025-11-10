@@ -430,7 +430,8 @@ enum EnumCameraFlags
     CMF_SHOW_CREDITS            = 1 << 5,
     CMF_CHANGE_MAP_AFTER_FADE   = 1 << 6,
     CMF_SHOW_HIDDEN_OBJECTS     = 1 << 7,
-    CMF_NO_INITIAL_FADEIN       = 1 << 8
+    CMF_NO_INITIAL_FADEIN       = 1 << 8,
+    CMF_NO_SUNLENSFLARE         = 1 << 9  ///< Doesn't force the sun lens flare always on. Sun lens flare will work normally, using the "Always Show Lens Flares" option and checking if the sun is being blocked.
 };
 
 enum EnumCameraStates
@@ -1720,6 +1721,8 @@ public:
     bool InfoNoWallSpawn() const;
     bool InfoNoGroundSpawn() const;
     bool InfoNoHitSource() const;
+    bool InfoSourceAlive() const;
+    bool InfoSourceDead() const;
     bool InfoPerPolyCollision() const;
     bool InfoMuzzleEffect() const;
     bool InfoDrawDelay() const;
@@ -1775,7 +1778,7 @@ public:
 class kCamera
 {
 public:
-    void StartCinematic(const uint flags = 12); ///< EnumCameraFlags
+    void StartCinematic(const uint flags = (CMF_LOCK_PLAYER|CMF_UNLOCK_PLAYER_ON_FINISH)); ///< EnumCameraFlags
     void StopCinematic(const bool noFade = false); ///< if noFade is true will stop the cinematic immediately without fading out.
     const int CinematicState() const; ///< EnumCameraStates
     void SetLookAtActor(kActor@ actor);
@@ -1808,6 +1811,7 @@ public:
     const int AreaID() const;
     void ClearInterpolation();
     const uint Flags() const; ///< EnumCameraFlags
+    void SetFlags(const uint flags); ///< EnumCameraFlags
     kVec3 origin; ///< current position of camera. if a finalview is set then the origin will be set to the finalview's eye position.
     kAngle yaw; ///< if a finalview is set then the yaw will be set to the finalview's look direction.
     kAngle pitch; ///< if a finalview is set then the pitch will be set to the finalview's look direction.

@@ -113,9 +113,9 @@ $(function(){initNavTree('a00150.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1fef994bbe4758e717df353ba64ba74d" id="r_a1fef994bbe4758e717df353ba64ba74d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fef994bbe4758e717df353ba64ba74d">StartCinematic</a> (const uint flags=12)</td></tr>
-<tr class="memdesc:a1fef994bbe4758e717df353ba64ba74d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>.  <br /></td></tr>
-<tr class="separator:a1fef994bbe4758e717df353ba64ba74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20738ff836e2921162516be7b0e0a3ca" id="r_a20738ff836e2921162516be7b0e0a3ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20738ff836e2921162516be7b0e0a3ca">StartCinematic</a> (const uint flags=(<a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2aca44fd5e01a50120af5a11c9482216c9">CMF_LOCK_PLAYER</a>|<a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2a93c45ebecfce3d928e4868f0dd5fd1ee">CMF_UNLOCK_PLAYER_ON_FINISH</a>))</td></tr>
+<tr class="memdesc:a20738ff836e2921162516be7b0e0a3ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>.  <br /></td></tr>
+<tr class="separator:a20738ff836e2921162516be7b0e0a3ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa279741b2465f66d886f6c6af7c3d023" id="r_aa279741b2465f66d886f6c6af7c3d023"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa279741b2465f66d886f6c6af7c3d023">StopCinematic</a> (const bool noFade=false)</td></tr>
 <tr class="memdesc:aa279741b2465f66d886f6c6af7c3d023"><td class="mdescLeft">&#160;</td><td class="mdescRight">if noFade is true will stop the cinematic immediately without fading out.  <br /></td></tr>
 <tr class="separator:aa279741b2465f66d886f6c6af7c3d023"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -205,6 +205,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad5f214b3562576647b7c01258bb2a875" id="r_ad5f214b3562576647b7c01258bb2a875"><td class="memItemLeft" align="right" valign="top">const uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad5f214b3562576647b7c01258bb2a875">Flags</a> () const</td></tr>
 <tr class="memdesc:ad5f214b3562576647b7c01258bb2a875"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>.  <br /></td></tr>
 <tr class="separator:ad5f214b3562576647b7c01258bb2a875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73d9ac1ea4a7443d9f81e7e3e1454d5f" id="r_a73d9ac1ea4a7443d9f81e7e3e1454d5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a73d9ac1ea4a7443d9f81e7e3e1454d5f">SetFlags</a> (const uint flags)</td></tr>
+<tr class="memdesc:a73d9ac1ea4a7443d9f81e7e3e1454d5f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>.  <br /></td></tr>
+<tr class="separator:a73d9ac1ea4a7443d9f81e7e3e1454d5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60aab86681d204dadcd624aab3ea24b4" id="r_a60aab86681d204dadcd624aab3ea24b4"><td class="memItemLeft" align="right" valign="top">bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60aab86681d204dadcd624aab3ea24b4">ClearInterpolationOnTick</a> (void)</td></tr>
 <tr class="memdesc:a60aab86681d204dadcd624aab3ea24b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set to false to handle interpolation yourself  <br /></td></tr>
 <tr class="separator:a60aab86681d204dadcd624aab3ea24b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,7 +238,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01775">1775</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01778">1778</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5731e3995d298618d8e2422595830d3d" name="a5731e3995d298618d8e2422595830d3d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5731e3995d298618d8e2422595830d3d">&#9670;&#160;</a></span>Active()</h2>
@@ -625,6 +628,25 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a73d9ac1ea4a7443d9f81e7e3e1454d5f" name="a73d9ac1ea4a7443d9f81e7e3e1454d5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d9ac1ea4a7443d9f81e7e3e1454d5f">&#9670;&#160;</a></span>SetFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kCamera::SetFlags </td>
+          <td>(</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2">EnumCameraFlags</a>. </p>
+
+</div>
+</div>
 <a id="a64281a147d33121e2b1cd833f6a1bb68" name="a64281a147d33121e2b1cd833f6a1bb68"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a64281a147d33121e2b1cd833f6a1bb68">&#9670;&#160;</a></span>SetFocusView()</h2>
 
@@ -812,8 +834,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1fef994bbe4758e717df353ba64ba74d" name="a1fef994bbe4758e717df353ba64ba74d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fef994bbe4758e717df353ba64ba74d">&#9670;&#160;</a></span>StartCinematic()</h2>
+<a id="a20738ff836e2921162516be7b0e0a3ca" name="a20738ff836e2921162516be7b0e0a3ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20738ff836e2921162516be7b0e0a3ca">&#9670;&#160;</a></span>StartCinematic()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,7 +843,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">void kCamera::StartCinematic </td>
           <td>(</td>
-          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">12</span></td><td>)</td>
+          <td class="paramtype">const uint</td>          <td class="paramname"><span class="paramname"><em>flags</em></span><span class="paramdefsep"> = </span><span class="paramdefval">(<a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2aca44fd5e01a50120af5a11c9482216c9">CMF_LOCK_PLAYER</a>|<a class="el" href="a00002.html#ada6b177ceea735f45942786e807b3ec2a93c45ebecfce3d928e4868f0dd5fd1ee">CMF_UNLOCK_PLAYER_ON_FINISH</a>)</span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1019,7 +1041,7 @@ Public Attributes</h2></td></tr>
 
 <p>Camera FOV (default is 74.0) </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01815">1815</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01819">1819</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1037,7 +1059,7 @@ Public Attributes</h2></td></tr>
 
 <p>Used only if LookAtActor has been set. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01816">1816</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01820">1820</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1077,7 @@ Public Attributes</h2></td></tr>
 
 <p>current position of camera. if a finalview is set then the origin will be set to the finalview's eye position. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01811">1811</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01815">1815</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1073,7 +1095,7 @@ Public Attributes</h2></td></tr>
 
 <p>if a finalview is set then the pitch will be set to the finalview's look direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01813">1813</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01817">1817</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1091,7 +1113,7 @@ Public Attributes</h2></td></tr>
 
 <p>if a finalview is set then the roll will be set to 0. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01814">1814</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01818">1818</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -1109,7 +1131,7 @@ Public Attributes</h2></td></tr>
 
 <p>if a finalview is set then the yaw will be set to the finalview's look direction. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01812">1812</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l01816">1816</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
