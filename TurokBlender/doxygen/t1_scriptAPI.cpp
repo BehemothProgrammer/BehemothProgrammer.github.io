@@ -449,7 +449,7 @@ enum EnumAreaFlags
 {
     AAF_WATER           = 1 << 0,
     AAF_BLOCK           = 1 << 1,
-    AAF_TOGGLE          = 1 << 2,  ///< if on and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. Used for door areas.
+    AAF_TOGGLE          = 1 << 2,  ///< if this flag is off and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. If it's on then it will be marked on the automap regardless if AAF_BLOCK is on. Used for door areas.
     AAF_CLIFF           = 1 << 3,  ///< is a wall
     AAF_CLIMB           = 1 << 4,  ///< climb up sectors faster than AAF_LADDER
     AAF_ONESIDED        = 1 << 5,  ///< Bridge
@@ -2102,13 +2102,13 @@ public:
     float GetGameSpeed();
 
     /**
-     * @brief Sets the current GameSpeed. kPuppet and kPlayerWeapon are not affected by GameSpeed.
+     * @brief Sets the current GameSpeed. kPuppet and kPlayerWeapon are not affected by GameSpeed (By default).
      * @param speed 0..1
      * @param blendSpeed must be >= 1.0. This is the time it takes to lerp from current speed to the new speed. (lerp time = 1.0 / blendSpeed)
      */
     void SetGameSpeed(const float speed, const float blendSpeed);
     bool GetHubKeyInfo(const uint hubID, int&out nKeys, int&out remainingKeys, int&out keyBits);
-    bool SetHubKey(const uint hubID, int key);
+    bool SetHubKey(const uint hubID, int keyBit); ///< Returns true if keyBit was set else returns false. if keyBit gets set then remainingKeys is reduced by 1.
     bool SetHubKey(const uint hubID, int keyBits, int remainingKeys); ///< Set the keybits and remainingKeys directly
     kFx @SpawnFx(const kStr&in fxPath, kActor@ source, const kVec3&in velocity, const kVec3&in origin, const kQuat&in rotation);
     kFx @SpawnFx(const kStr&in fxPath, kPuppet@ source, const kVec3&in velocity, const kVec3&in origin, const kQuat&in rotation);
@@ -2163,6 +2163,7 @@ public:
         @endcode
      */
     void ConfirmMenu(const kStr&in msg1, const kStr&in msg2);
+    void ConfirmQuitMenu(); ///< Opens the quit confirm menu
     void SaveMenu(); ///< Opens the save game menu. Should always check if(PlayLoop.CanOpenSaveMenu())
     void LoadMenu(); ///< Opens the load game menu. Should always check if(PlayLoop.CanOpenPauseMenu())
     void SetDamageFlash(); ///< Shows the damage screen flash
@@ -2176,7 +2177,7 @@ public:
     void StopSounds();
 
     /**
-     * @brief add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later.
+     * @brief add custom text to the HUD. HUD size is 640x480 (pillar box). AddText must be done in OnPostBeginLevel or later.
      * if the id already exists then simply sets all its variables.
      * @param font EnumGameFontType
      * @param edge 1=left side  2=right side (for convenience. You can set to 0 and offset x position with GetHUDOffset() as well)
@@ -2324,6 +2325,10 @@ public:
     void OpenGameplayMenu();
     void OpenGraphicsMenu();
     void OpenAudioMenu();
+    void OpenKeysMenu();
+    void OpenTrainingMenu(); ///< Opens the training menu to select training or time trial
+    void StartTrainingMenu(const bool timeTrail); ///< Select Training or Time Trail
+    bool StartNewGame(const bool allowModSelect); ///< if allowModSelect is false then the steam mod level select menu will not appear. Returns true if opened mods level select menu. Returns false if started new game.
     bool EnemiesAlwaysDropItems();  ///< Returns the gameplay menu option value
     void OverrideRespawningEnemies(const int value);  ///< Set: Game.OverrideRespawningEnemies();  Get: GameVariables.GetInt("OverrideRespawningEnemies", result);  0=none, 1=force disable, 2=force enable
     void PlayMusicID(const int musicID, const int fadeTimeMS = 500, const bool loop = true); ///< MusicID -2 plays previous track, -1 stops the music.
@@ -2367,6 +2372,7 @@ public:
     kStr GetHubTitle(int hubID); ///< Returns the HUB's Title def property. Returns empty string if not found.
     kStr GetHubDefName(int hubID); ///< Returns the HUB's def name. Returns empty string if not found.
     const bool IsFrozenObjects(); ///< Returns true if the freezeobjects console command is enabled
+    bool StartingNewGame(); ///< Simply calls and returns GameVariables.GetBool("g_newgame")
 };
 
 /**

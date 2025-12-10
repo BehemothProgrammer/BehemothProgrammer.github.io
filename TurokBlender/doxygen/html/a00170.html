@@ -195,12 +195,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab8aa16bf7f9f4a4f450711dbd6dbb45c" id="r_ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8aa16bf7f9f4a4f450711dbd6dbb45c">GetGameSpeed</a> ()</td></tr>
 <tr class="separator:ab8aa16bf7f9f4a4f450711dbd6dbb45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad74e7d9ed68d0f6af26befd163b6b631" id="r_ad74e7d9ed68d0f6af26befd163b6b631"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad74e7d9ed68d0f6af26befd163b6b631">SetGameSpeed</a> (const float speed, const float blendSpeed)</td></tr>
-<tr class="memdesc:ad74e7d9ed68d0f6af26befd163b6b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current GameSpeed. <a class="el" href="a00138.html">kPuppet</a> and kPlayerWeapon are not affected by GameSpeed.  <br /></td></tr>
+<tr class="memdesc:ad74e7d9ed68d0f6af26befd163b6b631"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current GameSpeed. <a class="el" href="a00138.html">kPuppet</a> and kPlayerWeapon are not affected by GameSpeed (By default).  <br /></td></tr>
 <tr class="separator:ad74e7d9ed68d0f6af26befd163b6b631"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a275c0108126ac1398b2e40805ba11ff2" id="r_a275c0108126ac1398b2e40805ba11ff2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a275c0108126ac1398b2e40805ba11ff2">GetHubKeyInfo</a> (const uint hubID, int &amp;out nKeys, int &amp;out remainingKeys, int &amp;out keyBits)</td></tr>
 <tr class="separator:a275c0108126ac1398b2e40805ba11ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce4c3468fdd5ad5c48949d522e5a7b8" id="r_abce4c3468fdd5ad5c48949d522e5a7b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abce4c3468fdd5ad5c48949d522e5a7b8">SetHubKey</a> (const uint hubID, int key)</td></tr>
-<tr class="separator:abce4c3468fdd5ad5c48949d522e5a7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc1c2fc352d7d013bec197a0e44ae72" id="r_a7bc1c2fc352d7d013bec197a0e44ae72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bc1c2fc352d7d013bec197a0e44ae72">SetHubKey</a> (const uint hubID, int keyBit)</td></tr>
+<tr class="memdesc:a7bc1c2fc352d7d013bec197a0e44ae72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if keyBit was set else returns false. if keyBit gets set then remainingKeys is reduced by 1.  <br /></td></tr>
+<tr class="separator:a7bc1c2fc352d7d013bec197a0e44ae72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bc63209189225b2bf2ef041f0b222a3" id="r_a4bc63209189225b2bf2ef041f0b222a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bc63209189225b2bf2ef041f0b222a3">SetHubKey</a> (const uint hubID, int keyBits, int remainingKeys)</td></tr>
 <tr class="memdesc:a4bc63209189225b2bf2ef041f0b222a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the keybits and remainingKeys directly.  <br /></td></tr>
 <tr class="separator:a4bc63209189225b2bf2ef041f0b222a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -262,6 +263,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ada044d9972f21d965647e9efb3f87871"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcc48682ab6bd40f1f4acbd9d6e9e2fc" id="r_afcc48682ab6bd40f1f4acbd9d6e9e2fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcc48682ab6bd40f1f4acbd9d6e9e2fc">ConfirmMenu</a> (const <a class="el" href="a00038.html">kStr</a> &amp;in msg1, const <a class="el" href="a00038.html">kStr</a> &amp;in msg2)</td></tr>
 <tr class="separator:afcc48682ab6bd40f1f4acbd9d6e9e2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea28b79fe25e6184458d7cb24158235b" id="r_aea28b79fe25e6184458d7cb24158235b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea28b79fe25e6184458d7cb24158235b">ConfirmQuitMenu</a> ()</td></tr>
+<tr class="memdesc:aea28b79fe25e6184458d7cb24158235b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the quit confirm menu.  <br /></td></tr>
+<tr class="separator:aea28b79fe25e6184458d7cb24158235b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0beb3468a448a284af5d666981d00f13" id="r_a0beb3468a448a284af5d666981d00f13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0beb3468a448a284af5d666981d00f13">SaveMenu</a> ()</td></tr>
 <tr class="memdesc:a0beb3468a448a284af5d666981d00f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the save game menu. Should always check if(PlayLoop.CanOpenSaveMenu())  <br /></td></tr>
 <tr class="separator:a0beb3468a448a284af5d666981d00f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -289,7 +293,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af7016fd9cc56a5473f86c22379ef5006" id="r_af7016fd9cc56a5473f86c22379ef5006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7016fd9cc56a5473f86c22379ef5006">StopSounds</a> ()</td></tr>
 <tr class="separator:af7016fd9cc56a5473f86c22379ef5006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f0b6a9e83203efc527f045866641aa3" id="r_a2f0b6a9e83203efc527f045866641aa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f0b6a9e83203efc527f045866641aa3">AddText</a> (const int id, const int font, const <a class="el" href="a00038.html">kStr</a> &amp;in text, const float x, const float y, const int edge=0, const float scale=1.0f, const bool center=false, const bool shadow=false, const int r=255, const int g=255, const int b=255, const int a=255, const int r2=255, const int g2=255, const int b2=255, const int a2=255)</td></tr>
-<tr class="memdesc:a2f0b6a9e83203efc527f045866641aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables.  <br /></td></tr>
+<tr class="memdesc:a2f0b6a9e83203efc527f045866641aa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">add custom text to the HUD. HUD size is 640x480 (pillar box). AddText must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables.  <br /></td></tr>
 <tr class="separator:a2f0b6a9e83203efc527f045866641aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d849e8fed84e0d6f6c538017fe7c28b" id="r_a8d849e8fed84e0d6f6c538017fe7c28b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d849e8fed84e0d6f6c538017fe7c28b">SetTextMsg</a> (const int id, const <a class="el" href="a00038.html">kStr</a> &amp;in text)</td></tr>
 <tr class="separator:a8d849e8fed84e0d6f6c538017fe7c28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -535,6 +539,17 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ade730536698d03e972ee724246adb89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d96652b4daaa49a04f64bfcbc943a2" id="r_a11d96652b4daaa49a04f64bfcbc943a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11d96652b4daaa49a04f64bfcbc943a2">OpenAudioMenu</a> ()</td></tr>
 <tr class="separator:a11d96652b4daaa49a04f64bfcbc943a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af920993cb4557f2c1f86080b41ef86a8" id="r_af920993cb4557f2c1f86080b41ef86a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af920993cb4557f2c1f86080b41ef86a8">OpenKeysMenu</a> ()</td></tr>
+<tr class="separator:af920993cb4557f2c1f86080b41ef86a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8bf35d875ebf37a10938fc3a9a98168" id="r_ac8bf35d875ebf37a10938fc3a9a98168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8bf35d875ebf37a10938fc3a9a98168">OpenTrainingMenu</a> ()</td></tr>
+<tr class="memdesc:ac8bf35d875ebf37a10938fc3a9a98168"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the training menu to select training or time trial.  <br /></td></tr>
+<tr class="separator:ac8bf35d875ebf37a10938fc3a9a98168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5245f2f93dcacf3bcb903d24f2faa0f1" id="r_a5245f2f93dcacf3bcb903d24f2faa0f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5245f2f93dcacf3bcb903d24f2faa0f1">StartTrainingMenu</a> (const bool timeTrail)</td></tr>
+<tr class="memdesc:a5245f2f93dcacf3bcb903d24f2faa0f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select Training or Time Trail.  <br /></td></tr>
+<tr class="separator:a5245f2f93dcacf3bcb903d24f2faa0f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9785b5d47171f1f2aaa0b619000bae4c" id="r_a9785b5d47171f1f2aaa0b619000bae4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9785b5d47171f1f2aaa0b619000bae4c">StartNewGame</a> (const bool allowModSelect)</td></tr>
+<tr class="memdesc:a9785b5d47171f1f2aaa0b619000bae4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">if allowModSelect is false then the steam mod level select menu will not appear. Returns true if opened mods level select menu. Returns false if started new game.  <br /></td></tr>
+<tr class="separator:a9785b5d47171f1f2aaa0b619000bae4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09912a3a69a9f6b701bc897a2054e209" id="r_a09912a3a69a9f6b701bc897a2054e209"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09912a3a69a9f6b701bc897a2054e209">EnemiesAlwaysDropItems</a> ()</td></tr>
 <tr class="memdesc:a09912a3a69a9f6b701bc897a2054e209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the gameplay menu option value.  <br /></td></tr>
 <tr class="separator:a09912a3a69a9f6b701bc897a2054e209"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -657,6 +672,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0aaad346f1d8e5be94d2fe1449eea17c" id="r_a0aaad346f1d8e5be94d2fe1449eea17c"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0aaad346f1d8e5be94d2fe1449eea17c">IsFrozenObjects</a> ()</td></tr>
 <tr class="memdesc:a0aaad346f1d8e5be94d2fe1449eea17c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the freezeobjects console command is enabled.  <br /></td></tr>
 <tr class="separator:a0aaad346f1d8e5be94d2fe1449eea17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd9179327ab71ba226f9a595801bdddd" id="r_afd9179327ab71ba226f9a595801bdddd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd9179327ab71ba226f9a595801bdddd">StartingNewGame</a> ()</td></tr>
+<tr class="memdesc:afd9179327ab71ba226f9a595801bdddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simply calls and returns GameVariables.GetBool("g_newgame")  <br /></td></tr>
+<tr class="separator:afd9179327ab71ba226f9a595801bdddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -850,7 +868,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>add custom text to the HUD. HUD size is 640x480 (pillar box). AddPic must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables. </p>
+<p>add custom text to the HUD. HUD size is 640x480 (pillar box). AddText must be done in OnPostBeginLevel or later. if the id already exists then simply sets all its variables. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">font</td><td><a class="el" href="a00002.html#a114c570d0e038714966b85c131c56a2d">EnumGameFontType</a> </td></tr>
@@ -1381,13 +1399,32 @@ Public Member Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">default</span>: <span class="comment">// There&#39;s no ConfirmMenuResult waiting</span></div>
 <div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02597">t1_scriptAPI.cpp:2597</a></div></div>
-<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02600">t1_scriptAPI.cpp:2600</a></div></div>
-<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02598">t1_scriptAPI.cpp:2598</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="a00002.html#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02603">t1_scriptAPI.cpp:2603</a></div></div>
+<div class="ttc" id="aa00002_html_a1bd690e6f09331782b5f0d6f441d8d95"><div class="ttname"><a href="a00002.html#a1bd690e6f09331782b5f0d6f441d8d95">Game</a></div><div class="ttdeci">kGame Game</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02606">t1_scriptAPI.cpp:2606</a></div></div>
+<div class="ttc" id="aa00002_html_ada2d4adb7485bc4876526b2b528f33b3"><div class="ttname"><a href="a00002.html#ada2d4adb7485bc4876526b2b528f33b3">GameVariables</a></div><div class="ttdeci">kDict GameVariables</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02604">t1_scriptAPI.cpp:2604</a></div></div>
 </div><!-- fragment --> </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aea28b79fe25e6184458d7cb24158235b" name="aea28b79fe25e6184458d7cb24158235b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea28b79fe25e6184458d7cb24158235b">&#9670;&#160;</a></span>ConfirmQuitMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::ConfirmQuitMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Opens the quit confirm menu. </p>
 
 </div>
 </div>
@@ -3258,6 +3295,23 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af920993cb4557f2c1f86080b41ef86a8" name="af920993cb4557f2c1f86080b41ef86a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af920993cb4557f2c1f86080b41ef86a8">&#9670;&#160;</a></span>OpenKeysMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::OpenKeysMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a594ba3e3e9bfe0d7f96e0cd7ba962bd8" name="a594ba3e3e9bfe0d7f96e0cd7ba962bd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a594ba3e3e9bfe0d7f96e0cd7ba962bd8">&#9670;&#160;</a></span>OpenLevelKeysMenu()</h2>
 
@@ -3308,6 +3362,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>saves config file when exiting this menu </p>
+
+</div>
+</div>
+<a id="ac8bf35d875ebf37a10938fc3a9a98168" name="ac8bf35d875ebf37a10938fc3a9a98168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bf35d875ebf37a10938fc3a9a98168">&#9670;&#160;</a></span>OpenTrainingMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::OpenTrainingMenu </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Opens the training menu to select training or time trial. </p>
 
 </div>
 </div>
@@ -4054,7 +4127,7 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Sets the current GameSpeed. <a class="el" href="a00138.html">kPuppet</a> and kPlayerWeapon are not affected by GameSpeed. </p>
+<p>Sets the current GameSpeed. <a class="el" href="a00138.html">kPuppet</a> and kPlayerWeapon are not affected by GameSpeed (By default). </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">speed</td><td>0..1 </td></tr>
@@ -4084,8 +4157,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="abce4c3468fdd5ad5c48949d522e5a7b8" name="abce4c3468fdd5ad5c48949d522e5a7b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abce4c3468fdd5ad5c48949d522e5a7b8">&#9670;&#160;</a></span>SetHubKey() <span class="overload">[1/2]</span></h2>
+<a id="a7bc1c2fc352d7d013bec197a0e44ae72" name="a7bc1c2fc352d7d013bec197a0e44ae72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc1c2fc352d7d013bec197a0e44ae72">&#9670;&#160;</a></span>SetHubKey() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4098,10 +4171,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>key</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>keyBit</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns true if keyBit was set else returns false. if keyBit gets set then remainingKeys is reduced by 1. </p>
 
 </div>
 </div>
@@ -5192,6 +5267,44 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="afd9179327ab71ba226f9a595801bdddd" name="afd9179327ab71ba226f9a595801bdddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd9179327ab71ba226f9a595801bdddd">&#9670;&#160;</a></span>StartingNewGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::StartingNewGame </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Simply calls and returns GameVariables.GetBool("g_newgame") </p>
+
+</div>
+</div>
+<a id="a9785b5d47171f1f2aaa0b619000bae4c" name="a9785b5d47171f1f2aaa0b619000bae4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9785b5d47171f1f2aaa0b619000bae4c">&#9670;&#160;</a></span>StartNewGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool kGame::StartNewGame </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>allowModSelect</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>if allowModSelect is false then the steam mod level select menu will not appear. Returns true if opened mods level select menu. Returns false if started new game. </p>
+
+</div>
+</div>
 <a id="a8be96dbef91f876810e05eb7be58b3a9" name="a8be96dbef91f876810e05eb7be58b3a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8be96dbef91f876810e05eb7be58b3a9">&#9670;&#160;</a></span>StartTimer()</h2>
 
@@ -5206,6 +5319,25 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5245f2f93dcacf3bcb903d24f2faa0f1" name="a5245f2f93dcacf3bcb903d24f2faa0f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5245f2f93dcacf3bcb903d24f2faa0f1">&#9670;&#160;</a></span>StartTrainingMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void kGame::StartTrainingMenu </td>
+          <td>(</td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>timeTrail</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Select Training or Time Trail. </p>
 
 </div>
 </div>

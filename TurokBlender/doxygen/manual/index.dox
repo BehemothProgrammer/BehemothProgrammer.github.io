@@ -459,6 +459,7 @@ Int:
     g_hubmapid                  // The map to go to when using the all keys cheat
     g_hubwarptid                // The warp TID to warp to when using the all keys cheat
     chronoPieceFlags            // Each bit indicates if that chrono piece has been picked up. Important: This key must be added through the scripts!
+    lastPortalWarpChoice        // In default scripts
     player.overrideShadow       // Get: Player.Actor().OverrideShadow()  Set: Player.Actor().SetOverrideShadow();  0=none, 1=Force Disable shadow, 2=Force Enable shadow
     player.overrideWalkRun      // Get: Player.Actor().OverrideWalkRun()  Set: Player.Actor().SetOverrideWalkRun();  0=none, 1=Force Disable Walk
     OverrideFogType             // Set: Game.OverrideFogType();  Get: GameVariables.GetInt("OverrideFogType", result);  0=none, 1=force Radial, 2=force Plane

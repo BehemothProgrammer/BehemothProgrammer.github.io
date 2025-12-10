@@ -1774,7 +1774,7 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="3">Enumerator</th></tr><tr><td class="fieldname"><a id="a9662bed8b3938d6cc49499ba300a41ebaeb48325b903d74b19eb2cb7aa350483a" name="a9662bed8b3938d6cc49499ba300a41ebaeb48325b903d74b19eb2cb7aa350483a"></a>AAF_WATER&#160;</td><td class="fieldinit">1 &lt;&lt; 0&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9662bed8b3938d6cc49499ba300a41eba41559370fe8b41fdbb9498a26f0383cd" name="a9662bed8b3938d6cc49499ba300a41eba41559370fe8b41fdbb9498a26f0383cd"></a>AAF_BLOCK&#160;</td><td class="fieldinit">1 &lt;&lt; 1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6" name="a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6"></a>AAF_TOGGLE&#160;</td><td class="fieldinit">1 &lt;&lt; 2&#160;</td><td class="fielddoc"><p>if on and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. Used for door areas. </p>
+<tr><td class="fieldname"><a id="a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6" name="a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6"></a>AAF_TOGGLE&#160;</td><td class="fieldinit">1 &lt;&lt; 2&#160;</td><td class="fielddoc"><p>if this flag is off and AAF_BLOCK is on then sectors won't be marked on automap until it's unblocked. If it's on then it will be marked on the automap regardless if AAF_BLOCK is on. Used for door areas. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a9662bed8b3938d6cc49499ba300a41eba0f61d57238e870624a8d3ff0bcbf0d5a" name="a9662bed8b3938d6cc49499ba300a41eba0f61d57238e870624a8d3ff0bcbf0d5a"></a>AAF_CLIFF&#160;</td><td class="fieldinit">1 &lt;&lt; 3&#160;</td><td class="fielddoc"><p>is a wall </p>
 </td></tr>
@@ -1822,7 +1822,7 @@ Variables</h2></td></tr>
 <div class="fragment"><div class="line"><span class="lineno">  449</span>{</div>
 <div class="line"><span class="lineno">  450</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41ebaeb48325b903d74b19eb2cb7aa350483a">AAF_WATER</a>           = 1 &lt;&lt; 0,</div>
 <div class="line"><span class="lineno">  451</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41eba41559370fe8b41fdbb9498a26f0383cd">AAF_BLOCK</a>           = 1 &lt;&lt; 1,</div>
-<div class="line"><span class="lineno">  452</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6">AAF_TOGGLE</a>          = 1 &lt;&lt; 2,  <span class="comment">///&lt; if on and AAF_BLOCK is on then sectors won&#39;t be marked on automap until it&#39;s unblocked. Used for door areas.</span></div>
+<div class="line"><span class="lineno">  452</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6">AAF_TOGGLE</a>          = 1 &lt;&lt; 2,  <span class="comment">///&lt; if this flag is off and AAF_BLOCK is on then sectors won&#39;t be marked on automap until it&#39;s unblocked. If it&#39;s on then it will be marked on the automap regardless if AAF_BLOCK is on. Used for door areas.</span></div>
 <div class="line"><span class="lineno">  453</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41eba0f61d57238e870624a8d3ff0bcbf0d5a">AAF_CLIFF</a>           = 1 &lt;&lt; 3,  <span class="comment">///&lt; is a wall</span></div>
 <div class="line"><span class="lineno">  454</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41eba6a11596113ce510099523f77f469bcfb">AAF_CLIMB</a>           = 1 &lt;&lt; 4,  <span class="comment">///&lt; climb up sectors faster than AAF_LADDER</span></div>
 <div class="line"><span class="lineno">  455</span>    <a class="code hl_enumvalue" href="#a9662bed8b3938d6cc49499ba300a41eba81bfda278f99d4afde7cdfdad7791f28">AAF_ONESIDED</a>        = 1 &lt;&lt; 5,  <span class="comment">///&lt; Bridge</span></div>
@@ -1882,7 +1882,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebad5de6c0a4c51cb734e00455349f915af"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebad5de6c0a4c51cb734e00455349f915af">AAF_STOREWARPRETURN</a></div><div class="ttdeci">@ AAF_STOREWARPRETURN</div><div class="ttdoc">Unused.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00481">t1_scriptAPI.cpp:481</a></div></div>
 <div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebadff843f0e9385c7f5c90644d3bc5f2d2"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebadff843f0e9385c7f5c90644d3bc5f2d2">AAF_DRAWSUN</a></div><div class="ttdeci">@ AAF_DRAWSUN</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00480">t1_scriptAPI.cpp:480</a></div></div>
 <div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebae1ee4d0a75fd1b54c54dd39ed5c36d40"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebae1ee4d0a75fd1b54c54dd39ed5c36d40">AAF_SLOPETEST</a></div><div class="ttdeci">@ AAF_SLOPETEST</div><div class="ttdoc">overrides AAF_CLIFF flag. If the sectors floor plane up direction is &lt;= 0.5 then is a wall (a wall is...</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00463">t1_scriptAPI.cpp:463</a></div></div>
-<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6">AAF_TOGGLE</a></div><div class="ttdeci">@ AAF_TOGGLE</div><div class="ttdoc">if on and AAF_BLOCK is on then sectors won&#39;t be marked on automap until it&#39;s unblocked....</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00452">t1_scriptAPI.cpp:452</a></div></div>
+<div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebae94c80d049a2d3f567628c6f862399d6">AAF_TOGGLE</a></div><div class="ttdeci">@ AAF_TOGGLE</div><div class="ttdoc">if this flag is off and AAF_BLOCK is on then sectors won&#39;t be marked on automap until it&#39;s unblocked....</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00452">t1_scriptAPI.cpp:452</a></div></div>
 <div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebaeb48325b903d74b19eb2cb7aa350483a"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebaeb48325b903d74b19eb2cb7aa350483a">AAF_WATER</a></div><div class="ttdeci">@ AAF_WATER</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00450">t1_scriptAPI.cpp:450</a></div></div>
 <div class="ttc" id="aa00002_html_a9662bed8b3938d6cc49499ba300a41ebaf9439f6b20c0be6334896ccfa9b38195"><div class="ttname"><a href="#a9662bed8b3938d6cc49499ba300a41ebaf9439f6b20c0be6334896ccfa9b38195">AAF_HIDDEN</a></div><div class="ttdeci">@ AAF_HIDDEN</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00459">t1_scriptAPI.cpp:459</a></div></div>
 </div><!-- fragment -->
@@ -3882,7 +3882,7 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><a class="code hl_function" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a>();</div>
 <div class="ttc" id="aa00002_html_a036fa599be44d9300e7e68836bc84cac"><div class="ttname"><a href="#a036fa599be44d9300e7e68836bc84cac">kStrSplit</a></div><div class="ttdeci">void kStrSplit(const kStr &amp;in s, const kStr &amp;in sep)</div></div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02597">t1_scriptAPI.cpp:2597</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02603">t1_scriptAPI.cpp:2603</a></div></div>
 <div class="ttc" id="aa00002_html_a62ecb3a8742780dd7a60227b58bb6425"><div class="ttname"><a href="#a62ecb3a8742780dd7a60227b58bb6425">kStrSplitLength</a></div><div class="ttdeci">uint kStrSplitLength()</div><div class="ttdoc">returns the amount of strings that were split</div></div>
 <div class="ttc" id="aa00002_html_ab3734771fb77f9d7b55707dbc0e6f473"><div class="ttname"><a href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a></div><div class="ttdeci">void kStrSplitClear()</div><div class="ttdoc">clear the list of split strings after your done. Not required to call because it gets cleared when yo...</div></div>
 <div class="ttc" id="aa00002_html_ade0fa312f49a45392ed9a7742807d101"><div class="ttname"><a href="#ade0fa312f49a45392ed9a7742807d101">kStrSplitGet</a></div><div class="ttdeci">kStr kStrSplitGet(const int index)</div><div class="ttdoc">returns the string at index</div></div>
@@ -4369,7 +4369,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02601">2601</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02607">2607</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4385,7 +4385,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02604">2604</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02610">2610</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4401,7 +4401,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02606">2606</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02612">2612</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4417,7 +4417,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02600">2600</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02606">2606</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4433,7 +4433,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02593">2593</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02599">2599</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4449,7 +4449,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02592">2592</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02598">2598</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4465,7 +4465,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02594">2594</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02600">2600</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4481,7 +4481,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02596">2596</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02602">2602</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4497,7 +4497,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02595">2595</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02601">2601</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4515,7 +4515,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile, Game.LoadModFile, and Game.LoadModDataFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02599">2599</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02605">2605</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4531,7 +4531,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02598">2598</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02604">2604</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4547,7 +4547,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02521">2521</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02527">2527</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4563,7 +4563,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02603">2603</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02609">2609</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4579,7 +4579,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02602">2602</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02608">2608</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4595,7 +4595,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02597">2597</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02603">2603</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4613,7 +4613,7 @@ Variables</h2></td></tr>
 
 <p>pi * 2 </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02522">2522</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02528">2528</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4655,7 +4655,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02605">2605</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02611">2611</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
