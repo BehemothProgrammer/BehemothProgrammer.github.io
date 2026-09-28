@@ -142,6 +142,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ace41c3dec26d9842ab04ce82a9194e11" id="r_ace41c3dec26d9842ab04ce82a9194e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace41c3dec26d9842ab04ce82a9194e11">OnHoldster</a> ()</td></tr>
 <tr class="memdesc:ace41c3dec26d9842ab04ce82a9194e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required.  <br /></td></tr>
 <tr class="separator:ace41c3dec26d9842ab04ce82a9194e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01909373cb531f8a91a5937e7de720d9" id="r_a01909373cb531f8a91a5937e7de720d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01909373cb531f8a91a5937e7de720d9">OnPreRaise</a> ()</td></tr>
+<tr class="memdesc:a01909373cb531f8a91a5937e7de720d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional. Called right when the weapon state is set to raise.  <br /></td></tr>
+<tr class="separator:a01909373cb531f8a91a5937e7de720d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a6ed151963b43cb588b540fa773421f" id="r_a3a6ed151963b43cb588b540fa773421f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a6ed151963b43cb588b540fa773421f">OnActorTick</a> ()</td></tr>
+<tr class="memdesc:a3a6ed151963b43cb588b540fa773421f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional. Called after the weapon calls OnTick for the <a class="el" href="a00122.html" title="Base type used by all actors.">kActor</a> class (Should not use. Only here if needed)  <br /></td></tr>
+<tr class="separator:a3a6ed151963b43cb588b540fa773421f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_a00082"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_a00082')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="a00082.html">ScriptObject</a></td></tr>
 <tr class="memitem:a8220be42bfef1a62c78a2504c43ab320 inherit pub_methods_a00082" id="r_a8220be42bfef1a62c78a2504c43ab320"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="a00082.html#a8220be42bfef1a62c78a2504c43ab320">OnSpawn</a> ()</td></tr>
 <tr class="memdesc:a8220be42bfef1a62c78a2504c43ab320 inherit pub_methods_a00082"><td class="mdescLeft">&#160;</td><td class="mdescRight">Required.  <br /></td></tr>
@@ -209,6 +215,25 @@ Public Member Functions</h2></td></tr>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="a00002_source.html#l00982">982</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3a6ed151963b43cb588b540fa773421f" name="a3a6ed151963b43cb588b540fa773421f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a6ed151963b43cb588b540fa773421f">&#9670;&#160;</a></span>OnActorTick()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObjectWeapon::OnActorTick </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optional. Called after the weapon calls OnTick for the <a class="el" href="a00122.html" title="Base type used by all actors.">kActor</a> class (Should not use. Only here if needed) </p>
+
+</div>
+</div>
 <a id="a2a1133cd008239830e4dfc435e6deaf6" name="a2a1133cd008239830e4dfc435e6deaf6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a1133cd008239830e4dfc435e6deaf6">&#9670;&#160;</a></span>OnBeginFire()</h2>
 
@@ -301,6 +326,25 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Required. </p>
+
+</div>
+</div>
+<a id="a01909373cb531f8a91a5937e7de720d9" name="a01909373cb531f8a91a5937e7de720d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01909373cb531f8a91a5937e7de720d9">&#9670;&#160;</a></span>OnPreRaise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ScriptObjectWeapon::OnPreRaise </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optional. Called right when the weapon state is set to raise. </p>
 
 </div>
 </div>

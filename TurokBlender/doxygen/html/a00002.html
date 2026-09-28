@@ -2061,7 +2061,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  202</span>    <a class="code hl_enumvalue" href="#a092fa12d85156c39edae43e61e4dc7f7adaa4636c6107ee5465f5fecabdcf5fd4">GC_INFINITE_LIVES</a>   = 1 &lt;&lt; 8,</div>
 <div class="line"><span class="lineno">  203</span>    <a class="code hl_enumvalue" href="#a092fa12d85156c39edae43e61e4dc7f7a483b30517186bd165bf4549fec4a753f">GC_ALL_MAP</a>          = 1 &lt;&lt; 9,</div>
 <div class="line"><span class="lineno">  204</span>    <a class="code hl_enumvalue" href="#a092fa12d85156c39edae43e61e4dc7f7afe385c7e0069db0b75f8d103f4eb0e5b">GC_SHOW_ENEMIES</a>     = 1 &lt;&lt; 10,</div>
-<div class="line"><span class="lineno">  205</span>    <a class="code hl_enumvalue" href="#a092fa12d85156c39edae43e61e4dc7f7a9cf52b878806f2c7e1059580f9bb40e4">GC_NOCLIP</a>           = 1 &lt;&lt; 11,</div>
+<div class="line"><span class="lineno">  205</span>    <a class="code hl_enumvalue" href="#a092fa12d85156c39edae43e61e4dc7f7a9cf52b878806f2c7e1059580f9bb40e4">GC_NOCLIP</a>           = 1 &lt;&lt; 11</div>
 <div class="line"><span class="lineno">  206</span>};</div>
 <div class="ttc" id="aa00002_html_a092fa12d85156c39edae43e61e4dc7f7a09aee71bd7389dc25be7a548d3d18e5f"><div class="ttname"><a href="#a092fa12d85156c39edae43e61e4dc7f7a09aee71bd7389dc25be7a548d3d18e5f">GC_INVINCIBILITY</a></div><div class="ttdeci">@ GC_INVINCIBILITY</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00199">t1_scriptAPI.cpp:199</a></div></div>
 <div class="ttc" id="aa00002_html_a092fa12d85156c39edae43e61e4dc7f7a1c9dd206cf5fd104a2a4f69a409f17ec"><div class="ttname"><a href="#a092fa12d85156c39edae43e61e4dc7f7a1c9dd206cf5fd104a2a4f69a409f17ec">GC_FLIGHT</a></div><div class="ttdeci">@ GC_FLIGHT</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00200">t1_scriptAPI.cpp:200</a></div></div>
@@ -2732,7 +2732,7 @@ Variables</h2></td></tr>
 <tr><th colspan="3">Enumerator</th></tr><tr><td class="fieldname"><a id="a8b3b3ff3194cf075961624b73976e3a0a8fca1d7b5173e2bdf325a229b4333473" name="a8b3b3ff3194cf075961624b73976e3a0a8fca1d7b5173e2bdf325a229b4333473"></a>PF_NOCLIP&#160;</td><td class="fieldinit">1 &lt;&lt; 0&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8b3b3ff3194cf075961624b73976e3a0ae778e4d96a39932bdb9cdf5839ce3b9b" name="a8b3b3ff3194cf075961624b73976e3a0ae778e4d96a39932bdb9cdf5839ce3b9b"></a>PF_FLY&#160;</td><td class="fieldinit">1 &lt;&lt; 1&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a8b3b3ff3194cf075961624b73976e3a0aac36f2d6aa38a243d4dde31659f7f92e" name="a8b3b3ff3194cf075961624b73976e3a0aac36f2d6aa38a243d4dde31659f7f92e"></a>PF_DEAD&#160;</td><td class="fieldinit">1 &lt;&lt; 2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8" name="a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8"></a>PF_GOD&#160;</td><td class="fieldinit">1 &lt;&lt; 3&#160;</td><td class="fielddoc"><p>Is reset when level beings. </p>
+<tr><td class="fieldname"><a id="a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8" name="a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8"></a>PF_GOD&#160;</td><td class="fieldinit">1 &lt;&lt; 3&#160;</td><td class="fielddoc"><p>Is reset when level begins. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a8b3b3ff3194cf075961624b73976e3a0a711eb8f1947fc2d14284a54c285e7ec8" name="a8b3b3ff3194cf075961624b73976e3a0a711eb8f1947fc2d14284a54c285e7ec8"></a>PF_JUMPING&#160;</td><td class="fieldinit">1 &lt;&lt; 4&#160;</td><td class="fielddoc"><p>is jumping (moving up). flag is off when reached max jump height or let go of jump button. </p>
 </td></tr>
@@ -2763,7 +2763,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  162</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0a8fca1d7b5173e2bdf325a229b4333473">PF_NOCLIP</a>           = 1 &lt;&lt; 0,</div>
 <div class="line"><span class="lineno">  163</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0ae778e4d96a39932bdb9cdf5839ce3b9b">PF_FLY</a>              = 1 &lt;&lt; 1,</div>
 <div class="line"><span class="lineno">  164</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0aac36f2d6aa38a243d4dde31659f7f92e">PF_DEAD</a>             = 1 &lt;&lt; 2,</div>
-<div class="line"><span class="lineno">  165</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8">PF_GOD</a>              = 1 &lt;&lt; 3,  <span class="comment">///&lt; Is reset when level beings</span></div>
+<div class="line"><span class="lineno">  165</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8">PF_GOD</a>              = 1 &lt;&lt; 3,  <span class="comment">///&lt; Is reset when level begins</span></div>
 <div class="line"><span class="lineno">  166</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0a711eb8f1947fc2d14284a54c285e7ec8">PF_JUMPING</a>          = 1 &lt;&lt; 4,  <span class="comment">///&lt; is jumping (moving up). flag is off when reached max jump height or let go of jump button.</span></div>
 <div class="line"><span class="lineno">  167</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0a9442a23c92dd1b72d9645c5f99fcd952">PF_HASJUMPED</a>        = 1 &lt;&lt; 5,</div>
 <div class="line"><span class="lineno">  168</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0ab7152b978b7cc925a6bde6491a683ea1">PF_INWARPAREA</a>       = 1 &lt;&lt; 6,  <span class="comment">///&lt; in sector area with AAF_TELEPORT flag.</span></div>
@@ -2779,7 +2779,7 @@ Variables</h2></td></tr>
 <div class="line"><span class="lineno">  178</span>    <a class="code hl_enumvalue" href="#a8b3b3ff3194cf075961624b73976e3a0aa845cfc12791536eba2e15ea10b53f9c">PF_NOCEILINGGLIDE</a>   = 1 &lt;&lt; 16  <span class="comment">///&lt; disables the ceiling glide glitch</span></div>
 <div class="line"><span class="lineno">  179</span>};</div>
 <div class="ttc" id="aa00002_html_a8b3b3ff3194cf075961624b73976e3a0a0042f4961f054b711da9ffd7d5901b56"><div class="ttname"><a href="#a8b3b3ff3194cf075961624b73976e3a0a0042f4961f054b711da9ffd7d5901b56">PF_NOTOUCH</a></div><div class="ttdeci">@ PF_NOTOUCH</div><div class="ttdoc">disables invoking onTouch callbacks</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00177">t1_scriptAPI.cpp:177</a></div></div>
-<div class="ttc" id="aa00002_html_a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8"><div class="ttname"><a href="#a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8">PF_GOD</a></div><div class="ttdeci">@ PF_GOD</div><div class="ttdoc">Is reset when level beings.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00165">t1_scriptAPI.cpp:165</a></div></div>
+<div class="ttc" id="aa00002_html_a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8"><div class="ttname"><a href="#a8b3b3ff3194cf075961624b73976e3a0a1422e140e89035f84a9ca44eb6ee9df8">PF_GOD</a></div><div class="ttdeci">@ PF_GOD</div><div class="ttdoc">Is reset when level begins.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00165">t1_scriptAPI.cpp:165</a></div></div>
 <div class="ttc" id="aa00002_html_a8b3b3ff3194cf075961624b73976e3a0a279af5ab27e23147c1337331971b646a"><div class="ttname"><a href="#a8b3b3ff3194cf075961624b73976e3a0a279af5ab27e23147c1337331971b646a">PF_FALLINGDEATHPIT</a></div><div class="ttdeci">@ PF_FALLINGDEATHPIT</div><div class="ttdoc">currently falling in a death pit. Cleared after level begins.</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00174">t1_scriptAPI.cpp:174</a></div></div>
 <div class="ttc" id="aa00002_html_a8b3b3ff3194cf075961624b73976e3a0a355603346e0a3e027fbe9d7c5df1fb27"><div class="ttname"><a href="#a8b3b3ff3194cf075961624b73976e3a0a355603346e0a3e027fbe9d7c5df1fb27">PF_WEAPONSTEAL</a></div><div class="ttdeci">@ PF_WEAPONSTEAL</div><div class="ttdoc">on when campaigner steals weapon</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00175">t1_scriptAPI.cpp:175</a></div></div>
 <div class="ttc" id="aa00002_html_a8b3b3ff3194cf075961624b73976e3a0a51d6fa3b1c04e1fdf655851a96fdd0dc"><div class="ttname"><a href="#a8b3b3ff3194cf075961624b73976e3a0a51d6fa3b1c04e1fdf655851a96fdd0dc">PF_CRAWLING</a></div><div class="ttdeci">@ PF_CRAWLING</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l00171">t1_scriptAPI.cpp:171</a></div></div>
@@ -3882,7 +3882,7 @@ Variables</h2></td></tr>
 <div class="line">}</div>
 <div class="line"><a class="code hl_function" href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a>();</div>
 <div class="ttc" id="aa00002_html_a036fa599be44d9300e7e68836bc84cac"><div class="ttname"><a href="#a036fa599be44d9300e7e68836bc84cac">kStrSplit</a></div><div class="ttdeci">void kStrSplit(const kStr &amp;in s, const kStr &amp;in sep)</div></div>
-<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02603">t1_scriptAPI.cpp:2603</a></div></div>
+<div class="ttc" id="aa00002_html_a0f111f82851f6a04c306c0236be490f3"><div class="ttname"><a href="#a0f111f82851f6a04c306c0236be490f3">Sys</a></div><div class="ttdeci">kSys Sys</div><div class="ttdef"><b>Definition</b> <a href="a00002_source.html#l02601">t1_scriptAPI.cpp:2601</a></div></div>
 <div class="ttc" id="aa00002_html_a62ecb3a8742780dd7a60227b58bb6425"><div class="ttname"><a href="#a62ecb3a8742780dd7a60227b58bb6425">kStrSplitLength</a></div><div class="ttdeci">uint kStrSplitLength()</div><div class="ttdoc">returns the amount of strings that were split</div></div>
 <div class="ttc" id="aa00002_html_ab3734771fb77f9d7b55707dbc0e6f473"><div class="ttname"><a href="#ab3734771fb77f9d7b55707dbc0e6f473">kStrSplitClear</a></div><div class="ttdeci">void kStrSplitClear()</div><div class="ttdoc">clear the list of split strings after your done. Not required to call because it gets cleared when yo...</div></div>
 <div class="ttc" id="aa00002_html_ade0fa312f49a45392ed9a7742807d101"><div class="ttname"><a href="#ade0fa312f49a45392ed9a7742807d101">kStrSplitGet</a></div><div class="ttdeci">kStr kStrSplitGet(const int index)</div><div class="ttdoc">returns the string at index</div></div>
@@ -4369,7 +4369,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02607">2607</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02605">2605</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4385,7 +4385,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02610">2610</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02608">2608</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4401,7 +4401,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02612">2612</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02610">2610</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4417,7 +4417,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02606">2606</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02604">2604</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4433,7 +4433,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02599">2599</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02597">2597</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4449,7 +4449,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02598">2598</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02596">2596</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4465,7 +4465,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02600">2600</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02598">2598</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4481,7 +4481,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02602">2602</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02600">2600</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4497,7 +4497,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02601">2601</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02599">2599</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4515,7 +4515,7 @@ Variables</h2></td></tr>
 
 <p>Use with Game.SaveModFile, Game.LoadModFile, and Game.LoadModDataFile. </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02605">2605</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02603">2603</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4531,7 +4531,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02604">2604</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02602">2602</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4547,7 +4547,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02527">2527</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02525">2525</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4563,7 +4563,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02609">2609</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02607">2607</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4579,7 +4579,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02608">2608</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02606">2606</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4595,7 +4595,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02603">2603</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02601">2601</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4613,7 +4613,7 @@ Variables</h2></td></tr>
 
 <p>pi * 2 </p>
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02528">2528</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02526">2526</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
@@ -4655,7 +4655,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02611">2611</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="a00002_source.html#l02609">2609</a> of file <a class="el" href="a00002_source.html">t1_scriptAPI.cpp</a>.</p>
 
 </div>
 </div>
