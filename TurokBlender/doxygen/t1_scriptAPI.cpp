@@ -162,7 +162,7 @@ enum EnumPlayerFlags
     PF_NOCLIP           = 1 << 0,
     PF_FLY              = 1 << 1,
     PF_DEAD             = 1 << 2,
-    PF_GOD              = 1 << 3,  ///< Is reset when level beings
+    PF_GOD              = 1 << 3,  ///< Is reset when level begins
     PF_JUMPING          = 1 << 4,  ///< is jumping (moving up). flag is off when reached max jump height or let go of jump button.
     PF_HASJUMPED        = 1 << 5,
     PF_INWARPAREA       = 1 << 6,  ///< in sector area with AAF_TELEPORT flag.
@@ -202,7 +202,7 @@ enum EnumCheatFlags
     GC_INFINITE_LIVES   = 1 << 8,
     GC_ALL_MAP          = 1 << 9,
     GC_SHOW_ENEMIES     = 1 << 10,
-    GC_NOCLIP           = 1 << 11,
+    GC_NOCLIP           = 1 << 11
 };
 
 enum EnumAIFlags
@@ -988,8 +988,8 @@ public:
     void OnLower(); ///< Required
     void OnRaise(); ///< Required
     void OnHoldster(); ///< Required
-    void OnPreRaise() ///< Optional. Called right when the weapon state is set to raise.
-    void OnActorTick() ///< Optional. Called after the weapon calls OnTick for the kActor class (Should not use. Only here if needed)
+    void OnPreRaise(); ///< Optional. Called right when the weapon state is set to raise.
+    void OnActorTick(); ///< Optional. Called after the weapon calls OnTick for the kActor class (Should not use. Only here if needed)
 };
 
 /**
@@ -1542,7 +1542,6 @@ public:
     void SetStrafeBobScale(const float scale);
     void SetUnderwaterBobScale(const float scale);
     void SetJumpBobScale(const float scale);
-    void SetOverrideWeaponOnTopFix(const int value);    ///< 0=none(default), 1=Force disable fix, 2=Force enable fix (can use console command "g_weaponontopfix" 1 to turn it on as well)
     void SetMaxLives(const int value);      ///< Max lives allowed from gaining Lifeforces
     void SetMaxLifeforces(const int value); ///< Amount of Lifeforces needed to get an extra life
     const float HeadBobScale() const;
@@ -1550,7 +1549,6 @@ public:
     const float StrafeBobScale() const;
     const float UnderwaterBobScale() const;
     const float JumpBobScale() const;
-    const int OverrideWeaponOnTopFix() const;
     const int GetMaxLives() const;
     const int GetMaxLifeforces() const;
 };
